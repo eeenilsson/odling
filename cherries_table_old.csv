@@ -1,0 +1,37 @@
+label	label_aka	var	nr	type	zone	zone_extended	pollinated_by_sveriges_tradgardsmastare	pollinated_by_table	pollinated_by_plantagen
+Allmän gulröd bigarrå		allm_gulrod	1	sweet	3		3, 6, 7, 8, 12, 18	Allmän gulröd bigarrå	hedelfinger, merton_glory, stor_svart
+Almore		almore	2	sweet	3		12, 13, 17	Almore	Büttners Späte Rote, Hedelfinger, Merton Glory, Sam, Stor svart bigarrå, Van
+Annonay		annonay	3	sweet	3		1, 8, 15	Annonay	
+Berit		berit	4	sour	4	5	4	Berit	
+Büttners Rote	Heinrich Riesen	buttners_rote	5	sweet	3		1, 7, 8, 10, 12, 13, 20	Büttners Rote	Allm. gulröd bigarrå, Almore, Hedelfinger, Merton Glory, Stella, Van
+Erianne		erianne	6	sweet	4		1, 3, 7, 12, 13, 17, 18, 19	Erianne	
+Fanal	Heimans konserv	fanal	7	sour	4		7	Frogmore	
+Frogmore		frogmore	8	sweet	3		1, 6, 13, 14, 17, 18, 19	Hedelfinger	
+Fryksås		fryksas	9	sweet	4		0	Heidi	Självfertil
+Gårdebo		gardebo	10	sweet	4		0	Knauffs Kirsche	Självfertil samt Allm. gulröd bigarrå, Almore
+Hedelfinger		hedelfinger	11	sweet	3		1, 3, 5, 6, 7, 12, 13, 20	Lapins	Allm. gulröd bigarrå, Almore, Büttners Späte Rote, Merton Glory, Sam, Van
+Heidi		heidi	12	sweet	4		12, 13, 17	Merton Glory	Merton Glory, Stor svart bigarrå
+Kelleris 16		kelleris	13	sour	4		13	Merton Premier	
+Kirsa		kirsa	14	sour	6		14	Ostheimer	
+Knauffs Kirsche		kauffs_kirsche	15	sweet	2		1, 3, 5, 12, 20	Sam	
+Lapins		lapins	16	sweet	3		16	Skuggmorell	Självfertil
+Merton Glory		merton_glory	17	sweet	3		1, 3, 8	Stor svart bigarrå	Allm. gulröd bigarrå, Almore, Büttners Späte Rote, Hedelfinger, Sam, Stella, Stor svart bigarrå, Van, Victor
+Merton Premier		merton_premier	18	sweet	3		5, 8, 12, 20	Stora klarbär	
+Nordia		nordia	19	sour	6		19	Triaux	
+Ostheimer		ostheimer	20	sour	5	6	6, 7, 16,17,18	Van	
+Sam		sam	21	sweet	3		1, 2, 9, 10, 12, 17, 20		Allm. gulröd bigarrå, Almore, Büttners Späte Rote, Hedelfinger, Heidi, Merton Glory, Stella, Stor svart bigarrå, Van
+Skuggmorell		skuggmorell	22	sour	5	6	22		
+Stella		stella	23	sweet	4		23		Självfertil samt Büttners Späte Rote, Merton Glory, Sam, Van
+Stor svart bigarrå		stor_svart	24	sweet	3		6, 12		Merton Glory
+Stora klarbär		stora_klarbar	25	sour	5		25, 7, 14, 16, 18		
+Sunburst		sunburst	26	sweet	4		26		Självfertil
+Triaux		triaux	27	sour	4		27		
+Tschernokorka		tschernokorka	28	sour	3		28		
+Van		van	29	sweet	4		1, 5, 6, 12, 13		Allm. gulröd bigarrå, Almore, Büttners Späte Rote, Hedelfinger, Merton Glory, Sam, Stella
+Dönissen	Dönissens Gelbe Knorpelkirsche	donissen	30	sweet	1	2		Büttners Späte Rote, Merton Glory, Stella, Van	
+Kordia		kordia	31					Büttners Späte Rote, Lapins, Merton Glory, Regina, Stella	
+Regina		regina	32	sweet	1	3			Büttners Späte Rote, Kordia, Lapins, Merton Glory, Sam, Stella, Van
+Victor		victor	33	sweet	1	2			Almore, Büttners Späte Rote, Merton Glory, Stella, Van
+Allmänt klarbär		allm_klarbar	34	sour	6				
+Grosse Schwarze Knorpelkirsche	Stor svart bigarrå	grosse_schwarze	35	sweet	3				
+Lettisk låg		lettisk_lag	36	sour	7				

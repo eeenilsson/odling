@@ -1,0 +1,94 @@
+## Introduction
+
+
+## Varför plantera flera sorter?
+
+Some are suitable for cooking and others best eaten straight off the tree. Secondly, growing multiple varieties allows you to ensure a steady supply of cherries throughout the warmer months.  Thirdly,  you can never know how well a  particular variety will do in your garden, so it is always worth experimenting. Lastly, some varieties are resistant to cracking, which usually occurs during summer rains.
+
+## Pollinering, hur funkar det
+
+
+## Varför behöver plommon en partner?
+
+Self-sterile cultivars require a pollinizer. The pollinizer must be from a different compatibility group and must bloom at the same time in order
+for pollination to take place. 
+
+## S-alleler
+
+https://www.openagrar.de/receive/openagrar_mods_00064311
+
+http://www.agricultforest.ac.me/paper.php?id=3137
+
+https://www.sciencedirect.com/science/article/abs/pii/S0304423812004396
+
+https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility
+
+https://link.springer.com/article/10.1007/s001220051700
+
+https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf  # REK
+
+## Pollineringsgrupper
+
+https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/
+
+## Blomningstid
+
+
+
+
+
+
+##  [1]              "annonay"        "berit"         
+##  [5]   "erianne"        "fanal"          "frogmore"      
+##  [9] "fryksas"        "gardebo"                     
+## [13] "kelleris"       "kirsa"          "kauffs_kirsche"         
+## [17]    "merton_premier" "nordia"         "ostheimer"     
+## [21]             "skuggmorell"                 
+## [25] "stora_klarbar"  "sunburst"       "triaux"         "tschernokorka" 
+## [29]             "donissen"                "regina"        
+## [33]     
+
+## Splendor plant
+## https://www.splendorplant.se/wp-content/uploads/2020/04/infoblad-pollineringsschema-kirsbnr.pdf
+## Allmän Gulröd Bigarrå, "hedelfinger, merton_glory",
+## Almore, "merton_glory, stor_svart",
+## Büttners Späte Rote Knorpelkirsche, "allm_gulrod, hedelfinger, merton_glory, stella, van",
+## Frykås, "sjalvfertil",
+## Gårdebo, "allm_gulrod, sjalfertil",
+## HEdElfingEr, "allm_gulrod, buttners_rote, merton_glory, van",
+## Heidi, "merton_glory, stor_svart",
+## Lapins, "sjalvfertil",
+## Merton Glory, "allm_gulrod, buttners_rote, hedelfinger, sam, stella, sunburst, van",
+## Sam, "allm_gulrod, buttners_rote, hedelfinger, van",
+## Stella, "sjalvfertil",
+## Stor Svart bigarrå, "merton_glory",
+## Sunburst, "sjalvfertil",
+## Van, "allm_gulrod, buttners_rote, merton_glory"
+
+## rangedala
+## https://www.rangedala.nu/media/wysiwyg/PDFs/poll_ko_rsba_r.pdf
+## var, pollinated_by_rangedala,
+## almore, "merton_glory, merton_premier, stor_svart",
+## allm_gulrod, "buttners_rote, hedelfinger, merton_glory, stor_svart, sam, van, stora_klarbar",
+## buttners_rote, "allm_gulrod, hedelfinger, merton_glory, merton_premier, stella, van",
+## fryksas, "sjalvfertil",
+## gardebo, "allm_gulrod, skuggmorell",
+## hedelfinger, "allm_gulrod, buttners_rote, merton_glory, merton_premier, sam, van",
+## heidi, "merton_glory",
+## lapins, "sjalvfertil",
+## merton_glory, "allm_gulrod, buttners_rote, hedelfinger, sam, stella, stor_svart, van",
+## merton_premier, "buttners_rote, hedelfinger, merton_glory, van",
+## sam, "allm_gulrod, buttners_rote, hedelfinger, merton_glory, stella",
+## stella, "buttners_rote, merton_glory, sam, sjalvfertil, van",
+## stor_svart, "merton_glory",
+## sunburst, "sjalvfertil",
+## van, "allm_gulrod, buttners_rote, hedelfinger, merton_glory, merton_premier, sam, stella"
+## victor, "allm_gulrod, merton_glory"
+
+
+## Labeller for facets
+## global_labeller <- labeller(
+##   target = varnames,
+##   pollinator = varnames,
+##   .default = label_both
+## )
