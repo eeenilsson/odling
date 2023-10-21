@@ -6,16 +6,17 @@ Nedan föjer en kort sammanfattning om vad pollination är, följt av en fördju
 
 # Introduktion
 
-Pollination är överföring av pollenkorn från ståndarna på en blomma till pistillen på en annan. Det ger befruktning som gör att ett frö kan bildas som sedan blir en frukt.
+Pollination är överföring av pollenkorn från ståndarna på en blomma till pistillen på en annan. Det ger befruktning som gör att ett frö kan bildas som sedan blir en frukt. Pollination kan ske genom att pollenkornen tas med av vinden, insekter eller andra djur.
 
-När pollen kommer från ståndaren till pistillen i samma blomma kallas det _självpollination_ och när pollen kommer från en annan individ av samma art kallas det _korspollination_.
+<!-- När pollen kommer från ståndaren till pistillen i samma blomma kallas det _självpollination_ och när pollen kommer från en annan individ av samma art kallas det _korspollination_. -->
 
-Hos vissa arter kan individerna befrukta sig själva (_självfertilisering_ eller _autogami_) med självpollination , vissa kräver korspollination och vissa kräver att pollen kommer från en annan **art**.
+Hos vissa arter kan individerna befrukta sig själva, vissa kräver att pollen kommer från en annan individ och vissa kräver att pollen kommer från en annan sort.
 
+Vardagligt brukar man med "korspollination" mena att en viss sort av körsbär (tex _Prunus avium_ 'Merton Glory') måste pollineras av en annan sort (tex _Prunus avium_ 'Allmän gulröd bigarrå') för att bära frukt. Dessa sorter kallas ibland "självsterila". Se sidan om [terminologi](terminology.qmd) för detaljer.
 
+En sort som _kan_ pollineras av samma sort brukar kallas "självfertil" (tex _Prunus avium_ 'Gårdebo'). De flesta surkörsbär är självfertila. Skörd och kvalitet brukar dock bli bättre även för dessa sorter om de pollineras av andra sorter.
 
 ## Grundläggande begrepp
-
 
 Bilden nedan visar namnen på blommans olika delar.
 
@@ -32,8 +33,16 @@ Bilden nedan visar namnen på blommans olika delar.
 <!-- ![Title](flower_parts_svenska.jpg){fig-alt="fig alt test"} -->
 
 
+<!-- Prunus cerasus, a tetraploid with 2n=32 chromosomes, tetraploid (four sets; 4x) -->
+
 
 ## Pollination, hur funkar det
+
+För att det ska bildas frön måste pollenkornet först landa på pistillens märke.
+
+När pollenkornet hamnar på märket börjar en pollenslang gro ut. Den tränger ner i pistillen ochbefruktar fröämnen inne i fruktämnet och nya frön bildas.
+
+Befruktning sker när två hanliga celler (spermier) vandrar ner i pollenslangen, den ena förenar sig med äggcellen (befruktning) och bildar ett fröembryo. Den andra förenas med två kärnor och bildar fröets näringsvävnad. Efter befruktningen växer fruktämnet till och bildar den färdiga frukten med frön i.
 
 # Pollination av körsbär
 

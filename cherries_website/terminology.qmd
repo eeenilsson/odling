@@ -1,14 +1,25 @@
-## Pollination och befruktning - Terminologi
+---
+title: "Terminologi"
+---
+
+
+## Pollination och befruktning
 
 Terminoligin är rörig och olika definitioner förekommer (tex anses ibland självpollination uteslutande betyda att pollen kommer från samma blomma).
 
 _Självpollination (autogami)_: Pollen kommer från vilken blomma som helst på samma individ. Innebär att det blir mindre genetisk variation vid befruktningen.
 
-<!-- Synonymer: Autogami, självbefruktning, eng. self-pollination, self-fertilization. -->
+<!-- Synonymer: Autogami, självbefruktning, eng. self-pollination, self-fertilization, "selfer". -->
 
-_Korspollination (allogami)_: Pollen överförs mellan två olika individer.
+_Korspollination (allogami)_: Pollen överförs mellan två olika individer. 
 
-Synonymer: Allogami, korsbefruktning , eng. cross-pollination, cross-fertilization.
+<!-- Synonymer: Allogami, korsbefruktning , eng. cross-pollination, cross-fertilization, "outcrosser", "outbreeder". -->
+
+**I praktiken** brukar man i vardagligt tal använda begreppen litat annorlunda:
+
+"Korspollination": En viss sort (_Prunus avium_ 'Merton Glory') måste pollineras av en annan sort (tex _Prunus avium_ 'Allmän gulröd bigarrå') för att bära frukt. Dessa sorter kallas ibland "självsterila".
+
+"Självfertila sorter": En sort som kan pollineras av samma sort (tex _Prunus avium_ 'Gårdebo').
 
 <!--  korspollination, detsamma som allogami. se https://www.ne.se/uppslagsverk/encyklopedi/l%C3%A5ng/korspollination -->
 

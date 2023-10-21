@@ -13,11 +13,9 @@ Species (art): _Prunus cesarus_ (surkörsbär) och _Prunus avium_ (sötkörsbär
 Subspecies (underart): Tex _Prunus avium subsp. avium_
 Varietas (variant): Tex _Prunus avium var. juliana_ (Hjärtkörsbär), _Prunus avium var. avium_ (Vanlig sötkörsbär), _Prunus avium var. duracina_ (Bigarrå).
 
-"Sort": Tex _Prunus avium_ 'Merton Glory'.
+"Sort": Tex _Prunus avium_ 'Merton Glory'. Kallas ibland "kultivar" när den framkorsats medvetet.
 
 Släktnamnet skrivs med stor bokstav och artnamnet med liten.
-
-Cultivar = kultivar
 
 subg.
 sp.
@@ -55,8 +53,33 @@ var. = f. [form] = v.
 
 Some are suitable for cooking and others best eaten straight off the tree. Secondly, growing multiple varieties allows you to ensure a steady supply of cherries throughout the warmer months.  Thirdly,  you can never know how well a  particular variety will do in your garden, so it is always worth experimenting. Lastly, some varieties are resistant to cracking, which usually occurs during summer rains.
 
+## Surkörsbär ("Amarell"), skillnad mot sötkörsbär
+
+
+Morello cherry trees fruit on younger wood than sweet varieties, and thus can be pruned harder.
+
+ Trees will do badly if waterlogged, but have greater tolerance of poor drainage than sweet varieties.
+
+demand more nitrogen and water than sweet cherries
+
+Sour cherries suffer fewer pests and diseases than sweet cherries
+
+sour cherries are self fertile
+
+tetraploid with 2n=32 chromosomes
+ 
+<!-- ## Grundstammar -->
+
 ## Resurser
 
 [Taxonomi](https://botanicalsociety.org.za/the-science-of-names-an-introduction-to-plant-taxonomy/)
 
 [Taxonomi](https://glossary.lias.net/wiki/Taxonomic_rank)
+
+[Taxonomic rank in botany](https://en.wikipedia.org/wiki/Taxonomic_rank#Ranks_in_botany)
+
+[Prunus cesarus](https://en.wikipedia.org/wiki/Prunus_cerasus)
+
+[Van cherry](https://en.wikipedia.org/wiki/Van_cherry)
+
+[Surkörsbär](https://en.wikipedia.org/wiki/Prunus_cerasus#Origins_and_cultivation)
