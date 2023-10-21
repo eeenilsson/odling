@@ -1,7 +1,12 @@
 ---
-title: "Introduction"
+title: "Körsbär"
 ---
 
-This is a Quarto website.
+Detta är en sida om odling av körsbär.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+<!-- To learn more about Quarto websites visit <https://quarto.org/docs/websites>. -->
+
+
+## Varför plantera flera sorter?
+
+Some are suitable for cooking and others best eaten straight off the tree. Secondly, growing multiple varieties allows you to ensure a steady supply of cherries throughout the warmer months.  Thirdly,  you can never know how well a  particular variety will do in your garden, so it is always worth experimenting. Lastly, some varieties are resistant to cracking, which usually occurs during summer rains.

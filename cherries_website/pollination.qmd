@@ -2,13 +2,10 @@
 title: "Pollination"
 ---
 
-## Introduction
+# Introduktion
 
 Kort om pollination av körsbär
 
-## Varför plantera flera sorter?
-
-Some are suitable for cooking and others best eaten straight off the tree. Secondly, growing multiple varieties allows you to ensure a steady supply of cherries throughout the warmer months.  Thirdly,  you can never know how well a  particular variety will do in your garden, so it is always worth experimenting. Lastly, some varieties are resistant to cracking, which usually occurs during summer rains.
 
 ## Pollinering, hur funkar det
 
@@ -32,6 +29,10 @@ https://link.springer.com/article/10.1007/s001220051700
 
 https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf  # REK
 
-## Pollineringsgrupper
+# Pollineringsgrupper
 
-https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/
+## Se här
+
+[Primrose](https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/
+)
+

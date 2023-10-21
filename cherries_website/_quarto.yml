@@ -9,6 +9,11 @@ website:
         text: Hem
       - about.qmd
       - pollination.qmd
+    pinned: true
+  page-navigation: true
+  
+## comments:
+##   hypothesis: true ## enable later
 
 format:
   html:

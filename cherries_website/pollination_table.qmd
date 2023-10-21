@@ -1,0 +1,23 @@
+---
+title: "Pollineringstabell"
+---
+
+# Instruktioner
+
+Hur används tabellen.
+
+# Tabell
+
+Olika flikar med korstabell.
+
+## Vanliga sorter
+
+Vanligt förekommande i handeln.
+
+## Ovanliga sorter
+
+Svåra att få tag på.
+
+## Alla sorter
+
+Alla sorter.

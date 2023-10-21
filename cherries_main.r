@@ -3,4 +3,15 @@
 
 ## Quarto -----
 pacman::p_load(quarto)
+quarto_render('cherries_website/index.qmd')
+
+?quarto_render
+
+quarto_render('cherries_website')
+
 ## quarto_render('test_presentation.qmd')
+
+
+
+
+
