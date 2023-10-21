@@ -1,17 +1,33 @@
 project:
   type: website
+  output-dir: _site
 
 website:
   title: "Körsbär"
+
   navbar:
     left:
       - href: index.qmd
         text: Hem
-      - about.qmd
-      - pollination.qmd
+      ## - about.qmd
+      - pollination_about.qmd
+      - pollination_table.qmd
     pinned: true
-  page-navigation: true
-  
+    self-contained: true
+    embed-resources: true
+    subtitle: "Test subtitle"
+    
+  page-navigation: true ## No effect unless there are sections?
+
+  ## sidebar: ## Sidebar necessary for sections (?)
+  ##   contents:
+  ##     - section: "Hur funkar pollination"
+  ##       contents:
+  ##         - href: pollination.qmd
+  ##     - section: "Pollinationstabell"
+  ##       contents:
+  ##         - href: pollination_table.qmd
+
 ## comments:
 ##   hypothesis: true ## enable later
 

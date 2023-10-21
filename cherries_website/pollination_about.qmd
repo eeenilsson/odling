@@ -1,0 +1,72 @@
+---
+title: "Om pollination"
+---
+
+Nedan föjer en kort sammanfattning om vad pollination är, följt av en fördjupning om hur det fungerar för körsbärsträd.
+
+# Introduktion
+
+Pollination är överföring av pollenkorn från ståndarna på en blomma till pistillen på en annan. Det ger befruktning som gör att ett frö kan bildas som sedan blir en frukt.
+
+När pollen kommer från ståndaren till pistillen i samma blomma kallas det _självpollination_ och när pollen kommer från en annan individ av samma art kallas det _korspollination_.
+
+Hos vissa arter kan individerna befrukta sig själva (_självfertilisering_ eller _autogami_) med självpollination , vissa kräver korspollination och vissa kräver att pollen kommer från en annan **art**.
+
+
+
+## Grundläggande begrepp
+
+
+Bilden nedan visar namnen på blommans olika delar.
+
+<!-- ![Blommans delar](../dropbox/images/plants/flower_parts_svenska.jpg) -->
+
+<!-- ![Blommans delar](../../dropbox/images/plants/flower_parts_svenska.jpg) -->
+
+![Blommans delar](../../../dropbox/images/plants/flower_parts_svenska.jpg)
+
+<!-- Works for rendering project, see https://github.com/quarto-dev/quarto-cli/discussions/6028 -->
+
+<!-- ## Test -->
+
+<!-- ![Title](flower_parts_svenska.jpg){fig-alt="fig alt test"} -->
+
+
+
+## Pollination, hur funkar det
+
+# Pollination av körsbär
+
+## Varför behöver körsbär en partner?
+
+Self-sterile cultivars require a pollinizer. The pollinizer must be from a different compatibility group and must bloom at the same time in order
+for pollination to take place. 
+
+## S-alleler
+
+https://www.openagrar.de/receive/openagrar_mods_00064311
+
+http://www.agricultforest.ac.me/paper.php?id=3137
+
+https://www.sciencedirect.com/science/article/abs/pii/S0304423812004396
+
+https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility
+
+https://link.springer.com/article/10.1007/s001220051700
+
+https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf  # REK
+
+## Pollinationsgrupper
+
+
+# Resurser
+
+Se nedan
+
+[Wikipedia om pollinering](https://sv.wikipedia.org/wiki/Pollinering)
+
+[Primrose pollineringsgrupper](https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/)
+
+[Botanisk taxonomi](https://en.wikipedia.org/wiki/Taxonomic_rank#Ranks_in_botany)
+
+[Difference Between Allogamy and Xenogamy](https://pediaa.com/difference-between-allogamy-and-xenogamy/)

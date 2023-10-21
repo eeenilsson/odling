@@ -1,8 +1,52 @@
 ---
 title: "Körsbär"
+sidebar: false
 ---
 
 Detta är en sida om odling av körsbär.
+
+![Prunus Cesarus](prunus_cesarus.jpg)
+
+Genus (släkte): _Prunus_ (plommon, körsbär, aprikoser mfl)
+Subgenus (undersläkte): _Prunus subg. Cesarus_ (körsbär)
+Species (art): _Prunus cesarus_ (surkörsbär) och _Prunus avium_ (sötkörsbär)
+Subspecies (underart): Tex _Prunus avium subsp. avium_
+Varietas (variant): Tex _Prunus avium var. juliana_ (Hjärtkörsbär), _Prunus avium var. avium_ (Vanlig sötkörsbär), _Prunus avium var. duracina_ (Bigarrå).
+
+"Sort": Tex _Prunus avium_ 'Merton Glory'.
+
+Släktnamnet skrivs med stor bokstav och artnamnet med liten.
+
+Cultivar = kultivar
+
+subg.
+sp.
+subs. = ssp.
+var. = f. [form] = v.
+
+[Exempel](https://species.wikimedia.org/wiki/Prunus_avium_subsp._avium)
+<!-- Genus: Prunus -->
+<!-- Subgenus: P. subg. Cerasus -->
+<!-- Species: Prunus avium -->
+<!-- Subspecies: Prunus avium subsp. avium -->
+
+<!-- Arten kan delas in i ett antal varieteter.  -->
+<!--     Vanlig sötkörsbär (Prunus avium var. avium) – har små frukter, upp till 1 cm stora. Färgen på frukterna varierar från gult till rött eller svart. De har ofta en bitter smak.[källa behövs] -->
+<!--     Bigarrå (Prunus avium var. duracina) – har stora frukter med fast fruktkött. De mognar ofta sent på säsongen. Det finns många sorter som hör till denna varietet. Även så kallade halvbigarråer är klassificerade som denna varietet. -->
+<!--     Hjärtkörsbär (Prunus avium var. juliana) – har stora frukter med löst fruktkött. Sorter som 'Guigne d'Annonay', 'Elton', 'Frogmore Early', 'Knauff's Riesenkirsche', 'Merton Glory' och 'Valeska' räknas till hjärtkörsbäret. -->
+
+
+<!-- Påpekas skall att sp. används för en obestämd art. Om man t.ex. skriver Geranium sp. så menar man en art av släktet Geranium men man vill eller kan inte bestämma växten till art utan endast till släkte.  -->
+
+<!-- Odlade växter har ofta registrerade namnsorter, dessa skrives med stor bokstav inom enkla apostrofer, ex. Geranium pratense 'Kashmir White'. Man kan också i vardagsbruk skriva enbart Geranium 'Kashmir White'.  -->
+
+<!-- Om en växt är en korsning mellan två arter, markeras detta med ett x mellan släkt- och artnamnet, ex. Geranium x magnificum (=G. ibericum x G. platypetalum).  -->
+
+<!-- Alternativa namn markeras med synonym, syn. (ex. Geranium lambertii syn. G. candicans).  -->
+
+<!-- https://www.odla.nu/inspiration/lite-grundlaggande-botanik -->
+
+
 
 <!-- To learn more about Quarto websites visit <https://quarto.org/docs/websites>. -->
 
@@ -10,3 +54,9 @@ Detta är en sida om odling av körsbär.
 ## Varför plantera flera sorter?
 
 Some are suitable for cooking and others best eaten straight off the tree. Secondly, growing multiple varieties allows you to ensure a steady supply of cherries throughout the warmer months.  Thirdly,  you can never know how well a  particular variety will do in your garden, so it is always worth experimenting. Lastly, some varieties are resistant to cracking, which usually occurs during summer rains.
+
+## Resurser
+
+[Taxonomi](https://botanicalsociety.org.za/the-science-of-names-an-introduction-to-plant-taxonomy/)
+
+[Taxonomi](https://glossary.lias.net/wiki/Taxonomic_rank)

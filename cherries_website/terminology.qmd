@@ -1,0 +1,35 @@
+## Pollination och befruktning - Terminologi
+
+Terminoligin är rörig och olika definitioner förekommer (tex anses ibland självpollination uteslutande betyda att pollen kommer från samma blomma).
+
+_Självpollination (autogami)_: Pollen kommer från vilken blomma som helst på samma individ. Innebär att det blir mindre genetisk variation vid befruktningen.
+
+<!-- Synonymer: Autogami, självbefruktning, eng. self-pollination, self-fertilization. -->
+
+_Korspollination (allogami)_: Pollen överförs mellan två olika individer.
+
+Synonymer: Allogami, korsbefruktning , eng. cross-pollination, cross-fertilization.
+
+<!--  korspollination, detsamma som allogami. se https://www.ne.se/uppslagsverk/encyklopedi/l%C3%A5ng/korspollination -->
+
+<!-- Pollinationsförloppen kan delas in på olika sätt, bl.a. i självpollination och korspollination. Självpollination (autogami), som förekommer t.ex. hos många korsblommiga växter, innebär att växten pollinerar sig själv, https://www.ne.se/uppslagsverk/encyklopedi/l%C3%A5ng/pollination -->
+
+<!-- https://en.wikipedia.org/wiki/Allogamy -->
+
+<!-- _Xenogami_ : En undergrupp till allogami.  -->
+
+<!-- korsbefruktning: korsbefruktning, befruktningsförlopp då könsceller från två genetiskt olika individer smälter samman (se https://www.ne.se/uppslagsverk/encyklopedi/l%C3%A5ng/korsbefruktning)-->
+
+<!-- A flower is self-pollinated (a “selfer”) if pollen is transferred to it from any flower of the same plant and cross-pollinated (an “outcrosser” or “outbreeder”) if the pollen comes from a flower on a different plant. (se https://www.britannica.com/science/self-pollination) -->
+
+<!-- Allogamy vs Xenogamy There are two types of pollinations known as self pollination and cross pollination. Allogamy and xenogamy are the two types of cross pollinations that occur during the sexual reproduction of higher plants. Flower is the sexual organ of angiosperms. Stamen is the male part of the flower, which contains anther and filamentous. Pistil is the female part of the flower, which contains stigma, style, and ovary. Unisexual flowers contain pistil and the stamens in separate flowers, enhancing cross pollination. Bisexual flowers contain both pistil and stamens in the same flower, enhancing self pollination. The main difference between allogamy and xenogamy is that allogamy is the deposition of pollen grains from the anther of the one flower on the stigma of another flower, either in the same plant or a in a different plant of the same species whereas xenogamy is the deposition of pollen grains from the anther of one flower on the stigma of a genetically different flower of the same species. -->
+
+<!-- Även om en växt är självfertil, eller självpollinerande, blir bäret eller frukten större och av högre kvalitet med korspollination. -->
+
+<!-- Autogamy, or self-fertilization, refers to the fusion of two gametes that come from one individual. Autogamy is predominantly observed in the form of self-pollination -->
+
+<!-- Korsbefruktning innebär att man korsar olika plantor för att få fram en växt med de egenskaper man önskar.  -->
+
+<!-- Allogamy or cross-fertilization is the fertilization of an ovum from one individual with the spermatozoa of another. -->
+
+<!-- In plants, allogamy is used specifically to mean the use of pollen from one plant to fertilize the flower of another plant and usually synonymous with the term "cross-fertilization" or "cross-pollination" (outcrossing).[4] The latter term can be used more specifically to mean pollen exchange between different plant strains or even different plant species (where the term cross-hybridization can be used) rather than simply between different individuals.[6] -->
