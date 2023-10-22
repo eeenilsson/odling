@@ -12,6 +12,8 @@ Resurser och källor.
 
 [Surkörsbär](https://en.wikipedia.org/wiki/Prunus_cerasus#Origins_and_cultivation)
 
+<!-- Bok Webster A.D & Looney N.E (red) (1996) Cherries: Crop physiology, production and uses. Cambridge, CAB INTERNATIONAL Kap. 3, 5, 7, 8, 15. -->
+
 ## Terminologi
 
 [Taxonomi](https://botanicalsociety.org.za/the-science-of-names-an-introduction-to-plant-taxonomy/)
@@ -50,3 +52,32 @@ Resurser och källor.
 
 [Sweet Cherry pollination table](https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf)
 
+## S-alleler
+
+https://www.openagrar.de/receive/openagrar_mods_00064311
+
+http://www.agricultforest.ac.me/paper.php?id=3137
+
+https://www.sciencedirect.com/science/article/abs/pii/S0304423812004396
+
+https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility
+
+https://link.springer.com/article/10.1007/s001220051700
+
+https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf  # REK
+
+
+<!-- Schuster, Mirko Mirko (2020): Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020. OpenAgrar Repository. Online unter: https://www.openagrar.de/receive/openagrar_mods_00064311. -->
+<!-- - Här finns excelfiler för nedladdning -->
+
+## Sorter
+
+[Blekinge plantskola](https://organicfruittrees.eu/products/buttners-rote)
+<!-- Mognad: juli = tidigt //aug = mellan // sept = sen -->
+<!-- Skörd: bra / medel / liten -->
+
+[Tyska wiki](https://de.wikipedia.org/wiki/Liste_von_Kirschsorten)
+
+[Thomas pollination checker](https://thomasfruittrees.eu/pollinationchecker.aspx)
+
+"Because of this uncertainty our pollination checker will only recommend varieties which flower at the same time and are universal pollinators. Universal pollinator varieties will pollinate all other cherry varieties which are in flower at the same time (with a few exceptions, for example Stella - a universal pollinator - will not pollinate Bing). "

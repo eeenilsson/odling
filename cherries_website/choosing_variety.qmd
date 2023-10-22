@@ -1,9 +1,12 @@
 ---
-Title: Om val av sort
+Title: "Val av sort"
 ---
 
-När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara kompatibla med varandra. Se sidan om [pollination](pollination_about.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
+När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara genetiskt kompatibla med varandra och blomma samtidigt. Se sidan om [pollination](pollination_about.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
 
+Det finns många sorter av körsbär. En sort benämns företrädesvis med artnamn och sortnamn, tex _Prunus avium_ 'Merton Glory'. Dock används i praktiken samma namn för sorter som är genetiskt olika och tvärtom kan sorter som är genetiskt lika benämnas olika. 
+
+[Se](https://pub.epsilon.slu.se/8732/7/nybom_et_al_120419.pdf)
 
 ## Varför plantera flera sorter?
 
@@ -18,23 +21,39 @@ När du planterar körsbär bör du se till att ha mer än en sort. Den främsta
 
 ## Några egenskaper av betydelse för val av sort
 
-- Härdighet: Vilket klimat de kan odlas i. Anges ofta i zoner (i Sverige numrerade 1-8).
+- Härdighet: Vilket klimat de kan odlas i. Anges ofta i zoner numrerade 1-8 där 1 är mildast och 8 kärvast. Kolla zonkartan för att se vilken zon du bor i. Lokalt klimat kan påverkas av närhet till stora vatten (klimatet blir ofta mildare), läge osv.
 
-- Behov av sol/möjlighet att växa i skugga.
+<!-- Digital zonkarta från Riksförbundet Svensk Trädgård , OBS! Avgift för publicering/länkning!!, https://zonkartan.se/, Via blomsterlandet: https://www.blomsterlandet.se/tips-rad/tradgard/tradgardsskotsel/zonkarta-vagledning-till-vaxtval/ -->
+
+<!-- Kartan gäller endast för vedartade växter, som träd, buskar, rosor, fruktträd och klängväxter. För perennernas härdighet eller övervintringsförmåga används ett annat system där skyddat läge och väldränerad växtplats är viktiga faktorer.  -->
+
+- Läge: Behov av sol/möjlighet att växa i skugga.
 
 - Motståndskraft mot sjukdomar.
 
-- Motståndskraft mot att spricka vid mycket sommarregn.
+- Motståndskraft mot att spricka vid rikligt sommarregn.
 
 - Smak: Grad av sötma, syra, arom, etc.
 
-- Storlek på bären.
+- Storlek och form (vissa sorter är hjärtformade) på bären.
+
+- Trädets utseende och storlek (beror också på vilken _grundstam_ som används).
+
+- Skördens riklighet.
 
 - Färgen och glansen på skalet.
 
 - Färgen på saften.
 
 - Fruktköttets konsistens, saftighet och färg.
+
+- Lämplighet för syltning, saftning, konservering, matlagning.
+
+- Tillgänglighet i handeln.
+
+- Kvalitetsmärkning. Vissa sorter finns som "E-plantor" (markeras med ett E efter namnet hos försäljaren). Se sidan om terminologi för mer om det. [Här](https://eplanta.com/kategorier_hemtradgarden/tradgardens-skafferi/) kan du se vilka sorter av körsbär mm där E-märkta exemplar finns att köpa.
+
+<!-- Frost can be extremely damaging to blossom and will reduce your crop. It can be useful to choose trees in late flowering groups if you have a late last frost. -->
 
 ## Surkörsbär, skillnad mot sötkörsbär
 
@@ -48,5 +67,20 @@ När du planterar körsbär bör du se till att ha mer än en sort. Den främsta
 
 - Mer motståndskraftiga mot skadeinsekter och sjukdomar.
 
-- Är tetraploider med 2n=32 kromosomer.
+- Är tetraploider med 2n=32 kromosomer (Sötkörsbär är diploida<!-- och har 16 kromosomer som bildar 8 par.  -->). En tertaploid sort kan ha upp till fyra alleler/varianter i samma locus.
 
+## Några intressanta sorter
+
+Lapins
+
+Sen sort som mognar i slutet av juli eller början av augusti.
+
+OLLINATION PARTNERS FOR LAPINS CHERRY
+Lapins is self-fertile and and does not need a suitable pollination partner to produce fruit. Lapins is in pollination group 2 to 3. The following varieties produces blossom at roughly the same time (mid to late April) and will be pollinated by Lapins. They are easily obtainable in the UK:
+
+Penny, pollination group 3 to 4, eating variety
+Summer Sun, pollination group 3 to 4, eating variety
+Van, pollination group 3, eating variety
+
+HOW LARGE WILL LAPINS GROW
+On Colt rootstock Lapins will grow to about 4m / 13ft tall when it has reached maturity after about 7 years. With an annual prune it can easily be kept to 2.4m / 8ft high for a manageable tree in most gardens. On Gisela 5 rootstock it will grow to approximately 2.4m / 8ft.
