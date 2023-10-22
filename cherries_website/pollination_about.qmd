@@ -103,56 +103,63 @@ Undantaget är S4**’**-allelen som gör att pollenkornet kan befrukta alla (?)
 
 <!-- The ability of cherry pollen to grow down the flower style is controlled by the S locus. Each cultivar has two S-alleles and each pollen grain carries one of these. Flowers cannot be pollinated by pollen from any source that carries either of those two alleles, including its own. Due to inbreeding in the narrow genepool of North America, many pairs of cultivars share the same two S-alleles (same S-genotypes) and thus are cross-incompatible. The exception is the S4’ allele, which confers self-fertility. Effectively, S4’ acts as “stealth pollen” that can pollinate anything including flowers of the cultivar it came from. -->
 
-## Principskiss
+## Principskiss kompatibilitet
 
 ```{mermaid}
 flowchart LR
-  A[Givare S1S3] --> B1(Pollen S1)
+  A[Givare S1S2] --> B1(Pollen S1)
   A --> B2(Pollen S2)
   B1 --> C{Finns S1 hos <br /> mottagaren?}
-  C --> Ja --> D[STOPP!]
-  C --> Nej --> E[Befruktning möjlig]
+  C --> D[JA]
+  C --> E[Nej]
   B2 --> F{Finns S2 hos <br /> mottagaren?}
-  F --> Ja --> G[STOPP!]
-  F --> Nej --> H[Befruktning möjlig]
+  F --> D
+  F --> E
+  D --> G[STOPP!]
+  E --> H[Befruktning möjlig]
 
 ```
 
-
-## Test diagram
-
-
-```{mermaid}
-flowchart LR
-  A[Hard edge] --> B(Round edge)
-  B --> C{Decision}
-  C --> D[Result one]
-  C --> E[Result two]
-```
-
-
-## Exempel
+## Exempel på kompatibilitet för en mottagare med S1S2
 
 <!-- Se https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf -->
 
-**Exempel A** (helt _icke-_kompatibla sorter)
+**Exempel A** (helt _icke_kompatibel givare)
+
+Givaren har S1S2 och producerar därför två sorters pollenkorn som har S1 respektive S2. Mottagaren har likadana S-alleler (S1S2). Båda pollensorterna är därför _icke_kompatibla.
+
+Det innebär att givaren är självsteril (eftersom den också har S1S2 i sin pistill) och hör till samma "inkompatibilitetsgrupp" som mottagaren.
+
+<!-- Mekanism: Detta hindrar båda pollensorterna från att växa ner pollenslangen till fruktämnet hos mottagaren. -->
+
+<!-- Example A (complete incompatibility). Pollen grains with S1 or S2 have landed on a stigma of a flower variety with similar S-alleles (S1S2), either -->
+<!-- its own pollen or pollen from a variety within the same compatibility group. None of the pollen tubes will grow down the style and fertilize the egg. Therefore no seeds or fruit will develop. -->
 
 
+**Exempel B** (delvis kompatibel givare)
 
-Example A (complete incompatibility). Pollen grains with S1 or S2 have landed on a stigma of a flower variety with similar S-alleles (S1S2), either
-its own pollen or pollen from a variety within the same compatibility group. None of the pollen tubes will grow down
-the style and fertilize the egg. Therefore no seeds or fruit will develop.
+Givaren har S1S3 och dess pollenkorn således S1 respektive S3. En av pollensorterna (S1) är därför _icke_kompatibel och den andra pollensorten (S3) är kompatibel.
 
+**Exempel C** (helt kompatibel givare)
 
-**Exempel B** (delvis kompatibla sorter)
+Givaren har S3S4 och dess pollenkorn således S3 respektive S4. Båda pollensorterna (S1) är därför kompatibla med mottagaren.
 
-Example B (partial compatibility). Pollen with S1 or S3 has landed on a stigma of a flower variety with S-alleles S1S2. Therefore only the
-pollen grain with the S3 allele will grow down the style and potentially fertilize the egg.
+```{mermaid}
+flowchart LR
+  A[A. Givare S1S2] --> S1(Pollen S1)
+  B[B. Givare S1S3] --> S3(Pollen S3)
+  C[C. Givare S3S4] --> S4(Pollen S4)
+  A --> S2(Pollen S2)
+  B --> S1
+  C --> S3
+  S1 --> Q12{Samma finns hos <br /> mottagaren S1S2}
+  S2 --> Q12
+  S3 --> Q34{Saknas hos <br /> mottagaren S1S2}
+  S4 --> Q34
+  Q12 --> G[STOPP!]
+  Q34 --> H[Befruktning möjlig]
 
-**Exempel C** (helt kompatibla sorter)
-
-Example C (total compatibility). Pollen with S3 or S4 has landed on the stigma of a flower variety with Salleles (S1S2). Therefore both
-pollen grains have the potential to grow down the style and fertilize the egg.
+```
 
 
 
