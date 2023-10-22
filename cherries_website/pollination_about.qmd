@@ -36,15 +36,108 @@ Bilden nedan visar namnen på blommans olika delar.
 <!-- Prunus cerasus, a tetraploid with 2n=32 chromosomes, tetraploid (four sets; 4x) -->
 
 
-## Pollination, hur funkar det
+# Pollination, hur funkar det
 
-För att det ska bildas frön måste pollenkornet först landa på pistillens märke.
+## Pollinationssekvensen
 
-När pollenkornet hamnar på märket börjar en pollenslang gro ut. Den tränger ner i pistillen ochbefruktar fröämnen inne i fruktämnet och nya frön bildas.
+1. Pollenkornet landar på pistillens _märke_.
 
-Befruktning sker när två hanliga celler (spermier) vandrar ner i pollenslangen, den ena förenar sig med äggcellen (befruktning) och bildar ett fröembryo. Den andra förenas med två kärnor och bildar fröets näringsvävnad. Efter befruktningen växer fruktämnet till och bildar den färdiga frukten med frön i.
+2. Pollenkornet växer ut en _pollenslang_ som tränger ner genom pistillens _stift_ ner till _fruktämnet_.
+
+3. Pollenkornet innehåller två hanliga könsceller som vandrar ner till fruktämnet där de sammansmälter med två kvinnliga könsceller (sk "dubbelbefruktning"). En av dessa (ägget) utvecklas till ett fröembryo och den andra (centralcellen) till omgivande näringsvävnad<!-- (=> fruktköttet?) -->.
+
+Fruktämnet växer sedan till och bildar frukten.
+
+<!-- Fertilisation takes place inside the ovary when the nucleus of pollen grain fuses with the nucleus of an ovule to produce a zygote. -->
+
+<!-- stigma = märke -->
+<!-- pollen tube = pollenslang -->
+<!-- ovary = fruktämne = embryo sac = gametofyt -->
+<!-- ovule ? = fröämne -->
+<!-- double-fertilization -->
+<!-- ägg => embryo -->
+<!-- centralcell => endosperm -->
+
+<!-- När pollenkornet hamnar på märket börjar en pollenslang gro ut. Den tränger ner i pistillen ochbefruktar fröämnen inne i fruktämnet och nya frön bildas. -->
+<!-- Befruktning sker när två hanliga celler (spermier) vandrar ner i pollenslangen, den ena förenar sig med äggcellen (befruktning) och bildar ett fröembryo. Den andra förenas med två kärnor och bildar fröets näringsvävnad. Efter befruktningen växer fruktämnet till och bildar den färdiga frukten med frön i. -->
+
+<!-- Step one: After pollen has landed on the stigma, it grows a pollen tube down through the style to the ovary. -->
+
+<!-- Step two: The nucleus of the pollen grain travels down the pollen tube and fertilises the nucleus in the ovule. -->
+
+<!-- Step three: The fertilised ovule develops into a seed. The seed contains the plant embryo, which contains genetic material from both parents. The ovary develops into the fruit. -->
+
+<!-- Structure of reproductive organs and the sequence of events involved in plant sexual reproduction. Male gametophyte (pollen grain) is comprised of a pollen tube consisting of a vegetative tube cell and two sperm cells. The female gametophyte (embryo sac) has two female gametes (egg and central cell) and accessory cells at the opposite poles. Two synergid cells adjoining the egg cell are located at micropylar entry of the ovule, while antipodal cells neighbouring the central cell are present at the chalazal end. Sexual reproduction involves two major steps: pollination and fertilization. Pollination involves pollen-pistil interaction and fertilization involves fusion of meiotically generated haploid cells of a male (pollen grain) and a female gametophyte (embryo sac). During fertilization, pollen tube penetrates embryo sac at the micropyle by entering a synergid cell and delivers two sperm cells. Eventually, two gametic cell pairs of the embryo sac and two sperm cells undergo ‘double-fertilization’. The fertilized central cell develops into endosperm, while the fertilized egg cell gives rise to embryo. The involvement of redox proteins in different steps of sexual reproduction is highlighted in blue boxes. -->
+
+<!-- An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists -->
+
+## Genetik
+
+Kromosomer
+
+Alleler
+
+An allele is one of two or more versions of DNA sequence (a single base or a segment of bases) at a given genomic location. An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists.
+
+Locus
+
 
 # Pollination av körsbär
+
+Många _sötkörsbär_ kan inte befruktas av individer från samma sort utan käver pollen från en annan sort för att bära frukt. 
+
+Av 1500 sorter av sötkörsbär är kring 10% självfertila och 30 st universella givare.
+
+## Varför är många sorter inkompatibla?
+
+Huruvida pollen från en viss sort är kompatibelt med mottagaren bestäms av ett område på kromosomen som betecknas med "S". Varianter (_alleler_) av S betecknas med olika nummer, S1, S2, S3 osv. Vanligast är S1-S6.
+
+Pollenkornet innehåller en S-allel (tex S2) och pistillen två (tex S1S6). Pollenkorn vars S-variant är _samma_ som _någon_ av pistillens S-varianter kan _inte_ ta sig ner genom stiftet för att befrukta mottagaren.
+
+Undantaget är S4**’**-allelen som gör att pollenkornet kan befrukta alla (?) mottagare och medför _självfertilitet_.
+
+<!-- or sweet cherries, pollen compatibility is controlled by a single genetic locus with many alleles (S-alleles) and these -->
+<!-- have been named S1, S2, S3, etc. Pollen will contain one of the S-alleles whereas the tissue of the pistil will have two -->
+<!-- S-alleles. Pollen with a single S allele in common with either of the S-alleles in the pistil will be rejected by the pistil -->
+<!-- and unable to grow down the style -->
+
+<!-- The ability of cherry pollen to grow down the flower style is controlled by the S locus. Each cultivar has two S-alleles and each pollen grain carries one of these. Flowers cannot be pollinated by pollen from any source that carries either of those two alleles, including its own. Due to inbreeding in the narrow genepool of North America, many pairs of cultivars share the same two S-alleles (same S-genotypes) and thus are cross-incompatible. The exception is the S4’ allele, which confers self-fertility. Effectively, S4’ acts as “stealth pollen” that can pollinate anything including flowers of the cultivar it came from. -->
+
+## Exempel
+
+<!-- Se https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf -->
+
+**Exempel A** (helt _icke-_kompatibla sorter)
+
+
+
+Example A (complete incompatibility). Pollen grains with S1 or S2 have landed on a stigma of a flower variety with similar S-alleles (S1S2), either
+its own pollen or pollen from a variety within the same compatibility group. None of the pollen tubes will grow down
+the style and fertilize the egg. Therefore no seeds or fruit will develop.
+
+**Exempel B** (delvis kompatibla sorter)
+
+Example B (partial compatibility). Pollen with S1 or S3 has landed on a stigma of a flower variety with S-alleles S1S2. Therefore only the
+pollen grain with the S3 allele will grow down the style and potentially fertilize the egg.
+
+**Exempel C** (helt kompatibla sorter)
+
+Example C (total compatibility). Pollen with S3 or S4 has landed on the stigma of a flower variety with Salleles (S1S2). Therefore both
+pollen grains have the potential to grow down the style and fertilize the egg.
+
+
+
+
+Cross-incompatible cultivars with the same S-genotypes are placed in the same “Incompatibility Group” and cannot fertilize each others successfully. For more information on Incompatibility Groups, please see the functional genotype list for this DNA test.
+
+Sweet cherry exhibits RNase based gametophytic self-incompatibility system which is controlled by a single multi-allelic locus S.
+
+Most S-alleles (7) were identified in the mid-early blooming cultivars where the most frequent were S3; S4 and S1. On the other hand, late blooming cherry cultivars had the S3S12 genotype, where the S12 allele was specific to these cultivars. The most frequent allele in the early fruit ripening cultivars was the allele S4. The S14 allele was specific of cultivars with medium fruit ripening time while the alleles S6 and S12 were detected only in the late fruit ripening cultivars. (Se IDENTIFICATION OF SELF INCOMPATIBILITY GENOTYPES IN SWEET CHERRY COMMERCIAL CULTIVARS)
+
+When the S-allele in the pollen is identical with one of the two S-alleles in the style, pollen tube growth in the stylar tissue is arrested. Dependent on the S-allele combination of the cultivars, cross-incompatibility groups of sweet cherry cultivars exist.
+
+"The fertility in sweet cherry is determined by a gametophytic self-incompatibility system, controlled by a multi-allelic S locus who prevents self-pollination. The fertilization is controlled by the interaction of an S allele specific ribonuclease (S-RNase) in the style with a pollen S specific F-box protein gene (SFB). Knowledge about the S genotype of sweet cherries is very important for cherry growers and breeders. In the last years molecular markers have been developed to distinguish the S alleles in sweet cherries. In the new update from October 2020 a total of 63 incompatibility groups in 1483 sweet cherries have been defined. 26 sweet cherries have a unique combination of S alleles and were described as universal donors and placed in the incompatibility group 0. Additionally, there exist 91 self-compatible sweet cherries, called group SC. A total of 22 different S alleles are described in the cultivated sweet cherries up to date. These are the S alleles S1, S2, S3, S4, S5, S6, S7, S9, S10, S12, S13, S14, S16, S17, S18, S19, S21, S22, S24, S27, S30, S37. The goal of this work is to summaries all known data of the S alleles in cultivated sweet cherries. In Table 1 the S genotypes of all studied sweet cherries are described. Furthermore it includes information about the parentage if they are known. Table 2 gives an overview about all the detected incompatibility groups. The groups are sorted according to the group numbers and the S allele numbers, respectively. In Table 3 all genotypes of the incompatibility group 0 with a unique S genotype are listed. Table 4 includes all known self-compatible sweet cherries. All references to the information of the S genotypes are listed in a file named 'References'. The present update needs to be further improved with all new S alleles data of sweet cherries. In addition, all new information about the parentage is very important for the breeding research. Please send all new or corrected data to the S alleles and the parentage of sweet cherries to mirko.schuster@julius-kuehn.de. An update of the S allele overview will take place in the next years. (Se https://www.openagrar.de/receive/openagrar_mods_00064311)"
+
 
 ## Varför behöver körsbär en partner?
 
@@ -79,3 +172,30 @@ Se nedan
 [Botanisk taxonomi](https://en.wikipedia.org/wiki/Taxonomic_rank#Ranks_in_botany)
 
 [Difference Between Allogamy and Xenogamy](https://pediaa.com/difference-between-allogamy-and-xenogamy/)
+
+[Plant fertilization video](https://study.com/academy/lesson/plant-fertilization-process-definition-quiz.html)
+
+[Structure of reproductive organs and the sequence of events involved in plant sexual reproduction, image and description](https://www.researchgate.net/figure/Structure-of-reproductive-organs-and-the-sequence-of-events-involved-in-plant-sexual_fig1_303994517)
+
+[Dubbelbefruktning](https://en.wikipedia.org/wiki/Double_fertilization)
+
+[SWEET CHERRY COMPATIBILITY AND BLOOM TIMING](https://anfic.com.au/wp-content/uploads/2022/05/ANFIC-Sweet-Cherry-Pollination-Table-13042022.pdf)
+
+[Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020](https://www.openagrar.de/receive/openagrar_mods_00064311)
+
+[IDENTIFICATION OF SELF INCOMPATIBILITY GENOTYPES IN SWEET CHERRY COMMERCIAL CULTIVARS](http://www.agricultforest.ac.me/paper.php?id=3137)
+
+[Incompatible (S-) genotypes of sweet cherry cultivars](https://www.sciencedirect.com/science/article/abs/pii/S0304423812004396)
+<!-- An update of the S-genotype of 734 sweet cherries was summarized. The data includes results of 51 new varieties supplemented with data from various published sources and personal information up to 2012 -->
+
+[Rosbreed](https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility)
+
+[](https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf)
+
+<!-- Example A. Pollen grains with S1 or S2 have landed on a stigma of a flower variety with similar S-alleles (S1S2), either -->
+<!-- its own pollen or pollen from a variety within the same compatibility group. None of the pollen tubes will grow down -->
+<!-- the style and fertilize the egg. Therefore no seeds or fruit will develop. -->
+<!-- Example B. Pollen with S1 or S3 has landed on a stigma of a flower variety with S-alleles S1S2. Therefore only the -->
+<!-- pollen grain with the S3 allele will grow down the style and potentially fertilize the egg. -->
+<!-- Example C. Pollen with S3 or S4 has landed on the stigma of a flower variety with Salleles (S1S2). Therefore both -->
+<!-- pollen grains have the potential to grow down the style and fertilize the egg. -->

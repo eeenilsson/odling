@@ -12,6 +12,7 @@ website:
       ## - about.qmd
       - pollination_about.qmd
       - pollination_table.qmd
+      - terminology.qmd
     pinned: true
     self-contained: true
     embed-resources: true
