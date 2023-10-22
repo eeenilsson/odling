@@ -1,12 +1,10 @@
 ---
-Title: "Val av sort"
+title: "Val av sort"
 ---
 
 När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara genetiskt kompatibla med varandra och blomma samtidigt. Se sidan om [pollination](pollination_about.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
 
-Det finns många sorter av körsbär. En sort benämns företrädesvis med artnamn och sortnamn, tex _Prunus avium_ 'Merton Glory'. Dock används i praktiken samma namn för sorter som är genetiskt olika och tvärtom kan sorter som är genetiskt lika benämnas olika. 
-
-[Se](https://pub.epsilon.slu.se/8732/7/nybom_et_al_120419.pdf)
+Det finns många sorter av körsbär. En sort benämns företrädesvis med artnamn och sortnamn, tex _Prunus avium_ 'Merton Glory'. Dock används i praktiken samma namn för sorter som är genetiskt olika och tvärtom kan sorter som är genetiskt lika benämnas olika. [Se](https://pub.epsilon.slu.se/8732/7/nybom_et_al_120419.pdf)
 
 ## Varför plantera flera sorter?
 
@@ -84,3 +82,10 @@ Van, pollination group 3, eating variety
 
 HOW LARGE WILL LAPINS GROW
 On Colt rootstock Lapins will grow to about 4m / 13ft tall when it has reached maturity after about 7 years. With an annual prune it can easily be kept to 2.4m / 8ft high for a manageable tree in most gardens. On Gisela 5 rootstock it will grow to approximately 2.4m / 8ft.
+
+<!-- RHS recommends: When choosing a variety, it’s worth looking out for any with an RHS Award of Garden Merit (AGM). These are recommended by RHS fruit experts, as they performed well in trials – see our list of AGM fruit and veg. -->
+
+
+Van
+
+"Excellent pollinator"

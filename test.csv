@@ -1,289 +1,189 @@
-"","var","pollinated_by_concordance_chr","variable","value"
-"1","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","buttners_rote",TRUE
-"2","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","buttners_rote",FALSE
-"3","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","buttners_rote",FALSE
-"4","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","buttners_rote",FALSE
-"5","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","buttners_rote",FALSE
-"6","lapins","lapins (100%)","buttners_rote",FALSE
-"7","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","buttners_rote",TRUE
-"8","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","buttners_rote",TRUE
-"9","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","buttners_rote",FALSE
-"10","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","hedelfinger",TRUE
-"11","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","hedelfinger",TRUE
-"12","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","hedelfinger",FALSE
-"13","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","hedelfinger",FALSE
-"14","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","hedelfinger",FALSE
-"15","lapins","lapins (100%)","hedelfinger",FALSE
-"16","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","hedelfinger",TRUE
-"17","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","hedelfinger",TRUE
-"18","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","hedelfinger",FALSE
-"19","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","merton_glory",TRUE
-"20","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","merton_glory",TRUE
-"21","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","merton_glory",TRUE
-"22","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","merton_glory",FALSE
-"23","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","merton_glory",TRUE
-"24","lapins","lapins (100%)","merton_glory",FALSE
-"25","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","merton_glory",TRUE
-"26","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","merton_glory",FALSE
-"27","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","merton_glory",FALSE
-"28","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","stor_svart",TRUE
-"29","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","stor_svart",FALSE
-"30","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","stor_svart",FALSE
-"31","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","stor_svart",FALSE
-"32","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","stor_svart",TRUE
-"33","lapins","lapins (100%)","stor_svart",FALSE
-"34","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","stor_svart",TRUE
-"35","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","stor_svart",FALSE
-"36","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","stor_svart",FALSE
-"37","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","sam",TRUE
-"38","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","sam",FALSE
-"39","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","sam",FALSE
-"40","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","sam",FALSE
-"41","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","sam",FALSE
-"42","lapins","lapins (100%)","sam",FALSE
-"43","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","sam",FALSE
-"44","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","sam",FALSE
-"45","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","sam",TRUE
-"46","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","van",TRUE
-"47","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","van",TRUE
-"48","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","van",FALSE
-"49","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","van",FALSE
-"50","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","van",FALSE
-"51","lapins","lapins (100%)","van",FALSE
-"52","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","van",TRUE
-"53","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","van",FALSE
-"54","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","van",TRUE
-"55","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","stora_klarbar",TRUE
-"56","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","stora_klarbar",FALSE
-"57","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","stora_klarbar",FALSE
-"58","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","stora_klarbar",FALSE
-"59","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","stora_klarbar",FALSE
-"60","lapins","lapins (100%)","stora_klarbar",FALSE
-"61","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","stora_klarbar",FALSE
-"62","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","stora_klarbar",FALSE
-"63","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","stora_klarbar",FALSE
-"64","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","annonay",TRUE
-"65","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","annonay",FALSE
-"66","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","annonay",FALSE
-"67","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","annonay",FALSE
-"68","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","annonay",FALSE
-"69","lapins","lapins (100%)","annonay",FALSE
-"70","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","annonay",FALSE
-"71","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","annonay",FALSE
-"72","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","annonay",FALSE
-"73","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","erianne",TRUE
-"74","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","erianne",FALSE
-"75","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","erianne",TRUE
-"76","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","erianne",FALSE
-"77","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","erianne",FALSE
-"78","lapins","lapins (100%)","erianne",FALSE
-"79","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","erianne",FALSE
-"80","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","erianne",TRUE
-"81","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","erianne",FALSE
-"82","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","fanal",TRUE
-"83","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","fanal",TRUE
-"84","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","fanal",FALSE
-"85","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","fanal",FALSE
-"86","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","fanal",FALSE
-"87","lapins","lapins (100%)","fanal",FALSE
-"88","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","fanal",FALSE
-"89","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","fanal",FALSE
-"90","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","fanal",FALSE
-"91","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","frogmore",TRUE
-"92","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","frogmore",TRUE
-"93","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","frogmore",FALSE
-"94","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","frogmore",FALSE
-"95","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","frogmore",FALSE
-"96","lapins","lapins (100%)","frogmore",FALSE
-"97","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","frogmore",FALSE
-"98","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","frogmore",TRUE
-"99","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","frogmore",FALSE
-"100","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","heidi",TRUE
-"101","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","heidi",TRUE
-"102","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","heidi",FALSE
-"103","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","heidi",FALSE
-"104","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","heidi",TRUE
-"105","lapins","lapins (100%)","heidi",FALSE
-"106","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","heidi",TRUE
-"107","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","heidi",FALSE
-"108","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","heidi",FALSE
-"109","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","merton_premier",TRUE
-"110","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","merton_premier",TRUE
-"111","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","merton_premier",TRUE
-"112","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","merton_premier",FALSE
-"113","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","merton_premier",FALSE
-"114","lapins","lapins (100%)","merton_premier",FALSE
-"115","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","merton_premier",FALSE
-"116","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","merton_premier",FALSE
-"117","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","merton_premier",FALSE
-"118","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","kelleris",FALSE
-"119","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","kelleris",TRUE
-"120","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","kelleris",TRUE
-"121","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","kelleris",FALSE
-"122","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","kelleris",TRUE
-"123","lapins","lapins (100%)","kelleris",FALSE
-"124","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","kelleris",FALSE
-"125","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","kelleris",FALSE
-"126","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","kelleris",FALSE
-"127","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","allm_gulrod",FALSE
-"128","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","allm_gulrod",TRUE
-"129","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","allm_gulrod",TRUE
-"130","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","allm_gulrod",TRUE
-"131","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","allm_gulrod",FALSE
-"132","lapins","lapins (100%)","allm_gulrod",FALSE
-"133","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","allm_gulrod",TRUE
-"134","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","allm_gulrod",FALSE
-"135","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","allm_gulrod",FALSE
-"136","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","kauffs_kirsche",FALSE
-"137","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","kauffs_kirsche",FALSE
-"138","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","kauffs_kirsche",FALSE
-"139","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","kauffs_kirsche",FALSE
-"140","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","kauffs_kirsche",FALSE
-"141","lapins","lapins (100%)","kauffs_kirsche",FALSE
-"142","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","kauffs_kirsche",FALSE
-"143","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","kauffs_kirsche",FALSE
-"144","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","kauffs_kirsche",FALSE
-"145","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","berit",FALSE
-"146","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","berit",FALSE
-"147","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","berit",FALSE
-"148","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","berit",FALSE
-"149","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","berit",FALSE
-"150","lapins","lapins (100%)","berit",FALSE
-"151","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","berit",FALSE
-"152","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","berit",FALSE
-"153","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","berit",FALSE
-"154","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","stella",FALSE
-"155","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","stella",TRUE
-"156","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","stella",FALSE
-"157","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","stella",FALSE
-"158","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","stella",FALSE
-"159","lapins","lapins (100%)","stella",FALSE
-"160","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","stella",TRUE
-"161","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","stella",FALSE
-"162","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","stella",TRUE
-"163","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","almore",FALSE
-"164","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","almore",TRUE
-"165","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","almore",FALSE
-"166","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","almore",TRUE
-"167","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","almore",FALSE
-"168","lapins","lapins (100%)","almore",FALSE
-"169","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","almore",TRUE
-"170","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","almore",FALSE
-"171","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","almore",FALSE
-"172","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","gardebo",FALSE
-"173","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","gardebo",TRUE
-"174","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","gardebo",FALSE
-"175","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","gardebo",TRUE
-"176","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","gardebo",FALSE
-"177","lapins","lapins (100%)","gardebo",FALSE
-"178","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","gardebo",TRUE
-"179","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","gardebo",FALSE
-"180","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","gardebo",FALSE
-"181","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","ostheimer",FALSE
-"182","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","ostheimer",TRUE
-"183","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","ostheimer",FALSE
-"184","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","ostheimer",FALSE
-"185","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","ostheimer",FALSE
-"186","lapins","lapins (100%)","ostheimer",FALSE
-"187","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","ostheimer",TRUE
-"188","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","ostheimer",FALSE
-"189","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","ostheimer",FALSE
-"190","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","nordia",FALSE
-"191","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","nordia",FALSE
-"192","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","nordia",TRUE
-"193","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","nordia",FALSE
-"194","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","nordia",FALSE
-"195","lapins","lapins (100%)","nordia",FALSE
-"196","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","nordia",FALSE
-"197","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","nordia",FALSE
-"198","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","nordia",FALSE
-"199","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","kirsa",FALSE
-"200","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","kirsa",FALSE
-"201","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","kirsa",TRUE
-"202","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","kirsa",FALSE
-"203","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","kirsa",FALSE
-"204","lapins","lapins (100%)","kirsa",FALSE
-"205","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","kirsa",FALSE
-"206","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","kirsa",FALSE
-"207","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","kirsa",FALSE
-"208","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","fryksas",FALSE
-"209","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","fryksas",FALSE
-"210","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","fryksas",FALSE
-"211","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","fryksas",FALSE
-"212","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","fryksas",FALSE
-"213","lapins","lapins (100%)","fryksas",FALSE
-"214","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","fryksas",TRUE
-"215","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","fryksas",FALSE
-"216","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","fryksas",FALSE
-"217","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","skuggmorell",FALSE
-"218","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","skuggmorell",FALSE
-"219","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","skuggmorell",FALSE
-"220","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","skuggmorell",TRUE
-"221","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","skuggmorell",FALSE
-"222","lapins","lapins (100%)","skuggmorell",FALSE
-"223","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","skuggmorell",FALSE
-"224","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","skuggmorell",FALSE
-"225","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","skuggmorell",FALSE
-"226","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","lapins",FALSE
-"227","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","lapins",FALSE
-"228","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","lapins",FALSE
-"229","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","lapins",FALSE
-"230","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","lapins",FALSE
-"231","lapins","lapins (100%)","lapins",TRUE
-"232","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","lapins",FALSE
-"233","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","lapins",FALSE
-"234","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","lapins",FALSE
-"235","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","victor",FALSE
-"236","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","victor",FALSE
-"237","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","victor",FALSE
-"238","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","victor",FALSE
-"239","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","victor",FALSE
-"240","lapins","lapins (100%)","victor",FALSE
-"241","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","victor",FALSE
-"242","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","victor",FALSE
-"243","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","victor",FALSE
-"244","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","sunburst",FALSE
-"245","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","sunburst",FALSE
-"246","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","sunburst",FALSE
-"247","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","sunburst",FALSE
-"248","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","sunburst",FALSE
-"249","lapins","lapins (100%)","sunburst",FALSE
-"250","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","sunburst",FALSE
-"251","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","sunburst",FALSE
-"252","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","sunburst",TRUE
-"253","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","triaux",FALSE
-"254","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","triaux",FALSE
-"255","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","triaux",FALSE
-"256","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","triaux",FALSE
-"257","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","triaux",FALSE
-"258","lapins","lapins (100%)","triaux",FALSE
-"259","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","triaux",FALSE
-"260","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","triaux",FALSE
-"261","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","triaux",FALSE
-"262","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","tschernokorka",FALSE
-"263","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","tschernokorka",FALSE
-"264","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","tschernokorka",FALSE
-"265","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","tschernokorka",FALSE
-"266","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","tschernokorka",FALSE
-"267","lapins","lapins (100%)","tschernokorka",FALSE
-"268","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","tschernokorka",FALSE
-"269","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","tschernokorka",FALSE
-"270","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","tschernokorka",FALSE
-"271","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","kordia",FALSE
-"272","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","kordia",FALSE
-"273","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","kordia",FALSE
-"274","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","kordia",FALSE
-"275","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","kordia",FALSE
-"276","lapins","lapins (100%)","kordia",FALSE
-"277","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","kordia",FALSE
-"278","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","kordia",FALSE
-"279","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","kordia",FALSE
-"280","allm_gulrod","buttners_rote (25%), hedelfinger (75%), merton_glory (75%), stor_svart (50%), sam (25%), van (25%), stora_klarbar (50%), annonay (25%), erianne (25%), fanal (25%), frogmore (25%), heidi (25%), merton_premier (25%)","lettisk_lag",FALSE
-"281","buttners_rote","allm_gulrod (100%), hedelfinger (75%), merton_glory (75%), merton_premier (25%), stella (75%), van (75%), almore (25%), fanal (25%), frogmore (25%), gardebo (25%), heidi (25%), kelleris (25%), ostheimer (25%)","lettisk_lag",FALSE
-"282","frogmore","NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)","lettisk_lag",FALSE
-"283","gardebo","allm_gulrod (75%), skuggmorell (50%), gardebo (75%), almore (25%)","lettisk_lag",FALSE
-"284","heidi","merton_glory (100%), stor_svart (50%), heidi (25%), kelleris (25%)","lettisk_lag",FALSE
-"285","lapins","lapins (100%)","lettisk_lag",FALSE
-"286","sam","allm_gulrod (100%), buttners_rote (75%), hedelfinger (75%), merton_glory (75%), stella (50%), almore (50%), heidi (50%), stor_svart (25%), van (50%), fryksas (25%), gardebo (25%), ostheimer (25%)","lettisk_lag",FALSE
-"287","donissen","NA (75%), buttners_rote (100%), erianne (100%), frogmore (100%), hedelfinger (100%)","lettisk_lag",FALSE
-"288","kordia","NA (75%), sam (100%), stella (100%), sunburst (100%), van (100%)","lettisk_lag",FALSE
+compatibility_group pollination_period
+
+Group I (S1S2)
+Black Tartarian,I,1,
+Tulare,I,2,
+Summit,I,4,
+
+Group II (S1S3)
+Samba (Sumste),II,1,
+Helga,II,2,
+Simcoe (PC 7147-1),II,2,
+SPC335,II,2,
+Coral Champagne,II,2,
+Early Robin,II,3,
+Justyna,II,3,
+Satin (Sumele),II,3,
+Van,II,3,
+Areko,II,4,
+Cristalina (Sumnue),II,4,
+Olympus,II,4,
+Sonnet,II,4,
+Regina,II,5,
+
+Group III (S3S4)
+Somerset,III,1,
+Burgundy Pearl,III,2,
+Jacinta,III,2,
+Sandra,III,2,
+Sweetheart,III,2,
+Bing,III,3,
+Emperor,III,3,
+Sir Douglas,III,3,
+SPC276,III,3,
+NY 13696,III,3,
+NY 13788,III,3,
+NY 13791,III,3,
+Amid,III,4,
+SPC414,III,4,
+SPC411,III,4,
+SPC424,III,4,
+Napoleon,III,5,
+Ulster,III,5,
+
+Group IV (S2S3)
+SMS 290 (NIMBA),IV,1,
+Vega,IV,2,
+Bigalise (Enjidel),IV,3,
+Coralise,IV,3,
+Dame Nancy,IV,4,
+
+Group V (S4S5)
+Tim,V,2,
+
+Group VI (S3S6)
+Burgsdorf (Self fertile),VI,1,
+Christiana,VI,2,
+Hartland,VI,2,
+Kordia (Attika),VI,4,
+Starks Gold,VI,4,
+Cristobalina,VI,5,
+
+Group VII (S3S5)
+Early Burlat,VII,3,
+Hedelfinger,VII,5,
+
+Group VIII (S2S5)
+Vista,VIII,3,
+
+Group IX (S1S4)
+Frisco,IX,1,
+BF-9,IX,2,
+Summer Jewel,IX,2,
+Ebony Pearl,IX,3,
+Rainier,IX,3,
+SPC234,IX,3,
+Sylvia,IX,4,
+Hudson,IX,5,
+
+Group XIII (S2S4)
+Royalton,XIII,3,
+Sofia SPC106,XIII,3,
+Sam,XIII,4,
+Vic,XIII,4,
+Sam,XIII,5,
+Suite Note,XIII,5,
+
+Group XIV (S1S5)
+SPC342,XIV,3,
+
+Group XVI (S3S9)
+SMS 1,XVI,1,
+SMS 6,XVI,1,
+Burlat,XVI,2,
+Chelan,XVI,2,
+Tieton,XVI,3,
+
+Group XVII (S4S6)
+Irena,XVII,
+
+Group XVIII (S1S9)
+Brooks,XVIII,
+Bellise (Bedel),XVIII,
+Earlise (Rivedel),XVIII,
+Rocket,XVIII,
+
+Group XX (S1S6)
+Empress,XX,1,
+Elza,XX,5,
+Fabiola,XX,5,
+,
+Group XXI (S4S9),
+Merchant,XXI,1,
+Kiona (PC 8007-2),XXI,4,
+,
+Group XXII (S3S12),
+Nordwunder,XXII,4,
+Schneiders,XXII,5,
+Ziraat-0900,XXII,5,
+,
+Group XXV (S2S6),
+Early Korvik,XXV,4,
+,
+Group XXXVII (S5S9),
+Cowiche (PC7903-2),XXXVII,4,
+,
+Group XLV (S4S13),
+Black Pearl,XLV,2,
+,
+Group LI (S1S13),
+Radiance Pearl,LI,2,
+Black Douglas,LI,3,
+,
+Unknown Groups and S-allelles,
+NY 412068,unknown,1,
+Rons Seedling,unknown,2,
+NY 564,unknown,2,
+SMS 33,unknown,2,
+SMS 311,unknown,2,
+Supreme,unknown,2,
+Australise (Arodel),unknown,3,
+PC 7064-3,unknown,3,
+PC 7616-4,unknown,3,
+NY 270,unknown,3,
+NY 2131,unknown,3,
+NY 7690,unknown,3,
+NY 9801,unknown,3,
+NY 413087,unknown,3,
+NY 414205,unknown,3,
+PC 7309-4,unknown,4,
+PC 8007-2,unknown,4,
+PC 8008-1,unknown,4,
+NY 410213,unknown,4,
+NY 412113,unknown,4,
+NY 9295,unknown,4,
+PC 7636-1,unknown,5,
+St Margaret,unknown,5,
+,
+Self-fertile with S4' allele (universal donors),
+Marysa (PA6UNIBO),SC,2,
+Simone,SC,2,
+Sir Don,SC,2,
+Sir Tom,SC,2,
+Index,SC,2,
+Lapins,SC,2,
+SMS 16,SC,2,
+Celeste,SC,3,
+Glacier,SC,3,
+Santina,SC,3,
+Selah,SC,3,
+Staccato,SC,3,
+Starkcrimson,SC,3,
+Stella,SC,3,
+Sunburst,SC,3,
+Sweetheart,SC,3,
+Symphony,SC,3,
+Cashmere,SC,4,
+Sandra Rose,SC,4,
+Sentennial,SC,4,
+Skeena,SC,4,
+Sonata,SC,4,
+Sovereign,SC,4,
+Starblush,SC,4,
+White Gold,SC,4,
+Sir Hans,SC,4,
+Benton,SC,5,
+Black Gold,SC,5,
+Dame Roma,SC,5,
+Felicita,SC,5,
+Stardust,SC,5,

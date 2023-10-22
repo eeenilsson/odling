@@ -205,6 +205,104 @@ toplot
 
 ### HERE #################
 
+## Genotypes --------------------
+
+
+pacman::p_load(data.table)
+
+## Data from Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020 Mirko Schuster Julius Kühn-Institut (JKI)
+## In the new update from October 2020
+## a total of 63 incompatibility groups in 1483 sweet cherries have been defined. 26 sweet cherries have a unique combination of S alleles and were described as universal donors and placed in the incompatibility group 0. Additionally, there exist 91 self-compatible sweet cherries, called group SC. A total of 22 different S alleles are described in the cultivated sweet cherries up to date. These are the S alleles S1, S2, S3, S4, S5, S6, S7, S9, S10, S12, S13, S14, S16, S17, S18, S19, S21, S22, S24, S27, S30, S37.
+
+### Lista grupper + S-alleler
+incompatibility_groups <- fread("cherries_incompatibility_groups_2020.csv") 
+## S4'|any => Self compatible
+
+incompatibility_groups <- fread("cherry_incompatibility_groups_2020.csv") 
+
+
+### Lista sort och S-alleler mm 2020
+variety_genotype_group <- fread("cherries_variety_genotype_group.csv", header = TRUE)
+## 1 Country according ISO 3166 Code list
+## See also: functional_genotypes_compatibility_groups.csv
+
+names(variety_genotype_group)
+
+variety_genotype_group[, .(incompatibility_group)]
+
+unique(variety_genotype_group$incompatibility_group)
+
+## S4'
+variety_genotype_group[grepl("S4'", genotype) , ]
+## Note: All S4' are SC
+sc <- variety_genotype_group[grepl("SC", incompatibility_group) , ]
+sc[grepl("S4'", genotype), .(variety, genotype, incompatibility_group)]
+sc[grepl("S4'", genotype) == FALSE, .(variety, genotype, incompatibility_group)]
+## Note: Not al SC have S4
+
+
+variety_genotype_group[grepl("0", incompatibility_group) , ]
+
+variety_genotype_group[grepl("Lapins", variety), .(variety, genotype, incompatibility_group, mother, father)]
+
+variety_genotype_group[grepl("Lapins|Van|Stella", variety), .(variety, genotype, incompatibility_group, mother, father)]
+
+
+
+## Rosbreed har en xls med S-gruppe också: https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility
+
+## Phenology data bloom time ------------------
+
+fread("anfic_blooming_time.csv")
+## pollination_period_anfic (I-V) => 1-5
+## 1 = "Early", 2 = "Early mid", 3 = "Mid", 4 = "Late mid", 5 = Late
+## Crosstable: Cols ordered by blooming period, rows by comp_gr, heatmap-style with red = incompatible, green = "All compatible", yellow = "Compatible but different bloom sequence"
+
+
+fread("sweet_cherry_phenology_data_1978_2015.csv")
+
+## Metadata Sweet cherry phenology data: 1978 - 2015
+
+## The dataset file includes the dataset and a metadata spreadsheet with the description of all information in the dataset spreadsheet.
+
+## Header	Description
+## Country	
+## Institute	Research or experimental institute attached to the experimental station
+## Station		Name of station
+## Latitude	Latitude in decimal degrees
+## Longitude	Longitude in decimal degrees
+## Altitude	Altitude in meters
+## Plantation	Year of plantation of the tree
+## Year		Year of observation
+## Cultivar	Registered name of the cutlivar
+## Clone		Number of clone
+## Rootstock	Name of the rootstock
+## Beginning of flowering (date)	Date observed for the BBCH stage corresponding to beginning of flowering
+## Full flowering (date)	Date observed for the BBCH stage corresponding to full flowering
+## End of flowering (date)	Date observed for the BBCH stage corresponding to end of flowering
+## Beginning of maturity (date)	Date observed for the BBCH stage corresponding to maturity
+## Beginning of flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to beginning of flowering
+## Full flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to full flowering
+## End of flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to end of flowering
+## Beginning of maturity	Number of days in year [1 - 365/366] for the BBCH stage corresponding to maturity
+## Flowering duration	Number of days between beginning and end of flowering
+## Sweet cherry phenological data were collected from two networks: flowering and maturity dates for up to 191 reference cultivars, and from 10 sites, were extracted from the French database,
+## [A collection of European sweet cherry phenology data for assessing climate change](https://www.nature.com/articles/sdata2016108)
+## - [Data](https://datadryad.org/stash/dataset/doi:10.5061/dryad.1d28m)
+
+
+## ANFIC, australien
+## ANFIC-Sweet-Cherry-Pollination-Table
+## https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf
+
+
+
+
+
+
+
+
+#############################
 
 ## https://ggplot2.tidyverse.org/reference/scale_size.html
 ## p <- ggplot(toplot, aes(pollinator, target)) +

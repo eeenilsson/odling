@@ -73,7 +73,9 @@ Fruktämnet växer sedan till och bildar frukten.
 
 <!-- An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists -->
 
-# Genetik och kompatibiltet
+# Genetik och kompatibilitet
+
+Kärsbär har i sina kromosomer två (hos sötkörsbär, fler hos surkörsbär) varianter av en viss gen. En sådan variant benämns med bokstaven S och en siffra, tsex "S1", så en körsbärssort kommer vara tex "S2S6". Då kommer den ha S2S6 i sina pistiller och det pollen den skickar iväg kommer att vara antingen S2 eller S6. En körsbärssort är "immun" mot pollen som innehåller någon av dess egna "bokstäver". Så ett S2S6-körsbär är immunt mot pollen som innehåller S2 eller S6. Eftersom de flesta sorter har S1 till S6 blir det ganska vanligt att de är inkompatibla. Detta beskrivs mer i detalj nedan.
 
 ## Genetik, några begrepp
 
@@ -81,7 +83,7 @@ Kromosomer
 
 Alleler
 
-An allele is one of two or more versions of DNA sequence (a single base or a segment of bases) at a given genomic location. An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists.
+<!-- An allele is one of two or more versions of DNA sequence (a single base or a segment of bases) at a given genomic location. An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists. -->
 
 Locus
 
@@ -91,7 +93,11 @@ Huruvida pollen från en viss sort är kompatibelt med mottagaren bestäms av et
 
 Pollenkornet innehåller en S-allel (tex S2) och pistillen två (tex S1S6). Pollenkorn vars S-variant är _samma_ som _någon_ av pistillens S-varianter kan _inte_ ta sig ner genom stiftet för att befrukta mottagaren.
 
-Undantaget är S4**’**-allelen som gör att pollenkornet kan befrukta alla (?) mottagare och medför _självfertilitet_.
+Undantaget är S4**’**-allelen som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
+
+Notera dock att de enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
+
+Enstaka universella givare saknar S4**’**.
 
 <!-- or sweet cherries, pollen compatibility is controlled by a single genetic locus with many alleles (S-alleles) and these -->
 <!-- have been named S1, S2, S3, etc. Pollen will contain one of the S-alleles whereas the tissue of the pistil will have two -->
@@ -175,72 +181,15 @@ Utifrån genetisk kompatibilitet kan sötkörsbär delas in i "kompatibiltetsgru
 
 Av 1500 sorter av sötkörsbär är kring 10% självfertila och 30 st universella givare.
 
-```{r } 
-#| label: my-label 
-
-pacman::p_load(data.table)
-
-## Data from Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020 Mirko Schuster Julius Kühn-Institut (JKI)
-## In the new update from October 2020
-## a total of 63 incompatibility groups in 1483 sweet cherries have been defined. 26 sweet cherries have a unique combination of S alleles and were described as universal donors and placed in the incompatibility group 0. Additionally, there exist 91 self-compatible sweet cherries, called group SC. A total of 22 different S alleles are described in the cultivated sweet cherries up to date. These are the S alleles S1, S2, S3, S4, S5, S6, S7, S9, S10, S12, S13, S14, S16, S17, S18, S19, S21, S22, S24, S27, S30, S37.
-
-### Lista grupper + S-alleler
-incompatibility_groups <- fread("cherries_incompatibility_groups_2020.csv") 
-## S4'|any => Self compatible
-
-### Lista sort och S-alleler mm 2020
-variety_genotype_group <- fread("cherries_variety_genotype_group.csv", header = TRUE)
-## 1 Country according ISO 3166 Code list
-## See also: functional_genotypes_compatibility_groups.csv
-
-
-## Phenology data bloom time
-
-fread("sweet_cherry_phenology_data_1978_2015.csv")
-
-## Metadata Sweet cherry phenology data: 1978 - 2015
-
-## The dataset file includes the dataset and a metadata spreadsheet with the description of all information in the dataset spreadsheet.
-
-## Header	Description
-## Country	
-## Institute	Research or experimental institute attached to the experimental station
-## Station		Name of station
-## Latitude	Latitude in decimal degrees
-## Longitude	Longitude in decimal degrees
-## Altitude	Altitude in meters
-## Plantation	Year of plantation of the tree
-## Year		Year of observation
-## Cultivar	Registered name of the cutlivar
-## Clone		Number of clone
-## Rootstock	Name of the rootstock
-## Beginning of flowering (date)	Date observed for the BBCH stage corresponding to beginning of flowering
-## Full flowering (date)	Date observed for the BBCH stage corresponding to full flowering
-## End of flowering (date)	Date observed for the BBCH stage corresponding to end of flowering
-## Beginning of maturity (date)	Date observed for the BBCH stage corresponding to maturity
-## Beginning of flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to beginning of flowering
-## Full flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to full flowering
-## End of flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to end of flowering
-## Beginning of maturity	Number of days in year [1 - 365/366] for the BBCH stage corresponding to maturity
-## Flowering duration	Number of days between beginning and end of flowering
-<!-- Sweet cherry phenological data were collected from two networks: flowering and maturity dates for up to 191 reference cultivars, and from 10 sites, were extracted from the French database, -->
-<!-- [A collection of European sweet cherry phenology data for assessing climate change](https://www.nature.com/articles/sdata2016108) -->
-<!-- - [Data](https://datadryad.org/stash/dataset/doi:10.5061/dryad.1d28m)-->
-
-
-## ANFIC, australien
-## ANFIC-Sweet-Cherry-Pollination-Table
-## https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf
-
-
-
-``` 
 
 # Blomningstid
 
 <!-- Bloom time -->
 
 För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt).
+
+
+ <!-- Although pollinating bees can travel 3 – 4km (2 – 212 miles), the general rule of thumb is that trees for cross-pollination should be within 18m (55ft) of each other to be really effective. -->
 
 I Sverige blommar körsbären april-maj.
 
@@ -257,6 +206,10 @@ Sen
 
 [Primrose UK](https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/)
 <!-- Self-sterile cherry trees require another variety flowering at the same time to ensure fertilisation. They are henceforth put into flowering groups from 1 (very early) to 6 (very late). A cherry tree can be partnered with a cherry that is plus or minus 1 (+-1) its own group. -->
+
+[Tree-connect](https://treeconnect.com/cherry-tree-pollenizer/)
+
+
 
 <!-- Mognadstid -->
 <!-- Körsbärsvecka 1 börjar olika datum olika år och bestäms av ... -->
