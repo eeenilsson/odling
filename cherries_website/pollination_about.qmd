@@ -103,6 +103,34 @@ Undantaget är S4**’**-allelen som gör att pollenkornet kan befrukta alla (?)
 
 <!-- The ability of cherry pollen to grow down the flower style is controlled by the S locus. Each cultivar has two S-alleles and each pollen grain carries one of these. Flowers cannot be pollinated by pollen from any source that carries either of those two alleles, including its own. Due to inbreeding in the narrow genepool of North America, many pairs of cultivars share the same two S-alleles (same S-genotypes) and thus are cross-incompatible. The exception is the S4’ allele, which confers self-fertility. Effectively, S4’ acts as “stealth pollen” that can pollinate anything including flowers of the cultivar it came from. -->
 
+## Principskiss
+
+```{mermaid}
+flowchart LR
+  A[Givare S1S3] --> B1(Pollen S1)
+  A --> B2(Pollen S2)
+  B1 --> C{Finns S1 hos <br /> mottagaren?}
+  C --> Ja --> D[STOPP!]
+  C --> Nej --> E[Befruktning möjlig]
+  B2 --> F{Finns S2 hos <br /> mottagaren?}
+  F --> Ja --> G[STOPP!]
+  F --> Nej --> H[Befruktning möjlig]
+
+```
+
+
+## Test diagram
+
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+
 ## Exempel
 
 <!-- Se https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf -->
@@ -114,6 +142,7 @@ Undantaget är S4**’**-allelen som gör att pollenkornet kan befrukta alla (?)
 Example A (complete incompatibility). Pollen grains with S1 or S2 have landed on a stigma of a flower variety with similar S-alleles (S1S2), either
 its own pollen or pollen from a variety within the same compatibility group. None of the pollen tubes will grow down
 the style and fertilize the egg. Therefore no seeds or fruit will develop.
+
 
 **Exempel B** (delvis kompatibla sorter)
 
