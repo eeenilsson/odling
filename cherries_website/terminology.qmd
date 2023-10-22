@@ -3,6 +3,76 @@ title: "Terminologi"
 ---
 
 
+## Taxonomi
+
+Genus (släkte): _Prunus_ (plommon, körsbär, aprikoser mfl)
+
+Subgenus (undersläkte): _Prunus subg. Cesarus_ (körsbär)
+
+Species (art): _Prunus cesarus_ (surkörsbär) och _Prunus avium_ (sötkörsbär)
+
+Subspecies (underart): Tex _Prunus avium subsp. avium_
+
+Varietas (variant): Tex _Prunus avium var. juliana_ (Hjärtkörsbär), _Prunus avium var. avium_ (Vanlig sötkörsbär), _Prunus avium var. duracina_ (Bigarrå).
+
+"Sort": Tex _Prunus avium_ 'Merton Glory'. Kallas ibland "kultivar" när den framkorsats medvetet.
+
+Släktnamnet skrivs med stor bokstav och artnamnet med liten.
+
+Korsningar mellan två arter markeras med ett "x" mellan släktnamnet och artnamnet.
+
+[Exempel](https://species.wikimedia.org/wiki/Prunus_avium_subsp._avium)
+
+<!-- Om en växt är en korsning mellan två arter, markeras detta med ett x mellan släkt- och artnamnet, ex. Geranium x magnificum (=G. ibericum x G. platypetalum).  -->
+
+
+**Förkortningar:**
+
+subg. = subgenus
+
+sp. = species
+
+subs. = ssp. = subspecies
+
+var. = v. = varietas (= f. [form]?)
+
+syn. = synonymt med
+
+<!-- Genus: Prunus -->
+<!-- Subgenus: P. subg. Cerasus -->
+<!-- Species: Prunus avium -->
+<!-- Subspecies: Prunus avium subsp. avium -->
+
+<!-- Arten kan delas in i ett antal varieteter.  -->
+<!--     Vanlig sötkörsbär (Prunus avium var. avium) – har små frukter, upp till 1 cm stora. Färgen på frukterna varierar från gult till rött eller svart. De har ofta en bitter smak.[källa behövs] -->
+<!--     Bigarrå (Prunus avium var. duracina) – har stora frukter med fast fruktkött. De mognar ofta sent på säsongen. Det finns många sorter som hör till denna varietet. Även så kallade halvbigarråer är klassificerade som denna varietet. -->
+<!--     Hjärtkörsbär (Prunus avium var. juliana) – har stora frukter med löst fruktkött. Sorter som 'Guigne d'Annonay', 'Elton', 'Frogmore Early', 'Knauff's Riesenkirsche', 'Merton Glory' och 'Valeska' räknas till hjärtkörsbäret. -->
+
+
+<!-- Prunus avium L. syn. Cerasus avium Moench. -->
+
+<!-- Påpekas skall att sp. används för en obestämd art. Om man t.ex. skriver Geranium sp. så menar man en art av släktet Geranium men man vill eller kan inte bestämma växten till art utan endast till släkte.  -->
+
+<!-- Odlade växter har ofta registrerade namnsorter, dessa skrives med stor bokstav inom enkla apostrofer, ex. Geranium pratense 'Kashmir White'. Man kan också i vardagsbruk skriva enbart Geranium 'Kashmir White'.  -->
+
+<!-- Om en växt är en korsning mellan två arter, markeras detta med ett x mellan släkt- och artnamnet, ex. Geranium x magnificum (=G. ibericum x G. platypetalum).  -->
+
+<!-- Alternativa namn markeras med synonym, syn. (ex. Geranium lambertii syn. G. candicans).  -->
+
+<!-- https://www.odla.nu/inspiration/lite-grundlaggande-botanik -->
+
+## Benämningar av olika typer av körsbär
+
+_Bigarrå_: Benämndes tidigare taxonomiskt _Prunus avium var. duracina_, kom senare att avse sorter med viss tup av fruktkött (fast), men numera menas oftast bara sötkörsbär (?).
+
+_Hjärtkörsbär_, Benämndes tidigare taxonomiskt _Prunus avium var. avium_. Avser numera vanligen endast att bären är hjärtformade. 
+
+_Morell_: Surkörsbär med mörkröd färg.
+
+_Amarell_: Surkörsbär med ljusare färg.
+
+
+
 ## Pollination och befruktning
 
 Terminoligin är rörig och olika definitioner förekommer (tex anses ibland självpollination uteslutande betyda att pollen kommer från samma blomma).
@@ -15,7 +85,7 @@ _Korspollination (allogami)_: Pollen överförs mellan två olika individer.
 
 <!-- Synonymer: Allogami, korsbefruktning , eng. cross-pollination, cross-fertilization, "outcrosser", "outbreeder". -->
 
-**I praktiken** brukar man i vardagligt tal använda begreppen litat annorlunda:
+**I praktiken** brukar man i vardagligt tal används begreppen litet annorlunda:
 
 "Korspollination": En viss sort (_Prunus avium_ 'Merton Glory') måste pollineras av en annan sort (tex _Prunus avium_ 'Allmän gulröd bigarrå') för att bära frukt. Dessa sorter kallas ibland "självsterila".
 
@@ -44,3 +114,7 @@ _Korspollination (allogami)_: Pollen överförs mellan två olika individer.
 <!-- Allogamy or cross-fertilization is the fertilization of an ovum from one individual with the spermatozoa of another. -->
 
 <!-- In plants, allogamy is used specifically to mean the use of pollen from one plant to fertilize the flower of another plant and usually synonymous with the term "cross-fertilization" or "cross-pollination" (outcrossing).[4] The latter term can be used more specifically to mean pollen exchange between different plant strains or even different plant species (where the term cross-hybridization can be used) rather than simply between different individuals.[6] -->
+
+
+
+<!-- [Blekinge plantskola](https://organicfruittrees.eu/products/lapins-korsbar?variant=40116019462281) -->

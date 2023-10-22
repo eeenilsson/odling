@@ -1,0 +1,52 @@
+---
+Title: Om val av sort
+---
+
+När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara kompatibla med varandra. Se sidan om [pollination](pollination_about.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
+
+
+## Varför plantera flera sorter?
+
+- Kan vara nödvändigt för att få frukt (se ovan).
+
+- Vissa sorter är lämpliga för matlagning och andra bör ätas färska.
+
+- Om de mognar under olika perioder har du tillgång till körsbär under en längre tid.
+
+- Olika sorter kan trivas olika bra i just din trädgård, så det kan vara bra att prova olika.
+
+
+## Några egenskaper av betydelse för val av sort
+
+- Härdighet: Vilket klimat de kan odlas i. Anges ofta i zoner (i Sverige numrerade 1-8).
+
+- Behov av sol/möjlighet att växa i skugga.
+
+- Motståndskraft mot sjukdomar.
+
+- Motståndskraft mot att spricka vid mycket sommarregn.
+
+- Smak: Grad av sötma, syra, arom, etc.
+
+- Storlek på bären.
+
+- Färgen och glansen på skalet.
+
+- Färgen på saften.
+
+- Fruktköttets konsistens, saftighet och färg.
+
+## Surkörsbär, skillnad mot sötkörsbär
+
+- Mer syrliga än sötkörsbär.
+
+<!-- Morello cherry trees fruit on younger wood than sweet varieties, and thus can be pruned harder. -->
+
+- Alla sorter av surkörsbär är självfertila, dvs kräver inte pollen från en annan individ för att bära frukt.
+
+- Kräver mer kväve och vatten. Bättre tolerans mot dålig dränering av jorden.
+
+- Mer motståndskraftiga mot skadeinsekter och sjukdomar.
+
+- Är tetraploider med 2n=32 kromosomer.
+

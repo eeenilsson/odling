@@ -10,9 +10,11 @@ website:
       - href: index.qmd
         text: Hem
       ## - about.qmd
+      - choosing_variety.qmd
       - pollination_about.qmd
       - pollination_table.qmd
       - terminology.qmd
+      - resources.qmd
     pinned: true
     self-contained: true
     embed-resources: true

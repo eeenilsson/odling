@@ -3,83 +3,24 @@ title: "Körsbär"
 sidebar: false
 ---
 
-Detta är en sida om odling av körsbär.
+Detta är en sida om odling av ätliga körsbär. Den är tänkt att beskriva vad man bör tänka på vid val av sort och odling av körsbär samt beskriva bakgrunden till detta. Nedan följer en översiktlig introduktion och fördjupning finns i de olika avsnitten som kan ses i menyraden ovan.
 
-![Prunus Cesarus](prunus_cesarus.jpg)
+Ord i texten som är _kursiverade_ återfinns i avsnittet om [terminologi](terminology.qmd).
 
-Genus (släkte): _Prunus_ (plommon, körsbär, aprikoser mfl)
-Subgenus (undersläkte): _Prunus subg. Cesarus_ (körsbär)
-Species (art): _Prunus cesarus_ (surkörsbär) och _Prunus avium_ (sötkörsbär)
-Subspecies (underart): Tex _Prunus avium subsp. avium_
-Varietas (variant): Tex _Prunus avium var. juliana_ (Hjärtkörsbär), _Prunus avium var. avium_ (Vanlig sötkörsbär), _Prunus avium var. duracina_ (Bigarrå).
+::: {layout-ncol=2}
 
-"Sort": Tex _Prunus avium_ 'Merton Glory'. Kallas ibland "kultivar" när den framkorsats medvetet.
+Genus (släkte): _Prunus_ (plommon, körsbär mfl)<br><br>Subgenus (undersläkte): _Prunus subg. Cesarus_ (körsbär)<br><br>Species (art): _Prunus cesarus_ ("surkörsbär") och _Prunus avium_ ("sötkörsbär")
 
-Släktnamnet skrivs med stor bokstav och artnamnet med liten.
+![Prunus Cesarus](../../../dropbox/images/plants/prunus_cesarus.jpg){width=40%}
 
-subg.
-sp.
-subs. = ssp.
-var. = f. [form] = v.
-
-[Exempel](https://species.wikimedia.org/wiki/Prunus_avium_subsp._avium)
-<!-- Genus: Prunus -->
-<!-- Subgenus: P. subg. Cerasus -->
-<!-- Species: Prunus avium -->
-<!-- Subspecies: Prunus avium subsp. avium -->
-
-<!-- Arten kan delas in i ett antal varieteter.  -->
-<!--     Vanlig sötkörsbär (Prunus avium var. avium) – har små frukter, upp till 1 cm stora. Färgen på frukterna varierar från gult till rött eller svart. De har ofta en bitter smak.[källa behövs] -->
-<!--     Bigarrå (Prunus avium var. duracina) – har stora frukter med fast fruktkött. De mognar ofta sent på säsongen. Det finns många sorter som hör till denna varietet. Även så kallade halvbigarråer är klassificerade som denna varietet. -->
-<!--     Hjärtkörsbär (Prunus avium var. juliana) – har stora frukter med löst fruktkött. Sorter som 'Guigne d'Annonay', 'Elton', 'Frogmore Early', 'Knauff's Riesenkirsche', 'Merton Glory' och 'Valeska' räknas till hjärtkörsbäret. -->
-
-
-<!-- Påpekas skall att sp. används för en obestämd art. Om man t.ex. skriver Geranium sp. så menar man en art av släktet Geranium men man vill eller kan inte bestämma växten till art utan endast till släkte.  -->
-
-<!-- Odlade växter har ofta registrerade namnsorter, dessa skrives med stor bokstav inom enkla apostrofer, ex. Geranium pratense 'Kashmir White'. Man kan också i vardagsbruk skriva enbart Geranium 'Kashmir White'.  -->
-
-<!-- Om en växt är en korsning mellan två arter, markeras detta med ett x mellan släkt- och artnamnet, ex. Geranium x magnificum (=G. ibericum x G. platypetalum).  -->
-
-<!-- Alternativa namn markeras med synonym, syn. (ex. Geranium lambertii syn. G. candicans).  -->
-
-<!-- https://www.odla.nu/inspiration/lite-grundlaggande-botanik -->
-
+:::
 
 
 <!-- To learn more about Quarto websites visit <https://quarto.org/docs/websites>. -->
 
+<!-- Markdown text styles: https://quarto.org/docs/visual-editor/options.html -->
 
-## Varför plantera flera sorter?
-
-Some are suitable for cooking and others best eaten straight off the tree. Secondly, growing multiple varieties allows you to ensure a steady supply of cherries throughout the warmer months.  Thirdly,  you can never know how well a  particular variety will do in your garden, so it is always worth experimenting. Lastly, some varieties are resistant to cracking, which usually occurs during summer rains.
-
-## Surkörsbär ("Amarell"), skillnad mot sötkörsbär
-
-
-Morello cherry trees fruit on younger wood than sweet varieties, and thus can be pruned harder.
-
- Trees will do badly if waterlogged, but have greater tolerance of poor drainage than sweet varieties.
-
-demand more nitrogen and water than sweet cherries
-
-Sour cherries suffer fewer pests and diseases than sweet cherries
-
-sour cherries are self fertile
-
-tetraploid with 2n=32 chromosomes
+Av körsbär finns många sorter, både naturligt framkorsade och sådana som är skapade genom medveten växtförädling. Terminologin för olika typer av körsbär kan vara förvirrande, är inte enhetlig och har varierat genom tiderna. Se sidan om [sidan om terminologi](terminology.qmd) för mer om det.
  
 <!-- ## Grundstammar -->
 
-## Resurser
-
-[Taxonomi](https://botanicalsociety.org.za/the-science-of-names-an-introduction-to-plant-taxonomy/)
-
-[Taxonomi](https://glossary.lias.net/wiki/Taxonomic_rank)
-
-[Taxonomic rank in botany](https://en.wikipedia.org/wiki/Taxonomic_rank#Ranks_in_botany)
-
-[Prunus cesarus](https://en.wikipedia.org/wiki/Prunus_cerasus)
-
-[Van cherry](https://en.wikipedia.org/wiki/Van_cherry)
-
-[Surkörsbär](https://en.wikipedia.org/wiki/Prunus_cerasus#Origins_and_cultivation)
