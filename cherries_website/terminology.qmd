@@ -141,4 +141,64 @@ Fördelar med E-plantor:
 
 
 
+## The BBCH-scale is used to identify the phenological development stages of plants
 
+Principal growth stages:
+
+    0: Germination, sprouting, bud development
+    1: Leaf development
+    2: Formation of side shoots, tillering
+    3: Stem elongation or rosette growth, shoot development
+    4: Development of harvestable vegetative plant parts, bolting
+    5: Inflorescence emergence, heading
+    6: Flowering
+    7: Development of fruit
+    8: Ripening or maturity of fruit and seed
+    9: Senescence, beginning of dormancy
+
+The "BBCH-scale (stone)" identifies the phenological development stages of stone fruit (cherry = Prunus cerasus, plum = Prunus domestica ssp. domestica, peach = Prunus persica, apricot = Prunus armeniaca).
+
+<!-- See datafile "bbch_scale_stone_fruit.csv" -->
+
+<!-- Phenological growth stages and BBCH-identification keys of stone fruit. The BBCH-scale (stone) identifies the phenological development stages of stone fruit (cherry = Prunus cerasus, plum = Prunus domestica ssp. domestica, peach = Prunus persica, apricot = Prunus armeniaca). It is a plant species specific version of the BBCH-scale. 2 -->
+
+BBCH-scale (stone), faser som kan vara av särskilt intresse att obsevera:
+
+Principal growth stage 5: Inflorescence emergence
+
+51 	Inflorescence buds swelling: buds closed, light brown scales visible
+53 	Bud burst: scales separated, light green bud sections visible
+54 	Inflorescence enclosed by light green scales, if such scales are formed (not all cultivars)
+55 	Single flower buds visible (still closed) borne on short stalks, green scales slightly open
+56 	Flower pedicel elongating; sepals closed; single flowers separating
+57 	Sepals open: petal tips visible; single flowers with white or pink petals (still closed)
+59 	Most flowers with petals forming a hollow ball
+
+Principal growth stage 6: Flowering
+
+60 	First flowers open
+61 	Beginning of flowering: about 10% of flowers open
+62 	About 20% of flowers open
+63 	About 30% of flowers open
+64 	About 40% of flowers open
+65 	Full flowering: at least 50% of flowers open, first petals falling
+67 	Flowers fading: majority of petals fallen
+69 	End of flowering: all petals fallen
+
+Principal growth stage 7: Development of fruit
+
+71 	Ovary growing; fruit fall after flowering
+72 	Green ovary surrounded by dying sepal crown, sepals beginning to fall
+73 	Second fruit fall
+75 	Fruit about half final size
+76 	Fruit about 60% of final size
+77 	Fruit about 70% of final size
+78 	Fruit about 80% of final size
+79 	Fruit about 90% of final size
+
+Principal growth stage 8: Maturity of fruit and seed
+
+81 	Beginning of fruit colouring
+85 	Colouring advanced
+87 	Fruit ripe for picking
+89 	Fruit ripe for consumption: fruit have typical taste and firmness 

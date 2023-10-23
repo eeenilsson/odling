@@ -8,7 +8,9 @@ Många _sötkörsbär_ kan inte befruktas av individer från samma sort utan kä
 
 # Introduktion
 
-Pollination är överföring av pollenkorn från ståndarna på en blomma till pistillen på en annan. Det ger befruktning som gör att ett frö kan bildas som sedan blir en frukt. Pollination kan ske genom att pollenkornen tas med av vinden, insekter eller andra djur.
+Pollination är överföring av pollenkorn från ståndarna på en blomma till pistillen på en annan. Det ger befruktning som gör att ett frö kan bildas som sedan blir en frukt. 
+
+Pollination kan ske genom att pollenkornen tas med av vinden, insekter eller andra djur. Pollinerande bin kan flyga upp till 3-4 km, men tumregeln är att träd för korspollinering bär vara inom 18 m för att det verkligen skall vara effektivt.
 
 <!-- När pollen kommer från ståndaren till pistillen i samma blomma kallas det _självpollination_ och när pollen kommer från en annan individ av samma art kallas det _korspollination_. -->
 
@@ -73,7 +75,7 @@ Fruktämnet växer sedan till och bildar frukten.
 
 <!-- An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists -->
 
-# Genetik och kompatibilitet
+# Genetisk kompatibilitet
 
 Kärsbär har i sina kromosomer två (hos sötkörsbär, fler hos surkörsbär) varianter av en viss gen. En sådan variant benämns med bokstaven S och en siffra, tsex "S1", så en körsbärssort kommer vara tex "S2S6". Då kommer den ha S2S6 i sina pistiller och det pollen den skickar iväg kommer att vara antingen S2 eller S6. En körsbärssort är "immun" mot pollen som innehåller någon av dess egna "bokstäver". Så ett S2S6-körsbär är immunt mot pollen som innehåller S2 eller S6. Eftersom de flesta sorter har S1 till S6 blir det ganska vanligt att de är inkompatibla. Detta beskrivs mer i detalj nedan.
 
@@ -93,16 +95,15 @@ Huruvida pollen från en viss sort är kompatibelt med mottagaren bestäms av et
 
 Pollenkornet innehåller en S-allel (tex S2) och pistillen två (tex S1S6). Pollenkorn vars S-variant är _samma_ som _någon_ av pistillens S-varianter kan _inte_ ta sig ner genom stiftet för att befrukta mottagaren.
 
-Undantaget är S4**’**-allelen som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
+Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
 
-Notera dock att de enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
+De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
 
-Enstaka universella givare saknar S4**’**.
+Enstaka universella givare saknar också S4**’**.
 
-<!-- or sweet cherries, pollen compatibility is controlled by a single genetic locus with many alleles (S-alleles) and these -->
-<!-- have been named S1, S2, S3, etc. Pollen will contain one of the S-alleles whereas the tissue of the pistil will have two -->
-<!-- S-alleles. Pollen with a single S allele in common with either of the S-alleles in the pistil will be rejected by the pistil -->
-<!-- and unable to grow down the style -->
+<!-- Mekanismer, vad händer vid inkompatibilitet. -->
+
+<!-- Sweet cherry exhibits RNase based gametophytic self-incompatibility system which is controlled by a single multi-allelic locus S. -->
 
 <!-- The ability of cherry pollen to grow down the flower style is controlled by the S locus. Each cultivar has two S-alleles and each pollen grain carries one of these. Flowers cannot be pollinated by pollen from any source that carries either of those two alleles, including its own. Due to inbreeding in the narrow genepool of North America, many pairs of cultivars share the same two S-alleles (same S-genotypes) and thus are cross-incompatible. The exception is the S4’ allele, which confers self-fertility. Effectively, S4’ acts as “stealth pollen” that can pollinate anything including flowers of the cultivar it came from. -->
 
@@ -165,11 +166,6 @@ flowchart LR
 ```
 
 
-<!-- Cross-incompatible cultivars with the same S-genotypes are placed in the same “Incompatibility Group” and cannot fertilize each others successfully. For more information on Incompatibility Groups, please see the functional genotype list for this DNA test. -->
-
-<!-- Sweet cherry exhibits RNase based gametophytic self-incompatibility system which is controlled by a single multi-allelic locus S. -->
-
-<!-- Most S-alleles (7) were identified in the mid-early blooming cultivars where the most frequent were S3; S4 and S1. On the other hand, late blooming cherry cultivars had the S3S12 genotype, where the S12 allele was specific to these cultivars. The most frequent allele in the early fruit ripening cultivars was the allele S4. The S14 allele was specific of cultivars with medium fruit ripening time while the alleles S6 and S12 were detected only in the late fruit ripening cultivars. (Se IDENTIFICATION OF SELF INCOMPATIBILITY GENOTYPES IN SWEET CHERRY COMMERCIAL CULTIVARS) -->
 
 <!-- When the S-allele in the pollen is identical with one of the two S-alleles in the style, pollen tube growth in the stylar tissue is arrested. Dependent on the S-allele combination of the cultivars, cross-incompatibility groups of sweet cherry cultivars exist. -->
 
@@ -177,10 +173,13 @@ flowchart LR
 
 ## Kompatibilitetsgrupper
 
-Utifrån genetisk kompatibilitet kan sötkörsbär delas in i "kompatibiltetsgrupper" som ibland mer logiskt kallas "inkompatibilitetsgrupper". Notera att pollinatören mäste komma från en **annan** kompatibiltetsgrupp än mottagaren.
+Utifrån genetisk kompatibilitet kan sötkörsbär delas in i "kompatibiltetsgrupper" körsbärssorter inom varje grupp kan inte befrukta varandra. Pollinatören mäste alltså komma från en **annan** kompatibiltetsgrupp än mottagaren.
 
-Av 1500 sorter av sötkörsbär är kring 10% självfertila och 30 st universella givare.
+ <!-- som ibland mer logiskt kallas "inkompatibilitetsgrupper" -->
 
+Av 1500 sorter av sötkörsbär är kring 10% självfertila och 2% st universella givare. Dessa är dock vanligare i handeln.
+
+<!-- Cross-incompatible cultivars with the same S-genotypes are placed in the same “Incompatibility Group” and cannot fertilize each others successfully. For more information on Incompatibility Groups, please see the functional genotype list for this DNA test. -->
 
 # Blomningstid
 
@@ -189,7 +188,7 @@ Av 1500 sorter av sötkörsbär är kring 10% självfertila och 30 st universell
 För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt).
 
 
- <!-- Although pollinating bees can travel 3 – 4km (2 – 212 miles), the general rule of thumb is that trees for cross-pollination should be within 18m (55ft) of each other to be really effective. -->
+
 
 I Sverige blommar körsbären april-maj.
 
@@ -206,6 +205,8 @@ Sen
 
 [Primrose UK](https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/)
 <!-- Self-sterile cherry trees require another variety flowering at the same time to ensure fertilisation. They are henceforth put into flowering groups from 1 (very early) to 6 (very late). A cherry tree can be partnered with a cherry that is plus or minus 1 (+-1) its own group. -->
+
+[Ashridge](https://www.ashridgetrees.co.uk/advice/pollinating-cherry-trees)
 
 [Tree-connect](https://treeconnect.com/cherry-tree-pollenizer/)
 
@@ -253,6 +254,7 @@ Hos de som blommar tidigt eller i mitten av säsongen är S1, S3 och S4 vanligas
 Hos dem vars bär mognar tidigt är S4 vanligast. S14 förekommer endast hos de som mognar i mitten av mognadssäsongen. S6 och S12 finns endast hos de med sen mognad.
 
 <!-- Most S-alleles (7) were identified in the mid-early blooming cultivars where the most frequent were S3; S4 and S1. On the other hand, late blooming cherry cultivars had the S3S12 genotype, where the S12 allele was specific to these cultivars. The most frequent allele in the early fruit ripening cultivars was the allele S4. The S14 allele was specific of cultivars with medium fruit ripening time while the alleles S6 and S12 were detected only in the late fruit ripening cultivars. (Se IDENTIFICATION OF SELF INCOMPATIBILITY GENOTYPES IN SWEET CHERRY COMMERCIAL CULTIVARS) -->
+
 
 # Hur väljer man lämplig pollinatör?
 
