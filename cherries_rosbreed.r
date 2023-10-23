@@ -68,51 +68,46 @@ ros[, startofyear := paste0(format(as.Date(Harvest_Date, format="%Y-%m-%d"),"%Y"
 ros[, startofyear := as.Date(startofyear)]
 ros[, harvest_time_relative := difftime(Harvest_Date, startofyear)]
 
-ros
 
-## "2010-07-24"
-ros[, format(as.Date(Harvest_Date, format="%d/%m/%Y"),"%Y")]
+## Check date variables
+ros[, .(Harvest_Date, Harvest_Days, Harvest_Time, harvest_time_relative)]
+## Note: Harvest_Date = Date, Harvest_Days ~160-190 range, Harvest_Time ~ 800-1000 range with decimal places. 
+ros[, .(Bloom_Date, Bloom_Days, Bloom_Time)]
+## Norge: "First bloom required 221 Baskerville-Emin Growing degree days (GDD)" Note: Detta stämmer ungefär med "Bloom_Time"-värdena
 
-ros[, format(as.Date(Harvest_Date, format="%Y-%m-%d"),"%Y")]
+## vars to select cols
+vars_bloom <- c("Bloom_Date", "Bloom_Days", "Bloom_Time")
+vars_harvest <- c("Harvest_Date", "Harvest_Days", "Harvest_Time")
+vars_id <- c("Germplasm", "Species", "Species", "Dataset")
 
-ros[, format(as.Date(Harvest_Date),"%Y")]
-ros[, format(as.Date(Harvest_Date),"%m")]
-ros[, format(as.Date(Harvest_Date),"%d")]
-
-ros[, Harvest_md := format(as.Date(Harvest_Date),"%m-%d")]
-str(ros[, Harvest_md])
-
-
-
-ros[, format(as.Date(Harvest_Date, format="%d/%m/%Y"),"%m")]
-ros[, format(as.Date(Harvest_Date, format="%d/%m/%Y"),"%m")]
-
-
-
-ros[, harvest_month := month(Harvest_Date)]
-ros[, harvest_day := day(Harvest_Date)]
-?month
-
-ros[["Harvest_Date"]]
-ros[, format(as.Date(Harvest_Date, format="%d/%m/%Y"),"%Y")]
-
-format(as.Date(df1$Date, format="%d/%m/%Y"),"%Y")
-
-str(ros)
-
-objects()
-?month
-?as.Date
-
-str(ros)
-
-ros[, Harvest_Date]
-
-difftime
+## extract some vars
+selectvars <- c(c(vars_id, vars_harvest))
+ros_harvest <- ros[, ..selectvars]
+selectvars <- c(c(vars_id, vars_bloom))
+ros_bloom <- ros[, ..selectvars]
 
 ## aggregate the datasets from different years
+## Note: Aggregate using median to avoid data entry errors?
+ros[, .(bt = mean(Bloom_Days, na.rm = TRUE),
+        gdd = mean(Bloom_Time, na.rm = TRUE)),
+    by = Germplasm]
+
+
+selectvars <- c(vars_id, "Bloom_Days", "Bloom_Time")
+## ros_bloom[ , ..selectvars]
+str(ros_bloom)
+
+
+ros_bloom[, .(bt = mean(Bloom_Days, na.rm = TRUE), gdd = mean(Bloom_Time, na.rm = TRUE)), by = Germplasm]
+
+
+
+ros[ , median(Bloom_Days), by = list(Germplasm, Species, Species)]
+str(ros)
 
 ros[ , count:=sum(col3), by = list(col1, col2)]
+
+summary(ros_bloom)
 
 data_frame[, lapply(.SD, sum), by= col1]
 
@@ -153,6 +148,8 @@ data_frame[, lapply(.SD, sum), by= col1]
 
 ## Growing degree days was calculated for an alternative measure of phenological traits. Climatic data was obtained from Washington State University’s AgWeatherNet using the “Roza” station [53], using a base temperature of 4.5 °C and maximum of 30 °C. Daily maximum temperatures above 30 °C were reduced to 30 °C, and negative temperatures were set to zero, following McMaster and Wilhelm
 
+## All trait distributions (consisting of 600–755 data points for each trait) were influenced by the year of data collection (Fig. 1).
+rm(ros)
 
 ## Publications on specific traits --------------------
 

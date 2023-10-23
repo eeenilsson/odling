@@ -23,9 +23,9 @@
 "Fruit_Wt","Fruit weight","quantitative"," "," ","Individual fruit weight, measured typically on 5 fruit from a tree",
 "GENOTYPED",,"qualitative"," "," ",,
 "Harvest_Date","Harvest date","date"," ","date","exact date of harvest",
-"Harvest_Date","Harvest date GDD","quantitative"," ","gdd","GDD to harvest starting from January 1st of each calendar year.","Web search says The accumulation of average daily temperatures is calculated as Growing Degree Days, GDD"
+"Harvest_Date","Harvest date GDD","quantitative"," ","gdd","GDD to harvest starting from January 1st of each calendar year. THIS SEEMS INCORRECT, Harvest_Date is a date format varible","Web search says The accumulation of average daily temperatures is calculated as Growing Degree Days, GDD"
 "Harvest_Days","Harvest date","quantitative"," ","days","days to harvest starting from January 1st of each calendar year",
-"Harvest_Time",,"quantitative"," "," ",,
+"Harvest_Time",,"quantitative"," "," ",,"Probably GDD?"
 "HarvestTimeGDD",,"date"," "," ",,
 "Location",,"text"," "," ",,
 "Location_Block",,"text"," "," ",,
