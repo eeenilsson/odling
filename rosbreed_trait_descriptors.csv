@@ -59,4 +59,4 @@
 "SSC","Total water soluble content","quantitative"," ","degreesBrix","Soluble solids contents = Total soluble solids = Brix, measured typically on 5 fruit from a tree. ","Google says It indicates the number of dissolved solids in a liquid measured via its specific gravity (SG). One degree Brix is 1 g of sucrose in 100 g of solution (1 ∘ Brix = 1% sugar). Degrees Brix (symbol °Bx) is a measure of the dissolved solids in a liquid, and is commonly used to measure dissolved sugar content of an aqueous solution.Degrees Brix (symbol °Bx) is a measure of the dissolved solids in a liquid, and is commonly used to measure dissolved sugar content of an aqueous solution."
 "Stem_L",,"quantitative"," "," ",,
 "Stem_length",,"quantitative"," "," ",,
-"TA","Total acidity","quantitative"," ","percent","Measured on bulked fruit usually 20 as a percentage of malic acid concentration",
+"TA","Total or maybe titratable acidity","quantitative"," ","percent","Measured on bulked fruit usually 20 as a percentage of malic acid concentration","Sweetness and acidity are quantified with assays for soluble solids content (SSC) and titratable acidity (TA), respectively"

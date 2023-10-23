@@ -73,6 +73,8 @@ Lapins
 
 Sen sort som mognar i slutet av juli eller början av augusti.
 
+Garden Focused: "Only really suitable for growing in warmer parts of the UK because blossom first appears on average in the second to third week of April (pollination group 2 to 3)."
+
 OLLINATION PARTNERS FOR LAPINS CHERRY
 Lapins is self-fertile and and does not need a suitable pollination partner to produce fruit. Lapins is in pollination group 2 to 3. The following varieties produces blossom at roughly the same time (mid to late April) and will be pollinated by Lapins. They are easily obtainable in the UK:
 
@@ -89,3 +91,27 @@ On Colt rootstock Lapins will grow to about 4m / 13ft tall when it has reached m
 Van
 
 "Excellent pollinator"
+
+Stella
+
+If you only want to grow one cherry tree, choose Stella - self-fertile, easy to grow, and a good pollinator.
+
+Morello is a traditional late-season acid or sour-cherry. It's a good choice if you need a trained tree for a north-facing situation. Flowers over a long period. The blossom of Morello cherry is particularly long-lasting and compatible, making it an excellent pollinator of most other cherries (sweet or sour).
+
+Gardenfocused:
+https://www.gardenfocused.co.uk/fruitarticles/cherry/varieties.php
+Se beskrivningar i "cherries_gardenfocused_uk_varieties_description.csv"
+Alla utom dessa anges som self-sterile:
+"MORELLO","Self-fertile",
+"SKEENA","Self-fertile",
+"STELLA","Self-fertile"
+"SUMMER SUN","Self-fertile"
+"SUNBURST","Self-fertile",
+"SWEETHEART","Self-fertile",
+"SYLVIA","Self-fertile",
+"LAPINS"
+Alla utom dessa anges som Use: Eating
+"MORELLO", "Use: Cooking"
+
+
+<!-- Market intermediaries indicated a willingness to pay producers more per pound for fruit greater than 2.5 cm in diameter, firmness above 300 g/mm, and SSC above 18 °Brix -->

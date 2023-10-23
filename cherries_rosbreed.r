@@ -4,6 +4,52 @@
 ## https://www.rosaceae.org/search/quantitative_traits
 ## Select trait => Search => Push "table" to download csv
 
+## Data joined
+
+bloom_days <- fread("Bloom_Days.csv")
+acidity <- fread("TA.csv")
+
+cbind(bloom_days, acidity)
+
+?cbind
+
+Fruit_Dim.csv
+Flesh_C.csv
+
+-rw-r--r-- 1 e 6.9K Oct 23 13:22 Spec_Flesh_Color_b.csv
+  -rw-r--r-- 1 e 6.9K Oct 23 13:22 Spec_Flesh_Color_a.csv
+  -rw-r--r-- 1 e  19K Oct 23 13:21 Bulked_Fruit_SSC.csv
+  -rw-r--r-- 1 e  52K Oct 23 13:21 Pull_Force.csv
+  -rw-r--r-- 1 e  53K Oct 23 13:20 Pit_Lh.csv
+  -rw-r--r-- 1 e 7.0K Oct 23 13:20 Spec_Skin_Color_a.csv
+  -rw-r--r-- 1 e  40K Oct 23 13:19 Skin_C_mahogany.csv
+  -rw-r--r-- 1 e 6.9K Oct 23 13:19 Spec_Skin_Color_b.csv
+  -rw-r--r-- 1 e 7.0K Oct 23 13:18 Spec_Skin_Color_L.csv
+  -rw-r--r-- 1 e  43K Oct 23 13:18 Bulked_Fruit_Firmness.csv
+  -rw-r--r-- 1 e  50K Oct 23 13:17 FreeStone.csv
+  -rw-r--r-- 1 e  20K Oct 23 13:17 Perc_Cracking.csv
+  -rw-r--r-- 1 e  52K Oct 23 13:16 Fruit_Wt.csv
+  -rw-r--r-- 1 e  52K Oct 23 13:15 SSC.csv
+  -rw-r--r-- 1 e  14K Oct 23 13:15 Perc_Pitting.csv
+  -rw-r--r-- 1 e 7.0K Oct 23 13:14 Spec_Flesh_Color_L.csv
+  -rw-r--r-- 1 e  52K Oct 23 13:14 Pit_Wt.csv
+  -rw-r--r-- 1 e  53K Oct 23 13:10 Fruit_Wd2.csv
+  -rw-r--r-- 1 e  52K Oct 23 13:10 Pit_Wd1.csv
+  -rw-r--r-- 1 e  48K Oct 23 13:10 Harvest_Time.csv
+  -rw-r--r-- 1 e  27K Oct 23 13:09 Stem_length.csv
+  -rw-r--r-- 1 e  42K Oct 23 13:09 Foliar_PM.csv
+  -rw-r--r-- 1 e  47K Oct 23 13:08 Bloom_Time.csv
+  -rw-r--r-- 1 e  53K Oct 23 13:08 Fruit_L.csv
+  -rw-r--r-- 1 e  25K Oct 23 13:07 Bulked_Fruit_Wt.csv
+  -rw-r--r-- 1 e  46K Oct 23 13:07 Harvest_Days.csv
+  -rw-r--r-- 1 e  11K Oct 23 13:06 Skin_C_blush.csv
+  -rw-r--r-- 1 e 53K Oct 23 13:05 Firmness_1.csv
+  -rw-r--r-- 1 e 6.5K Oct 23 13:04 pH.csv
+  -rw-r--r-- 1 e 41K Oct 23 13:00 Fruit_Shape.csv
+  -rw-r--r-- 1 e 49K Oct 23 12:59 Harvest_Date.csv
+  -rw-r--r-- 1 e 49K Oct 23 12:57 Bloom_Date.csv
+  -rw-r--r-- 1 e  68K Oct 23 12:51 
+
 ## Metadata --------------------------------
 
 ## Trait descriptors details: https://www.rosaceae.org/bio_data/8433870
@@ -48,3 +94,12 @@
 ## Detection of Breeding-Relevant Fruit Cracking and Fruit Firmness Quantitative Trait Loci in Sweet Cherry via Pedigree-Based and Genome-Wide Association Approaches, Crumb 2022
 ## https://www.frontiersin.org/articles/10.3389/fpls.2022.823250/full
 ## "RosBREED seedlings, planted in 2006–2008 and grown on ‘Gisela 6’ rootstocks, were chosen through a stratified random sample, the strata being defined by the previous firmness classifications by Cai et al. (2019), in order to ensure relatively equal firmness-class representation."
+
+
+## Notes ------
+
+## Market intermediaries indicated a willingness to pay producers more per pound for fruit greater than 2.5 cm in diameter, firmness above 300 g/mm, and SSC above 18 °Brix. https://bmcgenomdata.biomedcentral.com/articles/10.1186/s12863-018-0609-8
+
+## high heritability traits, such as fruit skin color and self-compatibility [13,14,15,16]. The Washington State University breeding program has seen genetic gains in fruit dimensions, firmness and other traits of breeding relevance due to moderate heritability of those traits
+
+## Sweet cherry has a juvenility period of three to five years before a tree is capable of flowering and producing fruit [20]

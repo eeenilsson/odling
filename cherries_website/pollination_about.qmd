@@ -171,6 +171,14 @@ flowchart LR
 
 <!-- "The fertility in sweet cherry is determined by a gametophytic self-incompatibility system, controlled by a multi-allelic S locus who prevents self-pollination. The fertilization is controlled by the interaction of an S allele specific ribonuclease (S-RNase) in the style with a pollen S specific F-box protein gene (SFB). Knowledge about the S genotype of sweet cherries is very important for cherry growers and breeders. In the last years molecular markers have been developed to distinguish the S alleles in sweet cherries. In the new update from October 2020 a total of 63 incompatibility groups in 1483 sweet cherries have been defined. 26 sweet cherries have a unique combination of S alleles and were described as universal donors and placed in the incompatibility group 0. Additionally, there exist 91 self-compatible sweet cherries, called group SC. A total of 22 different S alleles are described in the cultivated sweet cherries up to date. These are the S alleles S1, S2, S3, S4, S5, S6, S7, S9, S10, S12, S13, S14, S16, S17, S18, S19, S21, S22, S24, S27, S30, S37. The goal of this work is to summaries all known data of the S alleles in cultivated sweet cherries. In Table 1 the S genotypes of all studied sweet cherries are described. Furthermore it includes information about the parentage if they are known. Table 2 gives an overview about all the detected incompatibility groups. The groups are sorted according to the group numbers and the S allele numbers, respectively. In Table 3 all genotypes of the incompatibility group 0 with a unique S genotype are listed. Table 4 includes all known self-compatible sweet cherries. All references to the information of the S genotypes are listed in a file named 'References'. The present update needs to be further improved with all new S alleles data of sweet cherries. In addition, all new information about the parentage is very important for the breeding research. Please send all new or corrected data to the S alleles and the parentage of sweet cherries to mirko.schuster@julius-kuehn.de. An update of the S allele overview will take place in the next years. (Se https://www.openagrar.de/receive/openagrar_mods_00064311)" -->
 
+
+Polyploidi
+
+<!-- We have indicated which cultivars are triploid - i.e. having sterile pollen and needing at least two other non-triploid cultivars. https://www.habitataid.co.uk/pages/pollination-groups -->
+
+
+
+
 ## Kompatibilitetsgrupper
 
 Utifrån genetisk kompatibilitet kan sötkörsbär delas in i "kompatibiltetsgrupper" körsbärssorter inom varje grupp kan inte befrukta varandra. Pollinatören mäste alltså komma från en **annan** kompatibiltetsgrupp än mottagaren.
@@ -181,12 +189,28 @@ Av 1500 sorter av sötkörsbär är kring 10% självfertila och 2% st universell
 
 <!-- Cross-incompatible cultivars with the same S-genotypes are placed in the same “Incompatibility Group” and cannot fertilize each others successfully. For more information on Incompatibility Groups, please see the functional genotype list for this DNA test. -->
 
+
+
+
+
 # Blomningstid
 
 <!-- Bloom time -->
 
 För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt).
 
+<!-- Sista frost: Genomsnittligt datum för sista frost varierar mellan mitten av april och mitten av juni beroende på var i landet -->
+
+<!-- statistik som visar datum för sista frost med 50, 70 respektive 90 % sannolikhet.  Se Odlingskalendern på vackertvader.se -->
+
+Sista frosten [Örebro 1 apr-1 jun, normalt 1 apr - 15 maj]
+
+![Sista frost](../../dropbox/images/plants/sista_frost_2017_smhi.png)
+
+<!-- [SMHI Klimat](https://www.smhi.se/klimat/klimatet-da-och-nu/klimatindex/varens-sista-frost-1.77151) -->
+
+<!-- [SMHI Öppna data](https://www.smhi.se/data) -->
+<!-- - Temp, nederbörd mm -->
 
 
 
@@ -199,6 +223,11 @@ Medelsen
 Sen
 
 
+
+"RHS pollination group numbers, which divide apple, pear, plum, and cherry cultivars into 7 flowering periods. Pollination group 1 is the earliest to flower. pollinates same group +-1 group"
+
+Morello flowers over long period.
+
 [UK pollniantion groups list common cherries](https://www.gardenfocused.co.uk/fruitarticles/cherry/pollination.php)
 
 <!-- "Suitable pollination partners include those in the same pollination group and the pollination group above and below. For instance, Merton Bigarreau is in pollination 3. It can be pollinated by  varieties not only in pollination group three but also in the groups 2 and 4." -->
@@ -210,7 +239,11 @@ Sen
 
 [Tree-connect](https://treeconnect.com/cherry-tree-pollenizer/)
 
+[Bloom timing](https://treeconnect.com/cherry-tree-pollenizer/)
 
+https://www.cumminsnursery.com/learn-trees/fruit-tree-bloom-dates/ ## US?
+<!-- "Because sweet cherry pollination is complicated, we always recommend that growers start with one self-fertile “universal pollenizer.” This way you are guaranteed to have at least some cherries in your crop. Once you start adding trees to your cherry collection, you will likely have questions about bloom times. The two lists below are groups that will not make good pairings because their bloom times are at the opposite ends of the sweet cherry bloom period:" -->
+<!-- "We do not recommend using tart cherries as pollenizers for sweet cherries, as the bloom time for tart cherries is usually later than that of sweet cherries." -->
 
 <!-- Mognadstid -->
 <!-- Körsbärsvecka 1 börjar olika datum olika år och bestäms av ... -->
