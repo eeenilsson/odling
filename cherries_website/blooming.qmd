@@ -1,0 +1,23 @@
+
+## Scientific papers
+
+ORIGINAL RESEARCH article
+Front. Plant Sci., 09 January 2020
+Sec. Plant Breeding
+Volume 10 - 2019 | https://doi.org/10.3389/fpls.2019.01647
+Genetic Dissection of Bloom Time in Low Chilling Sweet Cherry (Prunus avium L.) Using a Multi-Family QTL Approach
+"https://www.frontiersin.org/articles/10.3389/fpls.2019.01647/full
+
+"Bloom time in sweet cherry (Prunus avium L.) is a highly heritable trait that varies between genotypes and depends on the environmental conditions. Bud-break occurs after chill and heat requirements of each genotype are fulfilled, and dormancy is released."
+
+"Early blooming cultivars are susceptible to spring frost damage in cold regions (Luedeling, 2012), while late blooming cultivars can exhibit irregular floral development and low fruit set due to warm temperatures during the flowering period (Mahmood et al., 2000; Atkinson et al., 2013). The biological control of BT is complex and is known to depend on environmental signals during the winter and spring seasons (Abbott et al., 2015; Fadón and Rodrigo, 2018). Fruit trees like sweet cherry require a period of chilling temperatures followed by a period of warm temperatures to induce blooming (Lang et al., 1987). In Prunus species, several studies indicate that BT is more dependent on chilling than on heat requirement and that there is large variation in these requirements among individuals of the same species (Campoy et al., 2011; Okie and Blackburn, 2011; Sánchez-Pérez et al., 2012; Castède et al., 2014)."
+
+"BT was evaluated for each progeny and the parental cultivars during 4 years (2015 to 2018). During the flowering season, blooming stage was evaluated 3 days per week (every 2–3 days) and BT was recorded when approximately 75% of the floral buds reached stage F (full bloom; Baggiolini, 1980). BT data were expressed as Julian Days (JD; days from January 1st). "
+
+The datasets generated for this study can be found in the Genome database for Rosaceae, https://www.rosaceae.org/accession https://www.rosaceae.org/accession number tfGDR1040.
+
+
+
+
+
+
