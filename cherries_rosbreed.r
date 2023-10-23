@@ -1,52 +1,46 @@
+pacman::p_load(data.table)
 
+## Data ------
 
-## Data downloaded -------
+## downloaded thusly
 ## https://www.rosaceae.org/search/quantitative_traits
 ## Select trait => Search => Push "table" to download csv
 
-## Data join test
-## Note: "#" is not from source data, only row number in download interface
-bloom_days <- fread("Bloom_Days.csv")
-acidity <- fread("TA.csv")
-## bloom_days ## 631 rows
-## acidity ## 521 rows
-## bloom_days[acidity, on = c("Germplasm", "Species", "Dataset")] ## 521 rows
-bloom_days[["#"]] <- NULL
-acidity[["#"]] <- NULL
-dt <- merge(bloom_days, acidity, by = c("Germplasm", "Species", "Dataset"), all = TRUE)
+## ## data join loop (load joined data below)
+## filenam <- c( ## list of files to add
+##     ## "Bloom_Days.csv", ## skip the first
+##     "TA.csv", "Fruit_Dim.csv", "Flesh_C.csv", "Spec_Flesh_Color_b.csv", "Spec_Flesh_Color_a.csv", "Bulked_Fruit_SSC.csv", "Pull_Force.csv", "Pit_Lh.csv", "Spec_Skin_Color_a.csv", "Skin_C_mahogany.csv", "Spec_Skin_Color_b.csv", "Spec_Skin_Color_L.csv", "Bulked_Fruit_Firmness.csv", "FreeStone.csv", "Perc_Cracking.csv", "Fruit_Wt.csv", "SSC.csv", "Perc_Pitting.csv", "Spec_Flesh_Color_L.csv" , "Pit_Wt.csv", "Fruit_Wd2.csv", "Pit_Wd1.csv", "Harvest_Time.csv", "Stem_length.csv", "Foliar_PM.csv", "Bloom_Time.csv",
+##     "Fruit_L.csv",
+##     "Bulked_Fruit_Wt.csv",
+##     "Harvest_Days.csv",
+##     "Skin_C_blush.csv",
+##     "Firmness_1.csv", ## Note: Some values in "Germplasm" are dates, probably a data entry error
+##    "pH.csv",
+##    "Fruit_Shape.csv", "Harvest_Date.csv", "Bloom_Date.csv"
+## )
 
-## data join loop
+## ## i <- filenam[2]
+## dt <- fread("Bloom_Days.csv") ## start with one
+## dt[["#"]] <- NULL ## remove unnecessary col
+## for (i in filenam){
+## tmp <- fread(i)
+## tmp[["#"]] <- NULL ## remove unnecessary col
+## dt <- merge(dt, tmp, by = c("Germplasm", "Species", "Dataset"), all = TRUE)
+## }
+## write.csv(dt, "rosbreed_alldata.csv")
 
-filenam <- c( ## list of files to add
-    ## "Bloom_Days.csv", ## skip the first
-    "TA.csv", "Fruit_Dim.csv", "Flesh_C.csv", "Spec_Flesh_Color_b.csv", "Spec_Flesh_Color_a.csv", "Bulked_Fruit_SSC.csv", "Pull_Force.csv", "Pit_Lh.csv", "Spec_Skin_Color_a.csv", "Skin_C_mahogany.csv", "Spec_Skin_Color_b.csv", "Spec_Skin_Color_L.csv", "Bulked_Fruit_Firmness.csv", "FreeStone.csv", "Perc_Cracking.csv", "Fruit_Wt.csv", "SSC.csv", "Perc_Pitting.csv", "Spec_Flesh_Color_L.csv" , "Pit_Wt.csv", "Fruit_Wd2.csv", "Pit_Wd1.csv", "Harvest_Time.csv", "Stem_length.csv", "Foliar_PM.csv", "Bloom_Time.csv",
-    "Fruit_L.csv",
-    "Bulked_Fruit_Wt.csv",
-    "Harvest_Days.csv",
-    "Skin_C_blush.csv",
-    "Firmness_1.csv", ## Note: Some values in "Germplasm" are dates, probably a data entry error
-   "pH.csv",
-   "Fruit_Shape.csv", "Harvest_Date.csv", "Bloom_Date.csv"
-)
+## read joined data
+ros <- fread("rosbreed_alldata.csv")
+## paste(unique(ros$Germplasm), collapse = ", ")
+common_varieties <- c("Ambrunes", "Benton", "Bing", "Black Republican", "Cashmere", "Chelan", "Chinook", "Cowiche", "Emperor Francis", "Gil Peck", "Glacier", "Kiona", "Kordia", "Krupnoplodnaya", "Lambert", "Lapins", "Moreau", "Olympus", "Rainier", "Regina", "Schmidt", "Schneiders", "Selah", "Stella", "Summit", "Sunburst", "Sweetheart", "Tieton", "Van", "Venus", "Vic", "Windsor")
 
-## i <- filenam[2]
-dt <- fread("Bloom_Days.csv") ## start with one
-dt[["#"]] <- NULL ## remove unnecessary col
-for (i in filenam){
-tmp <- fread(i)
-tmp[["#"]] <- NULL ## remove unnecessary col
-dt <- merge(dt, tmp, by = c("Germplasm", "Species", "Dataset"), all = TRUE)
-}
+## select and curate data
+ros <- ros[grepl("23-", Germplasm) == FALSE, ] ## remove probable data entry error
+## ros <- ros[grepl("FR", Germplasm) == FALSE, ] ## remove unwanted strains
+## ros <- ros[grepl("PC", Germplasm) == FALSE, ] ## remove unwanted strains
+## ros <- ros[grepl("Unk", Germplasm) == FALSE, ] ## remove unwanted strains
 
-str(dt)
-
-write.csv(tmp, "rosbreed_alldata.csv")
-
-unique(tmp$Germplasm)
-
-unique(tmp$Dataset)
-
-dt[1, ]
+ros <- ros[grepl(paste0(common_varieties, collapse = "|"), Germplasm), ] ## select rows with common varieties
 
 ## for (i in filenam){
 ##     tmp <- fread(i)
