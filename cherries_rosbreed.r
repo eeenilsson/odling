@@ -50,9 +50,71 @@ ros <- ros[grepl(paste0(common_varieties, collapse = "|"), Germplasm), ] ## sele
 ## print(names(tmp))
 ## }
 
+## curate data types
+str(ros)
+ros[["V1"]] <- NULL
+ros[, Germplasm := as.factor(Germplasm)]
+ros[, Species := as.factor(Species)]
+ros[, Dataset := as.factor(Dataset)]
+
+## check date/time variables
+ros[, Harvest_Date := as.Date(Harvest_Date, "%m/%d/%Y")]
+ros[, Bloom_Date := as.Date(Bloom_Date, "%m/%d/%Y")]
+## ros[, as.Date(Harvest_Date, "%m/%d/%y")]
+## as.Date("7/24/2010", "%m/%d/%Y")
+
+## calculate relative times
+ros[, startofyear := paste0(format(as.Date(Harvest_Date, format="%Y-%m-%d"),"%Y"), "-01-01")]
+ros[, startofyear := as.Date(startofyear)]
+ros[, harvest_time_relative := difftime(Harvest_Date, startofyear)]
+
+ros
+
+## "2010-07-24"
+ros[, format(as.Date(Harvest_Date, format="%d/%m/%Y"),"%Y")]
+
+ros[, format(as.Date(Harvest_Date, format="%Y-%m-%d"),"%Y")]
+
+ros[, format(as.Date(Harvest_Date),"%Y")]
+ros[, format(as.Date(Harvest_Date),"%m")]
+ros[, format(as.Date(Harvest_Date),"%d")]
+
+ros[, Harvest_md := format(as.Date(Harvest_Date),"%m-%d")]
+str(ros[, Harvest_md])
 
 
 
+ros[, format(as.Date(Harvest_Date, format="%d/%m/%Y"),"%m")]
+ros[, format(as.Date(Harvest_Date, format="%d/%m/%Y"),"%m")]
+
+
+
+ros[, harvest_month := month(Harvest_Date)]
+ros[, harvest_day := day(Harvest_Date)]
+?month
+
+ros[["Harvest_Date"]]
+ros[, format(as.Date(Harvest_Date, format="%d/%m/%Y"),"%Y")]
+
+format(as.Date(df1$Date, format="%d/%m/%Y"),"%Y")
+
+str(ros)
+
+objects()
+?month
+?as.Date
+
+str(ros)
+
+ros[, Harvest_Date]
+
+difftime
+
+## aggregate the datasets from different years
+
+ros[ , count:=sum(col3), by = list(col1, col2)]
+
+data_frame[, lapply(.SD, sum), by= col1]
 
 ## Metadata --------------------------------
 
