@@ -1,4 +1,4 @@
-pacman::p_load(data.table)
+pacman::p_load(data.table, ggplot2)
 
 ## Data ------
 
@@ -88,10 +88,70 @@ ros_bloom <- ros[, ..selectvars]
 
 ## aggregate the datasets from different years
 ## Note: Aggregate using median to avoid data entry errors?
-ros[, .(bt = mean(Bloom_Days, na.rm = TRUE),
+bloom_table <- ros[, .(bt = mean(Bloom_Days, na.rm = TRUE),
         gdd = mean(Bloom_Time, na.rm = TRUE)),
     by = Germplasm]
 
+bloom_table <- na.omit(bloom_table)
+
+## calculate proportions etc
+bloom_table[, bt_prop := round(bt/max(bt), digits = 2)]
+bloom_table[, bt0 := round(bt-min(bt), digits = 0)]
+bloom_table[, gdd_prop := round(bt/max(bt), digits = 2)]
+bloom_table[, gdd0 := round(gdd-min(gdd), digits = 0)]
+
+## bloom_table[order(bt), ] ## order by bt
+
+bloom_table[, Germplasm := factor(Germplasm, levels = bloom_table[order(bt), Germplasm])]
+
+## plot bloom time
+p <- ggplot(bloom_table, aes(y=Germplasm, x=bt))
+p_bt <- p + geom_point() + xlab("Start of bloom (days from jan 1st)") + ylab("")
+
+## break_quantiles <- quantile(bloom_table$bt, probs = seq(0, 1, by = 1/5))
+## Break at dates: https://stackoverflow.com/questions/39257867/date-minor-breaks-in-ggplot2
+## plot bloom time relative to lowest bloom time
+## https://stackoverflow.com/questions/74924921/how-to-put-axis-labels-in-between-the-axis-ticks-in-ggplot2
+
+break_in_5 <- int(from = min(bloom_table$bt0), to = max(bloom_table$bt0), by = max(bloom_table$bt0)/5)
+break_in_5 <- round(break_in_5, digits = 0)
+break_minor <- seq(min(break_in_5)+1, max(break_in_5)-1, by = 1)
+
+p <- ggplot(bloom_table, aes(y=Germplasm, x=bt0))
+p_bt0 <- p + geom_point() + xlab("Start of bloom (days from earliest BT)") + ylab("")
+
+p_bt0 + scale_x_continuous(breaks = break_in_5,
+                           minor_breaks = break_minor)
+
+
+
+
+
+###############
+    ## theme( # remove the vertical grid lines
+    ##        panel.grid.minor.x = element_blank()
+    ##        # explicitly set the horizontal lines (or they will disappear too)
+    ##        ## panel.grid.major.y = element_line( size=.1, color="black" ) 
+    ## )
+
+
+
+p + geom_point(bloom_table, mapping = aes(y=Germplasm, x=gdd),colour="red")
+
+
+## https://stackoverflow.com/questions/75899955/scale-ticks-breaks-to-percentile-in-continuous-colourbar-in-scale-fill-gradient
+
+max(bloom_table$bt)
+
+plot(bloom_table$Germplasm ~ bloom_table$bt)
+
+bloom_table
+
+p <- ggplot()
+
+
+
+ros_bloom[Germplasm == "Olympus", ]
 
 selectvars <- c(vars_id, "Bloom_Days", "Bloom_Time")
 ## ros_bloom[ , ..selectvars]
