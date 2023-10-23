@@ -117,13 +117,46 @@ break_in_5 <- int(from = min(bloom_table$bt0), to = max(bloom_table$bt0), by = m
 break_in_5 <- round(break_in_5, digits = 0)
 break_minor <- seq(min(break_in_5)+1, max(break_in_5)-1, by = 1)
 
+## base plot
 p <- ggplot(bloom_table, aes(y=Germplasm, x=bt0))
-p_bt0 <- p + geom_point() + xlab("Start of bloom (days from earliest BT)") + ylab("")
+p_bt0 <- p + geom_point() + xlab("Start of bloom (days from earliest)") + ylab("")
 
-p_bt0 + scale_x_continuous(breaks = break_in_5,
+p_bt0 <- p_bt0 + scale_x_continuous(breaks = break_in_5,
                            minor_breaks = break_minor)
 
+## labels outside plot area
+p_bt0 <- p_bt0 + theme(plot.margin = unit(c(2,1,1,1), "cm"))
+p_bt0 <- p_bt0 + coord_cartesian(ylim = c(0, length(levels(bloom_table$Germplasm))), clip = "off")
 
+## p_bt0 + annotate("text", x = 1, y = length(levels(bloom_table$Germplasm)) + 2, label = "text")
+## i <- 1
+
+## calculate text positions
+text_xpos <- c() 
+for(i in 1:length(break_in_5)-1){
+                text_xpos <- c(text_xpos, break_in_5[i] + (break_in_5[i+1] - break_in_5[i])/2)
+}
+
+## annotate plot
+for(i in 1:length(text_xpos)){
+    p_bt0_annotated <- p_bt0 + annotate("text", x = text_xpos[i], y = length(levels(bloom_table$Germplasm)) + 2, label = paste("Period", i), color = "blue")
+}
+
+
+
+
+dt_text <- data.table(xpos = 1:length(levels(bloom_table$Germplasm)))
+
+dt_text <- data.table(xpos = levels(bloom_table$Germplasm))
+
+
+p_bt0 + geom_text(data = NULL, x = 5, y = 2, label = "plot mpg vs. wt")
+
+p_bt0 + geom_text(data = NULL, x = 5, y = 1, label = "plot mpg vs. wt")
+
+
+## ## Or, you can use annotate
+## c + annotate("text", label = "plot mpg vs. wt", x = 2, y = 15, size = 8, colour = "red")
 
 
 
