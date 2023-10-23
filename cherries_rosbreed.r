@@ -4,51 +4,61 @@
 ## https://www.rosaceae.org/search/quantitative_traits
 ## Select trait => Search => Push "table" to download csv
 
-## Data joined
-
+## Data join test
+## Note: "#" is not from source data, only row number in download interface
 bloom_days <- fread("Bloom_Days.csv")
 acidity <- fread("TA.csv")
+## bloom_days ## 631 rows
+## acidity ## 521 rows
+## bloom_days[acidity, on = c("Germplasm", "Species", "Dataset")] ## 521 rows
+bloom_days[["#"]] <- NULL
+acidity[["#"]] <- NULL
+dt <- merge(bloom_days, acidity, by = c("Germplasm", "Species", "Dataset"), all = TRUE)
 
-cbind(bloom_days, acidity)
+## data join loop
 
-?cbind
+filenam <- c( ## list of files to add
+    ## "Bloom_Days.csv", ## skip the first
+    "TA.csv", "Fruit_Dim.csv", "Flesh_C.csv", "Spec_Flesh_Color_b.csv", "Spec_Flesh_Color_a.csv", "Bulked_Fruit_SSC.csv", "Pull_Force.csv", "Pit_Lh.csv", "Spec_Skin_Color_a.csv", "Skin_C_mahogany.csv", "Spec_Skin_Color_b.csv", "Spec_Skin_Color_L.csv", "Bulked_Fruit_Firmness.csv", "FreeStone.csv", "Perc_Cracking.csv", "Fruit_Wt.csv", "SSC.csv", "Perc_Pitting.csv", "Spec_Flesh_Color_L.csv" , "Pit_Wt.csv", "Fruit_Wd2.csv", "Pit_Wd1.csv", "Harvest_Time.csv", "Stem_length.csv", "Foliar_PM.csv", "Bloom_Time.csv",
+    "Fruit_L.csv",
+    "Bulked_Fruit_Wt.csv",
+    "Harvest_Days.csv",
+    "Skin_C_blush.csv",
+    "Firmness_1.csv", ## Note: Some values in "Germplasm" are dates, probably a data entry error
+   "pH.csv",
+   "Fruit_Shape.csv", "Harvest_Date.csv", "Bloom_Date.csv"
+)
 
-Fruit_Dim.csv
-Flesh_C.csv
+## i <- filenam[2]
+dt <- fread("Bloom_Days.csv") ## start with one
+dt[["#"]] <- NULL ## remove unnecessary col
+for (i in filenam){
+tmp <- fread(i)
+tmp[["#"]] <- NULL ## remove unnecessary col
+dt <- merge(dt, tmp, by = c("Germplasm", "Species", "Dataset"), all = TRUE)
+}
 
--rw-r--r-- 1 e 6.9K Oct 23 13:22 Spec_Flesh_Color_b.csv
-  -rw-r--r-- 1 e 6.9K Oct 23 13:22 Spec_Flesh_Color_a.csv
-  -rw-r--r-- 1 e  19K Oct 23 13:21 Bulked_Fruit_SSC.csv
-  -rw-r--r-- 1 e  52K Oct 23 13:21 Pull_Force.csv
-  -rw-r--r-- 1 e  53K Oct 23 13:20 Pit_Lh.csv
-  -rw-r--r-- 1 e 7.0K Oct 23 13:20 Spec_Skin_Color_a.csv
-  -rw-r--r-- 1 e  40K Oct 23 13:19 Skin_C_mahogany.csv
-  -rw-r--r-- 1 e 6.9K Oct 23 13:19 Spec_Skin_Color_b.csv
-  -rw-r--r-- 1 e 7.0K Oct 23 13:18 Spec_Skin_Color_L.csv
-  -rw-r--r-- 1 e  43K Oct 23 13:18 Bulked_Fruit_Firmness.csv
-  -rw-r--r-- 1 e  50K Oct 23 13:17 FreeStone.csv
-  -rw-r--r-- 1 e  20K Oct 23 13:17 Perc_Cracking.csv
-  -rw-r--r-- 1 e  52K Oct 23 13:16 Fruit_Wt.csv
-  -rw-r--r-- 1 e  52K Oct 23 13:15 SSC.csv
-  -rw-r--r-- 1 e  14K Oct 23 13:15 Perc_Pitting.csv
-  -rw-r--r-- 1 e 7.0K Oct 23 13:14 Spec_Flesh_Color_L.csv
-  -rw-r--r-- 1 e  52K Oct 23 13:14 Pit_Wt.csv
-  -rw-r--r-- 1 e  53K Oct 23 13:10 Fruit_Wd2.csv
-  -rw-r--r-- 1 e  52K Oct 23 13:10 Pit_Wd1.csv
-  -rw-r--r-- 1 e  48K Oct 23 13:10 Harvest_Time.csv
-  -rw-r--r-- 1 e  27K Oct 23 13:09 Stem_length.csv
-  -rw-r--r-- 1 e  42K Oct 23 13:09 Foliar_PM.csv
-  -rw-r--r-- 1 e  47K Oct 23 13:08 Bloom_Time.csv
-  -rw-r--r-- 1 e  53K Oct 23 13:08 Fruit_L.csv
-  -rw-r--r-- 1 e  25K Oct 23 13:07 Bulked_Fruit_Wt.csv
-  -rw-r--r-- 1 e  46K Oct 23 13:07 Harvest_Days.csv
-  -rw-r--r-- 1 e  11K Oct 23 13:06 Skin_C_blush.csv
-  -rw-r--r-- 1 e 53K Oct 23 13:05 Firmness_1.csv
-  -rw-r--r-- 1 e 6.5K Oct 23 13:04 pH.csv
-  -rw-r--r-- 1 e 41K Oct 23 13:00 Fruit_Shape.csv
-  -rw-r--r-- 1 e 49K Oct 23 12:59 Harvest_Date.csv
-  -rw-r--r-- 1 e 49K Oct 23 12:57 Bloom_Date.csv
-  -rw-r--r-- 1 e  68K Oct 23 12:51 
+str(dt)
+
+write.csv(tmp, "rosbreed_alldata.csv")
+
+unique(tmp$Germplasm)
+
+unique(tmp$Dataset)
+
+dt[1, ]
+
+## for (i in filenam){
+##     tmp <- fread(i)
+## tmp[["#"]] <- NULL ## remove unnecessary col
+
+## print(i)
+## print(names(tmp))
+## }
+
+
+
+
 
 ## Metadata --------------------------------
 

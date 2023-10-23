@@ -1,189 +1,710 @@
-compatibility_group pollination_period
-
-Group I (S1S2)
-Black Tartarian,I,1,
-Tulare,I,2,
-Summit,I,4,
-
-Group II (S1S3)
-Samba (Sumste),II,1,
-Helga,II,2,
-Simcoe (PC 7147-1),II,2,
-SPC335,II,2,
-Coral Champagne,II,2,
-Early Robin,II,3,
-Justyna,II,3,
-Satin (Sumele),II,3,
-Van,II,3,
-Areko,II,4,
-Cristalina (Sumnue),II,4,
-Olympus,II,4,
-Sonnet,II,4,
-Regina,II,5,
-
-Group III (S3S4)
-Somerset,III,1,
-Burgundy Pearl,III,2,
-Jacinta,III,2,
-Sandra,III,2,
-Sweetheart,III,2,
-Bing,III,3,
-Emperor,III,3,
-Sir Douglas,III,3,
-SPC276,III,3,
-NY 13696,III,3,
-NY 13788,III,3,
-NY 13791,III,3,
-Amid,III,4,
-SPC414,III,4,
-SPC411,III,4,
-SPC424,III,4,
-Napoleon,III,5,
-Ulster,III,5,
-
-Group IV (S2S3)
-SMS 290 (NIMBA),IV,1,
-Vega,IV,2,
-Bigalise (Enjidel),IV,3,
-Coralise,IV,3,
-Dame Nancy,IV,4,
-
-Group V (S4S5)
-Tim,V,2,
-
-Group VI (S3S6)
-Burgsdorf (Self fertile),VI,1,
-Christiana,VI,2,
-Hartland,VI,2,
-Kordia (Attika),VI,4,
-Starks Gold,VI,4,
-Cristobalina,VI,5,
-
-Group VII (S3S5)
-Early Burlat,VII,3,
-Hedelfinger,VII,5,
-
-Group VIII (S2S5)
-Vista,VIII,3,
-
-Group IX (S1S4)
-Frisco,IX,1,
-BF-9,IX,2,
-Summer Jewel,IX,2,
-Ebony Pearl,IX,3,
-Rainier,IX,3,
-SPC234,IX,3,
-Sylvia,IX,4,
-Hudson,IX,5,
-
-Group XIII (S2S4)
-Royalton,XIII,3,
-Sofia SPC106,XIII,3,
-Sam,XIII,4,
-Vic,XIII,4,
-Sam,XIII,5,
-Suite Note,XIII,5,
-
-Group XIV (S1S5)
-SPC342,XIV,3,
-
-Group XVI (S3S9)
-SMS 1,XVI,1,
-SMS 6,XVI,1,
-Burlat,XVI,2,
-Chelan,XVI,2,
-Tieton,XVI,3,
-
-Group XVII (S4S6)
-Irena,XVII,
-
-Group XVIII (S1S9)
-Brooks,XVIII,
-Bellise (Bedel),XVIII,
-Earlise (Rivedel),XVIII,
-Rocket,XVIII,
-
-Group XX (S1S6)
-Empress,XX,1,
-Elza,XX,5,
-Fabiola,XX,5,
-,
-Group XXI (S4S9),
-Merchant,XXI,1,
-Kiona (PC 8007-2),XXI,4,
-,
-Group XXII (S3S12),
-Nordwunder,XXII,4,
-Schneiders,XXII,5,
-Ziraat-0900,XXII,5,
-,
-Group XXV (S2S6),
-Early Korvik,XXV,4,
-,
-Group XXXVII (S5S9),
-Cowiche (PC7903-2),XXXVII,4,
-,
-Group XLV (S4S13),
-Black Pearl,XLV,2,
-,
-Group LI (S1S13),
-Radiance Pearl,LI,2,
-Black Douglas,LI,3,
-,
-Unknown Groups and S-allelles,
-NY 412068,unknown,1,
-Rons Seedling,unknown,2,
-NY 564,unknown,2,
-SMS 33,unknown,2,
-SMS 311,unknown,2,
-Supreme,unknown,2,
-Australise (Arodel),unknown,3,
-PC 7064-3,unknown,3,
-PC 7616-4,unknown,3,
-NY 270,unknown,3,
-NY 2131,unknown,3,
-NY 7690,unknown,3,
-NY 9801,unknown,3,
-NY 413087,unknown,3,
-NY 414205,unknown,3,
-PC 7309-4,unknown,4,
-PC 8007-2,unknown,4,
-PC 8008-1,unknown,4,
-NY 410213,unknown,4,
-NY 412113,unknown,4,
-NY 9295,unknown,4,
-PC 7636-1,unknown,5,
-St Margaret,unknown,5,
-,
-Self-fertile with S4' allele (universal donors),
-Marysa (PA6UNIBO),SC,2,
-Simone,SC,2,
-Sir Don,SC,2,
-Sir Tom,SC,2,
-Index,SC,2,
-Lapins,SC,2,
-SMS 16,SC,2,
-Celeste,SC,3,
-Glacier,SC,3,
-Santina,SC,3,
-Selah,SC,3,
-Staccato,SC,3,
-Starkcrimson,SC,3,
-Stella,SC,3,
-Sunburst,SC,3,
-Sweetheart,SC,3,
-Symphony,SC,3,
-Cashmere,SC,4,
-Sandra Rose,SC,4,
-Sentennial,SC,4,
-Skeena,SC,4,
-Sonata,SC,4,
-Sovereign,SC,4,
-Starblush,SC,4,
-White Gold,SC,4,
-Sir Hans,SC,4,
-Benton,SC,5,
-Black Gold,SC,5,
-Dame Roma,SC,5,
-Felicita,SC,5,
-Stardust,SC,5,
+"","Germplasm","Species","Firmness_1","Dataset"
+"1","Summit","Prunus avium",212.4,"Sweet_cherry_CRS_phenotyping_2012"
+"2","Summit","Prunus avium",227.4,"Sweet_cherry_CRS_phenotyping_2011"
+"3","Summit","Prunus avium",227.5,"Sweet_cherry_CRS_phenotyping_2010"
+"4","Lambert","Prunus avium",215.1,"Sweet_cherry_CRS_phenotyping_2012"
+"5","Lambert","Prunus avium",247,"Sweet_cherry_CRS_phenotyping_2011"
+"6","Regina","Prunus avium",294.1,"Sweet_cherry_CRS_phenotyping_2012"
+"7","Regina","Prunus avium",315,"Sweet_cherry_CRS_phenotyping_2010"
+"8","Regina","Prunus avium",332.6,"Sweet_cherry_CRS_phenotyping_2011"
+"9","Ambrunes","Prunus avium",311.1,"Sweet_cherry_CRS_phenotyping_2012"
+"10","Ambrunes","Prunus avium",313.2,"Sweet_cherry_CRS_phenotyping_2010"
+"11","Ambrunes","Prunus avium",342.6,"Sweet_cherry_CRS_phenotyping_2011"
+"12","Lapins","Prunus avium",266.7,"Sweet_cherry_CRS_phenotyping_2012"
+"13","Lapins","Prunus avium",310.4,"Sweet_cherry_CRS_phenotyping_2010"
+"14","Lapins","Prunus avium",319.1,"Sweet_cherry_CRS_phenotyping_2011"
+"15","Stella","Prunus avium",204.5,"Sweet_cherry_CRS_phenotyping_2012"
+"16","Stella","Prunus avium",238.9,"Sweet_cherry_CRS_phenotyping_2011"
+"17","Sweetheart","Prunus avium",303.1,"Sweet_cherry_CRS_phenotyping_2011"
+"18","Sweetheart","Prunus avium",325.2,"Sweet_cherry_CRS_phenotyping_2012"
+"19","Van","Prunus avium",283.5,"Sweet_cherry_CRS_phenotyping_2011"
+"20","Van","Prunus avium",285.2,"Sweet_cherry_CRS_phenotyping_2012"
+"21","Schneiders","Prunus avium",224,"Sweet_cherry_CRS_phenotyping_2012"
+"22","Schneiders","Prunus avium",241.6,"Sweet_cherry_CRS_phenotyping_2011"
+"23","Bing","Prunus avium",293,"Sweet_cherry_CRS_phenotyping_2012"
+"24","Bing","Prunus avium",321.6,"Sweet_cherry_CRS_phenotyping_2011"
+"25","Rainier","Prunus avium",278.6,"Sweet_cherry_CRS_phenotyping_2012"
+"26","Rainier","Prunus avium",295,"Sweet_cherry_CRS_phenotyping_2010"
+"27","Rainier","Prunus avium",301.3,"Sweet_cherry_CRS_phenotyping_2011"
+"28","Benton","Prunus avium",254.6,"Sweet_cherry_CRS_phenotyping_2011"
+"29","Benton","Prunus avium",254.7,"Sweet_cherry_CRS_phenotyping_2012"
+"30","Cashmere","Prunus avium",248.4,"Sweet_cherry_CRS_phenotyping_2011"
+"31","Cashmere","Prunus avium",252.5,"Sweet_cherry_CRS_phenotyping_2010"
+"32","Cashmere","Prunus avium",254.2,"Sweet_cherry_CRS_phenotyping_2012"
+"33","Chelan","Prunus avium",252,"Sweet_cherry_CRS_phenotyping_2012"
+"34","Chelan","Prunus avium",266.1,"Sweet_cherry_CRS_phenotyping_2010"
+"35","Chelan","Prunus avium",277.6,"Sweet_cherry_CRS_phenotyping_2011"
+"36","Chinook","Prunus avium",215.6,"Sweet_cherry_CRS_phenotyping_2011"
+"37","Chinook","Prunus avium",225.9,"Sweet_cherry_CRS_phenotyping_2012"
+"38","Cowiche","Prunus avium",298,"Sweet_cherry_CRS_phenotyping_2012"
+"39","Cowiche","Prunus avium",300,"Sweet_cherry_CRS_phenotyping_2010"
+"40","Cowiche","Prunus avium",325,"Sweet_cherry_CRS_phenotyping_2011"
+"41","Gil Peck","Prunus avium",203.6,"Sweet_cherry_CRS_phenotyping_2012"
+"42","Glacier","Prunus avium",234.4,"Sweet_cherry_CRS_phenotyping_2010"
+"43","Glacier","Prunus avium",236,"Sweet_cherry_CRS_phenotyping_2011"
+"44","Glacier","Prunus avium",243.9,"Sweet_cherry_CRS_phenotyping_2012"
+"45","Kiona","Prunus avium",234.1,"Sweet_cherry_CRS_phenotyping_2011"
+"46","Kiona","Prunus avium",241.9,"Sweet_cherry_CRS_phenotyping_2010"
+"47","Kiona","Prunus avium",243.8,"Sweet_cherry_CRS_phenotyping_2012"
+"48","NY 54","Prunus avium",217.3,"Sweet_cherry_CRS_phenotyping_2011"
+"49","NY 54","Prunus avium",227.3,"Sweet_cherry_CRS_phenotyping_2012"
+"50","PMR-1","Prunus avium",260.1,"Sweet_cherry_CRS_phenotyping_2012"
+"51","PMR-1","Prunus avium",265,"Sweet_cherry_CRS_phenotyping_2010"
+"52","PMR-1","Prunus avium",267.6,"Sweet_cherry_CRS_phenotyping_2011"
+"53","Schmidt","Prunus avium",257,"Sweet_cherry_CRS_phenotyping_2011"
+"54","Schmidt","Prunus avium",264.3,"Sweet_cherry_CRS_phenotyping_2012"
+"55","Selah","Prunus avium",269.1,"Sweet_cherry_CRS_phenotyping_2012"
+"56","Selah","Prunus avium",310.9,"Sweet_cherry_CRS_phenotyping_2011"
+"57","Tieton","Prunus avium",231.3,"Sweet_cherry_CRS_phenotyping_2011"
+"58","Tieton","Prunus avium",233.6,"Sweet_cherry_CRS_phenotyping_2012"
+"59","Tieton","Prunus avium",244.2,"Sweet_cherry_CRS_phenotyping_2010"
+"60","Vic","Prunus avium",207.8,"Sweet_cherry_CRS_phenotyping_2011"
+"61","Vic","Prunus avium",232.2,"Sweet_cherry_CRS_phenotyping_2012"
+"62","Windsor","Prunus avium",191,"Sweet_cherry_CRS_phenotyping_2011"
+"63","Windsor","Prunus avium",238.2,"Sweet_cherry_CRS_phenotyping_2012"
+"64","Olympus","Prunus avium",269.9,"Sweet_cherry_CRS_phenotyping_2010"
+"65","Kordia","Prunus avium",204.4,"Sweet_cherry_CRS_phenotyping_2011"
+"66","Kordia","Prunus avium",217.4,"Sweet_cherry_CRS_phenotyping_2012"
+"67","23-01-47","Prunus avium",144,"Sweet_cherry_CRS_phenotyping_2011"
+"68","23-02-46","Prunus avium",154.03,"Sweet_cherry_CRS_phenotyping_2011"
+"69","23-03-24","Prunus avium",151.36,"Sweet_cherry_CRS_phenotyping_2011"
+"70","23-03-28","Prunus avium",148.08,"Sweet_cherry_CRS_phenotyping_2011"
+"71","23-03-40","Prunus avium",161.28,"Sweet_cherry_CRS_phenotyping_2011"
+"72","23-05-17","Prunus avium",133.88,"Sweet_cherry_CRS_phenotyping_2011"
+"73","23-08-24","Prunus avium",154.05,"Sweet_cherry_CRS_phenotyping_2011"
+"74","23-08-45","Prunus avium",144.7,"Sweet_cherry_CRS_phenotyping_2011"
+"75","FR1T068","Prunus avium",252,"Sweet_cherry_CRS_phenotyping_2012"
+"76","FR1T068","Prunus avium",302.4,"Sweet_cherry_CRS_phenotyping_2010"
+"77","FR1T068","Prunus avium",302.6,"Sweet_cherry_CRS_phenotyping_2011"
+"78","FR12T078","Prunus avium",219.6,"Sweet_cherry_CRS_phenotyping_2011"
+"79","FR12T078","Prunus avium",245.6,"Sweet_cherry_CRS_phenotyping_2012"
+"80","FR8T012","Prunus avium",216.9,"Sweet_cherry_CRS_phenotyping_2012"
+"81","FR8T012","Prunus avium",261.3,"Sweet_cherry_CRS_phenotyping_2011"
+"82","FR12T081","Prunus avium",153.7,"Sweet_cherry_CRS_phenotyping_2011"
+"83","FR12T081","Prunus avium",173.3,"Sweet_cherry_CRS_phenotyping_2012"
+"84","FR28T002","Prunus avium",160.7,"Sweet_cherry_CRS_phenotyping_2012"
+"85","FR1T036","Prunus avium",294.3,"Sweet_cherry_CRS_phenotyping_2012"
+"86","FR1T036","Prunus avium",324.4,"Sweet_cherry_CRS_phenotyping_2010"
+"87","FR1T036","Prunus avium",343,"Sweet_cherry_CRS_phenotyping_2011"
+"88","FR1T074","Prunus avium",295.2,"Sweet_cherry_CRS_phenotyping_2012"
+"89","FR1T074","Prunus avium",301.9,"Sweet_cherry_CRS_phenotyping_2010"
+"90","FR1T074","Prunus avium",308.3,"Sweet_cherry_CRS_phenotyping_2011"
+"91","FR2T063","Prunus avium",290.4,"Sweet_cherry_CRS_phenotyping_2012"
+"92","FR2T030","Prunus avium",287.3,"Sweet_cherry_CRS_phenotyping_2012"
+"93","FR2T030","Prunus avium",301.7,"Sweet_cherry_CRS_phenotyping_2011"
+"94","FR2T030","Prunus avium",322.7,"Sweet_cherry_CRS_phenotyping_2010"
+"95","FR14T012","Prunus avium",291.9,"Sweet_cherry_CRS_phenotyping_2012"
+"96","FR3T070","Prunus avium",291.1,"Sweet_cherry_CRS_phenotyping_2011"
+"97","FR3T070","Prunus avium",293,"Sweet_cherry_CRS_phenotyping_2012"
+"98","FR3T070","Prunus avium",325,"Sweet_cherry_CRS_phenotyping_2010"
+"99","FR1T035","Prunus avium",322,"Sweet_cherry_CRS_phenotyping_2012"
+"100","FR1T035","Prunus avium",340.7,"Sweet_cherry_CRS_phenotyping_2010"
+"101","FR1T035","Prunus avium",348.3,"Sweet_cherry_CRS_phenotyping_2011"
+"102","FR1T066","Prunus avium",252.5,"Sweet_cherry_CRS_phenotyping_2012"
+"103","FR1T066","Prunus avium",300,"Sweet_cherry_CRS_phenotyping_2011"
+"104","FR1T066","Prunus avium",300.3,"Sweet_cherry_CRS_phenotyping_2010"
+"105","FR1T069","Prunus avium",313.7,"Sweet_cherry_CRS_phenotyping_2012"
+"106","FR1T069","Prunus avium",324,"Sweet_cherry_CRS_phenotyping_2010"
+"107","FR1T069","Prunus avium",330.1,"Sweet_cherry_CRS_phenotyping_2011"
+"108","FR2T058","Prunus avium",284.9,"Sweet_cherry_CRS_phenotyping_2010"
+"109","FR2T058","Prunus avium",288.1,"Sweet_cherry_CRS_phenotyping_2012"
+"110","FR2T058","Prunus avium",301.4,"Sweet_cherry_CRS_phenotyping_2011"
+"111","FR14T100","Prunus avium",329.9,"Sweet_cherry_CRS_phenotyping_2012"
+"112","FR14T100","Prunus avium",375,"Sweet_cherry_CRS_phenotyping_2011"
+"113","FR20T045","Prunus avium",236.5,"Sweet_cherry_CRS_phenotyping_2012"
+"114","FR21T040","Prunus avium",260.1,"Sweet_cherry_CRS_phenotyping_2012"
+"115","FR21T040","Prunus avium",315.1,"Sweet_cherry_CRS_phenotyping_2011"
+"116","FR31T016","Prunus avium",285.1,"Sweet_cherry_CRS_phenotyping_2012"
+"117","FR23T097","Prunus avium",152.3,"Sweet_cherry_CRS_phenotyping_2012"
+"118","FR27T018","Prunus avium",136.3,"Sweet_cherry_CRS_phenotyping_2012"
+"119","FR27T018","Prunus avium",154.9,"Sweet_cherry_CRS_phenotyping_2011"
+"120","FR28T001","Prunus avium",141,"Sweet_cherry_CRS_phenotyping_2012"
+"121","FR28T100","Prunus avium",196.6,"Sweet_cherry_CRS_phenotyping_2012"
+"122","FR28T100","Prunus avium",205.2,"Sweet_cherry_CRS_phenotyping_2011"
+"123","FR28T101","Prunus avium",227.7,"Sweet_cherry_CRS_phenotyping_2012"
+"124","FR28T101","Prunus avium",232,"Sweet_cherry_CRS_phenotyping_2011"
+"125","FR28T102","Prunus avium",174.2,"Sweet_cherry_CRS_phenotyping_2012"
+"126","FR28T104","Prunus avium",212.9,"Sweet_cherry_CRS_phenotyping_2011"
+"127","FR28T104","Prunus avium",214.7,"Sweet_cherry_CRS_phenotyping_2012"
+"128","FR28T105","Prunus avium",198.7,"Sweet_cherry_CRS_phenotyping_2012"
+"129","FR28T105","Prunus avium",209.3,"Sweet_cherry_CRS_phenotyping_2011"
+"130","FR28T106","Prunus avium",236,"Sweet_cherry_CRS_phenotyping_2012"
+"131","FR28T106","Prunus avium",247.7,"Sweet_cherry_CRS_phenotyping_2011"
+"132","FR28T107","Prunus avium",184,"Sweet_cherry_CRS_phenotyping_2012"
+"133","FR28T107","Prunus avium",196,"Sweet_cherry_CRS_phenotyping_2011"
+"134","FR28T108","Prunus avium",201.4,"Sweet_cherry_CRS_phenotyping_2011"
+"135","FR28T108","Prunus avium",229.6,"Sweet_cherry_CRS_phenotyping_2012"
+"136","FR29T074","Prunus avium",165.9,"Sweet_cherry_CRS_phenotyping_2012"
+"137","FR29T075","Prunus avium",202.3,"Sweet_cherry_CRS_phenotyping_2012"
+"138","FR29T075","Prunus avium",222.7,"Sweet_cherry_CRS_phenotyping_2011"
+"139","FR29T076","Prunus avium",201.1,"Sweet_cherry_CRS_phenotyping_2011"
+"140","FR29T076","Prunus avium",211.7,"Sweet_cherry_CRS_phenotyping_2012"
+"141","FR29T077","Prunus avium",167.4,"Sweet_cherry_CRS_phenotyping_2011"
+"142","FR29T077","Prunus avium",194.3,"Sweet_cherry_CRS_phenotyping_2012"
+"143","FR10T098","Prunus avium",130.8,"Sweet_cherry_CRS_phenotyping_2012"
+"144","FR10T099","Prunus avium",226.1,"Sweet_cherry_CRS_phenotyping_2012"
+"145","FR10T099","Prunus avium",271,"Sweet_cherry_CRS_phenotyping_2011"
+"146","FR10T101","Prunus avium",250.7,"Sweet_cherry_CRS_phenotyping_2011"
+"147","FR10T101","Prunus avium",260.4,"Sweet_cherry_CRS_phenotyping_2012"
+"148","FR11T015","Prunus avium",306.9,"Sweet_cherry_CRS_phenotyping_2012"
+"149","FR11T015","Prunus avium",319.2,"Sweet_cherry_CRS_phenotyping_2010"
+"150","FR11T015","Prunus avium",332.1,"Sweet_cherry_CRS_phenotyping_2011"
+"151","FR11T016","Prunus avium",267.6,"Sweet_cherry_CRS_phenotyping_2012"
+"152","FR11T016","Prunus avium",280.2,"Sweet_cherry_CRS_phenotyping_2011"
+"153","FR11T017","Prunus avium",244.5,"Sweet_cherry_CRS_phenotyping_2012"
+"154","FR11T017","Prunus avium",253.8,"Sweet_cherry_CRS_phenotyping_2010"
+"155","FR11T017","Prunus avium",298.6,"Sweet_cherry_CRS_phenotyping_2011"
+"156","FR11T018","Prunus avium",258.6,"Sweet_cherry_CRS_phenotyping_2012"
+"157","FR11T018","Prunus avium",288.6,"Sweet_cherry_CRS_phenotyping_2010"
+"158","FR11T019","Prunus avium",214.9,"Sweet_cherry_CRS_phenotyping_2012"
+"159","FR11T019","Prunus avium",274.6,"Sweet_cherry_CRS_phenotyping_2011"
+"160","FR11T025","Prunus avium",257.7,"Sweet_cherry_CRS_phenotyping_2010"
+"161","FR11T025","Prunus avium",340.4,"Sweet_cherry_CRS_phenotyping_2011"
+"162","FR11T025","Prunus avium",356.8,"Sweet_cherry_CRS_phenotyping_2012"
+"163","FR11T026","Prunus avium",240.9,"Sweet_cherry_CRS_phenotyping_2012"
+"164","FR11T027","Prunus avium",235.5,"Sweet_cherry_CRS_phenotyping_2010"
+"165","FR11T027","Prunus avium",239.9,"Sweet_cherry_CRS_phenotyping_2012"
+"166","FR11T027","Prunus avium",277,"Sweet_cherry_CRS_phenotyping_2011"
+"167","FR11T028","Prunus avium",296.3,"Sweet_cherry_CRS_phenotyping_2012"
+"168","FR11T028","Prunus avium",318,"Sweet_cherry_CRS_phenotyping_2010"
+"169","FR11T028","Prunus avium",323.3,"Sweet_cherry_CRS_phenotyping_2011"
+"170","FR11T029","Prunus avium",264.4,"Sweet_cherry_CRS_phenotyping_2010"
+"171","FR11T029","Prunus avium",325,"Sweet_cherry_CRS_phenotyping_2011"
+"172","FR11T029","Prunus avium",329.2,"Sweet_cherry_CRS_phenotyping_2012"
+"173","FR11T030","Prunus avium",238.3,"Sweet_cherry_CRS_phenotyping_2012"
+"174","FR11T030","Prunus avium",264.4,"Sweet_cherry_CRS_phenotyping_2010"
+"175","FR11T031","Prunus avium",294.8,"Sweet_cherry_CRS_phenotyping_2012"
+"176","FR11T031","Prunus avium",297.3,"Sweet_cherry_CRS_phenotyping_2010"
+"177","FR11T031","Prunus avium",306.2,"Sweet_cherry_CRS_phenotyping_2011"
+"178","FR11T032","Prunus avium",262.5,"Sweet_cherry_CRS_phenotyping_2010"
+"179","FR11T032","Prunus avium",285.4,"Sweet_cherry_CRS_phenotyping_2012"
+"180","FR11T032","Prunus avium",285.7,"Sweet_cherry_CRS_phenotyping_2011"
+"181","FR12T001","Prunus avium",235.8,"Sweet_cherry_CRS_phenotyping_2012"
+"182","FR12T001","Prunus avium",266,"Sweet_cherry_CRS_phenotyping_2011"
+"183","FR12T003","Prunus avium",244,"Sweet_cherry_CRS_phenotyping_2012"
+"184","FR12T004","Prunus avium",251,"Sweet_cherry_CRS_phenotyping_2011"
+"185","FR12T004","Prunus avium",276.4,"Sweet_cherry_CRS_phenotyping_2012"
+"186","FR12T006","Prunus avium",123.9,"Sweet_cherry_CRS_phenotyping_2011"
+"187","FR12T006","Prunus avium",127.5,"Sweet_cherry_CRS_phenotyping_2012"
+"188","FR12T009","Prunus avium",238.4,"Sweet_cherry_CRS_phenotyping_2011"
+"189","FR12T009","Prunus avium",256.9,"Sweet_cherry_CRS_phenotyping_2012"
+"190","FR12T011","Prunus avium",245,"Sweet_cherry_CRS_phenotyping_2010"
+"191","FR12T011","Prunus avium",273.6,"Sweet_cherry_CRS_phenotyping_2012"
+"192","FR12T012","Prunus avium",168.6,"Sweet_cherry_CRS_phenotyping_2012"
+"193","FR12T012","Prunus avium",173,"Sweet_cherry_CRS_phenotyping_2011"
+"194","FR12T056","Prunus avium",246.8,"Sweet_cherry_CRS_phenotyping_2012"
+"195","FR12T056","Prunus avium",251,"Sweet_cherry_CRS_phenotyping_2011"
+"196","FR12T057","Prunus avium",214.3,"Sweet_cherry_CRS_phenotyping_2012"
+"197","FR12T058","Prunus avium",202.1,"Sweet_cherry_CRS_phenotyping_2011"
+"198","FR12T058","Prunus avium",218.7,"Sweet_cherry_CRS_phenotyping_2012"
+"199","FR12T063","Prunus avium",207,"Sweet_cherry_CRS_phenotyping_2012"
+"200","FR12T063","Prunus avium",228.6,"Sweet_cherry_CRS_phenotyping_2011"
+"201","FR12T066","Prunus avium",252.6,"Sweet_cherry_CRS_phenotyping_2011"
+"202","FR12T066","Prunus avium",258.1,"Sweet_cherry_CRS_phenotyping_2012"
+"203","FR12T067","Prunus avium",238.8,"Sweet_cherry_CRS_phenotyping_2011"
+"204","FR12T067","Prunus avium",251.8,"Sweet_cherry_CRS_phenotyping_2012"
+"205","FR12T068","Prunus avium",169.4,"Sweet_cherry_CRS_phenotyping_2012"
+"206","FR12T068","Prunus avium",196.9,"Sweet_cherry_CRS_phenotyping_2011"
+"207","FR12T069","Prunus avium",254.7,"Sweet_cherry_CRS_phenotyping_2012"
+"208","FR12T071","Prunus avium",191.9,"Sweet_cherry_CRS_phenotyping_2012"
+"209","FR12T071","Prunus avium",212.3,"Sweet_cherry_CRS_phenotyping_2011"
+"210","FR12T072","Prunus avium",243,"Sweet_cherry_CRS_phenotyping_2011"
+"211","FR12T072","Prunus avium",247.23,"Sweet_cherry_CRS_phenotyping_2012"
+"212","FR12T073","Prunus avium",324.9,"Sweet_cherry_CRS_phenotyping_2012"
+"213","FR12T073","Prunus avium",341.4,"Sweet_cherry_CRS_phenotyping_2011"
+"214","FR12T074","Prunus avium",230.8,"Sweet_cherry_CRS_phenotyping_2012"
+"215","FR12T076","Prunus avium",226,"Sweet_cherry_CRS_phenotyping_2012"
+"216","FR12T076","Prunus avium",269.3,"Sweet_cherry_CRS_phenotyping_2011"
+"217","FR12T077","Prunus avium",264,"Sweet_cherry_CRS_phenotyping_2012"
+"218","FR12T077","Prunus avium",286,"Sweet_cherry_CRS_phenotyping_2010"
+"219","FR12T077","Prunus avium",295.6,"Sweet_cherry_CRS_phenotyping_2011"
+"220","FR12T080","Prunus avium",225.7,"Sweet_cherry_CRS_phenotyping_2012"
+"221","FR12T080","Prunus avium",243.9,"Sweet_cherry_CRS_phenotyping_2011"
+"222","FR12T091","Prunus avium",166.4,"Sweet_cherry_CRS_phenotyping_2011"
+"223","FR12T091","Prunus avium",175.1,"Sweet_cherry_CRS_phenotyping_2012"
+"224","FR12T093","Prunus avium",138.6,"Sweet_cherry_CRS_phenotyping_2012"
+"225","FR12T093","Prunus avium",160,"Sweet_cherry_CRS_phenotyping_2011"
+"226","FR12T094","Prunus avium",297.7,"Sweet_cherry_CRS_phenotyping_2012"
+"227","FR13T058","Prunus avium",143.1,"Sweet_cherry_CRS_phenotyping_2011"
+"228","FR13T061","Prunus avium",251.8,"Sweet_cherry_CRS_phenotyping_2011"
+"229","FR13T061","Prunus avium",255.1,"Sweet_cherry_CRS_phenotyping_2012"
+"230","FR14T056","Prunus avium",278.4,"Sweet_cherry_CRS_phenotyping_2012"
+"231","FR14T056","Prunus avium",338,"Sweet_cherry_CRS_phenotyping_2011"
+"232","FR14T057","Prunus avium",283.3,"Sweet_cherry_CRS_phenotyping_2012"
+"233","FR14T057","Prunus avium",303.1,"Sweet_cherry_CRS_phenotyping_2011"
+"234","FR14T060","Prunus avium",260.9,"Sweet_cherry_CRS_phenotyping_2012"
+"235","FR14T060","Prunus avium",277.7,"Sweet_cherry_CRS_phenotyping_2011"
+"236","FR14T075","Prunus avium",297.4,"Sweet_cherry_CRS_phenotyping_2012"
+"237","FR14T075","Prunus avium",304.3,"Sweet_cherry_CRS_phenotyping_2011"
+"238","FR14T076","Prunus avium",303.5,"Sweet_cherry_CRS_phenotyping_2012"
+"239","FR14T076","Prunus avium",373.8,"Sweet_cherry_CRS_phenotyping_2011"
+"240","FR14T078","Prunus avium",221.5,"Sweet_cherry_CRS_phenotyping_2012"
+"241","FR14T078","Prunus avium",281.7,"Sweet_cherry_CRS_phenotyping_2011"
+"242","FR14T079","Prunus avium",272.2,"Sweet_cherry_CRS_phenotyping_2012"
+"243","FR14T079","Prunus avium",332.9,"Sweet_cherry_CRS_phenotyping_2011"
+"244","FR14T080","Prunus avium",293.4,"Sweet_cherry_CRS_phenotyping_2012"
+"245","FR14T080","Prunus avium",299.3,"Sweet_cherry_CRS_phenotyping_2011"
+"246","FR14T081","Prunus avium",222.3,"Sweet_cherry_CRS_phenotyping_2012"
+"247","FR14T081","Prunus avium",274,"Sweet_cherry_CRS_phenotyping_2011"
+"248","FR14T082","Prunus avium",252.7,"Sweet_cherry_CRS_phenotyping_2012"
+"249","FR14T082","Prunus avium",273.8,"Sweet_cherry_CRS_phenotyping_2011"
+"250","FR14T084","Prunus avium",313.4,"Sweet_cherry_CRS_phenotyping_2012"
+"251","FR14T084","Prunus avium",331.4,"Sweet_cherry_CRS_phenotyping_2011"
+"252","FR14T086","Prunus avium",255.4,"Sweet_cherry_CRS_phenotyping_2012"
+"253","FR14T086","Prunus avium",300.6,"Sweet_cherry_CRS_phenotyping_2011"
+"254","FR16T001","Prunus avium",329.1,"Sweet_cherry_CRS_phenotyping_2012"
+"255","FR16T024","Prunus avium",263,"Sweet_cherry_CRS_phenotyping_2011"
+"256","FR16T024","Prunus avium",270.1,"Sweet_cherry_CRS_phenotyping_2012"
+"257","FR16T040","Prunus avium",347.9,"Sweet_cherry_CRS_phenotyping_2012"
+"258","FR16T041","Prunus avium",224.3,"Sweet_cherry_CRS_phenotyping_2012"
+"259","FR17T006","Prunus avium",280,"Sweet_cherry_CRS_phenotyping_2011"
+"260","FR17T006","Prunus avium",295.3,"Sweet_cherry_CRS_phenotyping_2012"
+"261","FR17T051","Prunus avium",254,"Sweet_cherry_CRS_phenotyping_2011"
+"262","FR17T062","Prunus avium",216.5,"Sweet_cherry_CRS_phenotyping_2012"
+"263","FR18T017","Prunus avium",240.5,"Sweet_cherry_CRS_phenotyping_2011"
+"264","FR18T017","Prunus avium",272.8,"Sweet_cherry_CRS_phenotyping_2012"
+"265","FR18T018","Prunus avium",251.5,"Sweet_cherry_CRS_phenotyping_2011"
+"266","FR18T018","Prunus avium",262.9,"Sweet_cherry_CRS_phenotyping_2012"
+"267","FR18T019","Prunus avium",222.1,"Sweet_cherry_CRS_phenotyping_2011"
+"268","FR18T019","Prunus avium",256.2,"Sweet_cherry_CRS_phenotyping_2012"
+"269","FR18T020","Prunus avium",243,"Sweet_cherry_CRS_phenotyping_2012"
+"270","FR18T041","Prunus avium",273,"Sweet_cherry_CRS_phenotyping_2011"
+"271","FR18T042","Prunus avium",203.8,"Sweet_cherry_CRS_phenotyping_2012"
+"272","FR18T043","Prunus avium",226.7,"Sweet_cherry_CRS_phenotyping_2011"
+"273","FR18T043","Prunus avium",259.7,"Sweet_cherry_CRS_phenotyping_2012"
+"274","FR18T044","Prunus avium",252,"Sweet_cherry_CRS_phenotyping_2011"
+"275","FR18T044","Prunus avium",265.6,"Sweet_cherry_CRS_phenotyping_2012"
+"276","FR18T045","Prunus avium",330.4,"Sweet_cherry_CRS_phenotyping_2012"
+"277","FR18T048","Prunus avium",223.6,"Sweet_cherry_CRS_phenotyping_2011"
+"278","FR18T048","Prunus avium",284.8,"Sweet_cherry_CRS_phenotyping_2012"
+"279","FR18T052","Prunus avium",295.3,"Sweet_cherry_CRS_phenotyping_2012"
+"280","FR18T071","Prunus avium",265,"Sweet_cherry_CRS_phenotyping_2012"
+"281","FR18T071","Prunus avium",283.4,"Sweet_cherry_CRS_phenotyping_2011"
+"282","FR1T027","Prunus avium",265,"Sweet_cherry_CRS_phenotyping_2012"
+"283","FR1T027","Prunus avium",270,"Sweet_cherry_CRS_phenotyping_2011"
+"284","FR1T028","Prunus avium",265,"Sweet_cherry_CRS_phenotyping_2012"
+"285","FR1T028","Prunus avium",284.9,"Sweet_cherry_CRS_phenotyping_2011"
+"286","FR1T029","Prunus avium",280.7,"Sweet_cherry_CRS_phenotyping_2012"
+"287","FR1T029","Prunus avium",340,"Sweet_cherry_CRS_phenotyping_2010"
+"288","FR1T029","Prunus avium",365.5,"Sweet_cherry_CRS_phenotyping_2011"
+"289","FR1T030","Prunus avium",280.4,"Sweet_cherry_CRS_phenotyping_2011"
+"290","FR1T030","Prunus avium",285,"Sweet_cherry_CRS_phenotyping_2010"
+"291","FR1T030","Prunus avium",305.1,"Sweet_cherry_CRS_phenotyping_2012"
+"292","FR1T031","Prunus avium",258.7,"Sweet_cherry_CRS_phenotyping_2012"
+"293","FR1T031","Prunus avium",282.3,"Sweet_cherry_CRS_phenotyping_2011"
+"294","FR1T031","Prunus avium",290,"Sweet_cherry_CRS_phenotyping_2010"
+"295","FR1T032","Prunus avium",262.2,"Sweet_cherry_CRS_phenotyping_2012"
+"296","FR1T032","Prunus avium",276,"Sweet_cherry_CRS_phenotyping_2010"
+"297","FR1T032","Prunus avium",285,"Sweet_cherry_CRS_phenotyping_2011"
+"298","FR1T033","Prunus avium",252.7,"Sweet_cherry_CRS_phenotyping_2011"
+"299","FR1T033","Prunus avium",260,"Sweet_cherry_CRS_phenotyping_2010"
+"300","FR1T033","Prunus avium",276.6,"Sweet_cherry_CRS_phenotyping_2012"
+"301","FR1T037","Prunus avium",201.8,"Sweet_cherry_CRS_phenotyping_2012"
+"302","FR1T037","Prunus avium",257.3,"Sweet_cherry_CRS_phenotyping_2011"
+"303","FR1T037","Prunus avium",263.4,"Sweet_cherry_CRS_phenotyping_2010"
+"304","FR1T038","Prunus avium",270.7,"Sweet_cherry_CRS_phenotyping_2012"
+"305","FR1T038","Prunus avium",325,"Sweet_cherry_CRS_phenotyping_2010"
+"306","FR1T038","Prunus avium",340.6,"Sweet_cherry_CRS_phenotyping_2011"
+"307","FR1T039","Prunus avium",259.2,"Sweet_cherry_CRS_phenotyping_2012"
+"308","FR1T039","Prunus avium",319.5,"Sweet_cherry_CRS_phenotyping_2010"
+"309","FR1T039","Prunus avium",327.1,"Sweet_cherry_CRS_phenotyping_2011"
+"310","FR1T040","Prunus avium",251.5,"Sweet_cherry_CRS_phenotyping_2010"
+"311","FR1T040","Prunus avium",277.7,"Sweet_cherry_CRS_phenotyping_2012"
+"312","FR1T040","Prunus avium",280,"Sweet_cherry_CRS_phenotyping_2011"
+"313","FR1T041","Prunus avium",343.2,"Sweet_cherry_CRS_phenotyping_2010"
+"314","FR1T041","Prunus avium",354.7,"Sweet_cherry_CRS_phenotyping_2011"
+"315","FR1T041","Prunus avium",366.6,"Sweet_cherry_CRS_phenotyping_2012"
+"316","FR1T042","Prunus avium",253.9,"Sweet_cherry_CRS_phenotyping_2012"
+"317","FR1T042","Prunus avium",310,"Sweet_cherry_CRS_phenotyping_2010"
+"318","FR1T042","Prunus avium",319,"Sweet_cherry_CRS_phenotyping_2011"
+"319","FR1T054","Prunus avium",290.2,"Sweet_cherry_CRS_phenotyping_2010"
+"320","FR1T054","Prunus avium",294,"Sweet_cherry_CRS_phenotyping_2011"
+"321","FR1T054","Prunus avium",331.2,"Sweet_cherry_CRS_phenotyping_2012"
+"322","FR1T056","Prunus avium",237.8,"Sweet_cherry_CRS_phenotyping_2012"
+"323","FR1T056","Prunus avium",259,"Sweet_cherry_CRS_phenotyping_2011"
+"324","FR1T056","Prunus avium",262.5,"Sweet_cherry_CRS_phenotyping_2010"
+"325","FR1T065","Prunus avium",260.6,"Sweet_cherry_CRS_phenotyping_2010"
+"326","FR1T065","Prunus avium",269.3,"Sweet_cherry_CRS_phenotyping_2012"
+"327","FR1T065","Prunus avium",278,"Sweet_cherry_CRS_phenotyping_2011"
+"328","FR1T073","Prunus avium",252.2,"Sweet_cherry_CRS_phenotyping_2012"
+"329","FR1T073","Prunus avium",292.8,"Sweet_cherry_CRS_phenotyping_2010"
+"330","FR1T073","Prunus avium",304.3,"Sweet_cherry_CRS_phenotyping_2011"
+"331","FR21T037","Prunus avium",211,"Sweet_cherry_CRS_phenotyping_2012"
+"332","FR21T063","Prunus avium",287.5,"Sweet_cherry_CRS_phenotyping_2012"
+"333","FR22T001","Prunus avium",266,"Sweet_cherry_CRS_phenotyping_2012"
+"334","FR22T002","Prunus avium",263,"Sweet_cherry_CRS_phenotyping_2012"
+"335","FR22T002","Prunus avium",295,"Sweet_cherry_CRS_phenotyping_2011"
+"336","FR22T003","Prunus avium",227.3,"Sweet_cherry_CRS_phenotyping_2012"
+"337","FR22T004","Prunus avium",281.1,"Sweet_cherry_CRS_phenotyping_2012"
+"338","FR22T004","Prunus avium",310.8,"Sweet_cherry_CRS_phenotyping_2011"
+"339","FR22T006","Prunus avium",264.3,"Sweet_cherry_CRS_phenotyping_2012"
+"340","FR22T007","Prunus avium",339.8,"Sweet_cherry_CRS_phenotyping_2012"
+"341","FR23T065","Prunus avium",167.1,"Sweet_cherry_CRS_phenotyping_2012"
+"342","FR23T067","Prunus avium",188.2,"Sweet_cherry_CRS_phenotyping_2012"
+"343","FR23T068","Prunus avium",169.8,"Sweet_cherry_CRS_phenotyping_2012"
+"344","FR23T069","Prunus avium",148.9,"Sweet_cherry_CRS_phenotyping_2012"
+"345","FR23T072","Prunus avium",155.4,"Sweet_cherry_CRS_phenotyping_2012"
+"346","FR23T089","Prunus avium",185.4,"Sweet_cherry_CRS_phenotyping_2012"
+"347","FR23T090","Prunus avium",202.4,"Sweet_cherry_CRS_phenotyping_2012"
+"348","FR23T090","Prunus avium",253,"Sweet_cherry_CRS_phenotyping_2011"
+"349","FR23T091","Prunus avium",170.3,"Sweet_cherry_CRS_phenotyping_2012"
+"350","FR23T095","Prunus avium",259.3,"Sweet_cherry_CRS_phenotyping_2012"
+"351","FR23T113","Prunus avium",193.4,"Sweet_cherry_CRS_phenotyping_2012"
+"352","FR23T116","Prunus avium",232.6,"Sweet_cherry_CRS_phenotyping_2012"
+"353","FR23T119","Prunus avium",133.9,"Sweet_cherry_CRS_phenotyping_2011"
+"354","FR23T120","Prunus avium",135.3,"Sweet_cherry_CRS_phenotyping_2011"
+"355","FR23T120","Prunus avium",150.7,"Sweet_cherry_CRS_phenotyping_2012"
+"356","FR23T127","Prunus avium",272.4,"Sweet_cherry_CRS_phenotyping_2012"
+"357","FR23T128","Prunus avium",323.6,"Sweet_cherry_CRS_phenotyping_2012"
+"358","FR23T129","Prunus avium",258.7,"Sweet_cherry_CRS_phenotyping_2012"
+"359","FR23T129","Prunus avium",340,"Sweet_cherry_CRS_phenotyping_2011"
+"360","FR23T130","Prunus avium",233.6,"Sweet_cherry_CRS_phenotyping_2012"
+"361","FR23T130","Prunus avium",269.1,"Sweet_cherry_CRS_phenotyping_2011"
+"362","FR23T131","Prunus avium",270,"Sweet_cherry_CRS_phenotyping_2011"
+"363","FR23T131","Prunus avium",297,"Sweet_cherry_CRS_phenotyping_2012"
+"364","FR24T069","Prunus avium",181.4,"Sweet_cherry_CRS_phenotyping_2012"
+"365","FR24T072","Prunus avium",148.3,"Sweet_cherry_CRS_phenotyping_2012"
+"366","FR24T077","Prunus avium",279.3,"Sweet_cherry_CRS_phenotyping_2011"
+"367","FR25T081","Prunus avium",266.6,"Sweet_cherry_CRS_phenotyping_2012"
+"368","FR25T081","Prunus avium",269.7,"Sweet_cherry_CRS_phenotyping_2011"
+"369","FR25T084","Prunus avium",267.8,"Sweet_cherry_CRS_phenotyping_2012"
+"370","FR25T086","Prunus avium",221.9,"Sweet_cherry_CRS_phenotyping_2012"
+"371","FR25T090","Prunus avium",208.1,"Sweet_cherry_CRS_phenotyping_2012"
+"372","FR25T090","Prunus avium",238.2,"Sweet_cherry_CRS_phenotyping_2011"
+"373","FR26T030","Prunus avium",145.7,"Sweet_cherry_CRS_phenotyping_2012"
+"374","FR26T031","Prunus avium",251.2,"Sweet_cherry_CRS_phenotyping_2012"
+"375","FR26T033","Prunus avium",183.5,"Sweet_cherry_CRS_phenotyping_2011"
+"376","FR26T033","Prunus avium",214.3,"Sweet_cherry_CRS_phenotyping_2012"
+"377","FR26T034","Prunus avium",276.3,"Sweet_cherry_CRS_phenotyping_2012"
+"378","FR26T034","Prunus avium",280,"Sweet_cherry_CRS_phenotyping_2011"
+"379","FR26T036","Prunus avium",165,"Sweet_cherry_CRS_phenotyping_2011"
+"380","FR26T036","Prunus avium",187,"Sweet_cherry_CRS_phenotyping_2012"
+"381","FR26T037","Prunus avium",154,"Sweet_cherry_CRS_phenotyping_2011"
+"382","FR26T037","Prunus avium",213.4,"Sweet_cherry_CRS_phenotyping_2012"
+"383","FR26T038","Prunus avium",220.2,"Sweet_cherry_CRS_phenotyping_2012"
+"384","FR26T038","Prunus avium",244.4,"Sweet_cherry_CRS_phenotyping_2011"
+"385","FR26T040","Prunus avium",234.3,"Sweet_cherry_CRS_phenotyping_2012"
+"386","FR27T001","Prunus avium",131.8,"Sweet_cherry_CRS_phenotyping_2011"
+"387","FR27T001","Prunus avium",134.4,"Sweet_cherry_CRS_phenotyping_2012"
+"388","FR27T006","Prunus avium",113.6,"Sweet_cherry_CRS_phenotyping_2012"
+"389","FR27T007","Prunus avium",145.5,"Sweet_cherry_CRS_phenotyping_2012"
+"390","FR27T008","Prunus avium",134.5,"Sweet_cherry_CRS_phenotyping_2012"
+"391","FR27T010","Prunus avium",143.5,"Sweet_cherry_CRS_phenotyping_2012"
+"392","FR27T012","Prunus avium",182.4,"Sweet_cherry_CRS_phenotyping_2012"
+"393","FR27T012","Prunus avium",184.1,"Sweet_cherry_CRS_phenotyping_2011"
+"394","FR27T013","Prunus avium",164.1,"Sweet_cherry_CRS_phenotyping_2012"
+"395","FR27T013","Prunus avium",205,"Sweet_cherry_CRS_phenotyping_2011"
+"396","FR27T014","Prunus avium",185.2,"Sweet_cherry_CRS_phenotyping_2011"
+"397","FR27T014","Prunus avium",205.4,"Sweet_cherry_CRS_phenotyping_2012"
+"398","FR27T015","Prunus avium",122.5,"Sweet_cherry_CRS_phenotyping_2011"
+"399","FR27T015","Prunus avium",176.2,"Sweet_cherry_CRS_phenotyping_2012"
+"400","FR27T051","Prunus avium",205.3,"Sweet_cherry_CRS_phenotyping_2012"
+"401","FR27T052","Prunus avium",264.2,"Sweet_cherry_CRS_phenotyping_2011"
+"402","FR27T052","Prunus avium",284.3,"Sweet_cherry_CRS_phenotyping_2012"
+"403","FR27T053","Prunus avium",156.7,"Sweet_cherry_CRS_phenotyping_2012"
+"404","FR27T053","Prunus avium",164.3,"Sweet_cherry_CRS_phenotyping_2011"
+"405","FR27T054","Prunus avium",118.3,"Sweet_cherry_CRS_phenotyping_2011"
+"406","FR27T054","Prunus avium",157.3,"Sweet_cherry_CRS_phenotyping_2012"
+"407","FR27T094","Prunus avium",131,"Sweet_cherry_CRS_phenotyping_2011"
+"408","FR27T094","Prunus avium",162.6,"Sweet_cherry_CRS_phenotyping_2012"
+"409","FR27T096","Prunus avium",176.5,"Sweet_cherry_CRS_phenotyping_2011"
+"410","FR27T096","Prunus avium",188.4,"Sweet_cherry_CRS_phenotyping_2012"
+"411","FR27T097","Prunus avium",169.8,"Sweet_cherry_CRS_phenotyping_2012"
+"412","FR27T097","Prunus avium",170.9,"Sweet_cherry_CRS_phenotyping_2011"
+"413","FR27T099","Prunus avium",190.8,"Sweet_cherry_CRS_phenotyping_2012"
+"414","FR27T099","Prunus avium",212.3,"Sweet_cherry_CRS_phenotyping_2011"
+"415","FR27T102","Prunus avium",213.1,"Sweet_cherry_CRS_phenotyping_2012"
+"416","FR28T099","Prunus avium",179.7,"Sweet_cherry_CRS_phenotyping_2012"
+"417","FR29T073","Prunus avium",176,"Sweet_cherry_CRS_phenotyping_2012"
+"418","FR29T117","Prunus avium",134.3,"Sweet_cherry_CRS_phenotyping_2012"
+"419","FR29T118","Prunus avium",119.4,"Sweet_cherry_CRS_phenotyping_2012"
+"420","FR29T119","Prunus avium",195,"Sweet_cherry_CRS_phenotyping_2012"
+"421","FR29T120","Prunus avium",244.4,"Sweet_cherry_CRS_phenotyping_2012"
+"422","FR29T120","Prunus avium",250.7,"Sweet_cherry_CRS_phenotyping_2011"
+"423","FR29T122","Prunus avium",183.5,"Sweet_cherry_CRS_phenotyping_2012"
+"424","FR29T122","Prunus avium",188,"Sweet_cherry_CRS_phenotyping_2011"
+"425","FR29T124","Prunus avium",140.2,"Sweet_cherry_CRS_phenotyping_2012"
+"426","FR29T124","Prunus avium",164.2,"Sweet_cherry_CRS_phenotyping_2011"
+"427","FR29T126","Prunus avium",199.7,"Sweet_cherry_CRS_phenotyping_2012"
+"428","FR2T035","Prunus avium",280,"Sweet_cherry_CRS_phenotyping_2012"
+"429","FR2T035","Prunus avium",301.9,"Sweet_cherry_CRS_phenotyping_2010"
+"430","FR2T035","Prunus avium",321.7,"Sweet_cherry_CRS_phenotyping_2011"
+"431","FR2T037","Prunus avium",275.5,"Sweet_cherry_CRS_phenotyping_2012"
+"432","FR2T037","Prunus avium",306,"Sweet_cherry_CRS_phenotyping_2010"
+"433","FR2T037","Prunus avium",334,"Sweet_cherry_CRS_phenotyping_2011"
+"434","FR2T038","Prunus avium",271.3,"Sweet_cherry_CRS_phenotyping_2012"
+"435","FR2T038","Prunus avium",274.4,"Sweet_cherry_CRS_phenotyping_2010"
+"436","FR2T038","Prunus avium",291.3,"Sweet_cherry_CRS_phenotyping_2011"
+"437","FR2T040","Prunus avium",324.1,"Sweet_cherry_CRS_phenotyping_2010"
+"438","FR2T040","Prunus avium",336.8,"Sweet_cherry_CRS_phenotyping_2012"
+"439","FR2T040","Prunus avium",387.1,"Sweet_cherry_CRS_phenotyping_2011"
+"440","FR2T045","Prunus avium",233.8,"Sweet_cherry_CRS_phenotyping_2012"
+"441","FR2T045","Prunus avium",269.2,"Sweet_cherry_CRS_phenotyping_2010"
+"442","FR2T045","Prunus avium",273.2,"Sweet_cherry_CRS_phenotyping_2011"
+"443","FR2T046","Prunus avium",257,"Sweet_cherry_CRS_phenotyping_2011"
+"444","FR2T046","Prunus avium",261.5,"Sweet_cherry_CRS_phenotyping_2012"
+"445","FR2T046","Prunus avium",275.3,"Sweet_cherry_CRS_phenotyping_2010"
+"446","FR2T048","Prunus avium",257.3,"Sweet_cherry_CRS_phenotyping_2012"
+"447","FR2T048","Prunus avium",287.4,"Sweet_cherry_CRS_phenotyping_2011"
+"448","FR2T049","Prunus avium",290.4,"Sweet_cherry_CRS_phenotyping_2010"
+"449","FR2T049","Prunus avium",290.6,"Sweet_cherry_CRS_phenotyping_2012"
+"450","FR2T049","Prunus avium",292.9,"Sweet_cherry_CRS_phenotyping_2011"
+"451","FR2T050","Prunus avium",291.8,"Sweet_cherry_CRS_phenotyping_2012"
+"452","FR2T050","Prunus avium",312.9,"Sweet_cherry_CRS_phenotyping_2011"
+"453","FR2T050","Prunus avium",316.5,"Sweet_cherry_CRS_phenotyping_2010"
+"454","FR2T054","Prunus avium",298.8,"Sweet_cherry_CRS_phenotyping_2012"
+"455","FR2T054","Prunus avium",311,"Sweet_cherry_CRS_phenotyping_2010"
+"456","FR2T054","Prunus avium",317.2,"Sweet_cherry_CRS_phenotyping_2011"
+"457","FR2T057","Prunus avium",286.7,"Sweet_cherry_CRS_phenotyping_2010"
+"458","FR2T057","Prunus avium",297.2,"Sweet_cherry_CRS_phenotyping_2011"
+"459","FR2T057","Prunus avium",321.9,"Sweet_cherry_CRS_phenotyping_2012"
+"460","FR2T079","Prunus avium",327.2,"Sweet_cherry_CRS_phenotyping_2010"
+"461","FR2T079","Prunus avium",328.7,"Sweet_cherry_CRS_phenotyping_2011"
+"462","FR2T079","Prunus avium",365.3,"Sweet_cherry_CRS_phenotyping_2012"
+"463","FR2T080","Prunus avium",233.7,"Sweet_cherry_CRS_phenotyping_2012"
+"464","FR2T080","Prunus avium",274.3,"Sweet_cherry_CRS_phenotyping_2010"
+"465","FR2T080","Prunus avium",284.1,"Sweet_cherry_CRS_phenotyping_2011"
+"466","FR30T099","Prunus avium",261.7,"Sweet_cherry_CRS_phenotyping_2012"
+"467","FR30T099","Prunus avium",285,"Sweet_cherry_CRS_phenotyping_2011"
+"468","FR30T100","Prunus avium",188.7,"Sweet_cherry_CRS_phenotyping_2012"
+"469","FR30T101","Prunus avium",257.2,"Sweet_cherry_CRS_phenotyping_2012"
+"470","FR30T102","Prunus avium",250.4,"Sweet_cherry_CRS_phenotyping_2012"
+"471","FR30T102","Prunus avium",369.2,"Sweet_cherry_CRS_phenotyping_2011"
+"472","FR30T103","Prunus avium",251.4,"Sweet_cherry_CRS_phenotyping_2012"
+"473","FR30T105","Prunus avium",263.1,"Sweet_cherry_CRS_phenotyping_2012"
+"474","FR30T106","Prunus avium",271.5,"Sweet_cherry_CRS_phenotyping_2012"
+"475","FR30T106","Prunus avium",330.8,"Sweet_cherry_CRS_phenotyping_2011"
+"476","FR30T107","Prunus avium",217,"Sweet_cherry_CRS_phenotyping_2012"
+"477","FR30T108","Prunus avium",229.45,"Sweet_cherry_CRS_phenotyping_2011"
+"478","FR30T108","Prunus avium",247.1,"Sweet_cherry_CRS_phenotyping_2012"
+"479","FR30T109","Prunus avium",277.5,"Sweet_cherry_CRS_phenotyping_2012"
+"480","FR30T109","Prunus avium",294,"Sweet_cherry_CRS_phenotyping_2011"
+"481","FR31T007","Prunus avium",311.3,"Sweet_cherry_CRS_phenotyping_2012"
+"482","FR31T007","Prunus avium",361.4,"Sweet_cherry_CRS_phenotyping_2011"
+"483","FR31T008","Prunus avium",219.6,"Sweet_cherry_CRS_phenotyping_2012"
+"484","FR31T009","Prunus avium",259.1,"Sweet_cherry_CRS_phenotyping_2012"
+"485","FR31T010","Prunus avium",296,"Sweet_cherry_CRS_phenotyping_2012"
+"486","FR31T010","Prunus avium",308.9,"Sweet_cherry_CRS_phenotyping_2011"
+"487","FR31T011","Prunus avium",234.7,"Sweet_cherry_CRS_phenotyping_2012"
+"488","FR31T013","Prunus avium",315.1,"Sweet_cherry_CRS_phenotyping_2012"
+"489","FR31T014","Prunus avium",162.6,"Sweet_cherry_CRS_phenotyping_2012"
+"490","FR33T001","Prunus avium",317.1,"Sweet_cherry_CRS_phenotyping_2012"
+"491","FR33T004","Prunus avium",254.7,"Sweet_cherry_CRS_phenotyping_2012"
+"492","FR33T004","Prunus avium",279.3,"Sweet_cherry_CRS_phenotyping_2011"
+"493","FR33T005","Prunus avium",231,"Sweet_cherry_CRS_phenotyping_2011"
+"494","FR33T005","Prunus avium",267.1,"Sweet_cherry_CRS_phenotyping_2012"
+"495","FR33T006","Prunus avium",183.8,"Sweet_cherry_CRS_phenotyping_2011"
+"496","FR33T006","Prunus avium",242.4,"Sweet_cherry_CRS_phenotyping_2012"
+"497","FR33T007","Prunus avium",177.3,"Sweet_cherry_CRS_phenotyping_2012"
+"498","FR33T008","Prunus avium",138.4,"Sweet_cherry_CRS_phenotyping_2011"
+"499","FR33T008","Prunus avium",158.2,"Sweet_cherry_CRS_phenotyping_2012"
+"500","FR33T011","Prunus avium",233.5,"Sweet_cherry_CRS_phenotyping_2012"
+"501","FR35T101","Prunus avium",157,"Sweet_cherry_CRS_phenotyping_2011"
+"502","FR35T101","Prunus avium",236.2,"Sweet_cherry_CRS_phenotyping_2012"
+"503","FR35T102","Prunus avium",231.2,"Sweet_cherry_CRS_phenotyping_2012"
+"504","FR35T102","Prunus avium",261.1,"Sweet_cherry_CRS_phenotyping_2011"
+"505","FR35T103","Prunus avium",216.2,"Sweet_cherry_CRS_phenotyping_2011"
+"506","FR35T103","Prunus avium",229.5,"Sweet_cherry_CRS_phenotyping_2012"
+"507","FR35T104","Prunus avium",203.2,"Sweet_cherry_CRS_phenotyping_2011"
+"508","FR35T104","Prunus avium",209.5,"Sweet_cherry_CRS_phenotyping_2012"
+"509","FR35T105","Prunus avium",142.9,"Sweet_cherry_CRS_phenotyping_2011"
+"510","FR35T105","Prunus avium",184.6,"Sweet_cherry_CRS_phenotyping_2012"
+"511","FR35T108","Prunus avium",174.6,"Sweet_cherry_CRS_phenotyping_2011"
+"512","FR35T108","Prunus avium",181.3,"Sweet_cherry_CRS_phenotyping_2012"
+"513","FR35T110","Prunus avium",173.2,"Sweet_cherry_CRS_phenotyping_2011"
+"514","FR35T110","Prunus avium",228.6,"Sweet_cherry_CRS_phenotyping_2012"
+"515","FR38T001","Prunus avium",193.7,"Sweet_cherry_CRS_phenotyping_2012"
+"516","FR38T002","Prunus avium",215.6,"Sweet_cherry_CRS_phenotyping_2012"
+"517","FR38T003","Prunus avium",185.6,"Sweet_cherry_CRS_phenotyping_2012"
+"518","FR38T005","Prunus avium",179.8,"Sweet_cherry_CRS_phenotyping_2012"
+"519","FR3T002","Prunus avium",305.6,"Sweet_cherry_CRS_phenotyping_2012"
+"520","FR3T002","Prunus avium",361.8,"Sweet_cherry_CRS_phenotyping_2010"
+"521","FR3T002","Prunus avium",365.2,"Sweet_cherry_CRS_phenotyping_2011"
+"522","FR3T003","Prunus avium",285,"Sweet_cherry_CRS_phenotyping_2011"
+"523","FR3T003","Prunus avium",330.2,"Sweet_cherry_CRS_phenotyping_2012"
+"524","FR3T004","Prunus avium",314,"Sweet_cherry_CRS_phenotyping_2011"
+"525","FR3T004","Prunus avium",315.1,"Sweet_cherry_CRS_phenotyping_2010"
+"526","FR3T004","Prunus avium",346.4,"Sweet_cherry_CRS_phenotyping_2012"
+"527","FR3T005","Prunus avium",311.8,"Sweet_cherry_CRS_phenotyping_2012"
+"528","FR3T005","Prunus avium",320,"Sweet_cherry_CRS_phenotyping_2011"
+"529","FR3T007","Prunus avium",310,"Sweet_cherry_CRS_phenotyping_2011"
+"530","FR3T007","Prunus avium",338.3,"Sweet_cherry_CRS_phenotyping_2012"
+"531","FR3T008","Prunus avium",297.3,"Sweet_cherry_CRS_phenotyping_2012"
+"532","FR3T008","Prunus avium",308.2,"Sweet_cherry_CRS_phenotyping_2011"
+"533","FR3T009","Prunus avium",256,"Sweet_cherry_CRS_phenotyping_2011"
+"534","FR3T009","Prunus avium",271.2,"Sweet_cherry_CRS_phenotyping_2012"
+"535","FR3T011","Prunus avium",260.5,"Sweet_cherry_CRS_phenotyping_2012"
+"536","FR3T013","Prunus avium",207.9,"Sweet_cherry_CRS_phenotyping_2011"
+"537","FR3T013","Prunus avium",251.9,"Sweet_cherry_CRS_phenotyping_2012"
+"538","FR3T014","Prunus avium",246.9,"Sweet_cherry_CRS_phenotyping_2010"
+"539","FR3T014","Prunus avium",253,"Sweet_cherry_CRS_phenotyping_2011"
+"540","FR3T014","Prunus avium",265,"Sweet_cherry_CRS_phenotyping_2012"
+"541","FR3T015","Prunus avium",253.8,"Sweet_cherry_CRS_phenotyping_2012"
+"542","FR3T015","Prunus avium",261,"Sweet_cherry_CRS_phenotyping_2011"
+"543","FR3T016","Prunus avium",236.6,"Sweet_cherry_CRS_phenotyping_2012"
+"544","FR3T016","Prunus avium",243.9,"Sweet_cherry_CRS_phenotyping_2010"
+"545","FR3T016","Prunus avium",245,"Sweet_cherry_CRS_phenotyping_2011"
+"546","FR3T017","Prunus avium",258.2,"Sweet_cherry_CRS_phenotyping_2012"
+"547","FR3T018","Prunus avium",303.3,"Sweet_cherry_CRS_phenotyping_2011"
+"548","FR3T018","Prunus avium",309.2,"Sweet_cherry_CRS_phenotyping_2010"
+"549","FR3T018","Prunus avium",332.2,"Sweet_cherry_CRS_phenotyping_2012"
+"550","FR3T019","Prunus avium",290.7,"Sweet_cherry_CRS_phenotyping_2012"
+"551","FR3T020","Prunus avium",262.6,"Sweet_cherry_CRS_phenotyping_2012"
+"552","FR3T020","Prunus avium",267.5,"Sweet_cherry_CRS_phenotyping_2011"
+"553","FR3T020","Prunus avium",277.1,"Sweet_cherry_CRS_phenotyping_2010"
+"554","FR3T021","Prunus avium",275.1,"Sweet_cherry_CRS_phenotyping_2011"
+"555","FR3T021","Prunus avium",296.4,"Sweet_cherry_CRS_phenotyping_2010"
+"556","FR3T021","Prunus avium",331.2,"Sweet_cherry_CRS_phenotyping_2012"
+"557","FR3T022","Prunus avium",283,"Sweet_cherry_CRS_phenotyping_2011"
+"558","FR3T022","Prunus avium",397.2,"Sweet_cherry_CRS_phenotyping_2012"
+"559","FR3T023","Prunus avium",205.3,"Sweet_cherry_CRS_phenotyping_2011"
+"560","FR3T023","Prunus avium",236.4,"Sweet_cherry_CRS_phenotyping_2012"
+"561","FR3T025","Prunus avium",240.5,"Sweet_cherry_CRS_phenotyping_2010"
+"562","FR3T025","Prunus avium",248,"Sweet_cherry_CRS_phenotyping_2011"
+"563","FR3T025","Prunus avium",263.1,"Sweet_cherry_CRS_phenotyping_2012"
+"564","FR3T026","Prunus avium",218.9,"Sweet_cherry_CRS_phenotyping_2011"
+"565","FR3T026","Prunus avium",233.4,"Sweet_cherry_CRS_phenotyping_2012"
+"566","FR3T027","Prunus avium",215.1,"Sweet_cherry_CRS_phenotyping_2011"
+"567","FR3T027","Prunus avium",239.4,"Sweet_cherry_CRS_phenotyping_2012"
+"568","FR3T028","Prunus avium",164.6,"Sweet_cherry_CRS_phenotyping_2012"
+"569","FR3T029","Prunus avium",251.4,"Sweet_cherry_CRS_phenotyping_2012"
+"570","FR3T029","Prunus avium",251.6,"Sweet_cherry_CRS_phenotyping_2010"
+"571","FR3T029","Prunus avium",269,"Sweet_cherry_CRS_phenotyping_2011"
+"572","FR3T030","Prunus avium",226.5,"Sweet_cherry_CRS_phenotyping_2011"
+"573","FR3T030","Prunus avium",246.9,"Sweet_cherry_CRS_phenotyping_2012"
+"574","FR3T031","Prunus avium",254.2,"Sweet_cherry_CRS_phenotyping_2012"
+"575","FR3T031","Prunus avium",261,"Sweet_cherry_CRS_phenotyping_2011"
+"576","FR3T032","Prunus avium",266.7,"Sweet_cherry_CRS_phenotyping_2011"
+"577","FR3T032","Prunus avium",288.4,"Sweet_cherry_CRS_phenotyping_2012"
+"578","FR3T033","Prunus avium",280.5,"Sweet_cherry_CRS_phenotyping_2012"
+"579","FR3T033","Prunus avium",288,"Sweet_cherry_CRS_phenotyping_2011"
+"580","FR3T034","Prunus avium",277.8,"Sweet_cherry_CRS_phenotyping_2011"
+"581","FR3T034","Prunus avium",295.5,"Sweet_cherry_CRS_phenotyping_2012"
+"582","FR3T043","Prunus avium",292.4,"Sweet_cherry_CRS_phenotyping_2012"
+"583","FR3T043","Prunus avium",319.5,"Sweet_cherry_CRS_phenotyping_2010"
+"584","FR3T043","Prunus avium",324.7,"Sweet_cherry_CRS_phenotyping_2011"
+"585","FR3T044","Prunus avium",254.7,"Sweet_cherry_CRS_phenotyping_2012"
+"586","FR3T044","Prunus avium",262.4,"Sweet_cherry_CRS_phenotyping_2011"
+"587","FR3T046","Prunus avium",241.8,"Sweet_cherry_CRS_phenotyping_2012"
+"588","FR3T046","Prunus avium",248.1,"Sweet_cherry_CRS_phenotyping_2011"
+"589","FR3T047","Prunus avium",231.8,"Sweet_cherry_CRS_phenotyping_2012"
+"590","FR3T047","Prunus avium",257.5,"Sweet_cherry_CRS_phenotyping_2011"
+"591","FR3T050","Prunus avium",296.9,"Sweet_cherry_CRS_phenotyping_2010"
+"592","FR3T050","Prunus avium",298.5,"Sweet_cherry_CRS_phenotyping_2011"
+"593","FR3T050","Prunus avium",301.9,"Sweet_cherry_CRS_phenotyping_2012"
+"594","FR3T056","Prunus avium",209.4,"Sweet_cherry_CRS_phenotyping_2012"
+"595","FR3T056","Prunus avium",219.1,"Sweet_cherry_CRS_phenotyping_2011"
+"596","FR3T056","Prunus avium",224.7,"Sweet_cherry_CRS_phenotyping_2010"
+"597","FR3T057","Prunus avium",255.5,"Sweet_cherry_CRS_phenotyping_2010"
+"598","FR3T057","Prunus avium",332.2,"Sweet_cherry_CRS_phenotyping_2011"
+"599","FR3T057","Prunus avium",382.7,"Sweet_cherry_CRS_phenotyping_2012"
+"600","FR3T058","Prunus avium",260,"Sweet_cherry_CRS_phenotyping_2012"
+"601","FR3T058","Prunus avium",285.4,"Sweet_cherry_CRS_phenotyping_2011"
+"602","FR42T001","Prunus avium",191.7,"Sweet_cherry_CRS_phenotyping_2011"
+"603","FR42T003","Prunus avium",258.8,"Sweet_cherry_CRS_phenotyping_2012"
+"604","FR42T007","Prunus avium",225.8,"Sweet_cherry_CRS_phenotyping_2012"
+"605","FR42T045","Prunus avium",230.4,"Sweet_cherry_CRS_phenotyping_2012"
+"606","FR42T048","Prunus avium",216.3,"Sweet_cherry_CRS_phenotyping_2012"
+"607","FR42T048","Prunus avium",285,"Sweet_cherry_CRS_phenotyping_2011"
+"608","FR47T058","Prunus avium",238.2,"Sweet_cherry_CRS_phenotyping_2012"
+"609","FR47T059","Prunus avium",269.7,"Sweet_cherry_CRS_phenotyping_2012"
+"610","FR5T019","Prunus avium",265,"Sweet_cherry_CRS_phenotyping_2011"
+"611","FR5T019","Prunus avium",299.8,"Sweet_cherry_CRS_phenotyping_2012"
+"612","FR5T021","Prunus avium",214.9,"Sweet_cherry_CRS_phenotyping_2010"
+"613","FR5T021","Prunus avium",234,"Sweet_cherry_CRS_phenotyping_2011"
+"614","FR5T021","Prunus avium",242.6,"Sweet_cherry_CRS_phenotyping_2012"
+"615","FR5T025","Prunus avium",256,"Sweet_cherry_CRS_phenotyping_2011"
+"616","FR5T025","Prunus avium",298,"Sweet_cherry_CRS_phenotyping_2012"
+"617","FR8T002","Prunus avium",185,"Sweet_cherry_CRS_phenotyping_2011"
+"618","FR8T003","Prunus avium",240.9,"Sweet_cherry_CRS_phenotyping_2011"
+"619","FR8T003","Prunus avium",242.6,"Sweet_cherry_CRS_phenotyping_2012"
+"620","FR8T004","Prunus avium",246.9,"Sweet_cherry_CRS_phenotyping_2012"
+"621","FR8T005","Prunus avium",149.4,"Sweet_cherry_CRS_phenotyping_2012"
+"622","FR8T006","Prunus avium",204.1,"Sweet_cherry_CRS_phenotyping_2012"
+"623","FR8T007","Prunus avium",341.6,"Sweet_cherry_CRS_phenotyping_2012"
+"624","FR8T010","Prunus avium",240.4,"Sweet_cherry_CRS_phenotyping_2012"
+"625","FR8T011","Prunus avium",228.2,"Sweet_cherry_CRS_phenotyping_2011"
+"626","FR8T011","Prunus avium",232.8,"Sweet_cherry_CRS_phenotyping_2012"
+"627","FR8T047","Prunus avium",314.9,"Sweet_cherry_CRS_phenotyping_2012"
+"628","FR8T053","Prunus avium",256,"Sweet_cherry_CRS_phenotyping_2012"
+"629","FR8T057","Prunus avium",273.6,"Sweet_cherry_CRS_phenotyping_2012"
+"630","FR8T057","Prunus avium",283.4,"Sweet_cherry_CRS_phenotyping_2011"
+"631","FR9T031","Prunus avium",263,"Sweet_cherry_CRS_phenotyping_2012"
+"632","FR9T031","Prunus avium",291.5,"Sweet_cherry_CRS_phenotyping_2010"
+"633","FR9T032","Prunus avium",272.5,"Sweet_cherry_CRS_phenotyping_2012"
+"634","FR9T032","Prunus avium",294.7,"Sweet_cherry_CRS_phenotyping_2010"
+"635","FR9T032","Prunus avium",317.5,"Sweet_cherry_CRS_phenotyping_2011"
+"636","FR9T033","Prunus avium",273,"Sweet_cherry_CRS_phenotyping_2011"
+"637","FR9T034","Prunus avium",207.6,"Sweet_cherry_CRS_phenotyping_2012"
+"638","FR9T034","Prunus avium",263,"Sweet_cherry_CRS_phenotyping_2011"
+"639","FR9T081","Prunus avium",211,"Sweet_cherry_CRS_phenotyping_2011"
+"640","FR9T081","Prunus avium",265.6,"Sweet_cherry_CRS_phenotyping_2012"
+"641","FR9T083","Prunus avium",250,"Sweet_cherry_CRS_phenotyping_2011"
+"642","FR9T083","Prunus avium",284.4,"Sweet_cherry_CRS_phenotyping_2012"
+"643","FR9T084","Prunus avium",261,"Sweet_cherry_CRS_phenotyping_2011"
+"644","FR9T084","Prunus avium",273.8,"Sweet_cherry_CRS_phenotyping_2012"
+"645","FR9T085","Prunus avium",250,"Sweet_cherry_CRS_phenotyping_2011"
+"646","FR9T085","Prunus avium",252.8,"Sweet_cherry_CRS_phenotyping_2012"
+"647","FR9T086","Prunus avium",250,"Sweet_cherry_CRS_phenotyping_2011"
+"648","FR9T086","Prunus avium",263.6,"Sweet_cherry_CRS_phenotyping_2012"
+"649","FR9T087","Prunus avium",232.4,"Sweet_cherry_CRS_phenotyping_2012"
+"650","FR9T087","Prunus avium",240.1,"Sweet_cherry_CRS_phenotyping_2011"
+"651","FR9T096","Prunus avium",231.2,"Sweet_cherry_CRS_phenotyping_2012"
+"652","FR9T097","Prunus avium",256,"Sweet_cherry_CRS_phenotyping_2011"
+"653","FR9T097","Prunus avium",257.6,"Sweet_cherry_CRS_phenotyping_2012"
+"654","FR9T098","Prunus avium",264.9,"Sweet_cherry_CRS_phenotyping_2011"
+"655","FR9T098","Prunus avium",268.1,"Sweet_cherry_CRS_phenotyping_2012"
+"656","PC 9816-005","Prunus avium",255.5,"Sweet_cherry_CRS_phenotyping_2010"
+"657","PC 9816-023","Prunus avium",226.2,"Sweet_cherry_CRS_phenotyping_2010"
+"658","PC 9816-041","Prunus avium",258,"Sweet_cherry_CRS_phenotyping_2010"
+"659","PC 9816-059","Prunus avium",219.7,"Sweet_cherry_CRS_phenotyping_2010"
+"660","PC 9816-083","Prunus avium",228.9,"Sweet_cherry_CRS_phenotyping_2010"
+"661","PC 9816-103","Prunus avium",259,"Sweet_cherry_CRS_phenotyping_2010"
+"662","PC 9816-105","Prunus avium",276.4,"Sweet_cherry_CRS_phenotyping_2010"
+"663","PC 9816-106","Prunus avium",252,"Sweet_cherry_CRS_phenotyping_2010"
+"664","PC 9816-078","Prunus avium",254.1,"Sweet_cherry_CRS_phenotyping_2010"
+"665","PC 9819-005","Prunus avium",214.7,"Sweet_cherry_CRS_phenotyping_2010"
+"666","PC 9819-038","Prunus avium",202,"Sweet_cherry_CRS_phenotyping_2010"
+"667","PC 9814-025","Prunus avium",266,"Sweet_cherry_CRS_phenotyping_2010"
+"668","PC 9814-103","Prunus avium",187.1,"Sweet_cherry_CRS_phenotyping_2010"
+"669","PC 9814-105","Prunus avium",253,"Sweet_cherry_CRS_phenotyping_2010"
+"670","PC 9814-028","Prunus avium",276.7,"Sweet_cherry_CRS_phenotyping_2010"
+"671","PC 9814-062","Prunus avium",261.3,"Sweet_cherry_CRS_phenotyping_2010"
+"672","PC 9814-063","Prunus avium",260,"Sweet_cherry_CRS_phenotyping_2010"
+"673","PC 9814-071","Prunus avium",247.4,"Sweet_cherry_CRS_phenotyping_2010"
+"674","PC 9814-076","Prunus avium",253.2,"Sweet_cherry_CRS_phenotyping_2010"
+"675","PC 9819-034","Prunus avium",215.7,"Sweet_cherry_CRS_phenotyping_2010"
+"676","Unk10-Sdlg","Prunus avium",222.4,"Sweet_cherry_CRS_phenotyping_2012"
+"677","Unk10-Sdlg","Prunus avium",251.4,"Sweet_cherry_CRS_phenotyping_2011"
+"678","Unk11-Sdlg","Prunus avium",175.9,"Sweet_cherry_CRS_phenotyping_2011"
+"679","Unk11-Sdlg","Prunus avium",211.9,"Sweet_cherry_CRS_phenotyping_2012"
+"680","Unk12-Sdlg","Prunus avium",250.3,"Sweet_cherry_CRS_phenotyping_2012"
+"681","Unk14-Sdlg","Prunus avium",191.3,"Sweet_cherry_CRS_phenotyping_2011"
+"682","Unk14-Sdlg","Prunus avium",253.4,"Sweet_cherry_CRS_phenotyping_2012"
+"683","Unk15-Sdlg","Prunus avium",171.3,"Sweet_cherry_CRS_phenotyping_2012"
+"684","Unk15-Sdlg","Prunus avium",208,"Sweet_cherry_CRS_phenotyping_2010"
+"685","Unk15-Sdlg","Prunus avium",214.5,"Sweet_cherry_CRS_phenotyping_2011"
+"686","Unk16-Sdlg","Prunus avium",299.7,"Sweet_cherry_CRS_phenotyping_2012"
+"687","Unk16-Sdlg","Prunus avium",312.9,"Sweet_cherry_CRS_phenotyping_2011"
+"688","Unk17-Sdlg","Prunus avium",206.1,"Sweet_cherry_CRS_phenotyping_2010"
+"689","Unk1-Sdlg","Prunus avium",193.8,"Sweet_cherry_CRS_phenotyping_2012"
+"690","Unk20-Sdlg","Prunus avium",225.3,"Sweet_cherry_CRS_phenotyping_2011"
+"691","Unk22-Sdlg","Prunus avium",211.1,"Sweet_cherry_CRS_phenotyping_2012"
+"692","Unk23-Sdlg","Prunus avium",250.4,"Sweet_cherry_CRS_phenotyping_2012"
+"693","Unk25-Sdlg","Prunus avium",170.2,"Sweet_cherry_CRS_phenotyping_2012"
+"694","Unk25-Sdlg","Prunus avium",290,"Sweet_cherry_CRS_phenotyping_2011"
+"695","Unk9-Sdlg","Prunus avium",277.3,"Sweet_cherry_CRS_phenotyping_2012"
+"696","Emperor Francis","Prunus avium",240.4,"Sweet_cherry_CRS_phenotyping_2012"
+"697","Emperor Francis","Prunus avium",260,"Sweet_cherry_CRS_phenotyping_2011"
+"698","Black Republican","Prunus avium",235,"Sweet_cherry_CRS_phenotyping_2011"
+"699","Black Republican","Prunus avium",287.6,"Sweet_cherry_CRS_phenotyping_2012"
+"700","Krupnoplodnaya","Prunus avium",215,"Sweet_cherry_CRS_phenotyping_2012"
+"701","Venus","Prunus avium",169.7,"Sweet_cherry_CRS_phenotyping_2012"
+"702","Venus","Prunus avium",216.9,"Sweet_cherry_CRS_phenotyping_2011"
+"703","Moreau","Prunus avium",196.2,"Sweet_cherry_CRS_phenotyping_2011"
+"704","Moreau","Prunus avium",213.6,"Sweet_cherry_CRS_phenotyping_2012"
+"705","Index","Prunus avium",258.6,"Sweet_cherry_CRS_phenotyping_2011"
+"706","Index","Prunus avium",260.7,"Sweet_cherry_CRS_phenotyping_2012"
+"707","Index","Prunus avium",275.4,"Sweet_cherry_CRS_phenotyping_2010"
+"708","Sunburst","Prunus avium",212.1,"Sweet_cherry_CRS_phenotyping_2011"
+"709","Sunburst","Prunus avium",212.7,"Sweet_cherry_CRS_phenotyping_2012"
