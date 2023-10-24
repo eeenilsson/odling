@@ -117,14 +117,69 @@ Alla utom dessa anges som Use: Eating
 <!-- Market intermediaries indicated a willingness to pay producers more per pound for fruit greater than 2.5 cm in diameter, firmness above 300 g/mm, and SSC above 18 °Brix -->
 
 
-## Grundstammar
+# Grundstammar
 
-<!-- Trädgårdstrollet: "Körsbärsträd är lite svårare att ympa än kärnfrukt som äpple och päron… De går att ympa (dvs en liten kvist fästs ihop med grundstammen) men ofta är de förökade med okulering (dvs ett knoppanlag/”öga” fästs ihop med grundstammen). De vanligaste grundstammarna för sötkörsbär i svensk handel är: -->
+Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okulering_). Typen av grundstam påpverkar bland annat:
 
-<!-- Prunus avium = stora träd, svårt att nå bären vid plockning. Angiven höjd varierar hos olika återförsäljare men ca 20-30 m högt är inte ovanligt, kronans diameter är ca 10 m med en upprätt, lite pyramidal form. -->
+- Trädets storlek
+- Härdighet
+- När trädet börjar bära frukt
+- Hur gammalt trädet kan bli
+
+## Olika grundstammar för körsbär
+
+**Colt**
+
+- Medelstarkväxande
+- Sluthöjd 3-4 m efter 8 år
+- God bördighet
+- Ger frukt inom 1-2 år
+- Klarar något sämre jord
+- Kräver stöd de första åren.
+- Zon 1-3
+
+<!-- Ger relativt stora träd, 70-80% av fröstam. -->
+
+**Gisela**
+
+- Ger mindre träd än colt.
+- Sluthöjden varierar beroende på körsbärssort, 3-4 m
+- Ger frukt efter 1-2 år
+- God härdighet (ymplingen avmognar tidigt)
+- Zon 1-4(5)
+
+<!-- 35% av av Prunus avium, blir 3,5-4,5 m  -->
+
+**Prunus avium**
+
+- Starkväxande
+- Högre träd (kan vara svårplockad pga höjd), 20-30 m
+- Kronans diameter ca 10 m. Upprätt, något pyramidal form (beror på ymlingen sort?)
+- God förankring i jorden
+- Något senare fruktsättning
+- Zon 1-5
+- Används ej för sötkörsbär (som ju är av arten _Prunus avium_).
+
+**Prunus cerasus**
+
+- Ger mindre något mer svagväxande träd.
+- Både söt- och surkörsbär (_Prunus cesarus_)?
+
+**Prunum mahaleb**
+
+- Används ej för sötkörsbär (?)
+- Zon 1-3
+- För torra, sandiga jordar
+
+
+<!-- Prunus padus -->
+<!-- Prunus spinosa -->
 
 <!-- Prunus ’Colt’ = rätt stora träd, ca 70-80% storlek av Prunus avium, klarar zon I-III. -->
 
 <!-- Prunus ’Gisela 5’ = blir mindre träd, ca 35% storlek av Prunus avium, ungefär 3,5-4,5 m höga, klarar zon I-V (VI) -->
 
 <!-- Om du vill läsa mer om grundstammar för körsbär så rekommenderar jag varmt blogginlägget Grundstammar del 4 – körsbär och boken Skogsträdgården: odla ätbart överallt av Philipp Weiss & Annevi Sjöberg 2018:424-426 -->"
+
+<!-- Skogsträdgårdsbloggen tabell:  -->
+<!-- https://skogsträdgården.stjärnsund.nu/grundstammar-del-4-korsbar/ -->

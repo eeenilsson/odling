@@ -1,5 +1,21 @@
 ## Phenology data bloom time etc ----------------------
 
+## Kolla upp:
+## https://garden.org/plants/view/711604/Cherry-Prunus-avium-Knauffs-Schwarze/
+## National gardening association plants database!
+### Anger sådant som:
+## Sun Requirements: 	Full Sun
+## Full Sun to Partial Shade
+## Water Preferences: 	Mesic
+## Soil pH Preferences: 	Moderately acid (5.6 – 6.0)
+## Slightly acid (6.1 – 6.5)
+## Neutral (6.6 – 7.3)
+
+## https://www.orangepippin.com/varieties/cherries/a
+
+## Nice historical info: http://www.bernwodeplants.co.uk/descriptions/cherry2.htm
+
+
 ## rosbreed
 source('cherries_rosbreed.r') ## dataset analysis
 

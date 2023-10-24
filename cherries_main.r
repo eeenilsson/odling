@@ -67,29 +67,37 @@ variety_genotype_group[, tempvar := gsub("altenburger_melonen_kirsche", "buttner
 variety_genotype_group[, tempvar := gsub("buttners_spate_rote_knorpelkirsche", "buttners_rote", tempvar)]
 variety_genotype_group[, tempvar := gsub("fryksaas", "fryksas", tempvar)]
 variety_genotype_group[, tempvar := gsub("gaardebo", "gardebo", tempvar)]
+variety_genotype_group[, tempvar := gsub("grosse_schwarze_knorpel", "stor_svart", tempvar)]
+variety_genotype_group[, tempvar := gsub("donissens_gelbe_knorpel", "donissen", tempvar)]
+variety_genotype_group[, tempvar := gsub("frogmore_early", "frogmore", tempvar)]
 
+## todo : ändra $ var i dessa istället
+cherries_table.csv
+cherries_wexthuset.csv
+cherries_rangedala.csv
+cherries_splendor.csv
 
 dta$var[!dta$var %in% tmp$tempvar] ## no match in tempvar
+variety_genotype_group[grepl("", variety), ]
 
-variety_genotype_group[grepl("Nord", variety), ]
+## Note:
+## kauffs_kirsche  # samma som 'Knauff's Schwarze'? (den enda som hittas av google när man söker på Knauff)? ändrade till var knauffs_schwarze i den tidigare egna listan
 
-## Does not exist in variety_genotype_group:
-## berit
+## Note: Does not exist in variety_genotype_group due to being sour cherries
+## berit: sour
 ## fanal : sour
-## frogmore
 ## kelleris : sour
-## kirsa
-## kauffs_kirsche  # felnämnd?
+## kirsa : sour
+## ostheimer : Sour
+## skuggmorell : Sour
+## stora_klarbar : Sour 'Stort Klarbär'
+## triaux : Sour 'Triaux Klarbär'
+## tschernokorka: Sour
 ## nordia : sour
+## lettisk_lag : sour
 
 
-x
-
-## Nice historical info: http://www.bernwodeplants.co.uk/descriptions/cherry2.htm
-
-## add existing labels
-dta$label
-dta$var
+## Note: change in this list in cherries_pollination_sv.r
 
 varnames <- c(
     'buttners_rote' = "Büttners Späte Rote",
