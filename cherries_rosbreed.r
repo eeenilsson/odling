@@ -164,6 +164,9 @@ usecolors <- rgb(red, green, blue, 0.7)
 p_bt0_annotated + 
   geom_point(aes(color=Germplasm)) +
     scale_color_manual(values = usecolors) + theme(legend.position = "none")
+ggsave("bt_test.png")
+
+
 
 ## colors
 ## pacman::p_load("RColorBrewer")
@@ -255,7 +258,6 @@ p_bt0_annotated +
 ## Growing degree days was calculated for an alternative measure of phenological traits. Climatic data was obtained from Washington State University’s AgWeatherNet using the “Roza” station [53], using a base temperature of 4.5 °C and maximum of 30 °C. Daily maximum temperatures above 30 °C were reduced to 30 °C, and negative temperatures were set to zero, following McMaster and Wilhelm
 
 ## All trait distributions (consisting of 600–755 data points for each trait) were influenced by the year of data collection (Fig. 1).
-rm(ros)
 
 ## Publications on specific traits --------------------
 
