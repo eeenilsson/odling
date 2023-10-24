@@ -139,84 +139,19 @@ dta[, pollinated_by_concordance_chr := unlist(lapply(dta$pollinated_by_concat_ch
 ## write.csv(dta, "test.csv")
 
 
-## Plot pollineringsschema -------
+## Plot --------------------
 
-temp <- dta[intresse == 1|intresse == 2, .(var, pollinated_by_concordance_chr, pollinated_by_concat_chr)]
+## source("cherries_plot_pollinationtable.r")
 
-## create varnames for pollinators
-pol <- dta$pollinated_by_concordance_chr
-pol <- unlist(strsplit(pol, ", "))
-pol <- gsub(" .*", "", pol)
-pol <- unique(pol)
-pol <- gsub("NA", "var", pol)
-dt <- matrix(nrow = nrow(temp), ncol = length(pol))
-colnames(dt) <- pol
-dt <- data.table(dt, key = "var")
-dt$var <- temp$var
-temp <- temp[dt, on = "var"]
-
-## melt
-temp <- melt(temp, id.vars = c("var", "pollinated_by_concordance_chr", "pollinated_by_concat_chr"))
-temp[, value := stringi::stri_detect_fixed(pollinated_by_concordance_chr, paste0(variable, " ("))]
-
-## Calculate concordance?
-myfun <- Vectorize(test_concordance_prop)
-temp[, concordance := myfun(pollinated_by_concat_chr, variable)]
-
-## select cols for plotting
-toplot <- temp[, .(var, variable, value, concordance)]
-names(toplot) <- c("target", "pollinator", "value", "concordance")
-setkey(toplot, target)
-
-
-## setkey(toplot, var)
-toplot[, value:= as.numeric(value)]
-toplot[, target:= as.factor(target)]
-## View(toplot)
-## str(toplot)
-
-## labels
-varnames <- dta$label
-names(varnames) <- dta$var
-toplot[, target:= factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
-toplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
-
-## plot base
-p <- ggplot(toplot, aes(pollinator, target)) +
-  geom_point(aes(size = concordance))
-
-## plot customization
-p +
-    scale_size_area() +
-    theme(
-        plot.margin = unit(c(1.5, 1.5, 1.5, 1.5), "centimeters"),
-        legend.position = "none",
-        axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
-        plot.title = element_text(hjust = 0, vjust = 3, size = 32, face="bold"),
-        axis.title.x = element_text(hjust = 0.5, vjust = -5),
-        axis.text=element_text(size=16),
-        axis.title=element_text(size=24, face="bold")
-    ) +
-    labs(title="Pollinationsschema för körsbär",
-         x ="Pollinatör",
-         y = "Mottagare")
-
-toplot
 
 ### HERE #################
 
 
 
-
-
-#############################
-
 ## https://ggplot2.tidyverse.org/reference/scale_size.html
 ## p <- ggplot(toplot, aes(pollinator, target)) +
 ##   geom_count(aes(size = value))
 ## p + scale_size_area()
-
-
 
 ## ## filter matches
 ## dt <- temp[value == TRUE, .(var, variable)]
@@ -234,61 +169,55 @@ toplot
 
 
 
-## write.csv(temp, "test.csv")
-## ?melt.data.table
-
-## names(temp)
-
 ## temp$pollinated_by_concordance_chr <- temp$pollinated_by_concordance_chr
 
-pol <- pol[pol != "var"] ## remove "var" before loop
-i <- "merton_glory"
-for(i in pol){
-    lookfor <- paste(i, " (")
-    temp[var == i, stringi::stri_detect_fixed(pollinated_by_concordance_chr, lookfor)]
 
-        temp[[i]][var == i, stringi::stri_detect_fixed(pollinated_by_concordance_chr, lookfor)]
+
+
+## pol <- pol[pol != "var"] ## remove "var" before loop
+## i <- "merton_glory"
+## for(i in pol){
+##     lookfor <- paste(i, " (")
+##     temp[var == i, stringi::stri_detect_fixed(pollinated_by_concordance_chr, lookfor)]
+
+##         temp[[i]][var == i, stringi::stri_detect_fixed(pollinated_by_concordance_chr, lookfor)]
 
     
-    ## temp[var == i, grepl(lookfor, pollinated_by_concordance_chr)]
-    print(temp[[i]])
-}
-
-x <- "NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)"
-grepl("xurt", x, fixed = TRUE)
-grepl("merton_glory", x, fixed = TRUE)
-grepl("merton", x, fixed = TRUE)
-grepl("merton_glory \\(", x)
-grepl("merton \\(", x)
-stringi::stri_detect_fixed(x, "merton_glory (")
-stringi::stri_detect_fixed(x, "merton")
-stringi::stri_detect_regex(x, "merton_glory \\(")
-grepl(paste0("merton_glory", " \\("), x)
+##     ## temp[var == i, grepl(lookfor, pollinated_by_concordance_chr)]
+##     print(temp[[i]])
+## }
 
 
-?stringi::stri_detect
 
-?stringi::stri_detect_fixed()
-?grepl
 
-names(dta)
+
+
+## x <- "NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)"
+## grepl("xurt", x, fixed = TRUE)
+## grepl("merton_glory", x, fixed = TRUE)
+## grepl("merton", x, fixed = TRUE)
+## grepl("merton_glory \\(", x)
+## grepl("merton \\(", x)
+## stringi::stri_detect_fixed(x, "merton_glory (")
+## stringi::stri_detect_fixed(x, "merton")
+## stringi::stri_detect_regex(x, "merton_glory \\(")
+## grepl(paste0("merton_glory", " \\("), x)
+
+## names(dta)
+
+
+
+
 ## dta[pollinated_by_concat_num == "NA;NA;NA;NA", .(label, pollinated_by_concat_num)]
 
+##     replace_name(dta$pollinated_by_plantagen_num[33], lookupvarnames,
+##     exact = FALSE)
+
+## varnames <- lookupvarnames
+## x <- dta$pollinated_by_plantagen_num[33]
+## dta$pollinated_by_plantagen_num[33]
 
 
-
-
-    replace_name(dta$pollinated_by_plantagen_num[33], lookupvarnames,
-    exact = FALSE)
-
-varnames <- lookupvarnames
-x <- dta$pollinated_by_plantagen_num[33]
-dta$pollinated_by_plantagen_num[33]
-
-
-dta$pollinated_by_concat
-
-test_concordance(dta$pollinated_by_concat[33])
 
 ## write.csv(dta[, .(var, pollinated_by_concat)], "test.csv")
 
@@ -296,11 +225,9 @@ test_concordance(dta$pollinated_by_concat[33])
 ## item <- dta$pollinated_by_concat[33]
 ## item <- dta$pollinated_by_concat[36]
 
-test_concordance(dta$pollinated_by_concat[33])
-dta$pollinated_by_concat[33]
-test_concordance(dta$pollinated_by_concat[36])
-
-
+## test_concordance(dta$pollinated_by_concat[33])
+## dta$pollinated_by_concat[33]
+## test_concordance(dta$pollinated_by_concat[36])
 
 ## dta$pollinated_by_plantagen_chr <-
 ##     replace_name(dta$pollinated_by_plantagen_num, lookupvarnames)
@@ -308,17 +235,12 @@ test_concordance(dta$pollinated_by_concat[36])
 
 
 
-## check
-
-dta$pollinated_by_rangedala_num
-dta$pollinated_by_plantagen_num
-dta$pollinated_by_splendor_num
-dta$pollinated_by_sveriges_tradgardsmastare_num
-
-dta[, .(pollinated_by_rangedala_num, pollinated_by_plantagen_num, pollinated_by_splendor_num)]
-
-
-
+## ## check
+## dta$pollinated_by_rangedala_num
+## dta$pollinated_by_plantagen_num
+## dta$pollinated_by_splendor_num
+## dta$pollinated_by_sveriges_tradgardsmastare_num
+## dta[, .(pollinated_by_rangedala_num, pollinated_by_plantagen_num, pollinated_by_splendor_num)]
 
 
 

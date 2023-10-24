@@ -1,5 +1,9 @@
 ## Phenology data bloom time etc ----------------------
 
+## rosbreed
+source('cherries_rosbreed.r') ## dataset analysis
+
+
 ## Australian ANFIC blooming periods
 fread("anfic_blooming_time.csv")
 ## pollination_period_anfic (I-V) => 1-5
