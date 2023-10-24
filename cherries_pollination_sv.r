@@ -43,8 +43,8 @@ varnames <- c(
     'lapins' = "Lapins"
 )
 
-x <- cbind(replace_name(dta$pollinated_by_plantagen, varnames),
-      dta$pollinated_by_plantagen)
+## x <- cbind(replace_name(dta$pollinated_by_plantagen, varnames),
+##       dta$pollinated_by_plantagen)
 
 dta$temp <- replace_name(dta$pollinated_by_plantagen, varnames)
 

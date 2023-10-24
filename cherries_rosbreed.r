@@ -113,7 +113,7 @@ p_bt <- p + geom_point() + xlab("Start of bloom (days from jan 1st)") + ylab("")
 ## plot bloom time relative to lowest bloom time
 ## https://stackoverflow.com/questions/74924921/how-to-put-axis-labels-in-between-the-axis-ticks-in-ggplot2
 
-break_in_5 <- int(from = min(bloom_table$bt0), to = max(bloom_table$bt0), by = max(bloom_table$bt0)/5)
+break_in_5 <- seq.int(from = min(bloom_table$bt0), to = max(bloom_table$bt0), by = max(bloom_table$bt0)/5)
 break_in_5 <- round(break_in_5, digits = 0)
 break_minor <- seq(min(break_in_5)+1, max(break_in_5)-1, by = 1)
 
