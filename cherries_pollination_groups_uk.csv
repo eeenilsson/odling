@@ -1,21 +1,31 @@
-"variety","fertility_gf","pollination_group_gf","pollination_group_gf_low","pollination_group_high","pollination_group_ashridge","harvest"
-"KORDIA","Self-fertile",4,,,5,"mid"
-"MORELLO","Self-fertile",4,,,6,"late"
-"LAPINS","Self-fertile","2 to 3",,,4,"mid"
-"SKEENA","Self-fertile",4,,,4,"late"
-"STELLA","Self-fertile",4,,,4,"late"
-"SUMMER SUN","Self-fertile","3 to 4",,,4,"late"
-"SUNBURST","Self-fertile",4,,,4,"late"
-"SWEETHEART","Self-fertile","3 to 4",,,4,"very_late"
-"SYLVIA","Self-fertile","3 to 4",,,,
-"NAPOLEON","Self-sterile","4 to 5 or 4?",,,4,"late"
-"COLNEY","Self-sterile","3 to 4",,,4,"late"
-"EARLY RIVERS","Self-sterile",1,,,1,"early"
-"KNIGHTS EARLY BLACK","Self-sterile","2 to 3",,,2,"mid"
-"MERTON BIGARREAU","Self-sterile",3,,,3,"mid"
-"MERTON GLORY","Self-sterile",2,,,2,"mid"
-"PENNY","Self-sterile","3 to 4",,,4,"late"
-"VAN","Self-sterile",3,,,3,"late"
-"PETIT NOIR",,,,,3,"mid"
-"AMBER HEART",,,,,3,"early"
-"CELESTE",,,,,2,"early"
+"variety","anfic_missing",,"pollination_aggr",,"fertility_gf","pollination_aggr","pollination_group_gf","pollination_group_primrose","pollination_group_ashridge","harvest",,"pollination_group_gf_low","pollination_group_high"
+"KORDIA",,,4,,"Self-fertile",4,4,4,5,"mid",,,
+"MORELLO",1,,4,,"Self-fertile",4,4,4,6,"late",,,
+"LAPINS",,,,,"Self-fertile",,"2 to 3",2,4,"mid",,,
+"SKEENA",,,,,"Self-fertile",,4,3,4,"late",,,
+"STELLA",,,,,"Self-fertile",,4,4,4,"late",,,
+"SUMMER SUN",1,,"3 to 4",,"Self-fertile","3 to 4","3 to 4",3,4,"late",,,
+"SUNBURST",,,,,"Self-fertile",,4,4,4,"late",,,
+"SWEETHEART",,,,,"Self-fertile",,"3 to 4",3,4,"very_late",,,
+"SYLVIA",,,,,"Self-fertile",,"3 to 4",3,,"mid",,,
+"NAPOLEON",1,,"4 to 5 ",,"Self-sterile","4 to 5 ","4 to 5 ",5,4,"late",,,
+"COLNEY",1,,4,,"Self-sterile",4,"3 to 4",4,4,"late",,,
+"EARLY RIVERS",1,,1,,"Self-sterile",1,1,,1,"early",,,
+"KNIGHTS EARLY BLACK",1,,"2 to 3",,"Self-sterile","2 to 3","2 to 3",,2,"mid",,,
+"MERTON BIGARREAU",1,,3,,"Self-sterile",3,3,,3,"mid",,,
+"MERTON GLORY",1,,2,,"Self-sterile",2,2,,2,"mid",,,
+"PENNY",1,,"3 to 4",,"Self-sterile","3 to 4","3 to 4",3,4,"late",,,
+"VAN",,,,,"Self-sterile",,3,3,3,"late",,,
+"PETIT NOIR",1,,3,,"Self-fertile",3,,3,3,"mid",,,
+"AMBER HEART",1,,3,,,3,,,3,"early",,,
+"CELESTE",,,,,"Self-fertile",,,2,2,"early",,,
+"HARTLAND",,,,,"Self-fertile",,,2,,,,,
+"BURLAT",,,,,"Self-sterile",,,2,,,,,
+"MAY DUKE",1,,3,,"Self-fertile",3,,3,,,,,
+"MERCHANT",,,,,,,,3,,,,,
+"SASHA",1,,4,,"Self-fertile",4,,4,,,,,
+"STARDUST COVEU",,,,,"Self-fertile",,,4,,,,,
+"KARINA",1,,4,,"Self-sterile",4,,4,,,,,
+"REGINA",,,4,,"Self-sterile",4,,4,,,,,
+"SASHA",1,,4,,"Self-sterile",4,,4,,,,,
+"NABELLA",,,5,,"Self-fertile",5,,5,,,,,

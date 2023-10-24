@@ -12,6 +12,7 @@ website:
       ## - about.qmd
       - choosing_variety.qmd
       - pollination_about.qmd
+      - blooming.qmd
       - pollination_table.qmd
       - terminology.qmd
       - resources.qmd

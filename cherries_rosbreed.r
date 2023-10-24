@@ -102,7 +102,7 @@ bloom_table[, gdd0 := round(gdd-min(gdd), digits = 0)]
 
 ## bloom_table[order(bt), ] ## order by bt
 
-bloom_table[, Germplasm := factor(Germplasm, levels = bloom_table[order(bt), Germplasm])]
+bloom_table[, Germplasm := factor(Germplasm, levels = bloom_table[order(-bt), Germplasm])]
 
 ## plot bloom time
 p <- ggplot(bloom_table, aes(y=Germplasm, x=bt))
@@ -138,73 +138,86 @@ for(i in 1:length(break_in_5)-1){
 }
 
 ## annotate plot
+p_bt0_annotated <- p_bt0
 for(i in 1:length(text_xpos)){
-    p_bt0_annotated <- p_bt0 + annotate("text", x = text_xpos[i], y = length(levels(bloom_table$Germplasm)) + 2, label = paste("Period", i), color = "blue")
+    p_bt0_annotated <- p_bt0_annotated  +
+        annotate("text",
+                 x = text_xpos[i],
+                 y = length(levels(bloom_table$Germplasm)) + 2,
+                 label = paste("Period", i),
+                 colour = "aquamarine4")
 }
 
+## rgb(red, green, blue, alpha)
+## quantity of red (between 0 and 1), of green and of blue, and finally transparency (alpha).
+## rgb(0.2,0.5,1,0.7)
+
+## pacman::p_load("RColorBrewer")
+red <- seq(0, 1 , length.out = length(levels(bloom_table$Germplasm)))
+blue <-rev(seq(0, 1 , length.out = length(levels(bloom_table$Germplasm))))
+green <- seq(-0.85, 0.85 , length.out = length(levels(bloom_table$Germplasm)))
+green <- 1-green*green ## ascending-descending
+usecolors <- rgb(red, green, blue, 0.7)
+
+## darkolivegreen3
+
+p_bt0_annotated + 
+  geom_point(aes(color=Germplasm)) +
+    scale_color_manual(values = usecolors) + theme(legend.position = "none")
+
+## colors
+## pacman::p_load("RColorBrewer")
+## ## View a single RColorBrewer palette by specifying its name
+## display.brewer.pal(n = 8, name = 'RdBu')
+## display.brewer.all()
+
+## brewer.pal(n = length(levels(bloom_table$Germplasm), name = "RdBu"))
+## display.brewer.pal(n = length(levels(bloom_table$Germplasm)), name = 'RdBu')
+
+## The average blossoming period for cherries when pollination can take place is about seven to eight days.
 
 
-
-dt_text <- data.table(xpos = 1:length(levels(bloom_table$Germplasm)))
-
-dt_text <- data.table(xpos = levels(bloom_table$Germplasm))
-
-
-p_bt0 + geom_text(data = NULL, x = 5, y = 2, label = "plot mpg vs. wt")
-
-p_bt0 + geom_text(data = NULL, x = 5, y = 1, label = "plot mpg vs. wt")
-
-
-## ## Or, you can use annotate
-## c + annotate("text", label = "plot mpg vs. wt", x = 2, y = 15, size = 8, colour = "red")
-
-
-
-###############
-    ## theme( # remove the vertical grid lines
-    ##        panel.grid.minor.x = element_blank()
-    ##        # explicitly set the horizontal lines (or they will disappear too)
-    ##        ## panel.grid.major.y = element_line( size=.1, color="black" ) 
-    ## )
-
-
-
-p + geom_point(bloom_table, mapping = aes(y=Germplasm, x=gdd),colour="red")
-
+## Bubblechert : https://r-graph-gallery.com/320-the-basis-of-bubble-plot.html
 
 ## https://stackoverflow.com/questions/75899955/scale-ticks-breaks-to-percentile-in-continuous-colourbar-in-scale-fill-gradient
 
-max(bloom_table$bt)
+## selectvars <- c(vars_id, "Bloom_Days", "Bloom_Time")
+## ## ros_bloom[ , ..selectvars]
+## str(ros_bloom)
 
-plot(bloom_table$Germplasm ~ bloom_table$bt)
+## ros_bloom[, .(bt = mean(Bloom_Days, na.rm = TRUE), gdd = mean(Bloom_Time, na.rm = TRUE)), by = Germplasm]
 
-bloom_table
+## ros[ , median(Bloom_Days), by = list(Germplasm, Species, Species)]
+## str(ros)
 
-p <- ggplot()
+## ros[ , count:=sum(col3), by = list(col1, col2)]
 
+## summary(ros_bloom)
 
-
-ros_bloom[Germplasm == "Olympus", ]
-
-selectvars <- c(vars_id, "Bloom_Days", "Bloom_Time")
-## ros_bloom[ , ..selectvars]
-str(ros_bloom)
-
-
-ros_bloom[, .(bt = mean(Bloom_Days, na.rm = TRUE), gdd = mean(Bloom_Time, na.rm = TRUE)), by = Germplasm]
+## data_frame[, lapply(.SD, sum), by= col1]
 
 
+## Add europen data?
 
-ros[ , median(Bloom_Days), by = list(Germplasm, Species, Species)]
-str(ros)
+## sweet_cherry_phenology_data_1978_2015.csv
 
-ros[ , count:=sum(col3), by = list(col1, col2)]
+## cherry_pollenizers.csv  from https://treeconnect.com/cherry-tree-pollenizer/
 
-summary(ros_bloom)
+## Most sweet cherry varieties are:
 
-data_frame[, lapply(.SD, sum), by= col1]
+##     self-unfruitful (self-incompatible, SI) – which require cross-pollination with another variety as the pollen source
 
-## Metadata --------------------------------
+## Some varieties (e.g. Bing, Lambert, Royal Ann/Napoleon) are:
+
+##     cross-unfruitful – which cannot be depended upon to provide pollen for each other
+
+## Other varieties (e.g. Index, Lapins, Skeena, Sweetheart, White Gold, Sonata, Stella, Symphony, Sunburst, and Black Gold) are:
+
+##     self-fruitful (SF) – these can serve as “universal” pollen sources for many self-unfruitful varieties with the same bloom time. Their use as “universal” pollinators should also take bloom timing into consideration.
+
+
+
+## Metadata Rosbreed --------------------------------
 
 ## Trait descriptors details: https://www.rosaceae.org/bio_data/8433870
 ## Note: Very incomplete, cureted here rosbreed_trait_descriptors.csv

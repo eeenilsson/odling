@@ -115,3 +115,16 @@ Alla utom dessa anges som Use: Eating
 
 
 <!-- Market intermediaries indicated a willingness to pay producers more per pound for fruit greater than 2.5 cm in diameter, firmness above 300 g/mm, and SSC above 18 °Brix -->
+
+
+## Grundstammar
+
+<!-- Trädgårdstrollet: "Körsbärsträd är lite svårare att ympa än kärnfrukt som äpple och päron… De går att ympa (dvs en liten kvist fästs ihop med grundstammen) men ofta är de förökade med okulering (dvs ett knoppanlag/”öga” fästs ihop med grundstammen). De vanligaste grundstammarna för sötkörsbär i svensk handel är: -->
+
+<!-- Prunus avium = stora träd, svårt att nå bären vid plockning. Angiven höjd varierar hos olika återförsäljare men ca 20-30 m högt är inte ovanligt, kronans diameter är ca 10 m med en upprätt, lite pyramidal form. -->
+
+<!-- Prunus ’Colt’ = rätt stora träd, ca 70-80% storlek av Prunus avium, klarar zon I-III. -->
+
+<!-- Prunus ’Gisela 5’ = blir mindre träd, ca 35% storlek av Prunus avium, ungefär 3,5-4,5 m höga, klarar zon I-V (VI) -->
+
+<!-- Om du vill läsa mer om grundstammar för körsbär så rekommenderar jag varmt blogginlägget Grundstammar del 4 – körsbär och boken Skogsträdgården: odla ätbart överallt av Philipp Weiss & Annevi Sjöberg 2018:424-426 -->"
