@@ -23,13 +23,13 @@ tmp <- strsplit(tmp, c(", |samt"))
 tmp <- unique(tmp[[1]])
 
 varnames <- c(
-    'buttners_rote' = "Büttners Späte Rote",
-    'allm_gulrod' = "Allm. gulröd bigarrå",
+    'buttners_spate_rote_knorpelkirsche' = "Büttners Späte Rote",
+    'allman_gulrod' = "Allm. gulröd bigarrå",
     'hedelfinger' = "Hedelfinger",
     'merton_glory' = "Merton Glory",
     ', ' = " samt",
     'sam' = "Sam",
-    'stor_svart' = "Stor svart bigarrå",
+    'grosse_schwarze_knorpel' = "Stor svart bigarrå",
     'van' = "Van",
     'almore' = "Almore",
     'stella' = "Stella",

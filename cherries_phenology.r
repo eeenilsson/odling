@@ -11,10 +11,13 @@
 ## Slightly acid (6.1 – 6.5)
 ## Neutral (6.6 – 7.3)
 
+## Orangepippin
 ## https://www.orangepippin.com/varieties/cherries/a
 
 ## Nice historical info: http://www.bernwodeplants.co.uk/descriptions/cherry2.htm
 
+## Trädgårdshuset har en fin tabell med egenskaper som mognadstid, grundstam, egenskaper etc:
+## https://tradgardshuset.com/sortiment/frukt-och-bar/bigarraer/
 
 ## rosbreed
 source('cherries_rosbreed.r') ## dataset analysis

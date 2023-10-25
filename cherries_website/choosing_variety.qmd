@@ -122,9 +122,12 @@ Alla utom dessa anges som Use: Eating
 <!-- Note 'Stor svart bigarrå' not same as Knopfels schwarze? -->
 <!-- Wexthuset skiljer dessa -->
 <!-- Blomsterlandet säljer Prunus avium STOR SVART BIGARRÅ ('Grosse Schwarze Knorpelkirsche') https://www.wexthuset.com/fakta-och-rad/skotselrad-om-vaxter-i-kruka-och-tradgard/beskrivningar-odling-skotsel-bar-och-frukter/korsbar-odling-sorter -->
+<!-- ## Note: Süßkirsche Büttner`s Rote Knorpelkirsche Alte Sorte mit Tradition, auch "Altenburger Melonenkirsche" genannt. -->
+
 
 <!-- ## Note: -->
 <!-- ## kauffs_kirsche  # samma som 'Knauff's Schwarze'? (den enda som hittas av google när man söker på Knauff)? ändrade till var knauffs_schwarze i den tidigare egna listan -->
+
 
 
 
