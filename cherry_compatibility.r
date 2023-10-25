@@ -64,6 +64,124 @@ variety_genotype_group <- variety_genotype_group[!grepl(paste0(dupl_var, collaps
 ## Note: Check if they correspond
 #####
 
+
+## test pollination groups (only for testing) ---------
+
+## uk sites
+pollination_groups_test <- fread("cherries_pollination_groups_uk.csv")
+pollination_groups_test[, var := tolower(variety)]
+pollination_groups_test <- pollination_groups_test[, .(var, pollination_test)]
+
+pollination_groups_test[, var := gsub(" ", "_", var)]
+names(pollination_groups_test) <- c("var", "blooming_group")
+pollination_groups_test[, blooming_group := factor(blooming_group, ordered = TRUE, labels = c("Early", "Early mid", "Mid", "Late mid", "Late"))]
+
+## ## test matches and misses
+## pollination_groups_test$var[!pollination_groups_test$var %in% unique(variety_genotype_group$var)]
+## pollination_groups_test$var[pollination_groups_test$var %in% unique(variety_genotype_group$var)]
+
+## ## Notes on missing:
+
+## avium but not in genome data:
+## "knights_early_black"
+## "petit_noir"
+## "amber_heart" ## Syn 'Kent Bigarreau'
+## "may_duke" ## Syn. 'Dubbele Meikers'    noted as "sour cherry" by some. "Duke cherry" It is a cross between Prunus avium and Prunus cerasus?
+## "stardust_coveu" ## self-fertile white cherry
+
+## ## cesarus
+## "morello"
+## "nabella"
+
+
+## anfic
+anfic_bt <- fread("anfic_blooming_time.csv")
+
+anfic_bt[, var := tolower(label)]
+anfic_bt <- anfic_bt[, .(var, pollination_period_anfic, label)]
+anfic_bt[, var := gsub(" \\(.*", "", var)] ## remove parens
+anfic_bt[, var := gsub("-", "_", var)]
+anfic_bt[, var := gsub(" ", "_", var)]
+names(anfic_bt) <- c("var", "blooming_group", "label")
+anfic_bt[, blooming_group := factor(blooming_group, ordered = TRUE, labels = c("Early", "Early mid", "Mid", "Late mid", "Late"))]
+
+## ## test matches and misses
+## anfic_bt$var[!unique(anfic_bt$var) %in% unique(variety_genotype_group$var)]
+## anfic_bt$var[unique(anfic_bt$var) %in% unique(variety_genotype_group$var)]
+## ## note: many misses, todo: explore this
+
+## ## restrict to varieties of interest for test
+## anfic_bt$var[anfic_bt$var %in% unique(dta$var)]
+## dta$var[unique(dta$var) %in% unique(anfic_bt$var)]
+## dta$var[!unique(dta$var) %in% unique(anfic_bt$var)]
+## anfic_bt[grepl("eri", label) , ]
+## restr <- anfic_bt$var[anfic_bt$var %in% unique(dta$var)]
+## restr_anfic <- anfic_bt[grepl(paste0(restr, collapse = "|"), var), ]
+
+## restr <- pollination_groups_test$var[pollination_groups_test$var %in% unique(dta$var)]
+## restr_uk <- pollination_groups_test[grepl(paste0(restr, collapse = "|"), var), ]
+
+
+## using just anfic data for testing
+
+anfic_selected <- anfic_bt[!duplicated(var), ]
+anfic_selected <- anfic_selected[!grepl("[0-9]", var), ] ## skip those with numbers in name
+anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in genotype data
+
+## anfic_bt$var[!unique(anfic_bt$var) %in% unique(variety_genotype_group$var)]
+
+anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in 
+
+dta_toplot <- variety_genotype_group[anfic_selected, on = "var"] ## all selected have genotype data matching var name
+
+str(dta_toplot)
+
+dta_toplot <- dta_toplot[, .(var, variety, genotype, incompatibility_group, label)]
+
+
+## plot
+pacman::p_load(ggplot2)
+
+## plot base
+p <- ggplot(toplot, aes(pollinator, target)) +
+  geom_point(aes(size = concordance))
+
+
+
+## plot customization
+plot_pollination_table <- p +
+    scale_size_area() +
+    theme(
+        plot.margin = unit(c(1.5, 1.5, 1.5, 1.5), "centimeters"),
+        legend.position = "none",
+        axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
+        plot.title = element_text(hjust = 0, vjust = 3, size = 32, face="bold"),
+        axis.title.x = element_text(hjust = 0.5, vjust = -5),
+        axis.text=element_text(size=16),
+        axis.title=element_text(size=24, face="bold")
+    ) +
+    labs(title="Pollinationsschema för körsbär",
+         x ="Pollinatör",
+         y = "Mottagare")
+
+
+
+## "Blomningstid"
+
+## Note: these from uk data are not in anfic:
+## SUMMER SUN
+## NAPOLEON
+## MERTON BIGARREAU
+## MERTON GLORY
+## PENNY
+## PETIT NOIR
+## AMBER HEART
+## MAY DUKE
+## SASHA
+## KARINA
+## SASHA
+
+
 ############## here #####################
 
 ## variety_genotype_group[grepl("", tempvar), ]

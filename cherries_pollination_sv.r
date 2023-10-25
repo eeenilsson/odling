@@ -359,27 +359,3 @@ dta[, pollinated_by_concordance_chr := unlist(lapply(dta$pollinated_by_concat_ch
 ## Zonkarta: https://eplanta.com/tips-rad/zonkarta/
 
 
-## Grundstam
-
-## Grundstammar för körsbär
-## Colt:
-
-## Colt är en grundstam som ger medelstarkväxande träd, sluthöjden blir ca 3-4 m efter 8 år. Bördigheten är god och Colt ger frukt tidigt, ofta inom 1-2 år. Träd ympade på denna grundstam klarar lite sämre jord. I övrigt kräver Colt stöd de först åren men klarar sig sedan utan. Zon 1-3.
-
-## GiSelA:
-## Denna grundstam ger mindre träd som passar bra för små trädgårdar där körsbär ibland, på grund av sin storlek inte får plats. Sluthöjden varierar beroende på sort men ligger på ca 3-4 m. Fördelen med GiSelA är också att sort ympade på denna grundstam ger skörd i tidig ålder, ofta redan efter 1-2 år. Härdigheten är mycket god då träd ympade på denna grundstam avmognar tidigt. Zon 5.
-
-## Prunus avium:
-## Ger stora, starkväxande träd med god förankring i jorden. Något senare fruktsättning beroende på sort och jordmån. Zon 1-5.
-
-
-## Grundstammar för plommon
-
-## St. Julien:
-## En grundstam som ger medelstarkväxande träd. Ger inte lika stora träd som grundstammen Prunus cerasifera. Härdigheten är god och rotsystemet välutvecklat. Grundstammen har inga krav på jordmån. Ger frukt efter ca 3-4 år. Zon 1-5(6). Planteringsyta 10-15 m2.
-
-## Prunus cerasifera:
-## Denna grundstam ger starkväxande träd med ett välutvecklat rotsystem. Vinterhärdigheten är god, dock inte lika god som St. Julien. Fruktsättningen kommer också något senare än St. Julien. Zon 1-4(5). Planteringsyta 15-20 m2.
-
-## Prunus Pixy:
-## Denna grundstam ger svagväxande träd, ca 30% jämfört med Prunus cerasifera och lämpar sig därför till den mindre trädgården. Pixy ger frukt tidigt, redan efter 2-3 år. Härdigheten är också god eftersom grundstammen ger träd som avmojnar tidigt på hösten. Zon 1-4(5). Planteirngsyta 6-8 m2.
