@@ -55,27 +55,54 @@ variety_genotype_group[, tempvar := gsub("-", "_", tempvar)]
 ## variety_genotype_group[, .(tempvar, variety)]
 ## paste(variety_genotype_group$tempvar, collapse = ",  ")
 
+## some duplicates in tempvar:
+## variety_genotype_group[grepl("Büttners Späte Rote Knorpelkirsche", variety)]
+## Note: Süßkirsche Büttner`s Rote Knorpelkirsche Alte Sorte mit Tradition, auch "Altenburger Melonenkirsche" genannt.
 
+
+## replace var in other datasets so it matches genotype data -----
 lookfor <- paste0(dta$label, collapse = "|")
 tmp <- variety_genotype_group[grepl(lookfor, variety), .(tempvar, variety)]
 ## Note: Some duplicated variety
+dta$var[!dta$var %in% tmp$tempvar] ## no match in tempvar
+nomatch <- dta$var[!dta$var %in% tmp$tempvar] ## no match in tempvar
+sour <-  c("berit","fanal","kelleris","kirsa","ostheimer","skuggmorell","stora_klarbar", "triaux", "tschernokorka","nordia", "lettisk_lag") ## remove sour
+nomatch <- nomatch[!nomatch %in% sour]
 
-## change to matching var
-variety_genotype_group[, tempvar := gsub("guigne_dannonay", "annonay", tempvar)]
-variety_genotype_group[, tempvar := gsub("allman_gulrod", "allman_gulrod", tempvar)]
-variety_genotype_group[, tempvar := gsub("altenburger_melonen_kirsche", "buttners_rote", tempvar)]
-variety_genotype_group[, tempvar := gsub("buttners_spate_rote_knorpelkirsche", "buttners_rote", tempvar)]
-variety_genotype_group[, tempvar := gsub("fryksaas", "fryksas", tempvar)]
-variety_genotype_group[, tempvar := gsub("gaardebo", "gardebo", tempvar)]
-variety_genotype_group[, tempvar := gsub("grosse_schwarze_knorpel", "stor_svart", tempvar)]
-variety_genotype_group[, tempvar := gsub("donissens_gelbe_knorpel", "donissen", tempvar)]
-variety_genotype_group[, tempvar := gsub("frogmore_early", "frogmore", tempvar)]
+varnames_tmp <- c(
+'guigne_dannonay' = "annonay",
+'allm_gulrod' = "allman_gulrod",
+'altenburger_melonen_kirsche' = "buttners_rote",
+'buttners_spate_rote_knorpelkirsche' = "buttners_rote",
+'fryksaas' = "fryksas",
+'gaardebo' = "gardebo",
+'grosse_schwarze_knorpel' = "stor_svart",
+'donissens_gelbe_knorpel' = "donissen",
+'frogmore_early' = "frogmore"
+)
 
-## todo : ändra $ var i dessa istället
-cherries_table.csv
-cherries_wexthuset.csv
-cherries_rangedala.csv
-cherries_splendor.csv
+## substitute names in source .csv files
+filenames_temp <- c(
+    "cherries_table.csv",
+"cherries_wexthuset.csv",
+"cherries_rangedala.csv",
+"cherries_splendor.csv"
+)
+
+for(i in filenames_temp){
+out <- fread(i)
+out[["var"]]
+
+out[["var"]] <- query_label(out[["var"]], varnames_tmp)
+write.csv(out, i)
+}
+
+
+
+
+variety_genotype_group[grepl("", tempvar), ]
+variety_genotype_group[grepl("Rote Knorpel", variety), ]
+
 
 dta$var[!dta$var %in% tmp$tempvar] ## no match in tempvar
 variety_genotype_group[grepl("", variety), ]
@@ -84,17 +111,6 @@ variety_genotype_group[grepl("", variety), ]
 ## kauffs_kirsche  # samma som 'Knauff's Schwarze'? (den enda som hittas av google när man söker på Knauff)? ändrade till var knauffs_schwarze i den tidigare egna listan
 
 ## Note: Does not exist in variety_genotype_group due to being sour cherries
-## berit: sour
-## fanal : sour
-## kelleris : sour
-## kirsa : sour
-## ostheimer : Sour
-## skuggmorell : Sour
-## stora_klarbar : Sour 'Stort Klarbär'
-## triaux : Sour 'Triaux Klarbär'
-## tschernokorka: Sour
-## nordia : sour
-## lettisk_lag : sour
 
 
 ## Note: change in this list in cherries_pollination_sv.r
