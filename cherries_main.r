@@ -80,6 +80,11 @@ varnames_tmp <- c(
 'donissens_gelbe_knorpel' = "donissen",
 'frogmore_early' = "frogmore"
 )
+## reverse
+varnames_new <- names(varnames_tmp)
+names(varnames_new) <- unname(varnames_tmp)
+
+varnames_tmp
 
 ## substitute names in source .csv files
 filenames_temp <- c(
@@ -88,10 +93,13 @@ filenames_temp <- c(
 "cherries_rangedala.csv",
 "cherries_splendor.csv"
 )
-
+i <- "cherries_table.csv"
 for(i in filenames_temp){
 out <- fread(i)
-out[["var"]]
+## out[["var"]]
+## names(query_label(out[["var"]], varnames_tmp))
+## query_label(out[["var"]], varnames_tmp)
+## unname(query_label(out$var, varnames_new))
 
 out[["var"]] <- query_label(out[["var"]], varnames_tmp)
 write.csv(out, i)
