@@ -3,11 +3,6 @@
 
 source('cherries_pollination_sv.r') ## Pollinatörer enl svenska hemsidor
 ## dta
-names(dta)
-
-dta$label
-
-objects()
 
 ## Phenology --------------
 source('cherries_phenology.r') ## Rosbreed
@@ -15,7 +10,7 @@ source('cherries_phenology.r') ## Rosbreed
 
 
 ## Compatibility ----------------------
-source('cherry_compatibility.r')  ## S-allele data
+source('cherry_compatibility.r')  ## read S-allele data
 ## Note: Not al SC have S4
 ## ## Note: All S4' are SC (Self-compatible)
 
@@ -74,9 +69,8 @@ varnames_tmp <- c(
 'buttners_spate_rote_knorpelkirsche' = "buttners_rote",
 'fryksaas' = "fryksas",
 'gaardebo' = "gardebo",
-'grosse_schwarze_knorpel' = "grosse_schwarze",
-## 'grosse_schwarze_knorpel' = "stor_svart", ## olika enl wexthuset
-
+## 'grosse_schwarze_knorpel' = "grosse_schwarze",
+'grosse_schwarze_knorpel' = "stor_svart", ## olika enl wexthuset
 'donissens_gelbe_knorpel' = "donissen",
 'frogmore_early' = "frogmore"
 )
@@ -109,6 +103,8 @@ write.csv(out, i, row.names = FALSE)
 
 
 
+##############here
+
 variety_genotype_group[grepl("", tempvar), ]
 variety_genotype_group[grepl("Rote Knorpel", variety), ]
 
@@ -120,8 +116,6 @@ variety_genotype_group[grepl("", variety), ]
 dta$var[!dta$var %in% tmp$tempvar] ## no match in tempvar
 variety_genotype_group[grepl("", variety), ]
 
-## Note:
-## kauffs_kirsche  # samma som 'Knauff's Schwarze'? (den enda som hittas av google när man söker på Knauff)? ändrade till var knauffs_schwarze i den tidigare egna listan
 
 ## Note: Does not exist in variety_genotype_group due to being sour cherries
 

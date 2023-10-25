@@ -8,11 +8,14 @@ Variables metadata
 
 # kauffs_kirsche  # samma som 'Knauff's Schwarze'? (den enda som hittas av google när man söker på Knauff)? ändrade till var knauffs_schwarze i den tidigare egna listan
 
-## SS-alleler
+## SS-alleler Mirko Schuster
 
 Duplicate rows (buttners), synonym melon?
 
 The table of groups does not contain 0 and SC
+
+## Data from: Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020 Mirko Schuster Julius Kühn-Institut (JKI)
+## In the new update from October 2020
 
 
 ## Wexthuset

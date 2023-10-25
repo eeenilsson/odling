@@ -51,7 +51,7 @@ ros <- ros[grepl(paste0(common_varieties, collapse = "|"), Germplasm), ] ## sele
 ## }
 
 ## curate data types
-str(ros)
+## str(ros)
 ros[["V1"]] <- NULL
 ros[, Germplasm := as.factor(Germplasm)]
 ros[, Species := as.factor(Species)]
@@ -161,7 +161,7 @@ usecolors <- rgb(red, green, blue, 0.7)
 
 ## darkolivegreen3
 
-p_bt0_annotated + 
+p_bt0_annotated <- p_bt0_annotated + 
   geom_point(aes(color=Germplasm)) +
     scale_color_manual(values = usecolors) + theme(legend.position = "none")
 ggsave("bt_test.png")
