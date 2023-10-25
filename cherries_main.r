@@ -69,22 +69,29 @@ nomatch <- dta$var[!dta$var %in% tmp$tempvar] ## no match in tempvar
 sour <-  c("berit","fanal","kelleris","kirsa","ostheimer","skuggmorell","stora_klarbar", "triaux", "tschernokorka","nordia", "lettisk_lag") ## remove sour
 nomatch <- nomatch[!nomatch %in% sour]
 
+## Note 'Stor svart bigarrå' not same as Knopfels schwarze?
+## Wekthuset skiljer dessa
+## Blomsterlandet säljer Prunus avium STOR SVART BIGARRÅ ('Grosse Schwarze Knorpelkirsche') https://www.wexthuset.com/fakta-och-rad/skotselrad-om-vaxter-i-kruka-och-tradgard/beskrivningar-odling-skotsel-bar-och-frukter/korsbar-odling-sorter
+
 varnames_tmp <- c(
 'guigne_dannonay' = "annonay",
-'allm_gulrod' = "allman_gulrod",
+'allman_gulrod' = "allm_gulrod",
 'altenburger_melonen_kirsche' = "buttners_rote",
 'buttners_spate_rote_knorpelkirsche' = "buttners_rote",
 'fryksaas' = "fryksas",
 'gaardebo' = "gardebo",
-'grosse_schwarze_knorpel' = "stor_svart",
+'grosse_schwarze_knorpel' = "grosse_schwarze",
+## 'grosse_schwarze_knorpel' = "stor_svart", ## olika enl wexthuset
+
 'donissens_gelbe_knorpel' = "donissen",
 'frogmore_early' = "frogmore"
 )
 ## reverse
 varnames_new <- names(varnames_tmp)
 names(varnames_new) <- unname(varnames_tmp)
+## query_label(nomatch, varnames_new) ## test
 
-varnames_tmp
+varnames_new
 
 ## substitute names in source .csv files
 filenames_temp <- c(
@@ -95,20 +102,24 @@ filenames_temp <- c(
 )
 ## i <- "cherries_table.csv"
 for(i in filenames_temp){
+    message(i)
 out <- fread(i)
 ## out[["var"]]
 ## names(query_label(out[["var"]], varnames_tmp))
 ## query_label(out[["var"]], varnames_tmp)
 ## unname(query_label(out$var, varnames_new))
-out[["var"]] <- query_label(out[["var"]], varnames_tmp)
-write.csv(out, i)
+out[["var"]] <- query_label(out[["var"]], varnames_new)
+write.csv(out, i, row.names = FALSE)
 }
-#### Note: Not Working
 
 
 
 variety_genotype_group[grepl("", tempvar), ]
 variety_genotype_group[grepl("Rote Knorpel", variety), ]
+
+variety_genotype_group[grepl("Große Schwarze Knorpel", variety), ]
+variety_genotype_group[grepl("", variety), ]
+
 
 
 dta$var[!dta$var %in% tmp$tempvar] ## no match in tempvar

@@ -1,21 +1,20 @@
-var,label_wexthuset,description_wexthuset,zone_wexthuset,mognar_wexthuset,gott_wexthuset
-allm_gulrod,Allmän gulröd bigarrå,Sötkörsbär som är glänsande gult med röd täckfärg,2,,
-allm_klarbar,Allmänt klarbär,"Surkörsbär med röda, sötsyrliga goda bär. Rikgivande och härdigt",6,,1
-buttners_rote,Büttners Späte Rote Knorpelkirsche,"Gult sötkörsbär med flammig, röd täckfärg. Finns som pysslingträd",3,,
-fanal,Fanal,Mörkt vinrött surkörsbär som ger rejäl skörd. Mognar sent i augusti,4-5,ultimo_aug,
-grosse_schwarze,Grosse Schwarze Knorpelkirsche,"Mörkbrun, läcker bigarrå. Finns som pysslingträd",3,,1
-gardebo,Gårdebo,"Mörkrött sötkörsbär. Finns som pysslingträd. Självfertil, frisk och härdig. Kulturarvssort från en gård i Småland",4-5,,
-heidi,Heidi,"Gult sötkörsbär med rödflammig täckfärg. En frisk, härdig och rikbärande sort. Svensk sort från Sveriges lantbruksuniversitet, Balsgård",3-4,,
-kirsa,Kirsa,"Mörkrött surkörsbär. Växer till en knappt 2 meter hög buskform och kommer tidigt i bärighet. En frisk och härdig sort från Sveriges lantbruksuniversitet, Balsgård",5-7,,
-lettisk_lag,Lettisk låg,"Surkörsbär som översållas av läckra, söta, brunröda bär. Växer i buskform till ca 2 m höjd. Perfekt för krukodling på balkong och uteplats",7,,1
-merton_glory,Merton Glory,"Gulrött sötkörsbär med klarröd täckfärg. Mognar tidigt, i juli",3,primo_juli,
-nordia,Nordia,"Mörkrött surkörsbär som växer i buskform till ca 2 meters höjd. Frisk sort som kommer tidigt i bärighet. Svensk sort från Sveriges lantbruksuniversitet, Balsgård",6,,
-ostheimer,Ostheimer,"Brunrött, mycket gott surkörsbär",5,,2
-regina,Regina,"Mörk bigarrå med stora, fasta bär som mognar i augusti",3,aug,
-sam,Sam,"Mörka, mycket goda sötkörsbär. Frisk sort. Finns som pysslingträd",3,,2
-skuggmorell,Skuggmorell,"Vackra, mörka bär som mognar lite senare i augusti. En gammal klassisk sort som är självfertil.",5,,
-stella,Stella,"Mörkrött, stort sötkörsbär. En självfertil, kanadensisk sort. Finns som pysslingträd",3,,
-stora_klarbar,Stort klarbär,"Klassiskt, klarrött surkörsbär. Blir ett ganska nätt träd med elegant, luftig krona",5,,
-stor_svart,Stor svart bigarrå,"Läckra, mörka bigarråbär. Blir ett rejält, pampigt träd",2,,
-sunburst,Sunburst,"Mörkrött, gott sötkörsbär, korsning av kanadensiska sorterna Van och Stella. Självfertilt",3,,1
-van,Van,"Stora, mörkröda bigarråer. En kanadensisk sort som ger stora, vackra träd",2-3,,
+"var","label_wexthuset","description_wexthuset","zone_wexthuset","mognar_wexthuset","gott_wexthuset"
+"allm_gulrod","Allmän gulröd bigarrå","Sötkörsbär som är glänsande gult med röd täckfärg",2,,
+"allm_klarbar","Allmänt klarbär","Surkörsbär med röda, sötsyrliga goda bär. Rikgivande och härdigt",6,,1
+"buttners_rote","Büttners Späte Rote Knorpelkirsche","Gult sötkörsbär med flammig, röd täckfärg. Finns som pysslingträd",3,,
+"fanal","Fanal","Mörkt vinrött surkörsbär som ger rejäl skörd. Mognar sent i augusti","4-5","ultimo_aug",
+"gardebo","Gårdebo","Mörkrött sötkörsbär. Finns som pysslingträd. Självfertil, frisk och härdig. Kulturarvssort från en gård i Småland","4-5",,
+"heidi","Heidi","Gult sötkörsbär med rödflammig täckfärg. En frisk, härdig och rikbärande sort. Svensk sort från Sveriges lantbruksuniversitet, Balsgård","3-4",,
+"kirsa","Kirsa","Mörkrött surkörsbär. Växer till en knappt 2 meter hög buskform och kommer tidigt i bärighet. En frisk och härdig sort från Sveriges lantbruksuniversitet, Balsgård","5-7",,
+"lettisk_lag","Lettisk låg","Surkörsbär som översållas av läckra, söta, brunröda bär. Växer i buskform till ca 2 m höjd. Perfekt för krukodling på balkong och uteplats",7,,1
+"merton_glory","Merton Glory","Gulrött sötkörsbär med klarröd täckfärg. Mognar tidigt, i juli",3,"primo_juli",
+"nordia","Nordia","Mörkrött surkörsbär som växer i buskform till ca 2 meters höjd. Frisk sort som kommer tidigt i bärighet. Svensk sort från Sveriges lantbruksuniversitet, Balsgård",6,,
+"ostheimer","Ostheimer","Brunrött, mycket gott surkörsbär",5,,2
+"regina","Regina","Mörk bigarrå med stora, fasta bär som mognar i augusti",3,"aug",
+"sam","Sam","Mörka, mycket goda sötkörsbär. Frisk sort. Finns som pysslingträd",3,,2
+"skuggmorell","Skuggmorell","Vackra, mörka bär som mognar lite senare i augusti. En gammal klassisk sort som är självfertil.",5,,
+"stella","Stella","Mörkrött, stort sötkörsbär. En självfertil, kanadensisk sort. Finns som pysslingträd",3,,
+"stora_klarbar","Stort klarbär","Klassiskt, klarrött surkörsbär. Blir ett ganska nätt träd med elegant, luftig krona",5,,
+"stor_svart","Stor svart bigarrå","Läckra, mörka bigarråbär. Blir ett rejält, pampigt träd. Kan vara samma som Grosse Schwarze Knorpelkirsche ? De skriver att den Mörkbrun, läcker bigarrå. Finns som pysslingträd. Anger olika zoner.",2,,
+"sunburst","Sunburst","Mörkrött, gott sötkörsbär, korsning av kanadensiska sorterna Van och Stella. Självfertilt",3,,1
+"van","Van","Stora, mörkröda bigarråer. En kanadensisk sort som ger stora, vackra träd","2-3",,

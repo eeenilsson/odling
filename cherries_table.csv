@@ -22,7 +22,7 @@
 "Sam",,"sam",21,"sweet",3,4,1,3,1,,1,"Dessertsort som ger mellanstora, mörkt violettröda, stora söta körsbär (vagt prickigt) med riktigt fin smak i augusti. Köttet saftigt och rätt mjukt, saften är också klarröd. En av de godaste sorterna av sötkörsbär i svenska trädgårdsbutike",,"aug",,"Kanada",,"mörkt violettröda, vagt prickigt","saftigt och rätt mjukt, saften är också klarröd.",,,"1, 2, 9, 10, 12, 17, 20",,"Allm. gulröd bigarrå, Almore, Büttners Späte Rote, Hedelfinger, Heidi, Merton Glory, Stella, Stor svart bigarrå, Van"
 "Skuggmorell",,"skuggmorell",22,"sour",5,6,1,5,1,1,1,"uttalad syrlig, lite skarp men ändå behaglig smak",1,"aug","7-8","Frankrike?",,"Svartröd","Köttet är mjukt, mörkröda fyllda med en röd saft"," trivs bra i skugga",,22,,
 "Stella",,"stella",23,"sweet",4,4,1,3,,1,1,"sötsyrlig smak",1,"jul_aug",,,," ganska röda",,"excellen for eating fresh, canning or conserving",,23,,"Självfertil samt Büttners Späte Rote, Merton Glory, Sam, Van"
-"Stor svart bigarrå",,"stor_svart",24,"sweet",3,"NA",1,2,,,1,"Söt",,"ultimo_juli",,"Frankrike",,"svartröd","Köttet är fast, sött med god syra. saften är mörkröd",,,"6, 12",,"Merton Glory"
+"Stor svart bigarrå","Grosse Schwarze Knorpelkirsche","stor_svart",24,"sweet",3,"NA",1,2,,,1,"Söt",,"ultimo_juli",,"Frankrike",,"svartröd","Köttet är fast, sött med god syra. saften är mörkröd",,,"6, 12",,"Merton Glory"
 "Stora klarbär",,"stora_klarbar",25,"sour",5,"NA",,,,,,,,,,,,,,,,"25, 7, 14, 16, 18",,
 "Sunburst",,"sunburst",26,"sweet",4,4,1,3,,,1,"Söt",,"aug",,,,"röd","söta och mycket saftiga",,,26,,"Självfertil"
 "Triaux",,"triaux",27,"sour",4,"NA",,,,,,,,,,,,,,,,27,,
@@ -33,5 +33,4 @@
 "Regina",,"regina",32,"sweet",1,4,1,3,,1,1,"rödbruna, stora körsbär med glänsande skal och fast kött med söt smak och god arom. Mycket god",,"aug","7-8","Tyskland",,"rödbrun","fast kött"," mycket motståndskraftigt mot sprickbildning. Kräver bra pollinering.",,,,"Büttners Späte Rote, Kordia, Lapins, Merton Glory, Sam, Stella, Van"
 "Victor",,"victor",33,"sweet",1,2,1,2,,,,"sötsyrlig med fin arom",,"juli_aug",,,,"gulröd","fast, saftigt",,,,,"Almore, Büttners Späte Rote, Merton Glory, Stella, Van"
 "Allmänt klarbär",,"allm_klarbar",34,"sour",6,"NA",1,6,,,,"Sötsyrlig ",,,,,,"röd",,,1,"sjalvfertil",,
-"Grosse Schwarze Knorpelkirsche","Stor svart bigarrå","grosse_schwarze",35,"sweet",3,"NA",,,,,,,,,,,,,,,1,"6, 17",,
 "Lettisk låg",,"lettisk_lag",36,"sour",6,7,,,,,,"Den sötaste av surkörsbären",,,,,,,,,1,36,,
