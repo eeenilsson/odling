@@ -34,36 +34,44 @@ source("update_names.r") ## adds a column with sanitized varnames
 
 ### Country : according ISO 3166 Code list
 
+### Incompatibiliy_group : S4'|any => Self compatible (SC). Some have a trailing "?".
+
 ##############################################
 
+## ## Inkompatibilitetsgrupper lista på kategorier #############
+## ## Note: SC and 0 missing from groups list
+## incompatibility_groups <- fread("cherry_incompatibility_groups_2020.csv") 
+## incompatibility_groups[, s_alleles := gsub(" ", "", s_alleles)] ## squish
+## ## note: Not needed, all groups in incompatibility_groups are in variety_genotype_group
+###############################
 
+variety_genotype_group[, incompatibility_group := gsub(" ", "", incompatibility_group)] ## SC has a trailing space, sqish
+## variety_genotype_group[incompatibility_group == "", ]
+## ## Note: these have questionmark, uncommon varieties all
+
+## setkey(variety_genotype_group, var)
+
+variety_genotype_group[, unique(incompatibility_group)]
+
+dupl_var <- variety_genotype_group[duplicated(var), var]
+variety_genotype_group[grepl(paste0(dupl_var, collapse = "|"), var), ]
+## Note: some have two or more duplicated rows (n = 90 varieties), these all have different genotypes in different studies, i uncertain, can be removed since they are uncommon varieties
+variety_genotype_group <- variety_genotype_group[!grepl(paste0(dupl_var, collapse = "|"), var), ]
+
+
+####### todo
+## See also: functional_genotypes_compatibility_groups.csv
+## Note: Check if they correspond
+#####
 
 ############## here #####################
 
-variety_genotype_group[grepl("", tempvar), ]
-variety_genotype_group[grepl("Rote Knorpel", variety), ]
+## variety_genotype_group[grepl("", tempvar), ]
+## variety_genotype_group[grepl("Rote Knorpel", variety), ]
 
-variety_genotype_group[grepl("Große Schwarze Knorpel", variety), ]
-variety_genotype_group[grepl("", variety), ]
+## variety_genotype_group[grepl("Große Schwarze Knorpel", variety), ]
+## variety_genotype_group[grepl("", variety), ]
 
-
-variety_genotype_group[, unique(incompatibility_group)]
-## SC has a trailing space
-
-
-## See also: functional_genotypes_compatibility_groups.csv
-## Note: Check if they correspond
-
-
-
-## Inkompatibilitetsgrupper lista på kategorier -------------
-
-## incompatibility_groups <- fread("cherry_incompatibility_groups_2020.csv") 
-## Note: SC and 0 missing from groups list
-## S4'|any => Self compatible (SC)
-
-## Lista grupper + S-alleler redundant?
-## incompatibility_groups <- fread("cherries_incompatibility_groups_2020.csv") 
 
 ## names(variety_genotype_group)
 ## variety_genotype_group[, .(incompatibility_group)]
