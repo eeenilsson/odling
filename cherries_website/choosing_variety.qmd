@@ -117,6 +117,16 @@ Alla utom dessa anges som Use: Eating
 <!-- Market intermediaries indicated a willingness to pay producers more per pound for fruit greater than 2.5 cm in diameter, firmness above 300 g/mm, and SSC above 18 °Brix -->
 
 
+<!-- ## notes on naming -->
+
+<!-- Note 'Stor svart bigarrå' not same as Knopfels schwarze? -->
+<!-- Wexthuset skiljer dessa -->
+<!-- Blomsterlandet säljer Prunus avium STOR SVART BIGARRÅ ('Grosse Schwarze Knorpelkirsche') https://www.wexthuset.com/fakta-och-rad/skotselrad-om-vaxter-i-kruka-och-tradgard/beskrivningar-odling-skotsel-bar-och-frukter/korsbar-odling-sorter -->
+
+
+
+
+
 # Grundstammar
 
 Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okulering_). Typen av grundstam påpverkar bland annat:
@@ -183,3 +193,5 @@ Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okule
 
 <!-- Skogsträdgårdsbloggen tabell:  -->
 <!-- https://skogsträdgården.stjärnsund.nu/grundstammar-del-4-korsbar/ -->
+
+

@@ -59,7 +59,6 @@ variety_genotype_group[, tempvar := gsub("-", "_", tempvar)]
 ## variety_genotype_group[grepl("Büttners Späte Rote Knorpelkirsche", variety)]
 ## Note: Süßkirsche Büttner`s Rote Knorpelkirsche Alte Sorte mit Tradition, auch "Altenburger Melonenkirsche" genannt.
 
-
 ## replace var in other datasets so it matches genotype data -----
 lookfor <- paste0(dta$label, collapse = "|")
 tmp <- variety_genotype_group[grepl(lookfor, variety), .(tempvar, variety)]
@@ -69,14 +68,9 @@ nomatch <- dta$var[!dta$var %in% tmp$tempvar] ## no match in tempvar
 sour <-  c("berit","fanal","kelleris","kirsa","ostheimer","skuggmorell","stora_klarbar", "triaux", "tschernokorka","nordia", "lettisk_lag") ## remove sour
 nomatch <- nomatch[!nomatch %in% sour]
 
-## Note 'Stor svart bigarrå' not same as Knopfels schwarze?
-## Wekthuset skiljer dessa
-## Blomsterlandet säljer Prunus avium STOR SVART BIGARRÅ ('Grosse Schwarze Knorpelkirsche') https://www.wexthuset.com/fakta-och-rad/skotselrad-om-vaxter-i-kruka-och-tradgard/beskrivningar-odling-skotsel-bar-och-frukter/korsbar-odling-sorter
-
 varnames_tmp <- c(
 'guigne_dannonay' = "annonay",
 'allman_gulrod' = "allm_gulrod",
-'altenburger_melonen_kirsche' = "buttners_rote",
 'buttners_spate_rote_knorpelkirsche' = "buttners_rote",
 'fryksaas' = "fryksas",
 'gaardebo' = "gardebo",
@@ -109,6 +103,7 @@ out <- fread(i)
 ## query_label(out[["var"]], varnames_tmp)
 ## unname(query_label(out$var, varnames_new))
 out[["var"]] <- query_label(out[["var"]], varnames_new)
+    message(paste0("replacing", i))
 write.csv(out, i, row.names = FALSE)
 }
 
@@ -131,26 +126,8 @@ variety_genotype_group[grepl("", variety), ]
 ## Note: Does not exist in variety_genotype_group due to being sour cherries
 
 
-## Note: change in this list in cherries_pollination_sv.r
+## Note: change varnames for recoding plantagen in cherries_pollination_sv.r
 
-varnames <- c(
-    'buttners_rote' = "Büttners Späte Rote",
-    'allm_gulrod' = "Allm. gulröd bigarrå",
-    'hedelfinger' = "Hedelfinger",
-    'merton_glory' = "Merton Glory",
-    'sam' = "Sam",
-    'stor_svart' = "Stor svart bigarrå",
-    'van' = "Van",
-    'almore' = "Almore",
-    'stella' = "Stella",
-    'sjalvfertil'= "Självfertil",
-    'allm_gulrod' = "Allmän gulröd bigarrå",
-    'victor' = "Victor",
-    'heidi' = "Heidi",
-    'buttners_rote' = " Büttners Späte Rote",
-    'kordia' = "Kordia",
-    'lapins' = "Lapins"
-)
 
 ## replace names
 ## see : cherries_functions.r
