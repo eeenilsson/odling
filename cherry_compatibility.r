@@ -155,9 +155,34 @@ anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$
 dta_toplot <- variety_genotype_group[anfic_selected, on = "var"] ## all selected have genotype data matching var name
 str(dta_toplot)
 
+## function to test genotypes againt each other
+## genotype_a <- "S1S2"
+## genotype_b <- "S1S3"
+## genotype_a <- "S3S4'"
+## genotype_b <- "S3S4'"
 
+compat <- function(genotype_a, genotype_b){
+    a1 <-  strsplit(genotype_a, "S")[[1]][2]
+    a2 <-  strsplit(genotype_a, "S")[[1]][3]
+    b1 <-  strsplit(genotype_b, "S")[[1]][2]
+    b2 <-  strsplit(genotype_b, "S")[[1]][3]
+    p1 <- (a1 != b1 & a1 != b2) | a1 == "4'" | a1 == "3'" | a1 == "5'"  
+    p2 <- (a2 != b1 & a2 != b2) | a2 == "4'" | a2 == "3'" | a2 == "5'"
+    if(a1 == "4" & b1 == "4'"){p1 <- FALSE}
+    if(a2 == "4" & b2 == "4'"){p2 <- FALSE} ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
+    comp <- sum(p1, p2)
+    return(comp)
 
+    ## calculate relative compatibility
+## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
+## Enstaka universella givare saknar också S4**’**.
+## S3' =  SC
+## S5' =  SC
+}
 
+## compat("S1S2", "S1S3")
+## compat("S4'S2", "S1S3")
+## compat("S3S4'", "S3S4'")
 
 dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, incompatibility_group, label)]
 
@@ -167,49 +192,29 @@ test <- dta_toplot[1:20, .(var, genotype, genotype1, genotype2, incompatibility_
 newcols <- as.data.table(matrix(nrow = nrow(test), ncol = nrow(test)+1))
 names(newcols) <- c("var", test$var)
 cols <- names(newcols)
-newcols_mod <- newcols[ ,                         
-                             (cols) := lapply(.SD, as.character), 
-                             .SDcols = cols]
-## str(newcols_mod)
+newcols_mod <- newcols[ , (cols) := lapply(.SD, as.character), .SDcols = cols]
 newcols_mod$var <- test$var
 test <- newcols_mod[test, on = "var"]
 
-test[1, ..i]
+## i <- 1
+## varn <- test$var[1]
+## test[var == varn, genotype]
 
-i <- 1
-varn <- test$var[1]
-
-test[var == varn, genotype]
-
-for(i in 1:nrow(test)){ ## loop over rows
-
+## loop over rows
+for(i in 1:nrow(test)){ 
     for(varn in test$var){ ## loop over cols
 
-        ## test[i, (varn) := varn] ## function here
-        test[i, (varn) := test[var == varn, genotype]]
+        ## get genotype of column name
+        ## test[i, (varn) := test[var == varn, genotype]]  
 
-                ## test[i, (varn) := "testing"]
-        ## test[var == i, paste0(i)]
-            ## test[var == i, (i) := "hello"]
+        ## get compatibility value of column name
+                test[i, (varn) := compat(test[var == varn, genotype],
+                                         test[i, genotype])  ]  
             }
-
 }
 
 
-test[var == i, black_tartarian := genotype]
-
-i <- test$var[[1]]
-for(i in test$var){
-    test[var == i, 2..i]
-}
-
-str(test)
-
-
-
-
-?matrix
-
+test
 
 variety_genotype_group[, unique(genotype1)]
 variety_genotype_group[, unique(genotype2)]
