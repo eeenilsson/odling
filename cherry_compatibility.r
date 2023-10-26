@@ -48,15 +48,35 @@ source("update_names.r") ## adds a column with sanitized varnames
 variety_genotype_group[, incompatibility_group := gsub(" ", "", incompatibility_group)] ## SC has a trailing space, sqish
 ## variety_genotype_group[incompatibility_group == "", ]
 ## ## Note: these have questionmark, uncommon varieties all
+variety_genotype_group[, genotype := gsub(" ", "", genotype)]
 
 ## setkey(variety_genotype_group, var)
 
-variety_genotype_group[, unique(incompatibility_group)]
+## variety_genotype_group[, unique(incompatibility_group)]
 
 dupl_var <- variety_genotype_group[duplicated(var), var]
 variety_genotype_group[grepl(paste0(dupl_var, collapse = "|"), var), ]
 ## Note: some have two or more duplicated rows (n = 90 varieties), these all have different genotypes in different studies, i uncertain, can be removed since they are uncommon varieties
 variety_genotype_group <- variety_genotype_group[!grepl(paste0(dupl_var, collapse = "|"), var), ]
+
+## calculate relative compatibility
+## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
+## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
+## Enstaka universella givare saknar också S4**’**.
+
+## check
+## variety_genotype_group[, unique(genotype)]
+## variety_genotype_group[, unique(incompatibility_group)]
+## variety_genotype_group[grepl("S3\\'", genotype), ] ## SC
+## variety_genotype_group[grepl("S5\\'", genotype), ] ## SC
+## variety_genotype_group[grepl("\\/", genotype), ] ## no incomp gr
+## strsplit("S3S12", "S")[[1]][2:3]
+## strsplit("S3'S12", "S")[[1]][2:3]
+## strsplit("S6S17/30?", "S")[[1]][2:3]
+
+## split
+variety_genotype_group[, genotype1 := sapply(genotype, function(x){strsplit(x, "S")[[1]][2]})]
+variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "S")[[1]][3]})]
 
 
 ####### todo
@@ -133,10 +153,68 @@ anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$
 anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in 
 
 dta_toplot <- variety_genotype_group[anfic_selected, on = "var"] ## all selected have genotype data matching var name
-
 str(dta_toplot)
 
-dta_toplot <- dta_toplot[, .(var, variety, genotype, incompatibility_group, label)]
+
+
+
+
+dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, incompatibility_group, label)]
+
+test <- dta_toplot[1:20, .(var, genotype, genotype1, genotype2, incompatibility_group)]
+
+## make a df to add cols
+newcols <- as.data.table(matrix(nrow = nrow(test), ncol = nrow(test)+1))
+names(newcols) <- c("var", test$var)
+cols <- names(newcols)
+newcols_mod <- newcols[ ,                         
+                             (cols) := lapply(.SD, as.character), 
+                             .SDcols = cols]
+## str(newcols_mod)
+newcols_mod$var <- test$var
+test <- newcols_mod[test, on = "var"]
+
+test[1, ..i]
+
+i <- 1
+varn <- test$var[1]
+
+test[var == varn, genotype]
+
+for(i in 1:nrow(test)){ ## loop over rows
+
+    for(varn in test$var){ ## loop over cols
+
+        ## test[i, (varn) := varn] ## function here
+        test[i, (varn) := test[var == varn, genotype]]
+
+                ## test[i, (varn) := "testing"]
+        ## test[var == i, paste0(i)]
+            ## test[var == i, (i) := "hello"]
+            }
+
+}
+
+
+test[var == i, black_tartarian := genotype]
+
+i <- test$var[[1]]
+for(i in test$var){
+    test[var == i, 2..i]
+}
+
+str(test)
+
+
+
+
+?matrix
+
+
+variety_genotype_group[, unique(genotype1)]
+variety_genotype_group[, unique(genotype2)]
+
+
 
 
 ## plot
