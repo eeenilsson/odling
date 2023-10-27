@@ -53,6 +53,7 @@ variety_genotype_group[, genotype := gsub(" ", "", genotype)]
 ## setkey(variety_genotype_group, var)
 
 ## variety_genotype_group[, unique(incompatibility_group)]
+## variety_genotype_group[, unique(genotype)]
 
 dupl_var <- variety_genotype_group[duplicated(var), var]
 variety_genotype_group[grepl(paste0(dupl_var, collapse = "|"), var), ]
@@ -78,6 +79,18 @@ variety_genotype_group <- variety_genotype_group[!grepl(paste0(dupl_var, collaps
 variety_genotype_group[, genotype1 := sapply(genotype, function(x){strsplit(x, "S")[[1]][2]})]
 variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "S")[[1]][3]})]
 
+## ## explore
+## variety_genotype_group[genotype1 == genotype2, ]
+## ## Note: All three are S3S3 and two of these noted ad SC.
+
+## variety_genotype_group[incompatibility_group == "SC", ]
+## ## Note: with very few exceptions SC are 4'
+
+## variety_genotype_group[genotype == "S3S3", ]
+## ## Note: 2 of 3 S3S3 are SC
+
+## variety_genotype_group[genotype1 == "4'" | genotype2 == "4'", ]
+## ## All S4' are SC
 
 ####### todo
 ## See also: functional_genotypes_compatibility_groups.csv
@@ -153,7 +166,7 @@ anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$
 anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in 
 
 dta_toplot <- variety_genotype_group[anfic_selected, on = "var"] ## all selected have genotype data matching var name
-str(dta_toplot)
+## str(dta_toplot)
 
 ## function to test genotypes againt each other
 ## genotype_a <- "S1S2"
@@ -162,14 +175,19 @@ str(dta_toplot)
 ## genotype_b <- "S3S4'"
 
 compat <- function(genotype_a, genotype_b){
+    ## pollinator
     a1 <-  strsplit(genotype_a, "S")[[1]][2]
     a2 <-  strsplit(genotype_a, "S")[[1]][3]
+    ## target
     b1 <-  strsplit(genotype_b, "S")[[1]][2]
     b2 <-  strsplit(genotype_b, "S")[[1]][3]
+    ## pollen sucess = TRUE
     p1 <- (a1 != b1 & a1 != b2) | a1 == "4'" | a1 == "3'" | a1 == "5'"  
     p2 <- (a2 != b1 & a2 != b2) | a2 == "4'" | a2 == "3'" | a2 == "5'"
+    ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
     if(a1 == "4" & b1 == "4'"){p1 <- FALSE}
-    if(a2 == "4" & b2 == "4'"){p2 <- FALSE} ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
+    if(a2 == "4" & b2 == "4'"){p2 <- FALSE}
+## Sum
     comp <- sum(p1, p2)
     return(comp)
 
@@ -186,7 +204,10 @@ compat <- function(genotype_a, genotype_b){
 
 dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, incompatibility_group, label)]
 
-test <- dta_toplot[1:20, .(var, genotype, genotype1, genotype2, incompatibility_group)]
+z <- c(48, 12, 13, 40, 12, 4, 79, 5, 40, 47, 3, 24, 36, 28, 10, 40, 38, 54, 68, 47, 19, 73, 64, 43, 23)
+z <- unique(z)
+## z <- sample(1:nrow(dta_toplot), 25, replace=TRUE)
+test <- dta_toplot[z, .(var, genotype, incompatibility_group)]
 
 ## make a df to add cols
 newcols <- as.data.table(matrix(nrow = nrow(test), ncol = nrow(test)+1))
@@ -213,17 +234,62 @@ for(i in 1:nrow(test)){
             }
 }
 
-
 test
 
-variety_genotype_group[, unique(genotype1)]
-variety_genotype_group[, unique(genotype2)]
 
+dtplot <-  melt(test, id.vars = c("var", "genotype", "incompatibility_group"))
 
+## add blooming time
 
+setkey(dtplot, var)
 
 ## plot
 pacman::p_load(ggplot2)
+
+
+## select cols for plotting
+toplot <- temp[, .(var, variable, value)]
+names(toplot) <- c("target", "pollinator", "compatibility")
+setkey(toplot, target)
+
+## setkey(toplot, var)
+toplot[, value:= as.numeric(value)]
+toplot[, target:= as.factor(target)]
+## View(toplot)
+## str(toplot)
+
+## ## labels
+## varnames <- dta$label
+## names(varnames) <- dta$var
+## toplot[, target:= factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
+## toplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
+
+## plot base
+p <- ggplot(toplot, aes(pollinator, target)) +
+  geom_point(aes(size = concordance))
+
+## plot customization
+plot_pollination_table <- p +
+    scale_size_area() +
+    theme(
+        plot.margin = unit(c(1.5, 1.5, 1.5, 1.5), "centimeters"),
+        legend.position = "none",
+        axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
+        plot.title = element_text(hjust = 0, vjust = 3, size = 32, face="bold"),
+        axis.title.x = element_text(hjust = 0.5, vjust = -5),
+        axis.text=element_text(size=16),
+        axis.title=element_text(size=24, face="bold")
+    ) +
+    labs(title="Pollinationsschema för körsbär",
+         x ="Pollinatör",
+         y = "Mottagare")
+
+
+
+
+
+
+
 
 ## plot base
 p <- ggplot(toplot, aes(pollinator, target)) +
