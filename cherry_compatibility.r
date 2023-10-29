@@ -202,12 +202,12 @@ compat <- function(genotype_a, genotype_b){
 ## compat("S4'S2", "S1S3")
 ## compat("S3S4'", "S3S4'")
 
-dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, incompatibility_group, label)]
+## dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, blooming_group, incompatibility_group, label)]
 
 z <- c(48, 12, 13, 40, 12, 4, 79, 5, 40, 47, 3, 24, 36, 28, 10, 40, 38, 54, 68, 47, 19, 73, 64, 43, 23)
 z <- unique(z)
 ## z <- sample(1:nrow(dta_toplot), 25, replace=TRUE)
-test <- dta_toplot[z, .(var, genotype, incompatibility_group)]
+test <- dta_toplot[z, .(var, genotype, blooming_group, incompatibility_group)]
 
 ## make a df to add cols
 newcols <- as.data.table(matrix(nrow = nrow(test), ncol = nrow(test)+1))
@@ -234,39 +234,72 @@ for(i in 1:nrow(test)){
             }
 }
 
-test
+## test
+## str(test)
 
 
-dtplot <-  melt(test, id.vars = c("var", "genotype", "incompatibility_group"))
+dtplot <-  melt(test, id.vars = c("var", "genotype", "blooming_group",  "incompatibility_group"))
+dtplot[, value := as.numeric(value)]
 
-## add blooming time
 
-setkey(dtplot, var)
+## fix names
+names(dtplot) <- c("target", "genotype", "blooming_group", "incompatibility_group", "pollinator", "compatibility")
+
+
+## add blooming time for pollinator
+tmp <- anfic_selected[var %in% dtplot$pollinator, .(var, blooming_group)]
+names(tmp) <- c("pollinator", "pollinator_blooming_group")
+dtplot <- dtplot[tmp, on = "pollinator"]
+
+
+
+## [target == "areko", ]
+## dtplot[target == "areko", ]
+## ?data.table
+## X[Y, on=c(x1="y1", x2="y2")]
+
+## calculate blooming proximity
+dtplot[, proximity := abs(as.numeric(blooming_group) - as.numeric(pollinator_blooming_group))]
+dtplot[, proximity_ok := ifelse(proximity < 2, TRUE, FALSE)]
+
+## color compatibility and proximity in bloom
+dtplot[, match_color := "red"]
+dtplot[, match_color := "red"]
+dtplot[proximity_ok & compatibility == 1, match_color := "lawngreen"]
+dtplot[proximity_ok & compatibility == 2, match_color := "darkgreen"]
+
+
+## dtplot[, unique(proximity)]
+
+setkey(dtplot, target)
+
+str(dtplot)
+
+
 
 ## plot
 pacman::p_load(ggplot2)
 
 
-## select cols for plotting
-toplot <- temp[, .(var, variable, value)]
-names(toplot) <- c("target", "pollinator", "compatibility")
-setkey(toplot, target)
+## ## select cols for plotting
+## dtplot <- temp[, .(var, variable, value)]
+## setkey(dtplot, target)
 
-## setkey(toplot, var)
-toplot[, value:= as.numeric(value)]
-toplot[, target:= as.factor(target)]
-## View(toplot)
-## str(toplot)
+## setkey(dtplot, var)
+## dtplot[, compatibility := as.numeric(compatibility)]
+dtplot[, target:= as.factor(target)]
+## View(dtplot)
+## str(dtplot)
 
 ## ## labels
 ## varnames <- dta$label
 ## names(varnames) <- dta$var
-## toplot[, target:= factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
-## toplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
+## dtplot[, target:= factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
+## dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
 
 ## plot base
-p <- ggplot(toplot, aes(pollinator, target)) +
-  geom_point(aes(size = concordance))
+p <- ggplot(dtplot, aes(pollinator, target)) +
+  geom_point(aes(size = compatibility))
 
 ## plot customization
 plot_pollination_table <- p +
@@ -292,7 +325,7 @@ plot_pollination_table <- p +
 
 
 ## plot base
-p <- ggplot(toplot, aes(pollinator, target)) +
+p <- ggplot(dtplot, aes(pollinator, target)) +
   geom_point(aes(size = concordance))
 
 
