@@ -263,10 +263,14 @@ dtplot[, proximity := abs(as.numeric(blooming_group) - as.numeric(pollinator_blo
 dtplot[, proximity_ok := ifelse(proximity < 2, TRUE, FALSE)]
 
 ## color compatibility and proximity in bloom
-dtplot[, match_color := "red"]
-dtplot[, match_color := "red"]
-dtplot[proximity_ok & compatibility == 1, match_color := "lawngreen"]
-dtplot[proximity_ok & compatibility == 2, match_color := "darkgreen"]
+## dtplot[, match_color := "red"]
+## dtplot[proximity_ok & compatibility == 1, match_color := "lawngreen"]
+## dtplot[proximity_ok & compatibility == 2, match_color := "darkgreen"]
+
+dtplot[, compat_proximity := "no"]
+dtplot[proximity_ok & compatibility != 0, compat_proximity := "yes"]
+
+
 
 
 ## dtplot[, unique(proximity)]
@@ -299,7 +303,8 @@ dtplot[, target:= as.factor(target)]
 
 ## plot base
 p <- ggplot(dtplot, aes(pollinator, target)) +
-  geom_point(aes(size = compatibility))
+  geom_point(aes(size = compatibility, colour = compat_proximity)) +
+    scale_color_manual(values=c("no" = "red", "yes" = "chartreuse3"))
 
 ## plot customization
 plot_pollination_table <- p +
@@ -317,6 +322,7 @@ plot_pollination_table <- p +
          x ="Pollinatör",
          y = "Mottagare")
 
+plot_pollination_table+ scale_color_manual(values=compat_proximity)
 
 
 
