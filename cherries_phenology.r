@@ -25,7 +25,11 @@ source('cherries_rosbreed.r') ## dataset analysis
 
 ## Blooming time ------------------------------
 
-
+## from rosbrred script (quintiles of bt and gdd) ------
+rosbreed_bt <- fread("rosbreed_bt.csv")
+## compare with anfic
+tmp <- anfic_bt[rosbreed_bt, on = "var"][, .(var, blooming_group_anfic, bt_quintile, gdd_quintile)]
+tmp[, anfic_bg := as.numeric(blooming_group_anfic)][, .(var, anfic_bg, bt_quintile, gdd_quintile)]
 
 ## Australian ANFIC blooming periods ------
 ## fread("anfic_blooming_time.csv")

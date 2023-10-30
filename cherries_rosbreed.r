@@ -39,8 +39,9 @@ ros <- ros[grepl("23-", Germplasm) == FALSE, ] ## remove probable data entry err
 ## ros <- ros[grepl("PC", Germplasm) == FALSE, ] ## remove unwanted strains
 ## ros <- ros[grepl("Unk", Germplasm) == FALSE, ] ## remove unwanted strains
 
-
-## ros <- ros[grepl(paste0(common_varieties, collapse = "|"), Germplasm), ] ## select rows with common varieties
+## select common varieties (those with a non-numeric name)
+common_varieties <- c("Ambrunes", "Benton", "Bing", "Black Republican", "Cashmere", "Chelan", "Chinook", "Cowiche", "Emperor Francis", "Gil Peck", "Glacier", "Index", "Kiona", "Kordia", "Krupnoplodnaya", "Lambert", "Lapins", "Moreau", "Olympus", "Rainier", "Regina", "Schmidt", "Schneiders", "Selah", "Stella", "Summit", "Sunburst", "Sweetheart", "Tieton", "Van", "Venus", "Vic", "Windsor")
+ros <- ros[grepl(paste0(common_varieties, collapse = "|"), Germplasm), ] 
 
 ## redundant:
 ## for (i in filenam){
@@ -102,17 +103,47 @@ bloom_table[, gdd0 := round(gdd-min(gdd), digits = 0)]
 
 ## bloom_table[order(bt), ] ## order by bt
 
-bloom_table
-
 bloom_table[, Germplasm := factor(Germplasm, levels = bloom_table[order(-bt), Germplasm])]
 
-common_varieties <- c("Ambrunes", "Benton", "Bing", "Black Republican", "Cashmere", "Chelan", "Chinook", "Cowiche", "Emperor Francis", "Gil Peck", "Glacier", "Kiona", "Kordia", "Krupnoplodnaya", "Lambert", "Lapins", "Moreau", "Olympus", "Rainier", "Regina", "Schmidt", "Schneiders", "Selah", "Stella", "Summit", "Sunburst", "Sweetheart", "Tieton", "Van", "Venus", "Vic", "Windsor")
 
-toplot <- bloom_table[grepl(paste0(common_varieties, collapse = "|"), Germplasm), ] ## select to plot
 
+## calculate relative blooming group
+## Note: Quintiles might put varieties on the extremes of bt in the same group as others
+## maybe better to break by 3 day intervals? or remove outliers
+## boxplot(gdd ~ Germplasm, data = bloom_table)
+
+## break bt into quintiles
+bloom_table[, bt_quintile := cut(bt, breaks = quantile(bt, probs = seq(0, 1, 1/5)), include.lowest = TRUE)]
+bloom_table[, bt_quintile := factor(bt_quintile, ordered = TRUE, labels = c(1:5))]
+bloom_table[, gdd_quintile := cut(gdd, breaks = quantile(gdd, probs = seq(0, 1, 1/5)), include.lowest = TRUE)]
+bloom_table[, gdd_quintile := factor(gdd_quintile, ordered = TRUE, labels = c(1:5))]
+bloom_table[, .(Germplasm, bt, gdd, bt_quintile, gdd_quintile)]
+## Note: Some have very different bt q vs gdd q
+
+## curate var names to matcg genotype data ---------------
+rosbreed_bt <- bloom_table
+rosbreed_bt[, var := tolower(Germplasm)]
+rosbreed_bt[, var := gsub(" ", "_", var)]
+## ## test matches and misses
+## nomatch <- rosbreed_bt$var[!rosbreed_bt$var %in% variety_genotype_group$var]
+## rosbreed_bt$var[unique(rosbreed_bt$var) %in% unique(variety_genotype_group$var)]
+## ## note: many misses, todo: explore this
+## cols <- c("variety", "var", "genotype") ## , "genotype"
+## variety_genotype_group[grepl("bin", tolower(variety)), ..cols]
+## rosbreed_bt[grepl("douglas", var), ]
+## nomatch
+## rename rosbreed var to match genotype data
+varnames_tmp <- c(  ## from (rosbreed) = to (genotype data)
+    'krupnoplodnaya' = "krupnoplidna",
+    'schneiders' = "schneiders_spate_knorpelkirsche" ## same gt
+    ## "bing"  ## missing from genotype
+)
+rosbreed_bt$var <- query_label(rosbreed_bt$var, varnames_tmp)
+rosbreed_bt <- rosbreed_bt[, .(var, bt_quintile, gdd_quintile)]
+## write.csv(rosbreed_bt, "rosbreed_bt.csv", row.names = FALSE)
+
+## plot bloom time ----------------------
 toplot <- bloom_table
-
-## plot bloom time
 p <- ggplot(toplot, aes(y=Germplasm, x=bt))
 p_bt <- p + geom_point() + xlab("Start of bloom (days from jan 1st)") + ylab("")
 
