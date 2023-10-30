@@ -197,16 +197,10 @@ dtplot <- dtplot[tmp, on = "pollinator"]
 
 ## calculate blooming proximity
 dtplot[, proximity := abs(as.numeric(bgr) - as.numeric(pollinator_blooming_group))]
-dtplot[, proximity_ok := ifelse(proximity < 2, TRUE, FALSE)]
-
-## color compatibility and proximity in bloom
-## dtplot[, match_color := "red"]
-## dtplot[proximity_ok & compatibility == 1, match_color := "lawngreen"]
-## dtplot[proximity_ok & compatibility == 2, match_color := "darkgreen"]
-
 dtplot[, compat_proximity := "no"]
-dtplot[proximity == 0 & compatibility != 0, compat_proximity := "same"]
-dtplot[proximity == 1 & compatibility != 0, compat_proximity := "close"]
+
+dtplot[proximity <0.51 & compatibility != 0, compat_proximity := "same"]
+dtplot[proximity >0.5 & & proximity < 1.1 & compatibility != 0, compat_proximity := "close"]
 
 ## Variable type
 ## dtplot[, compatibility := as.numeric(compatibility)]

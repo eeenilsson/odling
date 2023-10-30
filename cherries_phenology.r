@@ -45,7 +45,7 @@ anfic_bt[, blooming_group_anfic := factor(blooming_group_anfic, ordered = TRUE, 
 anfic_bt <- lookup_gt[anfic_bt, on = c("group" = "comp_gr_anfic")] ## add anfic s_alleles
 
 ## test matches and misses
-nomatch <- anfic_bt$var[!anfic_bt$var %in% variety_genotype_group$var]
+## nomatch <- anfic_bt$var[!anfic_bt$var %in% variety_genotype_group$var]
 ## anfic_bt$var[unique(anfic_bt$var) %in% unique(variety_genotype_group$var)]
 ## ## note: many misses, todo: explore this
 ## cols <- c("variety", "var", "genotype") ## , "genotype"
