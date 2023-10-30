@@ -101,30 +101,42 @@ variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "
 ## test pollination groups (only for testing) ---------
 
 ## uk sites
-pollination_groups_test <- fread("cherries_pollination_groups_uk.csv")
-pollination_groups_test[, var := tolower(variety)]
-pollination_groups_test <- pollination_groups_test[, .(var, pollination_test)]
+uk_bt <- fread("cherries_pollination_groups_uk.csv")
+uk_bt[, var := tolower(variety)]
+uk_bt[, var := gsub(" ", "_", var)]
 
-pollination_groups_test[, var := gsub(" ", "_", var)]
-names(pollination_groups_test) <- c("var", "blooming_group")
-pollination_groups_test[, blooming_group := factor(blooming_group, ordered = TRUE, labels = c("Early", "Early mid", "Mid", "Late mid", "Late"))]
+## curate var names
+## Note: already matching, although some are missing from genotype data
+
+## curate variables
+uk_bt[, pollination_uk_num := pollination_aggr]
+uk_bt <- uk_bt[, .(var, pollination_aggr)] ## select only aggr bt
+## set interval bt to a decimal
+uk_bt[, pollination_aggr := gsub("2 to 3", "2.5", pollination_aggr)]
+uk_bt[, pollination_aggr := gsub("3 to 4", "3.5", pollination_aggr)]
+uk_bt[, pollination_aggr := gsub("4 to 5", "4.5", pollination_aggr)]
+uk_bt[, pollination_aggr := gsub(" ", "", pollination_aggr)] ## squish
+uk_bt[, pollination_aggr := as.numeric(pollination_aggr)]
+
+names(uk_bt) <- c("var", "blooming_group_uk")
+## uk_bt[, blooming_group := factor(blooming_group, ordered = TRUE, labels = c("Early", "Early mid", "Mid", "Late mid", "Late"))] ## dont use with decimals
 
 ## ## test matches and misses
-## pollination_groups_test$var[!pollination_groups_test$var %in% unique(variety_genotype_group$var)]
-## pollination_groups_test$var[pollination_groups_test$var %in% unique(variety_genotype_group$var)]
-
+## uk_bt$var[!uk_bt$var %in% unique(variety_genotype_group$var)]
+## uk_bt$var[uk_bt$var %in% unique(variety_genotype_group$var)]
 ## ## Notes on missing:
-
 ## avium but not in genome data:
 ## "knights_early_black"
 ## "petit_noir"
 ## "amber_heart" ## Syn 'Kent Bigarreau'
 ## "may_duke" ## Syn. 'Dubbele Meikers'    noted as "sour cherry" by some. "Duke cherry" It is a cross between Prunus avium and Prunus cerasus?
 ## "stardust_coveu" ## self-fertile white cherry
-
-## ## cesarus
+## ## cesarus/sour:
 ## "morello"
 ## "nabella"
+## Note: these from uk data are not in anfic:
+## SUMMER SUN, ## NAPOLEON, ## MERTON BIGARREAU, ## MERTON GLORY, ## PENNY, ## PETIT NOIR, ## AMBER HEART, ## MAY DUKE, ## SASHA, ## KARINA, ## SASHA, 
+
 
 ## anfic
 anfic_bt <- fread("anfic_blooming_time.csv")
@@ -136,8 +148,8 @@ anfic_bt <- anfic_bt[, .(var, pollination_period_anfic, label, comp_gr_anfic)]
 anfic_bt[, var := gsub(" \\(.*", "", var)] ## remove parens
 anfic_bt[, var := gsub("-", "_", var)]
 anfic_bt[, var := gsub(" ", "_", var)]
-names(anfic_bt) <- c("var", "blooming_group", "label", "comp_gr_anfic")
-anfic_bt[, blooming_group := factor(blooming_group, ordered = TRUE, labels = c("Early", "Early mid", "Mid", "Late mid", "Late"))]
+names(anfic_bt) <- c("var", "blooming_group_anfic", "label", "comp_gr_anfic")
+anfic_bt[, blooming_group_anfic := factor(blooming_group_anfic, ordered = TRUE, labels = c("Early", "Early mid", "Mid", "Late mid", "Late"))]
 anfic_bt <- lookup_gt[anfic_bt, on = c("group" = "comp_gr_anfic")] ## add anfic s_alleles
 
 
@@ -226,13 +238,13 @@ compat <- function(genotype_a, genotype_b){
 ## compat("S4'S2", "S1S3")
 ## compat("S3S4'", "S3S4'")
 
-## dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, blooming_group, incompatibility_group, label)]
+## dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, blooming_group_anfic, incompatibility_group, label)]
 
 ## select some random varieties for testing
 z <- c(48, 12, 13, 40, 12, 4, 79, 5, 40, 47, 3, 24, 36, 28, 10, 40, 38, 54, 68, 47, 19, 73, 64, 43, 23)
 z <- unique(z)
 ## z <- sample(1:nrow(dta_toplot), 25, replace=TRUE)
-test <- dta_toplot[z, .(var, genotype, blooming_group, incompatibility_group)]
+test <- dta_toplot[z, .(var, genotype, blooming_group_anfic, incompatibility_group)]
 
 ## make a df to add cols
 newcols <- as.data.table(matrix(nrow = nrow(test), ncol = nrow(test)+1))
@@ -255,14 +267,14 @@ for(i in 1:nrow(test)){ ## loop over rows
 ## str(test)
 
 ## melt
-dtplot <-  melt(test, id.vars = c("var", "genotype", "blooming_group",  "incompatibility_group"))
+dtplot <-  melt(test, id.vars = c("var", "genotype", "blooming_group_anfic",  "incompatibility_group"))
 dtplot[, value := as.numeric(value)]
 
 ## fix names
-names(dtplot) <- c("target", "genotype", "blooming_group", "incompatibility_group", "pollinator", "compatibility")
+names(dtplot) <- c("target", "genotype", "blooming_group_anfic", "incompatibility_group", "pollinator", "compatibility")
 
 ## add blooming time for **pollinator**
-tmp <- anfic_selected[var %in% dtplot$pollinator, .(var, blooming_group)]
+tmp <- anfic_selected[var %in% dtplot$pollinator, .(var, blooming_group_anfic)]
 names(tmp) <- c("pollinator", "pollinator_blooming_group")
 dtplot <- dtplot[tmp, on = "pollinator"]
 
@@ -272,7 +284,7 @@ dtplot <- dtplot[tmp, on = "pollinator"]
 ## X[Y, on=c(x1="y1", x2="y2")]
 
 ## calculate blooming proximity
-dtplot[, proximity := abs(as.numeric(blooming_group) - as.numeric(pollinator_blooming_group))]
+dtplot[, proximity := abs(as.numeric(blooming_group_anfic) - as.numeric(pollinator_blooming_group))]
 dtplot[, proximity_ok := ifelse(proximity < 2, TRUE, FALSE)]
 
 ## color compatibility and proximity in bloom
@@ -289,7 +301,7 @@ dtplot[proximity == 1 & compatibility != 0, compat_proximity := "close"]
 dtplot[, target:= as.factor(target)]
 dtplot[, pollinator:= as.factor(pollinator)]
 dtplot[, pollinator_blooming_group_num := as.numeric(pollinator_blooming_group)]
-dtplot[, blooming_group_num := as.numeric(blooming_group)]
+dtplot[, blooming_group_num := as.numeric(blooming_group_anfic)]
 ## str(dtplot)
 
 setkey(dtplot, target)
@@ -349,29 +361,9 @@ plot_pollination_table <- plot_pollination_table +
 plot_pollination_table
 ## meta:
 ## Size of dot corresponds to genetic compatibility, color to blooming time (dark green = same bloomin group, light green = proximity 1 in blooming group, red = outside proximity blooming groups OR not genetically compatible)
-
-
-dtplot[grepl("samba|frisco", target), ]
-
-## ## label groups on x axis
-## https://stackoverflow.com/questions/49287322/how-to-annotate-the-group-information-under-x-axis-in-ggplot2
-
-
-
 ## "Blomningstid"
 
-## Note: these from uk data are not in anfic:
-## SUMMER SUN
-## NAPOLEON
-## MERTON BIGARREAU
-## MERTON GLORY
-## PENNY
-## PETIT NOIR
-## AMBER HEART
-## MAY DUKE
-## SASHA
-## KARINA
-## SASHA
+## dtplot[grepl("samba|frisco", target), ]
 
 
 ############## here #####################
