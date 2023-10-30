@@ -246,7 +246,7 @@ dtplot[, value := as.numeric(value)]
 names(dtplot) <- c("target", "genotype", "blooming_group", "incompatibility_group", "pollinator", "compatibility")
 
 
-## add blooming time for pollinator
+## add blooming time for **pollinator**
 tmp <- anfic_selected[var %in% dtplot$pollinator, .(var, blooming_group)]
 names(tmp) <- c("pollinator", "pollinator_blooming_group")
 dtplot <- dtplot[tmp, on = "pollinator"]
@@ -268,15 +268,20 @@ dtplot[, proximity_ok := ifelse(proximity < 2, TRUE, FALSE)]
 ## dtplot[proximity_ok & compatibility == 2, match_color := "darkgreen"]
 
 dtplot[, compat_proximity := "no"]
-dtplot[proximity_ok & compatibility != 0, compat_proximity := "yes"]
+dtplot[proximity == 0 & compatibility != 0, compat_proximity := "same"]
+dtplot[proximity == 1 & compatibility != 0, compat_proximity := "close"]
 
 
+## Variable type
+## dtplot[, compatibility := as.numeric(compatibility)]
+dtplot[, target:= as.factor(target)]
+dtplot[, pollinator:= as.factor(pollinator)]
+dtplot[, pollinator_blooming_group_num := as.numeric(pollinator_blooming_group)]
+dtplot[, blooming_group_num := as.numeric(blooming_group)]
+## str(dtplot)
 
-
-## dtplot[, unique(proximity)]
 
 setkey(dtplot, target)
-
 str(dtplot)
 
 
@@ -285,16 +290,6 @@ str(dtplot)
 pacman::p_load(ggplot2)
 library(forcats) ## for reordering plot levels
 
-## ## select cols for plotting
-## dtplot <- temp[, .(var, variable, value)]
-## setkey(dtplot, target)
-
-## setkey(dtplot, var)
-## dtplot[, compatibility := as.numeric(compatibility)]
-dtplot[, target:= as.factor(target)]
-dtplot[, pollinator:= as.factor(pollinator)]
-## View(dtplot)
-## str(dtplot)
 
 ## ## labels
 ## varnames <- dta$label
@@ -305,53 +300,13 @@ dtplot[, pollinator:= as.factor(pollinator)]
 ## fct_reorder(pollinator, pollinator_blooming_group)
 ## str(dtplot)
 
-dtplot[, pollinator_blooming_group_num := as.numeric(pollinator_blooming_group)]
-
-dtplot[, blooming_group_num := as.numeric(blooming_group)]
 
 ## dtplot[pollinator_blooming_group == "Early", ]
 
 ## plot base
 p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, blooming_group_num))) +
   geom_point(aes(size = compatibility, colour = compat_proximity)) +
-    scale_color_manual(values=c("no" = "red", "yes" = "chartreuse3"))
-
-## plot customization
-plot_pollination_table <- p +
-    scale_size_area() +
-    theme(
-        plot.margin = unit(c(1.5, 1.5, 1.5, 1.5), "centimeters"),
-        ## legend.position = "none",
-        axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
-        plot.title = element_text(hjust = 0, vjust = 3, size = 32, face="bold"),
-        axis.title.x = element_text(hjust = 0.5, vjust = -5),
-        axis.text=element_text(size=16),
-        axis.title=element_text(size=24, face="bold")
-    ) +
-    labs(title="Pollinationsschema för körsbär",
-         x ="Pollinatör",
-         y = "Mottagare")
-
-plot_pollination_table +
-    facet_grid(~ pollinator_blooming_group,
-               scales = "free",
-               switch = "x",
-               space = "free_x") +
-    theme(panel.spacing = unit(0, "lines"))
-?facet_grid
-
-dtplot[grepl("samba|frisco", target), ]
-
-## ## label groups on x axis
-## https://stackoverflow.com/questions/49287322/how-to-annotate-the-group-information-under-x-axis-in-ggplot2
-
-
-
-## plot base
-p <- ggplot(dtplot, aes(pollinator, target)) +
-  geom_point(aes(size = concordance))
-
-
+    scale_color_manual(values=c("no" = "red", "close" = "chartreuse", "same" = "chartreuse3"))
 
 ## plot customization
 plot_pollination_table <- p +
@@ -365,9 +320,37 @@ plot_pollination_table <- p +
         axis.text=element_text(size=16),
         axis.title=element_text(size=24, face="bold")
     ) +
-    labs(title="Pollinationsschema för körsbär",
+    labs(title="Pollinationsdiagram för körsbär",
          x ="Pollinatör",
          y = "Mottagare")
+
+## add strips
+plot_pollination_table +
+    facet_grid(~ pollinator_blooming_group,
+               scales = "free",
+               ## switch = "x",
+               space = "free_x") +
+    theme(panel.spacing = unit(0, "lines"),
+            panel.background = element_rect(fill = "gray94",
+                                colour = "gray",
+                                linewidth = 1, linetype = "solid"),
+         strip.background = element_rect(colour="black", fill = NA),
+         panel.border = element_rect(colour="black", fill = NA),
+         strip.placement = "outside"         
+         )
+
+## todo: gcollor different green depending on bt match
+## meta
+## Size of dot corresponds to genetic compatibility, color to blooming time (dark green = same bloomin group, light green = proximity 1 in blooming group, red = outside proximity blooming groups OR not genetically compatible)
+
+
+
+?facet_grid
+
+dtplot[grepl("samba|frisco", target), ]
+
+## ## label groups on x axis
+## https://stackoverflow.com/questions/49287322/how-to-annotate-the-group-information-under-x-axis-in-ggplot2
 
 
 
