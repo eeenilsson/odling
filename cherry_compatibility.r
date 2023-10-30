@@ -126,7 +126,6 @@ pollination_groups_test[, blooming_group := factor(blooming_group, ordered = TRU
 ## "morello"
 ## "nabella"
 
-
 ## anfic
 anfic_bt <- fread("anfic_blooming_time.csv")
 
@@ -187,15 +186,15 @@ compat <- function(genotype_a, genotype_b){
     ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
     if(a1 == "4" & b1 == "4'"){p1 <- FALSE}
     if(a2 == "4" & b2 == "4'"){p2 <- FALSE}
-## Sum
+    ## Sum
     comp <- sum(p1, p2)
     return(comp)
 
     ## calculate relative compatibility
-## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
-## Enstaka universella givare saknar också S4**’**.
-## S3' =  SC
-## S5' =  SC
+    ## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
+    ## Enstaka universella givare saknar också S4**’**.
+    ## S3' =  SC
+    ## S5' =  SC
 }
 
 ## compat("S1S2", "S1S3")
@@ -204,6 +203,7 @@ compat <- function(genotype_a, genotype_b){
 
 ## dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, blooming_group, incompatibility_group, label)]
 
+## select some random varieties for testing
 z <- c(48, 12, 13, 40, 12, 4, 79, 5, 40, 47, 3, 24, 36, 28, 10, 40, 38, 54, 68, 47, 19, 73, 64, 43, 23)
 z <- unique(z)
 ## z <- sample(1:nrow(dta_toplot), 25, replace=TRUE)
@@ -216,18 +216,10 @@ cols <- names(newcols)
 newcols_mod <- newcols[ , (cols) := lapply(.SD, as.character), .SDcols = cols]
 newcols_mod$var <- test$var
 test <- newcols_mod[test, on = "var"]
-
-## i <- 1
-## varn <- test$var[1]
-## test[var == varn, genotype]
-
-## loop over rows
-for(i in 1:nrow(test)){ 
+for(i in 1:nrow(test)){ ## loop over rows
     for(varn in test$var){ ## loop over cols
-
         ## get genotype of column name
-        ## test[i, (varn) := test[var == varn, genotype]]  
-
+             ## test[i, (varn) := test[var == varn, genotype]]  
         ## get compatibility value of column name
                 test[i, (varn) := compat(test[var == varn, genotype],
                                          test[i, genotype])  ]  
@@ -237,21 +229,17 @@ for(i in 1:nrow(test)){
 ## test
 ## str(test)
 
-
+## melt
 dtplot <-  melt(test, id.vars = c("var", "genotype", "blooming_group",  "incompatibility_group"))
 dtplot[, value := as.numeric(value)]
 
-
 ## fix names
 names(dtplot) <- c("target", "genotype", "blooming_group", "incompatibility_group", "pollinator", "compatibility")
-
 
 ## add blooming time for **pollinator**
 tmp <- anfic_selected[var %in% dtplot$pollinator, .(var, blooming_group)]
 names(tmp) <- c("pollinator", "pollinator_blooming_group")
 dtplot <- dtplot[tmp, on = "pollinator"]
-
-
 
 ## [target == "areko", ]
 ## dtplot[target == "areko", ]
@@ -291,22 +279,20 @@ pacman::p_load(ggplot2)
 library(forcats) ## for reordering plot levels
 
 
-## ## labels
-## varnames <- dta$label
-## names(varnames) <- dta$var
-## dtplot[, target:= factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
-## dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
-## ?ggplot
-## fct_reorder(pollinator, pollinator_blooming_group)
-## str(dtplot)
-
+## labels
+tmp <- variety_genotype_group[anfic_bt, on = "var"][, .(var, genotype, label)]
+tmp[, label_ss := paste0(label, " [", genotype, "]")]
+varnames <- tmp$label_ss
+names(varnames) <- tmp$var
+dtplot[, target:= factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
+dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
 
 ## dtplot[pollinator_blooming_group == "Early", ]
 
 ## plot base
 p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, blooming_group_num))) +
   geom_point(aes(size = compatibility, colour = compat_proximity)) +
-    scale_color_manual(values=c("no" = "red", "close" = "chartreuse", "same" = "chartreuse3"))
+    scale_color_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3"))
 
 ## plot customization
 plot_pollination_table <- p +
@@ -315,10 +301,10 @@ plot_pollination_table <- p +
         plot.margin = unit(c(1.5, 1.5, 1.5, 1.5), "centimeters"),
         legend.position = "none",
         axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
-        plot.title = element_text(hjust = 0, vjust = 3, size = 32, face="bold"),
+        plot.title = element_text(hjust = 0, vjust = 3, size = 22, face="bold"),
         axis.title.x = element_text(hjust = 0.5, vjust = -5),
-        axis.text=element_text(size=16),
-        axis.title=element_text(size=24, face="bold")
+        axis.text=element_text(size=14),
+        axis.title=element_text(size=18, face="bold")
     ) +
     labs(title="Pollinationsdiagram för körsbär",
          x ="Pollinatör",
