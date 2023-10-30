@@ -32,7 +32,6 @@ pacman::p_load(data.table, ggplot2)
 ## read joined data
 ros <- fread("rosbreed_alldata.csv")
 ## paste(unique(ros$Germplasm), collapse = ", ")
-common_varieties <- c("Ambrunes", "Benton", "Bing", "Black Republican", "Cashmere", "Chelan", "Chinook", "Cowiche", "Emperor Francis", "Gil Peck", "Glacier", "Kiona", "Kordia", "Krupnoplodnaya", "Lambert", "Lapins", "Moreau", "Olympus", "Rainier", "Regina", "Schmidt", "Schneiders", "Selah", "Stella", "Summit", "Sunburst", "Sweetheart", "Tieton", "Van", "Venus", "Vic", "Windsor")
 
 ## select and curate data
 ros <- ros[grepl("23-", Germplasm) == FALSE, ] ## remove probable data entry error
@@ -40,12 +39,13 @@ ros <- ros[grepl("23-", Germplasm) == FALSE, ] ## remove probable data entry err
 ## ros <- ros[grepl("PC", Germplasm) == FALSE, ] ## remove unwanted strains
 ## ros <- ros[grepl("Unk", Germplasm) == FALSE, ] ## remove unwanted strains
 
-ros <- ros[grepl(paste0(common_varieties, collapse = "|"), Germplasm), ] ## select rows with common varieties
 
+## ros <- ros[grepl(paste0(common_varieties, collapse = "|"), Germplasm), ] ## select rows with common varieties
+
+## redundant:
 ## for (i in filenam){
 ##     tmp <- fread(i)
 ## tmp[["#"]] <- NULL ## remove unnecessary col
-
 ## print(i)
 ## print(names(tmp))
 ## }
@@ -69,11 +69,11 @@ ros[, startofyear := as.Date(startofyear)]
 ros[, harvest_time_relative := difftime(Harvest_Date, startofyear)]
 
 
-## Check date variables
-ros[, .(Harvest_Date, Harvest_Days, Harvest_Time, harvest_time_relative)]
-## Note: Harvest_Date = Date, Harvest_Days ~160-190 range, Harvest_Time ~ 800-1000 range with decimal places. 
-ros[, .(Bloom_Date, Bloom_Days, Bloom_Time)]
-## Norge: "First bloom required 221 Baskerville-Emin Growing degree days (GDD)" Note: Detta stämmer ungefär med "Bloom_Time"-värdena
+## ## Check date variables (keep this comment)
+## ros[, .(Harvest_Date, Harvest_Days, Harvest_Time, harvest_time_relative)]
+## ## Note: Harvest_Date = Date, Harvest_Days ~160-190 range, Harvest_Time ~ 800-1000 range with decimal places. 
+## ros[, .(Bloom_Date, Bloom_Days, Bloom_Time)]
+## ## Norge: "First bloom required 221 Baskerville-Emin Growing degree days (GDD)" Note: Detta stämmer ungefär med "Bloom_Time"-värdena
 
 ## vars to select cols
 vars_bloom <- c("Bloom_Date", "Bloom_Days", "Bloom_Time")
@@ -102,23 +102,31 @@ bloom_table[, gdd0 := round(gdd-min(gdd), digits = 0)]
 
 ## bloom_table[order(bt), ] ## order by bt
 
+bloom_table
+
 bloom_table[, Germplasm := factor(Germplasm, levels = bloom_table[order(-bt), Germplasm])]
 
+common_varieties <- c("Ambrunes", "Benton", "Bing", "Black Republican", "Cashmere", "Chelan", "Chinook", "Cowiche", "Emperor Francis", "Gil Peck", "Glacier", "Kiona", "Kordia", "Krupnoplodnaya", "Lambert", "Lapins", "Moreau", "Olympus", "Rainier", "Regina", "Schmidt", "Schneiders", "Selah", "Stella", "Summit", "Sunburst", "Sweetheart", "Tieton", "Van", "Venus", "Vic", "Windsor")
+
+toplot <- bloom_table[grepl(paste0(common_varieties, collapse = "|"), Germplasm), ] ## select to plot
+
+toplot <- bloom_table
+
 ## plot bloom time
-p <- ggplot(bloom_table, aes(y=Germplasm, x=bt))
+p <- ggplot(toplot, aes(y=Germplasm, x=bt))
 p_bt <- p + geom_point() + xlab("Start of bloom (days from jan 1st)") + ylab("")
 
-## break_quantiles <- quantile(bloom_table$bt, probs = seq(0, 1, by = 1/5))
+## break_quantiles <- quantile(toplot$bt, probs = seq(0, 1, by = 1/5))
 ## Break at dates: https://stackoverflow.com/questions/39257867/date-minor-breaks-in-ggplot2
 ## plot bloom time relative to lowest bloom time
 ## https://stackoverflow.com/questions/74924921/how-to-put-axis-labels-in-between-the-axis-ticks-in-ggplot2
 
-break_in_5 <- seq.int(from = min(bloom_table$bt0), to = max(bloom_table$bt0), by = max(bloom_table$bt0)/5)
+break_in_5 <- seq.int(from = min(toplot$bt0), to = max(toplot$bt0), by = max(toplot$bt0)/5)
 break_in_5 <- round(break_in_5, digits = 0)
 break_minor <- seq(min(break_in_5)+1, max(break_in_5)-1, by = 1)
 
 ## base plot
-p <- ggplot(bloom_table, aes(y=Germplasm, x=bt0))
+p <- ggplot(toplot, aes(y=Germplasm, x=bt0))
 p_bt0 <- p + geom_point() + xlab("Start of bloom (days from earliest)") + ylab("")
 
 p_bt0 <- p_bt0 + scale_x_continuous(breaks = break_in_5,
@@ -126,9 +134,9 @@ p_bt0 <- p_bt0 + scale_x_continuous(breaks = break_in_5,
 
 ## labels outside plot area
 p_bt0 <- p_bt0 + theme(plot.margin = unit(c(2,1,1,1), "cm"))
-p_bt0 <- p_bt0 + coord_cartesian(ylim = c(0, length(levels(bloom_table$Germplasm))), clip = "off")
+p_bt0 <- p_bt0 + coord_cartesian(ylim = c(0, length(levels(toplot$Germplasm))), clip = "off")
 
-## p_bt0 + annotate("text", x = 1, y = length(levels(bloom_table$Germplasm)) + 2, label = "text")
+## p_bt0 + annotate("text", x = 1, y = length(levels(toplot$Germplasm)) + 2, label = "text")
 ## i <- 1
 
 ## calculate text positions
@@ -143,7 +151,7 @@ for(i in 1:length(text_xpos)){
     p_bt0_annotated <- p_bt0_annotated  +
         annotate("text",
                  x = text_xpos[i],
-                 y = length(levels(bloom_table$Germplasm)) + 2,
+                 y = length(levels(toplot$Germplasm)) + 2,
                  label = paste("Period", i),
                  colour = "aquamarine4")
 }
@@ -153,9 +161,9 @@ for(i in 1:length(text_xpos)){
 ## rgb(0.2,0.5,1,0.7)
 
 ## pacman::p_load("RColorBrewer")
-red <- seq(0, 1 , length.out = length(levels(bloom_table$Germplasm)))
-blue <-rev(seq(0, 1 , length.out = length(levels(bloom_table$Germplasm))))
-green <- seq(-0.85, 0.85 , length.out = length(levels(bloom_table$Germplasm)))
+red <- seq(0, 1 , length.out = length(levels(toplot$Germplasm)))
+blue <-rev(seq(0, 1 , length.out = length(levels(toplot$Germplasm))))
+green <- seq(-0.85, 0.85 , length.out = length(levels(toplot$Germplasm)))
 green <- 1-green*green ## ascending-descending
 usecolors <- rgb(red, green, blue, 0.7)
 
@@ -174,8 +182,8 @@ ggsave("bt_test.png")
 ## display.brewer.pal(n = 8, name = 'RdBu')
 ## display.brewer.all()
 
-## brewer.pal(n = length(levels(bloom_table$Germplasm), name = "RdBu"))
-## display.brewer.pal(n = length(levels(bloom_table$Germplasm)), name = 'RdBu')
+## brewer.pal(n = length(levels(toplot$Germplasm), name = "RdBu"))
+## display.brewer.pal(n = length(levels(toplot$Germplasm)), name = 'RdBu')
 
 ## The average blossoming period for cherries when pollination can take place is about seven to eight days.
 

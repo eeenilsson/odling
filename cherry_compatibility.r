@@ -100,84 +100,9 @@ variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "
 
 ## test pollination groups (only for testing) ---------
 
-## uk sites
-uk_bt <- fread("cherries_pollination_groups_uk.csv")
-uk_bt[, var := tolower(variety)]
-uk_bt[, var := gsub(" ", "_", var)]
-
-## curate var names
-## Note: already matching, although some are missing from genotype data
-
-## curate variables
-uk_bt[, pollination_uk_num := pollination_aggr]
-uk_bt <- uk_bt[, .(var, pollination_aggr)] ## select only aggr bt
-## set interval bt to a decimal
-uk_bt[, pollination_aggr := gsub("2 to 3", "2.5", pollination_aggr)]
-uk_bt[, pollination_aggr := gsub("3 to 4", "3.5", pollination_aggr)]
-uk_bt[, pollination_aggr := gsub("4 to 5", "4.5", pollination_aggr)]
-uk_bt[, pollination_aggr := gsub(" ", "", pollination_aggr)] ## squish
-uk_bt[, pollination_aggr := as.numeric(pollination_aggr)]
-
-names(uk_bt) <- c("var", "blooming_group_uk")
-## uk_bt[, blooming_group := factor(blooming_group, ordered = TRUE, labels = c("Early", "Early mid", "Mid", "Late mid", "Late"))] ## dont use with decimals
-
-## ## test matches and misses
-## uk_bt$var[!uk_bt$var %in% unique(variety_genotype_group$var)]
-## uk_bt$var[uk_bt$var %in% unique(variety_genotype_group$var)]
-## ## Notes on missing:
-## avium but not in genome data:
-## "knights_early_black"
-## "petit_noir"
-## "amber_heart" ## Syn 'Kent Bigarreau'
-## "may_duke" ## Syn. 'Dubbele Meikers'    noted as "sour cherry" by some. "Duke cherry" It is a cross between Prunus avium and Prunus cerasus?
-## "stardust_coveu" ## self-fertile white cherry
-## ## cesarus/sour:
-## "morello"
-## "nabella"
-## Note: these from uk data are not in anfic:
-## SUMMER SUN, ## NAPOLEON, ## MERTON BIGARREAU, ## MERTON GLORY, ## PENNY, ## PETIT NOIR, ## AMBER HEART, ## MAY DUKE, ## SASHA, ## KARINA, ## SASHA, 
 
 
 ## anfic
-anfic_bt <- fread("anfic_blooming_time.csv")
-lookup_gt <- fread("cherry_incompatibility_groups_2020.csv")
-lookup_gt[, s_alleles := gsub(" ", "", s_alleles)]
-
-anfic_bt[, var := tolower(label)]
-anfic_bt <- anfic_bt[, .(var, pollination_period_anfic, label, comp_gr_anfic)]
-anfic_bt[, var := gsub(" \\(.*", "", var)] ## remove parens
-anfic_bt[, var := gsub("-", "_", var)]
-anfic_bt[, var := gsub(" ", "_", var)]
-names(anfic_bt) <- c("var", "blooming_group_anfic", "label", "comp_gr_anfic")
-anfic_bt[, blooming_group_anfic := factor(blooming_group_anfic, ordered = TRUE, labels = c("Early", "Early mid", "Mid", "Late mid", "Late"))]
-anfic_bt <- lookup_gt[anfic_bt, on = c("group" = "comp_gr_anfic")] ## add anfic s_alleles
-
-
-## test matches and misses
-nomatch <- anfic_bt$var[!anfic_bt$var %in% variety_genotype_group$var]
-## anfic_bt$var[unique(anfic_bt$var) %in% unique(variety_genotype_group$var)]
-## ## note: many misses, todo: explore this
-## cols <- c("variety", "var", "genotype") ## , "genotype"
-## variety_genotype_group[grepl("sms", tolower(variety)), ..cols]
-## anfic_bt[grepl("douglas", var), ]
-## nomatch
-
-## rename anfic var to match genotype data
-varnames_tmp <- c(  ## from (anfic) = to (genotype data)
-    'simcoe' = "probla", ## probably this, same GT
-'starkcrimson' = "starkrimson",
-'burgundy_pearl' = "burgandy_pearl",
-'emperor' = "emperor_francis", ## probably this, same gt
-'schneiders' = "schneiders_spate_knorpelkirsche", ## same gt, aka nordwunder
-'ziraat_0900' = "0900_ziraat",
-'early_korvik' = "korvik" ## same gt
-)
-## not found:
-    ## 'tulare' = ""
-    ## 'st_margaret', = ""
-## 'black_douglas', = ""  ## not same as sir douglas
-## 'simone', 'bing', 'burgsdorf', 'empress', 'rons_seedling', 'supreme', 'australise', 'spc335', 'spc276', 'ny_13696', 'ny_13788', 'ny_13791', 'spc414', 'spc411', 'spc424', 'sms_290', 'bf_9', 'spc234', 'sofia_spc106', 'spc342', 'ny_412068', 'ny_564', 'sms_33', 'sms_311', 'pc_7064_3', 'pc_7616_4', 'ny_270', 'ny_2131', 'ny_7690', 'ny_9801', 'ny_413087', 'ny_414205', 'pc_7309_4', 'pc_8008_1', 'ny_410213', 'ny_412113', 'ny_9295', 'pc_7636_1', = "" 
-anfic_bt$var <- query_label(anfic_bt$var, varnames_tmp)
 
 
 ## ## restrict to varieties of interest for test
@@ -192,7 +117,7 @@ anfic_bt$var <- query_label(anfic_bt$var, varnames_tmp)
 ## restr_uk <- pollination_groups_test[grepl(paste0(restr, collapse = "|"), var), ]
 
 
-## using just anfic data for testing
+## using just anfic data for testing (see phenology)
 anfic_selected <- anfic_bt[!duplicated(var), ]
 anfic_selected <- anfic_selected[!grepl("[0-9]", var), ] ## skip those with numbers in name
 anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in genotype data
