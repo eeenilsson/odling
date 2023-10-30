@@ -318,56 +318,57 @@ eur_bt_aggr <- eur_bt[, .(
 ## lm and adjust instead?
 str(eur_bt)
 eur_bt[, var := as.factor(var)]
-lm(bt_start ~ var, data = eur_bt)
+m1 <- lm(bt_start ~ var + site + year, data = eur_bt)
+summary(m1)
+lm_bt_start <- m1$coef
+lm_bt_start <- data.table(var = names(lm_bt_start),
+           coef = lm_bt_start)
+lm_bt_start <- lm_bt_start[grepl(paste0(unique(eur_bt$var), collapse = "|"), var), ] ## skip year, site coefs
+lm_bt_start <- lm_bt_start[!grepl("site", var), ] ## skip year, site coefs
+## note: coef should be the mean bt adjusted for site and year
 
-eur_bt_aggr
+## eur_bt_aggr <- eur_bt[, .(
+##     bt_start = mean(bt_start, na.rm = TRUE),
+##     bt_full = mean(bt_full, na.rm = TRUE),
+##     bt_end = mean(bt_end, na.rm = TRUE)
+## ),
+##                 by = list(var, year, site)]
 
-eur_bt_aggr <- eur_bt[, .(
-    bt_start = mean(bt_start, na.rm = TRUE),
-    bt_full = mean(bt_full, na.rm = TRUE),
-    bt_end = mean(bt_end, na.rm = TRUE)
-),
-                by = list(var, year, site)]
-
-
-
-## take the maen bt for each var and site (removing year)
-eur_bt_aggr <- eur_bt[, .(
-    bt_start = mean(bt_start, na.rm = TRUE),
-    bt_full = mean(bt_full, na.rm = TRUE),
-    bt_end = mean(bt_end, na.rm = TRUE)
-),
-                by = list(var, site)]
-
-
-## calculate bt groups by var, site and year
-eur_bt_quintile <- eur_bt[, .(
-    bt_start_q = .bincode(bt_start, breaks = quantile(bt_start, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE),
-    bt_full_q = .bincode(bt_full, breaks = quantile(bt_full, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE),
-    bt_end_q = .bincode(bt_end, breaks = quantile(bt_end, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)
-    ),
-                by = list(var, site, year)]
-
-## take the mean quintile for each var (removing site and year)
-
-eur_bt_quintile <- eur_bt_quintile[, .(
-    bt_start_q = round(mean(bt_start_q, na.rm = TRUE), digits = 0),
-    bt_full_q = round(mean(bt_full_q, na.rm = TRUE), digits = 0),
-    bt_end_q = round(mean(bt_end_q, na.rm = TRUE), digits = 0)
-),
-                by = list(var)]
-
-View(eur_bt_quintile)
+## ## take the maen bt for each var and site (removing year)
+## eur_bt_aggr <- eur_bt[, .(
+##     bt_start = mean(bt_start, na.rm = TRUE),
+##     bt_full = mean(bt_full, na.rm = TRUE),
+##     bt_end = mean(bt_end, na.rm = TRUE)
+## ),
+##                 by = list(var, site)]
 
 
-str(eur_bt_quintile)
-eur_bt_quintile[!is.na(bt_start_q) & !is.na(bt_full_q) & bt_start_q != bt_full_q, ]
+## ## calculate bt groups by var, site and year
+## eur_bt_quintile <- eur_bt[, .(
+##     bt_start_q = .bincode(bt_start, breaks = quantile(bt_start, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE),
+##     bt_full_q = .bincode(bt_full, breaks = quantile(bt_full, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE),
+##     bt_end_q = .bincode(bt_end, breaks = quantile(bt_end, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)
+##     ),
+##                 by = list(var, site, year)]
 
-quantile(eur_bt$bt_start, probs = seq(0, 1, 1/5), na.rm = TRUE)
+## ## take the mean quintile for each var (removing site and year)
 
-eur_bt[, .(bt_start = mean(bt_start, na.rm = TRUE)),
-                by = list(var, site, year)]
-unique(eur_bt$site)
+## eur_bt_quintile <- eur_bt_quintile[, .(
+##     bt_start_q = round(mean(bt_start_q, na.rm = TRUE), digits = 0),
+##     bt_full_q = round(mean(bt_full_q, na.rm = TRUE), digits = 0),
+##     bt_end_q = round(mean(bt_end_q, na.rm = TRUE), digits = 0)
+## ),
+##                 by = list(var)]
+
+## View(eur_bt_quintile)
+
+## eur_bt_quintile[!is.na(bt_start_q) & !is.na(bt_full_q) & bt_start_q != bt_full_q, ]
+
+## eur_bt[, .(bt_start = mean(bt_start, na.rm = TRUE)),
+##                 by = list(var, site, year)]
+## unique(eur_bt$site)
+
+
 
 
 ## select variables
