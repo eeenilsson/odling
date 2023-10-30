@@ -128,19 +128,45 @@ pollination_groups_test[, blooming_group := factor(blooming_group, ordered = TRU
 
 ## anfic
 anfic_bt <- fread("anfic_blooming_time.csv")
+lookup_gt <- fread("cherry_incompatibility_groups_2020.csv")
+lookup_gt[, s_alleles := gsub(" ", "", s_alleles)]
 
 anfic_bt[, var := tolower(label)]
-anfic_bt <- anfic_bt[, .(var, pollination_period_anfic, label)]
+anfic_bt <- anfic_bt[, .(var, pollination_period_anfic, label, comp_gr_anfic)]
 anfic_bt[, var := gsub(" \\(.*", "", var)] ## remove parens
 anfic_bt[, var := gsub("-", "_", var)]
 anfic_bt[, var := gsub(" ", "_", var)]
-names(anfic_bt) <- c("var", "blooming_group", "label")
+names(anfic_bt) <- c("var", "blooming_group", "label", "comp_gr_anfic")
 anfic_bt[, blooming_group := factor(blooming_group, ordered = TRUE, labels = c("Early", "Early mid", "Mid", "Late mid", "Late"))]
+anfic_bt <- lookup_gt[anfic_bt, on = c("group" = "comp_gr_anfic")] ## add anfic s_alleles
 
-## ## test matches and misses
-## anfic_bt$var[!unique(anfic_bt$var) %in% unique(variety_genotype_group$var)]
+
+## test matches and misses
+nomatch <- anfic_bt$var[!anfic_bt$var %in% variety_genotype_group$var]
 ## anfic_bt$var[unique(anfic_bt$var) %in% unique(variety_genotype_group$var)]
 ## ## note: many misses, todo: explore this
+## cols <- c("variety", "var", "genotype") ## , "genotype"
+## variety_genotype_group[grepl("sms", tolower(variety)), ..cols]
+## anfic_bt[grepl("douglas", var), ]
+## nomatch
+
+## rename anfic var to match genotype data
+varnames_tmp <- c(  ## from (anfic) = to (genotype data)
+    'simcoe' = "probla", ## probably this, same GT
+'starkcrimson' = "starkrimson",
+'burgundy_pearl' = "burgandy_pearl",
+'emperor' = "emperor_francis", ## probably this, same gt
+'schneiders' = "schneiders_spate_knorpelkirsche", ## same gt, aka nordwunder
+'ziraat_0900' = "0900_ziraat",
+'early_korvik' = "korvik" ## same gt
+)
+## not found:
+    ## 'tulare' = ""
+    ## 'st_margaret', = ""
+## 'black_douglas', = ""  ## not same as sir douglas
+## 'simone', 'bing', 'burgsdorf', 'empress', 'rons_seedling', 'supreme', 'australise', 'spc335', 'spc276', 'ny_13696', 'ny_13788', 'ny_13791', 'spc414', 'spc411', 'spc424', 'sms_290', 'bf_9', 'spc234', 'sofia_spc106', 'spc342', 'ny_412068', 'ny_564', 'sms_33', 'sms_311', 'pc_7064_3', 'pc_7616_4', 'ny_270', 'ny_2131', 'ny_7690', 'ny_9801', 'ny_413087', 'ny_414205', 'pc_7309_4', 'pc_8008_1', 'ny_410213', 'ny_412113', 'ny_9295', 'pc_7636_1', = "" 
+anfic_bt$var <- query_label(anfic_bt$var, varnames_tmp)
+
 
 ## ## restrict to varieties of interest for test
 ## anfic_bt$var[anfic_bt$var %in% unique(dta$var)]
@@ -155,7 +181,6 @@ anfic_bt[, blooming_group := factor(blooming_group, ordered = TRUE, labels = c("
 
 
 ## using just anfic data for testing
-
 anfic_selected <- anfic_bt[!duplicated(var), ]
 anfic_selected <- anfic_selected[!grepl("[0-9]", var), ] ## skip those with numbers in name
 anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in genotype data
@@ -259,7 +284,6 @@ dtplot[, compat_proximity := "no"]
 dtplot[proximity == 0 & compatibility != 0, compat_proximity := "same"]
 dtplot[proximity == 1 & compatibility != 0, compat_proximity := "close"]
 
-
 ## Variable type
 ## dtplot[, compatibility := as.numeric(compatibility)]
 dtplot[, target:= as.factor(target)]
@@ -268,11 +292,8 @@ dtplot[, pollinator_blooming_group_num := as.numeric(pollinator_blooming_group)]
 dtplot[, blooming_group_num := as.numeric(blooming_group)]
 ## str(dtplot)
 
-
 setkey(dtplot, target)
-str(dtplot)
-
-
+## str(dtplot)
 
 ## plot
 pacman::p_load(ggplot2)
@@ -291,12 +312,12 @@ dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = u
 
 ## plot base
 p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, blooming_group_num))) +
-  geom_point(aes(size = compatibility, colour = compat_proximity)) +
-    scale_color_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3"))
+  geom_point(aes(size = compatibility, colour = compat_proximity))
 
 ## plot customization
 plot_pollination_table <- p +
     scale_size_area() +
+    scale_color_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3")) +
     theme(
         plot.margin = unit(c(1.5, 1.5, 1.5, 1.5), "centimeters"),
         legend.position = "none",
@@ -311,7 +332,7 @@ plot_pollination_table <- p +
          y = "Mottagare")
 
 ## add strips
-plot_pollination_table +
+plot_pollination_table <- plot_pollination_table +
     facet_grid(~ pollinator_blooming_group,
                scales = "free",
                ## switch = "x",
@@ -325,13 +346,10 @@ plot_pollination_table +
          strip.placement = "outside"         
          )
 
-## todo: gcollor different green depending on bt match
-## meta
+plot_pollination_table
+## meta:
 ## Size of dot corresponds to genetic compatibility, color to blooming time (dark green = same bloomin group, light green = proximity 1 in blooming group, red = outside proximity blooming groups OR not genetically compatible)
 
-
-
-?facet_grid
 
 dtplot[grepl("samba|frisco", target), ]
 
