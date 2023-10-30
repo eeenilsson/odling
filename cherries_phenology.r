@@ -23,13 +23,7 @@
 source('cherries_rosbreed.r') ## dataset analysis
 
 
-## Blooming time ------------------------------
-
-## from rosbrred script (quintiles of bt and gdd) ------
-rosbreed_bt <- fread("rosbreed_bt.csv")
-## compare with anfic
-tmp <- anfic_bt[rosbreed_bt, on = "var"][, .(var, blooming_group_anfic, bt_quintile, gdd_quintile)]
-tmp[, anfic_bg := as.numeric(blooming_group_anfic)][, .(var, anfic_bg, bt_quintile, gdd_quintile)]
+## Blooming time =============================================
 
 ## Australian ANFIC blooming periods ------
 ## fread("anfic_blooming_time.csv")
@@ -122,14 +116,240 @@ names(uk_bt) <- c("var", "blooming_group_uk")
 ## Note: these from uk data are not in anfic:
 ## SUMMER SUN, ## NAPOLEON, ## MERTON BIGARREAU, ## MERTON GLORY, ## PENNY, ## PETIT NOIR, ## AMBER HEART, ## MAY DUKE, ## SASHA, ## KARINA, ## SASHA, 
 
+## from rosbreed script (quintiles of bt and gdd) ------
+rosbreed_bt <- fread("rosbreed_bt.csv")
+
+## European data ----------------------
+
+## dataset
+eur_bt <- fread("sweet_cherry_phenology_data_1978_2015.csv")
+## sanitize names
+names(eur_bt) <- tolower(names(eur_bt))
+names(eur_bt) <- gsub(" \\(", "_", names(eur_bt))
+names(eur_bt) <- gsub("\\)", "", names(eur_bt))
+names(eur_bt) <- gsub(" ", "_", names(eur_bt))
+
+## explore
+eur_bt[!is.na(beginning_of_flowering) & is.na(beginning_of_flowering_date), ]
+eur_bt[is.na(beginning_of_flowering) & beginning_of_flowering_date != "", ]
+## Note: some have bt date but not time
+## str(eur_bt)
+## unique(eur_bt$beginning_of_flowering_date)
+
+## "" to NA
+eur_bt[beginning_of_flowering_date == "", beginning_of_flowering_date := NA]
+eur_bt[full_flowering_date == "", full_flowering_date := NA]
+eur_bt[end_of_flowering_date == "", end_of_flowering_date := NA]
+
+## fix date vars
+eur_bt[!is.na(beginning_of_flowering_date), beginning_of_flowering_date := paste0(year, "/", beginning_of_flowering_date)]
+eur_bt[!is.na(full_flowering_date), full_flowering_date := paste0(year, "/", full_flowering_date)]
+eur_bt[!is.na(end_of_flowering_date), end_of_flowering_date := paste0(year, "/", end_of_flowering_date)]
+eur_bt[, beginning_of_flowering_date := as.Date(beginning_of_flowering_date, "%Y/%d/%m")]
+eur_bt[, end_of_flowering_date := as.Date(end_of_flowering_date, "%Y/%d/%m")]
+eur_bt[, full_flowering_date := as.Date(full_flowering_date, "%Y/%d/%m")]
+eur_bt[, startofyear := paste0(year, "/01/01")] 
+eur_bt[, startofyear := as.Date(startofyear, "%Y/%d/%m")]
+
+eur_bt[, bt_start := difftime(beginning_of_flowering_date, startofyear)]
+eur_bt[, bt_full := difftime(full_flowering_date, startofyear)]
+eur_bt[, bt_end := difftime(end_of_flowering_date, startofyear)]
+
+eur_bt[, bt_start := as.numeric(bt_start)]
+eur_bt[, bt_full := as.numeric(bt_full)]
+eur_bt[, bt_end := as.numeric(bt_end)]
+
+## c("site", "year", "cultivar")
+
+## rename var to match genotype data
+## eur_bt[, clone := "  Clone  "]
+eur_bt[, var := cultivar]
+eur_bt[, var := tolower(var)]
+eur_bt[, var := gsub(" ", "_", var)]
+eur_bt[, var := gsub("'", "", var)]
+## eur_bt[, unique(var)]
+
+## explore misses
+nomatch <- eur_bt$var[!eur_bt$var %in% variety_genotype_group$var]
+nomatch <- unique(nomatch)
+paste(nomatch, collapse = ", ")
+cols <- c("variety", "var", "genotype") ## , "genotype"
+variety_genotype_group[grepl("yna", tolower(variety)), ..cols]
+
+varnames_tmp <- c(  ## from (eur) = to (genotype data)
+'satin_sumele' = "satin",
+'bellise_bedel' = "bellise",
+'ziraat' = "0900_ziraat",
+'rainier_sport' = "rainier",
+'imperiale' = "imperiale_blancale",
+'belge' = "ferrovia",
+'sweetheart_sumtare' = "sweetheart",
+'duroni_3' = "durone_nero_3",
+'hedelfingen' = "hedelfinger",
+## 'simone_chaleat' = "", ## simonis?
+'stark_hardy_giant' = "starking_hardy_giant",
+## 'vesseau' = "",
+## 'bargioni' = "",
+## 'cerise_corse' = "",
+## 'cerise_montmorency' = "",
+'verdel_ferbolus' = "ferbolus",
+'arcina_fercer' = "fercer",
+## 'maipot' = "",
+'marvin_niram' = "marvin",
+'simcoe_probla' = "probla",
+'tragana_dedessa' = "tragana_dedessa",
+'celeste_sumpaca' = "celeste",
+## 'lodi_large_red' = "",
+## 'delice_de_malicorne_agoudel' = "",
+'durona_di_cesena' = "durone_di_cesena",
+## 'fougerouse' = "",
+## 'graffioni' = "",
+'cristalina_sumnue' = "cristalina",
+## 'napoleon_compact' = "",
+'canada_giant_sumgita' = "canada_giant",
+## 'ruby_maru' = "",
+## 'vicentina' = "",
+'primulat_ferprime' = "primulat",
+'new_moon_sumini' = "sumini",
+'samba_sumste' = "samba",
+'sonata_sumleta' = "sonata",
+'coralise_gardel' = "coralise",
+'earlise_rivedel' = "earlise",
+## 'bianca_di_verona' = "",
+## 'sabina' = "",
+## 'successa' = "",
+'early_red_maraly' = "early_garnet",
+## 'bouarkoub' = "",
+## 'uriase_de_bistrita' = "",
+## 'pico_color' = "",
+## 'peter' = "",
+'bigalise_enjidel' = "bigalise",
+## 'babelle' = "",
+## 'arodel' = "",
+## 'ferrador' = "",
+## 'firm_red_marim' = "",
+## 'belle_de_fabrega' = "",
+## 'baia' = "",
+## 'knuthenborg' = "",
+## 'kavics' = "",
+## 'annelone' = "",
+## 'vittoria' = "",
+## 'sumcoja' = "",
+## 'enrica' = "",
+'weisse_herzkirche' = "weisse_herzkirsche",
+## 'alex' = "", ## alexus?
+## 'renaldi' = "",
+## 'guillaume' = "",
+## 'ero' = "",
+## 'tardif_de_vignola' = "durone_nero_ii",
+## 'turca' = "",
+## 'ferracida' = "",
+## 'zaicourtif' = "",
+## 'sharo' = "",
+'durone_nero_iii' = "durone_nero_3",
+## 'kunzego' = "",
+## 'grossa_gamba' = "",
+## 'sumcoro' = "",
+## 'vigred' = "",
+## 'panthere' = "",
+## 'di_vignola_primo' = "",
+## 'olympic' = "",
+## 'tanguy' = "",
+## 'bing' = "",
+'tragana_edessis_agra' = "tragana_dedessa",
+## 'sandar' = "",
+## 'cerella' = "",
+## 'gubinska_czarna' = "", ## czarna_pozna ?
+## 'kutahya' = "",
+## 'francesca' = "",
+## 'negus' = "",
+## 'giulietta' = "",
+'pico_l_negro' = "pico_negro"
+## 'montmorency' = "",
+## 'durona_di_arezzo' = "",
+## 'late_maria' = "",
+## 'sweet_ann' = "",
+## 'girodel' = "",
+## 'lucyna' = ""    
+)
+eur_bt$var <- query_label(eur_bt$var, varnames_tmp)
+
+
+## variable types
+eur_bt[, year := as.factor(year)]
+eur_bt[, year := as.factor(site)]
+
+## agregate
+## Note: Aggregate using median to avoid data entry errors?
+
+## eur_bt[, .(bt_start_q = cut(bt_start, breaks = quantile(bt_start, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)  ),
+##                 by = list(var, site, year)]
+
+
+## calculate bt groups by var, site and year
+eur_bt_start_q <- eur_bt[, .(bt_start_q = .bincode(bt_start, breaks = quantile(bt_start, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)  ),
+                by = list(var, site, year)]
+
+
+quantile(eur_bt$bt_start, probs = seq(0, 1, 1/5), na.rm = TRUE)
+
+eur_bt[, .(bt_start = mean(bt_start, na.rm = TRUE)),
+                by = list(var, site, year)]
+unique(eur_bt$site)
+
+
+## select variables
+bloom_table_eur <- eur_bt[, .(var, site, year, bt_start, bt_full, bt_end)]
 
 
 
 
 
+str(eur_bt)
+names(eur_bt)
 
 
 
+## Metadata:
+## Sweet cherry phenology data: 1978 - 2015
+## Ref: Wenden, B., Campoy, J., Lecourt, J. et al. A collection of European sweet cherry phenology data for assessing climate change. Sci Data 3, 160108 (2016). https://doi.org/10.1038/sdata.2016.108
+## https://doi.org/10.1038/sdata.2016.108
+## [A collection of European sweet cherry phenology data for assessing climate change](https://www.nature.com/articles/sdata2016108)
+## - [Data](https://datadryad.org/stash/dataset/doi:10.5061/dryad.1d28m)
+## The dataset file includes the dataset and a metadata spreadsheet with the description of all information in the dataset spreadsheet.
+
+## Header	Description
+## Country	
+## Institute	Research or experimental institute attached to the experimental station
+## Station		Name of station
+## Latitude	Latitude in decimal degrees
+## Longitude	Longitude in decimal degrees
+## Altitude	Altitude in meters
+## Plantation	Year of plantation of the tree
+## Year		Year of observation
+## Cultivar	Registered name of the cutlivar
+## Clone		Number of clone
+## Rootstock	Name of the rootstock
+## Beginning of flowering (date)	Date observed for the BBCH stage corresponding to beginning of flowering
+## Full flowering (date)	Date observed for the BBCH stage corresponding to full flowering
+## End of flowering (date)	Date observed for the BBCH stage corresponding to end of flowering
+## Beginning of maturity (date)	Date observed for the BBCH stage corresponding to maturity
+## Beginning of flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to beginning of flowering
+## Full flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to full flowering
+## End of flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to end of flowering
+## Beginning of maturity	Number of days in year [1 - 365/366] for the BBCH stage corresponding to maturity
+## Flowering duration	Number of days between beginning and end of flowering
+## Sweet cherry phenological data were collected from two networks: flowering and maturity dates for up to 191 reference cultivars, and from 10 sites, were extracted from the French database,
+
+
+
+## compare with anfic ------------------
+tmp <- anfic_bt[rosbreed_bt, on = "var"][, .(var, blooming_group_anfic, bt_quintile, gdd_quintile)]
+tmp[, anfic_bg := as.numeric(blooming_group_anfic)][, .(var, anfic_bg, bt_quintile, gdd_quintile)]
+
+
+
+## more ------------------
 
 
 
@@ -137,7 +357,7 @@ names(uk_bt) <- c("var", "blooming_group_uk")
 
 ## fread("bbch_scale_stone_fruit.csv")
 
-## fread("cherries_gardenfocused_uk_varieties_description.csv") ## long format
+## fread("cherries_gardenfocused_uk_varieties_description.csv") ## long format, has pollination group etc
 
 
 ## Temperature data SMHI
@@ -178,46 +398,3 @@ names(uk_bt) <- c("var", "blooming_group_uk")
 ## - stationen har endast levererat värden med kvalitetskod Röd (R). Dessa levereras ej.
 
 
-
-
-
-
-## Scientific data --------------------------
-
-## dataset
-## dta_phenology <- fread("sweet_cherry_phenology_data_1978_2015.csv")
-
-## Sweet cherry phenology data: 1978 - 2015
-
-## Metadata
-
-## Ref: Wenden, B., Campoy, J., Lecourt, J. et al. A collection of European sweet cherry phenology data for assessing climate change. Sci Data 3, 160108 (2016). https://doi.org/10.1038/sdata.2016.108
-## https://doi.org/10.1038/sdata.2016.108
-## [A collection of European sweet cherry phenology data for assessing climate change](https://www.nature.com/articles/sdata2016108)
-
-## - [Data](https://datadryad.org/stash/dataset/doi:10.5061/dryad.1d28m)
-
-## The dataset file includes the dataset and a metadata spreadsheet with the description of all information in the dataset spreadsheet.
-
-## Header	Description
-## Country	
-## Institute	Research or experimental institute attached to the experimental station
-## Station		Name of station
-## Latitude	Latitude in decimal degrees
-## Longitude	Longitude in decimal degrees
-## Altitude	Altitude in meters
-## Plantation	Year of plantation of the tree
-## Year		Year of observation
-## Cultivar	Registered name of the cutlivar
-## Clone		Number of clone
-## Rootstock	Name of the rootstock
-## Beginning of flowering (date)	Date observed for the BBCH stage corresponding to beginning of flowering
-## Full flowering (date)	Date observed for the BBCH stage corresponding to full flowering
-## End of flowering (date)	Date observed for the BBCH stage corresponding to end of flowering
-## Beginning of maturity (date)	Date observed for the BBCH stage corresponding to maturity
-## Beginning of flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to beginning of flowering
-## Full flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to full flowering
-## End of flowering	Number of days in year [1 - 365/366] for the BBCH stage corresponding to end of flowering
-## Beginning of maturity	Number of days in year [1 - 365/366] for the BBCH stage corresponding to maturity
-## Flowering duration	Number of days between beginning and end of flowering
-## Sweet cherry phenological data were collected from two networks: flowering and maturity dates for up to 191 reference cultivars, and from 10 sites, were extracted from the French database,
