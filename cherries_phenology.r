@@ -285,19 +285,40 @@ eur_bt[, site := as.factor(site)]
 ## eur_bt[, .(bt_start_q = cut(bt_start, breaks = quantile(bt_start, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)  ),
 ##                 by = list(var, site, year)]
 
-tmp <- eur_bt[site == "Vienna", .(var, site, year, bt_start, first_bt_start)]
-View(tmp)
-## calculate the bt relative to the lowest bt
+## test <- eur_bt[, dupl := duplicated(year), by = list(var, site)]
+## test <- test[dupl == TRUE, .(var, site, year, bt_start, bt_full, bt_end)]
+## View(test)
+## ## Note: there can be multiple entries for a certain var within a year and site
 
+## tmp <- eur_bt[site == "Vienna", .(var, site, year, bt_start, first_bt_start)]
+## setkey(tmp, var)
+
+## agrregate
 eur_bt_aggr <- eur_bt
-eur_bt_aggr[, first_bt_start := min(bt_start), by = c("var", "site", "year")] 
 
+## ## calculate the bt relative to the lowest bt for that year and site
+## eur_bt_aggr[, first_bt_start := min(bt_start, na.rm = TRUE), by = c("site", "year")] ## works but too few rows to be useful
+## eur_bt_aggr[, first_bt_relative := bt_start - first_bt_start]
+## tmp <- eur_bt_aggr[, .(var, site, year, bt_start, first_bt_start, first_bt_relative)]
+## tmp <- tmp[site == "Balandran", ]
+## setkey(tmp, "year")
+## View(tmp)
+
+## eur_bt[site == "Montauban", .(var, site, year, bt_start, bt_full)]
+## Note: Some years BT start is observed, some BT full
+
+## take the mean bt for each site and var, aggregating over year
 eur_bt_aggr <- eur_bt[, .(
-    bt_start = bt_start - min(bt_start, na.rm = TRUE),
-    bt_full = bt_full - min(bt_full, na.rm = TRUE),
-    bt_end = bt_end - min(bt_end, na.rm = TRUE)
+    bt_start = mean(bt_start, na.rm = TRUE),
+    bt_full = mean(bt_full, na.rm = TRUE),
+    bt_end = mean(bt_end, na.rm = TRUE)
 ),
-                by = list(var, year, site)]
+                by = list(var, site)]
+
+## lm and adjust instead?
+str(eur_bt)
+eur_bt[, var := as.factor(var)]
+lm(bt_start ~ var, data = eur_bt)
 
 eur_bt_aggr
 
