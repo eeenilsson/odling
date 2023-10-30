@@ -1,5 +1,35 @@
 ## Genotypes data--------------------------------------------
+
+## functions
 pacman::p_load(data.table)
+
+compat <- function(genotype_a, genotype_b){
+    ## pollinator
+    a1 <-  strsplit(genotype_a, "S")[[1]][2]
+    a2 <-  strsplit(genotype_a, "S")[[1]][3]
+    ## target
+    b1 <-  strsplit(genotype_b, "S")[[1]][2]
+    b2 <-  strsplit(genotype_b, "S")[[1]][3]
+    ## pollen sucess = TRUE
+    p1 <- (a1 != b1 & a1 != b2) | a1 == "4'" | a1 == "3'" | a1 == "5'"  
+    p2 <- (a2 != b1 & a2 != b2) | a2 == "4'" | a2 == "3'" | a2 == "5'"
+    ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
+    if(a1 == "4" & b1 == "4'"){p1 <- FALSE}
+    if(a2 == "4" & b2 == "4'"){p2 <- FALSE}
+    ## Sum
+    comp <- sum(p1, p2)
+    return(comp)
+
+    ## calculate relative compatibility
+    ## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
+    ## Enstaka universella givare saknar också S4**’**.
+    ## S3' =  SC
+    ## S5' =  SC
+}
+
+## compat("S1S2", "S1S3")
+## compat("S4'S2", "S1S3")
+## compat("S3S4'", "S3S4'")
 
 ## load data files --------------------
 
@@ -116,6 +146,9 @@ variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "
 ## restr <- pollination_groups_test$var[pollination_groups_test$var %in% unique(dta$var)]
 ## restr_uk <- pollination_groups_test[grepl(paste0(restr, collapse = "|"), var), ]
 
+## use all var that have blooming group data, see phenology.r
+swed <- fread("cherries_table.csv")
+bg_selected <- blooming_group_aggr[grepl(paste0(swed$var, collapse = "|"), var), ] ## select those noted in cherries_table.csv
 
 ## using just anfic data for testing (see phenology)
 anfic_selected <- anfic_bt[!duplicated(var), ]
@@ -135,33 +168,6 @@ dta_toplot <- variety_genotype_group[anfic_selected, on = "var"] ## all selected
 ## genotype_a <- "S3S4'"
 ## genotype_b <- "S3S4'"
 
-compat <- function(genotype_a, genotype_b){
-    ## pollinator
-    a1 <-  strsplit(genotype_a, "S")[[1]][2]
-    a2 <-  strsplit(genotype_a, "S")[[1]][3]
-    ## target
-    b1 <-  strsplit(genotype_b, "S")[[1]][2]
-    b2 <-  strsplit(genotype_b, "S")[[1]][3]
-    ## pollen sucess = TRUE
-    p1 <- (a1 != b1 & a1 != b2) | a1 == "4'" | a1 == "3'" | a1 == "5'"  
-    p2 <- (a2 != b1 & a2 != b2) | a2 == "4'" | a2 == "3'" | a2 == "5'"
-    ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
-    if(a1 == "4" & b1 == "4'"){p1 <- FALSE}
-    if(a2 == "4" & b2 == "4'"){p2 <- FALSE}
-    ## Sum
-    comp <- sum(p1, p2)
-    return(comp)
-
-    ## calculate relative compatibility
-    ## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
-    ## Enstaka universella givare saknar också S4**’**.
-    ## S3' =  SC
-    ## S5' =  SC
-}
-
-## compat("S1S2", "S1S3")
-## compat("S4'S2", "S1S3")
-## compat("S3S4'", "S3S4'")
 
 ## dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, blooming_group_anfic, incompatibility_group, label)]
 

@@ -315,9 +315,9 @@ eur_bt_aggr <- eur_bt[, .(
 ),
                 by = list(var, site)]
 
-## lm and adjust instead?
-str(eur_bt)
+## lm and adjust
 eur_bt[, var := as.factor(var)]
+
 m1 <- lm(bt_start ~ var + site + year, data = eur_bt)
 summary(m1)
 lm_bt_start <- m1$coef
@@ -325,7 +325,34 @@ lm_bt_start <- data.table(var = names(lm_bt_start),
            coef = lm_bt_start)
 lm_bt_start <- lm_bt_start[grepl(paste0(unique(eur_bt$var), collapse = "|"), var), ] ## skip year, site coefs
 lm_bt_start <- lm_bt_start[!grepl("site", var), ] ## skip year, site coefs
-## note: coef should be the mean bt adjusted for site and year
+## groups defined as quantiles of the regression coefficient
+lm_bt_start[, bt_start_gr := cut(coef, breaks = quantile(coef, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)]
+lm_bt_start[, bt_start_gr := as.numeric(bt_start_gr)]
+## summary(lm_bt_start) ## min tom max = 33 days
+lm_bt_start <- lm_bt_start[, .(var, bt_start_gr)]
+
+m1 <- lm(bt_full ~ var + site + year, data = eur_bt)
+summary(m1)
+lm_bt_full <- m1$coef
+lm_bt_full <- data.table(var = names(lm_bt_full),
+           coef = lm_bt_full)
+lm_bt_full <- lm_bt_full[grepl(paste0(unique(eur_bt$var), collapse = "|"), var), ] ## skip year, site coefs
+lm_bt_full <- lm_bt_full[!grepl("site", var), ] ## skip year, site coefs
+## groups defined as quantiles of the regression coefficient
+lm_bt_full[, bt_full_gr := cut(coef, breaks = quantile(coef, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)]
+lm_bt_full[, bt_full_gr := as.numeric(bt_full_gr)]
+## summary(lm_bt_full) ## min tom max = 33 days
+lm_bt_full <- lm_bt_full[, .(var, bt_full_gr)]
+
+lm_bt_start$var[!lm_bt_start$var %in% lm_bt_full$var] ## two more in start
+## lm_bt_start$var[!lm_bt_full$var %in% lm_bt_start$var] ## none
+
+tmp <- lm_bt_full[lm_bt_start, on = "var"]
+tmp[bt_full_gr != bt_start_gr,] ## diff is maximum 1 so use start
+## eur_bt[!is.na(bt_start) & !is.na(bt_full), length(unique(var))]
+lm_bt_start[, var := gsub("^var", "", var)] ## sanitize
+
+eur_bt_gr <- lm_bt_start
 
 ## eur_bt_aggr <- eur_bt[, .(
 ##     bt_start = mean(bt_start, na.rm = TRUE),
@@ -371,19 +398,14 @@ lm_bt_start <- lm_bt_start[!grepl("site", var), ] ## skip year, site coefs
 
 
 
-## select variables
-bloom_table_eur <- eur_bt[, .(var, site, year, bt_start, bt_full, bt_end)]
+## ## select variables
+## bloom_table_eur <- eur_bt[, .(var, site, year, bt_start, bt_full, bt_end)]
+## str(eur_bt)
+## names(eur_bt)
 
 
 
-
-
-str(eur_bt)
-names(eur_bt)
-
-
-
-## Metadata:
+## Metadata: #####################################################
 ## Sweet cherry phenology data: 1978 - 2015
 ## Ref: Wenden, B., Campoy, J., Lecourt, J. et al. A collection of European sweet cherry phenology data for assessing climate change. Sci Data 3, 160108 (2016). https://doi.org/10.1038/sdata.2016.108
 ## https://doi.org/10.1038/sdata.2016.108
@@ -416,16 +438,46 @@ names(eur_bt)
 
 
 
-## compare with anfic ------------------
-tmp <- anfic_bt[rosbreed_bt, on = "var"][, .(var, blooming_group_anfic, bt_quintile, gdd_quintile)]
-tmp[, anfic_bg := as.numeric(blooming_group_anfic)][, .(var, anfic_bg, bt_quintile, gdd_quintile)]
+## aggregate bt ------------------
+anfic_bt[, anfic_bg_num := as.numeric(blooming_group_anfic)]
+anfic_bt[, anfic_bg_num := mean(anfic_bg_num, na.rm = TRUE), by = "var"]
 
+tmp <- rbind(anfic_bt[, .(var)], ## make an empty dt with var
+          rosbreed_bt[, .(var)],
+          eur_bt[, .(var)],
+          uk_bt[, .(var)]
+          )
+tmp <- unique(tmp)
+tmp <- anfic_bt[!duplicated(var, )][tmp, on = "var"]
+tmp <- rosbreed_bt[!duplicated(var, )][tmp, on = "var"]
+tmp <- eur_bt_gr[!duplicated(var, )][tmp, on = "var"] ## add eur
+tmp <- uk_bt[!duplicated(var, )][tmp, on = "var"] ## add uk
+## todo: calculate numeric bg in ros and eur with one decimal place
 
+## sanitize colnames
+varnames_temp <- c(
+    'var' = "var",
+'blooming_group_uk' = "bg_uk",
+'bt_start_gr' = "bg_eur",
+'bt_quintile' = "bg_ros",
+'gdd_quintile' = "gdd_ros",
+'group' = "incompat_gr_anfic",
+'s_alleles' = "alleles",
+'blooming_group_anfic' = "bg_anfic_fct",
+'label' = "label",
+'anfic_bg_num' = "bg_anfic"
+)
+names(tmp) <- query_label(names(tmp), varnames_temp)
+
+tmp <- tmp[, .(var, bg_anfic, bg_eur, bg_uk, bg_ros)]
+## Note: gdd ros deviates somewhat, not kept here
+tmp$bg_mean <- rowMeans(tmp[, -1], na.rm = TRUE)
+tmp[, bgr := plyr::round_any(bg_mean, 0.5)]
+## x <- tmp[, lapply(.SD, mean), by = var]
+
+blooming_group_aggr <- tmp[!is.na(bgr), .(var, bgr)]
 
 ## more ------------------
-
-
-
 
 
 ## fread("bbch_scale_stone_fruit.csv")
