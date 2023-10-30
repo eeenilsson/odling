@@ -147,35 +147,16 @@ variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "
 ## restr_uk <- pollination_groups_test[grepl(paste0(restr, collapse = "|"), var), ]
 
 ## use all var that have blooming group data, see phenology.r
-swed <- fread("cherries_table.csv")
-bg_selected <- blooming_group_aggr[grepl(paste0(swed$var, collapse = "|"), var), ] ## select those noted in cherries_table.csv
+## swed <- fread("cherries_table.csv")
+bg_selected <- blooming_group_aggr[grepl(paste0(unique(dta$var), collapse = "|"), var), ] ## select those in dta$var
 
-## using just anfic data for testing (see phenology)
-anfic_selected <- anfic_bt[!duplicated(var), ]
-anfic_selected <- anfic_selected[!grepl("[0-9]", var), ] ## skip those with numbers in name
-anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in genotype data
+bg_selected <- bg_selected[bg_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in genotype data
 
-## anfic_bt$var[!unique(anfic_bt$var) %in% unique(variety_genotype_group$var)]
+dta_toplot <- variety_genotype_group[bg_selected, on = "var"] ## all selected have genotype data matching var name
 
-anfic_selected <- anfic_selected[anfic_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in 
+##################here ######################
 
-dta_toplot <- variety_genotype_group[anfic_selected, on = "var"] ## all selected have genotype data matching var name
-## str(dta_toplot)
-
-## function to test genotypes againt each other
-## genotype_a <- "S1S2"
-## genotype_b <- "S1S3"
-## genotype_a <- "S3S4'"
-## genotype_b <- "S3S4'"
-
-
-## dta_toplot <- dta_toplot[, .(var, variety, genotype, genotype1, genotype2, blooming_group_anfic, incompatibility_group, label)]
-
-## select some random varieties for testing
-z <- c(48, 12, 13, 40, 12, 4, 79, 5, 40, 47, 3, 24, 36, 28, 10, 40, 38, 54, 68, 47, 19, 73, 64, 43, 23)
-z <- unique(z)
-## z <- sample(1:nrow(dta_toplot), 25, replace=TRUE)
-test <- dta_toplot[z, .(var, genotype, blooming_group_anfic, incompatibility_group)]
+test <- dta_toplot[, .(var, genotype, bgr, incompatibility_group)]
 
 ## make a df to add cols
 newcols <- as.data.table(matrix(nrow = nrow(test), ncol = nrow(test)+1))
@@ -198,14 +179,14 @@ for(i in 1:nrow(test)){ ## loop over rows
 ## str(test)
 
 ## melt
-dtplot <-  melt(test, id.vars = c("var", "genotype", "blooming_group_anfic",  "incompatibility_group"))
+dtplot <-  melt(test, id.vars = c("var", "genotype", "bgr",  "incompatibility_group"))
 dtplot[, value := as.numeric(value)]
 
 ## fix names
-names(dtplot) <- c("target", "genotype", "blooming_group_anfic", "incompatibility_group", "pollinator", "compatibility")
+names(dtplot) <- c("target", "genotype", "bgr", "incompatibility_group", "pollinator", "compatibility")
 
 ## add blooming time for **pollinator**
-tmp <- anfic_selected[var %in% dtplot$pollinator, .(var, blooming_group_anfic)]
+tmp <- bg_selected[var %in% dtplot$pollinator, .(var, bgr)]
 names(tmp) <- c("pollinator", "pollinator_blooming_group")
 dtplot <- dtplot[tmp, on = "pollinator"]
 
@@ -215,7 +196,7 @@ dtplot <- dtplot[tmp, on = "pollinator"]
 ## X[Y, on=c(x1="y1", x2="y2")]
 
 ## calculate blooming proximity
-dtplot[, proximity := abs(as.numeric(blooming_group_anfic) - as.numeric(pollinator_blooming_group))]
+dtplot[, proximity := abs(as.numeric(bgr) - as.numeric(pollinator_blooming_group))]
 dtplot[, proximity_ok := ifelse(proximity < 2, TRUE, FALSE)]
 
 ## color compatibility and proximity in bloom
@@ -232,7 +213,7 @@ dtplot[proximity == 1 & compatibility != 0, compat_proximity := "close"]
 dtplot[, target:= as.factor(target)]
 dtplot[, pollinator:= as.factor(pollinator)]
 dtplot[, pollinator_blooming_group_num := as.numeric(pollinator_blooming_group)]
-dtplot[, blooming_group_num := as.numeric(blooming_group_anfic)]
+dtplot[, blooming_group_num := as.numeric(bgr)]
 ## str(dtplot)
 
 setkey(dtplot, target)
