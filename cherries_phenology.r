@@ -480,8 +480,34 @@ blooming_group_aggr <- tmp[!is.na(bgr), .(var, bgr)]
 
 ## ?plyr::round_any
 
+## more from uk
+## uk flowering group + incompatibility
+## https://www.trees-online.co.uk/cherry-tree-pollination
+## You would select your first tree based on the attributes you like e.g. taste, colour, size etc. Then you would buy a different tree in the same flowering group or one above or one below e.g. if you liked a tree in flowering group 3, you could choose any other from flowering groups 2, 3 or 4 and both would produce fruit. The reason for this is the number is an indication of when the tree produces blossom. For fruit to be produced, one tree has to have its blossoms showing at the same time or just before or after the other tree. the general rule is you need to pick your two cherry trees from the same row and from the same flowering group or 1 above or 1 below.
+fread("bt_uk2.csv")
+
+
+## Dansk artikel --------------------------
+## phenology_statens_dk_tab1.csv
+## phenology_dk_statens_tab2.csv ## has BT
+
+## Meta:
+## Evaluation and numerical studies of qualitative and morphological characteristics of 49 sweet cherry cultivars. J. Vittrup Christensen. Statens Forsøgsstation, Blangstedgaard (E. Poulsen)
+## origin: Bulgaria: 1) Institut po Ovostarstvo, Plovdiv.  Canada: 2) HorticulturalExp. St., Vineland, On- tario. Denmark: 3) M. Voight Petersen, Oure. 4) Royal University of Agriculture, Copenhagen.  Germany: 5) Institut für Obstbau, Hohenheim. 6) Dr. D. Dähne, Koblenz. 7) Obstbauversuchsan- stalt Jork. Poland: 8) Instytut Sadownictwa, Skiernisvicach. Sweden: 9) Balsgård Fruit Bre- eding Institute. 9) Rånna Experimental Garden, Skövde. 10) G. Almer, Nordanvik, Näsum. Swit- zerland: 11) Forschungsanstalt für Obstbau, Wä- denswill. USA: 12) New York State Agr. Exp.  St., Geneva. 13) Oregon State University, Cor- vallis. 14) University of Idaho, Moscow. Eng- land: 15) East Malling Research Station.
+## Season of maturity: 1 = very early (earlier than 29th June) 3 = early (29th June - 8th July) 5 = medium (9th July - 20th July) 7 = late (21st July - 31st July) 9 = very late (later than 31st July)
+## Color of skin: 1 = yellow (uncoloured juice) 3 = vermillion on a pale yellow ground volour (uncoloured juice) 5 = mahogany or black (coloured juice)
+## Firmness: 3 = soft 5 = medium 7 = firm
+## Cracking: based on cracking indexes and refer to the following grouping (actual range of cracking indexes in brackets).  1 = very low (< 3 = low (24 5 = medium (47 7 = high (68 9 = very high (> 24) -46) -67) -82) 82)
+## fertility: 3 = low yield 5 = medium yield 7 = high yield
+## season of flowering: 1 = very early 3 = early 5 = medium 7 = late 9 = very late
+## see paper for more on variables definitions
+## they also comment on each variety
+## Summary: The main object of this work was to test newer, and in Denmark unnoticed older cultivars for their qualitative characteristics. Of light cultivars 'Sue' and 'Merton Late' were outstanding for low tendency to cracking and high productivity. 'Vega' was of very fine quality with good tree fertility.  In the early season group the dark cultivars 'Ranne Ljaskovska', 'Frühe Meckenheimer', and 'Spitze Braune' had very valuable characte- ristics and deserve further trial.  In the mid-season group 'Rebekka', 'Valeska', 'Annabella', and 'Balsgård 20406' are the most promising cultivars. In the late season group 'Schneiders Späte' is still of commercial interest owing its extremely large fruits, but its high ten- dency towards cracking should be considered.
+
 
 ## more ------------------
+
+## file:///home/e/Downloads/gupea_2077_54273_1.pdf
 
 
 ## fread("bbch_scale_stone_fruit.csv")
@@ -526,4 +552,28 @@ blooming_group_aggr <- tmp[!is.na(bgr), .(var, bgr)]
 ## - stationen eller givaren har varit ur funktion.
 ## - stationen har endast levererat värden med kvalitetskod Röd (R). Dessa levereras ej.
 
+
+## Tunisia: file:///home/e/Downloads/Chapitre_YoussefA_21_FloweringofSweetCherries.pdf
+## "The four cultuvars “Napoleon,” “Van,” “Moreau,” and “Sunburst” behave differently in the two sites which can exclude the genetic potential factor in the triggering and the duration of flowering assuming that this phenomenon depends on the physiological state, age, rootstock, expression of cultivar genes, and other external factors (photoperiod, soil, nutrient supply, rainfall, and temperature)."
+
+## Serbia:
+## radicevic2011.pdf
+
+## Flowering time and incompatibility groups: Cultivar combination in commercial sweet cherry (Prunus avium L.) orchards. Radosav Cerovic
+
+## https://agronomy.emu.ee/wp-content/uploads/2020/11/AR2020_Vol18No4_Corneanu.pdf2
+
+## suranyi2022.pdf
+## Comparative analysis of sweet cherry cultivars on their ecological and biological indicators
+
+## has some bt: file:///home/e/Downloads/Cultivars_Resulting_from_Cherry_Breeding_in_German.pdf
+
+## https://www.ecpgr.cgiar.org/working-groups/prunus/eucherry
+## Collaborative action for updating, documenting and communicating the cherry patrimonial richness in EU 
+
+## http://www.bernwodeplants.co.uk/cherrybackground.htm
+## https://silvercreeknursery.ca/products/stella-sweet-cherry-1
+
+## other (no bt):
+## heide2019.pdf
 
