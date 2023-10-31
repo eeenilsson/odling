@@ -21,15 +21,26 @@ Sista frosten [Örebro 1 apr-1 jun, normalt 1 apr - 15 maj]
 <!-- [SMHI Öppna data](https://www.smhi.se/data) -->
 <!-- - Temp, nederbörd mm -->
 
+<!-- ZOnkarta norden, se : https://stud.epsilon.slu.se/12707/1/larsson_a_171020.pdf -->
+
+<!-- karlberg-e-hiltunen-nilsen-a-20230502.pdf forskningsöversikt mm-->
+<!-- https://stud.epsilon.slu.se/18809/1/karlberg-e-hiltunen-nilsen-a-20230502.pdf -->
+
+I Sverige blommar körsbären i slutet av april till början av maj. Tittar man på forskningsdata från Ullensvang i Norge startade blomningen där för sötkörsbär vanligen 6-14 maj (intervall 20 april till 22 maj beroende på år och sort). Blomningens varaktighet för ett körsbärsträd var där vanligen 9-16 dagar (intervall 7 till 19 dagar). Tar man med data från andra länder och justerar för odlingsplats och år ser man att för 80% av sorterna ligger start av blomningstiden inom ett spann på ca  9 dagar och dess varaktiget på 6-9 dagar.
+
+Referens: Wenden 2016, "A collection of European sweet cherry phenology data for assessing climate change".
+
+<!-- Ref: Wenden, B., Campoy, J., Lecourt, J. et al. A collection of European sweet cherry phenology data for assessing climate change. Sci Data 3, 160108 (2016). https://doi.org/10.1038/sdata.2016.108 -->
 
 
-I Sverige blommar körsbären april-maj.
 
-Tidig
-Medeltidig
-Medel
-Medelsen
-Sen
+
+
+<!-- Tidig -->
+<!-- Medeltidig -->
+<!-- Medel -->
+<!-- Medelsen -->
+<!-- Sen -->
 
 <!-- "RHS pollination group numbers, which divide apple, pear, plum, and cherry cultivars into 7 flowering periods. Pollination group 1 is the earliest to flower. pollinates same group +-1 group" -->
 

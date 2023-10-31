@@ -279,6 +279,10 @@ eur_bt$var <- query_label(eur_bt$var, varnames_tmp)
 eur_bt[, year := as.factor(year)]
 eur_bt[, site := as.factor(site)]
 
+## computed vars
+eur_bt[, bt_duration := bt_end - bt_start]
+eur_bt[, bt_start_to_full := bt_end - bt_full]
+
 ## agregate
 ## Note: Aggregate using median to avoid data entry errors?
 
@@ -311,7 +315,8 @@ eur_bt_aggr <- eur_bt
 eur_bt_aggr <- eur_bt[, .(
     bt_start = mean(bt_start, na.rm = TRUE),
     bt_full = mean(bt_full, na.rm = TRUE),
-    bt_end = mean(bt_end, na.rm = TRUE)
+    bt_end = mean(bt_end, na.rm = TRUE),
+    bt_duration = mean(bt_duration, na.rm = TRUE)
 ),
                 by = list(var, site)]
 
@@ -319,10 +324,55 @@ eur_bt_aggr <- eur_bt[, .(
 eur_bt[, var := as.factor(var)]
 
 m1 <- lm(bt_start ~ var + site + year, data = eur_bt)
-summary(m1)
+## summary(m1)
 lm_bt_start <- m1$coef
 lm_bt_start <- data.table(var = names(lm_bt_start),
            coef = lm_bt_start)
+lm_bt_start[, var := gsub(".Intercept.", "intercept", var)]
+
+## for plotting etc
+eur_lm_bt_start <- lm_bt_start
+eur_lm_bt_start[, var := gsub("^var", "", var)]
+names(eur_lm_bt_start) <- c("var", "coef_bt_start")
+eur_lm_bt_duration <- lm(bt_duration ~ var + site + year, data = eur_bt)$coef
+eur_lm_bt_duration <- data.table(var = names(eur_lm_bt_duration),
+           coef = eur_lm_bt_duration)
+eur_lm_bt_duration[, var := gsub(".Intercept.", "intercept", var)]
+eur_lm_bt_duration[, var := gsub("^var", "", var)]
+names(eur_lm_bt_duration) <- c("var", "coef_bt_duration")
+
+tmp <- eur_lm_bt_start[!grepl("^year|^site|intercept$", var)]
+tmp <- data.table(
+    var = as.factor(tmp$var),
+    bt_start_relative = tmp$coef_bt_start - median(tmp$coef_bt_start) ## relative to median    
+)
+## quantile(tmp$bt_start_relative, probs = seq(0, 1, 0.1))
+
+## summary(tmp$bt_start_relative)
+
+tmp <- eur_lm_bt_duration[!grepl("^year|^site|intercept$", var)]
+tmp <- data.table(
+    var = as.factor(tmp$var),
+    bt_duration_relative = tmp$coef_bt_duration - median(tmp$coef_bt_duration) ## relative to median    
+)
+## quantile(tmp$bt_duration_relative + 7.53, probs = seq(0, 1, 0.1))
+
+## boxplot
+pacman::p_load(ggplot2)
+library(forcats) ## for reordering plot levels
+p <- ggplot(tmp, aes(x=var, y=bt_duration_relative)) + geom_boxplot()
+p <- p + geom_dotplot(binaxis='y', stackdir='center', dotsize=0.2)
+# Rotate the box plot
+p + coord_flip()
+## summary(tmp$test_start_date)
+
+
+## str(eur_bt)  ## Note: Site Balandran (southern France near Tolouse) is ref level and has n = 1400 measurements
+## unique(eur_bt$site)
+## unique(eur_bt[ , count := .N, by = .(site)][, .(site, count)])
+## summary(m1)
+
+## tidy for calculating bgr
 lm_bt_start <- lm_bt_start[grepl(paste0(unique(eur_bt$var), collapse = "|"), var), ] ## skip year, site coefs
 lm_bt_start <- lm_bt_start[!grepl("site", var), ] ## skip year, site coefs
 ## groups defined as quantiles of the regression coefficient
@@ -332,7 +382,7 @@ lm_bt_start[, bt_start_gr := as.numeric(bt_start_gr)]
 lm_bt_start <- lm_bt_start[, .(var, bt_start_gr)]
 
 m1 <- lm(bt_full ~ var + site + year, data = eur_bt)
-summary(m1)
+## summary(m1)
 lm_bt_full <- m1$coef
 lm_bt_full <- data.table(var = names(lm_bt_full),
            coef = lm_bt_full)
@@ -353,6 +403,43 @@ tmp[bt_full_gr != bt_start_gr,] ## diff is maximum 1 so use start
 lm_bt_start[, var := gsub("^var", "", var)] ## sanitize
 
 eur_bt_gr <- lm_bt_start
+
+## get some descriptive data from norway
+ull_bt <- eur_bt[grepl("Ullensvang", site), ]
+ull_bt <- ull_bt[, .(var, year, latitude, longitude, altitude, year, rootstock, startofyear, flowering_duration, bt_start, bt_full, bt_end)]
+ull_bt[, bt_start_date := startofyear + bt_start]
+mean(ull_bt$bt_start_date, na.rm = TRUE)
+mean(ull_bt$bt_start, na.rm = TRUE)
+
+ull_bt[, month_day := format(as.Date(startofyear+ bt_start), "%m-%d")]
+ull_bt[, test_start_date := paste0("2006-", month_day)]
+ull_bt[, test_start_date := as.Date(test_start_date, format = "%Y-%m-%d")]
+## summary(ull_bt$test_start_date)
+## summary(ull_bt$flowering_duration)
+## quantile(ull_bt$flowering_duration, probs = seq(0, 1, 0.1), na.rm = TRUE)
+## quantile(ull_bt$bt_start, probs = seq(0, 1, 0.1), na.rm = TRUE)
+## 138 - 122.7
+
+## ull_bt[!is.na(test_start_date), ]
+
+## ull_bt[grepl("bing", var), ]
+
+## ## aggregate ullensvang
+## ull_bt_aggr <- ull_bt[, .(
+##     bt_start = mean(test_start_date, na.rm = TRUE),
+##     bt_start = mean(bt_start, na.rm = TRUE),
+##     bt_full = mean(bt_full, na.rm = TRUE),
+##     bt_end = mean(bt_end, na.rm = TRUE)
+## ),
+##                 by = list(var)]
+
+## ## boxplot
+## tmp <- ull_bt[!is.na(test_start_date), .(var, year, test_start_date)]
+## p <- ggplot(tmp, aes(x=var, y=test_start_date)) + geom_boxplot()
+## p <- p + geom_dotplot(binaxis='y', stackdir='center', dotsize=0.2)
+## # Rotate the box plot
+## p + coord_flip()
+## summary(tmp$test_start_date)
 
 ## eur_bt_aggr <- eur_bt[, .(
 ##     bt_start = mean(bt_start, na.rm = TRUE),
