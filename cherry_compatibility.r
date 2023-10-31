@@ -409,7 +409,9 @@ dta[ , paste(var, ": ", pollinated_by_concordance_chr)]
 
 ## detailed characteristics of some cherrie varieties dk
 ## https://dcapub.au.dk/pub/planteavl_81_148.pdf
-## flowering:
+## Se https://dcapub.au.dk/pub/planteavl_81_148.pdf
+## finns på dropbox/images/plants
+## season of flowering:
 ## 1 = very early
 ## 3 = early
 ## 5 = medium
