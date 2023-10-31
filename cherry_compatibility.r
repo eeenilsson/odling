@@ -190,19 +190,51 @@ selectvars <- dta[type == "sweet", unique(var)] ## n = 23
 ## selectvars <- c(selectvars, tmp)
 
 selectvars <- unique(selectvars)
-bg_selected <- blooming_group_aggr[grepl(paste0(selectvars, collapse = "$|^"), var), ] ## select those in selectvar
+bg_selected <- blooming_group_aggr[grepl(paste0(selectvars, collapse = "$|^"), var), ] ## select those in selectvar (var listed in dta)
 
 ## add these even if bt is unknown
 tmp <- c("gaardebo", "fryksaas", "berit", "erianne", "fanal", "heidi", "nordia", "ostheimer", "kelleris", "buttners_spate_rote_knorpelkirsche", "knauffs_schwarze") ## bt missing
-tmp <- tmp[!tmp %in% bg_selected[, var]]
+tmp <- tmp[!tmp %in% bg_selected[, var]] ## those not already selected
 tmp <- variety_genotype_group[grepl(paste0(tmp, collapse = "$|"), var), .(var)]
-
-## blooming_group_aggr
-
 tmp[, bgr := 99] ## use 99 for thos w unknown bgr
 bg_selected <- rbind(bg_selected,
       tmp
       )
+
+## count google hits
+input <- "health+AND+hospital"
+GoogleHits <- function(input)
+   {
+    require(XML)
+    require(RCurl)
+    url <- paste("https://www.google.com/search?client=firefox-b-d&q=",
+                 input, sep = "") # modified line      
+    CAINFO = paste(system.file(package="RCurl"), "/CurlSSL/ca-bundle.crt", sep = "")
+    script <- getURL(url, followlocation = TRUE, cainfo = CAINFO, ssl.verifypeer = FALSE)
+    doc <- htmlParse(script)
+    res <- xpathSApply(doc, '//*/div[@id="resultStats"]', xmlValue)
+    cat(paste("\nYour Search URL:\n", url, "\n", sep = ""))
+    cat("\nNo. of Hits:\n") # get rid of cat text if not wanted
+    return(as.integer(gsub("[^0-9]", "", res)))
+   }
+## ?getURL
+pacman::p_load(httr, RCurl, XML)
+## httr::set_config(config(ssl_verifypeer = FALSE, ssl_verifyhost = FALSE))
+
+## Example:
+no.hits <- GoogleHits("health+AND+hospital")
+#Your Search URL:
+#https://www.google.com/search?q=health%20hospital
+#
+#No. of Hits:
+no.hits
+
+https://www.google.com/search?client=firefox-b-d&q=health+AND+hospital
+
+
+
+
+## blooming_group_aggr
 
 ## ## explore
 ## blooming_group_aggr[grepl("tar", var), ]
@@ -302,8 +334,8 @@ pacman::p_load(ggplot2)
 library(forcats) ## for reordering plot levels
 
 ## labels
-tmp <- variety_genotype_group[, .(var, genotype, variety, incompatibility_group)]
-names(tmp) <- c("var", "genotype", "label", "incompatibility_group")
+tmp <- variety_genotype_group[, .(var, genotype, label, incompatibility_group)]
+## names(tmp) <- c("var", "genotype", "label", "incompatibility_group")
 
 tmp[, label := gsub(" \\([^$]*", "", label)] ## sanitize
 tmp[, label := gsub(" \\\n[^$]*", "", label)]
@@ -356,7 +388,8 @@ plot_pollination_table <- plot_pollination_table +
          )
 
 plot_pollination_table
-  ## meta:
+
+## meta:
 ## Size of dot corresponds to genetic compatibility, color to blooming time (dark green = same bloomin group, light green = proximity 1 in blooming group, red = outside proximity blooming groups OR not genetically compatible)
 ## "Blomningstid"
 
