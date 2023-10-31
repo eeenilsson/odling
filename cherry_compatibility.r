@@ -192,6 +192,14 @@ selectvars <- dta[type == "sweet", unique(var)] ## n = 23
 selectvars <- unique(selectvars)
 bg_selected <- blooming_group_aggr[grepl(paste0(selectvars, collapse = "$|^"), var), ] ## select those in selectvar (var listed in dta)
 
+## ## write cvs with those missing bt
+## tmp <- data.frame(
+##     var = dta$var,
+##     bt_missing = !dta$var %in% bg_selected$var,
+##     bt_google_sv = NA
+## )
+## write.csv(tmp, "google_bt_sverige.csv", row.names = FALSE)
+
 ## add these even if bt is unknown
 tmp <- c("gaardebo", "fryksaas", "berit", "erianne", "fanal", "heidi", "nordia", "ostheimer", "kelleris", "buttners_spate_rote_knorpelkirsche", "knauffs_schwarze") ## bt missing
 tmp <- tmp[!tmp %in% bg_selected[, var]] ## those not already selected
@@ -201,45 +209,14 @@ bg_selected <- rbind(bg_selected,
       tmp
       )
 
-## count google hits
-input <- "health+AND+hospital"
-GoogleHits <- function(input)
-   {
-    require(XML)
-    require(RCurl)
-    url <- paste("https://www.google.com/search?client=firefox-b-d&q=",
-                 input, sep = "") # modified line      
-    CAINFO = paste(system.file(package="RCurl"), "/CurlSSL/ca-bundle.crt", sep = "")
-    script <- getURL(url, followlocation = TRUE, cainfo = CAINFO, ssl.verifypeer = FALSE)
-    doc <- htmlParse(script)
-    res <- xpathSApply(doc, '//*/div[@id="resultStats"]', xmlValue)
-    cat(paste("\nYour Search URL:\n", url, "\n", sep = ""))
-    cat("\nNo. of Hits:\n") # get rid of cat text if not wanted
-    return(as.integer(gsub("[^0-9]", "", res)))
-   }
-## ?getURL
-pacman::p_load(httr, RCurl, XML)
-## httr::set_config(config(ssl_verifypeer = FALSE, ssl_verifyhost = FALSE))
-
-## Example:
-no.hits <- GoogleHits("health+AND+hospital")
-#Your Search URL:
-#https://www.google.com/search?q=health%20hospital
-#
-#No. of Hits:
-no.hits
-
-https://www.google.com/search?client=firefox-b-d&q=health+AND+hospital
-
-
-
 
 ## blooming_group_aggr
 
 ## ## explore
 ## blooming_group_aggr[grepl("tar", var), ]
-## cols <- c("variety", "var", "genotype") ## , "genotype"
-## variety_genotype_group[grepl("tar", tolower(variety)), ..cols]
+cols <- c("variety", "var", "genotype") ## , "genotype"
+variety_genotype_group[grepl("döni", tolower(variety)), ..cols]
+
 ## tmp <- variety_genotype_group[grepl(paste0(paste0(notselected, collapse = "|")), tolower(variety)), ..cols]
 ## print(tmp[, .(var)], n = 200)
 ## bg_selected[bg_selected$var %in% variety_genotype_group$var, ]
@@ -426,3 +403,16 @@ dta[ , paste(var, ": ", pollinated_by_concordance_chr)]
 ## variety_genotype_group[grepl("Lapins|Van|Stella", variety), .(variety, genotype, incompatibility_group, mother, father)]
 
 ## Rosbreed har en xls med S-gruppe också: https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility
+
+## Eriksbo plantskola:
+## http://www.eriksbo-plantskola.se/
+
+## detailed characteristics of some cherrie varieties dk
+## https://dcapub.au.dk/pub/planteavl_81_148.pdf
+## flowering:
+## 1 = very early
+## 3 = early
+## 5 = medium
+## 7 = late
+## 9 = very late
+
