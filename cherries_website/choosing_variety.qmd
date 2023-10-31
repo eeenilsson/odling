@@ -72,6 +72,16 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Blommar vanligen senare än sötkörsbär och är därför inte så lämpliga som pollinerare av dessa.
 
+## Olika egenskaper
+
+```{r}
+#| label: tbl-qualities
+#| tbl-cap: "Egenskaper"
+
+
+kable(head(cars))
+```
+
 ## Några intressanta sorter
 
 <!-- "Similarly, we find it necessary to suggest exceptional potential of combining mid-late flowering cultivars whose flowering period overlaps with that of the majority of other cultivars. Some earlier investigations point to high in vitro pollen germination in some of these cultivars − ‘Van’, ‘Compact Stella’ (CEROVIĆ et al., 2003), and in self-compatible ‘Sunburst’ and ‘Lapins’ (RADIČEVIĆ et al., 2008).  On the other hand, cultivars classified as those with extreme flowering period cannot be recommended as suitable pollenisers among these groups. ‘insufficient overlap in some seasons’ can be suitable in some seasons and localities, though the risk of insufficient overlap in full flowering remains. This can particularly be emphasized when relatively low temperatures occurring over the period of flowering onset in sweet cherry markedly postpone flowering onset in late flowering cultivars." -->
