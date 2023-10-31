@@ -3,113 +3,6 @@
 ## functions
 pacman::p_load(data.table)
 
-## genotype_a <- "S1S6/S3S4"
-## genotype_b <- "S1S6/S4S6"
-## genotype_b <- "S4S6"
-## compat("S1S6/S3S4", "S4S6")
-## compat("S1S3", "S4S6")
-## compat("S1S3", "S4S6/S1S3")
-## compat("S4'S3?", "S4S6/S1S3")
-## compat("S5S8/S2S4", "S4S6/S1S3")
-## genotype_a <- "S5S8/S2S4"
-## genotype_b <- "S4S6/S1S3"
-## compat(genotype_a, genotype_b)
-
-compat <- function(genotype_a, genotype_b){
-    ## remove questionmark
-    genotype_a <- gsub("\\?", "", genotype_a)
-    genotype_b <- gsub("\\?", "", genotype_b)
-    ## for uncertain genotypes
-    uncertain_a <- grepl("/", genotype_a)
-    uncertain_b <- grepl("/", genotype_b)
-    if(uncertain_a){ ## eg "S1S6/S3S4"
-        genotype_a_alt <- strsplit(genotype_a, "/")[[1]][2]
-        genotype_a <- strsplit(genotype_a, "/")[[1]][1]
-    }
-    if(uncertain_b){
-        genotype_b_alt <- strsplit(genotype_b, "/")[[1]][2]
-        genotype_b <- strsplit(genotype_b, "/")[[1]][1]
-    }
-    ## pollinator
-    a1 <-  strsplit(genotype_a, "S")[[1]][2]
-    a2 <-  strsplit(genotype_a, "S")[[1]][3]
-    ## target
-    b1 <-  strsplit(genotype_b, "S")[[1]][2]
-    b2 <-  strsplit(genotype_b, "S")[[1]][3]
-    ## pollen sucess = TRUE
-    p1 <- (a1 != b1 & a1 != b2) | a1 == "4'" | a1 == "3'" | a1 == "5'"  
-    p2 <- (a2 != b1 & a2 != b2) | a2 == "4'" | a2 == "3'" | a2 == "5'"
-    ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
-    if(a1 == "4" & b1 == "4'"){p1 <- FALSE}
-    if(a2 == "4" & b2 == "4'"){p2 <- FALSE}
-
-
-    ## for uncertain genotypes
-    if(uncertain_a){
-
-        ## pollinator
-        a1_alt <-  strsplit(genotype_a_alt, "S")[[1]][2]
-        a2_alt <-  strsplit(genotype_a_alt, "S")[[1]][3]
-
-        ## pollen sucess = TRUE
-        p1_alt <- (a1_alt != b1 & a1_alt != b2) | a1_alt == "4'" | a1_alt == "3'" | a1_alt == "5'"  
-        p2_alt <- (a2_alt != b1 & a2_alt != b2) | a2_alt == "4'" | a2_alt == "3'" | a2_alt == "5'"
-        if(a1_alt == "4" & b1 == "4'"){p1_alt <- FALSE}
-        if(a2_alt == "4" & b2 == "4'"){p2_alt <- FALSE}
-
-        ## if also genotype b is uncertain
-        if(uncertain_b){
-            ## target
-            b1_alt <-  strsplit(genotype_b_alt, "S")[[1]][2]
-            b2_alt <-  strsplit(genotype_b_alt, "S")[[1]][3]
-            p1_alt2 <- (a1_alt != b1_alt & a1_alt != b2_alt) | a1_alt == "4'" | a1_alt == "3'" | a1_alt == "5'"  
-            p2_alt2 <- (a2_alt != b1_alt & a2_alt != b2_alt) | a2_alt == "4'" | a2_alt == "3'" | a2_alt == "5'"
-            if(a1_alt == "4" & b1_alt == "4'"){p1_alt2 <- FALSE}
-            if(a2_alt == "4" & b2_alt == "4'"){p2_alt2 <- FALSE}
-            ## take worst case
-            p1_alt <- min(p1_alt, p1_alt2)
-            p2_alt <- min(p2_alt, p2_alt2)
-
-        }
-    }
-
-            ## if genotype_b is uncertain
-        if(uncertain_b){
-            ## target
-            b1_alt <-  strsplit(genotype_b_alt, "S")[[1]][2]
-            b2_alt <-  strsplit(genotype_b_alt, "S")[[1]][3]
-            p1_alt2b <- (a1 != b1_alt & a1 != b2_alt) | a1 == "4'" | a1 == "3'" | a1 == "5'"  
-            p2_alt2b <- (a2 != b1_alt & a2 != b2_alt) | a2 == "4'" | a2 == "3'" | a2 == "5'"
-            if(a1 == "4" & b1_alt == "4'"){p1_alt2b <- FALSE}
-            if(a2 == "4" & b2_alt == "4'"){p2_alt2b <- FALSE}
-            ## take worst case
-            if(uncertain_a){
-            p1_alt <- min(p1_alt, p1_alt2b)
-            p2_alt <- min(p2_alt, p2_alt2b)
-            }else{
-                p1_alt <- min(p1, p1_alt2b)
-                p2_alt <- min(p2, p2_alt2b)
-            }
-        }
-
-
-    if(uncertain_a|uncertain_b){
-            ## take worst case
-            p1 <- min(p1_alt, p1)
-            p2 <- min(p2_alt, p2)
-}
-
-    ## Sum
-    comp <- sum(p1, p2)
-    return(comp)
-
-    ## calculate relative compatibility
-    ## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
-    ## Enstaka universella givare saknar också S4**’**.
-    ## S3' =  SC
-    ## S5' =  SC
-}
-
 ## ## faster version /S2S4'
 ## genotype_a <- "S4S8"
 ## genotype_b <- "S4'S6"
@@ -120,6 +13,7 @@ compat <- function(genotype_a, genotype_b){
 
 compat <- function(genotype_a, genotype_b){
     ## calculate relative compatibility
+    ## If uncertain genotype (ie genotype separated with "/", the worst case scenario will be used)
     pollinator <- paste0(strsplit(genotype_a, "/")[[1]], collapse = "")
     target <- paste0(strsplit(genotype_b, "/")[[1]], collapse = "")
     pollinator <- strsplit(pollinator, "S")[[1]][-1]
@@ -134,14 +28,12 @@ compat <- function(genotype_a, genotype_b){
     }
     return(comp)        
     ## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
+    ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
+## Enstaka universella givare saknar också S4**’**.
     ## Enstaka universella givare saknar också S4**’**.
     ## S3' =  SC
     ## S5' =  SC
 }
-
-
-
-
 
 
 ## load data files --------------------
@@ -227,15 +119,18 @@ variety_genotype_group[, syn := gsub("^,", "", syn)]
 ## todo: check synonyms and merge those which are the same
 ## variety_genotype_group[syn != "", syn]
 
+## sanitize labels
+variety_genotype_group[, label := variety]
+variety_genotype_group[, label := gsub("\\([^$]*", "", label)]
+variety_genotype_group[, label := gsub("TM[^$]*", "", label)]
+variety_genotype_group[, label := gsub(" $", "", label)]
+## variety_genotype_group[, unique(label)]
+
 ## redundant:
 ## ## remove variants with duplicated rows and different genotypes
 ## variety_genotype_group <- variety_genotype_group[!grepl(paste0(dupl_var, collapse = "|"), var), ]
 
 ## calculate relative compatibility
-## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
-## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
-## Enstaka universella givare saknar också S4**’**.
-
 ## check
 ## variety_genotype_group[, unique(genotype)]
 ## variety_genotype_group[, unique(incompatibility_group)]
@@ -246,9 +141,9 @@ variety_genotype_group[, syn := gsub("^,", "", syn)]
 ## strsplit("S3'S12", "S")[[1]][2:3]
 ## strsplit("S6S17/30?", "S")[[1]][2:3]
 
-## split
-variety_genotype_group[, genotype1 := sapply(genotype, function(x){strsplit(x, "S")[[1]][2]})]
-variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "S")[[1]][3]})]
+## ## split, redundant:
+## variety_genotype_group[, genotype1 := sapply(genotype, function(x){strsplit(x, "S")[[1]][2]})]
+## variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "S")[[1]][3]})]
 
 ## ## explore
 ## variety_genotype_group[genotype1 == genotype2, ]
@@ -279,6 +174,7 @@ variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "
 ## restr <- pollination_groups_test$var[pollination_groups_test$var %in% unique(dta$var)]
 ## restr_uk <- pollination_groups_test[grepl(paste0(restr, collapse = "|"), var), ]
 
+## select vars --------------------------------------------
 ## use all var that have blooming group data, see phenology.r
 ## swed <- fread("cherries_table.csv")
 selectvars <- dta[type == "sweet", unique(var)] ## n = 23
@@ -296,6 +192,7 @@ selectvars <- dta[type == "sweet", unique(var)] ## n = 23
 selectvars <- unique(selectvars)
 bg_selected <- blooming_group_aggr[grepl(paste0(selectvars, collapse = "$|^"), var), ] ## select those in selectvar
 
+## add these even if bt is unknown
 tmp <- c("gaardebo", "fryksaas", "berit", "erianne", "fanal", "heidi", "nordia", "ostheimer", "kelleris", "buttners_spate_rote_knorpelkirsche", "knauffs_schwarze") ## bt missing
 tmp <- tmp[!tmp %in% bg_selected[, var]]
 tmp <- variety_genotype_group[grepl(paste0(tmp, collapse = "$|"), var), .(var)]
@@ -303,7 +200,6 @@ tmp <- variety_genotype_group[grepl(paste0(tmp, collapse = "$|"), var), .(var)]
 ## blooming_group_aggr
 
 tmp[, bgr := 99] ## use 99 for thos w unknown bgr
-
 bg_selected <- rbind(bg_selected,
       tmp
       )
