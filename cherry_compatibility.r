@@ -217,7 +217,7 @@ bg_selected <- rbind(bg_selected,
 ## ## explore
 ## blooming_group_aggr[grepl("tar", var), ]
 cols <- c("variety", "var", "genotype") ## , "genotype"
-variety_genotype_group[grepl("lovan", tolower(variety)), ..cols]
+variety_genotype_group[grepl("eria", tolower(variety)), ..cols]
 
 ## tmp <- variety_genotype_group[grepl(paste0(paste0(notselected, collapse = "|")), tolower(variety)), ..cols]
 ## print(tmp[, .(var)], n = 200)
@@ -345,7 +345,7 @@ plot_pollination_table <- p +
     scale_size_area() +
     scale_color_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3", "bt_unknown" = "white")) +
     theme(
-        plot.margin = unit(c(1.2, 1.2, 1.2, 1.2), "centimeters"),
+        plot.margin = unit(c(1, 1, 1, 1), "centimeters"),
         legend.position = "none",
         axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
         plot.title = element_text(hjust = 0, vjust = 3, size = 18, face="bold"),
@@ -353,7 +353,7 @@ plot_pollination_table <- p +
         axis.text=element_text(size=14),
         axis.title=element_text(size=16, face="bold")
     ) +
-    labs(title="Pollinationsdiagram för körsbär",
+    labs(title="Pollinationsschema för körsbär",
          x ="Pollinatör",
          y = "Mottagare")
 
