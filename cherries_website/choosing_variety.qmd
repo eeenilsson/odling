@@ -2,7 +2,7 @@
 title: "Val av sort"
 ---
 
-När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara genetiskt kompatibla med varandra och blomma samtidigt. Se sidan om [pollination](pollination_about.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
+När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara genetiskt kompatibla med varandra och blomma samtidigt. Se sidan om [pollination](pollination_about.qmd) och [pollinationsschemat](pollination_table.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
 
 Det finns många sorter av körsbär. En sort benämns företrädesvis med artnamn och sortnamn, tex _Prunus avium_ 'Merton Glory'. Dock används i praktiken samma namn för sorter som är genetiskt olika och tvärtom kan sorter som är genetiskt lika benämnas olika. [Se](https://pub.epsilon.slu.se/8732/7/nybom_et_al_120419.pdf)
 
@@ -28,6 +28,8 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 - Läge: Behov av sol/möjlighet att växa i skugga.
 
 - Motståndskraft mot sjukdomar.
+
+- Blomningstid: Eftersom blommorna förstörs av frost bör blomningstiden anpassas till när sista frosten brukar vara där du bor.
 
 - Motståndskraft mot att spricka vid rikligt sommarregn.
 

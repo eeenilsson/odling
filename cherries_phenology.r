@@ -600,3 +600,4 @@ blooming_group_aggr[grepl("rote", var), ]
 ## other (no bt):
 ## heide2019.pdf
 
+## https://www.orangepippin.com/varieties/cherries/s

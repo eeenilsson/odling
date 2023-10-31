@@ -325,6 +325,8 @@ tmp[, label := gsub("Knauffs Schwarze", "Knauffs", label)]
 tmp[, label := gsub("Große Schwarze Knorpel", "Große Schwarze", label)]
 tmp[, label := gsub("Dönissens Gelbe Knorpel", "Dönissens Gelbe", label)]
 tmp[, label := gsub("Guigne d'Annonay", "Annonay", label)]
+tmp[, label := ifelse(incompatibility_group == "SC", paste0(label, "*"), label)] ## add asterisk for SC
+## ?bquote
 
 ## tmp[grepl("Anno", label), ]
 
@@ -332,6 +334,7 @@ tmp[, label_ss := paste0(label, " [", genotype, ", ", incompatibility_group, "]"
 varnames <- tmp$label_ss
 names(varnames) <- tmp$var
 dtplot[, target := factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
+varnames <- gsub(" \\[[^$]*", "", varnames) ## remove part in brackets for pollinators
 dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
 
 ## dtplot[pollinator_blooming_group_num == "Early", ]
@@ -348,12 +351,12 @@ plot_pollination_table <- p +
         plot.margin = unit(c(1, 1, 1, 1), "centimeters"),
         legend.position = "none",
         axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
-        plot.title = element_text(hjust = 0, vjust = 3, size = 18, face="bold"),
+        plot.title = element_text(hjust = 0, vjust = 3, size = 16, face="bold"),
         axis.title.x = element_text(hjust = 0.5, vjust = -5),
         axis.text=element_text(size=14),
         axis.title=element_text(size=16, face="bold")
     ) +
-    labs(title="Pollinationsschema för körsbär",
+    labs(title="Blomningstid",
          x ="Pollinatör",
          y = "Mottagare")
 
@@ -363,27 +366,48 @@ plot_pollination_table <- plot_pollination_table +
                scales = "free",
                ## switch = "x",
                space = "free_x") +
-    theme(panel.spacing = unit(0, "lines"),
+    theme(
+        panel.spacing = unit(0, "lines"),
             panel.background = element_rect(fill = "gray94",
                                 colour = "gray",
                                 linewidth = 1, linetype = "solid"),
          strip.background = element_rect(colour="black", fill = NA),
          panel.border = element_rect(colour="black", fill = NA),
-         strip.placement = "outside"         
+         strip.placement = "outside",
+        plot.title = element_text(hjust = 0.5)
          )
 
 plot_pollination_table
+
+ggsave(
+  "plot_pollination_table.png",
+  plot = last_plot(),
+  device = NULL,
+  path = "../dropbox/images/plants/",
+  scale = 1,
+  width = NA,
+  height = NA,
+  units = c("in", "cm", "mm", "px"),
+  dpi = 300,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+## png("plot_pollination_table.png")
 
 ## meta:
 ## Size of dot corresponds to genetic compatibility, color to blooming time (dark green = same bloomin group, light green = proximity 1 in blooming group, red = outside proximity blooming groups OR not genetically compatible)
 ## "Blomningstid"
 
+############## here #####################
+
+
 ## dtplot[grepl("samba|frisco", target), ]
 
-dta[ , paste(var, ": ", pollinated_by_concordance_chr)]
+## dta[ , paste(var, ": ", pollinated_by_concordance_chr)]
 
 
-############## here #####################
 
 ## variety_genotype_group[grepl("", tempvar), ]
 ## variety_genotype_group[grepl("Rote Knorpel", variety), ]

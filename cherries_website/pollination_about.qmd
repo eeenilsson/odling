@@ -77,7 +77,7 @@ Fruktämnet växer sedan till och bildar frukten.
 
 # Genetisk kompatibilitet
 
-Kärsbär har i sina kromosomer två (hos sötkörsbär, fler hos surkörsbär) varianter av en viss gen. En sådan variant benämns med bokstaven S och en siffra, tsex "S1", så en körsbärssort kommer vara tex "S2S6". Då kommer den ha S2S6 i sina pistiller och det pollen den skickar iväg kommer att vara antingen S2 eller S6. En körsbärssort är "immun" mot pollen som innehåller någon av dess egna "bokstäver". Så ett S2S6-körsbär är immunt mot pollen som innehåller S2 eller S6. Eftersom de flesta sorter har S1 till S6 blir det ganska vanligt att de är inkompatibla. Detta beskrivs mer i detalj nedan.
+Körsbär har i sina kromosomer två (hos sötkörsbär, fler hos surkörsbär) varianter av en viss gen. En sådan variant benämns med bokstaven S och en siffra, tsex "S1", så en körsbärssort kommer vara tex "S2S6". Då kommer den ha S2S6 i sina pistiller och det pollen den skickar iväg kommer att vara antingen S2 eller S6. En körsbärssort är "immun" mot pollen som innehåller någon av dess egna "bokstäver". Så ett S2S6-körsbär är immunt mot pollen som innehåller S2 eller S6. Eftersom de flesta sorter har S1 till S6 blir det ganska vanligt att de är inkompatibla. Detta beskrivs mer i detalj nedan.
 
 ## Genetik, några begrepp
 

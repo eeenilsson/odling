@@ -1,5 +1,5 @@
 ---
-title: "Blomning"
+title: "Om blomning"
 ---
 
 # Blomningstid
@@ -14,7 +14,7 @@ För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (gi
 
 Sista frosten [Örebro 1 apr-1 jun, normalt 1 apr - 15 maj]
 
-![Sista frost](../../dropbox/images/plants/sista_frost_2017_smhi.png)
+![Sista frost](../../../dropbox/images/plants/sista_frost_2017_smhi.png)
 
 <!-- [SMHI Klimat](https://www.smhi.se/klimat/klimatet-da-och-nu/klimatindex/varens-sista-frost-1.77151) -->
 
@@ -31,9 +31,9 @@ Medel
 Medelsen
 Sen
 
-"RHS pollination group numbers, which divide apple, pear, plum, and cherry cultivars into 7 flowering periods. Pollination group 1 is the earliest to flower. pollinates same group +-1 group"
+<!-- "RHS pollination group numbers, which divide apple, pear, plum, and cherry cultivars into 7 flowering periods. Pollination group 1 is the earliest to flower. pollinates same group +-1 group" -->
 
-Morello flowers over long period.
+<!-- Morello flowers over long period. -->
 
 <!-- Apple bloom groups -->
 <!-- Here are the bloom groups: -->

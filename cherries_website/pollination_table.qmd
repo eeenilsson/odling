@@ -1,23 +1,55 @@
 ---
-title: "Pollineringstabell"
+title: "Pollinationsschema"
 ---
+
+::: {.column-screen}
+![](../../../dropbox/images/plants/plot_pollination_table.png)
+:::
 
 # Instruktioner
 
-Hur används tabellen.
+För att kunna befruktas behöver sötkörsbär pollineras av ett körsbär av **annan sort** som 1) blommar samtidigt och 2) är genetiskt kompatibel. Undantaget är de _självfertila_ sorterna, vilka kan befrukta sig själva. Kvaliteten och storleken på skörden blir dock bättre om de pollineras av andra.
 
-# Tabell
+Hur den genetiska kompatibiliteten fungerar förklaras på sidan [om pollination](pollination_about.qmd).
 
-Olika flikar med korstabell.
+Blomningstiden varierar från år till år beroende på väderlek och klimat, men man brukar dela in den relativa blomningstiden för olika körsbärssorter i fem grupper från tidig till sen. Uppgifter om blomningstid varierar beroende på källa och för många sorter saknas information från svenska förhållanden. Blomningstiden i schemat ovan är en sammanvägning av den relativa blomningstiden från olika svenska och internationella källor. Du kan läsa mer om blomning på sidan [om blomning](blooming.qmd).
 
-## Vanliga sorter
+Då det finns en osäkerhet i uppgifterna om blomningstid bör du även kontrollera med din lokala plantskola vilka sorter som brukar fungera tillsammans. Uppgifterna om genetisk kompatibilitet är mer säkra och icke-kompatibla sorter bör undvikas.
 
-Vanligt förekommande i handeln.
+## Hur schemat avläses
 
-## Ovanliga sorter
+Välj den sort du är intresserad av och leta upp namnet under "mottagare" (till vänster i schemat). Följ raden tills du kommer till grönfärgade cirklar. Cirkelns färg motsvarar närhet i blomningstid och cirkelns storlek motsvarar den genetiska kompatibiliteten med "pollinatören" vars namn avläses nedtill i schemat. En **grön** cirkel betyder att pollinatören blommar ungefär samtidigt (och är genetiskt kompatibel). En **röd** cirkel betyder att det föreligger genetisk kompatibilitet men att blomningstiden är olika. Saknas genetisk kompatibilitet finns ingen cirkel alls, bara en liten röd prick.
 
-Svåra att få tag på.
+**Cirkelns färg:**
 
-## Alla sorter
+- _Mörkgrön_: Blommar under samma period.
+- _Ljusgrön_: Blommar under en närliggande period.
+- _Röd_: Blommar **ej** under samma- eller närliggande period.
+- _Vit_: Uppgifter om relativ blomningstid saknas.
 
-Alla sorter.
+**Cirkelns storlek:**
+
+- _Större_: Fullt kompatibel (alla pollinatörens pollenkorn har förmågan att befrukta mottagaren).
+- _Mindre_: Delvis kompatibel (hälften av pollinatörens pollenkorn har förmågan att befrukta mottagaren).
+- _Ingen (röd prick)_: Icke-kompatibel (inga av pollinatörens pollenkorn har förmågan att befrukta mottagaren).
+
+Självfertila sorter är markerade med en asterisk (*) efter namnet. De självfertila sorterna är också "universella pollinatörer", dvs de kan befrukta sig själva och alla andra sorter (förutsatt att de blommar samtidigt).
+
+Sorterna är ordnade efter blomningstid från vänster (tidigast) till höger (senast) och nedifrån (tidigast) och upp (senast), undantaget sorter för vilka uppgift om blomningstid saknas (de ligger längst ut i schemat).
+
+<!-- # Pollinationstabell -->
+<!-- Olika flikar med korstabell. -->
+
+<!-- Om det blir för många kan det delas upp såhär: -->
+
+<!-- ## Flik 1 Vanliga sorter -->
+
+<!-- Vanligt förekommande i handeln. -->
+
+<!-- ## Flik 2 Ovanliga sorter -->
+
+<!-- Svåra att få tag på. -->
+
+<!-- ## Flik 3 Alla sorter (tabell istället för figur?) -->
+
+<!-- Alla sorter. -->
