@@ -4,37 +4,21 @@ title: "Om blomning"
 
 # Blomningstid
 
-<!-- Bloom time -->
+För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt). De bästa förutsättningarna för befruktning inom 2 dagar efter blomning. Efter 7 dagar är det ca 30% viabilitet i de flesta sorter och detta är temperaturberoende på så vis att svalare temperatur ger längre viabilitet.
 
-För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt).
-
-<!-- Sista frost: Genomsnittligt datum för sista frost varierar mellan mitten av april och mitten av juni beroende på var i landet -->
-
-<!-- statistik som visar datum för sista frost med 50, 70 respektive 90 % sannolikhet.  Se Odlingskalendern på vackertvader.se -->
-
-Sista frosten [Örebro 1 apr-1 jun, normalt 1 apr - 15 maj]
-
-![Sista frost](../../../dropbox/images/plants/sista_frost_2017_smhi.png)
-
-<!-- [SMHI Klimat](https://www.smhi.se/klimat/klimatet-da-och-nu/klimatindex/varens-sista-frost-1.77151) -->
-
-<!-- [SMHI Öppna data](https://www.smhi.se/data) -->
-<!-- - Temp, nederbörd mm -->
-
-<!-- ZOnkarta norden, se : https://stud.epsilon.slu.se/12707/1/larsson_a_171020.pdf -->
-
-<!-- karlberg-e-hiltunen-nilsen-a-20230502.pdf forskningsöversikt mm-->
-<!-- https://stud.epsilon.slu.se/18809/1/karlberg-e-hiltunen-nilsen-a-20230502.pdf -->
-
-I Sverige blommar körsbären i slutet av april till början av maj. Tittar man på forskningsdata från Ullensvang i Norge startade blomningen där för sötkörsbär vanligen 6-14 maj (intervall 20 april till 22 maj beroende på år och sort). Blomningens varaktighet för ett körsbärsträd var där vanligen 9-16 dagar (intervall 7 till 19 dagar). Tar man med data från andra länder och justerar för odlingsplats och år ser man att för 80% av sorterna ligger start av blomningstiden inom ett spann på ca  9 dagar och dess varaktiget på 6-9 dagar.
+I Sverige blommar körsbären i slutet av april till början av maj. Tittar man på forskningsdata från Ullensvang i Norge startade blomningen där för sötkörsbär vanligen 6-14 maj (intervall 20 april till 22 maj beroende på år och sort). Blomningens varaktighet för ett körsbärsträd var där vanligen 9-16 dagar (intervall 7 till 19 dagar). Tar man med data från andra länder och justerar för odlingsplats och år ser man att för 80% av sorterna ligger start av blomningstiden inom ett spann på ca 9 dagar och dess varaktiget på 6-9 dagar. Låga temperaturer kan fördröja start av blomning, särskilt hos senblommande sorter.
 
 Referens: Wenden 2016, "A collection of European sweet cherry phenology data for assessing climate change".
 
 <!-- Ref: Wenden, B., Campoy, J., Lecourt, J. et al. A collection of European sweet cherry phenology data for assessing climate change. Sci Data 3, 160108 (2016). https://doi.org/10.1038/sdata.2016.108 -->
 
+I @fig-btstartros visas skillnad i start av blomning för olika sorter (data från ![RosBREED](https://www.rosbreed.org/)). Värdet på tidsaxeln är antal dagar från den tidigaste sorten. Perioder på ca 3 dagars intervall är markerade.
 
+::: {.column-screen}
 
+![Start av blomning](../../../dropbox/images/plants/bt_start_ros.png){#fig-btstartros}
 
+:::
 
 <!-- Tidig -->
 <!-- Medeltidig -->
@@ -54,22 +38,7 @@ Referens: Wenden 2016, "A collection of European sweet cherry phenology data for
 <!-- Group 4: mid-late -->
 <!-- Group 5: late -->
 
-[UK pollniantion groups list common cherries](https://www.gardenfocused.co.uk/fruitarticles/cherry/pollination.php)
 
-<!-- "Suitable pollination partners include those in the same pollination group and the pollination group above and below. For instance, Merton Bigarreau is in pollination 3. It can be pollinated by  varieties not only in pollination group three but also in the groups 2 and 4." -->
-
-[Primrose UK](https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/)
-<!-- Self-sterile cherry trees require another variety flowering at the same time to ensure fertilisation. They are henceforth put into flowering groups from 1 (very early) to 6 (very late). A cherry tree can be partnered with a cherry that is plus or minus 1 (+-1) its own group. -->
-
-[Ashridge](https://www.ashridgetrees.co.uk/advice/pollinating-cherry-trees)
-
-[Tree-connect](https://treeconnect.com/cherry-tree-pollenizer/)
-
-[Bloom timing](https://treeconnect.com/cherry-tree-pollenizer/)
-
-https://www.cumminsnursery.com/learn-trees/fruit-tree-bloom-dates/ ## US?
-<!-- "Because sweet cherry pollination is complicated, we always recommend that growers start with one self-fertile “universal pollenizer.” This way you are guaranteed to have at least some cherries in your crop. Once you start adding trees to your cherry collection, you will likely have questions about bloom times. The two lists below are groups that will not make good pairings because their bloom times are at the opposite ends of the sweet cherry bloom period:" -->
-<!-- "We do not recommend using tart cherries as pollenizers for sweet cherries, as the bloom time for tart cherries is usually later than that of sweet cherries." -->
 
 <!-- Mognadstid -->
 <!-- Körsbärsvecka 1 börjar olika datum olika år och bestäms av ... -->
@@ -103,92 +72,107 @@ https://www.cumminsnursery.com/learn-trees/fruit-tree-bloom-dates/ ## US?
 <!-- sweet and sour cherry trees in a continental climate environment. Scientia -->
 <!-- Horticulturae, 261, 109011. https://doi.org/10.1016/j.scienta.2019.109011 -->
 
+<!-- statistik som visar datum för sista frost med 50, 70 respektive 90 % sannolikhet.  Se Odlingskalendern på vackertvader.se -->
+
+Om blomningen infaller före den sista frosten finns en risk att blommorna förstörs av den. Genomsnittligt datum för sista frost är mellan mitten av april och mitten av juni beroende på var i landet [tex i Örebro normalt 1 apr till 15 maj, största intervall 1 apr till 1 jun]. Karta från [SMHI](https://www.smhi.se).
+
+![Sista frost](../../../dropbox/images/plants/sista_frost_2017_smhi.png){width=50%}
+
+<!-- [SMHI Klimat](https://www.smhi.se/klimat/klimatet-da-och-nu/klimatindex/varens-sista-frost-1.77151) -->
+
+<!-- [SMHI Öppna data](https://www.smhi.se/data) -->
+<!-- - Temp, nederbörd mm -->
+
+<!-- ZOnkarta norden, se : https://stud.epsilon.slu.se/12707/1/larsson_a_171020.pdf -->
+
+<!-- karlberg-e-hiltunen-nilsen-a-20230502.pdf forskningsöversikt mm-->
+<!-- https://stud.epsilon.slu.se/18809/1/karlberg-e-hiltunen-nilsen-a-20230502.pdf -->
 
 
-## Scientific papers
+<!-- ## Scientific papers -->
 
-ORIGINAL RESEARCH article
-Front. Plant Sci., 09 January 2020
-Sec. Plant Breeding
-Volume 10 - 2019 | https://doi.org/10.3389/fpls.2019.01647
-Genetic Dissection of Bloom Time in Low Chilling Sweet Cherry (Prunus avium L.) Using a Multi-Family QTL Approach
-"https://www.frontiersin.org/articles/10.3389/fpls.2019.01647/full
+<!-- ORIGINAL RESEARCH article -->
+<!-- Front. Plant Sci., 09 January 2020 -->
+<!-- Sec. Plant Breeding -->
+<!-- Volume 10 - 2019 | https://doi.org/10.3389/fpls.2019.01647 -->
+<!-- Genetic Dissection of Bloom Time in Low Chilling Sweet Cherry (Prunus avium L.) Using a Multi-Family QTL Approach -->
+<!-- "https://www.frontiersin.org/articles/10.3389/fpls.2019.01647/full -->
 
-"Bloom time in sweet cherry (Prunus avium L.) is a highly heritable trait that varies between genotypes and depends on the environmental conditions. Bud-break occurs after chill and heat requirements of each genotype are fulfilled, and dormancy is released."
+<!-- "Bloom time in sweet cherry (Prunus avium L.) is a highly heritable trait that varies between genotypes and depends on the environmental conditions. Bud-break occurs after chill and heat requirements of each genotype are fulfilled, and dormancy is released." -->
 
-"Early blooming cultivars are susceptible to spring frost damage in cold regions (Luedeling, 2012), while late blooming cultivars can exhibit irregular floral development and low fruit set due to warm temperatures during the flowering period (Mahmood et al., 2000; Atkinson et al., 2013). The biological control of BT is complex and is known to depend on environmental signals during the winter and spring seasons (Abbott et al., 2015; Fadón and Rodrigo, 2018). Fruit trees like sweet cherry require a period of chilling temperatures followed by a period of warm temperatures to induce blooming (Lang et al., 1987). In Prunus species, several studies indicate that BT is more dependent on chilling than on heat requirement and that there is large variation in these requirements among individuals of the same species (Campoy et al., 2011; Okie and Blackburn, 2011; Sánchez-Pérez et al., 2012; Castède et al., 2014)."
+<!-- "Early blooming cultivars are susceptible to spring frost damage in cold regions (Luedeling, 2012), while late blooming cultivars can exhibit irregular floral development and low fruit set due to warm temperatures during the flowering period (Mahmood et al., 2000; Atkinson et al., 2013). The biological control of BT is complex and is known to depend on environmental signals during the winter and spring seasons (Abbott et al., 2015; Fadón and Rodrigo, 2018). Fruit trees like sweet cherry require a period of chilling temperatures followed by a period of warm temperatures to induce blooming (Lang et al., 1987). In Prunus species, several studies indicate that BT is more dependent on chilling than on heat requirement and that there is large variation in these requirements among individuals of the same species (Campoy et al., 2011; Okie and Blackburn, 2011; Sánchez-Pérez et al., 2012; Castède et al., 2014)." -->
 
-"BT was evaluated for each progeny and the parental cultivars during 4 years (2015 to 2018). During the flowering season, blooming stage was evaluated 3 days per week (every 2–3 days) and BT was recorded when approximately 75% of the floral buds reached stage F (full bloom; Baggiolini, 1980). BT data were expressed as Julian Days (JD; days from January 1st). "
+<!-- "BT was evaluated for each progeny and the parental cultivars during 4 years (2015 to 2018). During the flowering season, blooming stage was evaluated 3 days per week (every 2–3 days) and BT was recorded when approximately 75% of the floral buds reached stage F (full bloom; Baggiolini, 1980). BT data were expressed as Julian Days (JD; days from January 1st). " -->
 
-The datasets generated for this study can be found in the Genome database for Rosaceae, https://www.rosaceae.org/accession https://www.rosaceae.org/accession number tfGDR1040.
-
-
-
-
-Bästa förutsättningarna för befruktning inom 2 dagar efter blomning, efter 7 dagar ca 30% viabilitet i de flesta sorter, temperaturberoende.
-
-" Maximum pollen hydration and pollen germination occurred on the stigmas within 2 days of bloom, depending on cultivar and air temperature. Pollen hydration and germination, and ovule senescence accelerated under warmer temperatures. At 7 days post-anthesis and under 24 °C approximately 80% of ‘Rainier’ ovules were viable compared to 30% in the three other cultivars. Under moderate temperature (18 °C) which mimicked the field average flowering temperature, ovule of the two high productivity cherry cultivars, ‘Rainier’ and ‘Sweetheart’, kept full viabilities for 3–4 days post-anthesis while only 1 day for the two low productivity cultivars ‘Benton’ and ‘Tieton’. 
-
-These results reveal that low commercial productivity of sweet cherry cultivars in the Pacific Northwest (PNW) of U.S. is likely due to rapid ovule senescence, a condition exacerbated in warm conditions https://www.sciencedirect.com/science/article/abs/pii/S030442381830431X"
-
-Norway:
-Modeling of sweet cherry flowering based on temperature and phenology in a mesic Nordic climate
-Authors:   	M. Meland, O. Frøynes, L. Coop, C. Kaiser
-Keywords:   	cherry (Prunus avium L), anthesis, chill units, flowering, dormancy, heat units
-DOI:   	10.17660/ActaHortic.2017.1162.4
-
-"Phenological observations are considered to be sensitive tools for identifying plant responses to climatic changes. Over the last 10 years, the onset of the phenophases of sweet cherry (Prunus avium L.) during spring tended to be earlier than the previous two decades in Ullensvang, western Norway. The effects of air temperature during the winter and spring months were evaluated during two quinquennia (5-year periods), 1996-2000 (Q1) and 2003-2007 (Q2) selected due to similar mean winter and early summer temperatures, but markedly different spring temperatures. Average January-February temperatures were similar (3.3°C) in both of these two 5-year periods. However, average March and April temperatures were slightly warmer (4.0 vs. 3.2°C) and (7.3 vs. 6.9°C), respectively, in Q2 vs. Q1. These increases resulted in significantly earlier flower development. Average temperatures during the first half of May were similar for both quinquennia (10.2 vs. 10.1°C). The start of flowering (first bloom) of early maturing 'Burlat' and mid-season 'Van' were significantly different. Timing of flowering phenophases were statistically different between Q1 and Q2 for both cultivars. Mean data for 'Burlat' and 'Van' first bloom were 8 days earlier during Q2, May 2 for 'Burlat' and May 1 for 'Van'. Full bloom occurred 3 days after first bloom and flowering ended 14 days after first bloom. First bloom during Q2 required 221 Baskerville-Emin Growing degree days (GDD) using a base temperature of 2°C. For the same time period in Q1, only 197 GDD were accumulated, which supports the observed temperature differences. Furthermore, we propose a flowering model for full bloom of both 'Burlat' and 'Van' in Ullensvang, which requires 254 Baskerville-Emin GDD using a base of 2°C starting on March 1."
-
-
-Radičević Sweet cherries classified according to the time of flowering
-TABLE with groups. GENETIKA, Vol. 43, No. 2, 397-406, 2011
-
-"To investigate the flowering phenopase, we studied flowering time,
-progress and abundance of flowering by monitoring and taking notes on flowering
-onset (a date when 10 to 20% of flowers are open), full flowering (90–100% flowers
-are open) and end of flowering (90% of petals fallen off) and abundance of flowering
-(graded as follows: excellent (5), very good (4), good (3), poor (2), bad (1) and
-without flowers (0)). Given flowering phenogram involves average data obtained
-over the eight-year period (1999−2006). The studied sweet cherry cultivars are
-classified into four groups in terms of flowering time: early, mid-early, mid-late and
-late."
-
-"Reporting on the results of study of flowering
-time in 80 sweet cherry cultivars, HODUN and HODUN (2002) stated that the earliest and the latest flowering cultivars covered the span of three to nine days. "
-
-"In the studied sweet cherry cultivars, full flowering followed two to four
-days after flowering onset. In the majority of cultivars (the total of 13), full flowering began averagely three days after flowering onset."
-
-"In the studied sweet cherry cultivars flowering period took up between 9 (‘Bing’, ‘Lambert’) and 13 days (‘Lyons Early’, ‘Souvenir’, ‘Burlat’, ‘Sunburst’).  Sweet cherry belongs in the group of stone fruits that exhibit short period from the flowering onset to full flowering date (up to 3 days). MOGHADAM et al. (2009) reported that flowering period of 25 sweet cherry cultivars took approximately 11-18 days; keeping in view to weather conditions, the flowering time may change.  Fruit set in sweet cherries is largely governed by abundance of flowering.  
-
-Five sweet cherry cultivars demonstrated excellent abundance of flowering, i.e.  ‘Lyons Early’, ‘Souvenir’, ‘Emperor Francis’, ‘Lapins’ and ‘Sunburst’; it was lowest (grade 3) in ‘Lambert’."
-
-"The majority of the studied cultivars (the total of 9 cultivars, i.e. 42.86%) belong to the group of mid-late flowering cultivars. Our results concerning the sequence of flowering of some cultivars are mainly in agreement with those reported by HODUN and HODUN (2002), with the exception of ‘Kordia’. However, ‘Kordia’ was classified as a late flowering cultivar, but according to our results it belongs to the group of mid-late flowering cultivars"
-
-SEE Graphic 1. Phenophase of flowering in studied sweet cherry cultivars (1999–2006)
-
-Table 3. Flowering time and (in)compatibility in the studied sweet cherry cultivars "Heatmap" wit some boxes marked "Flowering time overlap", "Insufficient overlap in some seasons", and "insufficient overlap" Symboler i vissa ruto3 "Compatible" och se,i-compatible
-
-Self-compatibility of cultivars ‘Compact Stella’ (S3S4'), ‘Lapins’ (S1S4'), and ‘Sunburst’ (S3S4') is attributed to a mutant S4 allele, denoted S4', where the prime symbol indicates the loss of pollen-S function
-
-Genetikavol43no2_rad18.pdf GENETIKA, Vol. 43, No. 2, 397-406, 2011
-
-"Similarly, we find it necessary to suggest exceptional potential of combining mid-late flowering cultivars whose flowering period overlaps with that of the majority of other cultivars. Some earlier investigations point to high in vitro pollen germination in some of these cultivars − ‘Van’, ‘Compact Stella’ (CEROVIĆ et al., 2003), and in self-compatible ‘Sunburst’ and ‘Lapins’ (RADIČEVIĆ et al., 2008).  On the other hand, cultivars classified as those with extreme flowering period cannot be recommended as suitable pollenisers among these groups, even when their classification according to incompatibility groups allows cross-pollination and fertilization.  Cultivar combinations categorized as ‘insufficient overlap in some seasons’ can be suitable in some seasons and localities, provided that S-genotype requirements are satisfied, though the risk of insufficient overlap in full flowering remains. This can particularly be emphasized when relatively low temperatures occurring over the period of flowering onset in sweet cherry markedly postpone flowering onset in late flowering cultivars."
-
-Early, Mid-Early, Mid-Late, Late
+<!-- The datasets generated for this study can be found in the Genome database for Rosaceae, https://www.rosaceae.org/accession https://www.rosaceae.org/accession number tfGDR1040. -->
 
 
 
 
-ORIGINAL RESEARCH article
-Front. Plant Sci., 09 January 2020
-Sec. Plant Breeding
-Volume 10 - 2019 | https://doi.org/10.3389/fpls.2019.01647
-Genetic Dissection of Bloom Time in Low Chilling Sweet Cherry (Prunus avium L.) Using a Multi-Family QTL Approach
-https://www.frontiersin.org/articles/10.3389/fpls.2019.01647/full
+<!-- Bästa förutsättningarna för befruktning inom 2 dagar efter blomning, efter 7 dagar ca 30% viabilitet i de flesta sorter, temperaturberoende. -->
 
-"Fruit trees like sweet cherry require a period of chilling temperatures followed by a period of warm temperatures to induce blooming (Lang et al., 1987). In Prunus species, several studies indicate that BT is more dependent on chilling than on heat requirement and that there is large variation in these requirements among individuals of the same species (Campoy et al., 2011; Okie and Blackburn, 2011; Sánchez-Pérez et al., 2012; Castède et al., 2014)."
+<!-- " Maximum pollen hydration and pollen germination occurred on the stigmas within 2 days of bloom, depending on cultivar and air temperature. Pollen hydration and germination, and ovule senescence accelerated under warmer temperatures. At 7 days post-anthesis and under 24 °C approximately 80% of ‘Rainier’ ovules were viable compared to 30% in the three other cultivars. Under moderate temperature (18 °C) which mimicked the field average flowering temperature, ovule of the two high productivity cherry cultivars, ‘Rainier’ and ‘Sweetheart’, kept full viabilities for 3–4 days post-anthesis while only 1 day for the two low productivity cultivars ‘Benton’ and ‘Tieton’.  -->
 
-"everal genetic studies in Prunus have focused on understanding the genetic control of chilling (CR) and heat requirements (HR) contributing to the differences in BT (reviewed in Abbott et al., 2015). BT in Prunus is a quantitative trait with high heritability (Anderson and Seeley, 1993; Dirlewanger et al., 2012; Castède et al., 2014),"
+<!-- These results reveal that low commercial productivity of sweet cherry cultivars in the Pacific Northwest (PNW) of U.S. is likely due to rapid ovule senescence, a condition exacerbated in warm conditions https://www.sciencedirect.com/science/article/abs/pii/S030442381830431X" -->
 
-"The biological control of BT is complex and is known to depend on environmental signals during the winter and spring seasons (Abbott et al., 2015; Fadón and Rodrigo, 2018). "
+<!-- Norway: -->
+<!-- Modeling of sweet cherry flowering based on temperature and phenology in a mesic Nordic climate -->
+<!-- Authors:   	M. Meland, O. Frøynes, L. Coop, C. Kaiser -->
+<!-- Keywords:   	cherry (Prunus avium L), anthesis, chill units, flowering, dormancy, heat units -->
+<!-- DOI:   	10.17660/ActaHortic.2017.1162.4 -->
+
+<!-- "Phenological observations are considered to be sensitive tools for identifying plant responses to climatic changes. Over the last 10 years, the onset of the phenophases of sweet cherry (Prunus avium L.) during spring tended to be earlier than the previous two decades in Ullensvang, western Norway. The effects of air temperature during the winter and spring months were evaluated during two quinquennia (5-year periods), 1996-2000 (Q1) and 2003-2007 (Q2) selected due to similar mean winter and early summer temperatures, but markedly different spring temperatures. Average January-February temperatures were similar (3.3°C) in both of these two 5-year periods. However, average March and April temperatures were slightly warmer (4.0 vs. 3.2°C) and (7.3 vs. 6.9°C), respectively, in Q2 vs. Q1. These increases resulted in significantly earlier flower development. Average temperatures during the first half of May were similar for both quinquennia (10.2 vs. 10.1°C). The start of flowering (first bloom) of early maturing 'Burlat' and mid-season 'Van' were significantly different. Timing of flowering phenophases were statistically different between Q1 and Q2 for both cultivars. Mean data for 'Burlat' and 'Van' first bloom were 8 days earlier during Q2, May 2 for 'Burlat' and May 1 for 'Van'. Full bloom occurred 3 days after first bloom and flowering ended 14 days after first bloom. First bloom during Q2 required 221 Baskerville-Emin Growing degree days (GDD) using a base temperature of 2°C. For the same time period in Q1, only 197 GDD were accumulated, which supports the observed temperature differences. Furthermore, we propose a flowering model for full bloom of both 'Burlat' and 'Van' in Ullensvang, which requires 254 Baskerville-Emin GDD using a base of 2°C starting on March 1." -->
+
+
+<!-- Radičević Sweet cherries classified according to the time of flowering -->
+<!-- TABLE with groups. GENETIKA, Vol. 43, No. 2, 397-406, 2011 -->
+
+<!-- "To investigate the flowering phenopase, we studied flowering time, -->
+<!-- progress and abundance of flowering by monitoring and taking notes on flowering -->
+<!-- onset (a date when 10 to 20% of flowers are open), full flowering (90–100% flowers -->
+<!-- are open) and end of flowering (90% of petals fallen off) and abundance of flowering -->
+<!-- (graded as follows: excellent (5), very good (4), good (3), poor (2), bad (1) and -->
+<!-- without flowers (0)). Given flowering phenogram involves average data obtained -->
+<!-- over the eight-year period (1999−2006). The studied sweet cherry cultivars are -->
+<!-- classified into four groups in terms of flowering time: early, mid-early, mid-late and -->
+<!-- late." -->
+
+<!-- "Reporting on the results of study of flowering -->
+<!-- time in 80 sweet cherry cultivars, HODUN and HODUN (2002) stated that the earliest and the latest flowering cultivars covered the span of three to nine days. " -->
+
+<!-- "In the studied sweet cherry cultivars, full flowering followed two to four -->
+<!-- days after flowering onset. In the majority of cultivars (the total of 13), full flowering began averagely three days after flowering onset." -->
+
+<!-- "In the studied sweet cherry cultivars flowering period took up between 9 (‘Bing’, ‘Lambert’) and 13 days (‘Lyons Early’, ‘Souvenir’, ‘Burlat’, ‘Sunburst’).  Sweet cherry belongs in the group of stone fruits that exhibit short period from the flowering onset to full flowering date (up to 3 days). MOGHADAM et al. (2009) reported that flowering period of 25 sweet cherry cultivars took approximately 11-18 days; keeping in view to weather conditions, the flowering time may change.  Fruit set in sweet cherries is largely governed by abundance of flowering.   -->
+
+<!-- Five sweet cherry cultivars demonstrated excellent abundance of flowering, i.e.  ‘Lyons Early’, ‘Souvenir’, ‘Emperor Francis’, ‘Lapins’ and ‘Sunburst’; it was lowest (grade 3) in ‘Lambert’." -->
+
+<!-- "The majority of the studied cultivars (the total of 9 cultivars, i.e. 42.86%) belong to the group of mid-late flowering cultivars. Our results concerning the sequence of flowering of some cultivars are mainly in agreement with those reported by HODUN and HODUN (2002), with the exception of ‘Kordia’. However, ‘Kordia’ was classified as a late flowering cultivar, but according to our results it belongs to the group of mid-late flowering cultivars" -->
+
+<!-- SEE Graphic 1. Phenophase of flowering in studied sweet cherry cultivars (1999–2006) -->
+
+<!-- Table 3. Flowering time and (in)compatibility in the studied sweet cherry cultivars "Heatmap" wit some boxes marked "Flowering time overlap", "Insufficient overlap in some seasons", and "insufficient overlap" Symboler i vissa ruto3 "Compatible" och se,i-compatible -->
+
+<!-- Self-compatibility of cultivars ‘Compact Stella’ (S3S4'), ‘Lapins’ (S1S4'), and ‘Sunburst’ (S3S4') is attributed to a mutant S4 allele, denoted S4', where the prime symbol indicates the loss of pollen-S function -->
+
+<!-- Genetikavol43no2_rad18.pdf GENETIKA, Vol. 43, No. 2, 397-406, 2011 -->
+
+<!-- "Similarly, we find it necessary to suggest exceptional potential of combining mid-late flowering cultivars whose flowering period overlaps with that of the majority of other cultivars. Some earlier investigations point to high in vitro pollen germination in some of these cultivars − ‘Van’, ‘Compact Stella’ (CEROVIĆ et al., 2003), and in self-compatible ‘Sunburst’ and ‘Lapins’ (RADIČEVIĆ et al., 2008).  On the other hand, cultivars classified as those with extreme flowering period cannot be recommended as suitable pollenisers among these groups, even when their classification according to incompatibility groups allows cross-pollination and fertilization.  Cultivar combinations categorized as ‘insufficient overlap in some seasons’ can be suitable in some seasons and localities, provided that S-genotype requirements are satisfied, though the risk of insufficient overlap in full flowering remains. This can particularly be emphasized when relatively low temperatures occurring over the period of flowering onset in sweet cherry markedly postpone flowering onset in late flowering cultivars." -->
+
+<!-- Early, Mid-Early, Mid-Late, Late -->
+
+
+
+
+<!-- ORIGINAL RESEARCH article -->
+<!-- Front. Plant Sci., 09 January 2020 -->
+<!-- Sec. Plant Breeding -->
+<!-- Volume 10 - 2019 | https://doi.org/10.3389/fpls.2019.01647 -->
+<!-- Genetic Dissection of Bloom Time in Low Chilling Sweet Cherry (Prunus avium L.) Using a Multi-Family QTL Approach -->
+<!-- https://www.frontiersin.org/articles/10.3389/fpls.2019.01647/full -->
+
+<!-- "Fruit trees like sweet cherry require a period of chilling temperatures followed by a period of warm temperatures to induce blooming (Lang et al., 1987). In Prunus species, several studies indicate that BT is more dependent on chilling than on heat requirement and that there is large variation in these requirements among individuals of the same species (Campoy et al., 2011; Okie and Blackburn, 2011; Sánchez-Pérez et al., 2012; Castède et al., 2014)." -->
+
+<!-- "everal genetic studies in Prunus have focused on understanding the genetic control of chilling (CR) and heat requirements (HR) contributing to the differences in BT (reviewed in Abbott et al., 2015). BT in Prunus is a quantitative trait with high heritability (Anderson and Seeley, 1993; Dirlewanger et al., 2012; Castède et al., 2014)," -->
+
+<!-- "The biological control of BT is complex and is known to depend on environmental signals during the winter and spring seasons (Abbott et al., 2015; Fadón and Rodrigo, 2018). " -->

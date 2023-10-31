@@ -16,7 +16,6 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Olika sorter kan trivas olika bra i just din trädgård, så det kan vara bra att prova olika.
 
-
 ## Några egenskaper av betydelse för val av sort
 
 - Härdighet: Vilket klimat de kan odlas i. Anges ofta i zoner numrerade 1-8 där 1 är mildast och 8 kärvast. Kolla zonkartan för att se vilken zon du bor i. Lokalt klimat kan påverkas av närhet till stora vatten (klimatet blir ofta mildare), läge osv.
@@ -37,7 +36,7 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Storlek och form (vissa sorter är hjärtformade) på bären.
 
-- Trädets utseende och storlek (beror också på vilken _grundstam_ som används).
+- Trädets utseende och storlek. Beror också på vilken _grundstam_(Se @sec-grundstam) som används.
 
 - Skördens riklighet.
 
@@ -55,6 +54,8 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 <!-- Frost can be extremely damaging to blossom and will reduce your crop. It can be useful to choose trees in late flowering groups if you have a late last frost. -->
 
+- Att välja åtminstone en självfertil sort gör att du är garanterad att få viss skörd.
+
 ## Surkörsbär, skillnad mot sötkörsbär
 
 - Mer syrliga än sötkörsbär.
@@ -69,7 +70,12 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Är tetraploider med 2n=32 kromosomer (Sötkörsbär är diploida<!-- och har 16 kromosomer som bildar 8 par.  -->). En tertaploid sort kan ha upp till fyra alleler/varianter i samma locus.
 
+- Blommar vanligen senare än sötkörsbär och är därför inte så lämpliga som pollinerare av dessa.
+
 ## Några intressanta sorter
+
+<!-- "Similarly, we find it necessary to suggest exceptional potential of combining mid-late flowering cultivars whose flowering period overlaps with that of the majority of other cultivars. Some earlier investigations point to high in vitro pollen germination in some of these cultivars − ‘Van’, ‘Compact Stella’ (CEROVIĆ et al., 2003), and in self-compatible ‘Sunburst’ and ‘Lapins’ (RADIČEVIĆ et al., 2008).  On the other hand, cultivars classified as those with extreme flowering period cannot be recommended as suitable pollenisers among these groups. ‘insufficient overlap in some seasons’ can be suitable in some seasons and localities, though the risk of insufficient overlap in full flowering remains. This can particularly be emphasized when relatively low temperatures occurring over the period of flowering onset in sweet cherry markedly postpone flowering onset in late flowering cultivars." -->
+
 
 Lapins
 
@@ -77,7 +83,7 @@ Sen sort som mognar i slutet av juli eller början av augusti.
 
 Garden Focused: "Only really suitable for growing in warmer parts of the UK because blossom first appears on average in the second to third week of April (pollination group 2 to 3)."
 
-OLLINATION PARTNERS FOR LAPINS CHERRY
+POLLINATION PARTNERS FOR LAPINS CHERRY
 Lapins is self-fertile and and does not need a suitable pollination partner to produce fruit. Lapins is in pollination group 2 to 3. The following varieties produces blossom at roughly the same time (mid to late April) and will be pollinated by Lapins. They are easily obtainable in the UK:
 
 Penny, pollination group 3 to 4, eating variety
@@ -130,11 +136,7 @@ Alla utom dessa anges som Use: Eating
 <!-- ## Note: -->
 <!-- ## kauffs_kirsche  # samma som 'Knauff's Schwarze'? (den enda som hittas av google när man söker på Knauff)? ändrade till var knauffs_schwarze i den tidigare egna listan -->
 
-
-
-
-
-# Grundstammar
+# Grundstammar {#sec-grundstam}
 
 Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okulering_). Typen av grundstam påpverkar bland annat:
 

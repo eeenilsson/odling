@@ -28,7 +28,8 @@ Resurser och källor.
 
 [Wikipedia om pollinering](https://sv.wikipedia.org/wiki/Pollinering)
 
-[Primrose pollineringsgrupper](https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/)
+[Primrose UK pollinationsgrupper](https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/)
+<!-- Self-sterile cherry trees require another variety flowering at the same time to ensure fertilisation. They are henceforth put into flowering groups from 1 (very early) to 6 (very late). A cherry tree can be partnered with a cherry that is plus or minus 1 (+-1) its own group. -->
 
 
 [Difference Between Allogamy and Xenogamy](https://pediaa.com/difference-between-allogamy-and-xenogamy/)
@@ -48,9 +49,21 @@ Resurser och källor.
 [Incompatible (S-) genotypes of sweet cherry cultivars](https://www.sciencedirect.com/science/article/abs/pii/S0304423812004396)
 <!-- An update of the S-genotype of 734 sweet cherries was summarized. The data includes results of 51 new varieties supplemented with data from various published sources and personal information up to 2012 -->
 
-[Rosbreed](https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility)
-
 [Sweet Cherry pollination table](https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf)
+
+[UK pollniantion groups list common cherries](https://www.gardenfocused.co.uk/fruitarticles/cherry/pollination.php)
+
+<!-- "Suitable pollination partners include those in the same pollination group and the pollination group above and below. For instance, Merton Bigarreau is in pollination 3. It can be pollinated by  varieties not only in pollination group three but also in the groups 2 and 4." -->
+
+[Ashridge](https://www.ashridgetrees.co.uk/advice/pollinating-cherry-trees)
+
+[Tree-connect](https://treeconnect.com/cherry-tree-pollenizer/)
+
+[Bloom timing](https://treeconnect.com/cherry-tree-pollenizer/)
+
+[Cummins nursery](https://www.cumminsnursery.com/learn-trees/fruit-tree-bloom-dates/)
+<!-- "Because sweet cherry pollination is complicated, we always recommend that growers start with one self-fertile “universal pollenizer.” This way you are guaranteed to have at least some cherries in your crop. Once you start adding trees to your cherry collection, you will likely have questions about bloom times. The two lists below are groups that will not make good pairings because their bloom times are at the opposite ends of the sweet cherry bloom period:" -->
+<!-- "We do not recommend using tart cherries as pollenizers for sweet cherries, as the bloom time for tart cherries is usually later than that of sweet cherries." -->
 
 ## S-alleler
 
@@ -83,3 +96,5 @@ https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-T
 "Because of this uncertainty our pollination checker will only recommend varieties which flower at the same time and are universal pollinators. Universal pollinator varieties will pollinate all other cherry varieties which are in flower at the same time (with a few exceptions, for example Stella - a universal pollinator - will not pollinate Bing). "
 
 [Cherry tree comparison UK](https://www.gardenfocused.co.uk/fruitarticles/cherry/varieties.php)
+
+[Eriksbo plantskola:](http://www.eriksbo-plantskola.se/): Bra information om många sorter, bland annat blomningstid.

@@ -297,7 +297,7 @@ eur_bt[, bt_start_to_full := bt_end - bt_full]
 ## tmp <- eur_bt[site == "Vienna", .(var, site, year, bt_start, first_bt_start)]
 ## setkey(tmp, var)
 
-## agrregate
+## aggregate
 eur_bt_aggr <- eur_bt
 
 ## ## calculate the bt relative to the lowest bt for that year and site
@@ -341,31 +341,22 @@ eur_lm_bt_duration[, var := gsub(".Intercept.", "intercept", var)]
 eur_lm_bt_duration[, var := gsub("^var", "", var)]
 names(eur_lm_bt_duration) <- c("var", "coef_bt_duration")
 
-tmp <- eur_lm_bt_start[!grepl("^year|^site|intercept$", var)]
-tmp <- data.table(
-    var = as.factor(tmp$var),
-    bt_start_relative = tmp$coef_bt_start - median(tmp$coef_bt_start) ## relative to median    
+eur_lm_bt_start <- eur_lm_bt_start[!grepl("^year|^site|intercept$", var)]
+eur_lm_bt_start <- data.table(
+    var = as.factor(eur_lm_bt_start$var),
+    bt_start_relative = eur_lm_bt_start$coef_bt_start - median(eur_lm_bt_start$coef_bt_start), ## relative to median
+    coef_bt_start = eur_lm_bt_start$coef_bt_start
 )
-## quantile(tmp$bt_start_relative, probs = seq(0, 1, 0.1))
+## quantile(eur_lm_bt_start$bt_start_relative, probs = seq(0, 1, 0.1))
 
 ## summary(tmp$bt_start_relative)
 
-tmp <- eur_lm_bt_duration[!grepl("^year|^site|intercept$", var)]
-tmp <- data.table(
-    var = as.factor(tmp$var),
-    bt_duration_relative = tmp$coef_bt_duration - median(tmp$coef_bt_duration) ## relative to median    
+eur_lm_bt_duration <- eur_lm_bt_duration[!grepl("^year|^site|intercept$", var)]
+eur_lm_bt_duration <- data.table(
+    var = as.factor(eur_lm_bt_duration$var),
+    bt_duration_relative = eur_lm_bt_duration$coef_bt_duration - median(eur_lm_bt_duration$coef_bt_duration) ## relative to median    
 )
-## quantile(tmp$bt_duration_relative + 7.53, probs = seq(0, 1, 0.1))
-
-## boxplot
-pacman::p_load(ggplot2)
-library(forcats) ## for reordering plot levels
-p <- ggplot(tmp, aes(x=var, y=bt_duration_relative)) + geom_boxplot()
-p <- p + geom_dotplot(binaxis='y', stackdir='center', dotsize=0.2)
-# Rotate the box plot
-p + coord_flip()
-## summary(tmp$test_start_date)
-
+## quantile(eur_lm_bt_duration$bt_duration_relative + 7.53, probs = seq(0, 1, 0.1))
 
 ## str(eur_bt)  ## Note: Site Balandran (southern France near Tolouse) is ref level and has n = 1400 measurements
 ## unique(eur_bt$site)
@@ -595,26 +586,6 @@ blooming_group_aggr[grepl("rote", var), ]
 ## fread("bt_uk2.csv") ## Note: Needs reformatting. Entered some of the values in google_bt.csv
 
 
-
-
-## Dansk artikel --------------------------
-## phenology_statens_dk_tab1.csv
-## phenology_dk_statens_tab2.csv ## has BT
-
-## Meta:
-## Evaluation and numerical studies of qualitative and morphological characteristics of 49 sweet cherry cultivars. J. Vittrup Christensen. Statens Forsøgsstation, Blangstedgaard (E. Poulsen)
-## origin: Bulgaria: 1) Institut po Ovostarstvo, Plovdiv.  Canada: 2) HorticulturalExp. St., Vineland, On- tario. Denmark: 3) M. Voight Petersen, Oure. 4) Royal University of Agriculture, Copenhagen.  Germany: 5) Institut für Obstbau, Hohenheim. 6) Dr. D. Dähne, Koblenz. 7) Obstbauversuchsan- stalt Jork. Poland: 8) Instytut Sadownictwa, Skiernisvicach. Sweden: 9) Balsgård Fruit Bre- eding Institute. 9) Rånna Experimental Garden, Skövde. 10) G. Almer, Nordanvik, Näsum. Swit- zerland: 11) Forschungsanstalt für Obstbau, Wä- denswill. USA: 12) New York State Agr. Exp.  St., Geneva. 13) Oregon State University, Cor- vallis. 14) University of Idaho, Moscow. Eng- land: 15) East Malling Research Station.
-## Season of maturity: 1 = very early (earlier than 29th June) 3 = early (29th June - 8th July) 5 = medium (9th July - 20th July) 7 = late (21st July - 31st July) 9 = very late (later than 31st July)
-## Color of skin: 1 = yellow (uncoloured juice) 3 = vermillion on a pale yellow ground volour (uncoloured juice) 5 = mahogany or black (coloured juice)
-## Firmness: 3 = soft 5 = medium 7 = firm
-## Cracking: based on cracking indexes and refer to the following grouping (actual range of cracking indexes in brackets).  1 = very low (< 3 = low (24 5 = medium (47 7 = high (68 9 = very high (> 24) -46) -67) -82) 82)
-## fertility: 3 = low yield 5 = medium yield 7 = high yield
-## season of flowering: 1 = very early 3 = early 5 = medium 7 = late 9 = very late
-## see paper for more on variables definitions
-## they also comment on each variety
-## Summary: The main object of this work was to test newer, and in Denmark unnoticed older cultivars for their qualitative characteristics. Of light cultivars 'Sue' and 'Merton Late' were outstanding for low tendency to cracking and high productivity. 'Vega' was of very fine quality with good tree fertility.  In the early season group the dark cultivars 'Ranne Ljaskovska', 'Frühe Meckenheimer', and 'Spitze Braune' had very valuable characte- ristics and deserve further trial.  In the mid-season group 'Rebekka', 'Valeska', 'Annabella', and 'Balsgård 20406' are the most promising cultivars. In the late season group 'Schneiders Späte' is still of commercial interest owing its extremely large fruits, but its high ten- dency towards cracking should be considered.
-
-
 ## more ------------------
 
 ## file:///home/e/Downloads/gupea_2077_54273_1.pdf
@@ -688,3 +659,85 @@ blooming_group_aggr[grepl("rote", var), ]
 ## heide2019.pdf
 
 ## https://www.orangepippin.com/varieties/cherries/s
+
+
+## Andra egenskaper ==========================================
+
+## RosBREED -------------------
+
+ros_phenology <- ros[, .(Germplasm, Dataset, TA, Bulked_Fruit_Firmness, Firmness_1, Bulked_Fruit_Wt, Fruit_Wt, FreeStone, Skin_C_mahogany, Skin_C_blush, Perc_Cracking, SSC, Bulked_Fruit_SSC, Flesh_C)]
+names(ros_phenology) <- tolower(names(ros_phenology))
+## see rosbreed_trait_descriptors.csv
+## Skin_C_blush : 1=0-25%; 2=26-50%; 3=51-76%; 4=76-100%
+## Skin_C_mahogany : Visual rating on 1-7 scale based on a ctifl color chart, typically on 25 fruit from a tree
+## Flesh_C : 1=white; 2=pink; 3=orange; 4=red; 5=deep red
+## SSC : Soluble solids contents = Total soluble solids = Brix
+## TA: Total or maybe titratable acidity
+## Bulked_Fruit_Firmness, firmness averaged over 25 fruit,  g_per_mm
+## Firmness, SSC, and TA were measured in units of g/mm, °Brix, and percentage, respectively.
+## The force required to pull a ripe cherry fruit from its pedicel, PFRF, and fruit weight were both measured in grams.
+
+## curate var names to match genotype data ---------------
+ros_phenology[, var := tolower(germplasm)]
+ros_phenology[, var := gsub(" ", "_", var)]
+varnames_tmp <- c(  ## from (rosbreed) = to (genotype data)
+    'krupnoplodnaya' = "krupnoplidna",
+    'schneiders' = "schneiders_spate_knorpelkirsche" ## same gt
+    ## "bing"  ## missing from genotype
+)
+ros_phenology$var <- query_label(ros_phenology$var, varnames_tmp)
+ros_phenology[, var := as.factor(var)]
+
+
+## aggregate
+
+str(ros_phenology)
+ros_phenology[, lapply(.SD, mean), by=dataset]
+ros_phenology_aggr <- ros_phenology[, lapply(.SD, function(x){median(x, na.rm = TRUE)}), by=var, .SDcols=names(ros_phenology)[3:14]]
+
+str(ros_phenology_aggr)
+ros_phenology_aggr[, lapply(.SD, function(x){(x, na.rm = TRUE)}), by=var, .SDcols=names(ros_phenologyaggr)[2:12]]
+
+
+## eur_bt_aggr <- eur_bt[, .(
+##     bt_start = mean(bt_start, na.rm = TRUE),
+##     bt_full = mean(bt_full, na.rm = TRUE),
+##     bt_end = mean(bt_end, na.rm = TRUE),
+##     bt_duration = mean(bt_duration, na.rm = TRUE)
+## ),
+##                 by = list(var, site)]
+
+
+
+
+
+
+
+## Dansk artikel --------------------------
+## detailed characteristics of some cherrie varieties dk
+## https://dcapub.au.dk/pub/planteavl_81_148.pdf
+## Se https://dcapub.au.dk/pub/planteavl_81_148.pdf
+## finns på dropbox/images/plants
+
+## Table 1 and 2 (2 needs curation): 
+## phenology_statens_dk_tab1.csv
+## phenology_dk_statens_tab2.csv ## has BT
+
+## Meta:
+## Evaluation and numerical studies of qualitative and morphological characteristics of 49 sweet cherry cultivars. J. Vittrup Christensen. Statens Forsøgsstation, Blangstedgaard (E. Poulsen)
+## origin: Bulgaria: 1) Institut po Ovostarstvo, Plovdiv.  Canada: 2) HorticulturalExp. St., Vineland, On- tario. Denmark: 3) M. Voight Petersen, Oure. 4) Royal University of Agriculture, Copenhagen.  Germany: 5) Institut für Obstbau, Hohenheim. 6) Dr. D. Dähne, Koblenz. 7) Obstbauversuchsan- stalt Jork. Poland: 8) Instytut Sadownictwa, Skiernisvicach. Sweden: 9) Balsgård Fruit Bre- eding Institute. 9) Rånna Experimental Garden, Skövde. 10) G. Almer, Nordanvik, Näsum. Swit- zerland: 11) Forschungsanstalt für Obstbau, Wä- denswill. USA: 12) New York State Agr. Exp.  St., Geneva. 13) Oregon State University, Cor- vallis. 14) University of Idaho, Moscow. Eng- land: 15) East Malling Research Station.
+## season of flowering:
+## 1 = very early
+## 3 = early
+## 5 = medium
+## 7 = late
+## 9 = very late
+## Season of maturity: 1 = very early (earlier than 29th June) 3 = early (29th June - 8th July) 5 = medium (9th July - 20th July) 7 = late (21st July - 31st July) 9 = very late (later than 31st July)
+## Color of skin: 1 = yellow (uncoloured juice) 3 = vermillion on a pale yellow ground volour (uncoloured juice) 5 = mahogany or black (coloured juice)
+## Firmness: 3 = soft 5 = medium 7 = firm
+## Cracking: based on cracking indexes and refer to the following grouping (actual range of cracking indexes in brackets).  1 = very low (< 3 = low (24 5 = medium (47 7 = high (68 9 = very high (> 24) -46) -67) -82) 82)
+## fertility: 3 = low yield 5 = medium yield 7 = high yield
+## season of flowering: 1 = very early 3 = early 5 = medium 7 = late 9 = very late
+## see paper for more on variables definitions
+## they also comment on each variety
+## Summary: The main object of this work was to test newer, and in Denmark unnoticed older cultivars for their qualitative characteristics. Of light cultivars 'Sue' and 'Merton Late' were outstanding for low tendency to cracking and high productivity. 'Vega' was of very fine quality with good tree fertility.  In the early season group the dark cultivars 'Ranne Ljaskovska', 'Frühe Meckenheimer', and 'Spitze Braune' had very valuable characte- ristics and deserve further trial.  In the mid-season group 'Rebekka', 'Valeska', 'Annabella', and 'Balsgård 20406' are the most promising cultivars. In the late season group 'Schneiders Späte' is still of commercial interest owing its extremely large fruits, but its high ten- dency towards cracking should be considered.
