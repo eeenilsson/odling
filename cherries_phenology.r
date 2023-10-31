@@ -402,6 +402,10 @@ ull_bt[, bt_start_date := startofyear + bt_start]
 mean(ull_bt$bt_start_date, na.rm = TRUE)
 mean(ull_bt$bt_start, na.rm = TRUE)
 
+ull_bt[, median(test_start_date, na.rm = TRUE), by = var]
+ull_bt[, min(test_start_date, na.rm = TRUE), by = var]
+ull_bt[, max(test_start_date, na.rm = TRUE), by = var]
+
 ull_bt[, month_day := format(as.Date(startofyear+ bt_start), "%m-%d")]
 ull_bt[, test_start_date := paste0("2006-", month_day)]
 ull_bt[, test_start_date := as.Date(test_start_date, format = "%Y-%m-%d")]
