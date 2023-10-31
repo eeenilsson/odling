@@ -437,6 +437,22 @@ eur_bt_gr <- lm_bt_start
 ## Sweet cherry phenological data were collected from two networks: flowering and maturity dates for up to 191 reference cultivars, and from 10 sites, were extracted from the French database,
 
 
+## google on missing ones -----
+
+## todo: check this site swedish:
+## https://www.ebeplant.se/krsbr-1 ## har BT!
+
+google_bt <- fread("google_bt.csv")
+## Meta:
+## 1	tidig	mycket tidig?
+## 2	medeltidig	tidig?
+## 3	medel	medel
+## 4	medelsen	sen?
+## 5	sen	mycket sen?
+google_bt[, bt_google_sv := as.numeric(bt_google_sv)]
+tmp <- google_bt[, .(bt_google_sv, bt_google_any)]
+google_bt$bt_any <- rowMeans(tmp, na.rm = TRUE)
+google_bt <- google_bt[, .(var, bt_any)]
 
 ## aggregate bt ------------------
 anfic_bt[, anfic_bg_num := as.numeric(blooming_group_anfic)]
@@ -445,18 +461,22 @@ anfic_bt[, anfic_bg_num := mean(anfic_bg_num, na.rm = TRUE), by = "var"]
 tmp <- rbind(anfic_bt[, .(var)], ## make an empty dt with var
           rosbreed_bt[, .(var)],
           eur_bt[, .(var)],
-          uk_bt[, .(var)]
+          uk_bt[, .(var)],
+          google_bt[, .(var)]
           )
 tmp <- unique(tmp)
 tmp <- anfic_bt[!duplicated(var, )][tmp, on = "var"]
 tmp <- rosbreed_bt[!duplicated(var, )][tmp, on = "var"]
 tmp <- eur_bt_gr[!duplicated(var, )][tmp, on = "var"] ## add eur
 tmp <- uk_bt[!duplicated(var, )][tmp, on = "var"] ## add uk
+tmp <- google_bt[!duplicated(var, )][tmp, on = "var"] ## add googled
+
 ## todo: calculate numeric bg in ros and eur with one decimal place
 
 ## sanitize colnames
 varnames_temp <- c(
     'var' = "var",
+    'bt_any' = "bg_google",
 'blooming_group_uk' = "bg_uk",
 'bt_start_gr' = "bg_eur",
 'bt_quintile' = "bg_ros",
@@ -469,7 +489,7 @@ varnames_temp <- c(
 )
 names(tmp) <- query_label(names(tmp), varnames_temp)
 
-tmp <- tmp[, .(var, bg_anfic, bg_eur, bg_uk, bg_ros)]
+tmp <- tmp[, .(var, bg_anfic, bg_eur, bg_uk, bg_ros, bg_google)]
 ## Note: gdd ros deviates somewhat, not kept here
 tmp$bg_mean <- rowMeans(tmp[, -1], na.rm = TRUE)
 tmp[, bgr := round(bg_mean, digits = 1)]
@@ -477,14 +497,17 @@ tmp[, bgr := round(bg_mean, digits = 1)]
 ## tmp[, bgr := plyr::round_any(bg_mean, 0.5)]
 
 blooming_group_aggr <- tmp[!is.na(bgr), .(var, bgr)]
-
+blooming_group_aggr[grepl("rote", var), ]
+## google_bt[grepl("rote", var), ]
 ## ?plyr::round_any
 
 ## more from uk
 ## uk flowering group + incompatibility
 ## https://www.trees-online.co.uk/cherry-tree-pollination
 ## You would select your first tree based on the attributes you like e.g. taste, colour, size etc. Then you would buy a different tree in the same flowering group or one above or one below e.g. if you liked a tree in flowering group 3, you could choose any other from flowering groups 2, 3 or 4 and both would produce fruit. The reason for this is the number is an indication of when the tree produces blossom. For fruit to be produced, one tree has to have its blossoms showing at the same time or just before or after the other tree. the general rule is you need to pick your two cherry trees from the same row and from the same flowering group or 1 above or 1 below.
-fread("bt_uk2.csv")
+## fread("bt_uk2.csv") ## Note: Needs reformatting. Entered some of the values in google_bt.csv
+
+
 
 
 ## Dansk artikel --------------------------

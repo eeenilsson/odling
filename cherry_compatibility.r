@@ -201,7 +201,9 @@ bg_selected <- blooming_group_aggr[grepl(paste0(selectvars, collapse = "$|^"), v
 ## write.csv(tmp, "google_bt_sverige.csv", row.names = FALSE)
 
 ## add these even if bt is unknown
-tmp <- c("gaardebo", "fryksaas", "berit", "erianne", "fanal", "heidi", "nordia", "ostheimer", "kelleris", "buttners_spate_rote_knorpelkirsche", "knauffs_schwarze") ## bt missing
+tmp <- c("fryksaas", "erianne") ## bt missing
+## sour: ostheimer, nordia, fanal, kelleris, kirsa, berit, mfl
+
 tmp <- tmp[!tmp %in% bg_selected[, var]] ## those not already selected
 tmp <- variety_genotype_group[grepl(paste0(tmp, collapse = "$|"), var), .(var)]
 tmp[, bgr := 99] ## use 99 for thos w unknown bgr
@@ -215,7 +217,7 @@ bg_selected <- rbind(bg_selected,
 ## ## explore
 ## blooming_group_aggr[grepl("tar", var), ]
 cols <- c("variety", "var", "genotype") ## , "genotype"
-variety_genotype_group[grepl("döni", tolower(variety)), ..cols]
+variety_genotype_group[grepl("lovan", tolower(variety)), ..cols]
 
 ## tmp <- variety_genotype_group[grepl(paste0(paste0(notselected, collapse = "|")), tolower(variety)), ..cols]
 ## print(tmp[, .(var)], n = 200)
@@ -320,6 +322,12 @@ tmp[, label := gsub(" \\/[^$]*", "", label)]
 tmp[, label := gsub("TM$", "", label)]
 tmp[, label := gsub("Späte Rote Knorpelkirsche", "Rote", label)]
 tmp[, label := gsub("Knauffs Schwarze", "Knauffs", label)]
+tmp[, label := gsub("Große Schwarze Knorpel", "Große Schwarze", label)]
+tmp[, label := gsub("Dönissens Gelbe Knorpel", "Dönissens Gelbe", label)]
+tmp[, label := gsub("Guigne d'Annonay", "Annonay", label)]
+
+## tmp[grepl("Anno", label), ]
+
 tmp[, label_ss := paste0(label, " [", genotype, ", ", incompatibility_group, "]")]
 varnames <- tmp$label_ss
 names(varnames) <- tmp$var
@@ -337,13 +345,13 @@ plot_pollination_table <- p +
     scale_size_area() +
     scale_color_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3", "bt_unknown" = "white")) +
     theme(
-        plot.margin = unit(c(1.5, 1.5, 1.5, 1.5), "centimeters"),
+        plot.margin = unit(c(1.2, 1.2, 1.2, 1.2), "centimeters"),
         legend.position = "none",
         axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
-        plot.title = element_text(hjust = 0, vjust = 3, size = 22, face="bold"),
+        plot.title = element_text(hjust = 0, vjust = 3, size = 18, face="bold"),
         axis.title.x = element_text(hjust = 0.5, vjust = -5),
         axis.text=element_text(size=14),
-        axis.title=element_text(size=18, face="bold")
+        axis.title=element_text(size=16, face="bold")
     ) +
     labs(title="Pollinationsdiagram för körsbär",
          x ="Pollinatör",
