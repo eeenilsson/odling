@@ -4,7 +4,7 @@ title: "Val av sort"
 
 När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara genetiskt kompatibla med varandra och blomma samtidigt. Se sidan om [pollination](pollination_about.qmd) och [pollinationsschemat](pollination_table.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
 
-Det finns många sorter av körsbär. En sort benämns företrädesvis med artnamn och sortnamn, tex _Prunus avium_ 'Merton Glory'. Dock används i praktiken samma namn för sorter som är genetiskt olika och tvärtom kan sorter som är genetiskt lika benämnas olika. [Se](https://pub.epsilon.slu.se/8732/7/nybom_et_al_120419.pdf)
+Det finns många sorter av körsbär. En sort benämns företrädesvis med artnamn och sortnamn, tex _Prunus avium_ 'Merton Glory'. Dock används i praktiken samma namn för sorter som är genetiskt olika och tvärtom kan sorter som är genetiskt lika benämnas olika. [Se denna artikel](https://pub.epsilon.slu.se/8732/7/nybom_et_al_120419.pdf).
 
 ## Varför plantera flera sorter?
 
@@ -36,7 +36,7 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Storlek och form (vissa sorter är hjärtformade) på bären.
 
-- Trädets utseende och storlek. Beror också på vilken _grundstam_(Se @sec-grundstam) som används.
+- Trädets utseende och storlek. Beror också på vilken _grundstam_ (se @sec-grundstam) som används.
 
 - Skördens riklighet.
 
@@ -72,15 +72,25 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Blommar vanligen senare än sötkörsbär och är därför inte så lämpliga som pollinerare av dessa.
 
-## Olika egenskaper
+## Tabell egenskaper
 
-```{r}
+```{r , echo = FALSE}
 #| label: tbl-qualities
 #| tbl-cap: "Egenskaper"
 
+ros_phenology_aggr <- read.csv("../ros_phenology_aggr.csv")
+## knitr::kable(ros_phenology_aggr)
 
-kable(head(cars))
+## pacman::p_load(reactable)
+library(reactable)
+## https://glin.github.io/reactable/articles/examples.html
+## defaultPageSize = 40
+
+reactable(ros_phenology_aggr, striped = TRUE) ## sorting
+
 ```
+
+<!-- Dashboard: https://quarto.org/docs/dashboards/data-presentation.html -->
 
 ## Några intressanta sorter
 
@@ -199,7 +209,6 @@ Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okule
 - Används ej för sötkörsbär (?)
 - Zon 1-3
 - För torra, sandiga jordar
-
 
 <!-- Prunus padus -->
 <!-- Prunus spinosa -->

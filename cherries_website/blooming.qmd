@@ -74,6 +74,8 @@ I @fig-btstartros visas skillnad i start av blomning för olika sorter (data fr�
 
 <!-- statistik som visar datum för sista frost med 50, 70 respektive 90 % sannolikhet.  Se Odlingskalendern på vackertvader.se -->
 
+## Risk för frost
+
 Om blomningen infaller före den sista frosten finns en risk att blommorna förstörs av den. Genomsnittligt datum för sista frost är mellan mitten av april och mitten av juni beroende på var i landet [tex i Örebro normalt 1 apr till 15 maj, största intervall 1 apr till 1 jun]. Karta från [SMHI](https://www.smhi.se).
 
 ![Sista frost](../../../dropbox/images/plants/sista_frost_2017_smhi.png){width=50%}

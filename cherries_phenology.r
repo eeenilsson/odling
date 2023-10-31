@@ -715,7 +715,7 @@ ros_phenology_aggr[, freestone_q := myfun(jitter(freestone))]
 ros_phenology_aggr[, flesh_color := round(flesh_c, digits = 0)]
 ros_phenology_aggr[, flesh_color := factor(flesh_color, ordered = TRUE, levels = 1:5, labels = c("vitt", "rosa", "orange", "rött", "mörkrött"))]
 
-ros_phenology_aggr <- ros_phenology_aggr[, .(var, ta_q, sweetness_q, firmness_q, wt_q, freestone_q, flesh_color, skin_mahogany_q)]
+ros_phenology_aggr <- ros_phenology_aggr[, .(var, ta_q, sweetness_q, firmness_q, wt_q, freestone_q, skin_mahogany_q, flesh_color)]
 
 ## Flesh_C : 1=white; 2=pink; 3=orange; 4=red; 5=deep red
 ## Skin_C_blush : 1=0-25%; 2=26-50%; 3=51-76%; 4=76-100% ## Few noted
@@ -723,7 +723,7 @@ ros_phenology_aggr <- ros_phenology_aggr[, .(var, ta_q, sweetness_q, firmness_q,
 ## freestone : 1= clingy;2=--;3=-;,4=--; 5= free
 
 ## myfun(ros_phenology_aggr$ta)
-names(ros_phenology_aggr) <- c("var", "acidity", "sweetness", "firmness",  "weight", "freestone", "flesh_color", "skin_mahogany")
+names(ros_phenology_aggr) <- c("var", "acidity", "sweetness", "firmness",  "weight", "freestone", "skin_mahogany", "flesh_color")
 write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
 
 ## ros_phenology_aggr[, lapply(.SD, function(x){
