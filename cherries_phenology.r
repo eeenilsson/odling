@@ -169,12 +169,12 @@ eur_bt[, var := gsub(" ", "_", var)]
 eur_bt[, var := gsub("'", "", var)]
 ## eur_bt[, unique(var)]
 
-## explore misses
-nomatch <- eur_bt$var[!eur_bt$var %in% variety_genotype_group$var]
-nomatch <- unique(nomatch)
-paste(nomatch, collapse = ", ")
-cols <- c("variety", "var", "genotype") ## , "genotype"
-variety_genotype_group[grepl("yna", tolower(variety)), ..cols]
+## ## explore misses
+## nomatch <- eur_bt$var[!eur_bt$var %in% variety_genotype_group$var]
+## nomatch <- unique(nomatch)
+## paste(nomatch, collapse = ", ")
+## cols <- c("variety", "var", "genotype") ## , "genotype"
+## variety_genotype_group[grepl("yna", tolower(variety)), ..cols]
 
 varnames_tmp <- c(  ## from (eur) = to (genotype data)
 'satin_sumele' = "satin",
@@ -472,10 +472,14 @@ names(tmp) <- query_label(names(tmp), varnames_temp)
 tmp <- tmp[, .(var, bg_anfic, bg_eur, bg_uk, bg_ros)]
 ## Note: gdd ros deviates somewhat, not kept here
 tmp$bg_mean <- rowMeans(tmp[, -1], na.rm = TRUE)
-tmp[, bgr := plyr::round_any(bg_mean, 0.5)]
-## x <- tmp[, lapply(.SD, mean), by = var]
+tmp[, bgr := round(bg_mean, digits = 1)]
+
+## tmp[, bgr := plyr::round_any(bg_mean, 0.5)]
 
 blooming_group_aggr <- tmp[!is.na(bgr), .(var, bgr)]
+
+## ?plyr::round_any
+
 
 ## more ------------------
 

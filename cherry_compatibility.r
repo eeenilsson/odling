@@ -31,6 +31,49 @@ compat <- function(genotype_a, genotype_b){
 ## compat("S4'S2", "S1S3")
 ## compat("S3S4'", "S3S4'")
 
+## with uncertain genotypes, separated by "/" calculate worst case scenario
+## "S1S6/S3S4"
+## "S1S4'/S3S4'"
+## "S1S6/S4S6"
+
+genotype_a <- "S1S6/S3S4"
+genotype_b <- "S1S2"
+
+compat <- function(genotype_a, genotype_b){
+    ## for uncertain genotypes
+    if(grepl("/", genotype_a)){ ## eg "S1S6/S3S4"
+    genotype_a_alt <- strsplit(genotype_a, "/")[[1]][2]
+    genotype_a <- strsplit(genotype_a, "/")[[1]][1]
+    }
+    if(grepl("/", genotype_b)){
+    genotype_b_alt <- strsplit(genotype_b, "/")[[1]][2]
+    genotype_b <- strsplit(genotype_b, "/")[[1]][1]
+    }
+    ## pollinator
+    a1 <-  strsplit(genotype_a, "S")[[1]][2]
+    a2 <-  strsplit(genotype_a, "S")[[1]][3]
+    ## target
+    b1 <-  strsplit(genotype_b, "S")[[1]][2]
+    b2 <-  strsplit(genotype_b, "S")[[1]][3]
+    ## pollen sucess = TRUE
+    p1 <- (a1 != b1 & a1 != b2) | a1 == "4'" | a1 == "3'" | a1 == "5'"  
+    p2 <- (a2 != b1 & a2 != b2) | a2 == "4'" | a2 == "3'" | a2 == "5'"
+    ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
+    if(a1 == "4" & b1 == "4'"){p1 <- FALSE}
+    if(a2 == "4" & b2 == "4'"){p2 <- FALSE}
+    ## Sum
+    comp <- sum(p1, p2)
+    return(comp)
+
+    ## calculate relative compatibility
+    ## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
+    ## Enstaka universella givare saknar också S4**’**.
+    ## S3' =  SC
+    ## S5' =  SC
+}
+
+
+
 ## load data files --------------------
 
 variety_genotype_group <- fread("cherries_variety_genotype_group.csv", header = TRUE)
@@ -85,10 +128,38 @@ variety_genotype_group[, genotype := gsub(" ", "", genotype)]
 ## variety_genotype_group[, unique(incompatibility_group)]
 ## variety_genotype_group[, unique(genotype)]
 
+## print(variety_genotype_group[, unique(genotype)])
+
 dupl_var <- variety_genotype_group[duplicated(var), var]
-variety_genotype_group[grepl(paste0(dupl_var, collapse = "|"), var), ]
-## Note: some have two or more duplicated rows (n = 90 varieties), these all have different genotypes in different studies, i uncertain, can be removed since they are uncommon varieties
-variety_genotype_group <- variety_genotype_group[!grepl(paste0(dupl_var, collapse = "|"), var), ]
+## variety_genotype_group[grepl(paste0(dupl_var, collapse = "$|^"), var), .(var, genotype, variety, incompatibility_group)]
+## Note: some have two or more duplicated rows (n = 90 varieties), these all have different genotypes in different studies, ie uncertain
+
+## extract synonyms
+source("../functions/removeParens.r")
+myfun <- Vectorize(extractParens)
+variety_genotype_group[, syn := myfun(variety)]
+variety_genotype_group[, syn := gsub(", $", "", syn)]
+## collapse syn for duplicated var
+variety_genotype_group[grepl(paste0(dupl_var, collapse = "|"), var),  syn := paste0(syn, collapse = ", "), by = "var"]
+
+## add "/" for duplicated then remove duplicates
+variety_genotype_group[grepl(paste0(dupl_var, collapse = "|"), var),  genotype := paste0(genotype, collapse = "/"), by = "var"]
+variety_genotype_group[grepl(paste0(dupl_var, collapse = "|"), var),  incompatibility_group := paste0(incompatibility_group, collapse = "/"), by = "var"]
+variety_genotype_group[grepl(paste0(dupl_var, collapse = "|"), var),  reference := paste0(reference, collapse = ", "), by = "var"]
+variety_genotype_group[grepl(paste0(dupl_var, collapse = "|"), var),  reference := paste0(reference, collapse = ", "), by = "var"]
+variety_genotype_group <- variety_genotype_group[!duplicated(var), ]
+## eg:
+## "S1S6/S3S4"
+## "S1S4'/S3S4'"
+## "S1S6/S4S6"
+variety_genotype_group[, syn := gsub(", $", "", syn)]
+variety_genotype_group[, syn := gsub("^,", "", syn)]
+## todo: check synonyms and merge those which are the same
+## variety_genotype_group[syn != "", syn]
+
+## redundant:
+## ## remove variants with duplicated rows and different genotypes
+## variety_genotype_group <- variety_genotype_group[!grepl(paste0(dupl_var, collapse = "|"), var), ]
 
 ## calculate relative compatibility
 ## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
@@ -127,14 +198,6 @@ variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "
 ## Note: Check if they correspond
 #####
 
-
-## test pollination groups (only for testing) ---------
-
-
-
-## anfic
-
-
 ## ## restrict to varieties of interest for test
 ## anfic_bt$var[anfic_bt$var %in% unique(dta$var)]
 ## dta$var[unique(dta$var) %in% unique(anfic_bt$var)]
@@ -148,13 +211,45 @@ variety_genotype_group[, genotype2 := sapply(genotype, function(x){strsplit(x, "
 
 ## use all var that have blooming group data, see phenology.r
 ## swed <- fread("cherries_table.csv")
-bg_selected <- blooming_group_aggr[grepl(paste0(unique(dta$var), collapse = "|"), var), ] ## select those in dta$var
+selectvars <- dta[type == "sweet", unique(var)] ## n = 23
+## add pollinators (this will include sour cherries):
+## tmp <- dta[type == "sweet", paste(pollinated_by_concordance_chr, collapse = ", ")]
+## tmp <- gsub("NA \\([^,]*,", "", tmp)
+## tmp <- gsub(" \\([^,]*\\)", "", tmp)
+## tmp <- gsub("  ", " ", tmp)
+## tmp <- gsub(", NA", "", tmp)
+## selectvars <- c(selectvars, strsplit(tmp, ", ")[[1]])
+
+## tmp <- c("celeste", "napoleon") ## just to add some more
+## selectvars <- c(selectvars, tmp)
+
+selectvars <- unique(selectvars)
+bg_selected <- blooming_group_aggr[grepl(paste0(selectvars, collapse = "$|^"), var), ] ## select those in selectvar
+
+tmp <- c("gaardebo", "fryksaas", "berit", "erianne", "fanal", "heidi", "nordia", "ostheimer", "kelleris", "buttners_spate_rote_knorpelkirsche", "knauffs_schwarze") ## bt missing
+tmp <- tmp[!tmp %in% bg_selected[, var]]
+tmp <- variety_genotype_group[grepl(paste0(tmp, collapse = "$|"), var), .(var)]
+
+## blooming_group_aggr
+
+tmp[, bgr := 99] ## use 99 for thos w unknown bgr
+
+bg_selected <- rbind(bg_selected,
+      tmp
+      )
+
+## ## explore
+## blooming_group_aggr[grepl("tar", var), ]
+## cols <- c("variety", "var", "genotype") ## , "genotype"
+## variety_genotype_group[grepl("tar", tolower(variety)), ..cols]
+## tmp <- variety_genotype_group[grepl(paste0(paste0(notselected, collapse = "|")), tolower(variety)), ..cols]
+## print(tmp[, .(var)], n = 200)
+## bg_selected[bg_selected$var %in% variety_genotype_group$var, ]
+## notselected <- blooming_group_aggr[!grepl(paste0(selectvars, collapse = "$|^"), var), var] ## in bgr but not selected
 
 bg_selected <- bg_selected[bg_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in genotype data
 
 dta_toplot <- variety_genotype_group[bg_selected, on = "var"] ## all selected have genotype data matching var name
-
-##################here ######################
 
 test <- dta_toplot[, .(var, genotype, bgr, incompatibility_group)]
 
@@ -197,18 +292,41 @@ dtplot <- dtplot[tmp, on = "pollinator"]
 
 ## calculate blooming proximity
 dtplot[, proximity := abs(as.numeric(bgr) - as.numeric(pollinator_blooming_group))]
+dtplot[, proximity := ifelse(bgr == 99 & as.numeric(pollinator_blooming_group) == 99, 99, proximity)] ## if both unknown
 dtplot[, compat_proximity := "no"]
-
+## dtplot[, proximity]
 dtplot[proximity <0.51 & compatibility != 0, compat_proximity := "same"]
-dtplot[proximity >0.5 & & proximity < 1.1 & compatibility != 0, compat_proximity := "close"]
+dtplot[proximity >0.5 & proximity < 1.1 & compatibility != 0, compat_proximity := "close"]
+dtplot[proximity >10 & compatibility != 0, compat_proximity := "bt_unknown"]
+## dtplot[proximity >10, ]
+## dtplot[, unique(proximity)]
 
 ## Variable type
 ## dtplot[, compatibility := as.numeric(compatibility)]
+## str(dtplot)
 dtplot[, target:= as.factor(target)]
 dtplot[, pollinator:= as.factor(pollinator)]
 dtplot[, pollinator_blooming_group_num := as.numeric(pollinator_blooming_group)]
-dtplot[, blooming_group_num := as.numeric(bgr)]
-## str(dtplot)
+dtplot[, blooming_group := as.numeric(bgr)]
+
+## myfun <- function(x){
+##     ## round to bg most distant from 3, eg 3.5 is rounded to 4, ie towards the extremes
+##     ## to reduce the number of bg to five
+##     out <- c()
+##     if(x > 3){out <- ceiling(x)}
+##     if(x == 3){out <- round(x, digits = 0)}
+##     if(x < 3){out <- floor(x)}
+##     return(out)
+## }
+## myfun <- Vectorize(myfun)
+
+dtplot[, blooming_group := round(blooming_group, digits = 0)]
+dtplot[, blooming_group := factor(blooming_group, ordered = TRUE, levels = c(1:5, 99), labels = c("Tidig", "Medeltidig", "Medel", "Medelsen", "Sen", "Okänd"))]
+dtplot[, pollinator_blooming_group := round(pollinator_blooming_group_num, digits = 0)]
+dtplot[, pollinator_blooming_group := factor(pollinator_blooming_group, ordered = TRUE, c(1:5, 99), labels = c("Tidig", "Medeltidig", "Medel", "Medelsen", "Sen", "Okänd"))]
+## dtplot[, unique(pollinator_blooming_group)]
+
+## dtplot[, pollinator_blooming_group_num]
 
 setkey(dtplot, target)
 ## str(dtplot)
@@ -217,25 +335,32 @@ setkey(dtplot, target)
 pacman::p_load(ggplot2)
 library(forcats) ## for reordering plot levels
 
-
 ## labels
-tmp <- variety_genotype_group[anfic_bt, on = "var"][, .(var, genotype, label)]
-tmp[, label_ss := paste0(label, " [", genotype, "]")]
+tmp <- variety_genotype_group[, .(var, genotype, variety, incompatibility_group)]
+names(tmp) <- c("var", "genotype", "label", "incompatibility_group")
+
+tmp[, label := gsub(" \\([^$]*", "", label)] ## sanitize
+tmp[, label := gsub(" \\\n[^$]*", "", label)]
+tmp[, label := gsub(" \\/[^$]*", "", label)]
+tmp[, label := gsub("TM$", "", label)]
+tmp[, label := gsub("Späte Rote Knorpelkirsche", "Rote", label)]
+tmp[, label := gsub("Knauffs Schwarze", "Knauffs", label)]
+tmp[, label_ss := paste0(label, " [", genotype, ", ", incompatibility_group, "]")]
 varnames <- tmp$label_ss
 names(varnames) <- tmp$var
-dtplot[, target:= factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
+dtplot[, target := factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
 dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
 
-## dtplot[pollinator_blooming_group == "Early", ]
+## dtplot[pollinator_blooming_group_num == "Early", ]
 
 ## plot base
-p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, blooming_group_num))) +
+p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, bgr))) +
   geom_point(aes(size = compatibility, colour = compat_proximity))
 
 ## plot customization
 plot_pollination_table <- p +
     scale_size_area() +
-    scale_color_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3")) +
+    scale_color_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3", "bt_unknown" = "white")) +
     theme(
         plot.margin = unit(c(1.5, 1.5, 1.5, 1.5), "centimeters"),
         legend.position = "none",
@@ -265,11 +390,13 @@ plot_pollination_table <- plot_pollination_table +
          )
 
 plot_pollination_table
-## meta:
+  ## meta:
 ## Size of dot corresponds to genetic compatibility, color to blooming time (dark green = same bloomin group, light green = proximity 1 in blooming group, red = outside proximity blooming groups OR not genetically compatible)
 ## "Blomningstid"
 
 ## dtplot[grepl("samba|frisco", target), ]
+
+dta[ , paste(var, ": ", pollinated_by_concordance_chr)]
 
 
 ############## here #####################
