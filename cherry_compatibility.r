@@ -230,6 +230,7 @@ variety_genotype_group[, label := gsub(" $", "", label)]
 ## use all var that have blooming group data, see phenology.r
 ## swed <- fread("cherries_table.csv")
 selectvars <- dta[type == "sweet", unique(var)] ## n = 23
+selectvars <- c(selectvars, "skuggmorell")
 ## add pollinators (this will include sour cherries):
 ## tmp <- dta[type == "sweet", paste(pollinated_by_concordance_chr, collapse = ", ")]
 ## tmp <- gsub("NA \\([^,]*,", "", tmp)

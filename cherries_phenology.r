@@ -536,6 +536,9 @@ tmp <- google_bt[, .(bt_google_sv, bt_google_any)]
 google_bt$bt_any <- rowMeans(tmp, na.rm = TRUE)
 google_bt <- google_bt[, .(var, bt_any)]
 
+
+##  STORT. KLARBÄR ('Grosse. Glaskirsche')
+
 ## aggregate bt ------------------
 anfic_bt[, anfic_bg_num := as.numeric(blooming_group_anfic)]
 anfic_bt[, anfic_bg_num := mean(anfic_bg_num, na.rm = TRUE), by = "var"]
