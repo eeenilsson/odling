@@ -592,13 +592,25 @@ blooming_group_aggr[grepl("rote", var), ]
 
 
 
-## more ------------------
+## Sour cherries ------------------
+
+## DK: Quality of Sour Cherry Juice of Different Clones and Cultivars (Prunus cerasus L.) Determined by a Combined Sensory and NMR Spectroscopic Approach November 2011 Journal of Agricultural and Food Chemistry 59(22):12124-30 DOI:10.1021/jf202813r
+## "The sensory evaluation showed a large variation in several sensory attributes between the sour cherry clones/cultivars, which could be divided into two groups on the basis of both the sensory data and the NMR spectroscopic data. These groups were closely related to the genetic background of the clones. Kelleris clones were distinctly different from Stevnsberry and Fanal clones. Hence, (1)H NMR spectroscopic data seem to correlate with sensory quality of different sour cherry clones. In addition, malic acid was the most important metabolite for modeling the two highly correlated sensory attributes sweetness and sourness, whereas the glucose content had a slight effect and the fructose content had no impact on sweetness/sourness."
+
 
 ## Poland: Artcle with pheneology for different varieties
 ## Evaluation of Sour Cherry (Prunus cerasus L.) Fruits for Their Polyphenol Content, Antioxidant Properties, and Nutritional Components Aneta Wojdyło,*,† Paulina Nowicka,† Piotr Laskowski,‡ and Jan Oszmiański†
+
+
+## More ---------------------
+
+## ## Book: Sour Cherry Varieties and Improvement
+##     August 2017 Shuster
+## DOI:10.1079/9781780648378.0095
+##     In book: Cherries (pp.95-116)Chapter: 5Publisher: CAB International
+
 ## https://d.docksci.com/evaluation-of-sour-cherry-prunus-cerasus-l-fruits-for-their-polyphenol-content-a_5a78356cd64ab25a7eaaa9ff.html
 ## Sugars, organic acids, phenolic composition and antioxidant activity of sweet cherry (Prunus avium L.) Usenik 2008, se pdf på dropbox
-
 ## file:///home/e/Downloads/gupea_2077_54273_1.pdf
 
 

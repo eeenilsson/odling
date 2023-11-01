@@ -310,13 +310,24 @@ setkey(dtplot, target)
 
 ############## here #####################
 
-## Identification of self-incompatibility ( S ) alleles in Latvian and Swedish sweet cherry genetic resources collections by PCR based typing Lacis 2008
+## ## If genotype is missing, look here:
+## Identification of self-incompatibility (S) alleles in Latvian
+## and Swedish sweet cherry genetic resources collections by
+## PCR based typing Gunars Lacis Æ Edite Kaufmane Æ Isaak Rashal Æ
+## Viktor Trajkovski Æ Amy F. Iezzoni
+## SOme summary data: https://pub.epsilon.slu.se/2393/1/Acta_Thesis-Lacis-final.pdf
+
+## Identification of self-incompatibility ( S ) alleles in Latvian and Swedish sweet cherry genetic resources collections by PCR based typing Lacis 2008a
+## Also Lisek2017.pdf
+
 
 ## Sour cherries
 ## https://www.tandfonline.com/doi/abs/10.1080/14620316.2017.1289071
 ## Identification of S-haplotypes of European cultivars of sour cherry Anna Lisek
 ## "The tested cultivars were found to contain 15 S-haplotypes: S1, S1ʹ, S4, S6, S6m, S6m2, S9, S12, S13, S13ʹ, S26, S35, S36a, S36b, and S36b2. The most frequently occurring S-haplotypes were S13ʹ (61.9%), S36a (57.1%), and S26 (47.6%). On the basis of the results, 17 of the 21 cultivars were deduced to be self-compatible." pdf på dropbox
 ## Mest tyska och polska sorter. Skuggmorell anges till S6 S13ʹ S26 S36a
+
+## Four sour cherry cultivars (‘Kirsa’, ‘Ljubskaya’, ‘Nordia’ and ‘Oblachinska’) were present in both collections and had completely identical allele profiles
 
 
 ## dtplot[grepl("samba|frisco", target), ]

@@ -79,6 +79,8 @@ Fruktämnet växer sedan till och bildar frukten.
 
 Körsbär har i sina kromosomer två (hos sötkörsbär, fler hos surkörsbär) varianter av en viss gen. En sådan variant benämns med bokstaven S och en siffra, tsex "S1", så en körsbärssort kommer vara tex "S2S6". Då kommer den ha S2S6 i sina pistiller och det pollen den skickar iväg kommer att vara antingen S2 eller S6. En körsbärssort är "immun" mot pollen som innehåller någon av dess egna "bokstäver". Så ett S2S6-körsbär är immunt mot pollen som innehåller S2 eller S6. Eftersom de flesta sorter har S1 till S6 blir det ganska vanligt att de är inkompatibla. Detta beskrivs mer i detalj nedan.
 
+<!-- " In sour cherry, as in other species of the genus Prunus, there occurs the phenomenon of gametophytic self-incom- patibility (GSI). This mechanism has been developed by plants to prevent self-fertilization and facilitate fertilization with pollen of other genotypes within the species (De Nettancourt, 1997). Self-incompatibil- ity consists of arresting pollen-tube growth in the pistil if the tube contains the same S-allele that is present in the pistil. The phenomenon of self-incom- patibility in plants of the family Rosaceae is controlled by two genes at the S-locus. The specificity of the pistil is encoded by the gene responsible for the synthesis of the ribonuclease protein (S-RNase) (Bošković & Tobutt, 1996), whereas the specificity of the pollen is controlled by the gene encoding an F-box protein (S-haplotype-specific F-box protein – SFB) (Yamane, Ikeda, Ushijima, Sassa, & Tao, 2003a).  The tightly linked genetic unit of the pistil S-allele (S- RNase) and pollen S-allele is called S-haplotype Lisek2017.pdf" -->
+
 ## Genetik, några begrepp
 
 Kromosomer
@@ -176,11 +178,6 @@ flowchart LR
 
 <!-- "The fertility in sweet cherry is determined by a gametophytic self-incompatibility system, controlled by a multi-allelic S locus who prevents self-pollination. The fertilization is controlled by the interaction of an S allele specific ribonuclease (S-RNase) in the style with a pollen S specific F-box protein gene (SFB). Knowledge about the S genotype of sweet cherries is very important for cherry growers and breeders. In the last years molecular markers have been developed to distinguish the S alleles in sweet cherries. In the new update from October 2020 a total of 63 incompatibility groups in 1483 sweet cherries have been defined. 26 sweet cherries have a unique combination of S alleles and were described as universal donors and placed in the incompatibility group 0. Additionally, there exist 91 self-compatible sweet cherries, called group SC. A total of 22 different S alleles are described in the cultivated sweet cherries up to date. These are the S alleles S1, S2, S3, S4, S5, S6, S7, S9, S10, S12, S13, S14, S16, S17, S18, S19, S21, S22, S24, S27, S30, S37. The goal of this work is to summaries all known data of the S alleles in cultivated sweet cherries. In Table 1 the S genotypes of all studied sweet cherries are described. Furthermore it includes information about the parentage if they are known. Table 2 gives an overview about all the detected incompatibility groups. The groups are sorted according to the group numbers and the S allele numbers, respectively. In Table 3 all genotypes of the incompatibility group 0 with a unique S genotype are listed. Table 4 includes all known self-compatible sweet cherries. All references to the information of the S genotypes are listed in a file named 'References'. The present update needs to be further improved with all new S alleles data of sweet cherries. In addition, all new information about the parentage is very important for the breeding research. Please send all new or corrected data to the S alleles and the parentage of sweet cherries to mirko.schuster@julius-kuehn.de. An update of the S allele overview will take place in the next years. (Se https://www.openagrar.de/receive/openagrar_mods_00064311)" -->
 
-
-
-
-
-
 ## Kompatibilitetsgrupper
 
 Utifrån genetisk kompatibilitet kan sötkörsbär delas in i "kompatibiltetsgrupper" körsbärssorter inom varje grupp kan inte befrukta varandra. Pollinatören måste alltså komma från en **annan** kompatibiltetsgrupp än mottagaren.
@@ -192,10 +189,6 @@ Av 1500 sorter av sötkörsbär är kring 10% självfertila och 2% universella g
 <!-- Cross-incompatible cultivars with the same S-genotypes are placed in the same “Incompatibility Group” and cannot fertilize each others successfully. For more information on Incompatibility Groups, please see the functional genotype list for this DNA test. -->
 
 
-
-
-
-
 ## S-alleler kopplat till blomningstid
 
 S-allelerna hos en körsbärssort påverkar även när den blommar och när bären mognar. 
@@ -205,6 +198,20 @@ Hos de som blommar tidigt eller i mitten av säsongen är S1, S3 och S4 vanligas
 Hos dem vars bär mognar tidigt är S4 vanligast. S14 förekommer endast hos de som mognar i mitten av mognadssäsongen. S6 och S12 finns endast hos de med sen mognad.
 
 <!-- Most S-alleles (7) were identified in the mid-early blooming cultivars where the most frequent were S3; S4 and S1. On the other hand, late blooming cherry cultivars had the S3S12 genotype, where the S12 allele was specific to these cultivars. The most frequent allele in the early fruit ripening cultivars was the allele S4. The S14 allele was specific of cultivars with medium fruit ripening time while the alleles S6 and S12 were detected only in the late fruit ripening cultivars. (Se IDENTIFICATION OF SELF INCOMPATIBILITY GENOTYPES IN SWEET CHERRY COMMERCIAL CULTIVARS) -->
+
+## Surkörsbär
+
+<!-- The occurrence of self-compatible cultivars is observed much more frequently in sour cherry than in sweet cherry. This phenomenon is caused by natu- rally occurring mutations and loss of functionality of the S-RNase or SFB genes -->
+
+Liksom hos sötkötsbär finns hos surkörsbär "själv-inkompatibilitet" som styrs av variationer i S-området i kromosomerna. Självferila sorter är mycket vanligare hos surkärsbär på grund av att det är vanligare med mutationer i S-allelen. För att "själv-inkompatibiliteten" skall förloras krävs att trädet har minst två muterade "icke-fungerande" S-haplotyper. Man har identifierat 12 fungerande S-haplotyper (S1, S4, S6, S9, S12, S13, S14,
+S 16 , S26, S33, S34, och S35) och nio icke-fungerande (S1ʹ, S6m, S6m2, S13ʹ, S13m, S36a , S36b, S36b2, och S36b3). Vissa finns även hos sörkörsbär (S1, S4, S6, S9, S12 , S13, S 14, S16, och S34).
+<!-- Se Lisek et al -->
+
+De flesta surkörsbär är självfertila ("självkompatibla"), men vissa sorter är inte det.
+
+<!-- In sour cherry, as in other species of the genus Prunus, there -->
+<!-- occurs the phenomenon of gametophytic self-incom- -->
+<!-- patibility (GSI) -->
 
 
 # Hur väljer man lämplig pollinatör?
