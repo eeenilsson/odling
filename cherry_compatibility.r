@@ -8,11 +8,12 @@ pacman::p_load(data.table)
 ## genotype_b <- "S4'S6"
 ## genotype_a <- "S4S3/S9S3"
 ## genotype_b <- "S1S3/S4"
-compat(genotype_a, genotype_b)
-compat("S4S8", "S1S3")
-genotype_a <- "S6S13ʹS26S36a" ## skuggmorell surkörsbär
-genotype_b <- "S1S6"
-compat(genotype_a, genotype_b)
+## compat(genotype_a, genotype_b)
+## compat("S4S8", "S1S3")
+## genotype_a <- "S1S6S26S36a" ## test
+## genotype_a <- "S6S13ʹS26S36a" ## skuggmorell surkörsbär
+## genotype_b <- "S1S6"
+## compat(genotype_a, genotype_b)
 
 compat <- function(genotype_a, genotype_b){
     ## calculate relative compatibility
@@ -41,14 +42,13 @@ compat <- function(genotype_a, genotype_b){
         ## mutants <- c("'", "6m", "6m2", "13m", "36a", "36b", "36b2", "36b3")
         p_mut <- pollinator[grepl(mutants, pollinator)]
         p_nonmut <- pollinator[!grepl(mutants, pollinator)]
-        p_nonmut
         check_nonmut <- !grepl(paste0("^", paste0(target, collapse = "$|^"), "$"), p_nonmut)
         p_nonmut_compat <- p_nonmut[check_nonmut]
         p_compat <- c(p_mut, p_nonmut_compat) ## mut or absent in target
         success_probability <- 0
         if(length(p_compat) == 2){success_probability <- 2/8}
         if(length(p_compat) == 3){success_probability <- 4/8}
-        if(length(p_compat) == 8){success_probability <- 8/8}
+        if(length(p_compat) == 4){success_probability <- 8/8}
         ## abcd => ab ac ad bc bd cd but this is not the case in meiosis, see youtube:
         ## see https://www.youtube.com/watch?v=NttqS-N17FQ
         ## possible number of gametes = 2^n        
