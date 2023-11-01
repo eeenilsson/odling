@@ -595,11 +595,14 @@ blooming_group_aggr[grepl("rote", var), ]
 ## Sour cherries ------------------
 
 ## DK: Quality of Sour Cherry Juice of Different Clones and Cultivars (Prunus cerasus L.) Determined by a Combined Sensory and NMR Spectroscopic Approach November 2011 Journal of Agricultural and Food Chemistry 59(22):12124-30 DOI:10.1021/jf202813r
+## pdf: clausen2011.pdf
 ## "The sensory evaluation showed a large variation in several sensory attributes between the sour cherry clones/cultivars, which could be divided into two groups on the basis of both the sensory data and the NMR spectroscopic data. These groups were closely related to the genetic background of the clones. Kelleris clones were distinctly different from Stevnsberry and Fanal clones. Hence, (1)H NMR spectroscopic data seem to correlate with sensory quality of different sour cherry clones. In addition, malic acid was the most important metabolite for modeling the two highly correlated sensory attributes sweetness and sourness, whereas the glucose content had a slight effect and the fructose content had no impact on sweetness/sourness."
-
 
 ## Poland: Artcle with pheneology for different varieties
 ## Evaluation of Sour Cherry (Prunus cerasus L.) Fruits for Their Polyphenol Content, Antioxidant Properties, and Nutritional Components Aneta Wojdyło,*,† Paulina Nowicka,† Piotr Laskowski,‡ and Jan Oszmiański†
+
+## Shattenmorelle: https://specialtyproduce.com/produce/Schattenmorelle_Cherries_17828.php
+## "Schattenmorelle cherries are also known as Griotte de Nord, Chatel Morel, and English Morello cherries and are one of the most cultivated sour cherries in Europe"
 
 
 ## More ---------------------

@@ -10,6 +10,8 @@ pacman::p_load(data.table)
 ## genotype_b <- "S1S3/S4"
 ## compat_fast(genotype_a, genotype_b)
 ## compat_fast("S4S8", "S1S3")
+genotype_a <- "S6S13ʹS26S36a" ## skuggmorell surkörsbär
+genotype_b <- "S1S6"
 
 compat <- function(genotype_a, genotype_b){
     ## calculate relative compatibility
@@ -18,14 +20,25 @@ compat <- function(genotype_a, genotype_b){
     target <- paste0(strsplit(genotype_b, "/")[[1]], collapse = "")
     pollinator <- strsplit(pollinator, "S")[[1]][-1]
     target <- strsplit(target, "S")[[1]][-1]
+
+    ## check if terraploid (sour cherry)
+    tertaploid_pol <- ifelse(!grepl("/", genotype_a) & length(pollinator) == 4, TRUE, FALSE)
+    tertaploid_target <- ifelse(!grepl("/", genotype_b) & length(target) == 4, TRUE, FALSE)
+    ## Note: Man har identifierat 12 fungerande S-haplotyper (S1, S4, S6, S9, S12, S13, S14, S16 ,S26, S33, S34, och S35) och nio icke-fungerande (S1ʹ, S6m, S6m2, S13ʹ, S13m, S36a , S36b, S36b2, och S36b3). Vissa finns även hos sörkörsbär (S1, S4, S6, S9, S12, S13, S 14, S16, och S34).
+
     check <- !grepl(paste0("^", paste0(target, collapse = "$|^"), "$"), pollinator)
-    sucess <- pmax(check, grepl("'", pollinator)) ## count as success if "'"
+    sucess <- pmax(check, grepl("'|6m|6m2|13m|36a|36b|36b2|36b3", pollinator)) ## count as success if "'" or sour cherry mutants
     success_alt1 <- sucess[c(TRUE, TRUE, FALSE, FALSE)]
     success_alt2 <- sucess[!c(TRUE, TRUE, FALSE, FALSE)] ## NA if length 2
     comp <- sum(success_alt1, na.rm = TRUE)
     if(grepl("/", genotype_a)){
         comp <- min(sum(success_alt1, na.rm = TRUE), sum(success_alt2, na.rm = TRUE), na.rm = TRUE)
     }
+    if(tertaploid_pol){
+        comp <- sum(success_alt1, na.rm = TRUE) + sum(success_alt2, na.rm = TRUE),        
+        if(comp > 2){comp <- 2} ## count max 2 successes
+    }
+
     return(comp)        
     ## Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
     ## De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
@@ -95,6 +108,25 @@ variety_genotype_group[, genotype := gsub(" ", "", genotype)]
 dupl_var <- variety_genotype_group[duplicated(var), var]
 ## variety_genotype_group[grepl(paste0(dupl_var, collapse = "$|^"), var), .(var, genotype, variety, incompatibility_group)]
 ## Note: some have two or more duplicated rows (n = 90 varieties), these all have different genotypes in different studies, ie uncertain
+
+## Add sour cherries with known genotype
+## Skuggmorell anges till haplotyp S6 S13ʹ S26 S36a.
+## Syn : Schattenmorelle (Prunus cerasus subsp. acida), auch Große Lange Lotkirsche, Nordkirsche, ‘Łutówka’, Griotte de Nord, Chatel Morel, Morello.
+
+tmp <- data.table(
+    variety = "Skuggmorell (Schattenmorelle, Große Lange Lotkirsche, Nordkirsche, Łutówka, Griotte de Nord, Chatel Morel, Morello)",
+    genotype = "S6S13ʹS26S36a",
+    incompatibility_group = "SC",
+    origin_country = "DE",
+    mother = NA,
+    father = NA,
+    reference = NA,
+    var = "skuggmorell"
+)
+
+variety_genotype_group <- rbind(variety_genotype_group,
+      tmp)
+
 
 ## extract synonyms
 source("../functions/removeParens.r")
@@ -321,13 +353,14 @@ setkey(dtplot, target)
 ## Also Lisek2017.pdf
 
 
-## Sour cherries
+## Sour cherries ------
+
 ## https://www.tandfonline.com/doi/abs/10.1080/14620316.2017.1289071
 ## Identification of S-haplotypes of European cultivars of sour cherry Anna Lisek
 ## "The tested cultivars were found to contain 15 S-haplotypes: S1, S1ʹ, S4, S6, S6m, S6m2, S9, S12, S13, S13ʹ, S26, S35, S36a, S36b, and S36b2. The most frequently occurring S-haplotypes were S13ʹ (61.9%), S36a (57.1%), and S26 (47.6%). On the basis of the results, 17 of the 21 cultivars were deduced to be self-compatible." pdf på dropbox
 ## Mest tyska och polska sorter. Skuggmorell anges till S6 S13ʹ S26 S36a
 
-## Four sour cherry cultivars (‘Kirsa’, ‘Ljubskaya’, ‘Nordia’ and ‘Oblachinska’) were present in both collections and had completely identical allele profiles
+## SLU: Four sour cherry cultivars (‘Kirsa’, ‘Ljubskaya’, ‘Nordia’ and ‘Oblachinska’) were present in both collections and had completely identical allele profiles
 
 
 ## dtplot[grepl("samba|frisco", target), ]

@@ -209,6 +209,8 @@ S 16 , S26, S33, S34, och S35) och nio icke-fungerande (S1ʹ, S6m, S6m2, S13ʹ, 
 
 De flesta surkörsbär är självfertila ("självkompatibla"), men vissa sorter är inte det.
 
+Skuggmorell anges till haplotyp S6 S13ʹ S26 S36a.
+
 <!-- In sour cherry, as in other species of the genus Prunus, there -->
 <!-- occurs the phenomenon of gametophytic self-incom- -->
 <!-- patibility (GSI) -->
