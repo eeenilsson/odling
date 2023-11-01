@@ -8,8 +8,8 @@ pacman::p_load(data.table)
 ## genotype_b <- "S4'S6"
 ## genotype_a <- "S4S3/S9S3"
 ## genotype_b <- "S1S3/S4"
-## compat_fast(genotype_a, genotype_b)
-## compat_fast("S4S8", "S1S3")
+compat(genotype_a, genotype_b)
+compat("S4S8", "S1S3")
 genotype_a <- "S6S13ʹS26S36a" ## skuggmorell surkörsbär
 genotype_b <- "S1S6"
 
@@ -24,8 +24,8 @@ compat <- function(genotype_a, genotype_b){
     ## check if terraploid (sour cherry)
     tertaploid_pol <- ifelse(!grepl("/", genotype_a) & length(pollinator) == 4, TRUE, FALSE)
     tertaploid_target <- ifelse(!grepl("/", genotype_b) & length(target) == 4, TRUE, FALSE)
-    ## Note: Man har identifierat 12 fungerande S-haplotyper (S1, S4, S6, S9, S12, S13, S14, S16 ,S26, S33, S34, och S35) och nio icke-fungerande (S1ʹ, S6m, S6m2, S13ʹ, S13m, S36a , S36b, S36b2, och S36b3). Vissa finns även hos sörkörsbär (S1, S4, S6, S9, S12, S13, S 14, S16, och S34).
-
+    ## Note: Man har identifierat 12 fungerande S-haplotyper (S1, S4, S6, S9, S12, S13, S14, S16 ,S26, S33, S34, och S35) och nio icke-fungerande (S1ʹ, S6m, S6m2, S13ʹ, S13m, S36a , S36b, S36b2, och S36b3). Vissa finns även hos sörkörsbär (S1, S4, S6, S9, S12, S13, S 14, S16, och S34). The presence of two or more non-functional S-haplotypes within sour cherry 2x pollen renders that pollen SC.
+    
     check <- !grepl(paste0("^", paste0(target, collapse = "$|^"), "$"), pollinator)
     sucess <- pmax(check, grepl("'|6m|6m2|13m|36a|36b|36b2|36b3", pollinator)) ## count as success if "'" or sour cherry mutants
     success_alt1 <- sucess[c(TRUE, TRUE, FALSE, FALSE)]
@@ -361,6 +361,10 @@ setkey(dtplot, target)
 ## Mest tyska och polska sorter. Skuggmorell anges till S6 S13ʹ S26 S36a
 
 ## SLU: Four sour cherry cultivars (‘Kirsa’, ‘Ljubskaya’, ‘Nordia’ and ‘Oblachinska’) were present in both collections and had completely identical allele profiles
+
+## " Genetic and molecular characterization of three novel S-haplotypes in sour cherry (Prunus cerasus L.)."
+## "s sour cherry selections can be either self-compatible (SC) ora self-incompatible (SI), polyploidy per se does not result in SC. Instead the genotype-dependent loss of SI in sour cherry is due to the accumulation of non-functional S-haplotypes. The presence of two or more non-functional S-haplotypes within sour cherry 2x pollen renders that pollen SC."
+## Tatsuya Tsukamoto 2008
 
 
 ## dtplot[grepl("samba|frisco", target), ]
