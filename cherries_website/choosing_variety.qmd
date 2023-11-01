@@ -1,5 +1,7 @@
 ---
 title: "Val av sort"
+execute:
+  echo: false
 ---
 
 När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara genetiskt kompatibla med varandra och blomma samtidigt. Se sidan om [pollination](pollination_about.qmd) och [pollinationsschemat](pollination_table.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
@@ -74,21 +76,51 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 ## Tabell egenskaper
 
-```{r , echo = FALSE}
+```{r}
 #| label: tbl-qualities
 #| tbl-cap: "Egenskaper"
+#| warning: false
 
-ros_phenology_aggr <- read.csv("../ros_phenology_aggr.csv")
-## knitr::kable(ros_phenology_aggr)
+ros_phenology_aggr_curated <- read.csv("../ros_phenology_aggr_curated.csv")
+## knitr::kable(ros_phenology_aggr_curated)
 
 ## pacman::p_load(reactable)
 library(reactable)
 ## https://glin.github.io/reactable/articles/examples.html
 ## defaultPageSize = 40
 
-reactable(ros_phenology_aggr, striped = TRUE) ## sorting
+reactable(ros_phenology_aggr_curated, ## sorting
+          filterable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              header = function(value) gsub(".|_", " ", value, fixed = TRUE),
+              ## cell = function(value) format(value, nsmall = 1),
+              align = "center",
+              minWidth = 30
+              ## headerStyle = list(background = "#f7f7f8")
+          ),
+          columns = list(
+              Sort = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  ## Add a right border style
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
 
 ```
+
+Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en gradering av den relativa sötman, syran etc mellan de sorter som är med. Siffran 1 är lägst och 5 är högst. **Kärnsläpp** är hur lätt kärnan släpper från köttet (1 = släpper mindre lätt, 5 = släpper mer lätt). **Mjöldagg** är förekomst av mjöldagg (på körsbär _Podosphaera clandestina var. clandestina_), där 1 är lägst förekomst och 5 är högst förekomst. **Rödbrunhet** motsvarar hur rödbrunt skalet är. Data från RosBreed. 
+
+<!-- Podosphaera clandestina var. clandestina (powdery mildew of cherry) -->
+<!-- incidence of foliar powdery mildew rated on a 0-5 scale where 0 means no infection and 5 is 100% infection -->
+
+<!-- ## Om mjöldagg: https://docplayer.se/209487210-Mjoldagg-gulnande-blad-och-for-tidigt-bladfall-visar-sig-betydligt-senare-blldratagheter-saknas.html -->
 
 <!-- Dashboard: https://quarto.org/docs/dashboards/data-presentation.html -->
 

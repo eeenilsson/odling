@@ -37,7 +37,7 @@ Självfertila sorter är markerade med en asterisk (*) efter namnet. De självfe
 
 Sorterna är ordnade efter blomningstid från vänster (tidigast) till höger (senast) och nedifrån (tidigast) och upp (senast), undantaget sorter för vilka uppgift om blomningstid saknas (de ligger längst ut i schemat).
 
-Vilket datum de olika blomningstiderna infaller varierar beroende på klimat och väder. I den norska Ullensvang varierar tex starten av blomningen för _Prunus avium_ ('Van') mellan 30 april och 19 maj (vanligen kring 8 maj) beroende på år.
+Vilket datum de olika blomningstiderna infaller varierar beroende på klimat och väder. I den norska Ullensvang varierar tex starten av blomningen för _Prunus avium_ 'Van' mellan 30 april och 19 maj (vanligen kring 8 maj) beroende på år.
 
 <!-- # Pollinationstabell -->
 <!-- Olika flikar med korstabell. -->

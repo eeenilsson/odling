@@ -590,7 +590,14 @@ blooming_group_aggr[grepl("rote", var), ]
 ## fread("bt_uk2.csv") ## Note: Needs reformatting. Entered some of the values in google_bt.csv
 
 
+
+
 ## more ------------------
+
+## Poland: Artcle with pheneology for different varieties
+## Evaluation of Sour Cherry (Prunus cerasus L.) Fruits for Their Polyphenol Content, Antioxidant Properties, and Nutritional Components Aneta Wojdyło,*,† Paulina Nowicka,† Piotr Laskowski,‡ and Jan Oszmiański†
+## https://d.docksci.com/evaluation-of-sour-cherry-prunus-cerasus-l-fruits-for-their-polyphenol-content-a_5a78356cd64ab25a7eaaa9ff.html
+## Sugars, organic acids, phenolic composition and antioxidant activity of sweet cherry (Prunus avium L.) Usenik 2008, se pdf på dropbox
 
 ## file:///home/e/Downloads/gupea_2077_54273_1.pdf
 
@@ -668,8 +675,8 @@ blooming_group_aggr[grepl("rote", var), ]
 ## Andra egenskaper ==========================================
 
 ## RosBREED -------------------
-
-ros_phenology <- ros[, .(Germplasm, Dataset, TA, Bulked_Fruit_Firmness, Firmness_1, Bulked_Fruit_Wt, Fruit_Wt, FreeStone, Skin_C_mahogany, Skin_C_blush, Perc_Cracking, SSC, Bulked_Fruit_SSC, Flesh_C)]
+## names(ros)
+ros_phenology <- ros[, .(Germplasm, Dataset, TA, Bulked_Fruit_Firmness, Firmness_1, Bulked_Fruit_Wt, Fruit_Wt, FreeStone, Skin_C_mahogany, Skin_C_blush, Perc_Cracking, SSC, Bulked_Fruit_SSC, Flesh_C, Foliar_PM)]
 names(ros_phenology) <- tolower(names(ros_phenology))
 ## see rosbreed_trait_descriptors.csv
 ## Skin_C_blush : 1=0-25%; 2=26-50%; 3=51-76%; 4=76-100%
@@ -680,6 +687,8 @@ names(ros_phenology) <- tolower(names(ros_phenology))
 ## Bulked_Fruit_Firmness, firmness averaged over 25 fruit,  g_per_mm
 ## Firmness, SSC, and TA were measured in units of g/mm, °Brix, and percentage, respectively.
 ## The force required to pull a ripe cherry fruit from its pedicel, PFRF, and fruit weight were both measured in grams.
+## FreeStone: 1= clingy;2=--;3=-;,4=--; 5= free
+## Foliar_PM: incidence of foliar powdery mildew rated on a 0-5 scale where 0 means no infection and 5 is 100% infection
 
 ## curate var names to match genotype data ---------------
 ros_phenology[, var := tolower(germplasm)]
@@ -691,16 +700,18 @@ varnames_tmp <- c(  ## from (rosbreed) = to (genotype data)
 )
 ros_phenology$var <- query_label(ros_phenology$var, varnames_tmp)
 ros_phenology[, var := as.factor(var)]
+ros_phenology[, foliar_pm := as.numeric(foliar_pm)]
 
-
-## aggregate
-
+## aggregate over the years/datasets
 ## str(ros_phenology)
-ros_phenology[, lapply(.SD, mean), by=dataset]
-ros_phenology_aggr <- ros_phenology[, lapply(.SD, function(x){median(x, na.rm = TRUE)}), by=var, .SDcols=names(ros_phenology)[3:14]]
+
+## ros_phenology[, lapply(.SD, mean), by=dataset]
+## length(names(ros_phenology))-1
+ros_phenology_aggr <- ros_phenology[, lapply(.SD, function(x){median(x, na.rm = TRUE)}), by=var, .SDcols=names(ros_phenology)[3:15]]
 
 ## str(ros_phenology_aggr)
 
+## quintiles
 myfun <- function(x){
     out <- cut(x, breaks = quantile(x, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)
     out <- as.numeric(out)
@@ -715,20 +726,34 @@ ros_phenology_aggr[, sweetness := bulked_fruit_ssc]
 ros_phenology_aggr[is.na(bulked_fruit_ssc), sweetness := ssc]
 ros_phenology_aggr[, sweetness_q := myfun(sweetness)]
 ros_phenology_aggr[, freestone_q := myfun(jitter(freestone))]
+ros_phenology_aggr[, pm_q := myfun(jitter(foliar_pm))]
 
 ros_phenology_aggr[, flesh_color := round(flesh_c, digits = 0)]
 ros_phenology_aggr[, flesh_color := factor(flesh_color, ordered = TRUE, levels = 1:5, labels = c("vitt", "rosa", "orange", "rött", "mörkrött"))]
 
-ros_phenology_aggr <- ros_phenology_aggr[, .(var, ta_q, sweetness_q, firmness_q, wt_q, freestone_q, skin_mahogany_q, flesh_color)]
+ros_phenology_aggr <- ros_phenology_aggr[, .(var, ta_q, sweetness_q, firmness_q, wt_q, freestone_q, pm_q, skin_mahogany_q, flesh_color)]
+
+write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
 
 ## Flesh_C : 1=white; 2=pink; 3=orange; 4=red; 5=deep red
 ## Skin_C_blush : 1=0-25%; 2=26-50%; 3=51-76%; 4=76-100% ## Few noted
 ## Skin_C_mahogany : Visual rating on 1-7 scale based on a ctifl color chart, typically on 25 fruit from a tree
 ## freestone : 1= clingy;2=--;3=-;,4=--; 5= free
 
-## myfun(ros_phenology_aggr$ta)
-names(ros_phenology_aggr) <- c("var", "acidity", "sweetness", "firmness",  "weight", "freestone", "skin_mahogany", "flesh_color")
-write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
+## https://eng.lbst.dk/plants-biosecurity/plant-health/harmful-pests/fungi/monilia-fructicola ## sjukdomar
+
+## ## colnames
+## varnames <- c(
+## 'var' = "var",
+## 'ta_q' = "acidity",
+## 'sweetness_q' = "sweetness",
+## 'firmness_q' = "firmness",
+## 'wt_q' = "weight",
+## 'freestone_q' = "freestone",
+## 'skin_mahogany_q' = "skin_mahogany",
+## 'flesh_color' = "flesh_color"
+## )
+## Note curated in summar.r instead
 
 ## ros_phenology_aggr[, lapply(.SD, function(x){
 ##     cut(x, breaks = quantile(x, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)

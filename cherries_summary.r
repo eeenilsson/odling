@@ -5,32 +5,37 @@ library(forcats) ## for reordering plot levels
 
 ## plot pollination table ---------------------
 
-## labels
+## make labels
 tmp <- variety_genotype_group[, .(var, genotype, label, incompatibility_group)]
-## names(tmp) <- c("var", "genotype", "label", "incompatibility_group")
 
-tmp[, label := gsub(" \\([^$]*", "", label)] ## sanitize
-tmp[, label := gsub(" \\\n[^$]*", "", label)]
-tmp[, label := gsub(" \\/[^$]*", "", label)]
-tmp[, label := gsub("TM$", "", label)]
-tmp[, label := gsub("Späte Rote Knorpelkirsche", "Rote", label)]
-tmp[, label := gsub("Knauffs Schwarze", "Knauffs", label)]
-tmp[, label := gsub("Große Schwarze Knorpel", "Große Schwarze", label)]
-tmp[, label := gsub("Dönissens Gelbe Knorpel", "Dönissens Gelbe", label)]
-tmp[, label := gsub("Guigne d'Annonay", "Annonay", label)]
+sanitize_label <- function(x){
+x <- gsub(" \\([^$]*", "", x)
+x <- gsub(" \\\n[^$]*", "", x)
+x <- gsub(" \\/[^$]*", "", x)
+x <- gsub("TM$", "", x)
+x <- gsub("Späte Rote Knorpelkirsche", "Rote", x)
+x <- gsub("Knauffs Schwarze", "Knauffs", x)
+x <- gsub("Große Schwarze Knorpel", "Große Schwarze", x)
+x <- gsub("Dönissens Gelbe Knorpel", "Dönissens Gelbe", x)
+x <- gsub("Guigne d'Annonay", "Annonay", x)
+x <- gsub("Schneiders Späte Knorpelkirsche", "Schneiders Späte", x)
+
+return(x)
+}
+tmp[, label := sanitize_label(label)]
 tmp[, label := ifelse(incompatibility_group == "SC", paste0(label, "*"), label)] ## add asterisk for SC
-## ?bquote
-
-## tmp[grepl("Anno", label), ]
-
 tmp[, label_ss := paste0(label, " [", genotype, ", ", incompatibility_group, "]")]
 varnames <- tmp$label_ss
 names(varnames) <- tmp$var
+
 dtplot[, target := factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
+
 varnames <- gsub(" \\[[^$]*", "", varnames) ## remove part in brackets for pollinators
+
 dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
 
 ## dtplot[pollinator_blooming_group_num == "Early", ]
+
 
 ## plot base
 p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, bgr))) +
@@ -198,6 +203,34 @@ ggsave("bt_start_ros.png", path = "../dropbox/images/plants/")
 ## summary(ros_bloom)
 
 ## data_frame[, lapply(.SD, sum), by= col1]
+
+## Tables -----------------------
+
+## Rosbreed aggregated phenology data
+ros_phenology_aggr <- fread("ros_phenology_aggr.csv")
+ros_phenology_aggr_curated <- ros_phenology_aggr
+
+## colnames
+varnames_cols <- c(
+'var' = "Sort",
+'ta_q' = "Syra",
+'sweetness_q' = "Sötma",
+'firmness_q' = "Fasthet",
+'wt_q' = "Vikt",
+'freestone_q' = "Kärnsläpp",
+'skin_mahogany_q' = "Rödbrunhet",
+'flesh_color' = "Kött",
+'pm_q' = "Mjöldagg"
+)
+names(ros_phenology_aggr_curated) <- query_label(names(ros_phenology_aggr_curated), varnames_cols)
+
+## varnames
+ros_phenology_aggr_curated[, Sort := query_label(Sort, varnames)]
+write.csv(ros_phenology_aggr_curated, "ros_phenology_aggr_curated.csv", row.names = FALSE) ## for web page
+
+## dt[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
+
+
 
 
 
