@@ -115,7 +115,15 @@ reactable(ros_phenology_aggr_curated, ## sorting
 
 ```
 
-Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en gradering av den relativa sötman, syran etc mellan de sorter som är med. Siffran 1 är lägst och 5 är högst. **Kärnsläpp** är hur lätt kärnan släpper från köttet (1 = släpper mindre lätt, 5 = släpper mer lätt). **Mjöldagg** är förekomst av mjöldagg (på körsbär _Podosphaera clandestina var. clandestina_), där 1 är lägst förekomst och 5 är högst förekomst. **Rödbrunhet** motsvarar hur rödbrunt skalet är. Data från RosBreed. 
+Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en gradering av den relativa sötman, syran etc mellan de sorter som är med. Siffran 1 är lägst och 5 är högst. **Kärnsläpp** är hur lätt kärnan släpper från köttet (1 = släpper mindre lätt, 5 = släpper mer lätt). **Mjöldagg** är förekomst av mjöldagg (på körsbär _Podosphaera clandestina var. clandestina_), där 1 är lägst förekomst och 5 är högst förekomst. **Rödbrunhet** motsvarar hur rödbrunt skalet är. Data från RosBreed. **Syra** är den uppmätta syrahalten (TA, titratable acid) och **Sötma** den uppmätta sockerhalten. Notera att huruvida _smaken_ uppfattas som söt och syrlig har också att göra med halten av malat (högre halt gör att smaken uppfattas som mer sur och mindre söt). Högre halt av malat gör också bären mer benägna att spricka. Malat ansamlas i samband med mognaden och används av bäret för sockerproduktion. Syrlighet och bitterhet kan uppfattas mindre om bären är söta.
+
+<!-- In sweet cherry, malate accumulates at the highest levels during stage III (coinciding with expansion and ripening) and is used for gluconeogenesis -->
+
+<!-- The crack-promoting component in sweet cherry juice was malic acid. -->
+
+<!-- The growth of whole cherries can usually be described as consisting of three stages (I–III) that are depicted as a double-sigmoidal curve. This arises from a slowing of the growth of the flesh and endocarp during stage II (Marshall, 1954). During each growth stage, distinct changes occur.  During stage I, there is a large increase in size of each part of the pericarp; and cell division in this is largely restricted to this period. In the seed, the integuments and nucellus reach their final size. During stage II, the endocarp hardens and the endosperm and embryo grow. During stage III, there is a large increase in fruit volume brought about by cell expansion in the flesh, and it ripens (Marshall, 1954). In the edible part softening, coloration, and the accumulation of glucose, fructose, and sorbitol occur during ripening (Marshall, 1954; Gao et al., 2003). n cherry flesh, malate/malic acid accounts for most of its organic acid content (Girard and Kopp, 1998). The abundance of malate was highest in the flesh and, on a whole fruit basis, most of it accumulated during stage III (Fig. 3). -->
+<!-- From: Phosphoenolpyruvate carboxykinase in cherry (Prunus avium L.) fruit during development    September 2011Journal of Experimental Botany 62(15):5357-65  DOI:10.1093/jxb/err189 -->
+
 
 <!-- Podosphaera clandestina var. clandestina (powdery mildew of cherry) -->
 <!-- incidence of foliar powdery mildew rated on a 0-5 scale where 0 means no infection and 5 is 100% infection -->
@@ -123,6 +131,7 @@ Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en grader
 <!-- ## Om mjöldagg: https://docplayer.se/209487210-Mjoldagg-gulnande-blad-och-for-tidigt-bladfall-visar-sig-betydligt-senare-blldratagheter-saknas.html -->
 
 <!-- Dashboard: https://quarto.org/docs/dashboards/data-presentation.html -->
+
 
 ## Några intressanta sorter
 
