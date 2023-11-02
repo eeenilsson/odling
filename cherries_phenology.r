@@ -855,3 +855,10 @@ write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
 ## Maturity table: https://www.graeb.com/en/range/sweet-cherries/maturity-table/
 ## Rootstocks: https://www.graeb.com/en/range/sweet-cherries/rootstocks/
 ## Med skisser
+
+
+## Bra noggrann webbsida:
+## https://en.excelentesprecios.com/burlat-cherry
+
+## Ontario:
+## https://www.ontario.ca/page/cherry-cultivars-sweet-and-tart
