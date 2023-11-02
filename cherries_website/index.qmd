@@ -9,9 +9,9 @@ Ord i texten som är _kursiverade_ återfinns i avsnittet om [terminologi](termi
 
 ::: {layout-ncol=2}
 
-Genus (släkte): _Prunus_ (plommon, körsbär mfl)<br><br>Subgenus (undersläkte): _Prunus subg. Cesarus_ (körsbär)<br><br>Species (art): _Prunus cesarus_ ("surkörsbär") och _Prunus avium_ ("sötkörsbär")
+Genus (släkte): _Prunus_ (plommon, körsbär mfl)<br><br>Subgenus (undersläkte): _Prunus subg. Cerasus_ (körsbär)<br><br>Species (art): _Prunus cerasus_ ("surkörsbär") och _Prunus avium_ ("sötkörsbär")
 
-![Prunus Cesarus](../../../dropbox/images/plants/prunus_cesarus.jpg){width=40%}
+![Prunus Cerasus](../../../dropbox/images/plants/prunus_cesarus.jpg){width=40%}
 
 :::
 

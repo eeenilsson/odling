@@ -402,9 +402,9 @@ ull_bt[, bt_start_date := startofyear + bt_start]
 mean(ull_bt$bt_start_date, na.rm = TRUE)
 mean(ull_bt$bt_start, na.rm = TRUE)
 
-ull_bt[, median(test_start_date, na.rm = TRUE), by = var]
-ull_bt[, min(test_start_date, na.rm = TRUE), by = var]
-ull_bt[, max(test_start_date, na.rm = TRUE), by = var]
+## ull_bt[, median(test_start_date, na.rm = TRUE), by = var]
+## ull_bt[, min(test_start_date, na.rm = TRUE), by = var]
+## ull_bt[, max(test_start_date, na.rm = TRUE), by = var]
 
 ull_bt[, month_day := format(as.Date(startofyear+ bt_start), "%m-%d")]
 ull_bt[, test_start_date := paste0("2006-", month_day)]
@@ -780,9 +780,6 @@ write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
 ## eur_bt[, .(bt_start_q = cut(bt_start, breaks = quantile(bt_start, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)  ),
 ##                 by = list(var, site, year)]
 
-
-
-
 ## eur_bt_aggr <- eur_bt[, .(
 ##     bt_start = mean(bt_start, na.rm = TRUE),
 ##     bt_full = mean(bt_full, na.rm = TRUE),
@@ -792,16 +789,13 @@ write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
 ##                 by = list(var, site)]
 
 
-
-
-
-
-
 ## Dansk artikel --------------------------
 ## detailed characteristics of some cherrie varieties dk
 ## https://dcapub.au.dk/pub/planteavl_81_148.pdf
-## Se https://dcapub.au.dk/pub/planteavl_81_148.pdf
-## finns på dropbox/images/plants
+## finns på dropbox/images/plants/phenology_dk_statensIII.pdf
+## See also: phenology_dk_statensII.pdf, has BT and more
+## Note: There seems to be 3 parts I-III, look for part I
+## "Earlier reports {Christensen 1970 and 1974) described 75 cultivars and the value of those characteristics were reported."
 
 ## Table 1 and 2 (2 needs curation): 
 ## phenology_statens_dk_tab1.csv
@@ -825,3 +819,39 @@ write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
 ## see paper for more on variables definitions
 ## they also comment on each variety
 ## Summary: The main object of this work was to test newer, and in Denmark unnoticed older cultivars for their qualitative characteristics. Of light cultivars 'Sue' and 'Merton Late' were outstanding for low tendency to cracking and high productivity. 'Vega' was of very fine quality with good tree fertility.  In the early season group the dark cultivars 'Ranne Ljaskovska', 'Frühe Meckenheimer', and 'Spitze Braune' had very valuable characte- ristics and deserve further trial.  In the mid-season group 'Rebekka', 'Valeska', 'Annabella', and 'Balsgård 20406' are the most promising cultivars. In the late season group 'Schneiders Späte' is still of commercial interest owing its extremely large fruits, but its high ten- dency towards cracking should be considered.
+
+## Dansk artikel, part II ----------------
+## See also: phenology_dk_statensII.pdf, has BT and more:
+## "The following economic characteristics were studied: - season of flowering and ripening, fruit colour, size, firmness and cracking susceptability. In addition a numerical description of the most important morphological characteristics is given"
+## "The earliest and latest flowe- ring cultivars thus had 8 days of the blossom period in common." (Fig 1)
+
+## Dönnisens Gelbe. Is rather fertile, the fruits, however, are of poor quality.
+## Early Rivers. Has a low cracking index and a satisfactory fruit size for its season. No early cultivars in this series was of higher quality.
+## Frogmore. A small fruit, which ripens in same season as several large fruited cultivars of higher quality.
+## Mona. May have some value, as rather few large fruited, dark cultivars with satisfactory fertility ripens in its season. The cracking index, however, is higher than desireable.
+## Rainier. Ripens in the same season as 'BüttnersRote'. The fruits are very large, but a very high cracking index reduces its value.
+## Ulster. Is a very valuable cultivar in the same maturity season as 'Schmidt', which it exceeds in fruit firmness but is inferior to in cracking resistance. The cultivar deserves further attention. 
+## Venus. Is a very fertile cultivar with large and firm fruits. The very high cracking suscep tibility, however, reduces its commercial value.
+## 'Alternburger Melonenkirsche'. Origin: Germa-'ny. Synonyms: 'Gewöhnliche Melonenkirs- che', 'Aufrechte Königkirsche'. Very much alike 'Büttners Späte Knorpel' (80), but is supposed to be an independent cultivar (20)(42). It has not shown any merits better than 'Büttners'.
+## 'Merton Late'. Origin: John Innes Inst., England 1962. 'Belle Agathe' x 'Napoleon' (35). The most outstanding qualities of this cultivar are its early and heavy cropping and the high cracking resistent fruits. However, the light fruits are too small to have any great value for dessert
+## 'Poznanska'. Synonym: 'Büttners Czerwona', 'Büttners Rote Knorpel', 'Alterburger Melo- nenkirsche' (64). The results from this trial confirm that it is probably a synonym for 'Büttners', as discussed earlier.
+## 'Schneiders Späte Knorpel'. Origin: Germany before 1861. Synonyms: Probably many culti- vars are grown under this name. Example: 'Hausmüller', 'Kaiser Franz', 'Grosse Ger- mersdorfer' (20), 'Grosse Germersdorfer' (40), 'Ochsenherz' (80), 'Pozna Schneidera' (64). It can hardly be destinguished from most trees grown as 'Ochsenherz'. It is generally accepted to be a late, very large, black fruited cultivar of high quality, not as fertile as 'Van', which ripens in the same season. The fruits are very susceptible to cracking.
+## 'Vega'. Origin: Vineland, Canada 1968. 'Bing' x 'Victor' (5). A very promising cultivar with light,large, firm, early mid-season fruits. The tendency to cracking is somewhat higher than other cultivars of similar season. The trees are fertile.
+
+
+
+
+## Skandinavisk artikel ---------------
+## https://123dok.com/document/qmw5w24z-directory-data-elmu-jurnal-scientia-horticulturae-issue-july.html
+## Hjalmarsson1999.pdf
+## In situ and ex situ assessment of morphological andfruit variation in Scandinavian sweet cherryInger Hjalmarsson
+## Compares countries but not varieties. Has some nice historical info in intro. Are there other papers on this data?
+## DOI:10.1016/S0304-4238(99)00123-5
+
+
+
+## Tysk sida, systematisk:
+## https://www.graeb.com/en/range/sweet-cherries/maturity-table/translate-to-english-schneiders-spaete-knorpel/
+## Maturity table: https://www.graeb.com/en/range/sweet-cherries/maturity-table/
+## Rootstocks: https://www.graeb.com/en/range/sweet-cherries/rootstocks/
+## Med skisser

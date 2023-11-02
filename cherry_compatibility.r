@@ -264,13 +264,14 @@ bg_selected <- rbind(bg_selected,
       tmp
       )
 
+## todo: schneiders_spate_knorpelkirsche syn nordwunder mfl
 
 ## blooming_group_aggr
 
 ## ## explore
 ## blooming_group_aggr[grepl("tar", var), ]
 cols <- c("variety", "var", "genotype") ## , "genotype"
-variety_genotype_group[grepl("eria", tolower(variety)), ..cols]
+variety_genotype_group[grepl("schne", tolower(variety)), ..cols]
 
 ## tmp <- variety_genotype_group[grepl(paste0(paste0(notselected, collapse = "|")), tolower(variety)), ..cols]
 ## print(tmp[, .(var)], n = 200)

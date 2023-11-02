@@ -117,6 +117,8 @@ reactable(ros_phenology_aggr_curated, ## sorting
 
 Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en gradering av den relativa sötman, syran etc mellan de sorter som är med. Siffran 1 är lägst och 5 är högst. **Kärnsläpp** är hur lätt kärnan släpper från köttet (1 = släpper mindre lätt, 5 = släpper mer lätt). **Mjöldagg** är förekomst av mjöldagg (på körsbär _Podosphaera clandestina var. clandestina_), där 1 är lägst förekomst och 5 är högst förekomst. **Rödbrunhet** motsvarar hur rödbrunt skalet är. Data från RosBreed. **Syra** är den uppmätta syrahalten (TA, titratable acid) och **Sötma** den uppmätta sockerhalten. Notera att huruvida _smaken_ uppfattas som söt och syrlig har också att göra med halten av malat (högre halt gör att smaken uppfattas som mer sur och mindre söt). Högre halt av malat gör också bären mer benägna att spricka. Malat ansamlas i samband med mognaden och används av bäret för sockerproduktion. Syrlighet och bitterhet kan uppfattas mindre om bären är söta.
 
+<!-- Rödbrunhet kopplat till köttets färg. Med enstaka undantag är rödbrunhet 1-3 vitt, rosa eller orange; 4-5 orange, rött, eller mörkrött kött. Alla mörkröda har 4-5. Orange 1-4, rosa 1-3, rött 1-5, vitt (få) 2. -->
+
 <!-- In sweet cherry, malate accumulates at the highest levels during stage III (coinciding with expansion and ripening) and is used for gluconeogenesis -->
 
 <!-- The crack-promoting component in sweet cherry juice was malic acid. -->

@@ -7,9 +7,9 @@ title: "Terminologi"
 
 Genus (släkte): _Prunus_ (plommon, körsbär, aprikoser mfl)
 
-Subgenus (undersläkte): _Prunus subg. Cesarus_ (körsbär)
+Subgenus (undersläkte): _Prunus subg. Cerasus_ (körsbär)
 
-Species (art): _Prunus cesarus_ (surkörsbär) och _Prunus avium_ (sötkörsbär)
+Species (art): _Prunus cerasus_ (surkörsbär) och _Prunus avium_ (sötkörsbär)
 
 Subspecies (underart): Tex _Prunus avium subsp. avium_
 
