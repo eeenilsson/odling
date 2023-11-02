@@ -111,8 +111,6 @@ tmp <- gsub("ö", "oo", tmp)
 tmp <- gsub("ü", "u", tmp)
 names(bloml_table_wide) <- tmp
 
-names(bloml_table_wide)
-
 tmp <- c("var", "label_tmp", "description", "frukt_baer", "fruktkoott", "fruktkoott_smak", "hoojd",  "vatten", "vaextsaett", "oovriga_namn")
 bloml_table_wide <- bloml_table_wide[, ..tmp]
 eplanta <- bloml_table_wide[, grepl("_e$", var), var]
@@ -121,10 +119,10 @@ bloml_table_wide[, var := gsub("_e$", "", var)]
 bloml_table_wide[, var := gsub(" $", "", var)]
 bloml_table_wide <- bloml_table_wide[!duplicated(var), ]
 
-write.csv(bloml_table_wide, "phenology_bloml_table.csv", row.names = FALSE)
+## write.csv(bloml_table_wide, "phenology_bloml_table.csv", row.names = FALSE)
 
+## Note : Added blomsterlandet data to cherries_table.csv
 
-store <- bloml_table
 
 ## ######################
 ## test%>%
