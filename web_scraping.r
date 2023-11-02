@@ -70,31 +70,72 @@ bloml_table$pcare_var <- gsub(":", "", bloml_table$pcare_var)
 bloml_table$pcare_var <- gsub("/", "_", bloml_table$pcare_var)
 bloml_table$type <- "sweet"
 bloml_table$type[grepl("Prunus cerasus", bloml_table$label)] <- "sour"
-1+1
 
 bloml_table$label_tmp <- bloml_table$label
 bloml_table$label_tmp <- gsub("Prunus avium ", "", bloml_table$label_tmp)
 bloml_table$label_tmp <- gsub("Prunus cerasus ", "", bloml_table$label_tmp)
-bloml_table$label_tmp <- gsub(" E", "", bloml_table$label_tmp)
+## bloml_table$label_tmp <- gsub(" E", "", bloml_table$label_tmp)
+bloml_table$label_tmp <- gsub("LETTISK LÅG", "Lettisk Låg", bloml_table$label_tmp)
+bloml_table$label_tmp <- gsub("'", "", bloml_table$label_tmp)
+bloml_table$label_tmp <- gsub("STOR SVART BIGARRÅ \\(", "", bloml_table$label_tmp)
+bloml_table$label_tmp <- gsub("\\)", "", bloml_table$label_tmp)
+## STOR SVART BIGARRÅ == Grosse Schwartze Knorpelkirsche
+bloml_table$var <- tolower(bloml_table$label_tmp)
+bloml_table$var <- gsub(" ", "_", bloml_table$var)
+bloml_table$var <- gsub("å", "aa", bloml_table$var)
+bloml_table$var <- gsub("ä", "ae", bloml_table$var)
+bloml_table$var <- gsub("ö", "oo", bloml_table$var)
+bloml_table$var <- gsub("ü", "u", bloml_table$var)
+## unique(bloml_table$var)
 
-unique(bloml_table$label_tmp)
+bloml_table <- data.table(bloml_table)
+bloml_table_wide <- bloml_table
+bloml_table_wide <- unique(bloml_table_wide) ## remove duplicated
+bloml_table_wide <- bloml_table_wide[!duplicated(bloml_table_wide[, .(var, pcare_var)]), ]
 
-## str_match(bloml_table$label, "(?s)'(.*?)(?s)'")
-bloml_table$var <- tolower(bloml_table$label)
+## dupl_index <- duplicated(bloml_table_wide[, .(var, pcare_var)])
+## bloml_table_wide[!dupl_index, ]
+## bloml_table_wide[dupl_index & duplicated(value), ]
+## bloml_table_wide[duplicated(bloml_table_wide[, .(var, pcare_var)]), ]
+## bloml_table[, .(var, pcare_var, value)]
+
+## bloml_table[, .(var, pcare_var, value)]
+
+str(bloml_table_wide)
+bloml_table_wide <- dcast(bloml_table_wide, var + label_tmp ~ pcare_var, value.var = "value")
+tmp <- tolower(names(bloml_table_wide))
+tmp <- gsub(" ", "_", tmp)
+tmp <- gsub("å", "aa", tmp)
+tmp <- gsub("ä", "ae", tmp)
+tmp <- gsub("ö", "oo", tmp)
+tmp <- gsub("ü", "u", tmp)
+names(bloml_table_wide) <- tmp
+
+names(bloml_table_wide)
+
+tmp <- c("var", "label_tmp", "description", "frukt_baer", "fruktkoott", "fruktkoott_smak", "hoojd",  "vatten", "vaextsaett", "oovriga_namn")
+bloml_table_wide <- bloml_table_wide[, ..tmp]
+eplanta <- bloml_table_wide[, grepl("_e$", var), var]
+eplanta <- eplanta[V1 == TRUE][["var"]]
+bloml_table_wide[, var := gsub("_e$", "", var)]
+bloml_table_wide[, var := gsub(" $", "", var)]
+bloml_table_wide <- bloml_table_wide[!duplicated(var), ]
+
+write.csv(bloml_table_wide, "phenology_bloml_table.csv", row.names = FALSE)
 
 
 store <- bloml_table
 
-######################
-test%>%
-  html_elements(css = "PlantInformationBlockstyled__ScientificName")
+## ######################
+## test%>%
+##   html_elements(css = "PlantInformationBlockstyled__ScientificName")
 
 
 
-html_elements(page_html, 'css', link)
+## html_elements(page_html, 'css', link)
 
 
-?html_elements
+## ?html_elements
 
-page_html%>%
-  html_elements(xpath = "")
+## page_html%>%
+##   html_elements(xpath = "")
