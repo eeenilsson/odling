@@ -7,9 +7,13 @@ title: "Odling"
 Gropen
 När
 
-Läge: Sol till halvskugga / medelfuktigt
+Läge: Sol till halvskugga / medelfuktigt. 
+
+Sweet cheery trees prefer a full sun position, acidic ones will be fine in partial shade.
 
 "lanteras i väldränerad, kalkrik och mullrik jord. Gräv en stor grop och se till att jordkvaliteten är bra även runt planteringsgropen. Gödslas med kvävefattig gödsel, t.ex. Algomin Trädgårdsgödsel."
+
+Both types prefer a well drained, roughly neutral soil
 
 ## Näring
 
@@ -29,3 +33,7 @@ Klipp bort skadade, korsade och inåtväxande grenar
 Starkväxande: 5 till 7 m
 Medelstarkväxande: 4 till 6 m
 Buske: 150-300 cm.
+
+## Odling
+
+Cherry trees are low maintenance although they can suffer from aphids in particular. Birds can eat the fruits but in almost all cases enough is left undamaged for a large crop.

@@ -869,5 +869,10 @@ write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
 
 ## Bra, pdf: https://www.ebeplant.se/krsbr-1
 
-## Sorterbar tabell:
+## Sorterbar tabell (sparsam info):
 ## https://tradgardshuset.com/sortiment/frukt-och-bar/bigarraer/
+
+## Många sorter:
+## https://www.aatreeshop.nl/en/fruittrees/cherry-trees/sweet-cherries/g-20000057
+
+

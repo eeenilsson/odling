@@ -231,6 +231,32 @@ write.csv(ros_phenology_aggr_curated, "ros_phenology_aggr_curated.csv", row.name
 ## dt[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
 
 
+## collected data
+cherries_table <- read.csv("cherries_table.csv")
+cols <- c("label", "type", "eplanta", "zone", "size", "maturity_rank", "sweet", "sour", "firm", "pulp_color", "skin_color", "good_taste"
+)
+cherries_table <- cherries_table[, names(cherries_table) %in% cols]
+str(cherries_table)
+
+cherries_table$type <- factor(cherries_table$type, ordered = FALSE, levels = c("sour", "sweet"), labels = c("Sur", "Söt"))  ## Todo: Tag med buskkörsbär här
+
+cherries_table$pulp_color <- factor(
+    cherries_table$pulp_color,
+    ordered = TRUE,
+    levels =  c("", "yellow_white", "yellow", "orange", "light_red", "red", "dark_red"),
+    labels =  c("", "Gulvitt", "Gult", "Orange", "Röd ljus", "Röd", "Röd mörk")            
+)
+
+cherries_table$skin_color <- factor(
+    cherries_table$skin_color,
+    ordered = TRUE,
+    levels =  c("yellow", "yellow_red", "red", "dark_red"),
+    labels =  c("Gult", "Gulrött", "Rött", "Rött mörkt"),    
+)
+
+names(cherries_table) <- c("Sort", "Typ", "E-planta", "Zon", "Storlek", "Mognad", "Söt", "Syrlig", "Fasthet", "Kött", "Färg", "God")
+
+write.csv(cherries_table, "cherries_table_curated.csv", row.names = FALSE)
 
 
 

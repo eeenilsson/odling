@@ -18,7 +18,7 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Olika sorter kan trivas olika bra i just din trädgård, så det kan vara bra att prova olika.
 
-## Några egenskaper av betydelse för val av sort
+## Några egenskaper av betydelse
 
 - Härdighet: Vilket klimat de kan odlas i. Anges ofta i zoner numrerade 1-8 där 1 är mildast och 8 kärvast. Kolla zonkartan för att se vilken zon du bor i. Lokalt klimat kan påverkas av närhet till stora vatten (klimatet blir ofta mildare), läge osv.
 
@@ -40,7 +40,7 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Trädets utseende och storlek. Beror också på vilken _grundstam_ (se @sec-grundstam) som används.
 
-- Skördens riklighet.
+- Skördens riklighet och tidpunkt (olika _mognadstid_ ger längre skördesäsong).
 
 - Färgen och glansen på skalet.
 
@@ -64,28 +64,101 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 <!-- Morello cherry trees fruit on younger wood than sweet varieties, and thus can be pruned harder. -->
 
-- Alla sorter av surkörsbär är självfertila, dvs kräver inte pollen från en annan individ för att bära frukt.
+- De flesta sorter av surkörsbär är självfertila, dvs kräver inte pollen från en annan individ för att bära frukt.
 
 - Kräver mer kväve och vatten. Bättre tolerans mot dålig dränering av jorden.
 
 - Mer motståndskraftiga mot skadeinsekter och sjukdomar.
 
-- Är tetraploider med 2n=32 kromosomer (Sötkörsbär är diploida<!-- och har 16 kromosomer som bildar 8 par.  -->). En tertaploid sort kan ha upp till fyra alleler/varianter i samma locus.
+- Är allotetraploider med 2n = 4x = 32 kromosomer dvs har två uppsättningar diploida koromosomer från olika arter. _Prunus Ceracus_ antas vara en hybrid som skapats genom "ickereducerade" (diploida) celler från _Prunus Avium_ och normala celler från _P Fructiosa_. En tetraploid sort kan ha upp till fyra alleler/varianter i samma locus. Sötkörsbär är diploida, 2n=2x=16<!-- och har 16 kromosomer som bildar 8 par.  -->.
 
 - Blommar vanligen senare än sötkörsbär och är därför inte så lämpliga som pollinerare av dessa.
 
+- Kan i allmänhet användas för syltning, saftning och matlagning.
+
 ## Tabell egenskaper
+
+Här visas information sammanställd från olika källor. Notera att körsbärens egenskaper kan variera beroende på var de växer (_ståndort_). De flesta egenskaper har i tabellen ordnats i tre grupper från låg (1) till hög (3). Klicka på rubrikerna för att sortera.
+
+::: {.column-screen}
+
+
+```{r} 
+#| label: tbl-qualities-swe
+#| tbl-cap: "Egenskaper"
+#| warning: false
+
+## pacman::p_load(reactable)
+library(reactable)
+## https://glin.github.io/reactable/articles/examples.html
+## defaultPageSize = 40
+
+cherries_table_curated <- read.csv("../cherries_table_curated.csv")
+
+reactable(cherries_table_curated, ## sorting
+          filterable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              ## header = function(value) gsub(".|_", " ", value, fixed = TRUE),
+              ## cell = function(value) format(value, nsmall = 1),
+              align = "center",
+              minWidth = 30
+              ## headerStyle = list(background = "#f7f7f8")
+          ),
+          columns = list(
+              Sort = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  ## Add a right border style
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+``` 
+
+:::
+
+
+**Zon**: Odlingszon ([se plantagen](https://www.plantagen.se/vaxtzoner.html)). För flera av sorterna finns något varierande uppgifter, så att öka deras odlingszon med ett kan vara rimligt om de lokala förutsättningarna är goda. Tänk dock på att sorter med tidig blomning kan skadas av sista frosten.
+
+**Mognad** motsvarar den period bären är redo att skördas. Siffran 1 = tidig (början-mitten av juli), 2 = medel (slutet av juli-början av augusti), 3 = sen (augusti-september).
+
+**Sötma** och **syrlighet**: Hur smaken beskrivs. Siffran 3 = hög sötma/syrlighet. Om smaken beskrivs som sötsyrlig har siffran 2 satts för båda.
+
+**Fasthet**: Siffran 1 = lös, 2 = medel, 3 = fast.
+
+**Kött**: Fruktköttets färg.
+
+**Färg**: Skalets färg. "Gulröd" kan vara gul med röda inslag eller gulorange.
+
+**God**: Värdet 3 är om smaken beskrivs som "mycket god", 2 om den beskrivs som "god".
+
+**Sylt**: Värde 1 anges om den kan användas för sylt/saft, 0 om bären bör ätas färska. I princip är det surkörsbären som är lämpliga för syltning. Vissa sötkörsbär uppges också kunna syltas (Allmän gulröd bigarrå, Büttners Rote, Fryksås, och Heidi).
+
+Bären beskrivs ibland som "saftiga", dock finns detta omdöme för i stort sett alla sorter, varför någon åtskillnad ej kunnat göras.
+ 
+
+
+<!-- Smaken när den uppges beskrivs oftast som god. Ibland mycket god. Svårt att särskilja. "Sötsyrlig" => 2 2. Söt => 3 + ? -->
+
+Nedan följer en tabell med egenskaper från ett amerikanskt forskningsprojekt (RosBreed).
+
+## Tabell egenskaper från RosBreed
 
 ```{r}
 #| label: tbl-qualities
-#| tbl-cap: "Egenskaper"
+#| tbl-cap: "Egenskaper RosBreed"
 #| warning: false
 
 ros_phenology_aggr_curated <- read.csv("../ros_phenology_aggr_curated.csv")
 ## knitr::kable(ros_phenology_aggr_curated)
 
 ## pacman::p_load(reactable)
-library(reactable)
 ## https://glin.github.io/reactable/articles/examples.html
 ## defaultPageSize = 40
 
@@ -117,10 +190,6 @@ reactable(ros_phenology_aggr_curated, ## sorting
 
 Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en gradering av den relativa sötman, syran etc mellan de sorter som är med. Siffran 1 är lägst och 5 är högst. **Kärnsläpp** är hur lätt kärnan släpper från köttet (1 = släpper mindre lätt, 5 = släpper mer lätt). **Mjöldagg** är förekomst av mjöldagg (på körsbär _Podosphaera clandestina var. clandestina_), där 1 är lägst förekomst och 5 är högst förekomst. **Rödbrunhet** motsvarar hur rödbrunt skalet är. Data från RosBreed. **Syra** är den uppmätta syrahalten (TA, titratable acid) och **Sötma** den uppmätta sockerhalten. Notera att huruvida _smaken_ uppfattas som söt och syrlig har också att göra med halten av malat (högre halt gör att smaken uppfattas som mer sur och mindre söt). Högre halt av malat gör också bären mer benägna att spricka. Malat ansamlas i samband med mognaden och används av bäret för sockerproduktion. Syrlighet och bitterhet kan uppfattas mindre om bären är söta.
 
-Noter att körsbärens egenskaper kan variera beroende på var de växer.
-
-<!-- Smaken när den uppges beskrivs oftast som god. Ibland mycket god. Svårt att särskilja. "Sötsyrlig" => 2 2. Söt => 3 + ? -->
-
 <!-- Rödbrunhet kopplat till köttets färg. Med enstaka undantag är rödbrunhet 1-3 vitt, rosa eller orange; 4-5 orange, rött, eller mörkrött kött. Alla mörkröda har 4-5. Orange 1-4, rosa 1-3, rött 1-5, vitt (få) 2. -->
 
 <!-- In sweet cherry, malate accumulates at the highest levels during stage III (coinciding with expansion and ripening) and is used for gluconeogenesis -->
@@ -137,6 +206,8 @@ Noter att körsbärens egenskaper kan variera beroende på var de växer.
 <!-- ## Om mjöldagg: https://docplayer.se/209487210-Mjoldagg-gulnande-blad-och-for-tidigt-bladfall-visar-sig-betydligt-senare-blldratagheter-saknas.html -->
 
 <!-- Dashboard: https://quarto.org/docs/dashboards/data-presentation.html -->
+
+
 
 
 ## Några intressanta sorter
@@ -205,7 +276,7 @@ Alla utom dessa anges som Use: Eating
 
 # Grundstammar {#sec-grundstam}
 
-Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okulering_). Typen av grundstam påpverkar bland annat:
+Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okulering_). Typen av grundstam påverkar bland annat:
 
 - Trädets storlek
 - Härdighet
@@ -214,25 +285,41 @@ Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okule
 
 ## Olika grundstammar för körsbär
 
+Ett icke-ympat körsbärsträd bli kring 6 m högt beroende på sort.
+
+För en grundstm kan anges till vilken % av standardträdets höjd (det som ympas på rotstocken) det blir.
+
+<!-- It is important to remember though that a cherry tree on Colt rootstock, pruned once a year, can easily be restricted to 3m / 10ft high. -->
+
 **Colt**
 
-- Medelstarkväxande
-- Sluthöjd 3-4 m efter 8 år
-- God bördighet
-- Ger frukt inom 1-2 år
-- Klarar något sämre jord
+- En hybrid från _Prunus avium_ och _Prunus pseudocerasus_
+- Medelstarkväxande.
+- Sluthöjden 3.5-4.5 m efter 8 år (60-70% av standard). Kan hållas till 3 m med beskärning.
+- God bördighet.
+- Passar sämre för sorter med riklig produktion och leder då till små, defomerade bär. Man kan då avlägsa en del av blomknopparna för att minska problemet.
+<!-- - Colt is resistant to phytophthora root rot, bacterial canker, and stem-pitting, although is susceptive to crown gall.  -->
+- Colts vigör påverkas inte av virus, medan Gisela 5 har en något mindre vigör om det är virusdrabbat.
+- Ger frukt inom 1-2 år.
+- Klarar något sämre jord.
 - Kräver stöd de första åren.
-- Zon 1-3
+- Kan skadas vid hård vinter.
+- Zon 1-3.
+
 
 <!-- Ger relativt stora träd, 70-80% av fröstam. -->
 
-**Gisela**
+**Gisela 5**
 
+- En hybrid mellan _Prunus cerasus_ (surkörsbär) and _Prunus canascens_.
 - Ger mindre träd än colt.
-- Sluthöjden varierar beroende på körsbärssort, 3-4 m
-- Ger frukt efter 1-2 år
-- God härdighet (ymplingen avmognar tidigt)
-- Zon 1-4(5)
+- Höjden blir ca 3 m efter 5 år. Sluthöjden varierar beroende på körsbärssort, 2.5-3  m (40-50% av standard).
+- Ger frukt efter 1-2 år.
+- God härdighet (ymplingen avmognar tidigt).
+- Ger tidigare blomning med några dagar, vilket kan öka risken för frosstkadade knoppar/blommor.
+- Lägre träd (ökar risken för frosstkada).
+- Tidigarelägger blomningen med några dagar och ökar därmed risken för froststkador.
+- Zon 1-4(5).
 
 <!-- 35% av av Prunus avium, blir 3,5-4,5 m  -->
 
@@ -240,7 +327,7 @@ Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okule
 
 - Starkväxande
 - Högre träd (kan vara svårplockad pga höjd), 20-30 m
-- Kronans diameter ca 10 m. Upprätt, något pyramidal form (beror på ymlingen sort?)
+- Kronans diameter ca 10 m. Upprätt, något pyramidal form (beror på ymplingen sort?)
 - God förankring i jorden
 - Något senare fruktsättning
 - Zon 1-5
@@ -249,7 +336,7 @@ Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okule
 **Prunus cerasus**
 
 - Ger mindre något mer svagväxande träd.
-- Både söt- och surkörsbär (_Prunus cesarus_)?
+- Både söt- och surkörsbär (_Prunus cerasus_)?
 
 **Prunum mahaleb**
 
@@ -264,8 +351,7 @@ Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okule
 
 <!-- Prunus ’Gisela 5’ = blir mindre träd, ca 35% storlek av Prunus avium, ungefär 3,5-4,5 m höga, klarar zon I-V (VI) -->
 
-<!-- Om du vill läsa mer om grundstammar för körsbär så rekommenderar jag varmt blogginlägget Grundstammar del 4 – körsbär och boken Skogsträdgården: odla ätbart överallt av Philipp Weiss & Annevi Sjöberg 2018:424-426 -->"
+<!-- Om du vill läsa mer om grundstammar för körsbär så rekommenderar jag varmt blogginlägget Grundstammar del 4 – körsbär och boken Skogsträdgården: odla ätbart överallt av Philipp Weiss & Annevi Sjöberg 2018:424-426 -->
 
 <!-- Skogsträdgårdsbloggen tabell:  -->
 <!-- https://skogsträdgården.stjärnsund.nu/grundstammar-del-4-korsbar/ -->
-
