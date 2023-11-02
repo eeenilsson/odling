@@ -862,3 +862,12 @@ write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
 
 ## Ontario:
 ## https://www.ontario.ca/page/cherry-cultivars-sweet-and-tart
+
+
+## https://blekingefrukttradplantskola.se/om-korsbar-en/
+
+
+## Bra, pdf: https://www.ebeplant.se/krsbr-1
+
+## Sorterbar tabell:
+## https://tradgardshuset.com/sortiment/frukt-och-bar/bigarraer/
