@@ -25,10 +25,16 @@ return(x)
 tmp[, label := sanitize_label(label)]
 tmp[, label := ifelse(incompatibility_group == "SC", paste0(label, "*"), label)] ## add asterisk for SC
 tmp[, label_ss := paste0(label, " [", genotype, ", ", incompatibility_group, "]")]
-varnames <- tmp$label_ss
+tmp[, label_gr := paste0(label, "^[", incompatibility_group, "]")]
+
+## varnames <- tmp$label_ss ## S-alleles and incompat group added
+varnames <- tmp$label_gr ## Only incompat group added
 names(varnames) <- tmp$var
 
 dtplot[, target := factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
+
+## factor(dtplot$target, levels = levels(dtplot$target), labels = unname(query_label(levels(dtplot$target), varnames)))
+
 
 varnames <- gsub(" \\[[^$]*", "", varnames) ## remove part in brackets for pollinators
 
@@ -76,6 +82,15 @@ plot_pollination_table <- plot_pollination_table +
          )
 
 plot_pollination_table
+
+## superscript haplotype
+mylabs <- levels(dtplot$target)
+mylabs <- gsub("\\[|\\]", "", mylabs)
+## mylabs <- gsub("^[^\\^]*", "", mylabs)
+mylabs <- gsub(" ", "~", mylabs) ## parse not working with blankspace
+mylabs <- gsub("\\*", "", mylabs)
+mylabs <- gsub("/", "**~or", mylabs)
+plot_pollination_table + scale_y_discrete("Mottagare", labels = parse(text = mylabs)) 
 
 ggsave(
   "plot_pollination_table.png",

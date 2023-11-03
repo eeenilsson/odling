@@ -134,7 +134,7 @@ dupl_var <- variety_genotype_group[duplicated(var), var]
 ## Syn : Schattenmorelle (Prunus cerasus subsp. acida), auch Große Lange Lotkirsche, Nordkirsche, ‘Łutówka’, Griotte de Nord, Chatel Morel, Morello.
 
 tmp <- data.table(
-    variety = "Skuggmorell (Schattenmorelle, Große Lange Lotkirsche, Nordkirsche, Łutówka, Griotte de Nord, Chatel Morel, Morello)",
+    variety = "Skuggmorell (Schattenmorelle, Große Lange Lotkirsche, Nordkirsche, Łutówka, Griotte de Nord, Chatel Morel, English Morello)",
     genotype = "S6S13ʹS26S36a",
     incompatibility_group = "SC",
     origin_country = "DE",
@@ -147,7 +147,7 @@ tmp <- data.table(
 variety_genotype_group <- rbind(variety_genotype_group,
       tmp)
 
-tmp <- data.table(
+tmp <- data.table( ## Note: BT missing so will be excluded from plot
     variety = "Tschernokorka",
     genotype = "S9S13S35S36b2",
     incompatibility_group = "SI",

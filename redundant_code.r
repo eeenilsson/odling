@@ -326,3 +326,76 @@ compat <- function(genotype_a, genotype_b){
     ## S3' =  SC
     ## S5' =  SC
 }
+
+
+
+
+## superscript in tick labels
+
+### bquote
+
+mylabs <- levels(dtplot$target)
+mylabs <- levels(dtplot$target)[2:3]
+mylabs <- c("almore")
+plot_pollination_table + scale_y_discrete("Mottagare", labels = bquote(.(mylabs)^1))
+
+bquote(expression(mylabs))
+expression(mylabs)
+bquote("^mylabs")
+bquote(mylabs^s)
+
+lapply(mylabs, function(x){bquote(x)})
+bquote(get(mylabs)^s)
+
+### parse
+
+## https://stackoverflow.com/questions/28978011/how-to-subscript-the-x-axis-tick-label
+
+mylabs <- levels(dtplot$target)
+plot_pollination_table + scale_y_discrete("Mottagare", labels = parse(text = levels(dtplot$target))) ## unexpected symbol error
+
+mylabs <- c("alm**öre^X")
+plot_pollination_table + scale_y_discrete("Mottagare", labels = parse(text = mylabs)) ## parse not working with blankspace
+
+mylabs <- c("alm~öre^X")
+plot_pollination_table + scale_y_discrete("Mottagare", labels = parse(text = mylabs)) ## parse not working with blankspace
+
+
+mylabs <- levels(dtplot$target)
+plot_pollination_table + scale_y_discrete("Mottagare", labels = expression("PM"^10))
+plot_pollination_table + scale_y_discrete("Mottagare", labels = expression(mylabs))
+mylabs <- gsub("\\[|\\]", "", mylabs)
+plot_pollination_table + scale_y_discrete("Mottagare", labels = expression(get(mylabs)))
+
+ text(1:3, (3:1)-0.03, labels= mapply(function(x,y)
+      as.expression(bquote(.(x)^.(y))
+                    ),
+      first, second))
+
+mylabs_sup <- gsub("^[^\\^]*", "", mylabs)
+mylabs_sup <- gsub("\\^", "", mylabs_sup)
+mylabs_test <- gsub("\\^.*", "", mylabs)
+mylabs_test <- gsub("\\*", "", mylabs_test)
+
+
+plot_pollination_table +
+    scale_y_discrete("Mottagare3", labels = mapply(function(x,y){as.expression(bquote(.(x)^.(y)))},
+      mylabs_test, mylabs_sup)) 
+
+
+plot_pollination_table +
+    scale_y_discrete("Mottagare", labels = paste0(
+      mylabs_test, mylabs_sup)) 
+
+plot_pollination_table +
+    scale_y_discrete("Mottagare", labels = paste0(
+      mylabs_test, "^", mylabs_sup)) 
+
+plot_pollination_table +
+    scale_y_discrete("Mottagare3", labels = as.expression(bquote(.(mylabs_test)^.(mylabs_sup)))) 
+
+
+plot_pollination_table +
+    scale_y_discrete("Mottagare", labels = as.expression(mapply(function(x, y){bquote(.(x)^.(y))}, mylabs_test, mylabs_sup))
+                                      )
+
