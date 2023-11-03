@@ -238,6 +238,7 @@ cols <- c("label", "type", "eplanta", "zone", "size", "maturity_rank", "sweet", 
 cherries_table <- cherries_table[, names(cherries_table) %in% cols]
 str(cherries_table)
 
+## factor levels
 cherries_table$type <- factor(cherries_table$type, ordered = FALSE, levels = c("sour", "sweet"), labels = c("Sur", "Söt"))  ## Todo: Tag med buskkörsbär här
 
 cherries_table$pulp_color <- factor(
@@ -254,7 +255,9 @@ cherries_table$skin_color <- factor(
     labels =  c("Gult", "Gulrött", "Rött", "Rött mörkt"),    
 )
 
-names(cherries_table) <- c("Sort", "Typ", "E-planta", "Zon", "Storlek", "Mognad", "Söt", "Syrlig", "Fasthet", "Kött", "Färg", "God")
+## column labels
+tmp <- c('label' = "Sort", 'type' = "Typ", 'eplanta' = "Eplanta", 'zone' = "Zon", 'size' = "Storlek", 'maturity_rank' = "Mognad", 'sweet' = "Söt", 'sour' = "Syrlig", 'firm' = "Fasthet", 'pulp_color' = "Kött", 'skin_color' = "Färg", 'good_taste' = "God")
+names(cherries_table) <- query_label(names(cherries_table), tmp)
 
 write.csv(cherries_table, "cherries_table_curated.csv", row.names = FALSE)
 

@@ -875,4 +875,13 @@ write.csv(ros_phenology_aggr, "ros_phenology_aggr.csv", row.names = FALSE)
 ## Många sorter:
 ## https://www.aatreeshop.nl/en/fruittrees/cherry-trees/sweet-cherries/g-20000057
 
+## beskriver smak: https://specialtyproduce.com/produce/griotte_dostheim_cherries_22765.php
+
+
+## Foton inkl fruktkött:
+## https://garden.org/plants/view/711509/Cherry-Prunus-avium-Frogmore-Early/
+
+## Surkörsbär ----------------
+
+## Physicochemical characterization of fruit quality traits in a German sour cherry collection, Schuster2014_sour_phenology.pdf, har tabell med firmness, TA, SSC etc som jämför olika surkörsbär.
 

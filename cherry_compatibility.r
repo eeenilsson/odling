@@ -389,6 +389,19 @@ setkey(dtplot, target)
 ## Tatsuya Tsukamoto 2008
 
 
+## The S-genotypes of many sweet and sour cherry cultivars have been published and cultivars are assigned to incompatibility groups (Schuster 2012, Schuster 2018, Sebolt et al. 2017)
+
+## Shuster 2014, Physicochemical characterization of fruit quality traits in a German sour cherry collection
+## https://doi.org/10.1016/j.scienta.2014.09.047
+
+## Sebolt S -genotyping of cultivars and breeding selections of sour cherry ( Prunus cerasus L.) in the Michigan State University sour cherry breeding program May 2017 Acta Horticulturae DOI:10.17660/ActaHortic.2017.1161.5
+## Sebolt2017.pdf
+
+## Identification of bloom date QTLs and haplotype analysis in tetraploid sour cherry (Prunus cerasus) Lichun Cai 2017 ## EJ svenska sorter
+
+## -----------------
+
+
 ## dtplot[grepl("samba|frisco", target), ]
 
 ## dta[ , paste(var, ": ", pollinated_by_concordance_chr)]

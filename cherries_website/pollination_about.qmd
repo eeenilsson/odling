@@ -203,12 +203,18 @@ Hos dem vars bär mognar tidigt är S4 vanligast. S14 förekommer endast hos de 
 
 <!-- The occurrence of self-compatible cultivars is observed much more frequently in sour cherry than in sweet cherry. This phenomenon is caused by natu- rally occurring mutations and loss of functionality of the S-RNase or SFB genes -->
 
-Liksom hos sötkötsbär finns hos surkörsbär "själv-inkompatibilitet" som styrs av variationer i S-området i kromosomerna. Självferila sorter är mycket vanligare hos surkärsbär på grund av att det är vanligare med mutationer i S-allelen. För att "själv-inkompatibiliteten" skall **förloras** krävs att trädet har minst två muterade "icke-fungerande" S-haplotyper. Man har identifierat tolv fungerande S-haplotyper (S1, S4, S6, S9, S12, S13, S14, S16, S26, S33, S34, och S35) och nio icke-fungerande (S1ʹ, S6m, S6m2, S13ʹ, S13m, S36a , S36b, S36b2, och S36b3). Vissa finns även hos sörkörsbär (S1, S4, S6, S9, S12 , S13, S 14, S16, och S34).
+Liksom hos sötkötsbär finns hos surkörsbär "själv-inkompatibilitet" som styrs av variationer i S-området i kromosomerna. Självferila sorter är mycket vanligare hos surkärsbär på grund av att det är vanligare med mutationer i S-allelen. För att "själv-inkompatibiliteten" skall **förloras** krävs att trädet har minst två muterade "icke-fungerande" S-haplotyper. Man har identifierat tolv fungerande S-haplotyper (S1, S4, S6, S9, S12, S13, S14, S16, S26, S33, S34, och S35) och nio icke-fungerande (S1ʹ, S6m, S6m2, S13ʹ, S13m, S36a , S36b, S36b2, och S36b3). Vissa finns även hos sörkörsbär (S1, S4, S6, S9, S12 , S13, S 14, S16, och S34). Om ett pollenkorn från surkörsbär innehåller en eller fler _fungerande_ S-haplotyper som matchar en _fungerande_ S-haplotyp i pistillen blir trädet själv-**in**kompatibelt. Därför behövs minst två muterade, _icke-fungerande_, S-haplotyper för självbefruktning.<!--  The only -->
+<!-- exception to this are selections whose two S-haplotypes are self-fertile variants of the S36-haplotype, as meiotic pairing rarely results in two S36 allelic being packaged in the same gamete -->
+
 <!-- Se Lisek et al -->
 
-De flesta surkörsbär är självfertila ("självkompatibla"), men vissa sorter är inte det.
+För mutationer i _stylus_ (stör S-RNAs) anges den muterade allelen med Sm, och för mutationer i pollen-delen (stör pollenkornets "**S**-haplotype-specific **F**-**b**ox protein", SFB) anges mutationer med S**´**. 
 
-Skuggmorell anges till haplotyp S6S13ʹS26S36a.
+<!-- The term ‘S-haplotype’ has been used to describe this complex locus and the term ‘S-allele’ to describe variants of a given polymorphic S-RNase and SFB genes at the S-haplotype (see review by Tao and Iezzoni, 2010) -->
+
+De flesta surkörsbär är självfertila ("självkompatibla"), men vissa sorter är inte det. Skuggmorell anges till haplotyp S6 S13ʹ S26 S36a (självkompatibel) och Tschernokorka till S9 S13 S35 S36 b2 (själv**in**kompatibel). <!-- [Sebolt2017.pdf] -->
+<!-- = Rheinische Schattenmorelle SC, S6S13’S26S36a  -->
+<!-- Montmorency SC S6S13m S35 S36a [Sebolt2017.pdf] -->
 
 <!-- In sour cherry, as in other species of the genus Prunus, there -->
 <!-- occurs the phenomenon of gametophytic self-incom- -->

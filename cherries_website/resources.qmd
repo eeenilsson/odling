@@ -14,6 +14,8 @@ Resurser och källor.
 
 <!-- Bok Webster A.D & Looney N.E (red) (1996) Cherries: Crop physiology, production and uses. Cambridge, CAB INTERNATIONAL Kap. 3, 5, 7, 8, 15. -->
 
+<!-- https://svensktradgard.se/ -->
+
 ## Terminologi
 
 [Taxonomi](https://botanicalsociety.org.za/the-science-of-names-an-introduction-to-plant-taxonomy/)
@@ -98,3 +100,9 @@ https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-T
 [Cherry tree comparison UK](https://www.gardenfocused.co.uk/fruitarticles/cherry/varieties.php)
 
 [Eriksbo plantskola:](http://www.eriksbo-plantskola.se/): Bra information om många sorter, bland annat blomningstid.
+
+## Bilder
+
+[Körsbärsblomma, surkörsbär:](https://commons.wikimedia.org/wiki/File:Prunus_cerasus_blossom_1.jpg)
+
+<!-- Note: Finns i hög upplösning. -->

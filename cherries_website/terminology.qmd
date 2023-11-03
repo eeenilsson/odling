@@ -63,13 +63,22 @@ syn. = synonymt med
 
 ## Benämningar av olika typer av körsbär
 
-_Bigarrå_: Benämndes tidigare taxonomiskt _Prunus avium var. duracina_, kom senare att avse sorter med viss typ av fruktkött (fast), men numera menas oftast bara sötkörsbär.
+_Bigarrå_: Benämndes tidigare taxonomiskt _Prunus avium var. duracina_, kom senare att avse sorter med viss typ av fruktkött (fast), men numera menas oftast bara sötkörsbär. 
 
 _Hjärtkörsbär_, Benämndes tidigare taxonomiskt _Prunus avium var. avium_. Avser numera vanligen endast att bären är hjärtformade. 
 
-_Morell_: Surkörsbär med mörkröd färg.
+_Morell_: Surkörsbär med mörkröd färg och färgad saft (_Prunus cerasus var. austera_). Även "brunbär".
 
-_Amarell_: Surkörsbär med ljusare färg.
+_Amarell_: Surkörsbär med ljusare färg och ofärgad saft (_Prunus cerasus var. cerasus_). Även "klarbär".
+
+### I Tyskland
+
+_Wilde Vogelkirsche_: Även "Waldkirsche" (_Prunus avium var. avium_), dvs vilda sötkörsbär. Små blad, svarta, saftiga, små frukter (< 1 cm), med sötsyrlig smak.
+
+_Knorpelkirsche_: I Tyskland benämns vissa körsbär "Knorpelkirsche" (_Prunus avium var. duracina_). Dessa har vanligan mycket stora blad, stora (> 1 cm) svartröda frukter med gult eller rött fruktkött som är "broskigt" ("knorpelig") och fast. Även lokalt benämnda som "Krachkirsche", "Knubber" eller "Knupper".
+
+_Herzkirsche_: Även "Weichkirsche" (_Prunus avium var. juliana_). Har större blad än de vilda sötkörsbären. Oftast stora (> 1 cm) svartröda, gula, eller vita frukter med mjukt, saftigt, och rött eller mörkrött fruktkött.
+
 
 ## Pollination och befruktning
 
