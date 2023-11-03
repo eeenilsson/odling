@@ -111,6 +111,8 @@ source("update_names.r") ## adds a column with sanitized varnames
 ## incompatibility_groups <- fread("cherry_incompatibility_groups_2020.csv") 
 ## incompatibility_groups[, s_alleles := gsub(" ", "", s_alleles)] ## squish
 ## ## note: Not needed, all groups in incompatibility_groups are in variety_genotype_group
+## Note: Not al SC have S4
+## ## Note: All S4' are SC (Self-compatible)
 ###############################
 
 variety_genotype_group[, incompatibility_group := gsub(" ", "", incompatibility_group)] ## SC has a trailing space, sqish
@@ -268,15 +270,20 @@ bg_selected <- blooming_group_aggr[grepl(paste0(selectvars, collapse = "$|^"), v
 ## write.csv(tmp, "google_bt_sverige.csv", row.names = FALSE)
 
 ## add these even if bt is unknown
-tmp <- c("fryksaas", "erianne") ## bt missing
+tmp <- c("fryksaas") ## bt missing for , "erianne"
 ## sour: ostheimer, nordia, fanal, kelleris, kirsa, berit, mfl
 
 tmp <- tmp[!tmp %in% bg_selected[, var]] ## those not already selected
+if(length(tmp > 0)){
+lookfor <- ifelse(length(tmp > 1),
+                  paste0(tmp, collapse = "$|"),
+                  tmp)
 tmp <- variety_genotype_group[grepl(paste0(tmp, collapse = "$|"), var), .(var)]
 tmp[, bgr := 99] ## use 99 for thos w unknown bgr
 bg_selected <- rbind(bg_selected,
       tmp
       )
+}
 
 ## todo: schneiders_spate_knorpelkirsche syn nordwunder mfl
 

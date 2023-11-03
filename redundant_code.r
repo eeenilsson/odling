@@ -399,3 +399,19 @@ plot_pollination_table +
     scale_y_discrete("Mottagare", labels = as.expression(mapply(function(x, y){bquote(.(x)^.(y))}, mylabs_test, mylabs_sup))
                                       )
 
+
+## ## superscript haplotype
+## Note: Skip superscript for this and just use brackets
+## mylabs <- levels(dtplot$target)
+## mylabs <- gsub("\\*", "~SK", mylabs)
+## mylabs <- gsub(" \\[", "\\^", mylabs)
+## mylabs <- gsub("\\[|\\]", "", mylabs)
+
+## ## mylabs <- gsub("^[^\\^]*", "", mylabs)
+## mylabs <- gsub(" ", "~", mylabs) ## parse not working with blankspace
+## mylabs <- gsub("/", "**~eller", mylabs)
+## ## mylabs <- gsub("\\^SC", "**sk", mylabs)
+## mylabs <- gsub("'", "p", mylabs)
+
+## ## mylabs <- gsub("/", "~**", mylabs)
+## plot_pollination_table + scale_y_discrete("Mottagare", labels = parse(text = mylabs)) 

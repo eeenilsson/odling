@@ -24,21 +24,24 @@ return(x)
 }
 tmp[, label := sanitize_label(label)]
 tmp[, label := ifelse(incompatibility_group == "SC", paste0(label, "*"), label)] ## add asterisk for SC
-tmp[, label_ss := paste0(label, " [", genotype, ", ", incompatibility_group, "]")]
+tmp[, label_ss_gr := paste0(label, " [", genotype, ", ", incompatibility_group, "]")]
+tmp[, label_ss := paste0(label, " [", genotype, "]")]
 tmp[, label_gr := paste0(label, "^[", incompatibility_group, "]")]
 
-## varnames <- tmp$label_ss ## S-alleles and incompat group added
-varnames <- tmp$label_gr ## Only incompat group added
+## varnames <- tmp$label_ss_gr ## S-alleles and incompat group added
+## varnames <- tmp$label_gr ## Only incompat group added
+varnames <- tmp$label_ss ## Only ss added
 names(varnames) <- tmp$var
 
 dtplot[, target := factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
 
 ## factor(dtplot$target, levels = levels(dtplot$target), labels = unname(query_label(levels(dtplot$target), varnames)))
 
+varnames2 <- gsub(" |\\^\\[[^$]*", "", varnames) ## remove part in brackets for pollinators
+varnames2 <- gsub("\\[.*", "", varnames2)
+## varnames2 <- gsub("\\*", "", varnames2) ## remove asterisk
 
-varnames <- gsub(" \\[[^$]*", "", varnames) ## remove part in brackets for pollinators
-
-dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
+dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames2)))]
 
 ## dtplot[pollinator_blooming_group_num == "Early", ]
 
@@ -52,13 +55,13 @@ plot_pollination_table <- p +
     scale_size_area() +
     scale_color_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3", "bt_unknown" = "white")) +
     theme(
-        plot.margin = unit(c(1, 1, 1, 1), "centimeters"),
+        plot.margin = unit(c(0.9, 0.9, 0.9, 0.9), "centimeters"),
         legend.position = "none",
         axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
-        plot.title = element_text(hjust = 0, vjust = 3, size = 16, face="bold"),
+        plot.title = element_text(hjust = 0, vjust = 3, size = 12, face="bold"),
         axis.title.x = element_text(hjust = 0.5, vjust = -5),
         axis.text=element_text(size=14),
-        axis.title=element_text(size=16, face="bold")
+        axis.title=element_text(size=14, face="bold")
     ) +
     labs(title="Blomningstid",
          x ="Pollinatör",
@@ -81,16 +84,20 @@ plot_pollination_table <- plot_pollination_table +
         plot.title = element_text(hjust = 0.5)
          )
 
-plot_pollination_table
 
-## superscript haplotype
-mylabs <- levels(dtplot$target)
-mylabs <- gsub("\\[|\\]", "", mylabs)
-## mylabs <- gsub("^[^\\^]*", "", mylabs)
-mylabs <- gsub(" ", "~", mylabs) ## parse not working with blankspace
-mylabs <- gsub("\\*", "", mylabs)
-mylabs <- gsub("/", "**~or", mylabs)
-plot_pollination_table + scale_y_discrete("Mottagare", labels = parse(text = mylabs)) 
+## ## superscript incompat gr KEEP #############################
+## mylabs <- levels(dtplot$target)
+## mylabs <- gsub("\\[|\\]", "", mylabs)
+## ## mylabs <- gsub("^[^\\^]*", "", mylabs)
+## mylabs <- gsub(" ", "~", mylabs) ## parse not working with blankspace
+## mylabs <- gsub("\\*", "", mylabs)
+## mylabs <- gsub("/", "**~eller", mylabs)
+## mylabs <- gsub("\\^SC", "**sk", mylabs)
+## ## mylabs <- gsub("/", "~**", mylabs)
+## plot_pollination_table + scale_y_discrete("Mottagare", labels = parse(text = mylabs))
+##############################################################
+
+plot_pollination_table
 
 ggsave(
   "plot_pollination_table.png",

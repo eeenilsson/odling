@@ -10,8 +10,6 @@ source('cherries_phenology.r') ## Rosbreed
 
 ## Compatibility ----------------------
 source('cherry_compatibility.r')  ## read S-allele data
-## Note: Not al SC have S4
-## ## Note: All S4' are SC (Self-compatible)
 
 ## Summary --------------------
 source('cherries_summary.r')
