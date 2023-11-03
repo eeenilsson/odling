@@ -10,6 +10,12 @@ source("../functions/query_label.r")
 ## data
 dta <- fread("cherries_table.csv")
 
+## pollinated_by_plantagen <- dta[, .(var, pollinated_by_plantagen)]
+## write.csv(pollinated_by_plantagen, "pollinated_by_plantagen.csv", row.names = FALSE)
+
+
+
+
 ## variable descriptions -----
 ## pollinated_by_sveriges_tradgardsmastare :
 ## 0 = Troligen självfertil
@@ -17,8 +23,8 @@ dta <- fread("cherries_table.csv")
 ## curate ------------------
 
 ## Recode to numbers plantagen 
-
-tmp <- paste(dta$pollinated_by_plantagen, collapse = ", ") 
+pollinated_by_plantagen <- read.csv("pollinated_by_plantagen.csv")
+tmp <- paste(pollinated_by_plantagen$pollinated_by_plantagen, collapse = ", ") 
 tmp <- strsplit(tmp, c(", |samt"))
 tmp <- unique(tmp[[1]])
 
@@ -46,7 +52,7 @@ varnames <- c(
 ## x <- cbind(replace_name(dta$pollinated_by_plantagen, varnames),
 ##       dta$pollinated_by_plantagen)
 
-dta$temp <- replace_name(dta$pollinated_by_plantagen, varnames)
+pollinated_by_plantagen$temp <- replace_name(pollinated_by_plantagen$pollinated_by_plantagen, varnames)
 
 ## create lookup table
 lookuptable <- dta[, .(var, nr)]
@@ -54,7 +60,9 @@ lookupvarnames <- lookuptable$var
 names(lookupvarnames) <- lookuptable$nr
 
 ## replace names with numbers
-dta$pollinated_by_plantagen_num <-  replace_name(dta$temp, lookupvarnames)
+dta$pollinated_by_plantagen <- pollinated_by_plantagen$temp
+dta$pollinated_by_plantagen_num <-  replace_name(pollinated_by_plantagen$temp, lookupvarnames)
+
 
 ## fix error in sveriges tradgardsmastare ---------------------
 
@@ -93,13 +101,6 @@ dta[, .(var, pollinated_by_sveriges_tradgardsmastare)]
 
 dta$pollinated_by_sveriges_tradgardsmastare_num <-
     replace_name(dta$pollinated_by_sveriges_tradgardsmastare, lookupvarnames)
-
-
-## check
-## variety_genotype_group[tempvar == "cherry_grant", .(tempvar, variety)]
-## variety_genotype_group[, .(tempvar, variety)]
-## paste(variety_genotype_group$tempvar, collapse = ",  ")
-
 
 ## Splendor -----------------------------
 tmp <- fread('cherries_splendor.csv')
@@ -172,6 +173,8 @@ dta[, pollinated_by_concat_chr := paste(pollinated_by_rangedala_chr, pollinated_
 pollinated_by_splendor_chr, pollinated_by_sveriges_tradgardsmastare_chr,
 sep = ";")]
 
+## dta[var == "van", ]
+
 ## test concordance
 myfun <- function(x){paste(test_concordance(x), collapse = ", ")}
 dta[, pollinated_by_concordance_num := unlist(lapply(dta$pollinated_by_concat_num, myfun))]
@@ -190,8 +193,6 @@ dta[, pollinated_by_concordance_chr := unlist(lapply(dta$pollinated_by_concat_ch
 
 
 ### HERE #################
-
-
 
 ## https://ggplot2.tidyverse.org/reference/scale_size.html
 ## p <- ggplot(toplot, aes(pollinator, target)) +
@@ -232,11 +233,6 @@ dta[, pollinated_by_concordance_chr := unlist(lapply(dta$pollinated_by_concat_ch
 ##     print(temp[[i]])
 ## }
 
-
-
-
-
-
 ## x <- "NA (75%), allm_gulrod (100%), erianne (100%), kelleris (100%), kirsa (100%), merton_glory (100%), merton_premier (100%), nordia (100%)"
 ## grepl("xurt", x, fixed = TRUE)
 ## grepl("merton_glory", x, fixed = TRUE)
@@ -249,9 +245,6 @@ dta[, pollinated_by_concordance_chr := unlist(lapply(dta$pollinated_by_concat_ch
 ## grepl(paste0("merton_glory", " \\("), x)
 
 ## names(dta)
-
-
-
 
 ## dta[pollinated_by_concat_num == "NA;NA;NA;NA", .(label, pollinated_by_concat_num)]
 
@@ -296,8 +289,7 @@ dta[, pollinated_by_concordance_chr := unlist(lapply(dta$pollinated_by_concat_ch
 
 ## notes -------
 
-## Mognad mm
-"Mognadstiden för körsbär anges i veckor av körsbärstiden, från körsbärsvecka 1 till 8. När körsbärstiden infaller varierar mellan åren beroende på väder och vind. Ofta börjar de tidigaste körsbären mogna vid midsommartid i södra Sverige. Tidiga körsbär mognar körsbärsvecka 1–2, medelsena vecka 3–5, sena vecka 6–8."
+## Mognad mm "Mognadstiden för körsbär anges i veckor av körsbärstiden, från körsbärsvecka 1 till 8. När körsbärstiden infaller varierar mellan åren beroende på väder och vind. Ofta börjar de tidigaste körsbären mogna vid midsommartid i södra Sverige. Tidiga körsbär mognar körsbärsvecka 1–2, medelsena vecka 3–5, sena vecka 6–8."
 ## 1 korsbärsvecka = 15 dagar2?
 
 ## tidiga mognar körsbärsvecka 1–2, medelsena vecka 3–5, sena vecka 6–8
@@ -326,13 +318,13 @@ dta[, pollinated_by_concordance_chr := unlist(lapply(dta$pollinated_by_concat_ch
 ## Wexthuset
 ## https://www.wexthuset.com/fakta-och-rad/skotselrad-om-vaxter-i-kruka-och-tradgard/beskrivningar-odling-skotsel-bar-och-frukter/korsbar-odling-sorter
 
-"Surkörsbär delas in i moreller som har starkt färgad saft och klarbär, med ofärgad saft. De är nättare i formen och säljs ibland som buskträd och passar mycket bra för spaljering där de till och med kan spaljeras i norrläge, om än med något sämre skörd. De är vanligen inte ympade, utan växer på egen rot. Därmed är de väl lämpade för utekrukan. Surkörsbär är ofta självfertila och har bättre härdighet än sötkörsbären."
+## "Surkörsbär delas in i moreller som har starkt färgad saft och klarbär, med ofärgad saft. De är nättare i formen och säljs ibland som buskträd och passar mycket bra för spaljering där de till och med kan spaljeras i norrläge, om än med något sämre skörd. De är vanligen inte ympade, utan växer på egen rot. Därmed är de väl lämpade för utekrukan. Surkörsbär är ofta självfertila och har bättre härdighet än sötkörsbären."
 
 ## Se cherries_wexthuset.csv
 
-## Real English Fruit
-## https://realenglishfruit.co.uk/cherry-pollination/
-"Cherry varieties are subdivided into six groups, A, B, C, D, E, F, according to their flowering time. A tree will cross-pollinate with trees in its own group, and the groups on either side. For example, for a tree in group C, a pollinator can be in groups B, C or D. Things are made easier by the fact that most cherry trees are in groups C and D."
+## ## Real English Fruit
+## ## https://realenglishfruit.co.uk/cherry-pollination/
+## "Cherry varieties are subdivided into six groups, A, B, C, D, E, F, according to their flowering time. A tree will cross-pollinate with trees in its own group, and the groups on either side. For example, for a tree in group C, a pollinator can be in groups B, C or D. Things are made easier by the fact that most cherry trees are in groups C and D."
 
 
 ## Bra sida: https://www.erlingnielsensplanteskole.dk/svenska/include/popDetail.php?c=124&p=1220
@@ -402,5 +394,4 @@ dta[, pollinated_by_concordance_chr := unlist(lapply(dta$pollinated_by_concat_ch
 ## eller handlar från olika plantskolor.
 
 ## Zonkarta: https://eplanta.com/tips-rad/zonkarta/
-
 

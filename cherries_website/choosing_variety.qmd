@@ -114,6 +114,11 @@ reactable(cherries_table_curated, ## sorting
 
 **Mognad** motsvarar den period bären är redo att skördas. Siffran 1 = tidig (början-mitten av juli), 2 = medel (slutet av juli-början av augusti), 3 = sen (augusti-september).
 
+<!-- Mognad mm "Mognadstiden för körsbär anges i veckor av körsbärstiden, från körsbärsvecka 1 till 8. När körsbärstiden infaller varierar mellan åren beroende på väder och vind. Ofta börjar de tidigaste körsbären mogna vid midsommartid i södra Sverige. Tidiga körsbär mognar körsbärsvecka 1–2, medelsena vecka 3–5, sena vecka 6–8." -->
+<!-- 1 korsbärsvecka = 15 dagar2? -->
+<!-- tidiga mognar körsbärsvecka 1–2, medelsena vecka 3–5, sena vecka 6–8 -->
+<!-- Midsommar = 20–26 juni -->
+
 **Sötma** och **syrlighet**: Hur smaken beskrivs. Siffran 3 = hög sötma/syrlighet. Om smaken beskrivs som sötsyrlig har siffran 2 satts för båda.
 
 **Fasthet**: Siffran 1 = lös, 2 = medel, 3 = fast.

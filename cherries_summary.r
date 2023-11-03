@@ -115,6 +115,9 @@ plot_pollination_table <- plot_pollination_table +
 
 plot_pollination_table
 
+cols <- names(dta)[grepl("pollinat.*", names(dta))]
+dta[var == "van", ..cols]
+
 ## ## superscript incompat gr KEEP #############################
 ## mylabs <- levels(dtplot$target)
 ## mylabs <- gsub("\\[|\\]", "", mylabs)
