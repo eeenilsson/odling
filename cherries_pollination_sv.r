@@ -72,6 +72,7 @@ lookupname <- function(x, lookup_table){
     paste0(lookup_table$var[lookup_table$kodnr %in% strsplit(x, ", ")[[1]]], collapse = ", ")
 }
 ## lookupname <- Vectorize(lookupname)
+
 pol_repl <- c()
 for(i in 1:nrow(tmp)){
     dt <- data.table(
@@ -82,26 +83,22 @@ for(i in 1:nrow(tmp)){
     pol_repl <- rbind(pol_repl, dt)
 }
 
-names(tmp)
+pol_repl$pollinated_by_sveriges_tradgardsmastare <- pol_repl$polin
+pol_repl <- pol_repl[, .(var, pollinated_by_sveriges_tradgardsmastare)]
+## write.csv(pol_repl, "pollinated_by_sv_tradgm_chr.csv", row.names = FALSE)
 
 
+dta <- pol_repl[dta, on = "var"] ## add var
+dta[, .(var, pollinated_by_sveriges_tradgardsmastare)]
 
-tmp[, test := lookupname(pol, lookup)]
-
-    paste0(lookup$var[lookup$kodnr %in% strsplit(tmp[1, pol], ", ")[[1]]], collapse = ", ")
-
-## fix names
-
-tmp[, tempvar := var] ## create temp var
+dta$pollinated_by_sveriges_tradgardsmastare_num <-
+    replace_name(dta$pollinated_by_sveriges_tradgardsmastare, lookupvarnames)
 
 
 ## check
 ## variety_genotype_group[tempvar == "cherry_grant", .(tempvar, variety)]
 ## variety_genotype_group[, .(tempvar, variety)]
 ## paste(variety_genotype_group$tempvar, collapse = ",  ")
-
-
-
 
 
 ## Splendor -----------------------------
