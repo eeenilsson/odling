@@ -3,6 +3,30 @@
 pacman::p_load(ggplot2)
 library(forcats) ## for reordering plot levels
 
+## add pollination info from websites -----
+
+tmp <- data.table(dta)
+tmp <- tmp[, .(var, pollinated_by_concordance_chr)]
+tmp[, pol := gsub("NA \\([^,]*", "", pollinated_by_concordance_chr)]
+tmp[, pol := gsub("^, ", "", pol)]
+source('../functions/removeParens.r')
+tmp[, pol := deleteParens(pol)]
+tmp[, pol := gsub(" , ", ", ", pol)]
+tmp[, pol := gsub(" ,$", "", pol)]
+tmp[, pol := gsub(" ,,", "", pol)]
+tmp <- tmp[, .(var, pol)]
+
+dtplot <- dtplot[, var := target]
+dtplot <- tmp[dtplot, on = "var"]
+
+myfun <- Vectorize(grepl)
+dtplot[, pol_yes := myfun(pollinator, pol)] ## check matches
+dtplot[, pol := NULL]
+dtplot[, pol_yes := as.numeric(pol_yes)]
+dtplot[, pol_yes := factor(pol_yes, levels = 0:1, labels = c("no", "yes"))]
+
+## dtplot[pol_yes == "yes" & compatibility == 0, .(var, pollinator, pol_yes, compatibility)] ## discrepancy
+
 ## plot pollination table ---------------------
 
 ## make labels
@@ -37,7 +61,8 @@ dtplot[, target := factor(target, levels = levels(target), labels = unname(query
 
 ## factor(dtplot$target, levels = levels(dtplot$target), labels = unname(query_label(levels(dtplot$target), varnames)))
 
-varnames2 <- gsub(" |\\^\\[[^$]*", "", varnames) ## remove part in brackets for pollinators
+varnames2 <- gsub("|\\^\\[[^$]*", "", varnames) ## remove part in brackets for pollinators
+varnames2 <- gsub(" $", "", varnames2)
 varnames2 <- gsub("\\[.*", "", varnames2)
 ## varnames2 <- gsub("\\*", "", varnames2) ## remove asterisk
 
@@ -45,15 +70,19 @@ dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = u
 
 ## dtplot[pollinator_blooming_group_num == "Early", ]
 
+## ## plot base #############
+## p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, bgr))) +
+##   geom_point(aes(size = compatibility, colour = compat_proximity))
+##################
 
 ## plot base
 p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, bgr))) +
-  geom_point(aes(size = compatibility, colour = compat_proximity))
+  geom_point(aes(size = compatibility,  fill = compat_proximity, colour = pol_yes), shape = 21, stroke = 1) + scale_color_manual(values=c("no" = "white", "yes" = "black"))
 
 ## plot customization
 plot_pollination_table <- p +
     scale_size_area() +
-    scale_color_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3", "bt_unknown" = "white")) +
+    scale_fill_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3", "bt_unknown" = "white")) +
     theme(
         plot.margin = unit(c(0.9, 0.9, 0.9, 0.9), "centimeters"),
         legend.position = "none",
@@ -61,7 +90,7 @@ plot_pollination_table <- p +
         plot.title = element_text(hjust = 0, vjust = 3, size = 12, face="bold"),
         axis.title.x = element_text(hjust = 0.5, vjust = -5),
         axis.text=element_text(size=14),
-        axis.title=element_text(size=14, face="bold")
+        axis.title=element_text(size=12, face="bold")
     ) +
     labs(title="Blomningstid",
          x ="Pollinatör",
@@ -84,6 +113,7 @@ plot_pollination_table <- plot_pollination_table +
         plot.title = element_text(hjust = 0.5)
          )
 
+plot_pollination_table
 
 ## ## superscript incompat gr KEEP #############################
 ## mylabs <- levels(dtplot$target)
@@ -96,8 +126,6 @@ plot_pollination_table <- plot_pollination_table +
 ## ## mylabs <- gsub("/", "~**", mylabs)
 ## plot_pollination_table + scale_y_discrete("Mottagare", labels = parse(text = mylabs))
 ##############################################################
-
-plot_pollination_table
 
 ggsave(
   "plot_pollination_table.png",
@@ -114,11 +142,11 @@ ggsave(
 )
 
 ## meta:
-## Size of dot corresponds to genetic compatibility, color to blooming time (dark green = same bloomin group, light green = proximity 1 in blooming group, red = outside proximity blooming groups OR not genetically compatible)
+## Size of dot corresponds to genetic compatibility, color to blooming time (dark green = same bloomin group, light green = proximity 1 in blooming group, red = outside proximity blooming groups OR not genetically compatible). Black circles = noted as pollinator on a swedish website.
 ## "Blomningstid"
 
 
-## plot relative start from eur data -----------
+## plot relative BT start from eur data -----------
 ## Note: Coefs are adjusted for site and year. The intercept for duration was 7.53 and the ref category for site was Balandran, southern france. The intercept for BT start (number of days from start of year) was 110.
 ## bt_start_relative is relative to median of the coef for all varieties
 

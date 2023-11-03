@@ -3,18 +3,19 @@ title: "Körsbär"
 sidebar: false
 ---
 
-Detta är en sida om odling av ätliga körsbär. Den är tänkt att beskriva vad man bör tänka på när man väljer sort och vid odling av körsbär. Nedan följer en översiktlig introduktion. Fördjupning finns i de olika avsnitten i menyraden ovan.
+Detta är en sida om odling av ätliga körsbär. Den är tänkt att beskriva vad man bör tänka på när man väljer sort och vid odling. Nedan följer en översiktlig introduktion. Fördjupning finns i de olika avsnitten i menyraden ovan.
 
-Ord i texten som är _kursiverade_ återfinns i avsnittet om [terminologi](terminology.qmd).
+Ord i texten som är _kursiverade_ återfinns i avsnittet  [terminologi](terminology.qmd).
 
 ::: {layout-ncol=2}
 
-Genus (släkte): _Prunus_ (plommon, körsbär mfl)<br><br>Subgenus (undersläkte): _Prunus subg. Cerasus_ (körsbär)<br><br>Species (art): _Prunus cerasus_ ("surkörsbär") och _Prunus avium_ ("sötkörsbär")<br><br>Av körsbär finns många sorter, både naturligt framkorsade i det vilda och sådana som är skapade genom medveten växtförädling. Terminologin för olika typer av körsbär kan vara förvirrande, är inte enhetlig och har varierat genom tiderna. Se sidan om [sidan om terminologi](terminology.qmd) för mer om det.
+Genus (släkte): _Prunus_ (plommon, körsbär mfl)<br><br>Subgenus (undersläkte): _Prunus subg. Cerasus_ (körsbär)<br><br>Species (art): _Prunus cerasus_ ("surkörsbär") och _Prunus avium_ ("sötkörsbär")<br><br>Av körsbär finns många sorter, både naturligt framkorsade i det vilda och sådana som är skapade genom medveten växtförädling. Benämningen av olika typer av körsbär kan vara förvirrande, är inte enhetlig och har varierat genom tiderna. Se  [här](terminology.qmd) för mer om det.
 
 ![Prunus Cerasus](../../../dropbox/images/plants/prunus_cesarus.jpg){width=40%}
 
 :::
 
+Pollination av körsbärsträd är komplicerat, de behöver en partner som är kompatibel och blommar samtidigt. Bakgrunden till detta förklaras i avsnitten om [pollination](pollination_about.qmd) och [blomning](blooming.qmd).
  
 <!-- ## Grundstammar -->
 

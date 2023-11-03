@@ -86,3 +86,31 @@ test_concordance_prop <- function(item, filter = NULL){
     return(out)
 }
 
+
+## sanitize var names to maybe match genotype data
+sanitize_var <- function(tempvar){
+tempvar <- gsub("\n", "", tempvar) ## remove newline char
+tempvar <- gsub("\\.", "", tempvar) ## remove 
+tempvar <- gsub(" / ", "_", tempvar) ## replace / w _
+tempvar <- gsub(" - ", "", tempvar) ## replace / w _
+tempvar <- gsub("\\(.*", "", tempvar) ## remove parens
+## stringi foreign characters
+custom_rules <- "å > aa;
+                 ø > oe;
+                 ::Latin-ASCII;"
+tempvar <- stringi::stri_trans_general(tempvar, id = custom_rules, rules = TRUE)
+## TM
+tempvar <- gsub("TM$", "", tempvar)
+tempvar <- gsub("TM", "", tempvar)
+tempvar <- stringr::str_trim(tempvar) ## tolower
+tempvar <- tolower(tempvar) ## internal ws to underscore
+tempvar <- gsub(" ", "_", tempvar)
+
+## clean
+tempvar <- gsub("'", "", tempvar)
+tempvar <- gsub("\\(r\\)", "", tempvar)
+tempvar <- gsub("-", "_", tempvar)
+
+return(tempvar)
+
+}

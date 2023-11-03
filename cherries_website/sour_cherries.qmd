@@ -28,7 +28,7 @@ Surkörsbär (_Prunus cerasus_) har troligen uppkommit genom en korsning av söt
 
 <!-- Tysk sort som växer medelstarkt. Morelltyp. Självfertil. Medelstort bär. Mycket sur och kraftig smak. Mycket rikbärande. Angrips av bakterios. Bra till kommersiell odling. Zon 4 -->
 
-**Kelleris 16 (syn. Morellenfeuer)**: Morell. Självfertil. Mild, syrlig smak.
+**Kelleris 16 (syn. Morellenfeuer)**: Morell. Delvis självfertil. Mild, syrlig smak.
 
 <!-- Dansk sort .  Morelltyp. Trädet växer ganska starkt  och upprätt med spetsiga grenvinklar. Blommar efter lövsprickningen. Självfertil. Ganska litet bär med mild, syrlig smak. Angrips lätt av sjukdomar. -->
 
@@ -64,7 +64,7 @@ Surkörsbär (_Prunus cerasus_) har troligen uppkommit genom en korsning av söt
 
 <!-- Tysk sort från 1500talet. Syrliga bär. Själfertil. Zon 5. -->
 
-**Tshernokorka**: Morell. Mycket sur. Starkväxande. Rysk.
+**Tshernokorka**: Morell. Anges i vissa källor vara självfertil men enligt genetiska analyser är den inte det. Mycket sur. Starkväxande. Rysk.
 
 <!-- Rysk sort av morelltyp. Starkväxande med hängande skott. Medelstort, violett rött bär. Mycket sur. Mognar tidigt. Frisk och bördig sort. Lämplig som industriråvara. -->
 

@@ -56,7 +56,55 @@ names(lookupvarnames) <- lookuptable$nr
 ## replace names with numbers
 dta$pollinated_by_plantagen_num <-  replace_name(dta$temp, lookupvarnames)
 
-## Splendor
+## fix error in sveriges tradgardsmastare ---------------------
+
+tmp <- dta[, .(var, kompletterat_sveriges_tradgardsmastare, pollinated_by_sveriges_tradgardsmastare_num)]
+## write.csv(tmp, "pollinated_by_sv_tradgm.csv", row.names = FALSE)
+## dta[, .(var, pollinated_by_table)]
+lookup <- fread("pollinated_by_sv_tradgm_lookup.csv")
+lookup$var <- sanitize_var(lookup$pollinator)
+lookup <- data.table(lookup)
+names(tmp) <- c("var", "kompl", "pol")
+tmp$kompl <- NULL
+
+lookupname <- function(x, lookup_table){
+    ## lookup table needs var and kodnr
+    paste0(lookup_table$var[lookup_table$kodnr %in% strsplit(x, ", ")[[1]]], collapse = ", ")
+}
+## lookupname <- Vectorize(lookupname)
+pol_repl <- c()
+for(i in 1:nrow(tmp)){
+    dt <- data.table(
+            var = tmp[i, var],
+    polin = paste0(
+        lookup$var[lookup$kodnr %in% strsplit(tmp$pol[i], ", ")[[1]]], collapse = ", ")
+)
+    pol_repl <- rbind(pol_repl, dt)
+}
+
+names(tmp)
+
+
+
+tmp[, test := lookupname(pol, lookup)]
+
+    paste0(lookup$var[lookup$kodnr %in% strsplit(tmp[1, pol], ", ")[[1]]], collapse = ", ")
+
+## fix names
+
+tmp[, tempvar := var] ## create temp var
+
+
+## check
+## variety_genotype_group[tempvar == "cherry_grant", .(tempvar, variety)]
+## variety_genotype_group[, .(tempvar, variety)]
+## paste(variety_genotype_group$tempvar, collapse = ",  ")
+
+
+
+
+
+## Splendor -----------------------------
 tmp <- fread('cherries_splendor.csv')
 tmp$var %in% dta$var ## check
 dta <- tmp[dta, on = "var"] ## add var
