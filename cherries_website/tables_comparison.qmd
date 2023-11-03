@@ -1,0 +1,152 @@
+---
+title: "Jämförelse - Tabeller"
+---
+
+Nedan följer några tabeller där du kan jämföra vanligt förekommande körbärssorter. Notera att körsbärens egenskaper kan variera beroende på var de växer (_ståndort_). Klicka på rubrikerna för att sortera.
+
+## Tabell egenskaper
+
+Här visas information sammanställd från olika källor. De flesta egenskaper har i tabellen ordnats i tre grupper från låg (1) till hög (3). 
+
+::: {.column-screen}
+
+
+```{r} 
+#| label: tbl-attributes
+#| tbl-cap: Egenskaper
+#| warning: false
+
+## pacman::p_load(reactable)
+library(reactable)
+## https://glin.github.io/reactable/articles/examples.html
+## defaultPageSize = 40
+library("reactablefmtr")
+
+cherries_table_curated <- read.csv("../cherries_table_curated.csv")
+
+reactable(cherries_table_curated, ## sorting
+          filterable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              ## header = function(value) gsub(".|_", " ", value, fixed = TRUE),
+              ## cell = function(value) format(value, nsmall = 1),
+              align = "center",
+              minWidth = 30
+              ## headerStyle = list(background = "#f7f7f8")
+          ),
+          columns = list(
+              Sort = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  ## Add a right border style
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+``` 
+
+:::
+
+
+**Zon**: Odlingszon ([se plantagen](https://www.plantagen.se/vaxtzoner.html)). För flera av sorterna finns något varierande uppgifter, så att öka deras odlingszon med ett kan vara rimligt om de lokala förutsättningarna är goda. Tänk dock på att sorter med tidig blomning kan skadas av sista frosten.
+
+**Mognad** motsvarar den period bären är redo att skördas. Siffran 1 = tidig (början-mitten av juli), 2 = medel (slutet av juli-början av augusti), 3 = sen (augusti-september).
+
+<!-- Mognad mm "Mognadstiden för körsbär anges i veckor av körsbärstiden, från körsbärsvecka 1 till 8. När körsbärstiden infaller varierar mellan åren beroende på väder och vind. Ofta börjar de tidigaste körsbären mogna vid midsommartid i södra Sverige. Tidiga körsbär mognar körsbärsvecka 1–2, medelsena vecka 3–5, sena vecka 6–8." -->
+<!-- 1 korsbärsvecka = 15 dagar2? -->
+<!-- tidiga mognar körsbärsvecka 1–2, medelsena vecka 3–5, sena vecka 6–8 -->
+<!-- Midsommar = 20–26 juni -->
+
+**Storlek**: Bärets storlek.
+
+**Sötma** och **syrlighet**: Hur smaken beskrivs. Siffran 3 = hög sötma/syrlighet. Om smaken beskrivs som sötsyrlig har siffran 2 satts för båda.
+
+**Fasthet**: Siffran 1 = lös, 2 = medel, 3 = fast.
+
+**Kött**: Fruktköttets färg.
+
+**Färg**: Skalets färg. "Gulröd" kan vara gul med röda inslag eller gulorange.
+
+**God**: Värdet 3 är om smaken beskrivs som "mycket god", 2 om den beskrivs som "god".
+
+**Sylt**: Värde 1 anges om den kan användas för sylt/saft, 0 om bären bör ätas färska. I princip är det surkörsbären som är lämpliga för syltning. Vissa sötkörsbär uppges också kunna syltas (Allmän gulröd bigarrå, Büttners Rote, Fryksås, och Heidi).
+
+Bären beskrivs ibland som "saftiga", dock finns detta omdöme för i stort sett alla sorter, varför någon åtskillnad ej kunnat göras.
+ 
+
+
+<!-- Smaken när den uppges beskrivs oftast som god. Ibland mycket god. Svårt att särskilja. "Sötsyrlig" => 2 2. Söt => 3 + ? -->
+
+Nedan följer en tabell med egenskaper från ett amerikanskt forskningsprojekt (RosBreed).
+
+## Tabell egenskaper från RosBreed
+
+<!-- Refer to table \@ref(tab:mytbl-2) -->
+<!-- <caption>(#tab:mytbl-2) This is my table</caption> -->
+
+```{r}
+#| label: tbl-ros
+#| tbl-cap: "Tabell mätvärden"
+#| warning: false
+
+## # hidden dummy table
+## knitr::kable(x = NULL, 
+##              format = "html",
+##              caption = "<center>{first row <br>second row}</center>"
+##              )
+
+ros_phenology_aggr_curated <- read.csv("../ros_phenology_aggr_curated.csv")
+## knitr::kable(ros_phenology_aggr_curated)
+
+tbl_ros <- reactable(ros_phenology_aggr_curated, ## sorting
+          filterable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              header = function(value) gsub(".|_", " ", value, fixed = TRUE),
+              ## cell = function(value) format(value, nsmall = 1),
+              align = "center",
+              minWidth = 30
+              ## headerStyle = list(background = "#f7f7f8")
+          ),
+          columns = list(
+              Sort = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  ## Add a right border style
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+## DT::datatable(ros_phenology_aggr_curated) ## works ok
+
+tbl_ros
+
+```
+
+Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en gradering av den relativa sötman, syran etc mellan de sorter som är med. Siffran 1 är lägst och 5 är högst. **Kärnsläpp** är hur lätt kärnan släpper från köttet (1 = släpper mindre lätt, 5 = släpper mer lätt). **Mjöldagg** är förekomst av mjöldagg (på körsbär _Podosphaera clandestina var. clandestina_), där 1 är lägst förekomst och 5 är högst förekomst. **Rödbrunhet** motsvarar hur rödbrunt skalet är. Data från RosBreed. **Syra** är den uppmätta syrahalten (TA, titratable acid) och **Sötma** den uppmätta sockerhalten. Notera att huruvida _smaken_ uppfattas som söt och syrlig har också att göra med halten av malat (högre halt gör att smaken uppfattas som mer sur och mindre söt). Högre halt av malat gör också bären mer benägna att spricka. Malat ansamlas i samband med mognaden och används av bäret för sockerproduktion. Syrlighet och bitterhet kan uppfattas mindre om bären är söta.
+
+<!-- Rödbrunhet kopplat till köttets färg. Med enstaka undantag är rödbrunhet 1-3 vitt, rosa eller orange; 4-5 orange, rött, eller mörkrött kött. Alla mörkröda har 4-5. Orange 1-4, rosa 1-3, rött 1-5, vitt (få) 2. -->
+
+<!-- In sweet cherry, malate accumulates at the highest levels during stage III (coinciding with expansion and ripening) and is used for gluconeogenesis -->
+
+<!-- The crack-promoting component in sweet cherry juice was malic acid. -->
+
+<!-- The growth of whole cherries can usually be described as consisting of three stages (I–III) that are depicted as a double-sigmoidal curve. This arises from a slowing of the growth of the flesh and endocarp during stage II (Marshall, 1954). During each growth stage, distinct changes occur.  During stage I, there is a large increase in size of each part of the pericarp; and cell division in this is largely restricted to this period. In the seed, the integuments and nucellus reach their final size. During stage II, the endocarp hardens and the endosperm and embryo grow. During stage III, there is a large increase in fruit volume brought about by cell expansion in the flesh, and it ripens (Marshall, 1954). In the edible part softening, coloration, and the accumulation of glucose, fructose, and sorbitol occur during ripening (Marshall, 1954; Gao et al., 2003). n cherry flesh, malate/malic acid accounts for most of its organic acid content (Girard and Kopp, 1998). The abundance of malate was highest in the flesh and, on a whole fruit basis, most of it accumulated during stage III (Fig. 3). -->
+<!-- From: Phosphoenolpyruvate carboxykinase in cherry (Prunus avium L.) fruit during development    September 2011Journal of Experimental Botany 62(15):5357-65  DOI:10.1093/jxb/err189 -->
+
+
+<!-- Podosphaera clandestina var. clandestina (powdery mildew of cherry) -->
+<!-- incidence of foliar powdery mildew rated on a 0-5 scale where 0 means no infection and 5 is 100% infection -->
+
+
+<!-- Dashboard: https://quarto.org/docs/dashboards/data-presentation.html -->

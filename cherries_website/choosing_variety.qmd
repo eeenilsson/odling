@@ -6,8 +6,6 @@ execute:
 
 När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara genetiskt kompatibla med varandra och blomma samtidigt. Se sidan om [pollination](pollination_about.qmd) och [pollinationsschemat](pollination_table.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
 
-Det finns många sorter av körsbär. En sort benämns företrädesvis med artnamn och sortnamn, tex _Prunus avium_ 'Merton Glory'. Dock används i praktiken samma namn för sorter som är genetiskt olika och tvärtom kan sorter som är genetiskt lika benämnas olika. [Se denna artikel](https://pub.epsilon.slu.se/8732/7/nybom_et_al_120419.pdf).
-
 ## Varför plantera flera sorter?
 
 - Kan vara nödvändigt för att få frukt (se ovan).
@@ -40,7 +38,7 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Trädets utseende och storlek. Beror också på vilken _grundstam_ (se @sec-grundstam) som används.
 
-- Skördens riklighet och tidpunkt (olika _mognadstid_ ger längre skördesäsong).
+- Skördens riklighet och tidpunkt (olika **mognadstid** ger längre skördesäsong).
 
 - Färgen och glansen på skalet.
 
@@ -60,144 +58,207 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Att välja åtminstone en självfertil sort gör att du är garanterad att få viss skörd.
 
-# Tabeller
+# Surkörsbär
 
-## Tabell egenskaper
+Surkörsbär (_Prunus cerasus_) har troligen uppkommit genom en korsning av sötkörsbär (_Prunus Avium_) och dvärgkörsbär (_P Fructiosa_). De delas ibland in i _moreller/brunbär_ (mörkröd färg och färgad saft) respektive _amareller/klarbär_ (ljusare färg och ofärgad saft). De är ofta _självfertila_ och blommar i allmänhet senare än sötkörsbär. Surkörsbären är syrligare än sötkörsbären och passar vanligen bättre för syltning och matlagning.
 
-Här visas information sammanställd från olika källor. Notera att körsbärens egenskaper kan variera beroende på var de växer (_ståndort_). De flesta egenskaper har i tabellen ordnats i tre grupper från låg (1) till hög (3). Klicka på rubrikerna för att sortera.
+## Surkörsbär, skillnad mot sötkörsbär
 
-::: {.column-screen}
+- Mer syrliga än sötkörsbär.
 
+<!-- Morello cherry trees fruit on younger wood than sweet varieties, and thus can be pruned harder. -->
 
-```{r} 
-#| label: tbl-qualities-swe
-#| tbl-cap: "Egenskaper"
-#| warning: false
+- De flesta sorter av surkörsbär är självfertila (tex 'Skuggmorell'), dvs kräver inte pollen från en annan individ för att bära frukt. Vissa är delvis- (tex 'Kelleriis 16') eller helt (tex 'Tschernokorka') själv-inkompatibla.
 
-## pacman::p_load(reactable)
-library(reactable)
-## https://glin.github.io/reactable/articles/examples.html
-## defaultPageSize = 40
+- Kräver mer kväve och vatten. Bättre tolerans mot dålig dränering av jorden.
 
-cherries_table_curated <- read.csv("../cherries_table_curated.csv")
+- Mer motståndskraftiga mot skadeinsekter och sjukdomar.
 
-reactable(cherries_table_curated, ## sorting
-          filterable = TRUE,
-          bordered = TRUE,
-          highlight = TRUE,
-          striped = FALSE,
-          defaultColDef = colDef(
-              ## header = function(value) gsub(".|_", " ", value, fixed = TRUE),
-              ## cell = function(value) format(value, nsmall = 1),
-              align = "center",
-              minWidth = 30
-              ## headerStyle = list(background = "#f7f7f8")
-          ),
-          columns = list(
-              Sort = colDef(
-                  sticky = "left",
-                  align = "left",
-                  minWidth = 100,
-                  ## Add a right border style
-                  style = list(borderRight = "1px solid #eee"),
-                  headerStyle = list(borderRight = "1px solid #eee")
-              )
-          )
-          )
+- Blommar vanligen senare än sötkörsbär och är därför inte så lämpliga som pollinerare av dessa.
 
-``` 
+- Kan i allmänhet användas för syltning, saftning och matlagning.
 
-:::
+- Är allotetraploider med 2n = 4x = 32 kromosomer dvs har två uppsättningar diploida koromosomer från olika arter. _Prunus ceracus_ antas vara en hybrid som skapats genom "ickereducerade" (diploida) celler från _Prunus avium_ och normala celler från _P fructiosa_. En tetraploid sort kan ha upp till fyra alleler/varianter i samma locus. Sötkörsbär är diploida, 2n=2x=16<!-- och har 16 kromosomer som bildar 8 par.  -->.
 
 
-**Zon**: Odlingszon ([se plantagen](https://www.plantagen.se/vaxtzoner.html)). För flera av sorterna finns något varierande uppgifter, så att öka deras odlingszon med ett kan vara rimligt om de lokala förutsättningarna är goda. Tänk dock på att sorter med tidig blomning kan skadas av sista frosten.
+## Några surkörsbär
 
-**Mognad** motsvarar den period bären är redo att skördas. Siffran 1 = tidig (början-mitten av juli), 2 = medel (slutet av juli-början av augusti), 3 = sen (augusti-september).
+**Fanal**: Morell. Självfertil. Mycket sur och kraftig smak. Tysk.
 
-<!-- Mognad mm "Mognadstiden för körsbär anges i veckor av körsbärstiden, från körsbärsvecka 1 till 8. När körsbärstiden infaller varierar mellan åren beroende på väder och vind. Ofta börjar de tidigaste körsbären mogna vid midsommartid i södra Sverige. Tidiga körsbär mognar körsbärsvecka 1–2, medelsena vecka 3–5, sena vecka 6–8." -->
-<!-- 1 korsbärsvecka = 15 dagar2? -->
-<!-- tidiga mognar körsbärsvecka 1–2, medelsena vecka 3–5, sena vecka 6–8 -->
-<!-- Midsommar = 20–26 juni -->
+<!-- Tysk sort som växer medelstarkt. Morelltyp. Självfertil. Medelstort bär. Mycket sur och kraftig smak. Mycket rikbärande. Angrips av bakterios. Bra till kommersiell odling. Zon 4 -->
 
-**Sötma** och **syrlighet**: Hur smaken beskrivs. Siffran 3 = hög sötma/syrlighet. Om smaken beskrivs som sötsyrlig har siffran 2 satts för båda.
+**Kelleris 16 (syn. Morellenfeuer)**: Morell. Delvis självfertil. Mild, syrlig smak.
 
-**Fasthet**: Siffran 1 = lös, 2 = medel, 3 = fast.
+<!-- Dansk sort .  Morelltyp. Trädet växer ganska starkt  och upprätt med spetsiga grenvinklar. Blommar efter lövsprickningen. Självfertil. Ganska litet bär med mild, syrlig smak. Angrips lätt av sjukdomar. -->
 
-**Kött**: Fruktköttets färg.
+**Kirsa**: Amarell. Buske.
 
-**Färg**: Skalets färg. "Gulröd" kan vara gul med röda inslag eller gulorange.
+<!-- Buskkörsbär. 1,5 m. Amarelltyp. zon 5 -->
 
-**God**: Värdet 3 är om smaken beskrivs som "mycket god", 2 om den beskrivs som "god".
+**Lettisk Låg**: Morell. Självfertil. Söta bär. Buske.
 
-**Sylt**: Värde 1 anges om den kan användas för sylt/saft, 0 om bären bör ätas färska. I princip är det surkörsbären som är lämpliga för syltning. Vissa sötkörsbär uppges också kunna syltas (Allmän gulröd bigarrå, Büttners Rote, Fryksås, och Heidi).
+<!-- Buskkörsbär av morelltyp. Busken blir bara 2,5 m hög. Självfertil. Bären är söta. Kan klara sig ända upp i Zon7. -->
 
-Bären beskrivs ibland som "saftiga", dock finns detta omdöme för i stort sett alla sorter, varför någon åtskillnad ej kunnat göras.
+**Montmorency (syn. Königliche Amarelle)**: Amarell. Starkväxande. Fransk.
+
+<!-- Fransk sort. Trädet växer mycket starkt. Amarelltyp. Medelstor frukt. Frisk. Medelgod bördighet. Inte särskilt härdig. -->
+
+**Nordia**: Morell. Självfertil. Buske. Svensk.
+
+<!-- Svenskt buskkörsbär av morelltyp. självfertil. zon 5 -->
+
+**Ostheimer**: Morell. Självsteril. Buskformigt träd. Blommar tidigt. Tysk.
+
+<!-- Tysk 1700tals sort. Litet, buskformig träd. Självsteril. Blommar tidigt. Morelltyp. Knopparna känsliga för stark kyla i mars. Mycket bördig om det finns rätt pollinerare. Frisk men mottaglig för Monilia. -->
+
+**Pernilla**: Morell. Självfertil. Buske. Svensk.
+
+<!-- Svenskt buskkörsbär av morelltyp. 2m. Självfertil. zon 5. -->
+
+**Sikkola**: Amarell. Självfertil. Små bär.
+
+<!-- Amarelltyp. Små bär. Självfertil. Klarat -40C. -->
+
+**Skuggmorell**: Morell. Självfertil. Syrlig. Tysk.
+
+<!-- Tysk sort från 1500talet. Syrliga bär. Själfertil. Zon 5. -->
+
+**Tshernokorka**: Morell. Anges i vissa källor vara självfertil men enligt genetiska analyser är den inte det. Mycket sur. Starkväxande. Rysk.
+
+<!-- Rysk sort av morelltyp. Starkväxande med hängande skott. Medelstort, violett rött bär. Mycket sur. Mognar tidigt. Frisk och bördig sort. Lämplig som industriråvara. -->
+
+<!-- Beutelsbacher Rexell -->
+
+<!-- Chokladnaja -->
+
+<!-- Ryskt buskkörsbär av morelltyp. 2m. Mörkbruna bär. Självfertil. Zon 6. -->
+
+
+<!-- Huvimaja -->
+
+<!-- Amarelltyp. Självfertil. Zon 6. -->
+<!-- Inkeroisten Kirsikka -->
+
+<!-- Amarelltyp. Stor buske. Zon 5 -->
+
+<!-- Karneol -->
+
+
+<!-- Körös, Körösi Meggy,  Körösska Visen -->
+
+<!-- Ungersk sort. Trädet växer starkt och upprätt. Blomningen är mycket senare än lövsprickningen. Amarelltyp. Självsteril. Smaken är sur och ganska mild. Frisk sort. Bra till färskkonsumtion. -->
+
+<!-- Ludwigs Fruhe -->
+
+<!-- Minister von Podbielski -->
+
+<!-- Tysk sort från 1902. Trädet är mycket starkvuxet. Självsteril. Morelltyp. Stor, välsmakande frukt. Låg bördighet. Inte särskilt härdig. -->
+
+<!-- Rauhala -->
+
+<!-- Amarelltyp. Litet träd. Söta bär. Självfertil. Zon 6. -->
+
+<!-- Rubin,  Heimanns Rubin -->
+
+<!-- Tysk sort. Trädet växer svagt. Sen blomning. Självfertil. Morelltyp. Små, mycket syrliga bär. Angrips av bakterios och grå monilia. -->
+
+<!-- Safir -->
+<!-- Schwäbische Steinweichsel -->
+
+<!-- Ungarishe Traubige -->
+
  
+<!-- Källor -->
+
+<!-- Ingevald Fernqvist (redaktör): Körsbär, En pomologi över i Sverige prövade körsbärssorter. -->
+
+<!-- https://handbok.alternativ.nu/Odling/Frukt_och_b%C3%A4r/Surk%C3%B6rsb%C3%A4r.html -->
 
 
-<!-- Smaken när den uppges beskrivs oftast som god. Ibland mycket god. Svårt att särskilja. "Sötsyrlig" => 2 2. Söt => 3 + ? -->
+# Grundstammar {#sec-grundstam}
 
-Nedan följer en tabell med egenskaper från ett amerikanskt forskningsprojekt (RosBreed).
+Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okulering_). Typen av grundstam påverkar bland annat:
 
-## Tabell egenskaper från RosBreed
+- Trädets storlek
+- Härdighet
+- När trädet blommar
+- När trädet börjar bära frukt
+- Hur gammalt trädet kan bli
 
-```{r}
-#| label: tbl-qualities
-#| tbl-cap: "Egenskaper RosBreed"
-#| warning: false
+## Olika grundstammar för körsbär {#sec-grundstam}
 
-ros_phenology_aggr_curated <- read.csv("../ros_phenology_aggr_curated.csv")
-## knitr::kable(ros_phenology_aggr_curated)
+Ett icke-ympat körsbärsträd bli kring 6 m högt beroende på sort.
 
-## pacman::p_load(reactable)
-## https://glin.github.io/reactable/articles/examples.html
-## defaultPageSize = 40
+För en grundstm kan anges till vilken % av standardträdets höjd (det som ympas på rotstocken) det blir.
 
-reactable(ros_phenology_aggr_curated, ## sorting
-          filterable = TRUE,
-          bordered = TRUE,
-          highlight = TRUE,
-          striped = FALSE,
-          defaultColDef = colDef(
-              header = function(value) gsub(".|_", " ", value, fixed = TRUE),
-              ## cell = function(value) format(value, nsmall = 1),
-              align = "center",
-              minWidth = 30
-              ## headerStyle = list(background = "#f7f7f8")
-          ),
-          columns = list(
-              Sort = colDef(
-                  sticky = "left",
-                  align = "left",
-                  minWidth = 100,
-                  ## Add a right border style
-                  style = list(borderRight = "1px solid #eee"),
-                  headerStyle = list(borderRight = "1px solid #eee")
-              )
-          )
-          )
+<!-- It is important to remember though that a cherry tree on Colt rootstock, pruned once a year, can easily be restricted to 3m / 10ft high. -->
 
-```
+**Colt**
 
-Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en gradering av den relativa sötman, syran etc mellan de sorter som är med. Siffran 1 är lägst och 5 är högst. **Kärnsläpp** är hur lätt kärnan släpper från köttet (1 = släpper mindre lätt, 5 = släpper mer lätt). **Mjöldagg** är förekomst av mjöldagg (på körsbär _Podosphaera clandestina var. clandestina_), där 1 är lägst förekomst och 5 är högst förekomst. **Rödbrunhet** motsvarar hur rödbrunt skalet är. Data från RosBreed. **Syra** är den uppmätta syrahalten (TA, titratable acid) och **Sötma** den uppmätta sockerhalten. Notera att huruvida _smaken_ uppfattas som söt och syrlig har också att göra med halten av malat (högre halt gör att smaken uppfattas som mer sur och mindre söt). Högre halt av malat gör också bären mer benägna att spricka. Malat ansamlas i samband med mognaden och används av bäret för sockerproduktion. Syrlighet och bitterhet kan uppfattas mindre om bären är söta.
-
-<!-- Rödbrunhet kopplat till köttets färg. Med enstaka undantag är rödbrunhet 1-3 vitt, rosa eller orange; 4-5 orange, rött, eller mörkrött kött. Alla mörkröda har 4-5. Orange 1-4, rosa 1-3, rött 1-5, vitt (få) 2. -->
-
-<!-- In sweet cherry, malate accumulates at the highest levels during stage III (coinciding with expansion and ripening) and is used for gluconeogenesis -->
-
-<!-- The crack-promoting component in sweet cherry juice was malic acid. -->
-
-<!-- The growth of whole cherries can usually be described as consisting of three stages (I–III) that are depicted as a double-sigmoidal curve. This arises from a slowing of the growth of the flesh and endocarp during stage II (Marshall, 1954). During each growth stage, distinct changes occur.  During stage I, there is a large increase in size of each part of the pericarp; and cell division in this is largely restricted to this period. In the seed, the integuments and nucellus reach their final size. During stage II, the endocarp hardens and the endosperm and embryo grow. During stage III, there is a large increase in fruit volume brought about by cell expansion in the flesh, and it ripens (Marshall, 1954). In the edible part softening, coloration, and the accumulation of glucose, fructose, and sorbitol occur during ripening (Marshall, 1954; Gao et al., 2003). n cherry flesh, malate/malic acid accounts for most of its organic acid content (Girard and Kopp, 1998). The abundance of malate was highest in the flesh and, on a whole fruit basis, most of it accumulated during stage III (Fig. 3). -->
-<!-- From: Phosphoenolpyruvate carboxykinase in cherry (Prunus avium L.) fruit during development    September 2011Journal of Experimental Botany 62(15):5357-65  DOI:10.1093/jxb/err189 -->
+- En hybrid från _Prunus avium_ och _Prunus pseudocerasus_
+- Medelstarkväxande.
+- Sluthöjden 3.5-4.5 m efter 8 år (60-70% av standard). Kan hållas till 3 m med beskärning.
+- God bördighet.
+- Passar sämre för sorter med riklig produktion och leder då till små, defomerade bär. Man kan då avlägsa en del av blomknopparna för att minska problemet.
+<!-- - Colt is resistant to phytophthora root rot, bacterial canker, and stem-pitting, although is susceptive to crown gall.  -->
+- Colts vigör påverkas inte av virus, medan Gisela 5 har en något mindre vigör om det är virusdrabbat.
+- Ger frukt inom 1-2 år.
+- Klarar något sämre jord än Gisela 5.
+- Kräver stöd de första åren.
+- Grundstammen kan skadas vid hård vinter, men blommorna har mindre risk för frostskada.
+- Zon 1-3.
 
 
-<!-- Podosphaera clandestina var. clandestina (powdery mildew of cherry) -->
-<!-- incidence of foliar powdery mildew rated on a 0-5 scale where 0 means no infection and 5 is 100% infection -->
+<!-- Ger relativt stora träd, 70-80% av fröstam. -->
 
-<!-- ## Om mjöldagg: https://docplayer.se/209487210-Mjoldagg-gulnande-blad-och-for-tidigt-bladfall-visar-sig-betydligt-senare-blldratagheter-saknas.html -->
+**Gisela 5**
 
-<!-- Dashboard: https://quarto.org/docs/dashboards/data-presentation.html -->
+- En hybrid mellan _Prunus cerasus_ (surkörsbär) and _Prunus canascens_.
+- Ger mindre träd än colt.
+- Höjden blir ca 3 m efter 5 år. Sluthöjden varierar beroende på körsbärssort, 2.5-3  m (40-50% av standard). Kan hållas till 2 m med beskärning.
+- Behöver stödpåle hela livet.
+- Ger frukt efter 1-2 år.
+- God härdighet (ymplingen avmognar tidigt).
+- Ger tidigare blomning med några dagar, vilket kan öka risken för frosstkadade knoppar/blommor.
+- Tidigarelägger blomningen med några dagar och ökar därmed risken för froststkador.
+- Klarar hård vinterkyla bätre än Colt.
+- Lägre träd (ökar risken för frosstkada).
+- Zon 1-4(5).
 
+<!-- 35% av av Prunus avium, blir 3,5-4,5 m  -->
+
+**Prunus avium**
+
+- Starkväxande
+- Högre träd (kan vara svårplockad pga höjd), 20-30 m
+- Kronans diameter ca 10 m. Upprätt, något pyramidal form (beror på ymplingen sort?)
+- God förankring i jorden
+- Något senare fruktsättning
+- Zon 1-5
+- Används ej för sötkörsbär (som ju är av arten _Prunus avium_).
+
+**Prunus cerasus**
+
+- Ger mindre något mer svagväxande träd.
+- Både söt- och surkörsbär (_Prunus cerasus_)?
+
+**Prunum mahaleb**
+
+- Används ej för sötkörsbär (?)
+- Zon 1-3
+- För torra, sandiga jordar
+
+<!-- Prunus padus -->
+<!-- Prunus spinosa -->
+
+<!-- Prunus ’Colt’ = rätt stora träd, ca 70-80% storlek av Prunus avium, klarar zon I-III. -->
+
+<!-- Prunus ’Gisela 5’ = blir mindre träd, ca 35% storlek av Prunus avium, ungefär 3,5-4,5 m höga, klarar zon I-V (VI) -->
+
+<!-- Om du vill läsa mer om grundstammar för körsbär så rekommenderar jag varmt blogginlägget Grundstammar del 4 – körsbär och boken Skogsträdgården: odla ätbart överallt av Philipp Weiss & Annevi Sjöberg 2018:424-426 -->
+
+<!-- Skogsträdgårdsbloggen tabell:  -->
+<!-- https://skogsträdgården.stjärnsund.nu/grundstammar-del-4-korsbar/ -->
 
 # Beskrivning av sorter
 

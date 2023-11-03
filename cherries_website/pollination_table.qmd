@@ -18,16 +18,9 @@ Då det finns en osäkerhet i uppgifterna om blomningstid bör du även kontroll
 
 ## Hur schemat avläses
 
-Välj den sort du är intresserad av och leta upp namnet under "mottagare" (till vänster i schemat). Följ raden tills du kommer till grönfärgade cirklar. Cirkelns färg motsvarar närhet i blomningstid och cirkelns storlek motsvarar den genetiska kompatibiliteten med "pollinatören" vars namn avläses nedtill i schemat. En **grön** cirkel betyder att pollinatören blommar ungefär samtidigt (och är genetiskt kompatibel). En **röd** cirkel betyder att det föreligger genetisk kompatibilitet men att blomningstiden är olika. Saknas genetisk kompatibilitet finns ingen cirkel alls, bara en liten röd prick. En svart ring runt cirkeln betyder att sorten angetts som pollinatör på någon svensk hemsida.
+Välj den sort du är intresserad av och leta upp namnet under "mottagare" (till vänster i schemat). Följ raden tills du kommer till grönfärgade cirklar. Cirkelns färg motsvarar närhet i blomningstid och cirkelns storlek motsvarar den genetiska kompatibiliteten med "pollinatören" vars namn avläses nedtill i schemat. En **grön** cirkel betyder att pollinatören blommar ungefär samtidigt (och är genetiskt kompatibel). En **röd** cirkel betyder att det föreligger genetisk kompatibilitet men att blomningstiden är olika. Saknas genetisk kompatibilitet finns ingen cirkel alls, bara en liten röd prick. En svart ring runt cirkeln betyder att sorten angetts som pollinatör på någon svensk hemsida (Sveriges trädgårdsmästare, Plantagen, Wexthuset, Rangedala, eller Splendor).
 
-Tex anges Fryksås och Gårdebo vara självförtila enligt Sveriges trädgårdsmästare, men detta stämmer ej med genetiska data.
-
-cherries_splendor.csv
-  -rw-r--r-- 1 e  957 Oct 25 04:50 cherries_rangedala.csv
-  -rw-r--r-- 1 e 2.8K Oct 25 04:50 cherries_wexthuset.csv
-  -rw-r--r-- 1 e  939 Oct 25 04:45 
-  pollinated_by_sveriges_tradgardsmastare_num	pollinated_by_table	pollinated_by_plantagen
-
+Det finns skillnader mellan källor i vilka pollinatörer som anges för en viss sort och en del felaktigheter tycks finnas. Tex anges 'Fryksås' och 'Gårdebo' vara självfertila enligt Sveriges trädgårdsmästare, och Plantagen anger att 'Regina' kan pollineras av 'Van', men detta stämmer ej med genetiska data. Vissa sorter som inte tycks blomma samtidigt enlig sammanvägning av data anges kunna pollinera varandra.
 
 **Cirkelns färg:**
 

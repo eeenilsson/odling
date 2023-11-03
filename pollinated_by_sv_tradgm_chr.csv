@@ -1,44 +1,44 @@
-"var","pollinated_by_sveriges_tradgardsmastare"
-"allman_gulrod","guigne_dannonay, erianne, frogmore_early, hedelfinger, merton_glory, stora_klarbar"
-"almore","merton_glory, merton_premier, grosse_schwarze_knorpel"
-"guigne_dannonay","allman_gulrod, hedelfinger, sam"
-"berit","berit"
-"buttners_spate_rote_knorpelkirsche","allman_gulrod, frogmore_early, hedelfinger, knauffs_schwarze, merton_glory, merton_premier, grosse_schwarze_knorpel, van"
-"erianne","allman_gulrod, guigne_dannonay, frogmore_early, merton_glory, merton_premier, grosse_schwarze_knorpel, stora_klarbar, triaux"
-"fanal","frogmore_early"
-"frogmore_early","allman_gulrod, erianne, merton_premier, ostheimer, grosse_schwarze_knorpel, stora_klarbar, triaux"
-"fryksaas","sjalvfertil"
-"gaardebo","sjalvfertil"
-"hedelfinger","allman_gulrod, guigne_dannonay, buttners_spate_rote_knorpelkirsche, erianne, frogmore_early, merton_glory, merton_premier, van"
-"heidi","merton_glory, merton_premier, grosse_schwarze_knorpel"
-"kelleris","merton_premier"
-"kirsa","ostheimer"
-"knauffs_schwarze","allman_gulrod, guigne_dannonay, buttners_spate_rote_knorpelkirsche, merton_glory, van"
-"lapins","lapins, skuggmorell, grosse_schwarze_knorpel"
-"merton_glory","allman_gulrod, guigne_dannonay, hedelfinger"
-"merton_premier","buttners_spate_rote_knorpelkirsche, hedelfinger, merton_glory, van"
-"napoleon",""
-"nordia","triaux"
-"ostheimer","erianne, frogmore_early"
-"sam","allman_gulrod, almore, heidi, knauffs_schwarze, merton_glory, grosse_schwarze_knorpel, van"
-"skuggmorell",""
-"stella",""
-"grosse_schwarze_knorpel","erianne, merton_glory"
-"stora_klarbar","frogmore_early, ostheimer, skuggmorell, stora_klarbar"
-"sunburst",""
-"triaux",""
-"tschernokorka",""
-"van","allman_gulrod, buttners_spate_rote_knorpelkirsche, erianne, merton_glory, merton_premier"
-"donissens_gelbe_knorpel","buttners_spate_rote_knorpelkirsche, erianne, hedelfinger, lapins"
-"kordia",""
-"regina",""
-"victor",""
-"allm_klarbar","sjalvfertil"
-"lettisk_lag",""
-"schneiders_spate_knorpelkirsche",""
-"rainier",""
-"burlat",""
-"linda",""
-"margit",""
-"sweetheart",""
-"merton_late",""
+"var","pollinated_by_sveriges_tradgardsmastare","kompletterat_sveriges_tradgardsmastare"
+"allman_gulrod","guigne_dannonay, erianne, frogmore_early, hedelfinger, merton_glory, stora_klarbar",
+"almore","merton_glory, merton_premier, grosse_schwarze_knorpel",
+"guigne_dannonay","allman_gulrod, hedelfinger, sam",
+"berit","berit",
+"buttners_spate_rote_knorpelkirsche","allman_gulrod, frogmore_early, hedelfinger, knauffs_schwarze, merton_glory, merton_premier, grosse_schwarze_knorpel, van",
+"erianne","allman_gulrod, guigne_dannonay, frogmore_early, merton_glory, merton_premier, grosse_schwarze_knorpel, stora_klarbar, triaux",
+"fanal","frogmore_early",
+"frogmore_early","allman_gulrod, erianne, merton_premier, ostheimer, grosse_schwarze_knorpel, stora_klarbar, triaux",
+"fryksaas","sjalvfertil",
+"gaardebo","sjalvfertil",
+"hedelfinger","allman_gulrod, guigne_dannonay, buttners_spate_rote_knorpelkirsche, erianne, frogmore_early, merton_glory, merton_premier, van",
+"heidi","merton_glory, merton_premier, grosse_schwarze_knorpel","12, 17, 18, 22"
+"kelleris","merton_premier",
+"kirsa","ostheimer",
+"knauffs_schwarze","allman_gulrod, guigne_dannonay, buttners_spate_rote_knorpelkirsche, merton_glory, van",
+"lapins","lapins, skuggmorell, grosse_schwarze_knorpel","1"
+"merton_glory","allman_gulrod, guigne_dannonay, hedelfinger",
+"merton_premier","buttners_spate_rote_knorpelkirsche, hedelfinger, merton_glory, van",
+"napoleon",,
+"nordia","triaux",
+"ostheimer","erianne, frogmore_early",
+"sam","allman_gulrod, almore, heidi, knauffs_schwarze, merton_glory, grosse_schwarze_knorpel, van",
+"skuggmorell",,
+"stella",,
+"grosse_schwarze_knorpel","erianne, merton_glory",
+"stora_klarbar","frogmore_early, ostheimer, skuggmorell, stora_klarbar",
+"sunburst",,
+"triaux",,
+"tschernokorka",,
+"van","allman_gulrod, buttners_spate_rote_knorpelkirsche, erianne, merton_glory, merton_premier",
+"donissens_gelbe_knorpel","buttners_spate_rote_knorpelkirsche, erianne, hedelfinger, lapins","1"
+"kordia",,"1"
+"regina",,
+"victor",,
+"allm_klarbar","sjalvfertil","1"
+"lettisk_lag",,"1"
+"schneiders_spate_knorpelkirsche",,
+"rainier",,
+"burlat",,
+"linda",,
+"margit",,
+"sweetheart",,
+"merton_late",,

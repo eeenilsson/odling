@@ -104,19 +104,22 @@ plot_pollination_table <- plot_pollination_table +
                space = "free_x") +
     theme(
         panel.spacing = unit(0, "lines"),
-            panel.background = element_rect(fill = "gray94",
+            panel.background = element_rect(fill = "gray83",
                                 colour = "gray",
-                                linewidth = 1, linetype = "solid"),
+                                linewidth = 0.8, linetype = "solid"),
          strip.background = element_rect(colour="black", fill = NA),
          panel.border = element_rect(colour="black", fill = NA),
          strip.placement = "outside",
+        panel.grid.major = element_line(linewidth = 1, linetype = 'solid',
+                                colour = "white"),
         plot.title = element_text(hjust = 0.5)
          )
 
 plot_pollination_table
 
-cols <- names(dta)[grepl("pollinat.*", names(dta))]
-dta[var == "van", ..cols]
+## ## check:
+## cols <- names(dta)[grepl("pollinat.*", names(dta))]
+## dta[var == "regina", ..cols]
 
 ## ## superscript incompat gr KEEP #############################
 ## mylabs <- levels(dtplot$target)
@@ -283,7 +286,6 @@ write.csv(ros_phenology_aggr_curated, "ros_phenology_aggr_curated.csv", row.name
 
 ## dt[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
 
-
 ## collected data
 cherries_table <- read.csv("cherries_table.csv")
 cols <- c("label", "type", "zone", "size", "maturity_rank", "sweet", "sour", "firm", "pulp_color", "skin_color", "good_taste", "sylt", "eplanta"
@@ -293,6 +295,22 @@ str(cherries_table)
 
 ## factor levels
 cherries_table$type <- factor(cherries_table$type, ordered = FALSE, levels = c("sour", "sweet"), labels = c("Sur", "Söt"))  ## Todo: Tag med buskkörsbär här
+
+cherries_table$sylt <- factor(cherries_table$sylt, ordered = TRUE, levels = c(0:2), labels = c("Nej", "Kanske", "Ja"))
+
+cherries_table$eplanta <- factor(cherries_table$eplanta, ordered = TRUE, levels = c(0:1), labels = c("Nej", "Ja"))
+
+cherries_table$size <- factor(cherries_table$size, ordered = TRUE, levels = c(1:3), labels = c("Liten", "Medel", "Stor"))
+
+cherries_table$maturity_rank <- factor(cherries_table$maturity_rank, ordered = TRUE, levels = c(1:3), labels = c("Tidig", "Mitten", "Sen"))
+
+cherries_table$sweet <- factor(cherries_table$sweet, ordered = TRUE, levels = c(1:3), labels = c("Låg", "Medel", "Hög"))
+
+cherries_table$sour <- factor(cherries_table$sour, ordered = TRUE, levels = c(1:3), labels = c("Låg", "Medel", "Hög"))
+
+cherries_table$firm <- factor(cherries_table$firm, ordered = TRUE, levels = c(1:3), labels = c("Mjuk", "Medel", "Fast"))
+
+cherries_table$good_taste <- factor(cherries_table$good_taste, ordered = TRUE, levels = c(1:3), labels = c("Nej", "Ja", "Ja!"))
 
 cherries_table$pulp_color <- factor(
     cherries_table$pulp_color,
@@ -309,7 +327,7 @@ cherries_table$skin_color <- factor(
 )
 
 ## column labels
-tmp <- c('label' = "Sort", 'type' = "Typ", 'eplanta' = "Eplanta", 'zone' = "Zon", 'size' = "Storlek", 'maturity_rank' = "Mognad", 'sweet' = "Söt", 'sour' = "Syrlig", 'firm' = "Fasthet", 'pulp_color' = "Kött", 'skin_color' = "Färg", 'good_taste' = "God", 'sylt' = "Sylt")
+tmp <- c('label' = "Sort", 'type' = "Typ", 'eplanta' = "Eplanta", 'zone' = "Zon", 'size' = "Storlek", 'maturity_rank' = "Mognad", 'sweet' = "Sötma", 'sour' = "Syra", 'firm' = "Fasthet", 'pulp_color' = "Kött", 'skin_color' = "Färg", 'good_taste' = "God", 'sylt' = "Sylt")
 names(cherries_table) <- query_label(names(cherries_table), tmp)
 
 write.csv(cherries_table, "cherries_table_curated.csv", row.names = FALSE)

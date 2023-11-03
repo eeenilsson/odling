@@ -64,40 +64,39 @@ dta$pollinated_by_plantagen <- pollinated_by_plantagen$temp
 dta$pollinated_by_plantagen_num <-  replace_name(pollinated_by_plantagen$temp, lookupvarnames)
 
 
-## fix error in sveriges tradgardsmastare ---------------------
+## ## fix error in sveriges tradgardsmastare ---------------------
+## tmp <- dta[, .(var, kompletterat_sveriges_tradgardsmastare, pollinated_by_sveriges_tradgardsmastare_num)]
+## ## write.csv(tmp, "pollinated_by_sv_tradgm.csv", row.names = FALSE)
+## ## dta[, .(var, pollinated_by_table)]
+## lookup <- fread("pollinated_by_sv_tradgm_lookup.csv")
+## lookup$var <- sanitize_var(lookup$pollinator)
+## lookup <- data.table(lookup)
+## names(tmp) <- c("var", "kompl", "pol")
+## tmp$kompl <- NULL
 
-tmp <- dta[, .(var, kompletterat_sveriges_tradgardsmastare, pollinated_by_sveriges_tradgardsmastare_num)]
-## write.csv(tmp, "pollinated_by_sv_tradgm.csv", row.names = FALSE)
-## dta[, .(var, pollinated_by_table)]
-lookup <- fread("pollinated_by_sv_tradgm_lookup.csv")
-lookup$var <- sanitize_var(lookup$pollinator)
-lookup <- data.table(lookup)
-names(tmp) <- c("var", "kompl", "pol")
-tmp$kompl <- NULL
+## lookupname <- function(x, lookup_table){
+##     ## lookup table needs var and kodnr
+##     paste0(lookup_table$var[lookup_table$kodnr %in% strsplit(x, ", ")[[1]]], collapse = ", ")
+## }
+## ## lookupname <- Vectorize(lookupname)
 
-lookupname <- function(x, lookup_table){
-    ## lookup table needs var and kodnr
-    paste0(lookup_table$var[lookup_table$kodnr %in% strsplit(x, ", ")[[1]]], collapse = ", ")
-}
-## lookupname <- Vectorize(lookupname)
+## pol_repl <- c()
+## for(i in 1:nrow(tmp)){
+##     dt <- data.table(
+##             var = tmp[i, var],
+##     polin = paste0(
+##         lookup$var[lookup$kodnr %in% strsplit(tmp$pol[i], ", ")[[1]]], collapse = ", ")
+## )
+##     pol_repl <- rbind(pol_repl, dt)
+## }
 
-pol_repl <- c()
-for(i in 1:nrow(tmp)){
-    dt <- data.table(
-            var = tmp[i, var],
-    polin = paste0(
-        lookup$var[lookup$kodnr %in% strsplit(tmp$pol[i], ", ")[[1]]], collapse = ", ")
-)
-    pol_repl <- rbind(pol_repl, dt)
-}
+## pol_repl$pollinated_by_sveriges_tradgardsmastare <- pol_repl$polin
+## pol_repl <- pol_repl[, .(var, pollinated_by_sveriges_tradgardsmastare)]
+## ## write.csv(pol_repl, "pollinated_by_sv_tradgm_chr.csv", row.names = FALSE)
 
-pol_repl$pollinated_by_sveriges_tradgardsmastare <- pol_repl$polin
-pol_repl <- pol_repl[, .(var, pollinated_by_sveriges_tradgardsmastare)]
-## write.csv(pol_repl, "pollinated_by_sv_tradgm_chr.csv", row.names = FALSE)
-
-
+pol_repl <- fread("pollinated_by_sv_tradgm_chr.csv")
 dta <- pol_repl[dta, on = "var"] ## add var
-dta[, .(var, pollinated_by_sveriges_tradgardsmastare)]
+## dta[, .(var, pollinated_by_sveriges_tradgardsmastare)]
 
 dta$pollinated_by_sveriges_tradgardsmastare_num <-
     replace_name(dta$pollinated_by_sveriges_tradgardsmastare, lookupvarnames)
