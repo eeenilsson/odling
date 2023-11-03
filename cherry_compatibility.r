@@ -129,7 +129,7 @@ dupl_var <- variety_genotype_group[duplicated(var), var]
 ## variety_genotype_group[grepl(paste0(dupl_var, collapse = "$|^"), var), .(var, genotype, variety, incompatibility_group)]
 ## Note: some have two or more duplicated rows (n = 90 varieties), these all have different genotypes in different studies, ie uncertain
 
-## Add sour cherries with known genotype
+## Add sour cherries with known genotype ---------
 ## Skuggmorell anges till haplotyp S6 S13ʹ S26 S36a.
 ## Syn : Schattenmorelle (Prunus cerasus subsp. acida), auch Große Lange Lotkirsche, Nordkirsche, ‘Łutówka’, Griotte de Nord, Chatel Morel, Morello.
 
@@ -142,6 +142,20 @@ tmp <- data.table(
     father = NA,
     reference = NA,
     var = "skuggmorell"
+)
+
+variety_genotype_group <- rbind(variety_genotype_group,
+      tmp)
+
+tmp <- data.table(
+    variety = "Tschernokorka",
+    genotype = "S9S13S35S36b2",
+    incompatibility_group = "SI",
+    origin_country = "RU",
+    mother = NA,
+    father = NA,
+    reference = NA,
+    var = "tschernokorka"
 )
 
 variety_genotype_group <- rbind(variety_genotype_group,
@@ -229,8 +243,8 @@ variety_genotype_group[, label := gsub(" $", "", label)]
 ## select vars --------------------------------------------
 ## use all var that have blooming group data, see phenology.r
 ## swed <- fread("cherries_table.csv")
-selectvars <- dta[type == "sweet", unique(var)] ## n = 23
-selectvars <- c(selectvars, "skuggmorell")
+selectvars <- dta[type == "sweet" & available == 1, unique(var)] ## n = 23
+selectvars <- c(selectvars, "skuggmorell", "tschernokorka")
 ## add pollinators (this will include sour cherries):
 ## tmp <- dta[type == "sweet", paste(pollinated_by_concordance_chr, collapse = ", ")]
 ## tmp <- gsub("NA \\([^,]*,", "", tmp)

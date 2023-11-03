@@ -233,7 +233,7 @@ write.csv(ros_phenology_aggr_curated, "ros_phenology_aggr_curated.csv", row.name
 
 ## collected data
 cherries_table <- read.csv("cherries_table.csv")
-cols <- c("label", "type", "eplanta", "zone", "size", "maturity_rank", "sweet", "sour", "firm", "pulp_color", "skin_color", "good_taste"
+cols <- c("label", "type", "zone", "size", "maturity_rank", "sweet", "sour", "firm", "pulp_color", "skin_color", "good_taste", "sylt", "eplanta"
 )
 cherries_table <- cherries_table[, names(cherries_table) %in% cols]
 str(cherries_table)
@@ -256,7 +256,7 @@ cherries_table$skin_color <- factor(
 )
 
 ## column labels
-tmp <- c('label' = "Sort", 'type' = "Typ", 'eplanta' = "Eplanta", 'zone' = "Zon", 'size' = "Storlek", 'maturity_rank' = "Mognad", 'sweet' = "Söt", 'sour' = "Syrlig", 'firm' = "Fasthet", 'pulp_color' = "Kött", 'skin_color' = "Färg", 'good_taste' = "God")
+tmp <- c('label' = "Sort", 'type' = "Typ", 'eplanta' = "Eplanta", 'zone' = "Zon", 'size' = "Storlek", 'maturity_rank' = "Mognad", 'sweet' = "Söt", 'sour' = "Syrlig", 'firm' = "Fasthet", 'pulp_color' = "Kött", 'skin_color' = "Färg", 'good_taste' = "God", 'sylt' = "Sylt")
 names(cherries_table) <- query_label(names(cherries_table), tmp)
 
 write.csv(cherries_table, "cherries_table_curated.csv", row.names = FALSE)

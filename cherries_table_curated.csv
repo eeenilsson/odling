@@ -1,42 +1,44 @@
-"Sort","Typ","Zon","Storlek","Mognad","Söt","Syrlig","Fasthet","Kött","Färg","God","E-planta"
-"Allmän gulröd bigarrå","Söt",3,NA,3,2,3,2,3,"Gult","Gulrött",3
-"Almore","Söt",3,NA,NA,1,3,NA,1,"Röd mörk","Rött mörkt",2
-"Annonay","Söt",3,NA,NA,1,3,1,1,"Röd","Rött",3
-"Berit","Sur",4,NA,NA,3,2,2,NA,"Röd","Rött",NA
-"Büttners Rote","Söt",3,1,NA,2,3,1,3,"Gulvitt","Gulrött",NA
-"Erianne","Söt",4,NA,3,2,3,2,1,"","Rött",2
-"Fanal","Sur",4,1,NA,3,NA,3,NA,"Röd mörk","Rött mörkt",2
-"Frogmore","Söt",3,NA,2,2,3,NA,1,"Gulvitt","Gulrött",2
-"Fryksås","Söt",4,NA,1,2,2,2,1,"","Gulrött",3
-"Gårdebo","Söt",4,1,NA,2,3,NA,1,"Röd","Rött",NA
-"Hedelfinger","Söt",3,NA,NA,3,3,NA,3,"Röd","Rött mörkt",NA
-"Heidi","Söt",4,NA,2,2,3,NA,3,"Gulvitt","Gulrött",3
-"Kelleris 16","Sur",4,NA,2,2,2,1,1,"Röd","Rött mörkt",NA
-"Kirsa","Sur",6,NA,1,3,NA,3,2,"Röd ljus","Rött",NA
-"Knauffs Kirsche","Söt",2,NA,2,NA,NA,NA,2,"Röd","Rött mörkt",2
-"Lapins","Söt",3,1,NA,3,3,NA,3,"Orange","Rött mörkt",2
-"Merton Glory","Söt",3,1,3,2,3,2,1,"Gulvitt","Gulrött",NA
-"Merton Premier","Söt",3,NA,NA,2,3,3,2,"Röd mörk","Rött",NA
-"Napoleon","Söt",1,NA,3,2,2,2,3,"","Gulrött",2
-"Nordia","Sur",6,1,2,3,1,3,3,"Gulvitt","Rött",2
-"Ostheimer","Sur",5,NA,2,2,NA,2,NA,"Röd mörk","Rött mörkt",NA
-"Sam","Söt",3,NA,NA,3,3,2,2,"Röd mörk","Rött mörkt",3
-"Skuggmorell","Sur",5,1,2,3,NA,3,1,"Röd mörk","Rött mörkt",2
-"Stella","Söt",4,1,NA,2,2,2,2,"Röd","Rött",NA
-"Stor svart bigarrå","Söt",3,NA,NA,2,3,2,3,"Röd mörk","Rött mörkt",NA
-"Stora klarbär","Sur",5,NA,NA,2,2,2,NA,"Röd","Gulrött",2
-"Sunburst","Söt",4,NA,NA,3,3,2,3,"Röd","Gulrött",2
-"Triaux","Sur",4,NA,3,NA,NA,3,1,"Gulvitt","Rött",NA
-"Tschernokorka","Sur",3,NA,NA,NA,NA,NA,1,"Röd mörk","Rött mörkt",NA
-"Van","Söt",4,1,3,2,3,2,3,"Röd mörk","Rött mörkt",3
-"Dönissen","Söt",1,NA,NA,3,3,NA,3,"Gulvitt","Gult",NA
-"Kordia","Söt",1,NA,NA,2,2,2,3,"Orange","Rött mörkt",2
-"Regina","Söt",3,1,NA,3,3,NA,3,"Röd mörk","Rött mörkt",3
-"Victor","Söt",1,NA,2,2,2,2,3,"Gult","Gulrött",2
-"Allmänt klarbär","Sur",6,NA,NA,NA,2,2,NA,"Röd","Rött",NA
-"Lettisk låg","Sur",6,NA,NA,3,2,2,NA,"","Rött mörkt",NA
-"Schneiders Späte Knorpel","Söt",3,NA,NA,3,3,NA,3,"Röd","Rött mörkt",NA
-"Rainier","Söt",3,NA,NA,2,3,NA,2,"Gulvitt","Gulrött",3
-"Burlat","Söt",3,NA,3,1,3,NA,3,"Röd ljus","Rött mörkt",2
-"Linda","Söt",3,NA,NA,2,NA,NA,3,"","Rött",3
-"Margit","Söt",4,NA,NA,1,3,NA,3,"","Rött",3
+"Sort","Typ","Zon","Eplanta","Sylt","Storlek","Mognad","Söt","Syrlig","Fasthet","Kött","Färg","God"
+"Allmän gulröd bigarrå","Söt",3,NA,"1",3,2,3,2,3,"Gult","Gulrött",3
+"Almore","Söt",3,NA,"",NA,1,3,NA,1,"Röd mörk","Rött mörkt",2
+"Annonay","Söt",3,NA,"",NA,1,3,1,1,"Röd","Rött",3
+"Berit","Sur",4,NA,"1",NA,3,2,2,NA,"Röd","Rött",NA
+"Büttners Rote","Söt",3,1,"",NA,2,3,1,3,"Gulvitt","Gulrött",NA
+"Erianne","Söt",4,NA,"1?",3,2,3,2,1,"","Rött",2
+"Fanal","Sur",4,1,"1",2,3,1,3,NA,"Röd mörk","Rött mörkt",2
+"Frogmore","Söt",3,NA,"",2,2,3,NA,1,"Gulvitt","Gulrött",2
+"Fryksås","Söt",4,NA,"1",1,2,2,2,1,"","Gulrött",3
+"Gårdebo","Söt",4,1,"",NA,2,3,NA,1,"Röd","Rött",NA
+"Hedelfinger","Söt",3,NA,"",NA,3,3,NA,3,"Röd","Rött mörkt",NA
+"Heidi","Söt",4,NA,"1",2,2,3,NA,3,"Gulvitt","Gulrött",3
+"Kelleris 16","Sur",4,NA,"1",2,2,1,1,1,"Röd","Rött mörkt",NA
+"Kirsa","Sur",6,NA,"",1,3,NA,3,2,"Röd ljus","Rött",NA
+"Knauffs Kirsche","Söt",2,NA,"",2,2,3,2,2,"Röd mörk","Rött mörkt",2
+"Lapins","Söt",3,1,"1?",NA,3,3,1,3,"Orange","Rött mörkt",2
+"Merton Glory","Söt",3,1,"0",3,2,3,2,1,"Gulvitt","Gulrött",NA
+"Merton Premier","Söt",3,NA,"",NA,2,3,3,2,"Röd mörk","Rött",NA
+"Napoleon","Söt",1,NA,"",3,2,2,2,3,"Gult","Gulrött",2
+"Nordia","Sur",6,1,"",2,3,1,3,3,"Gulvitt","Rött",2
+"Ostheimer","Sur",5,NA,"",2,2,2,2,1,"Röd mörk","Rött mörkt",NA
+"Sam","Söt",3,NA,"1?",NA,3,3,2,2,"Röd mörk","Rött mörkt",3
+"Skuggmorell","Sur",5,1,"1",2,3,1,3,1,"Röd mörk","Rött mörkt",2
+"Stella","Söt",4,1,"1?",NA,2,2,2,2,"Röd","Rött",NA
+"Stor svart bigarrå","Söt",3,NA,"",NA,2,3,2,3,"Röd mörk","Rött mörkt",NA
+"Stora klarbär","Sur",5,NA,"1",NA,2,2,2,NA,"Röd","Gulrött",2
+"Sunburst","Söt",4,NA,"0",NA,3,3,2,3,"Röd","Gulrött",2
+"Triaux","Sur",4,NA,"1",3,NA,NA,3,1,"Gulvitt","Rött",NA
+"Tschernokorka","Sur",3,NA,"1",2,2,NA,3,1,"Röd mörk","Rött mörkt",1
+"Van","Söt",4,1,"",2,2,3,2,3,"Röd mörk","Rött mörkt",3
+"Dönissen","Söt",1,NA,"",NA,3,3,NA,3,"Gulvitt","Gult",NA
+"Kordia","Söt",1,NA,"",NA,2,2,2,3,"Orange","Rött mörkt",2
+"Regina","Söt",3,1,"1?",NA,3,3,NA,3,"Röd mörk","Rött mörkt",3
+"Victor","Söt",1,NA,"1?",2,2,2,2,3,"Gult","Gulrött",2
+"Allmänt klarbär","Sur",6,NA,"",NA,NA,2,2,NA,"Röd","Rött",2
+"Lettisk låg","Sur",6,NA,"",NA,3,2,2,NA,"","Rött mörkt",NA
+"Schneiders Späte Knorpel","Söt",3,NA,"",NA,3,3,NA,3,"Röd","Rött mörkt",NA
+"Rainier","Söt",3,NA,"",NA,2,3,1,2,"Gulvitt","Gulrött",3
+"Burlat","Söt",3,NA,"",3,1,3,NA,3,"Röd ljus","Rött mörkt",2
+"Linda","Söt",3,NA,"",NA,2,NA,NA,3,"","Rött",3
+"Margit","Söt",4,NA,"",NA,1,3,NA,3,"","Rött",3
+"Sweetheart","Söt",3,NA,"1",2,3,3,2,3,"Röd","Rött mörkt",2
+"Merton Late","Söt",3,NA,"0",2,3,3,NA,3,"Gulvitt","Gulrött",NA

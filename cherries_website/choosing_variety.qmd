@@ -1,5 +1,5 @@
 ---
-title: "Val av sort"
+title: "Sorter"
 execute:
   echo: false
 ---
@@ -18,7 +18,7 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Olika sorter kan trivas olika bra i just din trädgård, så det kan vara bra att prova olika.
 
-## Några egenskaper av betydelse
+## Några egenskaper att ta hänsyn till
 
 - Härdighet: Vilket klimat de kan odlas i. Anges ofta i zoner numrerade 1-8 där 1 är mildast och 8 kärvast. Kolla [zonkartan](https://www.plantagen.se/vaxtzoner.html) för att se vilken zon du bor i. Lokalt klimat kan påverkas av närhet till stora vatten (klimatet blir ofta mildare), läge osv.
 
@@ -48,7 +48,9 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Fruktköttets konsistens, saftighet och färg.
 
-- Lämplighet för syltning, saftning, konservering, matlagning.
+- Lämplighet för syltning, saftning, konservering, matlagning. I allmänhet är _surkörsbär_ lämpade för syltning och konservering.
+
+- Grundstam: Vilken grundstam sorten är ympad på.
 
 - Tillgänglighet i handeln.
 
@@ -58,23 +60,7 @@ Det finns många sorter av körsbär. En sort benämns företrädesvis med artna
 
 - Att välja åtminstone en självfertil sort gör att du är garanterad att få viss skörd.
 
-## Surkörsbär, skillnad mot sötkörsbär
-
-- Mer syrliga än sötkörsbär.
-
-<!-- Morello cherry trees fruit on younger wood than sweet varieties, and thus can be pruned harder. -->
-
-- De flesta sorter av surkörsbär är självfertila (tex 'Skuggmorell'), dvs kräver inte pollen från en annan individ för att bära frukt. Vissa är delvis- (tex 'Kelleriis 16') eller helt (tex 'Tschernokorka') själv-inkompatibla.
-
-- Kräver mer kväve och vatten. Bättre tolerans mot dålig dränering av jorden.
-
-- Mer motståndskraftiga mot skadeinsekter och sjukdomar.
-
-- Är allotetraploider med 2n = 4x = 32 kromosomer dvs har två uppsättningar diploida koromosomer från olika arter. _Prunus Ceracus_ antas vara en hybrid som skapats genom "ickereducerade" (diploida) celler från _Prunus Avium_ och normala celler från _P Fructiosa_. En tetraploid sort kan ha upp till fyra alleler/varianter i samma locus. Sötkörsbär är diploida, 2n=2x=16<!-- och har 16 kromosomer som bildar 8 par.  -->.
-
-- Blommar vanligen senare än sötkörsbär och är därför inte så lämpliga som pollinerare av dessa.
-
-- Kan i allmänhet användas för syltning, saftning och matlagning.
+# Tabeller
 
 ## Tabell egenskaper
 
@@ -208,7 +194,7 @@ Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en grader
 <!-- Dashboard: https://quarto.org/docs/dashboards/data-presentation.html -->
 
 
-
+# Beskrivning av sorter
 
 ## Några intressanta sorter
 
@@ -217,9 +203,14 @@ Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en grader
 
 ### Skuggmorell
 
-_Prunus cerasus subsp. acida_
+_Prunus cerasus subsp. acida_ 
 
-syn. Schattenmorelle
+Synonymer: 'Schattenmorelle', 'Gr. Lange Lotkirsche', 'Nordkirsche', 'Schwarze Kirsche von Montreux', 'Späte Morelle'
+
+Enligt vissa källor är blomningen långvarig och att Skuggmorell därför är en lämplig pollinatör även för sötkörsbär.
+
+<!-- Morello is a traditional late-season acid or sour-cherry. It's a good choice if you need a trained tree for a north-facing situation. Flowers over a long period. The blossom of Morello cherry is particularly long-lasting and compatible, making it an excellent pollinator of most other cherries (sweet or sour). -->
+
 
 <!-- Schattenmorellen: -->
 <!--     'Beutelspacher Rexelle', eine relativ früh reifende Sorte -->
@@ -233,47 +224,48 @@ syn. Schattenmorelle
 
 ### Lapins
 
-Sen sort som mognar i slutet av juli eller början av augusti.
+Blomningstiden anges olika i olika källor. Troligen är det en tidigblommande sort vars blommor riskerar skadas av frost. Självfertil. Uppges i England blomma samtidigt som 'Van', 'Summer Sun' och 'Penny'.
 
-Garden Focused: "Only really suitable for growing in warmer parts of the UK because blossom first appears on average in the second to third week of April (pollination group 2 to 3)."
+<!-- Garden Focused: "Only really suitable for growing in warmer parts of the UK because blossom first appears on average in the second to third week of April (pollination group 2 to 3)." -->
 
-POLLINATION PARTNERS FOR LAPINS CHERRY
-Lapins is self-fertile and and does not need a suitable pollination partner to produce fruit. Lapins is in pollination group 2 to 3. The following varieties produces blossom at roughly the same time (mid to late April) and will be pollinated by Lapins. They are easily obtainable in the UK:
+<!-- POLLINATION PARTNERS FOR LAPINS CHERRY -->
+<!-- Lapins is self-fertile and and does not need a suitable pollination partner to produce fruit. Lapins is in pollination group 2 to 3. The following varieties produces blossom at roughly the same time (mid to late April) and will be pollinated by Lapins. They are easily obtainable in the UK: -->
 
-Penny, pollination group 3 to 4, eating variety
-Summer Sun, pollination group 3 to 4, eating variety
-Van, pollination group 3, eating variety
+<!-- Penny, pollination group 3 to 4, eating variety -->
+<!-- Summer Sun, pollination group 3 to 4, eating variety -->
+<!-- Van, pollination group 3, eating variety -->
 
-HOW LARGE WILL LAPINS GROW
-On Colt rootstock Lapins will grow to about 4m / 13ft tall when it has reached maturity after about 7 years. With an annual prune it can easily be kept to 2.4m / 8ft high for a manageable tree in most gardens. On Gisela 5 rootstock it will grow to approximately 2.4m / 8ft.
+<!-- HOW LARGE WILL LAPINS GROW -->
+<!-- On Colt rootstock Lapins will grow to about 4m / 13ft tall when it has reached maturity after about 7 years. With an annual prune it can easily be kept to 2.4m / 8ft high for a manageable tree in most gardens. On Gisela 5 rootstock it will grow to approximately 2.4m / 8ft. -->
 
 <!-- RHS recommends: When choosing a variety, it’s worth looking out for any with an RHS Award of Garden Merit (AGM). These are recommended by RHS fruit experts, as they performed well in trials – see our list of AGM fruit and veg. -->
 
+### Van
 
-Van
+Bra pollinatör (?).
 
-"Excellent pollinator"
+<!-- "Excellent pollinator" -->
 
-Stella
+### Stella
 
-If you only want to grow one cherry tree, choose Stella - self-fertile, easy to grow, and a good pollinator.
+Kan vara ett lämpligt val om man bara vill plantera ett körsbärsträd. Sorten är självfertil, lätta att odla och en bra pollinatör.
 
-Morello is a traditional late-season acid or sour-cherry. It's a good choice if you need a trained tree for a north-facing situation. Flowers over a long period. The blossom of Morello cherry is particularly long-lasting and compatible, making it an excellent pollinator of most other cherries (sweet or sour).
 
-Gardenfocused:
-https://www.gardenfocused.co.uk/fruitarticles/cherry/varieties.php
-Se beskrivningar i "cherries_gardenfocused_uk_varieties_description.csv"
-Alla utom dessa anges som self-sterile:
-"MORELLO","Self-fertile",
-"SKEENA","Self-fertile",
-"STELLA","Self-fertile"
-"SUMMER SUN","Self-fertile"
-"SUNBURST","Self-fertile",
-"SWEETHEART","Self-fertile",
-"SYLVIA","Self-fertile",
-"LAPINS"
-Alla utom dessa anges som Use: Eating
-"MORELLO", "Use: Cooking"
+<!-- Gardenfocused: -->
+<!-- https://www.gardenfocused.co.uk/fruitarticles/cherry/varieties.php -->
+<!-- Se beskrivningar i "cherries_gardenfocused_uk_varieties_description.csv" -->
+
+<!-- Alla utom dessa anges som self-sterile: -->
+<!-- "MORELLO","Self-fertile", -->
+<!-- "SKEENA","Self-fertile", -->
+<!-- "STELLA","Self-fertile" -->
+<!-- "SUMMER SUN","Self-fertile" -->
+<!-- "SUNBURST","Self-fertile", -->
+<!-- "SWEETHEART","Self-fertile", -->
+<!-- "SYLVIA","Self-fertile", -->
+<!-- "LAPINS" -->
+<!-- Alla utom dessa anges som Use: Eating -->
+<!-- "MORELLO", "Use: Cooking" -->
 
 
 <!-- Market intermediaries indicated a willingness to pay producers more per pound for fruit greater than 2.5 cm in diameter, firmness above 300 g/mm, and SSC above 18 °Brix -->
@@ -290,180 +282,4 @@ Alla utom dessa anges som Use: Eating
 <!-- ## Note: -->
 <!-- ## kauffs_kirsche  # samma som 'Knauff's Schwarze'? (den enda som hittas av google när man söker på Knauff)? ändrade till var knauffs_schwarze i den tidigare egna listan -->
 
-# Grundstammar {#sec-grundstam}
 
-Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okulering_). Typen av grundstam påverkar bland annat:
-
-- Trädets storlek
-- Härdighet
-- När trädet börjar bära frukt
-- Hur gammalt trädet kan bli
-
-## Olika grundstammar för körsbär
-
-Ett icke-ympat körsbärsträd bli kring 6 m högt beroende på sort.
-
-För en grundstm kan anges till vilken % av standardträdets höjd (det som ympas på rotstocken) det blir.
-
-<!-- It is important to remember though that a cherry tree on Colt rootstock, pruned once a year, can easily be restricted to 3m / 10ft high. -->
-
-**Colt**
-
-- En hybrid från _Prunus avium_ och _Prunus pseudocerasus_
-- Medelstarkväxande.
-- Sluthöjden 3.5-4.5 m efter 8 år (60-70% av standard). Kan hållas till 3 m med beskärning.
-- God bördighet.
-- Passar sämre för sorter med riklig produktion och leder då till små, defomerade bär. Man kan då avlägsa en del av blomknopparna för att minska problemet.
-<!-- - Colt is resistant to phytophthora root rot, bacterial canker, and stem-pitting, although is susceptive to crown gall.  -->
-- Colts vigör påverkas inte av virus, medan Gisela 5 har en något mindre vigör om det är virusdrabbat.
-- Ger frukt inom 1-2 år.
-- Klarar något sämre jord än Gisela 5.
-- Kräver stöd de första åren.
-- Grundstammen kan skadas vid hård vinter, men blommorna har mindre risk för frostskada.
-- Zon 1-3.
-
-
-<!-- Ger relativt stora träd, 70-80% av fröstam. -->
-
-**Gisela 5**
-
-- En hybrid mellan _Prunus cerasus_ (surkörsbär) and _Prunus canascens_.
-- Ger mindre träd än colt.
-- Höjden blir ca 3 m efter 5 år. Sluthöjden varierar beroende på körsbärssort, 2.5-3  m (40-50% av standard). Kan hållas till 2 m med beskärning.
-- Behöver stödpåle hela livet.
-- Ger frukt efter 1-2 år.
-- God härdighet (ymplingen avmognar tidigt).
-- Ger tidigare blomning med några dagar, vilket kan öka risken för frosstkadade knoppar/blommor.
-- Tidigarelägger blomningen med några dagar och ökar därmed risken för froststkador.
-- Klarar hård vinterkyla bätre än Colt.
-- Lägre träd (ökar risken för frosstkada).
-- Zon 1-4(5).
-
-<!-- 35% av av Prunus avium, blir 3,5-4,5 m  -->
-
-**Prunus avium**
-
-- Starkväxande
-- Högre träd (kan vara svårplockad pga höjd), 20-30 m
-- Kronans diameter ca 10 m. Upprätt, något pyramidal form (beror på ymplingen sort?)
-- God förankring i jorden
-- Något senare fruktsättning
-- Zon 1-5
-- Används ej för sötkörsbär (som ju är av arten _Prunus avium_).
-
-**Prunus cerasus**
-
-- Ger mindre något mer svagväxande träd.
-- Både söt- och surkörsbär (_Prunus cerasus_)?
-
-**Prunum mahaleb**
-
-- Används ej för sötkörsbär (?)
-- Zon 1-3
-- För torra, sandiga jordar
-
-<!-- Prunus padus -->
-<!-- Prunus spinosa -->
-
-<!-- Prunus ’Colt’ = rätt stora träd, ca 70-80% storlek av Prunus avium, klarar zon I-III. -->
-
-<!-- Prunus ’Gisela 5’ = blir mindre träd, ca 35% storlek av Prunus avium, ungefär 3,5-4,5 m höga, klarar zon I-V (VI) -->
-
-<!-- Om du vill läsa mer om grundstammar för körsbär så rekommenderar jag varmt blogginlägget Grundstammar del 4 – körsbär och boken Skogsträdgården: odla ätbart överallt av Philipp Weiss & Annevi Sjöberg 2018:424-426 -->
-
-<!-- Skogsträdgårdsbloggen tabell:  -->
-<!-- https://skogsträdgården.stjärnsund.nu/grundstammar-del-4-korsbar/ -->
-
-
-## Några surkörsbär
-
-**Fanal**: Morell. Självfertil. Mycket sur och kraftig smak. Tysk.
-
-<!-- Tysk sort som växer medelstarkt. Morelltyp. Självfertil. Medelstort bär. Mycket sur och kraftig smak. Mycket rikbärande. Angrips av bakterios. Bra till kommersiell odling. Zon 4 -->
-
-**Kelleris 16 (syn. Morellenfeuer)**: Morell. Självfertil. Mild, syrlig smak.
-
-<!-- Dansk sort .  Morelltyp. Trädet växer ganska starkt  och upprätt med spetsiga grenvinklar. Blommar efter lövsprickningen. Självfertil. Ganska litet bär med mild, syrlig smak. Angrips lätt av sjukdomar. -->
-
-**Kirsa**: Amarell. Buske.
-
-<!-- Buskkörsbär. 1,5 m. Amarelltyp. zon 5 -->
-
-**Lettisk Låg**: Morell. Självfertil. Söta bär. Buske.
-
-<!-- Buskkörsbär av morelltyp. Busken blir bara 2,5 m hög. Självfertil. Bären är söta. Kan klara sig ända upp i Zon7. -->
-
-**Montmorency (syn. Königliche Amarelle)**: Amarell. Starkväxande. Fransk.
-
-<!-- Fransk sort. Trädet växer mycket starkt. Amarelltyp. Medelstor frukt. Frisk. Medelgod bördighet. Inte särskilt härdig. -->
-
-**Nordia**: Morell. Självfertil. Buske. Svensk.
-
-<!-- Svenskt buskkörsbär av morelltyp. självfertil. zon 5 -->
-
-**Ostheimer**: Morell. Självsteril. Buskformigt träd. Blommar tidigt. Tysk.
-
-<!-- Tysk 1700tals sort. Litet, buskformig träd. Självsteril. Blommar tidigt. Morelltyp. Knopparna känsliga för stark kyla i mars. Mycket bördig om det finns rätt pollinerare. Frisk men mottaglig för Monilia. -->
-
-**Pernilla**: Morell. Självfertil. Buske. Svensk.
-
-<!-- Svenskt buskkörsbär av morelltyp. 2m. Självfertil. zon 5. -->
-
-**Sikkola**: Amarell. Självfertil. Små bär.
-
-<!-- Amarelltyp. Små bär. Självfertil. Klarat -40C. -->
-
-**Skuggmorell**: Morell. Självfertil. Syrlig. Tysk.
-
-<!-- Tysk sort från 1500talet. Syrliga bär. Själfertil. Zon 5. -->
-
-**Tshernokorka**: Morell. Mycket sur. Starkväxande. Rysk.
-
-<!-- Rysk sort av morelltyp. Starkväxande med hängande skott. Medelstort, violett rött bär. Mycket sur. Mognar tidigt. Frisk och bördig sort. Lämplig som industriråvara. -->
-
-<!-- Beutelsbacher Rexell -->
-
-<!-- Chokladnaja -->
-
-<!-- Ryskt buskkörsbär av morelltyp. 2m. Mörkbruna bär. Självfertil. Zon 6. -->
-
-
-<!-- Huvimaja -->
-
-<!-- Amarelltyp. Självfertil. Zon 6. -->
-<!-- Inkeroisten Kirsikka -->
-
-<!-- Amarelltyp. Stor buske. Zon 5 -->
-
-<!-- Karneol -->
-
-
-<!-- Körös, Körösi Meggy,  Körösska Visen -->
-
-<!-- Ungersk sort. Trädet växer starkt och upprätt. Blomningen är mycket senare än lövsprickningen. Amarelltyp. Självsteril. Smaken är sur och ganska mild. Frisk sort. Bra till färskkonsumtion. -->
-
-<!-- Ludwigs Fruhe -->
-
-<!-- Minister von Podbielski -->
-
-<!-- Tysk sort från 1902. Trädet är mycket starkvuxet. Självsteril. Morelltyp. Stor, välsmakande frukt. Låg bördighet. Inte särskilt härdig. -->
-
-<!-- Rauhala -->
-
-<!-- Amarelltyp. Litet träd. Söta bär. Självfertil. Zon 6. -->
-
-<!-- Rubin,  Heimanns Rubin -->
-
-<!-- Tysk sort. Trädet växer svagt. Sen blomning. Självfertil. Morelltyp. Små, mycket syrliga bär. Angrips av bakterios och grå monilia. -->
-
-<!-- Safir -->
-<!-- Schwäbische Steinweichsel -->
-
-<!-- Ungarishe Traubige -->
-
- 
-<!-- Källor -->
-
-<!-- Ingevald Fernqvist (redaktör): Körsbär, En pomologi över i Sverige prövade körsbärssorter. -->
-
-<!-- https://handbok.alternativ.nu/Odling/Frukt_och_b%C3%A4r/Surk%C3%B6rsb%C3%A4r.html -->

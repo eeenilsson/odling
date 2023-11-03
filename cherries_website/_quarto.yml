@@ -11,9 +11,12 @@ website:
         text: Hem
       ## - about.qmd
       - choosing_variety.qmd
+      - sour_cherries.qmd
       - pollination_about.qmd
       - blooming.qmd
       - pollination_table.qmd
+      - cultivation.qmd
+      - recepies.rmd
       - terminology.qmd
       - resources.qmd
     pinned: true
