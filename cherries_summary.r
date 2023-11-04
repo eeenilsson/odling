@@ -226,7 +226,10 @@ for(i in 1:3){ ## nrows(bg_wide_curated)
     }
     res <- rbind(res, out)    
 }
-View(res)
+str(res)
+ncol(res)
+res <- as.data.table(res)
+names(res) <- cols_loop
 
 n <- cols_loop[4]
 
