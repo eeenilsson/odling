@@ -30,8 +30,16 @@ reactable(cherries_table_curated, ## sorting
               ## header = function(value) gsub(".|_", " ", value, fixed = TRUE),
               ## cell = function(value) format(value, nsmall = 1),
               align = "center",
-              minWidth = 30
+              minWidth = 30,
               ## headerStyle = list(background = "#f7f7f8")
+              filterMethod = JS("function(rows, columnId, filterValue) {
+        const pattern = new RegExp(filterValue, 'i')
+        
+        return rows.filter(function(row) {
+          return pattern.test(row.values[columnId])
+        })
+      }")
+
           ),
           columns = list(
               Sort = colDef(
@@ -109,8 +117,15 @@ tbl_ros <- reactable(ros_phenology_aggr_curated, ## sorting
               header = function(value) gsub(".|_", " ", value, fixed = TRUE),
               ## cell = function(value) format(value, nsmall = 1),
               align = "center",
-              minWidth = 30
+              minWidth = 30,
               ## headerStyle = list(background = "#f7f7f8")
+              filterMethod = JS("function(rows, columnId, filterValue) {
+        const pattern = new RegExp(filterValue, 'i')
+        
+        return rows.filter(function(row) {
+          return pattern.test(row.values[columnId])
+        })
+      }")
           ),
           columns = list(
               Sort = colDef(

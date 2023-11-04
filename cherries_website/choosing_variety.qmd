@@ -52,7 +52,7 @@ När du planterar körsbär bör du se till att ha mer än en sort. Den främsta
 
 - Tillgänglighet i handeln.
 
-- Kvalitetsmärkning. Vissa sorter finns som "E-plantor" (markeras med ett E efter namnet hos försäljaren). Se sidan om terminologi för mer om det. [Här](https://eplanta.com/kategorier_hemtradgarden/tradgardens-skafferi/) kan du se vilka sorter av körsbär mm där E-märkta exemplar finns att köpa.
+- Kvalitetsmärkning. Vissa sorter finns som "E-plantor" (markeras med ett E efter namnet hos försäljaren). Se [Ordboken](terminology.qmd) för mer om det. [Här](https://eplanta.com/kategorier_hemtradgarden/tradgardens-skafferi/) kan du se vilka sorter av körsbär mm där E-märkta exemplar finns att köpa.
 
 <!-- Frost can be extremely damaging to blossom and will reduce your crop. It can be useful to choose trees in late flowering groups if you have a late last frost. -->
 

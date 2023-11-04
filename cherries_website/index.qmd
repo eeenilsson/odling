@@ -1,11 +1,11 @@
 ---
-title: "Körsbär"
+title: "Körsbärskär"
 sidebar: false
 ---
 
 Detta är en sida om odling av ätliga körsbär. Den är tänkt att beskriva vad man bör tänka på när man väljer sort och vid odling. Nedan följer en översiktlig introduktion. Fördjupning finns i de olika avsnitten i menyraden ovan.
 
-Ord i texten som är _kursiverade_ återfinns i avsnittet  [terminologi](terminology.qmd).
+Ord i texten som är _kursiverade_ återfinns i avsnittet [Ordbok](terminology.qmd).
 
 ::: {layout-ncol=2}
 
