@@ -62,7 +62,7 @@ dtplot[, target := factor(target, levels = levels(target), labels = unname(query
 ## for site
 varnames3 <- tmp$label
 names(varnames3) <- tmp$var
-saveRDS(varnames3, "varnames3.rds") 
+
 
 ## factor(dtplot$target, levels = levels(dtplot$target), labels = unname(query_label(levels(dtplot$target), varnames)))
 
@@ -220,32 +220,37 @@ for(i in 1:nrow(bt_wide_curated)){
 res <- as.data.table(res)
 names(res) <- cols_loop
 res
-cols2 <- cols[!cols %in% cols_loop]
-bt_wide_curated[, ]
-cols_loop
+cols_new <- cols[!cols %in% c(cols_loop,  "incompatibility_group", "bgr")]
+cols_new <- c("var", cols_new)
+tmp <- bt_wide_curated[, ..cols_new]
+
+bt_wide_curated <- tmp[res, on = "var"] ## this replaces compat
 
 ## Dela upp i blooming group 1-2, 2-3, 3-4, 4-5
 bg12 <- bt_wide_curated[blooming_group == 1|blooming_group == 2, ]
 cols12 <- names(bg12)[names(bg12) %in% bg12$var]
-cols12 <- c("label", "genotype", "incompatibility_group", "blooming_group", "bgr", cols12)
+cols12 <- c("label", "genotype",  "blooming_group", cols12)
 bg12 <- bg12[, ..cols12]
 write.csv(bg12, "bg12.csv", row.names = FALSE)
 
+## value <- names(bg12)[[1]]
+## function(value){unname(query_label(value, varnames3))}
+
 bg23 <- bt_wide_curated[blooming_group == 2|blooming_group == 3, ]
 cols23 <- names(bg23)[names(bg23) %in% bg23$var]
-cols23 <- c("label", "genotype", "incompatibility_group", "blooming_group", "bgr", cols23)
+cols23 <- c("label", "genotype",  "blooming_group", cols23)
 bg23 <- bg23[, ..cols23]
 write.csv(bg23, "bg23.csv", row.names = FALSE)
 
 bg34 <- bt_wide_curated[blooming_group == 3|blooming_group == 4, ]
 cols34 <- names(bg34)[names(bg34) %in% bg34$var]
-cols34 <- c("label", "genotype", "incompatibility_group", "blooming_group", "bgr", cols34)
+cols34 <- c("label", "genotype",  "blooming_group", cols34)
 bg34 <- bg34[, ..cols34]
 write.csv(bg34, "bg34.csv", row.names = FALSE)
 
 bg45 <- bt_wide_curated[blooming_group == 3|blooming_group == 4, ]
 cols45 <- names(bg45)[names(bg45) %in% bg45$var]
-cols45 <- c("label", "genotype", "incompatibility_group", "blooming_group", "bgr", cols45)
+cols45 <- c("label", "genotype",  "blooming_group", cols45)
 bg45 <- bg45[, ..cols45]
 write.csv(bg45, "bg45.csv", row.names = FALSE)
 
@@ -254,7 +259,8 @@ write.csv(bg45, "bg45.csv", row.names = FALSE)
 cols <- cols[!cols == "var"] ## drop var
 bt_wide_curated <- bt_wide_curated[, ..cols]
 write.csv(bt_wide_curated, "bt_wide_curated.csv", row.names = FALSE)
-
+varnames3 <- c(varnames3, c('label' = "Sort", 'genotype' = "Haplotyp", 'blooming_group' = "Blomningsgrupp"))
+saveRDS(varnames3, "varnames3.rds") 
 
 ## plot bloom time from rosbreed ----------------------
 toplot <- bloom_table
