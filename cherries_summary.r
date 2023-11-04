@@ -248,7 +248,7 @@ cols34 <- c("label", "genotype",  "blooming_group", cols34)
 bg34 <- bg34[, ..cols34]
 write.csv(bg34, "bg34.csv", row.names = FALSE)
 
-bg45 <- bt_wide_curated[blooming_group == 3|blooming_group == 4, ]
+bg45 <- bt_wide_curated[blooming_group == 4|blooming_group == 5, ]
 cols45 <- names(bg45)[names(bg45) %in% bg45$var]
 cols45 <- c("label", "genotype",  "blooming_group", cols45)
 bg45 <- bg45[, ..cols45]

@@ -1,8 +1,10 @@
 ---
 title: "Pollinationsschema"
+execute:
+  echo: false
 ---
 
-Schemat tar hänsyn till genetisk kompatibilitet och närhet i blomningstid.
+Schemat tar hänsyn till genetisk kompatibilitet och närhet i blomningstid. Motsvarande information finns också i sökbara tabeller längre ner.
 
 ::: {.column-screen}
 ![](../../../dropbox/images/plants/plot_pollination_table.png)
@@ -59,3 +61,233 @@ Vilket datum de olika blomningstiderna infaller varierar beroende på klimat och
 <!-- ## Flik 3 Alla sorter (tabell istället för figur?) -->
 
 <!-- Alla sorter. -->
+
+
+## Pollinationstabell
+
+Varje flik visar sorter som blommar i samma **eller föregående** blomningsgrupp som den i flikens namn. Dvs i fliken "medeltidig" visas även de som är i gruppen "tidig", i fliken "medel" visas även de i gruppen "medeltidig" (igen, men utan de i gruppen "tidig") osv.
+
+Tabellen kan filtreras genom att skriva sökord i rutan under kolumnernas rubriker. Vill du söka efter flera saker samtidigt använd "|" mellan sökorden. Tex ger "van|swe" i kolumnen "Sort" träffar på 'Van' och 'Sweetheart'.
+
+Genetisk kompatibilitet är visat med en stor bokstav. "A" betyder helt komatibel, "B" betyder delvis kompatibel och "0" betyder **icke-**kompatibel.
+
+Närhet i blomningstid visas med "+" eller "-". Ett "+" betyder att pollinatören ligger en blomningsgrupp bort. Två "++" att de är i samma blomningsgrupp.
+
+::: {.column-screen}
+
+::: {.panel-tabset}
+
+## Medeltidig (och tidig)
+
+```{r} 
+#| label: tbl-medeltidig
+#| tbl-cap: "Tabell mätvärden"
+#| warning: false
+
+sanitize_label <- function(x){
+x <- gsub(" \\([^$]*", "", x)
+x <- gsub(" \\\n[^$]*", "", x)
+x <- gsub(" \\/[^$]*", "", x)
+x <- gsub("TM$", "", x)
+x <- gsub("Späte Rote Knorpelkirsche", "Rote", x)
+x <- gsub("Knauffs Schwarze", "Knauffs", x)
+x <- gsub("Große Schwarze Knorpel", "Große Schwarze", x)
+x <- gsub("Dönissens Gelbe Knorpel", "Dönissens Gelbe", x)
+x <- gsub("Guigne d'Annonay", "Annonay", x)
+x <- gsub("Schneiders Späte Knorpelkirsche", "Schneiders Späte", x)
+
+return(x)
+}
+
+## read data
+varnames3 <- readRDS("../varnames3.rds")
+## bt_wide_curated <- read.csv("../bt_wide_curated.csv")
+bg12 <- read.csv("../bg12.csv")
+bg23 <- read.csv("../bg23.csv")
+bg34 <- read.csv("../bg34.csv")
+bg45 <- read.csv("../bg45.csv")
+
+query_label <- function(x, y){
+    nomatch <- x[!x %in% names(y)]
+    names(nomatch) <- nomatch
+    y <- c(y, nomatch)
+    return(y[match(x, names(y))])
+}
+
+library("reactable")
+
+reactable(bg12,
+          filterable = TRUE,
+          searchable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+##          searchMethod = JS(), ## See https://glin.github.io/reactable/articles/custom-filtering.html#basic-custom-search-method
+          defaultColDef = colDef(
+              header = function(value) unname(query_label(value, varnames3)),
+              ## cell = function(value) format(value, nsmall = 1),
+              align = "center",
+              minWidth = 30,
+              ## headerStyle = list(background = "#f7f7f8"),
+              filterable = TRUE,
+      # filtering for multiple values using regex partial match
+filterMethod = JS("function(rows, columnId, filterValue) {
+        const pattern = new RegExp(filterValue, 'i')
+        
+        return rows.filter(function(row) {
+          return pattern.test(row.values[columnId])
+        })
+      }")
+          ),
+          columns = list(
+              label = colDef( ## note: use original colname "label"
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  ## Add a right border style
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+## ?colFormat()
+## Note: "details": Additional content to display when expanding a row. An R
+          ## function that takes the row index and column name as
+          ## arguments, or a ‘JS()’ function that takes a row info object
+          ## and table state object as arguments. Cannot be used on a
+          ## ‘groupBy’ column.
+
+## ?colDef()
+## ?JS
+
+## Filterfunktioner i reactable: https://github.com/glin/reactable/issues/318
+## Guide: https://glin.github.io/reactable/articles/custom-filtering.html
+
+``` 
+
+## Medel (och medeltidig)
+
+```{r } 
+#| label: tbl-medel
+#| tbl-cap: "Medel"
+#| warning: false
+
+reactable(bg23,
+          filterable = TRUE,
+          searchable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              header = function(value) unname(query_label(value, varnames3)),
+              align = "center",
+              minWidth = 30,
+              filterable = TRUE,
+              filterMethod = JS("function(rows, columnId, filterValue) {
+        const pattern = new RegExp(filterValue, 'i')
+        
+        return rows.filter(function(row) {
+          return pattern.test(row.values[columnId])
+        })
+      }")
+          ),
+          columns = list(
+              label = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+
+``` 
+
+## Medelsen (och medel)
+
+```{r } 
+#| label: tbl-medelsen
+#| tbl-cap: "Medelsen"
+#| warning: false
+
+reactable(bg34,
+          filterable = TRUE,
+          searchable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              header = function(value) unname(query_label(value, varnames3)),
+              align = "center",
+              minWidth = 30,
+              filterable = TRUE,
+              filterMethod = JS("function(rows, columnId, filterValue) {
+        const pattern = new RegExp(filterValue, 'i')
+        
+        return rows.filter(function(row) {
+          return pattern.test(row.values[columnId])
+        })
+      }")
+          ),
+          columns = list(
+              label = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+
+``` 
+
+## Sen (och medelsen)
+
+```{r } 
+#| label: tbl-sen
+#| tbl-cap: "Sen"
+#| warning: false
+
+reactable(bg45,
+          filterable = TRUE,
+          searchable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              header = function(value) unname(query_label(value, varnames3)),
+              align = "center",
+              minWidth = 30,
+              filterable = TRUE,
+              filterMethod = JS("function(rows, columnId, filterValue) {
+        const pattern = new RegExp(filterValue, 'i')
+        
+        return rows.filter(function(row) {
+          return pattern.test(row.values[columnId])
+        })
+      }")
+          ),
+          columns = list(
+              label = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+
+``` 
+
+ 
+
+:::
+
+:::
