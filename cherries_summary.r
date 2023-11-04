@@ -187,28 +187,16 @@ cols <- c("label", "var", "genotype", "incompatibility_group", "blooming_group",
 cols2 <- names(bt_wide_curated)[!names(bt_wide_curated) %in% cols]
 cols2 <- sort(cols2)
 cols <- c(cols, cols2)
-bt_wide_curated<- bt_wide_curated[, ..cols] ## order cols
+bt_wide_curated <- bt_wide_curated[, ..cols] ## order cols
 
-
-new_column_byref <- function(df,col_name,expr){
-  col_name <- deparse(substitute(col_name))
-  set(df,j=col_name,value=eval(substitute(expr),df,parent.frame()))
-}
-
-
-myfun <- function(x, y){
-    get(x)
-}
-
+## loop over columns and rows to get compat and BT proximity
 cols_loop <- cols
 cols_loop <- cols_loop[c(2, 7:length(cols))]
-
 res <- c()
-for(i in 1:3){ ## nrows(bg_wide_curated)
+for(i in 1:nrow(bt_wide_curated)){ 
     out <- c()
     proximity <- c()
-    for(n in cols_loop){
-        
+    for(n in cols_loop){        
         if(sum(grepl(paste0("^", n, "$"), bt_wide_curated[, var]))>0){
             bg_pol <- bt_wide_curated[var == n, as.numeric(blooming_group)]
             proximity <- bt_wide_curated[i, as.numeric(blooming_group)] - as.numeric(bg_pol)
@@ -221,18 +209,20 @@ for(i in 1:3){ ## nrows(bg_wide_curated)
         }else{
              note <- ""
         }
-        out <- c(out, paste(bt_wide_curated[i, get(n)], note))
-        
+        compat <- bt_wide_curated[i, get(n)]
+        note <- ifelse(compat == 0, "", note)
+        compat <- gsub("2", "A", compat)
+        compat <- gsub("1", "B", compat)
+        out <- c(out, paste0(compat, note))        
     }
-    res <- rbind(res, out)    
+    res <- rbind(res, out)
 }
-str(res)
-ncol(res)
 res <- as.data.table(res)
 names(res) <- cols_loop
-
-n <- cols_loop[4]
-
+res
+cols2 <- cols[!cols %in% cols_loop]
+bt_wide_curated[, ]
+cols_loop
 
 ## Dela upp i blooming group 1-2, 2-3, 3-4, 4-5
 bg12 <- bt_wide_curated[blooming_group == 1|blooming_group == 2, ]
