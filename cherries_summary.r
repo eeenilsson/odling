@@ -59,6 +59,11 @@ names(varnames) <- tmp$var
 
 dtplot[, target := factor(target, levels = levels(target), labels = unname(query_label(levels(target), varnames)))]
 
+## for site
+varnames3 <- tmp$label
+names(varnames3) <- tmp$var
+saveRDS(varnames3, "varnames3.rds") 
+
 ## factor(dtplot$target, levels = levels(dtplot$target), labels = unname(query_label(levels(dtplot$target), varnames)))
 
 varnames2 <- gsub("|\\^\\[[^$]*", "", varnames) ## remove part in brackets for pollinators
@@ -77,12 +82,13 @@ dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = u
 
 ## plot base
 p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, bgr))) +
-  geom_point(aes(size = compatibility,  fill = compat_proximity, colour = pol_yes), shape = 21, stroke = 1) + scale_color_manual(values=c("no" = "white", "yes" = "black"))
+    geom_point(aes(size = compatibility,  fill = compat_proximity, colour = pol_yes), shape = 21, stroke = 1)
 
 ## plot customization
 plot_pollination_table <- p +
     scale_size_area() +
     scale_fill_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3", "bt_unknown" = "white")) +
+    scale_color_manual(values=c("no" = "white", "yes" = "black")) +
     theme(
         plot.margin = unit(c(0.9, 0.9, 0.9, 0.9), "centimeters"),
         legend.position = "none",
@@ -104,16 +110,16 @@ plot_pollination_table <- plot_pollination_table +
                space = "free_x") +
     theme(
         panel.spacing = unit(0, "lines"),
-            panel.background = element_rect(fill = "gray83",
-                                colour = "gray",
-                                linewidth = 0.8, linetype = "solid"),
-         strip.background = element_rect(colour="black", fill = NA),
-         panel.border = element_rect(colour="black", fill = NA),
-         strip.placement = "outside",
+        panel.background = element_rect(fill = "gray83",
+                                        colour = "gray",
+                                        linewidth = 0.8, linetype = "solid"),
+        strip.background = element_rect(colour="black", fill = NA),
+        panel.border = element_rect(colour="black", fill = NA),
+        strip.placement = "outside",
         panel.grid.major = element_line(linewidth = 1, linetype = 'solid',
-                                colour = "white"),
+                                        colour = "white"),
         plot.title = element_text(hjust = 0.5)
-         )
+    )
 
 plot_pollination_table
 
@@ -165,6 +171,97 @@ ggsave(
 ## # Rotate the box plot
 ## p + coord_flip()
 ## ## summary(tmp$test_start_date)
+
+## BT wide table for filtering --------------------------------
+
+bt_wide_curated <- data.table(bt_wide)
+
+## categorize bgr
+bt_wide_curated[, blooming_group := round(bgr, digits = 0)]
+## bt_wide_curated[, blooming_group := factor(blooming_group, ordered = TRUE, levels = c(1:5, 99), labels = c("Tidig", "Medeltidig", "Medel", "Medelsen", "Sen", "Okänd"))]
+bt_wide_curated[, label := query_label(var, varnames3)]
+
+## todo: add synonyms
+
+cols <- c("label", "var", "genotype", "incompatibility_group", "blooming_group", "bgr")
+cols2 <- names(bt_wide_curated)[!names(bt_wide_curated) %in% cols]
+cols2 <- sort(cols2)
+cols <- c(cols, cols2)
+bt_wide_curated<- bt_wide_curated[, ..cols] ## order cols
+
+
+new_column_byref <- function(df,col_name,expr){
+  col_name <- deparse(substitute(col_name))
+  set(df,j=col_name,value=eval(substitute(expr),df,parent.frame()))
+}
+
+
+myfun <- function(x, y){
+    get(x)
+}
+
+cols_loop <- cols
+cols_loop <- cols_loop[c(2, 7:length(cols))]
+
+res <- c()
+for(i in 1:3){ ## nrows(bg_wide_curated)
+    out <- c()
+    proximity <- c()
+    for(n in cols_loop){
+        
+        if(sum(grepl(paste0("^", n, "$"), bt_wide_curated[, var]))>0){
+            bg_pol <- bt_wide_curated[var == n, as.numeric(blooming_group)]
+            proximity <- bt_wide_curated[i, as.numeric(blooming_group)] - as.numeric(bg_pol)
+            proximity <- abs(proximity)
+            if(proximity == 0){note <- "++"}
+            if(proximity == 1){note <- "+"}
+            if(proximity == 2){note <- "-"}
+            if(proximity == 3){note <- "--"}
+            if(proximity == 3){note <- "---"}            
+        }else{
+             note <- ""
+        }
+        out <- c(out, paste(bt_wide_curated[i, get(n)], note))
+        
+    }
+    res <- rbind(res, out)    
+}
+View(res)
+
+n <- cols_loop[4]
+
+
+## Dela upp i blooming group 1-2, 2-3, 3-4, 4-5
+bg12 <- bt_wide_curated[blooming_group == 1|blooming_group == 2, ]
+cols12 <- names(bg12)[names(bg12) %in% bg12$var]
+cols12 <- c("label", "genotype", "incompatibility_group", "blooming_group", "bgr", cols12)
+bg12 <- bg12[, ..cols12]
+write.csv(bg12, "bg12.csv", row.names = FALSE)
+
+bg23 <- bt_wide_curated[blooming_group == 2|blooming_group == 3, ]
+cols23 <- names(bg23)[names(bg23) %in% bg23$var]
+cols23 <- c("label", "genotype", "incompatibility_group", "blooming_group", "bgr", cols23)
+bg23 <- bg23[, ..cols23]
+write.csv(bg23, "bg23.csv", row.names = FALSE)
+
+bg34 <- bt_wide_curated[blooming_group == 3|blooming_group == 4, ]
+cols34 <- names(bg34)[names(bg34) %in% bg34$var]
+cols34 <- c("label", "genotype", "incompatibility_group", "blooming_group", "bgr", cols34)
+bg34 <- bg34[, ..cols34]
+write.csv(bg34, "bg34.csv", row.names = FALSE)
+
+bg45 <- bt_wide_curated[blooming_group == 3|blooming_group == 4, ]
+cols45 <- names(bg45)[names(bg45) %in% bg45$var]
+cols45 <- c("label", "genotype", "incompatibility_group", "blooming_group", "bgr", cols45)
+bg45 <- bg45[, ..cols45]
+write.csv(bg45, "bg45.csv", row.names = FALSE)
+
+
+## Save for site
+cols <- cols[!cols == "var"] ## drop var
+bt_wide_curated <- bt_wide_curated[, ..cols]
+write.csv(bt_wide_curated, "bt_wide_curated.csv", row.names = FALSE)
+
 
 ## plot bloom time from rosbreed ----------------------
 toplot <- bloom_table
@@ -281,7 +378,7 @@ varnames_cols <- c(
 names(ros_phenology_aggr_curated) <- query_label(names(ros_phenology_aggr_curated), varnames_cols)
 
 ## varnames
-ros_phenology_aggr_curated[, Sort := query_label(Sort, varnames)]
+ros_phenology_aggr_curated[, Sort := query_label(Sort, varnames2)]
 write.csv(ros_phenology_aggr_curated, "ros_phenology_aggr_curated.csv", row.names = FALSE) ## for web page
 
 ## dt[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]

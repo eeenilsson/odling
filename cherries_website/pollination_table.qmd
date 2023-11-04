@@ -2,6 +2,8 @@
 title: "Pollinationsschema"
 ---
 
+Schemat tar hänsyn till genetisk kompatibilitet och närhet i blomningstid.
+
 ::: {.column-screen}
 ![](../../../dropbox/images/plants/plot_pollination_table.png)
 :::

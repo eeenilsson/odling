@@ -303,30 +303,30 @@ bg_selected <- bg_selected[bg_selected$var %in% variety_genotype_group$var, ] ##
 
 dta_toplot <- variety_genotype_group[bg_selected, on = "var"] ## all selected have genotype data matching var name
 
-test <- dta_toplot[, .(var, genotype, bgr, incompatibility_group)]
+bt_wide <- dta_toplot[, .(var, genotype, bgr, incompatibility_group)]
 
 ## make a df to add cols
-newcols <- as.data.table(matrix(nrow = nrow(test), ncol = nrow(test)+1))
-names(newcols) <- c("var", test$var)
+newcols <- as.data.table(matrix(nrow = nrow(bt_wide), ncol = nrow(bt_wide)+1))
+names(newcols) <- c("var", bt_wide$var)
 cols <- names(newcols)
 newcols_mod <- newcols[ , (cols) := lapply(.SD, as.character), .SDcols = cols]
-newcols_mod$var <- test$var
-test <- newcols_mod[test, on = "var"]
-for(i in 1:nrow(test)){ ## loop over rows
-    for(varn in test$var){ ## loop over cols
+newcols_mod$var <- bt_wide$var
+bt_wide <- newcols_mod[bt_wide, on = "var"]
+for(i in 1:nrow(bt_wide)){ ## loop over rows
+    for(varn in bt_wide$var){ ## loop over cols
         ## get genotype of column name
-             ## test[i, (varn) := test[var == varn, genotype]]  
+             ## bt_wide[i, (varn) := bt_wide[var == varn, genotype]]  
         ## get compatibility value of column name
-                test[i, (varn) := compat(test[var == varn, genotype],
-                                         test[i, genotype])  ]  
+                bt_wide[i, (varn) := compat(bt_wide[var == varn, genotype],
+                                         bt_wide[i, genotype])  ]  
             }
 }
 
-## test
-## str(test)
+## bt_wide
+## str(bt_wide)
 
 ## melt
-dtplot <-  melt(test, id.vars = c("var", "genotype", "bgr",  "incompatibility_group"))
+dtplot <-  melt(bt_wide, id.vars = c("var", "genotype", "bgr",  "incompatibility_group"))
 dtplot[, value := as.numeric(value)]
 
 ## fix names

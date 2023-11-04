@@ -1,5 +1,7 @@
 ---
-title: "Jämförelse - Tabeller"
+title: "Jämförelse"
+execute:
+  echo: false
 ---
 
 Nedan följer några tabeller där du kan jämföra vanligt förekommande körbärssorter. Notera att körsbärens egenskaper kan variera beroende på var de växer (_ståndort_). Klicka på rubrikerna för att sortera.
@@ -10,17 +12,12 @@ Här visas information sammanställd från olika källor. De flesta egenskaper h
 
 ::: {.column-screen}
 
-
 ```{r} 
 #| label: tbl-attributes
-#| tbl-cap: Egenskaper
+#| tbl-cap: "Jämförelse"
 #| warning: false
 
-## pacman::p_load(reactable)
 library(reactable)
-## https://glin.github.io/reactable/articles/examples.html
-## defaultPageSize = 40
-library("reactablefmtr")
 
 cherries_table_curated <- read.csv("../cherries_table_curated.csv")
 
@@ -148,5 +145,65 @@ Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en grader
 <!-- Podosphaera clandestina var. clandestina (powdery mildew of cherry) -->
 <!-- incidence of foliar powdery mildew rated on a 0-5 scale where 0 means no infection and 5 is 100% infection -->
 
+::: {.column-screen}
 
-<!-- Dashboard: https://quarto.org/docs/dashboards/data-presentation.html -->
+## Tabell kompatibilitet mm
+
+```{r } 
+#| label: my-label 
+
+sanitize_label <- function(x){
+x <- gsub(" \\([^$]*", "", x)
+x <- gsub(" \\\n[^$]*", "", x)
+x <- gsub(" \\/[^$]*", "", x)
+x <- gsub("TM$", "", x)
+x <- gsub("Späte Rote Knorpelkirsche", "Rote", x)
+x <- gsub("Knauffs Schwarze", "Knauffs", x)
+x <- gsub("Große Schwarze Knorpel", "Große Schwarze", x)
+x <- gsub("Dönissens Gelbe Knorpel", "Dönissens Gelbe", x)
+x <- gsub("Guigne d'Annonay", "Annonay", x)
+x <- gsub("Schneiders Späte Knorpelkirsche", "Schneiders Späte", x)
+
+return(x)
+}
+
+varnames3 <- readRDS("../varnames3.rds")
+bt_wide_curated <- read.csv("../bt_wide_curated.csv")
+bg12 <- read.csv("../bg12.csv")
+
+query_label <- function(x, y){
+    nomatch <- x[!x %in% names(y)]
+    names(nomatch) <- nomatch
+    y <- c(y, nomatch)
+    return(y[match(x, names(y))])
+} 
+
+reactable(bg12,
+          filterable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              header = function(value) gsub(".|_", " ", value, fixed = TRUE),
+              ## header = function(value) query_label(value, varnames3),
+              ## cell = function(value) format(value, nsmall = 1),
+              align = "center",
+              minWidth = 30
+              ## headerStyle = list(background = "#f7f7f8")
+          ),
+          columns = list(
+              Sort = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  ## Add a right border style
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+
+``` 
+
+:::

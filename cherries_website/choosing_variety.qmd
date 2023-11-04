@@ -187,9 +187,9 @@ Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okule
 
 ## Olika grundstammar för körsbär {#sec-grundstam}
 
-Ett icke-ympat körsbärsträd bli kring 6 m högt beroende på sort.
+Ett icke-ympat körsbärsträd blir kring 6 m högt beroende på sort.
 
-För en grundstm kan anges till vilken % av standardträdets höjd (det som ympas på rotstocken) det blir.
+För en grundstam kan anges till vilken % av standardträdets höjd (det som ympas på rotstocken) det blir.
 
 <!-- It is important to remember though that a cherry tree on Colt rootstock, pruned once a year, can easily be restricted to 3m / 10ft high. -->
 
@@ -335,6 +335,22 @@ Kan vara ett lämpligt val om man bara vill plantera ett körsbärsträd. Sorten
 
 
 <!-- Market intermediaries indicated a willingness to pay producers more per pound for fruit greater than 2.5 cm in diameter, firmness above 300 g/mm, and SSC above 18 °Brix -->
+
+
+### Andra sorter
+
+**Allmän gulröd bigarrå**: God smak. Söt och syrlig. Kan användas för syltning.
+
+**Sam**: God smak. Mörkröd.
+
+Sam + Sunburst (SC)?
+
+**Fryksås** eller Gårdebo? Zon 4
+
+Van: God. Zon 4.
+
+Regina
+
 
 
 <!-- ## notes on naming -->

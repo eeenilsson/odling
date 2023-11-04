@@ -14,8 +14,6 @@ source('cherry_compatibility.r')  ## read S-allele data
 ## Summary --------------------
 source('cherries_summary.r')
 
-
-
 ## Quarto -----
 
 source("cherries_quarto.r")
