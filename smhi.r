@@ -14,19 +14,28 @@ chunks <- c(0, 100, 200, 300, 400, 500, 600, 700, 800, 900)
 
 chunks <- c(0, 100, 120)
 
-## n <- 1
-for(n in chunks){
+## n <- 3
+for(n in 1:length(chunks)){
 ## loop over site id to get data
 smhi_airtemp <- data.table(date = NA, time = NA, temp = NA, quality = NA, id = NA)
     from <- chunks[n]+1    
-    to <- ifelse(n == max(chunks), length(sites$id), chunks[n+1])
+    to <- ifelse(chunks[n] == max(chunks),
+                 130
+                 ## length(sites$id),
+                 chunks[n+1])
 for(i in sites$id[from:to]){
+    i <- sites$id[3]
     ## i <- "98040"
     ## i <- 66420
     ## i <- 125490
     ## Error in read.table("temp.txt", sep = ";") : no lines available in input
     message(i)
-    link <- paste0("https://opendata-download.smhi.se/stream?type=metobs&parameterIds=1&stationId=", i, "&period=corrected-archive")
+    ## min max (vanligen kl 06 och 18)
+    link12h_min_max <- paste0("https://opendata-download.smhi.se/stream?type=metobs&parameterIds=26,27&stationId=", i, "&period=corrected-archive")
+
+    ## alla mätningar
+    ## link <- paste0("https://opendata-download.smhi.se/stream?type=metobs&parameterIds=1&stationId=", i, "&period=corrected-archive")
+
     page_html <- rvest::read_html(link)
     test <- page_html %>% rvest::html_nodes("body")
     text <- html_text(test)
@@ -35,11 +44,13 @@ for(i in sites$id[from:to]){
     ## writeLines(example, "example.txt")
     if(text != ""){ ## test if empty source
         writeLines(text, "temp.txt")
-        if(i == 98040){
-            incomplete <- readLines("temp.txt", n = 376019) ## line 376020 incomplete
-            writeLines(incomplete, "temp.txt")
-            message(paste0(i, " has an incomplete line"))
-        }
+
+        ## if(i == 98040){
+        ##     incomplete <- readLines("temp.txt", n = 376019) ## line 376020 incomplete
+        ##     writeLines(incomplete, "temp.txt")
+        ##     message(paste0(i, " has an incomplete line"))
+        ## }
+        
         ##     if(i == 74180){
         ##             incomplete <- readLines("temp.txt", n = 375805) ## line 375806 did not have 4 elements
         ##     writeLines(incomplete, "temp.txt")
