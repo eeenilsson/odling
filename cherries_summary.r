@@ -219,7 +219,7 @@ for(i in 1:nrow(bt_wide_curated)){
 }
 res <- as.data.table(res)
 names(res) <- cols_loop
-res
+## res
 cols_new <- cols[!cols %in% c(cols_loop,  "incompatibility_group", "bgr")]
 cols_new <- c("var", cols_new)
 tmp <- bt_wide_curated[, ..cols_new]
@@ -254,10 +254,12 @@ cols45 <- c("label", "genotype",  "blooming_group", cols45)
 bg45 <- bg45[, ..cols45]
 write.csv(bg45, "bg45.csv", row.names = FALSE)
 
-
+bt_wide_curated_bt <- bt_wide_curated[, .(var, genotype, blooming_group)]
 ## Save for site
 cols <- cols[!cols == "var"] ## drop var
+cols <- cols[cols %in% names(bt_wide_curated)] ## drop vars not in _curated
 bt_wide_curated <- bt_wide_curated[, ..cols]
+
 write.csv(bt_wide_curated, "bt_wide_curated.csv", row.names = FALSE)
 varnames3 <- c(varnames3, c('label' = "Sort", 'genotype' = "Haplotyp", 'blooming_group' = "Blomningsgrupp"))
 saveRDS(varnames3, "varnames3.rds") 
@@ -382,12 +384,15 @@ write.csv(ros_phenology_aggr_curated, "ros_phenology_aggr_curated.csv", row.name
 
 ## dt[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = unname(query_label(levels(pollinator), varnames)))]
 
-## collected data
-cherries_table <- read.csv("cherries_table.csv")
-cols <- c("label", "type", "zone", "size", "maturity_rank", "sweet", "sour", "firm", "pulp_color", "skin_color", "good_taste", "sylt", "eplanta"
+## collected data -------------
+cherries_table <- fread("cherries_table.csv")
+cherries_table <- bt_wide_curated_bt[cherries_table, on = "var"] ## add blooming_group
+
+cols <- c("label", "genotype", "type", "zone", "blooming_group", "size", "maturity_rank", "sweet", "sour", "firm", "pulp_color", "skin_color", "good_taste", "sylt", "eplanta"
 )
-cherries_table <- cherries_table[, names(cherries_table) %in% cols]
-str(cherries_table)
+
+cherries_table <- cherries_table[, ..cols]
+## str(cherries_table)
 
 ## factor levels
 cherries_table$type <- factor(cherries_table$type, ordered = FALSE, levels = c("sour", "sweet"), labels = c("Sur", "Söt"))  ## Todo: Tag med buskkörsbär här
@@ -423,7 +428,7 @@ cherries_table$skin_color <- factor(
 )
 
 ## column labels
-tmp <- c('label' = "Sort", 'type' = "Typ", 'eplanta' = "Eplanta", 'zone' = "Zon", 'size' = "Storlek", 'maturity_rank' = "Mognad", 'sweet' = "Sötma", 'sour' = "Syra", 'firm' = "Fasthet", 'pulp_color' = "Kött", 'skin_color' = "Färg", 'good_taste' = "God", 'sylt' = "Sylt")
+tmp <- c('label' = "Sort", 'genotype' = "Haplotyp", 'type' = "Typ", 'eplanta' = "Eplanta", 'zone' = "Zon", 'blooming_group' = "Blomning", 'size' = "Storlek", 'maturity_rank' = "Mognad", 'sweet' = "Sötma", 'sour' = "Syra", 'firm' = "Fasthet", 'pulp_color' = "Kött", 'skin_color' = "Färg", 'good_taste' = "God", 'sylt' = "Sylt")
 names(cherries_table) <- query_label(names(cherries_table), tmp)
 
 write.csv(cherries_table, "cherries_table_curated.csv", row.names = FALSE)

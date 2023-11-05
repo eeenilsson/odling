@@ -69,7 +69,7 @@ Varje flik visar sorter som blommar i samma **eller föregående** blomningsgrup
 
 Tabellen kan filtreras genom att skriva sökord i rutan under kolumnernas rubriker. Vill du söka efter flera saker samtidigt använd "|" mellan sökorden. Tex ger "van|swe" i kolumnen "Sort" träffar på 'Van' och 'Sweetheart'.
 
-Genetisk kompatibilitet är visat med en stor bokstav. "A" betyder helt komatibel, "B" betyder delvis kompatibel och "0" betyder **icke-**kompatibel.
+Genetisk kompatibilitet är visat med en stor bokstav. "A" betyder helt kompatibel, "B" betyder delvis kompatibel och "0" betyder **icke-**kompatibel.
 
 Närhet i blomningstid visas med "+" eller "-". Ett "+" betyder att pollinatören ligger en blomningsgrupp bort. Två "++" att de är i samma blomningsgrupp.
 

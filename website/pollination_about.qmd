@@ -2,9 +2,14 @@
 title: "Pollination"
 ---
 
-Nedan föjer en sammanfattning om vad pollination är och en fördjupning om hur det fungerar för körsbärsträd.
+::: {layout-ncol=2}
 
-Många _sötkörsbär_ kan inte befruktas av individer från samma sort utan käver pollen från en annan sort för att bära frukt. För att detta skall vara möjligt måste de båda sorterna vara genetiskt kompatibla. Dessutom behöver de blomma samtidigt. 
+Nedan föjer en sammanfattning om vad pollination är och en fördjupning om hur det fungerar för körsbärsträd.<br><br>Många _sötkörsbär_ kan inte befruktas av individer från samma sort utan käver pollen från en annan sort för att bära frukt. För att detta skall vara möjligt måste de båda sorterna vara genetiskt kompatibla. Dessutom behöver de blomma samtidigt. 
+
+![Humla på körsbärsblomma](../../dropbox/images/plants/pollination_bumblebee.jpg){width=40%}
+
+:::
+
 
 # Introduktion
 
