@@ -6,3 +6,4 @@ pacman::p_load(quarto)
 quarto_render('website')
 ## getwd()
 ## quarto_render('test_presentation.qmd')
+## Note.
