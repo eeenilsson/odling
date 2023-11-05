@@ -10,13 +10,16 @@ sites$name <- factor(sites$name)
 ## Data on airtemp measuring sites sweden
 length(sites$id) ## 920 sites
 
-chunks <- c(0, 100, 200, 300, 400, 500, 600, 700, 800, 900, length(sites$id))
+chunks <- c(0, 100, 200, 300, 400, 500, 600, 700, 800, 900)
 
+chunks <- c(0, 100, 120)
+
+## n <- 1
 for(n in chunks){
 ## loop over site id to get data
 smhi_airtemp <- data.table(date = NA, time = NA, temp = NA, quality = NA, id = NA)
-    from <- chunks[n]+1
-    to <- chunks[n]
+    from <- chunks[n]+1    
+    to <- ifelse(n == max(chunks), length(sites$id), chunks[n+1])
 for(i in sites$id[from:to]){
     ## i <- "98040"
     ## i <- 66420
@@ -51,7 +54,7 @@ for(i in sites$id[from:to]){
         smhi_airtemp <- rbind(smhi_airtemp, result)
     }
 }
-?saveRDS(obj, file)
+saveRDS(smhi_airtemp, paste0("smhi_airtemp_", to, ".rds"))
     }
 
 ## join with sites info
