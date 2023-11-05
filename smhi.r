@@ -6,16 +6,21 @@ pacman::p_load(rvest, data.table)
 ## sites info
 sites <- fread("metobs_airtemp_sites.csv")
 names(sites) <- c("id", "name", "lat", "long", "alt", "active")
+sites$name <- factor(sites$name)
 ## Data on airtemp measuring sites sweden
+length(sites$id) ## 920 sites
 
+chunks <- c(0, 100, 200, 300, 400, 500, 600, 700, 800, 900, length(sites$id))
+
+for(n in chunks){
 ## loop over site id to get data
 smhi_airtemp <- data.table(date = NA, time = NA, temp = NA, quality = NA, id = NA)
-
-length(sites$id)
-
-for(i in sites$id[1:500]){
+    from <- chunks[n]+1
+    to <- chunks[n]
+for(i in sites$id[from:to]){
     ## i <- "98040"
-    i <- 125490
+    ## i <- 66420
+    ## i <- 125490
     ## Error in read.table("temp.txt", sep = ";") : no lines available in input
     message(i)
     link <- paste0("https://opendata-download.smhi.se/stream?type=metobs&parameterIds=1&stationId=", i, "&period=corrected-archive")
@@ -26,22 +31,32 @@ for(i in sites$id[1:500]){
     ## example <- "1858-12-05;13:00:00;1.4;G\n1858-12-05;20:00:00;0.6;G\n1858-12-06;07:00:00;0.8;G\n"
     ## writeLines(example, "example.txt")
     if(text != ""){ ## test if empty source
-    writeLines(text, "temp.txt")    
-if(i == 98040){
-    incomplete <- readLines("temp.txt", n = 376019) ## line 376020 incomplete
-    writeLines(incomplete, "temp.txt")
-    message(paste0(i, " has an incomplete line"))
-}    
-result <- read.table("temp.txt", sep = ";")
-    names(result) <- c("date", "time", "temp", "quality")
-    result$id <- i
-    smhi_airtemp <- rbind(smhi_airtemp, result)
+        writeLines(text, "temp.txt")
+        if(i == 98040){
+            incomplete <- readLines("temp.txt", n = 376019) ## line 376020 incomplete
+            writeLines(incomplete, "temp.txt")
+            message(paste0(i, " has an incomplete line"))
+        }
+        ##     if(i == 74180){
+        ##             incomplete <- readLines("temp.txt", n = 375805) ## line 375806 did not have 4 elements
+        ##     writeLines(incomplete, "temp.txt")
+        ##     message(paste0(i, " has an incomplete line"))
+
+        ## } ## Note: using fill = TRUE instead. Seems to be last line
+        result <- read.table("temp.txt", sep = ";", fill = TRUE)
+        names(result) <- c("date", "time", "temp", "quality")
+        ## result[376090:376094, ]
+        ## nrow(result)
+        result$id <- i
+        smhi_airtemp <- rbind(smhi_airtemp, result)
     }
 }
-
+?saveRDS(obj, file)
+    }
 
 ## join with sites info
-smhi_airtemp_curated_1 <- sites[smhi_airtemp, on = "id"]
+## Note: only add label to reduce size of data?
+smhi_airtemp_curated_1 <- sites[, .(id, name)][smhi_airtemp, on = "id"]
 saveRDS(smhi_airtemp_curated_1, "smhi_airtemp_curated_1.rds")
 ## 206
 
