@@ -10,8 +10,13 @@ names(sites) <- c("id", "name", "lat", "long", "alt", "active")
 
 ## loop over site id to get data
 smhi_airtemp <- data.table(date = NA, time = NA, temp = NA, quality = NA, id = NA)
-for(i in sites$id[1:10]){
+
+length(sites$id)
+
+for(i in sites$id[1:500]){
     ## i <- "98040"
+    i <- 125490
+    ## Error in read.table("temp.txt", sep = ";") : no lines available in input
     message(i)
     link <- paste0("https://opendata-download.smhi.se/stream?type=metobs&parameterIds=1&stationId=", i, "&period=corrected-archive")
     page_html <- rvest::read_html(link)
@@ -20,24 +25,25 @@ for(i in sites$id[1:10]){
     text <- gsub("^.* Dessa levereras ej..", "", text) ## remove intro
     ## example <- "1858-12-05;13:00:00;1.4;G\n1858-12-05;20:00:00;0.6;G\n1858-12-06;07:00:00;0.8;G\n"
     ## writeLines(example, "example.txt")
-    writeLines(text, "temp.txt")
-    
+    if(text != ""){ ## test if empty source
+    writeLines(text, "temp.txt")    
 if(i == 98040){
     incomplete <- readLines("temp.txt", n = 376019) ## line 376020 incomplete
     writeLines(incomplete, "temp.txt")
     message(paste0(i, " has an incomplete line"))
-}
-    
+}    
 result <- read.table("temp.txt", sep = ";")
     names(result) <- c("date", "time", "temp", "quality")
     result$id <- i
     smhi_airtemp <- rbind(smhi_airtemp, result)
+    }
 }
 
 
 ## join with sites info
-smhi_airtemp_curated <- sites[smhi_airtemp, on = "id"]
-
+smhi_airtemp_curated_1 <- sites[smhi_airtemp, on = "id"]
+saveRDS(smhi_airtemp_curated_1, "smhi_airtemp_curated_1.rds")
+## 206
 
 is.data.table(smhi_airtemp_curated)
 x
