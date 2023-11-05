@@ -395,7 +395,7 @@ cherries_table <- cherries_table[, ..cols]
 ## str(cherries_table)
 
 ## factor levels
-cherries_table$type <- factor(cherries_table$type, ordered = FALSE, levels = c("sour", "sweet"), labels = c("Sur", "Söt"))  ## Todo: Tag med buskkörsbär här
+cherries_table$type <- factor(cherries_table$type, ordered = FALSE, levels = c("sour", "sweet"), labels = c("Cerasus", "Avium"))  ## Todo: Tag med buskkörsbär här
 
 cherries_table$sylt <- factor(cherries_table$sylt, ordered = TRUE, levels = c(0:2), labels = c("Nej", "Kanske", "Ja"))
 
@@ -417,14 +417,14 @@ cherries_table$pulp_color <- factor(
     cherries_table$pulp_color,
     ordered = TRUE,
     levels =  c("", "yellow_white", "yellow", "orange", "light_red", "red", "dark_red"),
-    labels =  c("", "Gulvitt", "Gult", "Orange", "Röd ljus", "Röd", "Röd mörk")            
+    labels =  c("", "Gulvitt", "Gult", "Orange", "Ljusrött", "Rött", "Mörkrött")            
 )
 
 cherries_table$skin_color <- factor(
     cherries_table$skin_color,
     ordered = TRUE,
     levels =  c("yellow", "yellow_red", "red", "dark_red"),
-    labels =  c("Gult", "Gulrött", "Rött", "Rött mörkt"),    
+    labels =  c("Gul", "Gulröd", "Röd", "Mörkröd"),    
 )
 
 ## column labels

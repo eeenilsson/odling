@@ -23,7 +23,7 @@ Hos vissa arter kan individerna befrukta sig själva, vissa kräver att pollen k
 
 Vardagligt brukar man med "korspollination" mena att en viss sort av körsbär (tex _Prunus avium_ 'Merton Glory') måste pollineras av en annan sort (tex _Prunus avium_ 'Allmän gulröd bigarrå') för att bära frukt. Dessa sorter kallas ibland "självsterila". Se sidan om [terminologi](terminology.qmd) för detaljer.
 
-En sort som _kan_ pollineras av samma sort brukar kallas "självfertil" (tex _Prunus avium_ 'Gårdebo'). De flesta surkörsbär är självfertila. Skörd och kvalitet brukar dock bli bättre även för dessa sorter om de pollineras av andra sorter.
+En sort som _kan_ pollineras av samma sort brukar kallas "självfertil" (tex _Prunus avium_ 'Stella'). De flesta surkörsbär är självfertila. Skörd och kvalitet brukar dock bli bättre även för dessa sorter om de pollineras av andra sorter.
 
 ## Grundläggande begrepp
 
