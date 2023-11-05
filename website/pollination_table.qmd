@@ -7,7 +7,7 @@ execute:
 Schemat tar hänsyn till genetisk kompatibilitet och närhet i blomningstid. Motsvarande information finns också i sökbara tabeller längre ner.
 
 ::: {.column-screen}
-![](../../../dropbox/images/plants/plot_pollination_table.png)
+![](../../dropbox/images/plants/plot_pollination_table.png)
 :::
 
 # Instruktioner

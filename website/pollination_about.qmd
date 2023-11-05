@@ -28,7 +28,7 @@ Bilden nedan visar namnen på blommans olika delar.
 
 <!-- ![Blommans delar](../../dropbox/images/plants/flower_parts_svenska.jpg) -->
 
-![Blommans delar](../../../dropbox/images/plants/flower_parts_svenska.jpg)
+![Blommans delar](../../dropbox/images/plants/flower_parts_svenska.jpg)
 
 <!-- Works for rendering project, see https://github.com/quarto-dev/quarto-cli/discussions/6028 -->
 

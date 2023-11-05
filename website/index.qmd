@@ -11,10 +11,11 @@ Ord i texten som är _kursiverade_ återfinns i avsnittet [Ordbok](terminology.q
 
 Genus (släkte): _Prunus_ (plommon, körsbär mfl)<br><br>Subgenus (undersläkte): _Prunus subg. Cerasus_ (körsbär)<br><br>Species (art): _Prunus cerasus_ ("surkörsbär") och _Prunus avium_ ("sötkörsbär")<br><br>Det finns många sorter av körsbär, både naturligt framkorsade i det vilda och sådana som är skapade genom medveten växtförädling. Benämningen av olika typer av körsbär kan vara förvirrande, är inte enhetlig och har varierat genom tiderna. Se  [här](terminology.qmd) för mer om det.<br><br>En sort benämns företrädesvis med artnamn och sortnamn, tex _Prunus avium_ 'Merton Glory'. Dock används i praktiken samma namn för sorter som är genetiskt olika och tvärtom kan [sorter som är genetiskt lika benämnas olika](https://pub.epsilon.slu.se/8732/7/nybom_et_al_120419.pdf). 
 
-![Prunus Cerasus](../../../dropbox/images/plants/prunus_cesarus.jpg){width=40%}
+<!-- ![Prunus Cerasus](../../../dropbox/images/plants/prunus_cesarus.jpg){width=40%} -->
 
 ![Prunus Cerasus](../../dropbox/images/plants/prunus_cesarus.jpg){width=40%}
 
+<!-- Note: ../../dropbox/   works for github pages -->
 
 :::
 
