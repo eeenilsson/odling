@@ -67,8 +67,11 @@ for(i in sites$id[from:to]){
         smhi_airtemp <- rbind(smhi_airtemp, result)
     }
 }
+    smhi_airtemp <- smhi_airtemp[!is.na(date), ]
     saveRDS(smhi_airtemp, paste0("smhi_airtemp_", to, ".rds"))
     }
+
+## test <- readRDS("smhi_airtemp_20.rds")
 
 ## join with sites info
 ## Note: only add label to reduce size of data?
