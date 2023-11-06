@@ -10,7 +10,7 @@ source('cherries_phenology.r') ## Rosbreed
 
 ## Compatibility ----------------------
 source('cherry_compatibility.r')  ## read S-allele data
-source('genotype_syn.r')  ## aggregate some synonyms
+source('synonyms.r')  ## aggregate some synonyms
 
 ## Summary --------------------
 source('cherries_summary.r')

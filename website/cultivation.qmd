@@ -4,23 +4,110 @@ title: "Odling"
 
 ## Plantering
 
-Gropen: Gräv en stor grop. Se till att jordkvaliteten är god även runt gropen.
+**När**: Krukodlade träd (då de har intakta rötter) kan planteras när som helst så länge marken inte är frusen. Hösten ända fram till vintern är en bra tid. Då börjar rötterna växa när det på våren blir några värmegrader i jorden. Trädet kan då rota sig tidgt på odlingssäsongen. 
 
-Gödsling vid plantering: <!-- ?Gödslas med kvävefattig gödsel, t.ex. Algomin Trädgårdsgödsel. -->
+**Var**:
+  
+- Jordtyp: 
+  
+    - Väldränerad, medelfuktig och lucker jord (för att rötterna skall kunna etablera sig och sedan undvika att stå alltför blött). 
+  
+  - Undvik att plantera på mycket tunga lerjordar (kompakt, blött).
+  
+  - Ungefär neutralt pH. 
+  
+  - Gärna mullrik, kalkrik jord.
+    
+- Läge: Soligt, för att ge bra med frukt. Sex till åtta timmars bra solljus behövs. Om platsen är i skugga före kl 16 vid midsommar är den troligen för skuggig.
 
-När:
+**Sur**körsbär klarar blötare jordar bättre än sötkörsbär (men de föredrar väldränerade). De klarar sig vanligen också bra i halvskugga.
 
-Läge: Sötkörsbär föredrar ett läge med mycket sol. Surkörsbär kan klara sig i halvskugga. 
+Beroende på _grundstam_ ...
 
-Jord, fuktighet: Helst väldänerad, medelfuktig jord. Surkörsbär klarar blötare jordar bättre än sötkörsbär (men föredrar väldränerade). Kan också bero på grundstam. 
+**Hur**:
 
-Jord, typ: Gärna mullrik, kalkrik.
+Principen är att rötterna skall ha lucker, väldränerad jord att växa i och att rotstammen skall hamna ovan marknivå även efter att jorden sjunkit ihop.
 
-pH: Både söt- och surkörsbär föredrar neutralt pH.
+  1. Ställ roten i vatten en stund innan den planteras.
+  2. Gräv en grop, minst 1.5 m diameter, djup 40-50 cm.
+  3. Luckra upp botten och sidorna.
+  4. Blanda den befintliga jorden med tex planteringsjord (ej djupare än 50 cm).
+  5. Ordna så att rothalsen hamnar ca 10 cm högre än **omgivande** marknivå, så att det finns sjunkmån. Den bör även vara 5-10 cm ovan jordytan i planteringsgropen.
+  6. Lägg gärna mineraljord (grus eller sand) som rotsystemet kan stå på.
+  7. Luckra upp rötterna med fingrarna.
+  8. Placera trädet i gropen.
+  9. Fyll på med jord till två tredjedelar av klumpens höjd och trampa till den. Fyll sedan på med mer jord och trampa till.
+  10. Vattna ordentligt och låt vattnet sjunka undan. 
+  11. Bind upp trädet till en eller två trästörar. Använd ett bindmaterial som inte skaver i barken när trädet svajar.
+  12. Sätt på gnagskydd.
 
-Beskärning vid plantering:
+Om det samlas vatten i botten av den 50-60 cm djupa gropen kan du göra en ordentlig kulle (så att det blir 50-cm ner till vattennivån) för trädet att växa i.
+
+**Varför man bör undvika att plantera för djupt:**
+
+  - Rothalsen är känslig för balterie- och svampangrepp. 
+  
+  - Om jorden sjunker bildas en grop där vatten kan samlas och på vintern frysa och skada stammen. 
+  
+  - Jord med hög mullhalt sjunker ihop (torv, kompost, och annat organiskt material bryts ner med tiden). 
+  
+  - Organiskt material som hamnar mer än ca 50 cm under marjytab bryts ner utan tillgång till syre.
+
+
+Gödsling vid plantering: <!-- ?Gödslas med kvävefattig gödsel, t.ex. Algomin Trädgårdsgödsel. --> 
+
+## Etableringsbeskärning
+
+**Varför**:
+
+Rotsystemet är vid plantering i underutvecklat i förhållande till kronan. Etableringsbeskärningen gör att rotsystemet får möjlighet att komma ikapp och bli tillräckligt stort för att kunna försörja grenarna med vatten och näring. Det är också viktigt att trädets resurser satsas på ett mindre antal starka knoppar med rätt placering. Risken är annars att trädet blir glest och spretigt, får dålig tillväxt och få skott.
+
+**När**:
+
+Etableringsbeskärning beskärning kan göras direkt vid vårplantering (vissa menar att man bör vänta till efterföljande vår). Den görs alltid på våren innan knopparna har börjat slå ut. Även de träd som planterats på hösten etableringsbeskärs på våren. Vid beskärning på sommaren stimuleras nämligen inte tillväxten på samma vis.
+
+<!-- Etableringsbeskärning av plommon och körsbär utförs också på våren. -->
+
+Om trädet som planteras är 5-6 år har plantskolan redan gjort en beskärning, då räcker det att vid plantering ta bort skadade grenar.
+
+**Hur**:
+
+- Börja med att klippa bort eventuella konkurrensskott/dubbelgrenar.
+- Korta ner årsskotten. <!-- så att trädets krona efter beskärningen bildar en smal pyramid.  -->
+  - Lämna ca 60 % av toppskottet och ca 40 % av sidoskotten. 
+- Små svaga årsskott skärs bort helt. 
+- När du skär av ett ungt skott spara ca 0,5 cm ovanför den sista knoppen, för att knoppen skall undvika att torka in.
+- Den nya tillväxten kommer att ske i den riktning den yttersta knoppen sitter.
+- Följ trädets utveckling under uppväxttiden.
+- Plommon och körsbär beskärs så lite som möjligt efter etableringsbeskärningen. 
+  - Man tar främst bort grenar som växer inåt i kronan eller som skaver på andra grenar. 
+  - Årsskotten på äpple och päron kortas in de första åren och konkurrensskott tas bort.
+  
+## Skötsel de första åren
+
+Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. 
+
+- Vattna minst en gång i veckan (men inte dagligen) hela första sommaren. Även en kraftig regnskur ger inte tillräckligt med vatten för att det skall tränga ner ordentligt till rötterna.
+
+- Kontrollera att jorden är fuktig ner till 15-20 cm, gräv ett hål och känn efter.
+
+- Håll undan gräs och ogräs runt trädet, de konkurrerar om vatten.
+
+- Inspektera för angrepp av sjukdomar eller insekter.
+
+- Beroende på _grundstam_ behöver trädet fortsatt stöd av en stör de första åren eller hela livet.
+
+- Kontrollera hur årsskotten växer. Om de stannar i tillväxt tidigt under sommaren beror det vanligen på för litet vatten, svampangerepp eller näringsbrist. Tillskott av kalk och kompost år 1-2 kan hjälpa.
+
+-  Tag bort alla utom två till fyra fruktknippor det första året. detta hjälper trädet att satsa på rottillväxt.
+
 
 ## Näring
+
+- Unga träd har nytta av gödsel de första tre åren (längre i sand- eller grusjord) för att stimulera tillväxt. Helst näring soim är anpassad för fruktträd. 
+
+- Om jordens pH är för lågt (< 6.0) kan trädet ha svårt att ta upp näring. Årlig kalktillförsel kan då användas för att höja pH.
+
 
 Trädgårdsgödsel.
 

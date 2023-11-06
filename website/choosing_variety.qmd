@@ -222,6 +222,7 @@ För en grundstam kan anges till vilken % av standardträdets höjd (det som ymp
 - En hybrid mellan _Prunus cerasus_ (surkörsbär) and _Prunus canascens_.
 - Ger mindre träd än colt.
 - Höjden blir ca 3 m efter 5 år. Sluthöjden varierar beroende på körsbärssort, 2.5-3  m (40-50% av standard). Kan hållas till 2 m med beskärning.
+- Placera träden 2.5-3 m ifrån varandra om denna grundstam används.
 - Behöver stödpåle hela livet.
 - Ger frukt efter 1-2 år.
 - God härdighet (ymplingen avmognar tidigt).
@@ -230,6 +231,9 @@ För en grundstam kan anges till vilken % av standardträdets höjd (det som ymp
 - Klarar hård vinterkyla bätre än Colt.
 - Lägre träd (ökar risken för frosstkada).
 - Zon 1-4(5).
+
+<!-- On Gisela 5 rootstock, space the trees 8′-10′ apart. A free-standing sweet cherry on Gisela 5 can be managed at a height of 9′-10′. Tart cherries can be managed at 8′ on Gisela 5. -->
+
 
 <!-- 35% av av Prunus avium, blir 3,5-4,5 m  -->
 
