@@ -264,6 +264,53 @@ För en grundstam kan anges till vilken % av standardträdets höjd (det som ymp
 
 # Beskrivning av sorter
 
+## Lista synonymer
+
+Många körsbär kallas med olika namn. Nedan finns en sökbar lista med synonymer. Varje kolumn kan filtreras med sökord. För att söka efter flera ord skriv "|" mellan dem.
+
+```{r } 
+#| label: tbl-synonyms
+#| tbl-cap: "Synonymer"
+#| warning: false
+
+library(reactable)
+
+genotype_syn <- read.csv("../genotype_syn.csv")
+genotype_syn <- genotype_syn[, -1] ## remove "var"
+
+reactable(genotype_syn,
+          filterable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              header = c("Sort", "Haplotyp", "Synonym", "Notering")
+              align = "center",
+              minWidth = 30,
+              filterMethod = JS("function(rows, columnId, filterValue) {
+        const pattern = new RegExp(filterValue, 'i')
+        
+        return rows.filter(function(row) {
+          return pattern.test(row.values[columnId])
+        })
+      }")
+          ),
+          columns = list(
+              Sort = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+
+``` 
+
+ 
+
 ## Några intressanta sorter
 
 <!-- "Similarly, we find it necessary to suggest exceptional potential of combining mid-late flowering cultivars whose flowering period overlaps with that of the majority of other cultivars. Some earlier investigations point to high in vitro pollen germination in some of these cultivars − ‘Van’, ‘Compact Stella’ (CEROVIĆ et al., 2003), and in self-compatible ‘Sunburst’ and ‘Lapins’ (RADIČEVIĆ et al., 2008).  On the other hand, cultivars classified as those with extreme flowering period cannot be recommended as suitable pollenisers among these groups. ‘insufficient overlap in some seasons’ can be suitable in some seasons and localities, though the risk of insufficient overlap in full flowering remains. This can particularly be emphasized when relatively low temperatures occurring over the period of flowering onset in sweet cherry markedly postpone flowering onset in late flowering cultivars." -->

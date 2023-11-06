@@ -191,6 +191,7 @@ variety_genotype_group[, label := variety]
 variety_genotype_group[, label := gsub("\\([^$]*", "", label)]
 variety_genotype_group[, label := gsub("TM[^$]*", "", label)]
 variety_genotype_group[, label := gsub(" $", "", label)]
+variety_genotype_group[, label := gsub(" \\\n", "", label)]
 ## variety_genotype_group[, unique(label)]
 
 ## redundant:
@@ -454,118 +455,5 @@ setkey(dtplot, target)
 ## variety_genotype_group[grepl("Lapins|Van|Stella", variety), .(variety, genotype, incompatibility_group, mother, father)]
 
 ## Rosbreed har en xls med S-gruppe också: https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility
-
-
-## Synonyms -----
-
-## Add manually entered synonyms from cherries_table.csv
-cherries_table <- fread("cherries_table.csv")
-tmp <- cherries_table[, .(var, label_syn)]
-variety_genotype_group <- tmp[variety_genotype_group, on = "var"]
-variety_genotype_group[, syn := paste0(syn, ", ", label_syn)]
-variety_genotype_group[, label_syn := NULL]
-variety_genotype_group[, syn := gsub(", NA$", "", syn)]
-variety_genotype_group[, syn := stringr::str_trim(syn)]
-variety_genotype_group[, syn := gsub("^, ", "", syn)]
-variety_genotype_group[, syn := gsub("^,$", "", syn)]
-
-## fix spelling errors
-variety_genotype_group[, variety := gsub("Schneider Späte Knorpelkirsche", "Schneiders Späte Knorpelkirsche", variety)] 
-variety_genotype_group[, syn := gsub("Schneider Späte Knorpelkirsche", "Schneiders Späte Knorpelkirsche", syn)] 
-
-## syn2
-variety_genotype_group[ , syn2 := paste0(syn, ", ", label)]
-variety_genotype_group[ , syn2 := gsub("$, ", "", syn2)]
-
-## ## explore
-cols <- c("var", "variety", "syn", "genotype", "label") ## , "genotype"
-## variety_genotype_group[grepl("schne", tolower(variety)), ..cols]
-
-## aggregate those whit the same name, adding label to syn
-variety_genotype_group[, var2 := var]
-
-## schneiders ---------
-select_syn <- variety_genotype_group[grepl("schne", tolower(variety)), ..cols][, var]
-select_syn <- paste0(select_syn, collapse = "|")
-
-## variety_genotype_group[grepl(select_syn, var), syn2 := paste0(syn, ", ", label)]
-
-## check
-cols <- c(cols, "syn2", "var2")
-variety_genotype_group[grepl(select_syn, var), ..cols]
-
-## manually enter var name
-variety_genotype_group[grepl(select_syn, var), var2 := "schneiders_spate_knorpelkirsche"]
-
-## collapse synonyms
-myfun <- Vectorize(paste0)
-variety_genotype_group[grepl(select_syn, var), syn2 := myfun(syn2, collapse = ", ")]
-variety_genotype_group[ , syn2 := gsub("^, ", "", syn2)]
-
-## mark for deletion
-variety_genotype_group[, var_keep := TRUE]
-variety_genotype_group[grepl(select_syn, var), var_keep := grepl(paste0(cherries_table$var, collapse = "|"), var)]
-
-## check
-## cols <- c(cols, "var_keep")
-## variety_genotype_group[grepl(select_syn, var), ..cols]
-## variety_genotype_group[1:4, ..cols]
-
-variety_genotype_group[grepl("emperor|kaiser", tolower(syn2)), ..cols]
-## ## Note: Kaiser franz exists with different haplotype
-##  genotype                           label
-## 1:      S3S4                 Emperor Francis
-## 2:      S1S2               Emperor Francis B
-## 3: S2S4/S3S4                    Kaiser Franz
-## todo: remove from synonyms of schneiders?
-
-## ?? ---------
-
-## Long list of cherries with synonyms: http://www.chathamapples.com/CherriesNY/TCNYIndex.htm#INDEX
-## Annonayer Herzkirsche (syn. of Annonay),
-## Annonay: A Heart cherry mentioned in 1882 as a promising new fruit because of its extreme earliness and excellent quality. This variety, introduced by Thomas Rivers & Son, Sawbridgeworth, England, should not be confused with an older French sort often known by the same name but of a reddish-brown color. 
-## Guigne d'Annonay (syn. of Guinge la Plus Hative)
-## Bigarreau Empereur-Francois (syn. of Emperor Francis)
-## Kaiser Franz Josef (syn. of Emperor Francis)
-
-## explore
-cols <- c("var", "variety", "syn", "genotype", "label") ## , "genotype"
-variety_genotype_group[grepl("späte rote|heinr", tolower(syn2)), ..cols]
-## note: aggregate buttners
-
-variety_genotype_group[grepl("emperor|kaiser", tolower(syn2)), ..cols]
-
-
-
-select_syn <- variety_genotype_group[grepl("schne", tolower(variety)), ..cols][, var]
-select_syn <- paste0(select_syn, collapse = "|")
-
-variety_genotype_group[grepl(select_syn, var), syn2 := paste0(syn, ", ", label)]
-
-## check
-cols <- c(cols, "syn2", "var2")
-variety_genotype_group[grepl(select_syn, var), ..cols]
-
-## manually enter var name
-variety_genotype_group[grepl(select_syn, var), var2 := "schneiders_spate_knorpelkirsche"]
-
-## collapse synonyms
-myfun <- Vectorize(paste0)
-variety_genotype_group[grepl(select_syn, var), syn2 := myfun(syn2, collapse = ", ")]
-variety_genotype_group[ , syn2 := gsub("^, ", "", syn2)]
-
-## mark for deletion
-variety_genotype_group[, var_keep := TRUE]
-variety_genotype_group[grepl(select_syn, var), var_keep := grepl(paste0(cherries_table$var, collapse = "|"), var)]
-
-## check
-cols <- c(cols, "var_keep")
-variety_genotype_group[grepl(select_syn, var), ..cols]
-variety_genotype_group[1:4, ..cols]
-
-
-
-
-variety_genotype_group[grepl("skugg", tolower(variety)), ..cols]
 
 
