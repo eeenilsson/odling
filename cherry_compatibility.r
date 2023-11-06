@@ -461,18 +461,43 @@ setkey(dtplot, target)
 ## Add manually entered synonyms from cherries_table.csv
 cherries_table <- fread("cherries_table.csv")
 tmp <- cherries_table[, .(var, label_syn)]
-
 variety_genotype_group <- tmp[variety_genotype_group, on = "var"]
 variety_genotype_group[, syn := paste0(syn, ", ", label_syn)]
-variety_genotype_group[, syn := gsub(", NA$", "", syn)]
 variety_genotype_group[, label_syn := NULL]
+variety_genotype_group[, syn := gsub(", NA$", "", syn)]
+variety_genotype_group[, syn := stringr::str_trim(syn)]
 
+## fix spelling errors
+variety_genotype_group[, variety := gsub("Schneider Späte Knorpelkirsche", "Schneiders Späte Knorpelkirsche", variety)] 
 
-
-
-cols <- c("var", "variety", "syn", "genotype") ## , "genotype"
+## explore
+cols <- c("var", "variety", "syn", "genotype", "label") ## , "genotype"
 variety_genotype_group[grepl("schne", tolower(variety)), ..cols]
+
+## aggregate those whit the same name, adding label to syn
+variety_genotype_group[, var2 := var]
+
+## schneiders
+select_syn <- variety_genotype_group[grepl("schne", tolower(variety)), ..cols][, var]
+
+variety_genotype_group[grepl(paste0(select_syn, collapse = "|"), var), syn2 := paste0(syn, ", ", label)]
+
+cols <- c(cols, "syn2", "var2")
+variety_genotype_group[grepl(paste0(select_syn, collapse = "|"), var), ..cols]
+
+## manually enter var name
+variety_genotype_group[grepl(paste0(select_syn, collapse = "|"), var), var2 := "schneiders_spate_knorpelkirsche"]
+
+
+
+## variety_genotype_group[grepl(paste0(select_syn, collapse = "|"), var), varn_index := grepl(paste0(cherries_table$var, collapse = "|"), var)]
+
+myfun <- Vectorize
+variety_genotype_group[grepl(paste0(select_syn, collapse = "|"), var), syn2 := paste0(syn2, collapse = ", ")]
+
 
 
 
 variety_genotype_group[grepl("skugg", tolower(variety)), ..cols]
+
+
