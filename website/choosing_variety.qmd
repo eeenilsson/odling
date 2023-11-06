@@ -190,6 +190,7 @@ Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okule
 - När trädet blommar
 - När trädet börjar bära frukt
 - Hur gammalt trädet kan bli
+- Motståndskrft mot sjukdomar och skadedjur.
 
 ## Olika grundstammar för körsbär
 
@@ -208,7 +209,7 @@ För en grundstam kan anges till vilken % av standardträdets höjd (det som ymp
 - Passar sämre för sorter med riklig produktion och leder då till små, defomerade bär. Man kan då avlägsa en del av blomknopparna för att minska problemet.
 <!-- - Colt is resistant to phytophthora root rot, bacterial canker, and stem-pitting, although is susceptive to crown gall.  -->
 - Colts vigör påverkas inte av virus, medan Gisela 5 har en något mindre vigör om det är virusdrabbat.
-- Ger frukt inom 1-2 år.
+- Ger frukt inom 1-2 (2-3?) år.
 - Klarar något sämre jord än Gisela 5.
 - Kräver stöd de första åren.
 - Grundstammen kan skadas vid hård vinter, men blommorna har mindre risk för frostskada.
@@ -219,12 +220,12 @@ För en grundstam kan anges till vilken % av standardträdets höjd (det som ymp
 
 **Gisela 5**
 
-- En hybrid mellan _Prunus cerasus_ (surkörsbär) and _Prunus canascens_.
+- En hybrid mellan _Prunus cerasus_ (surkörsbär) and _Prunus canascens_. "Giessen-serien".
 - Ger mindre träd än colt.
-- Höjden blir ca 3 m efter 5 år. Sluthöjden varierar beroende på körsbärssort, 2.5-3  m (40-50% av standard). Kan hållas till 2 m med beskärning.
+- Höjden blir ca 3 m efter 5 år. Sluthöjden varierar beroende på körsbärssort, 2.5-3  m (40-50% av standard). Kan hållas till 2 m med beskärning.<!-- Gisela 5 rootstock holds down growth to about 45 percent of a traditional full-size tree, Gisela 6 about 70 percent, and Gisela 7 about 50 percent.  -->
 - Placera träden 2.5-3 m ifrån varandra om denna grundstam används.
 - Behöver stödpåle hela livet.
-- Ger frukt efter 1-2 år.
+- Ger frukt efter 1-3 år (körsbär som inte är ympade vanligen 4-5 år).
 - God härdighet (ymplingen avmognar tidigt).
 - Ger tidigare blomning med några dagar, vilket kan öka risken för frosstkadade knoppar/blommor.
 - Tidigarelägger blomningen med några dagar och ökar därmed risken för froststkador.

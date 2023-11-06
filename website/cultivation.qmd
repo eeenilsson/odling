@@ -29,7 +29,7 @@ title: "Odling"
   
   - Gärna mullrik, kalkrik jord.
     
-- Läge: Soligt, för att ge bra med frukt. Sex till åtta timmars bra solljus behövs. Om platsen är i skugga före kl 16 vid midsommar är den troligen för skuggig.
+- Läge: Soligt, för att ge bra med frukt. Sex till åtta (8-10?) timmars direkt solljus behövs. Om platsen är i skugga före kl 16 vid midsommar är den troligen för skuggig.
 
 **Sur**körsbär klarar blötare jordar bättre än sötkörsbär (men de föredrar väldränerade). De klarar sig vanligen också bra i halvskugga.
 
@@ -65,7 +65,16 @@ Om det samlas vatten i botten av den 50-60 cm djupa gropen kan du göra en orden
   - Organiskt material som hamnar mer än ca 50 cm under marjytab bryts ner utan tillgång till syre.
 
 
-Gödsling vid plantering: <!-- ?Gödslas med kvävefattig gödsel, t.ex. Algomin Trädgårdsgödsel. --> 
+**Avstånd mellan träden**:
+
+- Om de beskärs buskliknande: 4.5 m
+
+- Om de beskärs i pyramidform: 3.5 m
+
+<!-- For fans and bush, the trees should be planted 15' apart and, for pyramid training in the open garden 12' apart.  -->
+
+
+<!-- ?Gödslas med kvävefattig gödsel, t.ex. Algomin Trädgårdsgödsel. --> 
 
 ## Etableringsbeskärning
 
@@ -151,15 +160,56 @@ Vattna rikligt under torra somrar.
 
 ## Beskärning
 
-Se etableringsbeskärning ovan.
+Se etableringsbeskärning ovan. Principen för fortsatt beskärning är att gynna utåtväxande grenar som bär frukt och undvika grenar med för snäv vinkel. Under de första åren formas trädet. Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första. Under de första åren avgörs också om trädet skall få en korgform (ger lägre träd) eller ha en genomgående huvudstam. Efter att "uppbyggnadsbeskärningen" har format trädet görs "underhållsbeskärning" där man tar bort döda eller skadade grenar.
 
-Det finns många olika sätt att beskära både sur- och sötkörsbär. Förutsatt att en vanlig grundstam används (som gör trädet mindre) kan följande metoder användas (?).
+<!-- Det ska beskäras under JAS-perioden (juli, augusti, september). Om trädet beskärs tidigare under året kan det drabbas av sjukdom. -->
+
+Körsbärsträd tål inte för hård beskärning. De är känsliga för röta efter beskärning. Överväg därför först hur mycket som behövs. Använd en vass och ren sekatör. Lägg snittet en bit ovanför en utåtriktad gren eller öga. Grenen växer dit ögat pekar. Beskärs trädet för hårt kan det bli "vattenskott" som inte bär frukt. Om du beskär vid stamen, låt grenkragen sitta kvar så läker det snabbare. Tag inte bort grenar som är tjockare än ett finger
+
+- Börja med att helt ta bort helt döda eller sjuka grenar.
+- De som växer rakt nedåt.
+- De som korsar varandra eller växer snett/inåt eller uppåt längs stammen, så att de inte växer in i kronan. 
+- Gallra uppåtväxande skott som sitter tätt.
+- Korta långa årsskott de första 4-5 åren, ger mer kompakt krona och undviker kala grenpartier.
+
+Under sensommar/höst gallras vattenskott (dessa bildas vid för hård beskärning eller annan stress), utan att tappar lämnas kvar. De kan användas för nya grenar om de sitter på en ung gren.
+
+<!-- https://svensktradgard.se/tradgardsrad/beskarning/beskara-frukttrad/ -->
+
+<!-- Äldre körsbär drabbas ofta av sjukdomen gummiflöde och beskärs därför lämpligast i JAS vid borttagning av grövre grenar. -->
+
+<!-- Vattenskott: När träd beskurits för kraftigt eller mår dåligt av någon anledning bildas s.k. vattenskott. Det är en slags panikreaktion i träden. De bildas i första hand i kärnfruktträd, stenfruktsträd har svårare att ersätta skadade grenar med denna typ av bildningar. Gallra vattenskotten under sommar höst. Ta bort alla skott i kronans centrum då de skuggar äldre grenar. I kronans yttre delar tas ca 1/3 av vattenskotten bort - resterande skott lämnas orörda. Detta måste följas upp under minst tre år. Vattenskott kan användas till nya krongrenar om de sitter på mindre eller yngre krongrenar. På grova grenar ska de tas bort utan att tappar lämnas kvar. -->
+
+<!-- "Bukettgren" -->
+
+Beskärning (av yngre träd?) bör undvikas på sensommaren, eftersom snittytorna då lättare blir fäste för svampsporer som förekommer under sensommar och tidig höst. Äldre träd beskärs helst under JAS (Juli Augusti September), yngre mars-maj (?).
+
+Det finns många olika sätt att beskära både sur- och sötkörsbär. Förutsatt att en vanlig grundstam används (som gör trädet mindre) kan nedanstående metoder användas. Enligt vissa rekommendationer skall dock körsbär beskäras försiktigt, och att man endast tar bort skadade, skavande eller konkurrernade grenar.
 
 Surkörsbär är vanligen mindre starkväxande och mindre uppåtväxande än sötkörsbär, varför de som vuxna träd blir mindre.
+
+**Varför beskära?**
+
+Sötkörsbär tenderar att få långa, upprätta grenar utan frukt. Om man vill stimulera tillväxt av horisontella grenar kan man skära ett litet sår genom barken stax ovan en vilande knopp. Det stimulerar mer lågväxande, horisontella, fruktbärande grenar. Detta bör göras de första åren. Man kan även böja ut de färska grenarna eller beskära till buskform (se nedan). En annan metod är att knipsa av toppen på nytillväxt som överstiger 30-40 cm, vilket ger fler horisontellt växande grenar.
+
+<!-- A good trick for managing the size and shape of the tree is tipping. If new shoots are a foot or more in length by early summer, just pinch out the tip of any new growth that exceeds 12 to 16 inches. The shoots will then start to make numerous side branches at the tip, which will help control height and provide more fruiting branches. -->
+
+**Böja ner grenarna?**
+
+Ju mer upprätt en gren växer, desto mer bladtillväxt. Genom att böja ut grenarna 30-60 grader kan man stimulera frukttillväxt.
+
+<!-- https://www.chrisbowers.co.uk/guides/cherry-trees.php -->
+
+Detta kan användas som en typ av "beskärning". Den görs företrädesvis tidigt på våren, just före det att tillväxten börjar. Alla sidogrenar som  behövs böjs ner till horisontellt läge (eller lägre) med hjälp av tyngder (tex vedträn?). Mittenstammen böjs i en skarpare vinkel. Detta upprepas året efter med nya grenar. Oönskade grenar skärs bort. Efter ett år nedböjda håller de formen.
+
+The training is very simple and is basically known as 'bending'. The best time to start is in the early spring, just before growth begins. All of the required side branches are tied down to a horizontal level or just below. The centre leader is tied at a sharper angle.
+
 
 **Spansk buske**:
 
 För att stimulera fruktsättning.
+
+<!-- https://www.cloudmountainfarmcenter.org/education/grow-tips/growing-cherries/ -->
 
 _Första våren:_
 
@@ -167,13 +217,20 @@ _Första våren:_
   
 - Om det planterade trädet har bra grenar (3-4 st jämnt fördelade runt stammen), beskär dem det första året vid knoppbristning så att spetsarna är på samma nivå, ca 25-30 cm långa.
 
+[Spansk buske, etableringsbeskärning](../../dropbox/images/plants/spanish_bush_year1.jpg)
+
 _Andra våren:_
 
 - När de "sekundära" grenarna blivit 50-60 cm långa, beskär dem (nära eller efter blomning) till samma nivå, ca 25 cm långa. När de "tertiära" grenarna blivit 50-60 cm, beskär dem på samma sätt (i nivå ca 25 cm ovan den föregående beskärningen). Denna tredeje beskärning behövs kanske endast på starkväxande sorter.
 
 - Glesa eventuellt ut kronan genom att avlägsna starkväxande, uppåtväxande grenar och lämna de svagare, mer horisontella grenarna, för att uppmuntra fruktbärning.
 
-_Följande år:_ De sekundära och tertiära grenarna blir trädets stomme. Frukter utvecklas på de svagare grenar som växer från dessa. De bör förnyas regelbundet. Skär bort ungefär en fjärdedel av de fruktbärande grenarna regelbundet, efter skörd. Glesa ut starkväxande, uppåtväxande grenar för att bibehålla soltillgång. Till hösten, beskär trädtoppen till ca 2.5 m.
+[Spansk buske, andra beskärning](../../dropbox/images/plants/spanish_bush_pruning_no2.jpg)
+
+
+_Efterföljande år:_ De sekundära och tertiära grenarna blir trädets stomme. Frukter utvecklas på de svagare grenar som växer från dessa. De bör förnyas regelbundet. Skär bort ungefär en fjärdedel av de fruktbärande grenarna regelbundet, efter skörd. Glesa ut starkväxande, uppåtväxande grenar för att bibehålla soltillgång. Till hösten, beskär trädtoppen till ca 2.5 m.
+
+[Spansk buske, fortsatt beskärning](../../dropbox/images/plants/spanish_bush_pruning_year3_and_beyond.jpg)
 
 <!-- **Upright Fruiting Offshoot (UFO) -metoden**: -->
 <!-- För industriell odling? -->
@@ -216,6 +273,8 @@ Fåglar
 
 <!-- ## Om mjöldagg: https://docplayer.se/209487210-Mjoldagg-gulnande-blad-och-for-tidigt-bladfall-visar-sig-betydligt-senare-blldratagheter-saknas.html -->
 
+
+<!-- Om ditt körsbärsträd har dragit på sig en otrevlig sjukdom så är det bra att du blir av med den så fort som möjligt. Det gör du genom att använda en steriliserad sekatör, som återigen steriliseras innan varje klipp. Klipp försiktigt bort de sjuka delarna. Ohyra på körsbärsträd går också att få bort. Du kan spruta med bladlusmedel. Om lössen lagt ägg och kommer tillbaka så ta bort de bladen på en gång och bränn upp dem eller skicka bort med brännsopor. -->
 
 <!-- Diseases -->
 
