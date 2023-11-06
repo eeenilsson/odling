@@ -4,9 +4,18 @@ title: "Blomning"
 
 # Blomningstid
 
-För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt). De bästa förutsättningarna för befruktning inom 2 dagar efter blomning. Efter 7 dagar är det ca 30% av blommorna som fortfarande kan befruktas hos de flesta sorter och detta är temperaturberoende på så vis att svalare temperatur ger en mer långvarig period då blomman kan befruktas.
+![Blommande körsbärsträd. Fotograf Benjamin Gimmel](../../dropbox/cherry_tree_bloom.jpg){width=60%}
+<!-- https://commons.wikimedia.org/wiki/File:Fr%C3%BChling_bl%C3%BChender_Kirschenbaum.jpg -->
+
+<!-- he average blossoming period for cherries when pollination can take place is about seven to eight days. -->
+
+Fruktträd såsom körsbär behöver en period med kalla temepraturer följt av en varm period för att sätta igång blomningen.
+
+För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt). De bästa förutsättningarna för befruktning är inom 2 dagar efter blomning. Efter 7 dagar är det ca 30% av blommorna som fortfarande kan befruktas hos de flesta sorter. Detta är temperaturberoende på så vis att svalare temperatur ger en mer långvarig period då blomman kan befruktas.
 
 I Sverige blommar körsbären i slutet av april till början av maj. Tittar man på forskningsdata från Ullensvang i Norge startade blomningen där för sötkörsbär vanligen 6-14 maj (intervall 20 april till 22 maj beroende på år och sort). Blomningens varaktighet för ett körsbärsträd var där vanligen 9-16 dagar (intervall 7 till 19 dagar). Tar man med data från andra länder och justerar för odlingsplats och år ser man att för 80% av sorterna ligger start av blomningstiden inom ett spann på ca 9 dagar från varandra och blomningen varar 6-9 dagar. Låga temperaturer kan fördröja start av blomning, särskilt hos senblommande sorter. Faktorer som ålder, grundstam, närings- och vattentillgång, temperatur mm kan påverka varaktigheten av blomningen och det är tänkbart att olilka sorter påverkas olika av detta.
+
+Enligt SLU har blommande växter 6 olika fenologiska stadier. Dessa representeras av blomning, lövsprickning, fruktmognad, fröspridning, höstfärg och lövfällning. Se [SLU fenologobservationer](https://www.slu.se/centrumbildningar-och-projekt/svenska-fenologinatverket/manualer/). <!-- SLU  (2021)  -->
 
 <!-- Referens: Wenden 2016, "A collection of European sweet cherry phenology data for assessing climate change". -->
 
@@ -42,27 +51,10 @@ I @fig-btstartros visas skillnad i start av blomning för olika sorter (data fr�
 <!-- Group 4: mid-late -->
 <!-- Group 5: late -->
 
-
-
 <!-- Mognadstid -->
 <!-- Körsbärsvecka 1 börjar olika datum olika år och bestäms av ... -->
 <!-- En "Körsbärsvecka" är 15 dagar.  -->
 <!-- Skördetid?? -->
-
-<!-- Enligt SLU (2021) har blommande växter 6 olika fenologiska stadier. Dessa representeras av blomning, lövsprickning, fruktmognad, fröspridning, höstfärg och lövfällning -->
-
-<!-- [SLU fenologobservationer](https://www.slu.se/centrumbildningar-och-projekt/svenska-fenologinatverket/manualer/) -->
-
-<!-- en inhemsk svensk art som sötkörsbär (Prunus avium) kan ha svårt att klara de svenska förhållandena om de har annan härkomst och exempelvis har odlats upp vid varmare breddgrader (ibid.) -->
-
-<!-- lowering phenology (fenologi och blomning) -->
-
-
-<!-- he average blossoming period for cherries when pollination can take place is about seven to eight days. -->
-
-<!-- Pesticides, and in particular insecticides, can be harmful to pollinators. Most pesticide labels advise against their use during crop bloom for this reason. If an insecticide must be used during bloom, be sure to follow label directions and apply the pesticide when bees are least active, and so that the pesticide will dry before bees come into contact with flowers that have been exposed to it. For example, an application made at dusk or during the night will do the least harm to pollinators who visit flowers during the day. After the crop has finished blooming, be aware that pesticide drift onto non-crop flowering plants in adjacent habitat can harm pollinators on those flowers. -->
-
-<!-- Fruit trees like sweet cherry require a period of chilling temperatures followed by a period of warm temperatures to induce blooming -->
 
 <!-- The two trees should be within 100 -->
 <!-- feet of each other and overlap in bloom tim -->
@@ -80,7 +72,10 @@ I @fig-btstartros visas skillnad i start av blomning för olika sorter (data fr�
 
 ## Risk för frost
 
-Om blomningen infaller före den sista frosten finns en risk att blommorna förstörs av den. Genomsnittligt datum för sista frost är mellan mitten av april och mitten av juni beroende på var i landet [tex i Örebro normalt 1 apr till 15 maj, största intervall 1 apr till 1 jun]. Karta från [SMHI](https://www.smhi.se).
+Om blomningen infaller före den sista frosten finns en risk att blommorna förstörs av den. Genomsnittligt datum för sista frost är mellan mitten av april och mitten av juni beroende på var i landet du bor. Tex i Örebro inträffar den sista frosten under 30% av vårarna före den 2 maj, 50 % före 9 maj, 70% före 20 maj, och 90% före 26 maj.<!-- [tex i Örebro normalt 1 apr till 15 maj, största intervall 1 apr till 1 jun] --> Detta kan jämföras med start av körsbärsblomningen i norska Ullensvang 6-14 maj. En kall vår gör sannolikt att körsbären börjar blomma senare, men vid en sen köldknäpp kan blommorna skadas.
+
+Se översiktskarta från [SMHI](https://www.smhi.se). Mer detaljerad statistik kan fås från "odlingskalendern" på [vackertväder.se](https://www.vackertvader.se).
+<!-- https://www.vackertvader.se/%C3%B6rebro/odla#frost-datum -->
 
 ![Sista frost](../../dropbox/images/plants/sista_frost_2017_smhi.png){width=50%}
 

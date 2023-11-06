@@ -163,7 +163,6 @@ tmp <- data.table( ## Note: BT missing so will be excluded from plot
 variety_genotype_group <- rbind(variety_genotype_group,
       tmp)
 
-
 ## extract synonyms
 source("../functions/removeParens.r")
 myfun <- Vectorize(extractParens)
@@ -457,3 +456,23 @@ setkey(dtplot, target)
 ## Rosbreed har en xls med S-gruppe också: https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility
 
 
+## Synonyms -----
+
+## Add manually entered synonyms from cherries_table.csv
+cherries_table <- fread("cherries_table.csv")
+tmp <- cherries_table[, .(var, label_syn)]
+
+variety_genotype_group <- tmp[variety_genotype_group, on = "var"]
+variety_genotype_group[, syn := paste0(syn, ", ", label_syn)]
+variety_genotype_group[, syn := gsub(", NA$", "", syn)]
+variety_genotype_group[, label_syn := NULL]
+
+
+
+
+cols <- c("var", "variety", "syn", "genotype") ## , "genotype"
+variety_genotype_group[grepl("schne", tolower(variety)), ..cols]
+
+
+
+variety_genotype_group[grepl("skugg", tolower(variety)), ..cols]

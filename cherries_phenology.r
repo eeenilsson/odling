@@ -627,7 +627,10 @@ blooming_group_aggr[grepl("rote", var), ]
 
 ## Temperature data SMHI --------------------------------
 
-source("smhi.r")
+## source("smhi.r")
+
+
+
 
 ## Tunisia: file:///home/e/Downloads/Chapitre_YoussefA_21_FloweringofSweetCherries.pdf
 ## "The four cultuvars “Napoleon,” “Van,” “Moreau,” and “Sunburst” behave differently in the two sites which can exclude the genetic potential factor in the triggering and the duration of flowering assuming that this phenomenon depends on the physiological state, age, rootstock, expression of cultivar genes, and other external factors (photoperiod, soil, nutrient supply, rainfall, and temperature)."

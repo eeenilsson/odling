@@ -12,18 +12,18 @@ length(sites$id) ## 920 sites
 
 chunks <- c(0, 100, 200, 300, 400, 500, 600, 700, 800, 900)
 
-chunks <- c(0, 10, 20, 30)
+## chunks <- c(0, 10, 20, 30)
 ## n <- 1
 ## n <- 3
 for(n in 1:length(chunks)){
 ## loop over site id to get data
-
+    message(chunks[n])
     smhi_airtemp <- data.table(date = NA, time = NA, temp = NA, quality = NA, id = NA)
 
     from <- chunks[n]+1    
     to <- ifelse(chunks[n] == max(chunks),
-                 40,
-                 ## length(sites$id),
+                 ## 40,
+                 length(sites$id),
                  chunks[n+1])
 for(i in sites$id[from:to]){
     ## i <- sites$id[3]
@@ -31,7 +31,7 @@ for(i in sites$id[from:to]){
     ## i <- 66420
     ## i <- 125490
     ## Error in read.table("temp.txt", sep = ";") : no lines available in input
-    message(i)
+    ## message(i)
     ## min max (vanligen kl 06 och 18)
     ## link <- paste0("https://opendata-download.smhi.se/stream?type=metobs&parameterIds=26,27&stationId=", i, "&period=corrected-archive") ## 12 h min max, note: check csv, not in order
 

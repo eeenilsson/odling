@@ -45,3 +45,7 @@ Mjöldagg
 Bakterios
 
 <!-- ## Om mjöldagg: https://docplayer.se/209487210-Mjoldagg-gulnande-blad-och-for-tidigt-bladfall-visar-sig-betydligt-senare-blldratagheter-saknas.html -->
+
+## Insektsbekämpning
+
+<!-- Pesticides, and in particular insecticides, can be harmful to pollinators. Most pesticide labels advise against their use during crop bloom for this reason. If an insecticide must be used during bloom, be sure to follow label directions and apply the pesticide when bees are least active, and so that the pesticide will dry before bees come into contact with flowers that have been exposed to it. For example, an application made at dusk or during the night will do the least harm to pollinators who visit flowers during the day. After the crop has finished blooming, be aware that pesticide drift onto non-crop flowering plants in adjacent habitat can harm pollinators on those flowers. -->
