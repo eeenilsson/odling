@@ -18,7 +18,7 @@ source('cherries_summary.r')
 ## Quarto -----
 
 source("cherries_quarto.r")
-## MAgit push elswhere github/main in minibuffer
+## Magit push elswhere github/main in minibuffer
 
 
 

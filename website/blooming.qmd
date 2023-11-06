@@ -2,9 +2,7 @@
 title: "Blomning"
 ---
 
-# Blomningstid
-
-![Blommande körsbärsträd. Fotograf Benjamin Gimmel](../../dropbox/cherry_tree_bloom.jpg){width=60%}
+![Blommande körsbärsträd. Fotograf Benjamin Gimmel](../../dropbox/images/plants/cherry_tree_bloom.jpg){width=60%}
 <!-- https://commons.wikimedia.org/wiki/File:Fr%C3%BChling_bl%C3%BChender_Kirschenbaum.jpg -->
 
 <!-- he average blossoming period for cherries when pollination can take place is about seven to eight days. -->
@@ -12,6 +10,8 @@ title: "Blomning"
 Fruktträd såsom körsbär behöver en period med kalla temepraturer följt av en varm period för att sätta igång blomningen.
 
 För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt). De bästa förutsättningarna för befruktning är inom 2 dagar efter blomning. Efter 7 dagar är det ca 30% av blommorna som fortfarande kan befruktas hos de flesta sorter. Detta är temperaturberoende på så vis att svalare temperatur ger en mer långvarig period då blomman kan befruktas.
+
+## När blommar det?
 
 I Sverige blommar körsbären i slutet av april till början av maj. Tittar man på forskningsdata från Ullensvang i Norge startade blomningen där för sötkörsbär vanligen 6-14 maj (intervall 20 april till 22 maj beroende på år och sort). Blomningens varaktighet för ett körsbärsträd var där vanligen 9-16 dagar (intervall 7 till 19 dagar). Tar man med data från andra länder och justerar för odlingsplats och år ser man att för 80% av sorterna ligger start av blomningstiden inom ett spann på ca 9 dagar från varandra och blomningen varar 6-9 dagar. Låga temperaturer kan fördröja start av blomning, särskilt hos senblommande sorter. Faktorer som ålder, grundstam, närings- och vattentillgång, temperatur mm kan påverka varaktigheten av blomningen och det är tänkbart att olilka sorter påverkas olika av detta.
 

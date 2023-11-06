@@ -145,7 +145,7 @@ genotype_syn <- genotype_syn[, .(var, genotype, syn)]
 ## genotype_syn[, label := gsub(" \\\n", "", label)]
 genotype_syn <- genotype_syn[cherries_table, on = "var"] ## add those from cherries_table not in genotype data
 ## genotype_syn[is.na(label), ]
-genotype_syn <- genotype_syn[, .(var, label, genotype, syn, syn_note)]
+genotype_syn <- genotype_syn[, .(var, label, syn, syn_note)]
 ## prominent_features
 
 write.csv(genotype_syn, "genotype_syn.csv", row.names = FALSE)

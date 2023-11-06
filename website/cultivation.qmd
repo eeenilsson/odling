@@ -4,45 +4,55 @@ title: "Odling"
 
 ## Plantering
 
-Gropen
-När
+Gropen: Gräv en stor grop. Se till att jordkvaliteten är god även runt gropen.
 
-Läge: Sol till halvskugga / medelfuktigt. 
+Gödsling vid plantering: <!-- ?Gödslas med kvävefattig gödsel, t.ex. Algomin Trädgårdsgödsel. -->
 
-Sweet cheery trees prefer a full sun position, acidic ones will be fine in partial shade.
+När:
 
-"lanteras i väldränerad, kalkrik och mullrik jord. Gräv en stor grop och se till att jordkvaliteten är bra även runt planteringsgropen. Gödslas med kvävefattig gödsel, t.ex. Algomin Trädgårdsgödsel."
+Läge: Sötkörsbär föredrar ett läge med mycket sol. Surkörsbär kan klara sig i halvskugga. 
 
-Both types prefer a well drained, roughly neutral soil
+Jord, fuktighet: Helst väldänerad, medelfuktig jord. Surkörsbär klarar blötare jordar bättre än sötkörsbär (men föredrar väldränerade). Kan också bero på grundstam. 
+
+Jord, typ: Gärna mullrik, kalkrik.
+
+pH: Både söt- och surkörsbär föredrar neutralt pH.
+
+Beskärning vid plantering:
 
 ## Näring
 
-Trädgårdsgödsel
+Trädgårdsgödsel.
 
 ## Bevattning
 
-Vattna rikligt under torra somrar
+Vattna rikligt under torra somrar.
 
 ## Beskärning
 
-Putsa lätt och beskär i juli – september ( jas )
-Klipp bort skadade, korsade och inåtväxande grenar
+Vid blomning: Klipp bort nedåtriktade blomklasar som utgår direkt från stammen på från de grövre grenarna.
+
+Putsa lätt och beskär i juli – september (jas).
+
+Klipp bort skadade, korsade och inåtväxande grenar.
 
 ## Höjd
 
-Starkväxande: 5 till 7 m
-Medelstarkväxande: 4 till 6 m
+Starkväxande: 5 till 7 m.
+
+Medelstarkväxande: 4 till 6 m.
+
 Buske: 150-300 cm.
 
-## Odling
-
-Cherry trees are low maintenance although they can suffer from aphids in particular. Birds can eat the fruits but in almost all cases enough is left undamaged for a large crop.
-
-# Sjukdomar
+# Sjukdomar och skadedjur
 
 Mjöldagg
 
 Bakterios
+
+Aphider
+
+Fåglar
 
 <!-- ## Om mjöldagg: https://docplayer.se/209487210-Mjoldagg-gulnande-blad-och-for-tidigt-bladfall-visar-sig-betydligt-senare-blldratagheter-saknas.html -->
 

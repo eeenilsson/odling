@@ -6,6 +6,8 @@ execute:
 
 När du planterar körsbär bör du se till att ha mer än en sort. Den främsta anledningen till detta är att många sötkörsbär kan inte befruktas av sig själva eller andra individer av samma sort. Sorterna måste vara genetiskt kompatibla med varandra och blomma samtidigt. Se sidan om [pollination](pollination_about.qmd) och [pollinationsschemat](pollination_table.qmd) för mer om det. Även de sorter som kan befrukta sig själva ger bättre skörd om de befruktas av andra. 
 
+Längst ner på den här sidan hittar du en sökbar tabell med synonymer för de körsbärssorter som finns med på den här webbplatsen.
+
 ## Varför plantera flera sorter?
 
 - Kan vara nödvändigt för att få frukt (se ovan).
@@ -36,7 +38,7 @@ När du planterar körsbär bör du se till att ha mer än en sort. Den främsta
 
 - Storlek och form (vissa sorter är hjärtformade) på bären.
 
-- Trädets utseende och storlek. Beror också på vilken _grundstam_ (se @sec-grundstam) som används.
+- Trädets utseende och storlek. Beror också på vilken _grundstam_ som används.
 
 - Skördens riklighet och tidpunkt (olika **mognadstid** ger längre skördesäsong).
 
@@ -62,7 +64,9 @@ När du planterar körsbär bör du se till att ha mer än en sort. Den främsta
 
 # Surkörsbär
 
-Surkörsbär (_Prunus cerasus_) har troligen uppkommit genom en korsning av sötkörsbär (_Prunus Avium_) och dvärgkörsbär (_P Fructiosa_). De delas ibland in i _moreller/brunbär_ (mörkröd färg och färgad saft) respektive _amareller/klarbär_ (ljusare färg och ofärgad saft). De är ofta _självfertila_ och blommar i allmänhet senare än sötkörsbär. Surkörsbären är syrligare än sötkörsbären och passar vanligen bättre för syltning och matlagning.
+Surkörsbär (_Prunus cerasus_) har troligen uppkommit genom en korsning av sötkörsbär (_Prunus Avium_) och dvärgkörsbär (_P Fructiosa_). 
+
+De delas ibland in i _moreller/brunbär_ (mörkröd färg och färgad saft) respektive _amareller/klarbär_ (ljusare färg och ofärgad saft). De är ofta _självfertila_ och blommar i allmänhet senare än sötkörsbär. Surkörsbären är syrligare än sötkörsbären och passar vanligen bättre för syltning och matlagning.
 
 ## Surkörsbär, skillnad mot sötkörsbär
 
@@ -177,7 +181,7 @@ Surkörsbär (_Prunus cerasus_) har troligen uppkommit genom en korsning av söt
 <!-- https://handbok.alternativ.nu/Odling/Frukt_och_b%C3%A4r/Surk%C3%B6rsb%C3%A4r.html -->
 
 
-# Grundstammar {#sec-grundstam}
+# Grundstammar
 
 Körbär ympas vanligen på en trädstam från en annan art (oftast genom _okulering_). Typen av grundstam påverkar bland annat:
 
@@ -263,53 +267,6 @@ För en grundstam kan anges till vilken % av standardträdets höjd (det som ymp
 <!-- https://skogsträdgården.stjärnsund.nu/grundstammar-del-4-korsbar/ -->
 
 # Beskrivning av sorter
-
-## Lista synonymer
-
-Många körsbär kallas med olika namn. Nedan finns en sökbar lista med synonymer. Varje kolumn kan filtreras med sökord. För att söka efter flera ord skriv "|" mellan dem.
-
-```{r } 
-#| label: tbl-synonyms
-#| tbl-cap: "Synonymer"
-#| warning: false
-
-library(reactable)
-
-genotype_syn <- read.csv("../genotype_syn.csv")
-genotype_syn <- genotype_syn[, -1] ## remove "var"
-
-reactable(genotype_syn,
-          filterable = TRUE,
-          bordered = TRUE,
-          highlight = TRUE,
-          striped = FALSE,
-          defaultColDef = colDef(
-              header = c("Sort", "Haplotyp", "Synonym", "Notering")
-              align = "center",
-              minWidth = 30,
-              filterMethod = JS("function(rows, columnId, filterValue) {
-        const pattern = new RegExp(filterValue, 'i')
-        
-        return rows.filter(function(row) {
-          return pattern.test(row.values[columnId])
-        })
-      }")
-          ),
-          columns = list(
-              Sort = colDef(
-                  sticky = "left",
-                  align = "left",
-                  minWidth = 100,
-                  style = list(borderRight = "1px solid #eee"),
-                  headerStyle = list(borderRight = "1px solid #eee")
-              )
-          )
-          )
-
-
-``` 
-
- 
 
 ## Några intressanta sorter
 
@@ -414,3 +371,60 @@ Regina
 <!-- ## kauffs_kirsche  # samma som 'Knauff's Schwarze'? (den enda som hittas av google när man söker på Knauff)? ändrade till var knauffs_schwarze i den tidigare egna listan -->
 
 
+# Lista synonymer
+
+Många körsbär kallas med olika namn. Nedan finns en sökbar lista med synonymer. Varje kolumn kan filtreras med sökord. För att söka efter flera ord skriv "|" mellan dem.
+
+::: {.column-screen}
+
+```{r } 
+#| label: tbl-synonyms
+#| tbl-cap: "Synonymer"
+#| warning: false
+
+library(reactable)
+
+genotype_syn <- read.csv("../genotype_syn.csv")
+genotype_syn <- genotype_syn[, -1] ## remove "var"
+names(genotype_syn) <- c("Sort", "Synonym", "Notering")
+
+reactable(genotype_syn,
+          filterable = TRUE,
+          defaultSorted = c("Sort"),
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              align = "center",
+              minWidth = 30,
+              filterMethod = JS("function(rows, columnId, filterValue) {
+        const pattern = new RegExp(filterValue, 'i')
+        
+        return rows.filter(function(row) {
+          return pattern.test(row.values[columnId])
+        })
+      }")
+          ),
+          columns = list(
+              Sort = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 50,
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              ),
+              Synonym = colDef(
+                  minWidth = 100,
+                  align = "left"
+              ),
+              Notering = colDef(
+                  minWidth = 100,
+                  align = "left"
+              )
+          )
+          )
+
+
+``` 
+
+:::
