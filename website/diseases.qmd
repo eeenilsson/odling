@@ -1,5 +1,5 @@
 ---
-title: "Sjukdomar och skadedjur"
+title: "Sjukdomar"
 ---
 
 Sammanfattning
@@ -28,11 +28,7 @@ Virussjukdomar . 28
   Surkörsgulsot  28
 
 
-
-Bacterial canker in sweet cherries is caused by the bacterium Pseudomonas syringae pv. syringae (PSS)  = Stam- och bladbakterios
-Pseudomonas syringae pv. syringae och P syringae pv. mors-prunorum
-
-## Symtom
+## Symtom med olika orsaker
 
 **"Gummiflöde":** Eng. "Gummosis". Ett symtom som kan orsakas av olika infektioner men kan också förekomma utan infektion (då vanligen klart till bärnstensfärgad).
 
@@ -71,6 +67,8 @@ Pseudomonas syringae pv. syringae och P syringae pv. mors-prunorum
 
 - Insektsgift (som sista åtgärd): Konsultera en professionell odlare. Börja med den minst giftiga produkten. Använd inte dagtid när bin samlar nektar, eller när det blåser eller regnar. 
 
+# Insekter
+
 ## Körsbärsflugan
 
 Körsbärsflugan (_Rhagoletis cerasi L_) förekommer i två olika arter. Den "nordliga" förekommer i norra europa. Den förstör bären genom att lägga sina ägg i bär som börjat mogna. Aggläggningen börjar först när temperaturen är minst 16 grader och det inte regnar, i bär som börjat skifta från gult till gulrött. Larverna kläcks efter 6-8 dagar och äter sedan av fruktköttet under tre veckor. När larven är mogen faller bäret till marken, eller så äter sig larven ut ur skalet och faller ned. Ca 3 cm under markytan övervintrar larven som en puppa (puppan kan ligga kvar i upp till tre år). I juni kommer flugan fram och livnär sig under ungefär 10 dagar på "nektarier" som finns på körbärsbladen. I svenskt klimat utgör den problem särskilt när vädret varit gynnsamt för dess äggläggning. Det är främst senmognande sorter av körsbär som drabbas. Vanlig i södra och mellersta Sverige. 
@@ -84,6 +82,17 @@ Körsbärsflugan (_Rhagoletis cerasi L_) förekommer i två olika arter. Den "no
 - Sätt upp gula klisterlappar/skivor (Rebell) för att kunna se om körsbärsflugan svärmar och hur mycket. Avläses dagligen från mitten av juni. Om en fluga identifieras på klisterlappen tar det ungefär 10-14 dagar tills de lagt färdigt sina ägg.
 
 <!-- På marknaden förekommer klisterfållor med en feromonkapsel av odefinierat innehåll. Denna klisterfålla är inte mer attraktiv får körsbärsflugor än vanliga gula klisterskivor av samma slag som används för morotsflugan. Prisskillnaden är däremot avsevärd. -->
+
+::: {layout-ncol=2}
+
+![Körsbärsfluga. © entomart.](../../dropbox/images/plants/rhagoletis_cerasi.jpg){width=50%}
+
+![Körsbärsfluga. Foto: Bauer Karl.](../../dropbox/images/plants/rhagoletis_cerasi2.jpg){width=50%}
+
+:::
+
+![Körsbärsflugans larv](../../dropbox/images/plants/rhagoletis_cerasi_larvae.jpg){width=50%}
+
 
 **Skadebild**:
 
@@ -153,6 +162,7 @@ _Myzus cerasi_
 
 <!-- https://www.wexthuset.com/fakta-och-rad/om-odling-och-skotsel-av-tradgard-och-vaxter/fakta-tips-om-ohyra-och-skadegorare-pa-vaxter/bek%C3%A4mpa-bladloss-i-tradgarden -->
 
+![Körsbärsbladlus, _Myzus cerasi_](../../dropbox/images/plants/myzus_cerasi.jpg)
 
 # Svampar
 
@@ -238,7 +248,7 @@ Ger dålig knoppsättning, försämrad avmognad av årsskotten, och nedsatt vint
 
 - Frukterna angrips sällan. 
 
-![Bladfläcksjuka](cherry_leaf_spot.jpg){width=50%}
+![Bladfläcksjuka](../../dropbox/images/plants/cherry_leaf_spot.jpg){width=50%}
 
 
 ## Hagelskottsjuka
@@ -259,8 +269,42 @@ _Stigmina carpophila_ är en av de vanligaste orsakerna till detta hos körsbär
 
 - Kan ge bruna rötfläckar på bären.
 
+![Hagelskottssjuka.](../../dropbox/images/plants/shot_hole_disease.jpg){width=50%}
+
+## Körsbärsskorv
+
+_Venturia cerasi_ (konidiestadium _Fusicladium cerasi_)
+
+Mindre vanligt i Sverige. Övervintrar i nedfallna blad, fruktmumier och som mycel. <!-- Från det övervintrande mycelet kan tidiga infektioner ske med konidier.  -->Särskilt surkörsbär kan angripas svårt.
+
+**Identifiering**:
+
+- Frukter: Täcks av en mörbeläggning som består av tättsisttande, små, svartgröna fläckar. <!-- Dessa består av mycel och konidier. -->Frukterna kan torka in och skrumpna till "fruktmumier".
+
+- Skotten: Kan angripas.
+
+- Bladen: Vanligen små angrepp av mindre betydelse.
+
+## Gloeosporiumröta
+
+_Glomerella cingulata_ (konidiestadium _Colletotrichum gloeosporioides_)
+
+Tidigare _Gloeosporiumfructigenum_
+
+Ej så vanligt i Sverige. Övervintrar i fruktmumier, skott och knoppfjäll. Sprids till frukterna med regnstänk. Kan från frukterna växa vidare in i skotten som kan dö vid starka angrepp. Angriper många olika växtslag.
+
+**Identifiering**:
+
+- Bären: Bruna rötfläckar. Sedan tränger rosa konidiemassor fram vid fuktig väderlek. Sedan skrumpnar frukterna och hänger kvar i trädet som "fruktmumier". 
+
+
+
 
 ## Bakterios
+
+<!-- Bacterial canker in sweet cherries is caused by the bacterium Pseudomonas syringae pv. syringae (PSS)  = Stam- och bladbakterios -->
+<!-- Pseudomonas syringae pv. syringae och P syringae pv. mors-prunorum -->
+
 
 <!-- Gummiflöde är en bakterios som angriper släktet Prunus (körsbär och plommon). Sjukdomen yttrar sig genom stora, sega eller bärn- stenslika klumpar.  -->
 
