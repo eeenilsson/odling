@@ -154,7 +154,11 @@ Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytt
   
   - **Försommar (ev)**: Naturgödsel eller mineralgödsel NPK.
   
-  - **Höst**: Använd gödning utan kväve (N). Det är fosfor (P) och kalium (K) som gynnar blomning och fruktsättning. Det gör växten mer motståndskraftig mot frostskador och förbättrar dess möjlighet till blom- och fruktsättning. Använd PK-gödsel eller liknande, tex "Höstgödsel PK 11-21".
+  - **Höst**: Använd gödning utan kväve (N). Det är fosfor (P) och kalium (K) som gynnar blomning och fruktsättning. Det gör växten mer vinterhärdig och förbättrar dess möjlighet till blom- och fruktsättning. Kvävetillförsel kan "lura" trädet att det är längre säsong och det avmognar då inte i tid. Använd PK-gödsel eller liknande, tex "Höstgödsel PK 11-21".
+
+<!-- - Undvik kväve på hösten (lurar trädet att det är längre säsong och den avmognar då inte i tid) -->
+<!-- - Kalium och fosfor kan användas på hösten (särskild höstnäring märkt PK), stödjer rotutveckling och vinterhärdigheten -->
+
 
 <!-- Algomin: Rosor, klematis, bärbuskar & fruktträd: Använd Spettmetoden. Rosor och klematis bör kompletteras med 1 giva. Gör 2 hål ca 20 cm djupa, ca 30 cm från förädlingspunkten. Dosera med ca 1 msk per hål, vår och höst. Använd Algomin Extra växtkraft under sommaren, använd ej spettmetoden för Algomin Extra växtkraft. -->
 

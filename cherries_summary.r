@@ -280,7 +280,10 @@ break_minor <- seq(min(break_in_5)+1, max(break_in_5)-1, by = 1)
 
 ## base plot
 p <- ggplot(toplot, aes(y=Germplasm, x=bt0))
-p_bt0 <- p + geom_point() + xlab("Start av blomning (dagar från tidigaste sorten)") + ylab("")
+p_bt0 <- p +
+    geom_point(size = 5) +
+    xlab("Start av blomning (dagar från tidigaste sorten)") +
+    ylab("")
 
 p_bt0 <- p_bt0 + scale_x_continuous(breaks = break_in_5,
                            minor_breaks = break_minor)
@@ -306,7 +309,8 @@ for(i in 1:length(text_xpos)){
                  x = text_xpos[i],
                  y = length(levels(toplot$Germplasm)) + 2,
                  label = paste("Period", i),
-                 colour = "aquamarine4")
+                 colour = "aquamarine4",
+                 size = 12)
 }
 
 ## rgb(red, green, blue, alpha)
@@ -325,6 +329,13 @@ usecolors <- rgb(red, green, blue, 0.7)
 p_bt0_annotated <- p_bt0_annotated + 
   geom_point(aes(color=Germplasm)) +
     scale_color_manual(values = usecolors) + theme(legend.position = "none")
+
+p_bt0_annotated + theme(
+                      axis.text=element_text(size=14),
+                      axis.title=element_text(size=18,face="bold")
+                  )
+
+
 ggsave("bt_start_ros.png", path = "../dropbox/images/plants/")
 
 ## colors

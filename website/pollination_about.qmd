@@ -80,15 +80,22 @@ Fruktämnet växer sedan till och bildar frukten.
 
 <!-- An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists -->
 
+<!-- Andra arter: -->
+<!-- J. Japan. Soc. Hort. Sci. 78 (2): 137–157. 2009. -->
+<!-- Available online at www.jstage.jst.go.jp/browse/jjshs1 -->
+<!-- JSHS © 2009 -->
+<!-- Review -->
+<!-- Molecular Basis of Self-(in)compatibility and Current Status of S-genotyping in Rosaceous Fruit Trees -->
+<!-- Hisayo Yamane and Ryutaro Ta -->
+<!-- https://www.jstage.jst.go.jp/article/jjshs1/78/2/78_2_137/_pdf -->
+<!-- Gene bank: https://www.ddbj.nig.ac.jp/ddbj/feature-table.html#5-1 -->
+
 # Genetisk kompatibilitet
 
-Körsbär har i sina kromosomer två (hos sötkörsbär, fler hos surkörsbär) varianter av en viss gen. En sådan variant benämns med bokstaven S och en siffra, tsex "S1", så en körsbärssort kommer vara tex "S2S6". Då kommer den ha S2S6 i sina pistiller och det pollen den skickar iväg kommer att vara antingen S2 eller S6. En körsbärssort är "immun" mot pollen som innehåller någon av dess egna "bokstäver". Så ett S2S6-körsbär är immunt mot pollen som innehåller S2 eller S6. Eftersom de flesta sorter har S1 till S6 blir det ganska vanligt att de är inkompatibla. Detta beskrivs mer i detalj nedan.
+Körsbär har i sina kromosomer två (hos surkörsbär fyra) varianter av ett visst genetiskt område (_locus_). En sådan variant benämns med bokstaven S och en siffra, tsex "S1", så en körsbärssort kan vara tex "S2S6". Då kommer den ha S2S6 i sina pistiller och det pollen den skickar iväg kommer att vara antingen S2 eller S6. En körsbärssort är "immun" mot pollen som innehåller någon av dess egna "bokstäver". Så ett S2S6-körsbär är immunt mot pollen som innehåller S2 eller S6. Eftersom de flesta sorter har S1 till S6 blir det ganska vanligt att de är inkompatibla. Detta system kallas "Gametofytisk Själv-Inkompatibilitet" (GSI) och förekommer ho flera växtarter. Det beskrivs mer i detalj nedan.
 
 <!-- " In sour cherry, as in other species of the genus Prunus, there occurs the phenomenon of gametophytic self-incom- patibility (GSI). This mechanism has been developed by plants to prevent self-fertilization and facilitate fertilization with pollen of other genotypes within the species (De Nettancourt, 1997). Self-incompatibil- ity consists of arresting pollen-tube growth in the pistil if the tube contains the same S-allele that is present in the pistil. The phenomenon of self-incom- patibility in plants of the family Rosaceae is controlled by two genes at the S-locus. The specificity of the pistil is encoded by the gene responsible for the synthesis of the ribonuclease protein (S-RNase) (Bošković & Tobutt, 1996), whereas the specificity of the pollen is controlled by the gene encoding an F-box protein (S-haplotype-specific F-box protein – SFB) (Yamane, Ikeda, Ushijima, Sassa, & Tao, 2003a).  The tightly linked genetic unit of the pistil S-allele (S- RNase) and pollen S-allele is called S-haplotype Lisek2017.pdf" -->
 
-<!-- Self-incompatibility systems are described as either sporophytic or gametophytic based on the number of S-alleles expressed by the pollen grain (Figure 1B). In gametophytic systems, pollen grains express only the S-allele encoded by their own haploid genome and are rejected on pistils that express this S-allele. In the genetically more complex sporophytic systems, pollen grains express both S-alleles of the diploid pollen-donor plant and are rejected by pistils expressing either S-alle -->
-
-<!-- https://www.cell.com/fulltext/S0092-8674(00)81090-9 -->
 
 ## Genetik, några begrepp
 
@@ -109,7 +116,7 @@ Polyploidi
 
 Huruvida pollen från en viss sort är kompatibelt med mottagaren bestäms av ett område på kromosomen som betecknas med "S". Varianter (_alleler_) av S betecknas med olika nummer, S1, S2, S3 osv. Vanligast är S1-S6.
 
-Pollenkornet innehåller en S-allel (tex S2) och pistillen två (tex S1S6). Pollenkorn vars S-variant är _samma_ som _någon_ av pistillens S-varianter kan _inte_ ta sig ner genom stiftet för att befrukta mottagaren.
+Pollenkornet innehåller endast en S-allel (tex S2) och pistillen två (tex S1S6). Pollenkorn vars S-variant är _samma_ som _någon_ av pistillens S-varianter kan _inte_ ta sig ner genom stiftet för att befrukta mottagaren, då pollenslangens utväxt hämas.
 
 Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
 
@@ -122,6 +129,21 @@ Enstaka universella givare saknar också S4**’**.
 <!-- Sweet cherry exhibits RNase based gametophytic self-incompatibility system which is controlled by a single multi-allelic locus S. -->
 
 <!-- The ability of cherry pollen to grow down the flower style is controlled by the S locus. Each cultivar has two S-alleles and each pollen grain carries one of these. Flowers cannot be pollinated by pollen from any source that carries either of those two alleles, including its own. Due to inbreeding in the narrow genepool of North America, many pairs of cultivars share the same two S-alleles (same S-genotypes) and thus are cross-incompatible. The exception is the S4’ allele, which confers self-fertility. Effectively, S4’ acts as “stealth pollen” that can pollinate anything including flowers of the cultivar it came from. -->
+
+<!-- Self-incompatibility systems are described as either sporophytic or gametophytic based on the number of S-alleles expressed by the pollen grain (Figure 1B). In gametophytic systems, pollen grains express only the S-allele encoded by their own haploid genome and are rejected on pistils that express this S-allele. In the genetically more complex sporophytic systems, pollen grains express both S-alleles of the diploid pollen-donor plant and are rejected by pistils expressing either S-alle -->
+
+<!-- https://www.cell.com/fulltext/S0092-8674(00)81090-9 -->
+
+
+![Gametofytisk respektive saprofytisk själv-inkompatibilitet. Från Dodds 1996.](../../dropbox/images/plants/gsi_curated.jpg){width=40%}
+
+<!-- A Molecular Perspective on Pollination in Flowering Plants -->
+<!--     Peter N Dodds -->
+<!--     Adrienne E Clarke -->
+<!--     Ed Newbigin -->
+<!-- Open ArchiveDOI:https://doi.org/10.1016/S0092-8674(00)81090-9 -->
+<!-- PlumX Metrics -->
+<!-- https://www.cell.com/fulltext/S0092-8674(00)81090-9 -->
 
 ## Principskiss kompatibilitet
 
