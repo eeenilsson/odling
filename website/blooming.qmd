@@ -30,7 +30,7 @@ I @fig-btstartros visas skillnad i start av blomning f√∂r olika sorter (data fr√
 
 ::: {.column-screen}
 
-![Start av blomning](../../dropbox/images/plants/bt_start_ros.png){#fig-btstartros}
+![Start av blomning](../../dropbox/images/plants/bt_start_ros.png){#fig-btstartros width=60%}
 
 :::
 

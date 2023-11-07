@@ -15,7 +15,9 @@ title: "Odling"
 
 ## Plantering
 
-**När**: Krukodlade träd (då de har intakta rötter) kan planteras när som helst så länge marken inte är frusen. Hösten ända fram till vintern är en bra tid. Då börjar rötterna växa när det på våren blir några värmegrader i jorden. Trädet kan då rota sig tidgt på odlingssäsongen. 
+**När**: 
+
+Krukodlade träd (då de har intakta rötter) kan planteras när som helst så länge marken inte är frusen. Hösten ända fram till vintern är en bra tid. Då börjar rötterna växa när det på våren blir några värmegrader i jorden. Trädet kan då rota sig tidgt på odlingssäsongen. 
 
 **Var**:
   
@@ -29,30 +31,34 @@ title: "Odling"
   
   - Gärna mullrik, kalkrik jord.
     
-- Läge: Soligt, för att ge bra med frukt. Sex till åtta (8-10?) timmars direkt solljus behövs. Om platsen är i skugga före kl 16 vid midsommar är den troligen för skuggig.
+- Läge: Soligt, för att ge bra med frukt. Sex till åtta (8-10?) timmars direkt solljus behövs. Om platsen är i skugga före kl 16 vid midsommar är den troligen för skuggig. Plantera ej träd för nära huset. Rotsystemet kan skada grunden och rörsystem. Vid storm kan trädet falla och skada det. Fem till sju meter anges ibland som ett lämpligt säkerhetsavstånd. Rötternas utbredning blir kring två-tre gånger trädets höjd.  <!-- För körsbär på en dvärgväxande grundstam går det eventuellt att plantera något närmare, kanske 3 m (?). -->
 
-**Sur**körsbär klarar blötare jordar bättre än sötkörsbär (men de föredrar väldränerade). De klarar sig vanligen också bra i halvskugga.
+<!-- På det stora hela så är det mesta positivt, men det finns även nackdelar att ha i beaktning. Träd kan först och främst påverka husgrunden och störa rör och ledningar som löper från huset. Gällande husgrunden så kan trädets rötter faktiskt lyfta upp denna och göra den sned; något som påverkar vardagen - milt uttryckt - negativt och som kan komma att bära ganska höga kostnader att korrigera. En annan viktig sak gällande träd handlar om det faktum att rötterna kan förstöra de ledningar som går från- och till huset och där exempelvis avlopp och vatten kan påverkas. Detta gör att placeringen av ett träd aldrig bör ske för nära huset. Man brukar här prata om att ett avstånd på minst 5-7 meter är en viktig säkerhetsåtgärd att ta. En tumregel är att kronan på ett färdigväxt träd är ungefär 20 % mindre än rotsystemet som finns under jorden. Det innebär alltså att du inte bara ska stirra dig blind på hur pass stor krona som olika träd har: viktigare är att jämföra denna med vad som de facto inte syns - men som, vid problem, kan medföra stora kostnader. 
 
-Beroende på _grundstam_ ...
+En vida spridd myt är att rötterna till ett träd motsvarar ungefär trädkronans storlek. Det stämmer oftast inte riktigt. Trädrötternas diameter motsvarar oftast cirka två-tre gånger trädets höjd... ett mycket stort område alltså. De flesta träd o buskar har en betydligt vidare spridning på rötterna, än djup (och vissa träd har s.k. pålrot, som är en djupgående kraftig rot). https://stocksundgarden.blogspot.com/2012/03/sakert-planteringsavstand-fran-trad.html  Körsbär 3 m från hus ok (?)-->
+
+Surkörsbär klarar blötare jordar bättre än sötkörsbär (men de föredrar väldränerade). De klarar sig vanligen också bra i halvskugga. Olika _grundstammar_ skiljer sig också åt avseende vilka jordar de klarar.
 
 **Hur**:
 
-Principen är att rötterna skall ha lucker, väldränerad jord att växa i och att rotstammen skall hamna ovan marknivå även efter att jorden sjunkit ihop.
+Principen är att rötterna skall ha lucker, väldränerad jord att växa i och att rotstammen skall hamna ovan marknivå även efter att jorden sjunkit ihop. Man kan sikta på att bygga en förhöjning som är 20-25 cm ovan den omgivande marken.
 
   1. Ställ roten i vatten en stund innan den planteras.
-  2. Gräv en grop, minst 1.5 m diameter, djup 40-50 cm.
+  2. Gräv en grop, 1.5-2 m diameter, djup 40-50 cm.
   3. Luckra upp botten och sidorna.
-  4. Blanda den befintliga jorden med tex planteringsjord (ej djupare än 50 cm).
+  4. Blanda den befintliga jorden med tex planteringsjord (ej djupare än 50 cm). Sandig eller lerhaltig jord blandas med 1/3 näringsberikad torv (fuktas väl innan), barkmull, kompost- eller planteringsjord.
   5. Ordna så att rothalsen hamnar ca 10 cm högre än **omgivande** marknivå, så att det finns sjunkmån. Den bör även vara 5-10 cm ovan jordytan i planteringsgropen.
-  6. Lägg gärna mineraljord (grus eller sand) som rotsystemet kan stå på.
+  6. Lägg gärna mineraljord (makadam, grus eller sand) som rotsystemet kan stå på.
   7. Luckra upp rötterna med fingrarna.
   8. Placera trädet i gropen.
-  9. Fyll på med jord till två tredjedelar av klumpens höjd och trampa till den. Fyll sedan på med mer jord och trampa till.
+  9. Fyll på med jord upplandad med tex plantjjord (hur mycket?) till två tredjedelar av klumpens höjd och trampa till den lätt. Fyll sedan på med mer jord och trampa till lätt.<!-- Till de som vill ha kraftigare jord med högre pH, t ex körsbär, rekommenderas rosjord. -->
   10. Vattna ordentligt och låt vattnet sjunka undan. 
   11. Bind upp trädet till en eller två trästörar. Använd ett bindmaterial som inte skaver i barken när trädet svajar.
   12. Sätt på gnagskydd.
 
 Om det samlas vatten i botten av den 50-60 cm djupa gropen kan du göra en ordentlig kulle (så att det blir 50-cm ner till vattennivån) för trädet att växa i.
+
+Vid höstplantering, vänta till våren och följ det vanliga gödslingsschemat. Vid vårplantering gödsla tidigt på sommaren (?).
 
 **Varför man bör undvika att plantera för djupt:**
 
@@ -62,7 +68,7 @@ Om det samlas vatten i botten av den 50-60 cm djupa gropen kan du göra en orden
   
   - Jord med hög mullhalt sjunker ihop (torv, kompost, och annat organiskt material bryts ner med tiden). 
   
-  - Organiskt material som hamnar mer än ca 50 cm under marjytab bryts ner utan tillgång till syre.
+  - Organiskt material som hamnar mer än ca 50 cm under markytan bryts ner utan tillgång till syre.
 
 
 **Avstånd mellan träden**:
@@ -84,7 +90,7 @@ Rotsystemet är vid plantering i underutvecklat i förhållande till kronan. Eta
 
 **När**:
 
-Etableringsbeskärning beskärning kan göras direkt vid vårplantering (vissa menar att man bör vänta till efterföljande vår). Den görs alltid på våren innan knopparna har börjat slå ut. Även de träd som planterats på hösten etableringsbeskärs på våren. Vid beskärning på sommaren stimuleras nämligen inte tillväxten på samma vis.
+Etableringsbeskärning beskärning kan göras direkt vid vårplantering (vissa menar att man bör vänta till efterföljande vår). Den görs alltid på våren, innan knopparna har börjat slå ut. Även de träd som planterats på hösten etableringsbeskärs på våren. Vid beskärning på sommaren stimuleras nämligen inte tillväxten på samma vis.
 
 <!-- Etableringsbeskärning av plommon och körsbär utförs också på våren. -->
 
@@ -97,21 +103,21 @@ Om trädet som planteras är 5-6 år har plantskolan redan gjort en beskärning,
   - Lämna ca 60 % av toppskottet och ca 40 % av sidoskotten. 
 - Små svaga årsskott skärs bort helt. 
 - När du skär av ett ungt skott spara en halv cm ovanför den sista knoppen, för att knoppen skall undvika att torka in.
-- Den nya tillväxten kommer att ske i den riktning den yttersta knoppen sitter.
+- Den nya tillväxten kommer att ske i den riktning den yttersta kvarvarande knoppen sitter.
 - Följ trädets utveckling under uppväxttiden.
-- Plommon och körsbär beskärs så lite som möjligt efter etableringsbeskärningen. 
-  - Man tar främst bort grenar som växer inåt i kronan eller som skaver på andra grenar. 
-  - Årsskotten på äpple och päron kortas in de första åren och konkurrensskott tas bort.
+- Plommon och körsbär beskärs så lite som möjligt efter etableringsbeskärningen. Man tar främst bort grenar som växer inåt i kronan eller som skaver på andra grenar.
+
+  <!-- - Årsskotten på äpple och päron kortas in de första åren och konkurrensskott tas bort. -->
     
 ## Skötsel de första åren
 
-Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytta av gödslig.
+Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytta av gödsling.
 
-- Vattna minst en gång i veckan (men inte dagligen) hela första sommaren. Även en kraftig regnskur ger inte tillräckligt med vatten för att det skall tränga ner ordentligt till rötterna. Även efterföljande år 2-3 bör man se till att jorden är lagom fuktig. Fullvuxna träd behöver också fukt i jorden under sommaren för att producera frukter av god kvalitet.
+- Vattna minst en gång i veckan (men inte dagligen) hela första sommaren. En kraftig regnskur ger inte tillräckligt med vatten för att det skall tränga ner ordentligt till rötterna. Även efterföljande år 2-3 bör man se till att jorden är lagom fuktig. Fullvuxna träd behöver också fukt i jorden under sommaren för att producera frukter av god kvalitet.
 
 - Kontrollera att jorden är fuktig ner till 15-20 cm, gräv ett hål ett dygn efter bevattning och känn efter.
 
-- Håll undan gräs och ogräs runt trädet, de konkurrerar om vatten. Fortsät tmed detta de första 7-8 åren.
+- Håll undan gräs och ogräs runt trädet, de konkurrerar om vatten. Fortsätt med detta de första 7-8 åren.
 
 - Inspektera för angrepp av sjukdomar eller insekter.
 
@@ -119,28 +125,55 @@ Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytt
 
 - Kontrollera hur årsskotten växer. Om de stannar i tillväxt tidigt under sommaren beror det vanligen på för litet vatten, svampangerepp eller näringsbrist. Tillskott av kalk och kompost år 1-2 kan hjälpa. År 2-3 förväntas årsskotten i medeltal växa minst ca 9 cm, om inte kan det bero på närings- eller vattenbrist.
 
--  Tag bort alla utom två till fyra fruktknippor det första året. detta hjälper trädet att satsa på rottillväxt.
+-  Tag bort alla utom två till fyra bukettgrenar/fruktknippor det första året. Detta hjälper trädet att satsa på rottillväxt.
 
-- År två till tre kan körsbären beskäras försiktigt (?).
+- År två till tre kan körsbären beskäras försiktigt för att ge dem önskad form.
 
 
-## Näring
+## Gödsling
 
-- Unga träd har nytta av gödsel de första tre åren (längre i sand- eller grusjord) för att stimulera tillväxt.
+- Unga träd har nytta av gödsel de första tre åren (längre i sand- eller grusjord) för att stimulera tillväxt. Om  du använt gödslad jord (tex planteringsjord) vid planteringen räcker detta som näring över första sommaren.
+
+- Den bästa tiden att gödsla är tidigt på våren. Gödslar man under senvåren eller sommar gynnas frodig tillväxt, frukten hämmas och trädet blir sårbart för vinterskador då det fördröjer starten av vintervilan.
 
 - Om jordens pH är för lågt (< 6.0) kan trädet ha svårt att ta upp näring. Årlig kalktillförsel kan då användas för att höja pH.
 
-- Kväve (N) stimulerar tillväxt av grenar och löv, men för mycket kan ge överdriven tillväxt och svaga grenar.
+- Kväve (N) stimulerar tillväxt av grenar och löv, men för mycket kan ge överdriven tillväxt och svaga grenar på bekostnad av blomning och frukt.
 
 - Fosfor (P) stimulerar rottillväxt.
 
 - Kalium (K) är till nytta för knoppning och fruktkvalitet.
 
-- Använd helst näring som är anpassad för fruktträd. Annat gödsel har vanligen lägre andel kväve och högre fosfat<!-- (högre fosfat/kväve-kvot) -->. När?
+- Använd helst näring som är anpassad för fruktträd. Annat gödsel har vanligen lägre andel kväve och högre fosfat<!-- (högre fosfat/kväve-kvot) -->.
 
-- Tillför vanligt "conventional" gödsel under våren vid den tid nytillväxten startar. Upprepa eventuellt i mitten av mars (?) och tidigt i juli (?). "organiskt" gödsel bryts ner långsammare, varför en gödsling i maj och en i början av juni vanligen är tillräckligt. Följ anvisingarna på förpackningen angpende mängd. Vid tvekan, tag hellre för litet än för mycket (det kan ställa till det för trädet). 
+-  <!-- Upprepa i början av juni? -->
 
-Trädgårdsgödsel.
+- Gödsla en gång tidigt på våren och en gång på hösten. 
+
+  - **Vår**: Gödsla tex varje vår (när nytillväxten startar) med mullrik kogödsel (stimulerar blomning, skörd och övervintring).
+  
+  - **Försommar (ev)**: Naturgödsel eller mineralgödsel NPK.
+  
+  - **Höst**: Använd gödning utan kväve (N). Det är fosfor (P) och kalium (K) som gynnar blomning och fruktsättning. Det gör växten mer motståndskraftig mot frostskador och förbättrar dess möjlighet till blom- och fruktsättning. Använd PK-gödsel eller liknande, tex "Höstgödsel PK 11-21".
+
+<!-- Algomin: Rosor, klematis, bärbuskar & fruktträd: Använd Spettmetoden. Rosor och klematis bör kompletteras med 1 giva. Gör 2 hål ca 20 cm djupa, ca 30 cm från förädlingspunkten. Dosera med ca 1 msk per hål, vår och höst. Använd Algomin Extra växtkraft under sommaren, använd ej spettmetoden för Algomin Extra växtkraft. -->
+
+- Om din nytillväxten är mindre än 6-8 tum per år, överväg att tillsätta ett balanserat granulerat gödningsmedel med högre andel kväve, till exempel en NPK 10-10-10 (%). Var försiktig med doseringen, NPK är ett koncentrerat gödsel och överdosering kan därför göra att växterna blir "brända". <!-- Granngården frukt- och bärgödsel (NPK 6,7-3,3-10)? Rölunda NPK gödsel 20-5-10 -->
+
+- Undvik att lägga gödsel mot stammen.
+
+- Mängden gödningsmedel som ska appliceras beror på antalet år sedan trädet planterades i din trädgård. 
+
+- Följ anvisingarna på förpackningen angpende mängd. Vid tvekan, tag hellre för litet än för mycket.
+
+
+<!-- Vanligen behöver körsbärsträd endast enstaka tillsatser av kvävegödsel. Om trädet växer 6 till 15 tum i grenlängd årligen fungerar det bra. Om inte eller om löv inte är frodig och grön krävs kväve med en hastighet av.1 pund per år av trädet upp till högst 1 pund. Appliceras i ett brett band runt trädets grund men inte vidrör trädet, kan gödningsmedlet göra sitt jobb utan att förorena gödselmedel till körsbärsträdet. Körsbärsträd kan också dra nytta av en enstaka dos kalium, i vilket fall en blandning av 10-10-10 eller 12-12-12 bör appliceras på samma sätt. Endera ansökan ska ges på våren och upprepas vid behov på hösten. -->
+
+<!-- speciellt under våren rekommenderar jag att du gödslar den med fjäderfägödsel. Till exempel har kyckling 4% kväve, 4% fosfor och 1% kalium. -->
+
+<!-- - Tillför vanligt "conventional" gödsel under våren vid den tid nytillväxten startar. Upprepa eventuellt i mitten av mars (?) och tidigt i juli (?). "organiskt" gödsel bryts ner långsammare, varför en gödsling i maj och en i början av juni vanligen är tillräckligt. F -->
+
+<!-- Trädgårdsgödsel. -->
 
 
 <!--  soil pH affects the abundance of microorganisms. Bacteria are generally more prevalent in alkaline soils and fungi dominate in acidic soils. This is important because microbes are responsible for the cycling of nutrients. The most diverse and numerous populations are found in near-neutral soils. Furthermore, soil pH influences pathogenic microbes, and growers can adjust pH to manage some plant diseases. -->
@@ -156,20 +189,34 @@ Trädgårdsgödsel.
 
 ## Bevattning
 
-Vattna rikligt under torra somrar.
+Torka uncder celldelningsperioden ger små bär och gör att karten faller. Torka under de fem veckor som föregår skörden ger små bär. Ojämn vattentillgång från dn period då bären börjar få färg ger spruckna bär.
+
+- Håll jorden lagom och jämnt fuktig.
+
+- Det är särskilt viktigt att undvika torka de första åren.
+
+- Vattna rikligt under torra somrar.
+
+- ca 20-30 lit en gång i veckan eller oftare
 
 ## Beskärning
 
-Se etableringsbeskärning ovan. Principen för fortsatt beskärning är att gynna utåtväxande grenar som bär frukt och undvika grenar med för snäv vinkel. Under de första åren formas trädet. Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första. Under de första åren avgörs också om trädet skall få en korgform (ger lägre träd) eller ha en genomgående huvudstam. Efter att "uppbyggnadsbeskärningen" har format trädet görs "underhållsbeskärning" där man tar bort döda eller skadade grenar.
+Se etableringsbeskärning ovan. Principen för fortsatt beskärning är att forma trädet, gynna utåtväxande grenar som bär frukt och undvika grenar med för snäv vinkel. Trädet formas under de första åren. Då avgörs också om trädet skall få en korgform (ger lägre träd) eller ha en genomgående huvudstam. Efter att "uppbyggnadsbeskärningen" har format trädet görs "underhållsbeskärning" där man främst tar bort döda eller skadade grenar.
+
+Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första.
 
 <!-- Det ska beskäras under JAS-perioden (juli, augusti, september). Om trädet beskärs tidigare under året kan det drabbas av sjukdom. -->
 
-Körsbärsträd tål inte för hård beskärning. De är känsliga för röta efter beskärning. Överväg därför först hur mycket som behövs. Använd en vass och ren sekatör. Lägg snittet en bit ovanför en utåtriktad gren eller öga. Grenen växer dit ögat pekar. Beskärs trädet för hårt kan det bli "vattenskott" som inte bär frukt. Om du beskär vid stamen, låt grenkragen sitta kvar så läker det snabbare. Tag inte bort grenar som är tjockare än ett finger
+Körsbärsträd tål inte för hård beskärning. De är känsliga för röta efter beskärning. Överväg därför först hur mycket som behövs. Använd en vass och ren sekatör. Lägg snittet en bit ovanför en utåtriktad gren eller öga. Grenen växer dit ögat pekar. Beskärs trädet för hårt kan det bli "vattenskott" som inte bär frukt. Om du beskär vid stammen, låt grenkragen sitta kvar så läker det snabbare. Tag inte bort grenar som är tjockare än ett finger. Gör beskärningen i torr väderlek, det minskar risken för bakterieangrepp innan såret har förseglats. Skada inte grenkragen. Lämna inte tappar.
 
 - Börja med att helt ta bort helt döda eller sjuka grenar.
+
 - De som växer rakt nedåt.
+
 - De som korsar varandra eller växer snett/inåt eller uppåt längs stammen, så att de inte växer in i kronan. 
+
 - Gallra uppåtväxande skott som sitter tätt.
+
 - Korta långa årsskott de första 4-5 åren, ger mer kompakt krona och undviker kala grenpartier.
 
 Under sensommar/höst gallras vattenskott (dessa bildas vid för hård beskärning eller annan stress), utan att tappar lämnas kvar. De kan användas för nya grenar om de sitter på en ung gren.
@@ -182,7 +229,7 @@ Under sensommar/höst gallras vattenskott (dessa bildas vid för hård beskärni
 
 <!-- "Bukettgren" -->
 
-Beskärning (av yngre träd?) bör undvikas på sensommaren, eftersom snittytorna då lättare blir fäste för svampsporer som förekommer under sensommar och tidig höst. Äldre träd beskärs helst under JAS (Juli Augusti September), yngre mars-maj (?).
+Beskärning (av yngre träd?) bör undvikas på sensommaren, eftersom snittytorna då lättare blir fäste för svampsporer som förekommer under sensommar och tidig höst. Äldre träd beskärs helst under JAS (Juli Augusti September), yngre mars-maj (?).<!-- Putsa lätt och beskär i juli – september (jas) efter skörd. (eller efter blomning?) -->
 
 Det finns många olika sätt att beskära både sur- och sötkörsbär. Förutsatt att en vanlig grundstam används (som gör trädet mindre) kan nedanstående metoder användas. Enligt vissa rekommendationer skall dock körsbär beskäras försiktigt, och att man endast tar bort skadade, skavande eller konkurrernade grenar.
 
@@ -196,16 +243,16 @@ Sötkörsbär tenderar att få långa, upprätta grenar utan frukt. Om man vill 
 
 **Böja ner grenarna?**
 
-Ju mer upprätt en gren växer, desto mer bladtillväxt. Genom att böja ut grenarna 30-60 grader kan man stimulera frukttillväxt.
+Ju mer upprätt en gren växer, desto mer bladtillväxt och mindre frukt. Genom att böja ut grenarna 30-60 grader kan man stimulera frukttillväxt.
 
 <!-- https://www.chrisbowers.co.uk/guides/cherry-trees.php -->
 
-Detta kan användas som en typ av "beskärning". Den görs företrädesvis tidigt på våren, just före det att tillväxten börjar. Alla sidogrenar som  behövs böjs ner till horisontellt läge (eller lägre) med hjälp av tyngder (tex vedträn?). Mittenstammen böjs i en skarpare vinkel. Detta upprepas året efter med nya grenar. Oönskade grenar skärs bort. Efter ett år nedböjda håller de formen.
+Detta kan användas som en typ av "beskärning". Den görs företrädesvis tidigt på våren, just före det att tillväxten börjar. Alla sidogrenar som  behövs böjs ner till horisontellt läge (eller lägre) med hjälp av tyngder (tex vedträn). Mittenstammen böjs i en skarpare vinkel. Detta upprepas året efter med nya grenar. Oönskade grenar skärs bort. Efter ett år nedböjda håller de formen.
 
-The training is very simple and is basically known as 'bending'. The best time to start is in the early spring, just before growth begins. All of the required side branches are tied down to a horizontal level or just below. The centre leader is tied at a sharper angle.
+<!-- The training is very simple and is basically known as 'bending'. The best time to start is in the early spring, just before growth begins. All of the required side branches are tied down to a horizontal level or just below. The centre leader is tied at a sharper angle. -->
 
 
-**Spansk buske**:
+**Spansk buske**
 
 För att stimulera fruktsättning.
 
@@ -217,20 +264,20 @@ _Första våren:_
   
 - Om det planterade trädet har bra grenar (3-4 st jämnt fördelade runt stammen), beskär dem det första året vid knoppbristning så att spetsarna är på samma nivå, ca 25-30 cm långa.
 
-[Spansk buske, etableringsbeskärning](../../dropbox/images/plants/spanish_bush_year1.jpg)
+![Spansk buske, etableringsbeskärning](../../dropbox/images/plants/spanish_bush_pruning_year1.jpg)
 
 _Andra våren:_
 
-- När de "sekundära" grenarna blivit 50-60 cm långa, beskär dem (nära eller efter blomning) till samma nivå, ca 25 cm långa. När de "tertiära" grenarna blivit 50-60 cm, beskär dem på samma sätt (i nivå ca 25 cm ovan den föregående beskärningen). Denna tredeje beskärning behövs kanske endast på starkväxande sorter.
+- När de "sekundära" grenarna blivit 50-60 cm långa, beskär dem (nära eller efter blomning) till samma nivå, ca 25 cm långa. När de "tertiära" grenarna blivit 50-60 cm, beskär dem på samma sätt (i nivå ca 25 cm ovan den föregående beskärningen). Denna tredje beskärning behövs kanske endast på starkväxande sorter.
 
 - Glesa eventuellt ut kronan genom att avlägsna starkväxande, uppåtväxande grenar och lämna de svagare, mer horisontella grenarna, för att uppmuntra fruktbärning.
 
-[Spansk buske, andra beskärning](../../dropbox/images/plants/spanish_bush_pruning_no2.jpg)
+![Spansk buske, andra beskärning](../../dropbox/images/plants/spanish_bush_pruning_no2.jpg)
 
 
 _Efterföljande år:_ De sekundära och tertiära grenarna blir trädets stomme. Frukter utvecklas på de svagare grenar som växer från dessa. De bör förnyas regelbundet. Skär bort ungefär en fjärdedel av de fruktbärande grenarna regelbundet, efter skörd. Glesa ut starkväxande, uppåtväxande grenar för att bibehålla soltillgång. Till hösten, beskär trädtoppen till ca 2.5 m.
 
-[Spansk buske, fortsatt beskärning](../../dropbox/images/plants/spanish_bush_pruning_year3_and_beyond.jpg)
+![Spansk buske, fortsatt beskärning](../../dropbox/images/plants/spanish_bush_pruning_year3_and_beyond.jpg)
 
 <!-- **Upright Fruiting Offshoot (UFO) -metoden**: -->
 <!-- För industriell odling? -->
@@ -245,13 +292,6 @@ _Efterföljande år:_ De sekundära och tertiära grenarna blir trädets stomme.
 
 Körsbär på grundstammar som gör dem mindre har en benägenhet att blomma rikligt. Det kan ge för mycket frukt för stt trädet skall må bra. Om detta sker bör du därför tunna ut genom att antingen ta bort frukterna när de börjat växa (klipp av klasarnas stam), eller på liknande vis under blomningen. Tag företrädesvis bort de klasar som växer från grenarnas undersida.
 
-
-
-Putsa lätt och beskär i juli – september (jas) efter skörd. (eller efter blomning?)
-
-Klipp bort skadade, korsade och inåtväxande grenar.
-
-Gör beskärningen i torr väderlek, det minskar risken för bakterieangrepp innan såret har förseglats.
 
 ## Höjd
 

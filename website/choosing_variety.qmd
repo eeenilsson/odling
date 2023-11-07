@@ -220,16 +220,15 @@ För en grundstam kan anges till vilken % av standardträdets höjd (det som ymp
 
 **Gisela 5**
 
-- En hybrid mellan _Prunus cerasus_ (surkörsbär) and _Prunus canascens_. "Giessen-serien".
+- "Giessen-serien".
+- En hybrid mellan _Prunus cerasus_ (surkörsbär) and _Prunus canascens_.
 - Ger mindre träd än colt.
 - Höjden blir ca 3 m efter 5 år. Sluthöjden varierar beroende på körsbärssort, 2.5-3  m (40-50% av standard). Kan hållas till 2 m med beskärning.<!-- Gisela 5 rootstock holds down growth to about 45 percent of a traditional full-size tree, Gisela 6 about 70 percent, and Gisela 7 about 50 percent.  -->
 - Placera träden 2.5-3 m ifrån varandra om denna grundstam används.
 - Behöver stödpåle hela livet.
 - Ger frukt efter 1-3 år (körsbär som inte är ympade vanligen 4-5 år).
 - God härdighet (ymplingen avmognar tidigt).
-- Ger tidigare blomning med några dagar, vilket kan öka risken för frosstkadade knoppar/blommor.
-- Tidigarelägger blomningen med några dagar och ökar därmed risken för froststkador.
-- Klarar hård vinterkyla bätre än Colt.
+- Tidigarelägger blomningen med några dagar och ökar därmed risken för froststkador på knoppar/blommor. Klarar dock hård vinterkyla bättre än Colt.
 - Lägre träd (ökar risken för frosstkada).
 - Zon 1-4(5).
 
@@ -322,6 +321,11 @@ Blomningstiden anges olika i olika källor. Troligen är det en tidigblommande s
 Bra pollinatör.
 
 <!-- "Excellent pollinator" -->
+
+### Sunburst
+
+Medelsen blomning, självfertil, klarar zon 3-4. Kan kombineras med 'Sam'.
+
 
 ### Stella
 

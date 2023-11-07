@@ -239,3 +239,15 @@ Varianten BBCH-scale (stone) beskriver stenfrukter, där ingår bla dessa faser:
 
 89 	Fruit ripe for consumption: fruit have typical taste and firmness 
 
+
+## Gödsel
+
+_Organisk gödsel_: Sådant som finns i naturen, såsom gödsel, kompost och gröna grödor (tex gräsklipp). 
+
+_Oorganiskt gödsel_: Kemiska kombinationer blandade i vandel beroende på avsedd användning. Proportionerna av kväve, fosfor och kalium, de ämnen som behövs av nästan alla växter, anges som N-P-K-formuleringar, tex 10-10-10 eller 12-12-12. Andra makro- eller mikronäringsämnen kan också tillsättas som gödselmedel.
+
+_Makronäringsämnen_: Tex svavel, magnesium och kalcium. 
+
+_Mikronäringsämnen:_ Tex mangan, järn, zink, koppar, selen, mfl. 
+
+

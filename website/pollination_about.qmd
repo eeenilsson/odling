@@ -86,6 +86,10 @@ Körsbär har i sina kromosomer två (hos sötkörsbär, fler hos surkörsbär) 
 
 <!-- " In sour cherry, as in other species of the genus Prunus, there occurs the phenomenon of gametophytic self-incom- patibility (GSI). This mechanism has been developed by plants to prevent self-fertilization and facilitate fertilization with pollen of other genotypes within the species (De Nettancourt, 1997). Self-incompatibil- ity consists of arresting pollen-tube growth in the pistil if the tube contains the same S-allele that is present in the pistil. The phenomenon of self-incom- patibility in plants of the family Rosaceae is controlled by two genes at the S-locus. The specificity of the pistil is encoded by the gene responsible for the synthesis of the ribonuclease protein (S-RNase) (Bošković & Tobutt, 1996), whereas the specificity of the pollen is controlled by the gene encoding an F-box protein (S-haplotype-specific F-box protein – SFB) (Yamane, Ikeda, Ushijima, Sassa, & Tao, 2003a).  The tightly linked genetic unit of the pistil S-allele (S- RNase) and pollen S-allele is called S-haplotype Lisek2017.pdf" -->
 
+<!-- Self-incompatibility systems are described as either sporophytic or gametophytic based on the number of S-alleles expressed by the pollen grain (Figure 1B). In gametophytic systems, pollen grains express only the S-allele encoded by their own haploid genome and are rejected on pistils that express this S-allele. In the genetically more complex sporophytic systems, pollen grains express both S-alleles of the diploid pollen-donor plant and are rejected by pistils expressing either S-alle -->
+
+<!-- https://www.cell.com/fulltext/S0092-8674(00)81090-9 -->
+
 ## Genetik, några begrepp
 
 Kromosomer
