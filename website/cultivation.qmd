@@ -31,7 +31,9 @@ Krukodlade träd (då de har intakta rötter) kan planteras när som helst så l
   
   - Gärna mullrik, kalkrik jord.
     
-- Läge: Soligt, för att ge bra med frukt. Sex till åtta (8-10?) timmars direkt solljus behövs. Om platsen är i skugga före kl 16 vid midsommar är den troligen för skuggig. Plantera ej träd för nära huset. Rotsystemet kan skada grunden och rörsystem. Vid storm kan trädet falla och skada det. Fem till sju meter anges ibland som ett lämpligt säkerhetsavstånd. Rötternas utbredning blir kring två-tre gånger trädets höjd.  <!-- För körsbär på en dvärgväxande grundstam går det eventuellt att plantera något närmare, kanske 3 m (?). -->
+- Läge: Soligt, för att ge bra med frukt. Sex till åtta (8-10?) timmars direkt solljus behövs. Om platsen är i skugga före kl 16 vid midsommar är den troligen för skuggig. Plantera ej träd för nära huset. Rotsystemet kan skada grunden och rörsystem. Vid storm kan trädet falla och skada det. Fem till sju meter anges ibland som ett lämpligt säkerhetsavstånd. Rötternas utbredning blir kring två-tre gånger trädets höjd. Avståndet till pollineringsträden (vilka blommar samtidigt) bör vara max 20-25 meter.<!-- För körsbär på en svagväxande grundstam går det eventuellt att plantera något närmare, kanske 3 m (?). -->
+
+
 
 <!-- På det stora hela så är det mesta positivt, men det finns även nackdelar att ha i beaktning. Träd kan först och främst påverka husgrunden och störa rör och ledningar som löper från huset. Gällande husgrunden så kan trädets rötter faktiskt lyfta upp denna och göra den sned; något som påverkar vardagen - milt uttryckt - negativt och som kan komma att bära ganska höga kostnader att korrigera. En annan viktig sak gällande träd handlar om det faktum att rötterna kan förstöra de ledningar som går från- och till huset och där exempelvis avlopp och vatten kan påverkas. Detta gör att placeringen av ett träd aldrig bör ske för nära huset. Man brukar här prata om att ett avstånd på minst 5-7 meter är en viktig säkerhetsåtgärd att ta. En tumregel är att kronan på ett färdigväxt träd är ungefär 20 % mindre än rotsystemet som finns under jorden. Det innebär alltså att du inte bara ska stirra dig blind på hur pass stor krona som olika träd har: viktigare är att jämföra denna med vad som de facto inte syns - men som, vid problem, kan medföra stora kostnader. 
 
@@ -51,7 +53,7 @@ Principen är att rötterna skall ha lucker, väldränerad jord att växa i och 
   6. Lägg gärna mineraljord (makadam, grus eller sand) som rotsystemet kan stå på.
   7. Luckra upp rötterna med fingrarna.
   8. Placera trädet i gropen.
-  9. Fyll på med jord upplandad med tex plantjjord (hur mycket?) till två tredjedelar av klumpens höjd och trampa till den lätt. Fyll sedan på med mer jord och trampa till lätt.<!-- Till de som vill ha kraftigare jord med högre pH, t ex körsbär, rekommenderas rosjord. -->
+  9. Fyll på med jord upplandad med tex plantjord (hur mycket?) till två tredjedelar av klumpens höjd och trampa till den lätt. Fyll sedan på med mer jord och trampa till lätt.<!-- Till de som vill ha kraftigare jord med högre pH, t ex körsbär, rekommenderas rosjord. -->
   10. Vattna ordentligt och låt vattnet sjunka undan. 
   11. Bind upp trädet till en eller två trästörar. Använd ett bindmaterial som inte skaver i barken när trädet svajar.
   12. Sätt på gnagskydd.
@@ -129,8 +131,9 @@ Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytt
 
 - År två till tre kan körsbären beskäras försiktigt för att ge dem önskad form.
 
-
 ## Gödsling
+
+### Några principer
 
 - Unga träd har nytta av gödsel de första tre åren (längre i sand- eller grusjord) för att stimulera tillväxt. Om  du använt gödslad jord (tex planteringsjord) vid planteringen räcker detta som näring över första sommaren.
 
@@ -144,41 +147,41 @@ Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytt
 
 - Kalium (K) är till nytta för knoppning och fruktkvalitet.
 
-- Använd helst näring som är anpassad för fruktträd. Annat gödsel har vanligen lägre andel kväve och högre fosfat<!-- (högre fosfat/kväve-kvot) -->.
-
--  <!-- Upprepa i början av juni? -->
-
-- Gödsla en gång tidigt på våren och en gång på hösten. 
-
-  - **Vår**: Gödsla tex varje vår (när nytillväxten startar) med mullrik kogödsel (stimulerar blomning, skörd och övervintring).
-  
-  - **Försommar (ev)**: Naturgödsel eller mineralgödsel NPK.
-  
-  - **Höst**: Använd gödning utan kväve (N). Det är fosfor (P) och kalium (K) som gynnar blomning och fruktsättning. Det gör växten mer vinterhärdig och förbättrar dess möjlighet till blom- och fruktsättning. Kvävetillförsel kan "lura" trädet att det är längre säsong och det avmognar då inte i tid. Använd PK-gödsel eller liknande, tex "Höstgödsel PK 11-21".
-
-<!-- - Undvik kväve på hösten (lurar trädet att det är längre säsong och den avmognar då inte i tid) -->
-<!-- - Kalium och fosfor kan användas på hösten (särskild höstnäring märkt PK), stödjer rotutveckling och vinterhärdigheten -->
-
-
-<!-- Algomin: Rosor, klematis, bärbuskar & fruktträd: Använd Spettmetoden. Rosor och klematis bör kompletteras med 1 giva. Gör 2 hål ca 20 cm djupa, ca 30 cm från förädlingspunkten. Dosera med ca 1 msk per hål, vår och höst. Använd Algomin Extra växtkraft under sommaren, använd ej spettmetoden för Algomin Extra växtkraft. -->
-
-- Om din nytillväxten är mindre än 6-8 tum per år, överväg att tillsätta ett balanserat granulerat gödningsmedel med högre andel kväve, till exempel en NPK 10-10-10 (%). Var försiktig med doseringen, NPK är ett koncentrerat gödsel och överdosering kan därför göra att växterna blir "brända". <!-- Granngården frukt- och bärgödsel (NPK 6,7-3,3-10)? Rölunda NPK gödsel 20-5-10 -->
+- Använd helst näring som är anpassad för fruktträd. Annat gödsel har vanligen lägre andel kväve och högre fosfat<!-- (högre fosfat/kväve-kvot) -->.<!-- Upprepa i början av juni? -->
 
 - Undvik att lägga gödsel mot stammen.
 
 - Mängden gödningsmedel som ska appliceras beror på antalet år sedan trädet planterades i din trädgård. 
 
-- Följ anvisingarna på förpackningen angpende mängd. Vid tvekan, tag hellre för litet än för mycket.
+- Följ anvisingarna på förpackningen angående mängd. Vid tvekan, tag hellre för litet än för mycket. Var försiktig med doseringen av NPK, som är ett koncentrerat gödsel. Överdosering kan göra att växterna blir "brända".
 
+### Exempel på gödslingsschema
 
-<!-- Vanligen behöver körsbärsträd endast enstaka tillsatser av kvävegödsel. Om trädet växer 6 till 15 tum i grenlängd årligen fungerar det bra. Om inte eller om löv inte är frodig och grön krävs kväve med en hastighet av.1 pund per år av trädet upp till högst 1 pund. Appliceras i ett brett band runt trädets grund men inte vidrör trädet, kan gödningsmedlet göra sitt jobb utan att förorena gödselmedel till körsbärsträdet. Körsbärsträd kan också dra nytta av en enstaka dos kalium, i vilket fall en blandning av 10-10-10 eller 12-12-12 bör appliceras på samma sätt. Endera ansökan ska ges på våren och upprepas vid behov på hösten. -->
+Gödsla en gång tidigt på våren och en gång på hösten. Eventuellt även på försommaren om nytillväxten är dålig (?).
+
+**Vår**: Gödsla varje vår (när nytillväxten startar) med tex mullrik kogödsel (stimulerar blomning, skörd och övervintring).
 
 <!-- speciellt under våren rekommenderar jag att du gödslar den med fjäderfägödsel. Till exempel har kyckling 4% kväve, 4% fosfor och 1% kalium. -->
+
+**Försommar (eventuellt)**: Naturgödsel eller mineralgödsel NPK.
+  
+**Höst**: PK-gödsel eller liknande, tex "Höstgödsel PK 11-21".
+
+- Använd gödning **utan** kväve (N). Kvävetillförsel på hösten kan "lura" trädet att det är längre säsong och det avmognar då inte i tid. 
+
+- Det är fosfor (P) och kalium (K) som gynnar rotutveckling, samt blomning och fruktsättning det kommande året. Det gör även växten mer vinterhärdig. 
+
+<!-- - Kalium och fosfor kan användas på hösten (särskild höstnäring märkt PK), stödjer rotutveckling och vinterhärdigheten -->
+
+<!-- Algomin: Rosor, klematis, bärbuskar & fruktträd: Använd Spettmetoden. Rosor och klematis bör kompletteras med 1 giva. Gör 2 hål ca 20 cm djupa, ca 30 cm från förädlingspunkten. Dosera med ca 1 msk per hål, vår och höst. Använd Algomin Extra växtkraft under sommaren, använd ej spettmetoden för Algomin Extra växtkraft. -->
+
+**Vår eller höst:** Om nytillväxten är mindre än 6-8 tum per år, överväg att tillsätta ett balanserat granulerat gödningsmedel med högre andel kväve, till exempel en NPK 10-10-10 (%). <!-- Granngården frukt- och bärgödsel (NPK 6,7-3,3-10)? Rölunda NPK gödsel 20-5-10 -->
+
+<!-- Vanligen behöver körsbärsträd endast enstaka tillsatser av kvävegödsel. Om trädet växer 6 till 15 tum i grenlängd årligen fungerar det bra. Om inte eller om löv inte är frodig och grön krävs kväve med en hastighet av.1 pund per år av trädet upp till högst 1 pund. Appliceras i ett brett band runt trädets grund men inte vidrör trädet, kan gödningsmedlet göra sitt jobb utan att förorena gödselmedel till körsbärsträdet. Körsbärsträd kan också dra nytta av en enstaka dos kalium, i vilket fall en blandning av 10-10-10 eller 12-12-12 bör appliceras på samma sätt. Endera ansökan ska ges på våren och upprepas vid behov på hösten. -->
 
 <!-- - Tillför vanligt "conventional" gödsel under våren vid den tid nytillväxten startar. Upprepa eventuellt i mitten av mars (?) och tidigt i juli (?). "organiskt" gödsel bryts ner långsammare, varför en gödsling i maj och en i början av juni vanligen är tillräckligt. F -->
 
 <!-- Trädgårdsgödsel. -->
-
 
 <!--  soil pH affects the abundance of microorganisms. Bacteria are generally more prevalent in alkaline soils and fungi dominate in acidic soils. This is important because microbes are responsible for the cycling of nutrients. The most diverse and numerous populations are found in near-neutral soils. Furthermore, soil pH influences pathogenic microbes, and growers can adjust pH to manage some plant diseases. -->
 
@@ -193,7 +196,7 @@ Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytt
 
 ## Bevattning
 
-Torka uncder celldelningsperioden ger små bär och gör att karten faller. Torka under de fem veckor som föregår skörden ger små bär. Ojämn vattentillgång från dn period då bären börjar få färg ger spruckna bär.
+Torka uncder celldelningsperioden ger små bär och gör att karten faller. Torka under de fem veckor som föregår skörden ger små bär. Ojämn vattentillgång från den period då bären börjar få färg ger spruckna bär.
 
 - Håll jorden lagom och jämnt fuktig.
 
@@ -205,13 +208,51 @@ Torka uncder celldelningsperioden ger små bär och gör att karten faller. Tork
 
 ## Beskärning
 
-Se etableringsbeskärning ovan. Principen för fortsatt beskärning är att forma trädet, gynna utåtväxande grenar som bär frukt och undvika grenar med för snäv vinkel. Trädet formas under de första åren. Då avgörs också om trädet skall få en korgform (ger lägre träd) eller ha en genomgående huvudstam. Efter att "uppbyggnadsbeskärningen" har format trädet görs "underhållsbeskärning" där man främst tar bort döda eller skadade grenar.
+Se "etableringsbeskärning" ovan för hur man gör vid plantering och första våren efter det. 
 
-Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första.
+**Varför beskära?**
+
+- Sötkörsbär tenderar att få långa, upprätta grenar utan frukt. Med beskärning kan man gynna de mer horisontellt växande, fruktbärande grenarna.
+
+- Forma trädet de första åren.
+
+- Begränsa trädets höjd.
+
+- Borttagning av döda eller sjuka grenar minskar risken för sjukdom.
+
+**Varför vara försiktig med beskärning?**
+
+- Risk för röta/bakteriesjukdom.
+
+- Beskärs trädet för hårt kan det bli "vattenskott" som inte bär frukt. 
+
+**Grunder**
+
+- Körsbärsträd tål inte för hård beskärning. Överväg därför först hur mycket som behövs. 
+
+- Gör beskärningen i torr väderlek, det minskar risken för bakterieangrepp innan såret har förseglats. 
+
+- Använd en vass och ren sekatör. 
+
+- Lägg snittet en bit ovanför en utåtriktad gren eller öga. Grenen växer dit ögat pekar. 
+
+- Om du beskär vid stammen, låt grenkragen sitta kvar så läker det snabbare. Skada inte grenkragen. Lämna inte tappar.
+
+- Tag inte bort grenar som är tjockare än ett finger. 
+
+- Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första.
+
+<!-- - Beskär trädets högre del mer än den lägre för att ge lusinsläpp och luftflöde? -->
+
+- Beskärning (av yngre träd?) bör undvikas på sensommaren, eftersom snittytorna då lättare blir fäste för svampsporer som förekommer under sensommar och tidig höst. Äldre träd beskärs helst under JAS (Juli Augusti September), yngre mars-maj (?).<!-- Putsa lätt och beskär i juli – september (jas) efter skörd. (eller efter blomning?) -->
+
+### Uppbyggnadsbeskärning (yngre träd)
+
+Trädet formas under de första åren. Principen för fortsatt beskärning är att forma trädet, gynna utåtväxande grenar som bär frukt och undvika grenar med för snäv vinkel. Med detta avgörs också om trädet skall få en korgform (ger lägre träd) eller ha en genomgående huvudstam. 
+
+Enligt de flesta rekommendationer skall körsbär beskäras försiktigt, så att man endast tar bort skadade, skavande eller konkurrerande grenar. Dock finns en del andra metoder beskrivna (se "spansk buske" nedan).
 
 <!-- Det ska beskäras under JAS-perioden (juli, augusti, september). Om trädet beskärs tidigare under året kan det drabbas av sjukdom. -->
-
-Körsbärsträd tål inte för hård beskärning. De är känsliga för röta efter beskärning. Överväg därför först hur mycket som behövs. Använd en vass och ren sekatör. Lägg snittet en bit ovanför en utåtriktad gren eller öga. Grenen växer dit ögat pekar. Beskärs trädet för hårt kan det bli "vattenskott" som inte bär frukt. Om du beskär vid stammen, låt grenkragen sitta kvar så läker det snabbare. Tag inte bort grenar som är tjockare än ett finger. Gör beskärningen i torr väderlek, det minskar risken för bakterieangrepp innan såret har förseglats. Skada inte grenkragen. Lämna inte tappar.
 
 - Börja med att helt ta bort helt döda eller sjuka grenar.
 
@@ -221,7 +262,7 @@ Körsbärsträd tål inte för hård beskärning. De är känsliga för röta ef
 
 - Gallra uppåtväxande skott som sitter tätt.
 
-- Korta långa årsskott de första 4-5 åren, ger mer kompakt krona och undviker kala grenpartier.
+- Korta ner långa årsskott de första 4-5 åren, ger mer kompakt krona och undviker kala grenpartier.
 
 Under sensommar/höst gallras vattenskott (dessa bildas vid för hård beskärning eller annan stress), utan att tappar lämnas kvar. De kan användas för nya grenar om de sitter på en ung gren.
 
@@ -233,15 +274,23 @@ Under sensommar/höst gallras vattenskott (dessa bildas vid för hård beskärni
 
 <!-- "Bukettgren" -->
 
-Beskärning (av yngre träd?) bör undvikas på sensommaren, eftersom snittytorna då lättare blir fäste för svampsporer som förekommer under sensommar och tidig höst. Äldre träd beskärs helst under JAS (Juli Augusti September), yngre mars-maj (?).<!-- Putsa lätt och beskär i juli – september (jas) efter skörd. (eller efter blomning?) -->
-
-Det finns många olika sätt att beskära både sur- och sötkörsbär. Förutsatt att en vanlig grundstam används (som gör trädet mindre) kan nedanstående metoder användas. Enligt vissa rekommendationer skall dock körsbär beskäras försiktigt, och att man endast tar bort skadade, skavande eller konkurrernade grenar.
-
 Surkörsbär är vanligen mindre starkväxande och mindre uppåtväxande än sötkörsbär, varför de som vuxna träd blir mindre.
 
-**Varför beskära?**
+### Underhållsbeskärning
 
-Sötkörsbär tenderar att få långa, upprätta grenar utan frukt. Om man vill stimulera tillväxt av horisontella grenar kan man skära ett litet sår genom barken stax ovan en vilande knopp. Det stimulerar mer lågväxande, horisontella, fruktbärande grenar. Detta bör göras de första åren. Man kan även böja ut de färska grenarna eller beskära till buskform (se nedan). En annan metod är att knipsa av toppen på nytillväxt som överstiger 30-40 cm, vilket ger fler horisontellt växande grenar.
+Efter att "uppbyggnadsbeskärningen" har format trädet görs "underhållsbeskärning" där man främst tar bort döda eller skadade grenar.
+
+Körsbär på grundstammar som gör dem mindre har en benägenhet att blomma rikligt. Det kan ge för mycket frukt för stt trädet skall må bra. Om detta sker bör du därför tunna ut genom att antingen ta bort frukterna när de börjat växa (klipp av klasarnas stam), eller på liknande vis under blomningen. Tag företrädesvis bort de klasar som växer från grenarnas undersida.
+
+### Knep
+
+**Snittning?**
+
+Om man vill stimulera tillväxt av horisontella grenar kan man skära ett litet sår genom barken stax ovan en vilande knopp. Det stimulerar mer lågväxande, horisontella, fruktbärande grenar. Detta fungerar endast de första åren. Man kan även böja ut de färska grenarna eller beskära till buskform (se nedan). En annan metod är att knipsa av toppen på nytillväxt som överstiger 30-40 cm, vilket ger fler horisontellt växande grenar.
+
+**Toppning?**
+
+En metod som kan användas för att hantera trädets storlek och form är "toppning". Om nya skott är 30 cm eller mer på försommaren tar man bort den nytillväxt som överstiger ca 25 cm.
 
 <!-- A good trick for managing the size and shape of the tree is tipping. If new shoots are a foot or more in length by early summer, just pinch out the tip of any new growth that exceeds 12 to 16 inches. The shoots will then start to make numerous side branches at the tip, which will help control height and provide more fruiting branches. -->
 
@@ -255,16 +304,15 @@ Detta kan användas som en typ av "beskärning". Den görs företrädesvis tidig
 
 <!-- The training is very simple and is basically known as 'bending'. The best time to start is in the early spring, just before growth begins. All of the required side branches are tied down to a horizontal level or just below. The centre leader is tied at a sharper angle. -->
 
+### Spansk buske
 
-**Spansk buske**
-
-För att stimulera fruktsättning.
+Det finns många olika sätt att beskära både sur- och sötkörsbär. Förutsatt att en vanlig grundstam används (som gör trädet mindre) kan nedanstående metod användas. För att stimulera fruktsättning?
 
 <!-- https://www.cloudmountainfarmcenter.org/education/grow-tips/growing-cherries/ -->
 
 _Första våren:_
 
-- Om det planterade trädet är en "piska" utan grenar, beskär det i perioden mellan knoppbristning och blomning till 50-75 cm ovan marknivå (?). När grenar utvecklas, sära dem så att de växer med vid vinkel mot stammen. När de vuxit 50-60 cm, beskär dem till samma nivå (vilket bör motsvara ca 15 cm ovan beskärnmingen som gjordes vid plantering).
+- Om det planterade trädet är en "piska" utan grenar, beskär det i perioden mellan knoppbristning och blomning till 50-75 cm ovan marknivå (?). När grenar utvecklas, sära dem så att de växer med vid vinkel mot stammen. När de vuxit 50-60 cm, beskär dem till samma nivå (vilket bör motsvara ca 15 cm ovan beskärningen som gjordes vid plantering).
   
 - Om det planterade trädet har bra grenar (3-4 st jämnt fördelade runt stammen), beskär dem det första året vid knoppbristning så att spetsarna är på samma nivå, ca 25-30 cm långa.
 
@@ -294,10 +342,9 @@ _Efterföljande år:_ De sekundära och tertiära grenarna blir trädets stomme.
 <!-- ################ -->
 
 
-Körsbär på grundstammar som gör dem mindre har en benägenhet att blomma rikligt. Det kan ge för mycket frukt för stt trädet skall må bra. Om detta sker bör du därför tunna ut genom att antingen ta bort frukterna när de börjat växa (klipp av klasarnas stam), eller på liknande vis under blomningen. Tag företrädesvis bort de klasar som växer från grenarnas undersida.
+## Sluthöjd
 
-
-## Höjd
+Kan hållas nere med beskärning. Utan beskärning:
 
 Starkväxande: 5 till 7 m.
 
@@ -307,15 +354,135 @@ Buske: 150-300 cm.
 
 # Sjukdomar och skadedjur
 
-Mjöldagg
+<!-- https://stud.epsilon.slu.se/7647/1/toft_l_150223.pdf -->
 
-Bakterios
+## Förebyggande åtgärder
 
-Aphider
+- Tag bort döda och multnande frukter och bär från trädet och från marken.
 
-Fåglar
+- Rensa bort ogräs runt trädet.
+
+- Undvik att beskära på höst/vinter för att undvika vinterskador som gör trädet mer mottagligt för angrepp av skadedjur.
+
+- Tidigt på våren (helst efter sista frosten men före lövsprickning). tag bort döda och sjuka grenar. 
+
+- Tunna ut fruktmängden genom att ta bort knoppar/blommor eller kommande bär.
+
+- Vid skörd, tag bort **alla** bär och se till att angripna frukter förstörs på rätt sätt.
+
+<!-- Let red cherries ripen on the tree until dark in color. The ripening process is stopped once fruit is picked. For this reason, it is important to be diligent with picking to avoid fruit decomposition & pests. -->
+
+- Skyddsnät kan sättas över trädet direkt efter blomning för att skydda mot fåglar och vissa insekter (om det är finmaskigt). <!-- Specialgjorda nät mot drosophila? -->
+
+<!-- Netting Tree: Place netting around the tree each year to reduce the risk of pests, disease, & damage from birds.  Specially made small mesh nets for drosophila are recommended (Kootenay Covers). -->
+
+- Insektsgift (som sista åtgärd): Konsultera en professionell odlare. Börja med den minst giftiga produkten. Använd inte dagtid när bin samlar nektar, eller när det blåser eller regnar. 
+
+<!-- En viktig åtgärd för att slippa onödiga smittor är att vara noggrann med hygienen då bakteriesjukdomar som stam- och bladbakterios bekämpas förebyggande (Pettersson & Åkesson 2011). Sjukdomarna bekämpas också genom sanerande, t ex genom att eliminera smittade träd och grenar från odlingen och bränna upp dem. Det är väldigt viktigt att se till att plantmaterialet är friskt från början. Beskärning av körsbär bör ske på försommaren efter som att under denna period så är inte de vedartade delarna på träden mottagliga för infektion (Pettersson & Åkesson 2011) -->
+
+### Körsbärsflugan
+
+Körsbärsflugan (_Rhagoletis cerasi L_) förekommer i två olika arter. Den "nordliga" förekommer i norra europa. Den förstör bären genom att lägga sina ägg i bär som börjat mogna. Larverna äter sedan bären och när larven är mogen faller bäret till marken. Ca 3 cm under markytan övervintrar larven som en puppa. I juni kommer flugan fram och livnär sig under ungefär 10 dagar på "nektarier" som finns på körbärsbladen. I svenskt klimat utgör den problem särskilt när vädret varit gynnsamt för dess äggläggning. Det är främst senmognande sorter av körsbär som drabbas. Vanlig i södra och mellersta Sverige 
+
+**Identifiering**:
+
+- Flugan är 3-4 mm lång, svartglänsande, med en klargul fläck på ryggen och fläckiga vingar. Den svärmar vid vackert väder.
+
+- Sätt upp gula klisterlappar för att kunna se om körsbärsflugan svärmar och hur mycket.
+
+**Skadebild**:
+
+- Insjunkna och något missfärgade mörka fläckar på frukten (där larven ätit).
+
+- Angripna bär brådmognar.
+
+**Åtgärder**:
+
+- Förebygg genom att sätta nät/fiberväv över trädet. Hindrar äggläggning. Maskornas storlek är viktig. Kan även ha effekt om den sätts över när den första flugans upptäckts.
+
+- Alla körsbär plockas av trädet så snart man konstaterat ett angrepp av körsbärsfluga. Det görs för att förhindra att larverna kryper ner i marken och förpuppar sig och överlever till kommande år.
+
+- Större delan av skörden kan bli förstörd av körsbärsflugan vid ett angrepp om man inte gör en besprutning med insektsgift.
+
+- Insektsgift är mest effektivt vid temperatur > 16 grader och färgen på bären skiftar från gult till gulrött.
+
+<!-- Biologi och utseende  Flugan, som är ca 5 mm lång har en glänsande svart kropp som är forsedd med en trekantig gul sköld mellan vingarna. Ögonen är gröna, benen gulaktiga och vingarna genomskinliga med svarta band. Efter svärmning och parning böljar äggläggningen om temperaturen är minst 16°C. Vid regn och lägre temperaturer sker ingen äggläggning. Körsbärsflugorna uppehåller sig på solsidan i träden, men lägger äggen i skuggan.  Äggläggningen sker forst när bären ändrar fårg från gult till gulrött . Ägget som sticks in precis under skalet, är vitt och 0,7 mm långt. Vatje hona kan lägga 100-250 ägg. Honan avger ett doftämne efter äggläggningen som hindrar andra honor att lägga ägg på samma plats. Vid riklig förekomst av körsbärsflugor är det dock ändå ofta två larver per bär. Larven kläcks efter 6-8 dagar och äter sedan av fruktköttet under ca 3 veckor. Den blir ca 4 mm lång och är huvud- och fotlös. När den är fårdig lämnar den bäret genom att äta ett hål i skalet.  Larven faller ned till marken och gräver sedan ned sig ca 3 cm i jorden där den förpuppas. Puppan är -->
+
+<!-- Körsbärsflugan är lätt att känna igen på de randiga vingarna och gula nackskölden. Den uppehåller siggärna i körsbärsträden soliga och varma dagar. -->
+
+<!-- mörkgul till brun i fårgen. En del puppor ligger kvar i jorden 2-3 år för att försäkra artens över- levnad. Körsbärsflugan utvecklar en generation årligen. -->
+
+<!-- Kulturåtgärder Tidiga sorter är mindre utsatta får angrepp än se- na och även om de angrips hinner inte larverna utveckla sig innan bären är skördemogna. Det är viktigt att plocka av och föra bort alla bär som är angripna för att minska antalet övervintrande puppor i jorden. Marktäckning med plast hindrar larverna från att ta sig ned i jorden och flugorna från att flyga upp i trädkronorna. För att metoden skall ha effekt krävs dock att all mark under trä- den täcks vilket är orealistiskt i en yrkesodling.  Genom att lägga tunn fiberväv eller insektsnät runt och över träden innan äggläggningen börjar, hindras körsbärsflugorna från att lägga ägg på karten. Det är dock mycket svårt att täcka stora träd och duken går lätt sönder av grenar och vind. -->
+
+<!-- Varningssystem Gula klisterskivor (Rebell) kan användas för att registrera förekomst och flygning hos körsbärsflu- gan. De hängs upp i träden och avläses varje dag f.o.m.mittenavjuni.Närdeförstaflugornafastnat på fållorna kan man anta att det tar 10-14 dagar tills de är färdiga att lägga ägg. På marknaden förekommer klisterfållor med en feromonkapsel av odefinierat innehåll. Denna klisterfålla är inte mer attraktiv får körsbärsflugor än vanliga gula klisterskivor av samma slag som används för mo- rotsflugan. Prisskillnaden är däremot avsevärd.  Kemisk bekämpning Enligt norska rekommendationer och svenska för- sök på SLU, Ränna försöksstation 1996-1997, är detmesteffektivt att utföra en kemisk bekämpning vid kartens fårgomslag från gult till gul-rött, om det finns körsbärsflugor på klisterskivorna och temperaturen är över 16°C. Då är 0,015 promille aktiv substans av dimetoat effektivt. Dimetoat är får närvarande inte registrerat får användning mot körsbärsflugan. Till säsongen 1999 väntas be- slut om ev. nyregistrering av Roxion 40 EC, med dimetoat som aktiv substans, mot körsbärsflugan.  Andra registrerade insektsmedel har inte lika god effekt. -->
+
+<!-- https://pub.epsilon.slu.se/18095/1/Svensson_B_201105.pdf -->
+
+<!-- Identification: There is no visible indication of this pest until -->
+<!-- maggots are nearly mature & exit holes appear. This pest is -->
+<!-- annual & active during the summer. Once out of the fruit, they -->
+<!-- fall to the soil to burrow & overwinter. -->
+<!-- Management: Consider netting the tree with specially designed -->
+<!-- “Kootenay Covers” before indication of fruit fly presence. -->
+<!-- Remove all fruit before larvae emerge & destroy all fruit left on -->
+<!-- the tree after harvest. -->
+
+
+
+
+<!-- att användningen av mikroorganismer, t ex svampar, som biologisk bekämpning kan vara ett sätt att bekämpa körsbärsflugan -->
+
+<!-- (Daniel & Wyss 2009). I deras försök visade sig att körsbärsflugan är mycket mottaglig för svamparna Beauveria bassiana och Isaria fumosorosea som i försök orsakade hög dödlighet hos körsbärsflugan och signifikant minskade antalet lagda ägg.  Daniel & Wyss (2009) skriver att försök med svampar som mycoinsekticider som applicerats på plantor visade goda resultat och att svampen B. bassiana ATCC 74040 har blivit registrerad i Italien och Schweiz som bekämpning mot körsbärsflugan.  Försök där de testar att skydda odlingen med nät mot körsbärsflugan har gjorts. tt möjligt sätt att kontrollera körsbärsflugan är genom betes-spray, som till största delen består av socker och proteiner (Köppler et al 2008). Man blandar insekticiden med betet, vilket gör att flugorna äter insekticiden, och desto mer de äter, desto större blir effekten av insekticiden, vilket i sin tur betyder att man inte behöver spruta ut så mycket gift i odlingen. Försöket författarna har gjort visar positiva resultat, men de skriver att mycket återstår att göra, exempelvis få sprayen motståndskraftig mot regn och ta fram den optimala blandningen. -->
+
+
+
+
+
+<!-- ### Drosophila? -->
+
+<!--     Spotted wing drosophila -->
+<!--     A serious problem in cherries can be spotted wing drosophila, an invasive fruit fly that only appeared in the US in 2009. If you are finding small stings on the fruit, and when broken open the fruit contains a small white larvae, that is the larvae of the SWD. Some steps to control this pest: -->
+<!--         Clean up all fallen fruit as it drops. Remove cherries from the tree if appears to be infested; -->
+<!--         Monitor for SWD with vinegar traps. Learn to identify the flies (other fruit flies will also be attracted to the traps); -->
+<!--         Spray the trees with kaolin clay (Surround) before the fruit starts to change color to hide the fruit from the flies or; -->
+<!--         Spray the trees with a peracetic acid fungicide (ZeoTol, BioSafe Disease Control, Oxidate) as the fruit starts to change color. This removes the yeast film on the surface of the fruit and hides it from the flies. -->
+<!--         Spray with a product containing Spinosad to kill the flies. There is about a 5-7 day residual action. Do not use spinosad more than 3 times per year to prevent the flies from becoming resistant. -->
+
+
+### Bakterios
+
+<!-- Stam- och bladbakterios är en bakteriesjukdom som kan angripa körsbär (Pettersson & Åkesson 2011). Sjukdomen har två olika faser, under sommaren en bladfas och under vintern en barkfas. Man ser att trädet är infekterat genom att de unga skotten vissnar på våren eller att knopparna har torkat ut. Sjukdomens bladfas infekterar nya blad i början av växtsäsongen och visar sig genom bladfläckar som först ser vattniga ut och som sen blir bruna med en genomskinlig kant. Till sist faller den döda vävnaden i fläckarna ur bladet och hål bildas.  Sjukdomens barkfas inträffar under hösten då bakterierna förökar sig och infekterar träden genom bladärren, som bildas när bladen faller till marken. Sjukdomen sprids med hjälp av regn i trädet och mellan olika träd, och genom olika sårytor så kan bakterierna infektera på nytt (Pettersson & Åkesson 2011). -->
+
+### Körsbärsbladlus
+
+<!-- Körsbärsbladlusen, Myzus cerasi, är en skadegörare som går på körsbär i norra Europa (Webster & Looney 1996). Det är en svart bladlus som angriper trädens årsskott och bladen på angripna grenar blir böjda neråt och faller vid ett allvarligt ingrepp av (Pettersson & Åkesson 2011). -->
+
+<!-- Bekämpningar av körsbärsbladlusen görs tidigt på våren (Pettersson & Åkesson 2011). -->
+
+<!-- = Aphider -->
+
+<!-- dentification: Nymphs & adults are both dark brown or black -->
+<!-- in color & is the only dark-colored aphid that attacks cherries. -->
+<!-- Check for curled leaves & honeydew. -->
+<!-- Management: Examine trees after bud break for aphid -->
+<!-- presence. Avoid excess nitrogen application that attracts -->
+<!-- aphids. Avoid pesticide use at it often kills beneficial insects -->
+<!-- like ladybugs that are important in aphid control. -->
+
+
+<!-- https://www.wexthuset.com/fakta-och-rad/om-odling-och-skotsel-av-tradgard-och-vaxter/fakta-tips-om-ohyra-och-skadegorare-pa-vaxter/bek%C3%A4mpa-bladloss-i-tradgarden -->
+
+### Mjöldagg
+
+<!-- Risken för mjöldagg, Podosphaeria clandestina, ökar i en torr miljö och att även brunröta, Monilia fruticola, och blom- och grentorka, Monilia laxa, kan förekomma i tunnlarna (Lang 2013b). -->
+
 
 <!-- ## Om mjöldagg: https://docplayer.se/209487210-Mjoldagg-gulnande-blad-och-for-tidigt-bladfall-visar-sig-betydligt-senare-blldratagheter-saknas.html -->
+
+
+
+### Fåglar
+
 
 
 <!-- Om ditt körsbärsträd har dragit på sig en otrevlig sjukdom så är det bra att du blir av med den så fort som möjligt. Det gör du genom att använda en steriliserad sekatör, som återigen steriliseras innan varje klipp. Klipp försiktigt bort de sjuka delarna. Ohyra på körsbärsträd går också att få bort. Du kan spruta med bladlusmedel. Om lössen lagt ägg och kommer tillbaka så ta bort de bladen på en gång och bränn upp dem eller skicka bort med brännsopor. -->
@@ -332,15 +499,8 @@ Fåglar
 <!--     A common pest seen on young cherries is Cherry Slug. This pest, also seen on pears, is the larvae of a sawfly. The slug-like larvae chew the upper leaf surface. There can be 2 generations of this pest. The most serious generation is the first generation, which can appear in June. The larvae can cause enough leaf damage to decrease photosynthesis in the tree. Pick off the larvae. The leaves can also be dusted with diatamaceous earth, and neem based sprays can also be effective. -->
 <!--     Like many fruit trees, cherry trees can be host to leafrollers. These moth larvae eat the leaves and can cause distortion. A delayed dormant spray at bud stage 3 containing oil can smother pupae that overwinter in cracks in the bark. A spray of Bt (Bacillius thuringiensis) at bloom can also help control populations. -->
 
-<!--     Spotted wing drosophila -->
-<!--     A serious problem in cherries can be spotted wing drosophila, an invasive fruit fly that only appeared in the US in 2009. If you are finding small stings on the fruit, and when broken open the fruit contains a small white larvae, that is the larvae of the SWD. Some steps to control this pest: -->
-<!--         Clean up all fallen fruit as it drops. Remove cherries from the tree if appears to be infested; -->
-<!--         Monitor for SWD with vinegar traps. Learn to identify the flies (other fruit flies will also be attracted to the traps); -->
-<!--         Spray the trees with kaolin clay (Surround) before the fruit starts to change color to hide the fruit from the flies or; -->
-<!--         Spray the trees with a peracetic acid fungicide (ZeoTol, BioSafe Disease Control, Oxidate) as the fruit starts to change color. This removes the yeast film on the surface of the fruit and hides it from the flies. -->
-<!--         Spray with a product containing Spinosad to kill the flies. There is about a 5-7 day residual action. Do not use spinosad more than 3 times per year to prevent the flies from becoming resistant. -->
 
 
-## Insektsbekämpning
+<!-- ## Insektsbekämpning -->
 
 <!-- Pesticides, and in particular insecticides, can be harmful to pollinators. Most pesticide labels advise against their use during crop bloom for this reason. If an insecticide must be used during bloom, be sure to follow label directions and apply the pesticide when bees are least active, and so that the pesticide will dry before bees come into contact with flowers that have been exposed to it. For example, an application made at dusk or during the night will do the least harm to pollinators who visit flowers during the day. After the crop has finished blooming, be aware that pesticide drift onto non-crop flowering plants in adjacent habitat can harm pollinators on those flowers. -->
