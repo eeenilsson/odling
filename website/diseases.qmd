@@ -10,27 +10,27 @@ Sammanfattning
 
 <!-- https://www.slu.se/globalassets/ew/org/centrb/pom/nationella-genbanken/frukttradens-sjukdomar.pdf -->
 
-Skadegörare som angriper samtliga fruktslag
-  Svampsjukdomar  5
-    Fruktmögel (gul monilia)  5
-    Blom- och grentorka (grå monilia) . 6
+<!-- Skadegörare som angriper samtliga fruktslag -->
+<!--   Svampsjukdomar  5 -->
+<!--     Fruktmögel (gul monilia)  5 -->
+<!--     Blom- och grentorka (grå monilia) . 6 -->
 
-Körsbär:
-Svampsjukdomar  23
-  Bladfläcksjuka  23
-  Hagelskottsjuka . 24
-  Körsbärsskorv . 25
-  Gloeosporiurnröta . 26
-Bakteriesjukdomar  27
-  Stam- och bladbakterios . 27
-Virussjukdomar . 28
-  Nekrotisk ringfläck . 28
-  Surkörsgulsot  28
+<!-- Körsbär: -->
+<!-- Svampsjukdomar  23 -->
+<!--   Bladfläcksjuka  23 -->
+<!--   Hagelskottsjuka . 24 -->
+<!--   Körsbärsskorv . 25 -->
+<!--   Gloeosporiurnröta . 26 -->
+<!-- Bakteriesjukdomar  27 -->
+<!--   Stam- och bladbakterios . 27 -->
+<!-- Virussjukdomar . 28 -->
+<!--   Nekrotisk ringfläck . 28 -->
+<!--   Surkörsgulsot  28 -->
 
 
 ## Symtom med olika orsaker
 
-**"Gummiflöde":** Eng. "Gummosis". Ett symtom som kan orsakas av olika infektioner men kan också förekomma utan infektion (då vanligen klart till bärnstensfärgad).
+**"Gummiflöde":** Eng. "Gummosis". Stora, sega eller bärnstenslika klumpar. Ett symtom som kan orsakas av olika infektioner men kan också förekomma utan infektion (då vanligen klart till bärnstensfärgad). .
 
 **Fläckiga blad:** Olika orsaker
 
@@ -44,6 +44,7 @@ Virussjukdomar . 28
 
 **"Hagelskott"**: Hål i bladen. "Hagelskottsjuka" kan ha olika orsaker, exempelvis angrepp av svampar, bakterier eller virus. Svampen _Stigmina carpophila_ är en av de vanligare orsakerna hos körsbär.
 
+**Fruktmumier**: Körsbärsskorv, Gloeosporiumröta, Fruktmögel (gul monilia).
 
 ## Förebyggande åtgärder
 
@@ -178,7 +179,7 @@ Kan även drabba andra fruktslag. Sprids med regn, vind, och insekter. Drabbar f
 
 - Frukterna: Brun röta med gulaktiga sporkuddar i. Oftast vid skador tex från insekter. Kan växa över på friska frukter i närheten så att det blir klasar av angripna frukter. Vid torr väderlek kan sporkuddarna utebli och frukterna endast skrumpna.
 
-[Monilia på äpple. Av Mnolf](../../dropbox/images/plants/monilia_apple.jpg){width=50%}
+![Monilia på äpple. Av Mnolf.](../../dropbox/images/plants/monilia_apple.jpg){width=50%}
 
 <!-- ofta ordnade i koncentriska ringar och bestående av svampens mycel och konidier (vegetativa sporer).  -->
 
@@ -295,9 +296,30 @@ Ej så vanligt i Sverige. Övervintrar i fruktmumier, skott och knoppfjäll. Spr
 
 **Identifiering**:
 
-- Bären: Bruna rötfläckar. Sedan tränger rosa konidiemassor fram vid fuktig väderlek. Sedan skrumpnar frukterna och hänger kvar i trädet som "fruktmumier". 
+- Bären: Bruna, insjunkna rötfläckar. Sedan tränger rosa konidiemassor fram vid fuktig väderlek. Sedan skrumpnar frukterna och hänger kvar i trädet som "fruktmumier". 
 
 
+# Bakterier
+
+## Stam- och bladbakterios 
+
+_Pseudomonas syringae pv. syringae_ och _P syringae pv. mors-prunorum_
+
+Bakterierna finns i störst mängd på hösten, vid bladfällningen. Spridning sker inom trädet och mellan träd med regnstänk där bakterierna tränger in i små sår på skott och grenar samt genom bladärren efter bladfallet. 
+
+<!-- På så vis kommer bakte rierna in i trädets kärl och via dem in i knoppar och andra vävnader. Under vintern sker endast en långsam utbredning i trädet. Vid knoppsprickningen ökar bakteriernas aktivitet och symptomen på skott och grenar uppträder. Först senare på vår och försommar infekte ras de unga bladen. Plommonsorter som anses mottagliga är 'lve', 'Laxton's Early', 'Reine Claude Noir' och 'Victoria'. Känsliga sorter hos körsbär är 'Allmän gulröd bigarrå' och surkörsbärssorten 'Fanal'. -->
+
+**Identifiering**:
+
+- På unga grenar och skott kommer tidigt på våren runda eller utsträckta, något insjunkna fläckar som kan flyta ihop till större områden. Under är barken brun och död. Ofta sprickor mellan djuk och frisk del. Ibland gummiflöde från angripna delar.
+
+- Grenarna dör ofta ovanför angreppet.  
+
+- Knopparna kan torka in. 
+
+- Bladen angrips på vår och försommar, då det uppstår först vattniga bladfläckar, senare blir bruna med genomskinlig yttre kant. Fläckarna faller ibland , sk "hagelskottsjuka".
+
+- Frukterna kan få små bruna fläckar.  
 
 
 ## Bakterios
