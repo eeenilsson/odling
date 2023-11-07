@@ -16,6 +16,7 @@ website:
       - blooming.qmd
       - pollination_table.qmd
       - cultivation.qmd
+      - diseases.qmd
       - recepies.rmd
       - terminology.qmd
       - resources.qmd
