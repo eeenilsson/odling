@@ -42,9 +42,11 @@ Sammanfattning
 
 **Intorkade knoppar**
 
-**"Hagelskott"**: Hål i bladen. "Hagelskottsjuka" kan ha olika orsaker, exempelvis angrepp av svampar, bakterier eller virus. Svampen _Stigmina carpophila_ är en av de vanligare orsakerna hos körsbär.
+**"Hagelskottsjuka"**: Fläckar som sedan blir hål i bladen. "Hagelskottsjuka" förekommer hos plommon och körsbär. Det kan ha olika orsaker, exempelvis angrepp av svampar, bakterier eller virus. Svampen _Stigmina carpophila_ är en av de vanligare orsakerna hos körsbär. 
 
 **Fruktmumier**: Körsbärsskorv, Gloeosporiumröta, Fruktmögel (gul monilia).
+
+**Silvrig glans på bladen**: Kan bero på _Chondrostereum purpureum_, vilket är en allvarlig sjukdom som behöver åtgärdas snarast. Så kallad "falsk silverglans" kan uppkomma av fysiologiska orsaker (tex efter omympning eller kraftig beskärning, den försvinner då vanligen efter ett par år).
 
 ## Förebyggande åtgärder
 
@@ -72,7 +74,9 @@ Sammanfattning
 
 ## Körsbärsflugan
 
-Körsbärsflugan (_Rhagoletis cerasi L_) förekommer i två olika arter. Den "nordliga" förekommer i norra europa. Den förstör bären genom att lägga sina ägg i bär som börjat mogna. Aggläggningen börjar först när temperaturen är minst 16 grader och det inte regnar, i bär som börjat skifta från gult till gulrött. Larverna kläcks efter 6-8 dagar och äter sedan av fruktköttet under tre veckor. När larven är mogen faller bäret till marken, eller så äter sig larven ut ur skalet och faller ned. Ca 3 cm under markytan övervintrar larven som en puppa (puppan kan ligga kvar i upp till tre år). I juni kommer flugan fram och livnär sig under ungefär 10 dagar på "nektarier" som finns på körbärsbladen. I svenskt klimat utgör den problem särskilt när vädret varit gynnsamt för dess äggläggning. Det är främst senmognande sorter av körsbär som drabbas. Vanlig i södra och mellersta Sverige. 
+_Rhagoletis cerasi L_
+
+Körsbärsflugan förekommer i två olika arter. Den "nordliga" förekommer i norra europa. Den förstör bären genom att lägga sina ägg i bär som börjat mogna. Aggläggningen börjar först när temperaturen är minst 16 grader och det inte regnar, i bär som börjat skifta från gult till gulrött. Larverna kläcks efter 6-8 dagar och äter sedan av fruktköttet under tre veckor. När larven är mogen faller bäret till marken, eller så äter sig larven ut ur skalet och faller ned. Ca 3 cm under markytan övervintrar larven som en puppa (puppan kan ligga kvar i upp till tre år). I juni kommer flugan fram och livnär sig under ungefär 10 dagar på "nektarier" som finns på körbärsbladen. I svenskt klimat utgör den problem särskilt när vädret varit gynnsamt för dess äggläggning. Det är främst senmognande sorter av körsbär som drabbas. Vanlig i södra och mellersta Sverige. 
 
 **Identifiering**:
 
@@ -217,7 +221,7 @@ Senare bildas små, grå sporkuddar på blom- och bladskaft. Hos körsbär kan s
 
 _Chondrostereum purpureum_, purpurskinn.
 
-Infekterar genom färska sår efter tex frostskador, beskärning eller avbrutna grenar. Sporerna sprids med vinden och kanske via rotkontakt. Många olika lövträd kan drabbas. Kan också leva i virke. 
+Infekterar genom färska sår efter tex frostskador, beskärning eller avbrutna grenar. Sporerna sprids med vinden och kanske via rotkontakt. Många olika lövträd kan drabbas. Kan också leva i virke. Spridning av sporer sker hela året men kräver fuktighet och sker således efter regn, när luftfuktigheten är > 90 % och temperaturen är 2-21 grader. Under de varma sommarmånaderna hämmas svampen och träden har då lättare att skydda sig genom att utsöndra rikligt med sårgummi. Om våren eller sommaren är kall och fuktig, eller om träden frostskadats, ökar risken för angrepp. Träden infekteras framför allt vår och höst.
 
 **Identifiering**:
 
@@ -226,6 +230,8 @@ En silveraktig glans uppstår på bladen. Först enstaka grenar. Brunfärgad ved
 <!-- os träd och buskar inom rosfamiljen kan den dock uppträda som parasit, särskjlt på fruktträd. -->
 
 ![Fruktkroppar från silverglans. Av Strobilomyces.](../../dropbox/images/plants/silverleaf.jpg){width=50%}
+
+<!-- https://pub.epsilon.slu.se/18002/1/Norin_I_201028b.pdf -->
 
 ## Bladfläcksjuka
 
