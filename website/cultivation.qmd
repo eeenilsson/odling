@@ -13,7 +13,7 @@ title: "Odling"
 <!-- - Gödsla om nytillväxten är mindre än 30 cm. -->
 
 
-## Plantering
+# Plantering
 
 **När**: 
 
@@ -31,7 +31,11 @@ Krukodlade träd (då de har intakta rötter) kan planteras när som helst så l
   
   - Gärna mullrik, kalkrik jord.
     
-- Läge: Soligt, för att ge bra med frukt. Sex till åtta (8-10?) timmars direkt solljus behövs. Om platsen är i skugga före kl 16 vid midsommar är den troligen för skuggig. Plantera ej träd för nära huset. Rotsystemet kan skada grunden och rörsystem. Vid storm kan trädet falla och skada det. Fem till sju meter anges ibland som ett lämpligt säkerhetsavstånd. Rötternas utbredning blir kring två-tre gånger trädets höjd. Avståndet till pollineringsträden (vilka blommar samtidigt) bör vara max 20-25 meter.<!-- För körsbär på en svagväxande grundstam går det eventuellt att plantera något närmare, kanske 3 m (?). -->
+- Läge: 
+  
+  - Soligt, för att ge bra med frukt. Sex till åtta (8-10?) timmars direkt solljus behövs. Om platsen är i skugga före kl 16 vid midsommar är den troligen för skuggig. 
+  - Plantera ej träd för nära huset. Rotsystemet kan skada grunden och rörsystem. Vid storm kan trädet falla och skada det. Fem till sju meter anges ibland som ett lämpligt säkerhetsavstånd. Rötternas utbredning blir kring två-tre gånger trädets höjd. 
+  - Avståndet till pollineringsträden (vilka blommar samtidigt) bör vara max 20-25 meter.<!-- För körsbär på en svagväxande grundstam går det eventuellt att plantera något närmare, kanske 3 m (?). -->
 
 
 
@@ -43,17 +47,17 @@ Surkörsbär klarar blötare jordar bättre än sötkörsbär (men de föredrar 
 
 **Hur**:
 
-Principen är att rötterna skall ha lucker, väldränerad jord att växa i och att rotstammen skall hamna ovan marknivå även efter att jorden sjunkit ihop. Man kan sikta på att bygga en förhöjning som är 20-25 cm ovan den omgivande marken.
+Principen är att rötterna skall ha lucker, väldränerad jord att växa i och att rotstammen skall hamna ovan marknivå även efter att jorden sjunkit ihop. Man kan sikta på att bygga en kulle som når 20-25 cm ovan den omgivande marken.
 
-  1. Ställ roten i vatten en stund innan den planteras.
+  1. Ställ roten i vatten i en halvtimme innan den planteras.
   2. Gräv en grop, 1.5-2 m diameter, djup 40-50 cm.
-  3. Luckra upp botten och sidorna.
+  3. Luckra upp botten och sidorna av gropen.
   4. Blanda den befintliga jorden med tex planteringsjord (ej djupare än 50 cm). Sandig eller lerhaltig jord blandas med 1/3 näringsberikad torv (fuktas väl innan), barkmull, kompost- eller planteringsjord.
-  5. Ordna så att rothalsen hamnar ca 10 cm högre än **omgivande** marknivå, så att det finns sjunkmån. Den bör även vara 5-10 cm ovan jordytan i planteringsgropen.
+  5. Måtta så att rothalsen hamnar ca 10 cm högre än **omgivande** marknivå, så att det finns sjunkmån. Den bör även vara 5-10 cm ovan jordytan i planteringsgropen.
   6. Lägg gärna mineraljord (makadam, grus eller sand) som rotsystemet kan stå på.
   7. Luckra upp rötterna med fingrarna.
   8. Placera trädet i gropen.
-  9. Fyll på med jord upplandad med tex plantjord (hur mycket?) till två tredjedelar av klumpens höjd och trampa till den lätt. Fyll sedan på med mer jord och trampa till lätt.<!-- Till de som vill ha kraftigare jord med högre pH, t ex körsbär, rekommenderas rosjord. -->
+  9. Fyll på med jord uppblandad med tex plantjord (hur mycket?) till två tredjedelar av klumpens höjd och trampa till den lätt. Fyll sedan på med mer jord och trampa till lätt.<!-- Till de som vill ha kraftigare jord med högre pH, t ex körsbär, rekommenderas rosjord. -->
   10. Vattna ordentligt och låt vattnet sjunka undan. 
   11. Bind upp trädet till en eller två trästörar. Använd ett bindmaterial som inte skaver i barken när trädet svajar.
   12. Sätt på gnagskydd.
@@ -64,7 +68,7 @@ Vid höstplantering, vänta till våren och följ det vanliga gödslingsschemat.
 
 **Varför man bör undvika att plantera för djupt:**
 
-  - Rothalsen är känslig för balterie- och svampangrepp. 
+  - Rothalsen är känslig för bakterie- och svampangrepp. 
   
   - Om jorden sjunker bildas en grop där vatten kan samlas och på vintern frysa och skada stammen. 
   
@@ -86,7 +90,7 @@ Vid höstplantering, vänta till våren och följ det vanliga gödslingsschemat.
 
 **Etableringsbeskärning**: Se avsnittet om beskärning nedan.
     
-## Skötsel de första åren
+# Skötsel de första åren
 
 Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytta av gödsling.
 
@@ -106,9 +110,9 @@ Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytt
 
 - År två till tre kan körsbären beskäras försiktigt för att ge dem önskad form.
 
-## Gödsling
+# Gödsling
 
-### Några principer
+## Några principer
 
 - Unga träd har nytta av gödsel de första tre åren (längre i sand- eller grusjord) för att stimulera tillväxt. Om  du använt gödslad jord (tex planteringsjord) vid planteringen räcker detta som näring över första sommaren.
 
@@ -130,7 +134,7 @@ Nyplanterade träd torkar och dör om det inte är fuktigt i jorden. De har nytt
 
 - Följ anvisingarna på förpackningen angående mängd. Vid tvekan, tag hellre för litet än för mycket. Var försiktig med doseringen av NPK, som är ett koncentrerat gödsel. Överdosering kan göra att växterna blir "brända".
 
-### Exempel på gödslingsschema
+## Exempel på gödslingsschema
 
 Gödsla en gång tidigt på våren och en gång på hösten. Eventuellt även på försommaren om nytillväxten är dålig (?).
 
@@ -169,9 +173,9 @@ Gödsla en gång tidigt på våren och en gång på hösten. Eventuellt även p�
 
 <!-- Acidic soils may be neutralized over time with the application of lime. The amount of lime needed to bring the pH to nearly neutral depends on the buffering capacity of the soil and how much the pH needs to be adjusted. The higher the amount of clay and organic matter, the higher the buffering capacity and more lime needed. There are many sources of lime available. Dolomite lime also contains magnesium as well as calcium but is slower acting than agricultural lime (calcium carbonate). This all sounds complicated, but the takeaway message is that applying lime annually to your orchard in the fall will help your fruit trees thrive. -->
 
-## Bevattning
+# Bevattning
 
-Torka uncder celldelningsperioden ger små bär och gör att karten faller. Torka under de fem veckor som föregår skörden ger små bär. Ojämn vattentillgång från den period då bären börjar få färg ger spruckna bär.
+Torka under celldelningsperioden ger små bär och gör att karten faller. Torka under de fem veckor som föregår skörden ger små bär. Ojämn vattentillgång från den period då bären börjar få färg ger spruckna bär.
 
 - Håll jorden lagom och jämnt fuktig.
 
@@ -181,29 +185,31 @@ Torka uncder celldelningsperioden ger små bär och gör att karten faller. Tork
 
 - ca 20-30 lit en gång i veckan eller oftare
 
-## Beskärning
+# Beskärning
 
 Beskärning görs av olika skäl beroende på trädets ålder. Den första våren efter plantering görs "etableringsbeskärning" för att stimulera rottillväxt. När trädet är ungt, dvs 1-3 år (kanske upp till 5 år), görs "uppbyggnadsbeskärning" för att ge trädet önskad form och begränsa höjden. Därefter följer "underhållsbeskärning" som främst syftar till att ta bort döda eller skadade grenar som kan bidra till sjukdom, men som också kan göras för att få nya grenar som bär mer frukt (fruktsättningen minskar på äldre grenar > ca 5 år). Körsbär bör beskäras med försiktighet.
 
 **Varför beskära?**
 
-- Sötkörsbär tenderar att få långa, upprätta grenar utan frukt. Med beskärning kan man gynna de mer horisontellt växande, fruktbärande grenarna.
+- Sötkörsbär tenderar att få långa, upprätta grenar utan frukt. Med beskärning kan man gynna de mer horisontellt växande, fruktbärande grenarna. Surkörsbär får det mesta av sin frukt på fjolårsskotten, så om de inte beskärs kommer bären längst ut på alltför långa grenar (?).
 
-- Upprätthålla balans mellan något äldre fruktbärande grenar och yngre ersättningsgrenar. Surkörsbär får det mesta av sin frukt på fjolårsskotten, så om de inte beskärs kommer bären längst ut på alltför långa grenar (?).
+- Upprätthålla balans mellan något äldre fruktbärande grenar och yngre ersättningsgrenar. 
 
 <!-- RHS: "Annual pruning keeps cherry trees more compact, so they take up less space and the fruit is easier to pick and to protect from birds. Pruning also ensures there is a good balance of older fruiting wood and younger replacement branches. Acid cherries, for example, bear almost all their fruit on the previous year’s shoots, so if left unpruned the crop would be produced at the ends of overlong branches" -->
 
-- Forma trädet de första åren.
+- Forma trädet de första åren och ge det en stark grundstruktur.
 
 - Begränsa trädets höjd och utbredning (underlättar skörd och att lägga på nät som skydd mot fåglar).
 
 - Borttagning av döda eller sjuka grenar minskar risken för sjukdom.
 
+- Förhindra att grenar skaver mot varandra (skapar sår som kan ge fäste åt infektioner).
+
 **Varför vara försiktig med beskärning?**
 
 - Risk för bakteriesjukdom/röta som kommer in i snittytan.
 
-- Beskärs trädet för hårt kan det bli "vattenskott" som inte bär frukt. 
+- Beskärs trädet för hårt kan det bli "vattenskott" som inte bär frukt och som ger en för tät krona. 
 
 **Grunder**
 
@@ -243,7 +249,7 @@ Sammantaget verkar det lämpligt att göra försiktig uppbyggnadsbeskärning und
 
 - Undvik beskärning under höst/vinter. /sensommar?
 
-- Om en gren blir skadad eller sjuk rekommenderas att den kapas ner till friskt trä omedelbart, oavsett säsong. Ett rent snitt är bättre än ett ojämnt brott.
+- Om en gren blir skadad eller sjuk rekommenderas att den kapas ner till friskt trä så snart som möjligt (helst vid torr väderlek), oavsett säsong. Ett rent snitt är bättre än ett ojämnt brott.
 
 <!-- - Beskärning (av yngre träd?) bör undvikas på sensommaren, eftersom snittytorna då lättare blir fäste för svampsporer som förekommer under sensommar och tidig höst. Äldre träd beskärs helst under JAS (Juli Augusti September), yngre mars-maj (?). -->
 <!-- Putsa lätt och beskär i juli – september (jas) efter skörd. (eller efter blomning?) -->
@@ -265,12 +271,16 @@ Sammantaget verkar det lämpligt att göra försiktig uppbyggnadsbeskärning und
 <!-- All cherry pruning should be carried out in the growing season. This reduces the risk of silver leaf disease which is most widespread in winter. Initial pruning and training of young trees is best carried out in spring, just as the buds are breaking. Other pruning to correct problems and encourage fruiting should be carried out in summer. https://www.which.co.uk/reviews/plants/article/how-to-prune-a-cherry-tree-aSpBd7o3A5jq -->
 
 
+<!-- Young cherry trees, i.e. those under three years of age, benefit from early spring pruning. Training and shaping the tree before it comes into blossom is ideal, starting as the buds start to come out but waiting until there is no chance of frost or extreme cold because younger trees can suffer from cold injury. Mature cherry trees can be pruned after they bear fruit, or in early spring. http://treeworksguernsey.co.uk/tree-pruning/wild-cherry/ -->
+
+
+<!--Once your cherry tree has reached 30 inches (76cm) in height, you can cut the main branch (leader) back to 24 to 36 inches (61 to 92cm). This is called heading. https://www.kneebonetrees.co.uk/blog/pruning-cherry-trees/ -->
 
 ## Etableringsbeskärning
 
 **Varför**:
 
-Rotsystemet är vid plantering i underutvecklat i förhållande till kronan. Etableringsbeskärningen gör att rotsystemet får möjlighet att komma ikapp och bli tillräckligt stort för att kunna försörja grenarna med vatten och näring. Det är också viktigt att trädets resurser satsas på ett mindre antal starka knoppar med rätt placering. Risken är annars att trädet blir glest och spretigt, får dålig tillväxt och få skott.
+Rotsystemet är vid plantering underutvecklat i förhållande till kronan. Etableringsbeskärningen gör att rotsystemet får möjlighet att komma ikapp och bli tillräckligt stort för att kunna försörja grenarna med vatten och näring. Det är också viktigt att trädets resurser satsas på ett mindre antal starka knoppar med rätt placering. Risken är annars att trädet blir glest och spretigt, får dålig tillväxt och få skott.
 
 **När**:
 
@@ -289,19 +299,23 @@ Om trädet som planteras är 5-6 år har plantskolan redan gjort en beskärning,
   - Lämna ca 40 % av sidoskotten (alternativt 25-30 cm långa från mittenstammen?). 
 - Små svaga årsskott skärs bort helt. 
 - Grenar som sitter för lågt (lägre än de huvudgrenar du valt ut) tas bort vid stammen.
-- När du skär av ett ungt skott spara en halv cm ovanför den sista knoppen, för att knoppen skall undvika att torka in.
+- När du **kortar ner** ett ungt skott, spara en halv cm ovanför den sista knoppen, för att knoppen skall undvika att torka in.
+- När du **tar bort** ett skott eller en gren, skär så nära grenkragen som möjligt, utan att skada den.
 - Den nya tillväxten kommer att ske i den riktning den yttersta kvarvarande knoppen sitter.
 - Följ trädets utveckling under uppväxttiden.
-- Plommon och körsbär beskärs så lite som möjligt efter etableringsbeskärningen. Man tar främst bort grenar som växer inåt i kronan eller som skaver på andra grenar.
+- Plommon och körsbär beskärs så litet som möjligt efter etableringsbeskärningen. Man tar främst bort grenar som växer inåt i kronan eller som skaver på andra grenar.
 
   <!-- - Årsskotten på äpple och päron kortas in de första åren och konkurrensskott tas bort. -->
 
 
-### Uppbyggnadsbeskärning (yngre träd)
+## Uppbyggnadsbeskärning (yngre träd)
 
 Trädet formas under de första åren. Principen för fortsatt beskärning är att forma trädet, gynna utåtväxande grenar som bär frukt och undvika grenar med för snäv vinkel. Med detta avgörs också om trädet skall få en korgform (ger lägre träd) eller ha en genomgående huvudstam. 
 
-Målsättningen är att få 3-4 huvudgrenar som kommer från den centrala stammen och är belägna minst 50 cm från marken. Dessa bör vara jämnt fördelade runt stammen, så att trädet blir balanserat. Det är vanligt att det endast växer två grenar från stammen. Då bör man låta en förgrening från en av dessa huvudgrenar växa till sig. Oftast beskärs körsbär så att det bildar en buskform/korgform, dvs att den centrala ledaren beskärs (vid vilken höjd denna beskärs beror på hur högt träd man önskar, tex vid 1 m, 1.2 m, eller 1.6 m).
+Målsättningen är att få tre till fyra huvudgrenar som kommer från den centrala stammen och är belägna minst 50 cm från marken. Dessa bör vara jämnt fördelade runt stammen, så att trädet blir balanserat. Det är vanligt att det endast växer två grenar från stammen. Då bör man låta en förgrening från en av dessa huvudgrenar växa till sig. Oftast beskärs körsbär så att det bildar en buskform/korgform, dvs att den centrala ledaren beskärs (vid vilken höjd denna beskärs beror på hur högt träd man önskar, tex vid 1 m, 1.2 m, eller 1.6 m).  <!-- If the sapling is short, wait until it's well over 30 inches (76.2 cm) before inches before heading it.  -->
+
+<!-- The key reason for pruning a cherry tree is to encourage a strong branch structure. A large crop of fruit will weigh heavy, which makes it important to strengthen the branches in order to support a good harvest. -->
+<!-- Cherry tree pruning also allows more air and light to get to the fruit, which enhances its health and makes harvesting more straightforward as well as thwarting disease. You will also want to regularly remove dead or damaged branches for safety reasons, and these will usually be plentiful  http://treeworksguernsey.co.uk/tree-pruning/wild-cherry/-->
 
 <!-- First year pruning is very easy, simply prune back the stem to about 1m / 3ft high in early to late March (see below for why at this time of year). If you are intending to grow your cherry tree as a half-standard bush then prune to 1.2m / 4ft or 1.6m / 5ft for a full standard.  -->
 
@@ -326,15 +340,15 @@ Enligt de flesta rekommendationer skall körsbär beskäras försiktigt, så att
 
 - Gallra uppåtväxande skott som sitter tätt.
 
-- Välj ut tre till fyra grenar som skall bli huvudgrenar. Tag bort de grenar som sitter lägre än huvudgrenarna, så nära stammen som möjligt men bevara kragen.
+- Välj ut tre till fyra grenar som skall bli huvudgrenar. De bör vara jämnt spridda runt stammen, och växa med en vinkel på 45-60 grader. Tag bort de grenar som sitter lägre än huvudgrenarna, så nära stammen som möjligt, men bevara kragen.
 
-- Beskär dessa huvudgrenar så att de är ca 40 cm långa (alternativt tag bort en tredjedel av längden). Korta sidoskott från huvudgrenarna till ca 15 cm (alternativt tag bort en tredjedel av längden). Välj dock ett ställe där ögat/knoppen som hamnar längst ut är riktat utåt, så att det inte sedan växer inåt i kronan. Enligt vissa sparas endast ett eller två sidoskott från huvudgrenarna.
+- Beskär dessa huvudgrenar så att de är ca 40 cm långa (alternativt tag bort en tredjedel av längden). Korta sidoskott från huvudgrenarna till ca 15 cm (alternativt tag bort en tredjedel av längden). Välj dock ett ställe där ögat/knoppen som hamnar längst ut är riktat utåt, så att det inte sedan växer inåt i kronan. Enligt vissa sparas endast ett eller två sidoskott från huvudgrenarna och resten tas bort.
 
 - Korta ner (tag bort ca två tredjedelar av längden alternativt spara fyra knoppar) långa (>22 cm) årsskott de första 4-5 åren, ger mer kompakt krona och undviker kala grenpartier. Därefter mer sällan, kanske vartannat år.
 
 <!-- From years four onwards, perform formative pruning less frequently compared to other fruit trees. Every other year should be sufficient. -->
 
-Under sensommar/höst gallras vattenskott (dessa bildas vid för hård beskärning eller annan stress), utan att tappar lämnas kvar. De kan användas för nya grenar om de sitter på en ung gren.
+- Under sensommar/höst (?) gallras vattenskott bort (dessa bildas vid för hård beskärning eller annan stress), utan att tappar lämnas kvar. De kan användas för nya grenar om de sitter på en ung gren.
 
 <!-- https://svensktradgard.se/tradgardsrad/beskarning/beskara-frukttrad/ -->
 
@@ -348,21 +362,26 @@ Under sensommar/höst gallras vattenskott (dessa bildas vid för hård beskärni
 
 <!-- RHS: "Where trees grow with a clear central-leading branch that grows upwards ahead of the other branches, it is important not to cut this central leader, as this could spoil the final shape of the tree." -->
 
-### Underhållsbeskärning
+<!-- https://www.wikihow.com/Prune-a-Cherry-Tree -->
+
+## Underhållsbeskärning
 
 Efter att uppbyggnadsbeskärningen har format trädet görs underhållsbeskärning där man främst tar bort döda eller skadade grenar.
 
-Körsbärsträd bär frukt på grenar som är ettåriga eller äldre, samt på sporrar från äldre grenar. När grenen är fyra år eller äldre minskar fruktproduktionen. Det kan därför kanske vara önskvärt att beskära (ta bort?) äldre grenar för att stinulera nya grenar. De grenar som formar trädets grundstruktur bör förstås lämnas. Denna beskärning görs under JAS-perioden, efter skörd (?).
+Körsbärsträd bär frukt på grenar som är ettåriga eller äldre, samt på sporrar från äldre grenar. När grenen är fyra år eller äldre minskar fruktproduktionen. Det kan därför kanske vara önskvärt att beskära (ta bort?) äldre grenar för att stimulera nya grenar. De grenar som formar trädets grundstruktur bör förstås lämnas. Denna beskärning görs under JAS-perioden, efter skörd (?).
 
 <!-- Cherry tree fruit on wood which is a year or more older. When wood reaches five years or more old the quality of the fruit declines rapidly. In general terms, the thicker the branch, the older it is. When pruning, try to encourage new growth by removing wood which is five years or more old. -->
 
+<!-- Bear in mind though that summer pruning results in a reduction of the tree’s energy for fruit production, so keep the pruning to a minimum. You are best to stick to simple thinning, i.e. the removal of a limb or branch up to the point of where it grew from. This will also help to open up the tree’s canopy, so letting in more light and improving airflow. http://treeworksguernsey.co.uk/tree-pruning/wild-cherry/ -->
+
 - Tag bort döda, skadade, sjuka, eller korsande grenar enligt ovan.
 
-- Tag bort svaga grenar?
+- Glesa ut genom att ta bort svaga grenar?
+
+- Glesa ut genom att eventuellt ta bort nya sidoskott som är > 30 cm. Korta de övriga sidoskotten till 5-6 knoppar?
 
 - Korta eventuellt ner kvarvarande grenar med en tredjedel för att stimulera fruktsättning.
 
-- Tag eventuellt bort sidoskott som är > 30 cm. Korta de övriga till 5-6 knoppar?
 
 <!-- Shorten the tips of the remaining branches by about a third of their new growth to help encourage the development of fruit buds. -->
 <!-- Cut out any side-shoots that are over 30cm long, and thin out very crowded shoots. Leave side-shoots that are less than 15cm long, and shorten others to five or six buds. -->
@@ -373,7 +392,7 @@ Surkörsbär är vanligen mindre starkväxande och mindre uppåtväxande än sö
 
 <!-- Acid cherries fruit predominantly on the previous year’s growth, so pruning needs to be much heavier than for sweet cherries in order to encourage lots of new growth. Prune once fruit has been picked. https://www.which.co.uk/reviews/plants/article/how-to-prune-a-cherry-tree-aSpBd7o3A5jq-->
 
-### Knep
+## Knep
 
 **Snittning?**
 
@@ -395,7 +414,7 @@ Detta kan användas som en typ av "beskärning". Den görs företrädesvis tidig
 
 <!-- The training is very simple and is basically known as 'bending'. The best time to start is in the early spring, just before growth begins. All of the required side branches are tied down to a horizontal level or just below. The centre leader is tied at a sharper angle. -->
 
-### Spansk buske
+## Spansk buske
 
 Det finns många olika sätt att beskära både sur- och sötkörsbär. Förutsatt att en vanlig grundstam används (som gör trädet mindre) kan nedanstående metod användas. För att stimulera fruktsättning?
 
@@ -435,11 +454,11 @@ _Efterföljande år:_ De sekundära och tertiära grenarna blir trädets stomme.
 
 ## Sluthöjd
 
-Kan hållas nere med beskärning. Utan beskärning:
+Kan hållas nere med beskärning. Utan beskärning (på svagväxande grundstam):
 
-Starkväxande: 5 till 7 m.
+- Starkväxande: 5 till 7 m.
 
-Medelstarkväxande: 4 till 6 m.
+- Medelstarkväxande: 4 till 6 m.
 
-Buske: 150-300 cm.
+- Buske: 150-300 cm.
 

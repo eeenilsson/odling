@@ -30,33 +30,45 @@ Sammanfattning
 
 ## Symtom med olika orsaker
 
-**"Gummiflöde":** Eng. "Gummosis". Stora, sega eller bärnstenslika klumpar. Ett symtom som kan orsakas av olika infektioner men kan också förekomma utan infektion (då vanligen klart till bärnstensfärgad). .
+**"Gummiflöde":** Eng. "Gummosis". Stora, sega eller bärnstenslika klumpar. Ett symtom som kan orsakas av olika infektioner men kan också förekomma utan infektion (då vanligen klart till bärnstensfärgad).
 
-**Fläckiga blad:** Olika orsaker
+**Frukter som brådmognar**: Körsbärsfluga.
 
-**Intorkade blad**:
+**Gropiga frukter**: Körsbärsfluga.
 
-**Gropiga frukter**:
-
-**Döda grenar**
-
-**Intorkade knoppar**
-
-**"Hagelskottsjuka"**: Fläckar som sedan blir hål i bladen. "Hagelskottsjuka" förekommer hos plommon och körsbär. Det kan ha olika orsaker, exempelvis angrepp av svampar, bakterier eller virus. Svampen _Stigmina carpophila_ är en av de vanligare orsakerna hos körsbär. 
+**Fläckiga frukter**: Fruktmögel (brun röta med sposkuddar i). Hagelskottsjuka (_Stigmina carpophila_). Körsbärsskorv (tättsittande, svartgröna fläckar). Gloeosporiumröta (bruna, insjunkna fläckar). Stam- och bladbakterios (små, bruna fläckar).
 
 **Fruktmumier**: Körsbärsskorv, Gloeosporiumröta, Fruktmögel (gul monilia).
 
+**Fläckiga blad:** Bladfläcksjuka. Hagelskottsjuka (_Stigmina carpophila_). Stam- och bladbakterios (vattniga fläckar).
+
+**Bruna, intorkade blad**: Blom- och grentorka.
+
+**Gula blad som faller i förtid**: Bladfläcksjuka. Surkörsgulsot (klorotiska fläckar).
+
+**"Hagelskottsjuka"**: Fläckar som sedan blir hål i bladen. "Hagelskottsjuka" förekommer hos plommon och körsbär. Det kan ha olika orsaker, exempelvis angrepp av svampar (tex Bladfläckssjuka), bakterier eller virus (Nekrotisk ringfläck, Surkörsgulsot). Svampen _Stigmina carpophila_ är en av de vanligare orsakerna hos körsbär. 
+
 **Silvrig glans på bladen**: Kan bero på _Chondrostereum purpureum_, vilket är en allvarlig sjukdom som behöver åtgärdas snarast. Så kallad "falsk silverglans" kan uppkomma av fysiologiska orsaker (tex efter omympning eller kraftig beskärning, den försvinner då vanligen efter ett par år).
+
+**Döda grenar**:
+
+**Intorkade knoppar**: Stam- och bladbakterios.
+
+**Vissnade blommor**: Blom- och grentorka. 
 
 ## Förebyggande åtgärder
 
-- Tag bort döda och multnande frukter och bär från trädet och från marken.
+- Använd friskt, certifierat, planteringsmaterial (bakterier och virus kan inte bekämpas på annat sätt då de ofta infekterar hela plantan).
+
+- Tag bort angripna, döda och multnande frukter och bär (och rester från andra växter) från trädet och från marken.
+
+- Samla in nedfallna blad kring trädet och i omgivningen. Kan läggas i övertäckt kompost. Ett alternativ för osmittade blad är att finfördela dem genom att köra över dem med gräsklippare.<!-- Ge nom att sönderdela bladen kan man öka nedbrytningshastigheten ytterligare. Ett sätt är att blåsa eller räfsa ut bladen i gräsbanan och köra med gräsklippar -->
 
 - Rensa bort ogräs runt trädet.
 
 - Undvik att beskära på höst/vinter för att undvika vinterskador som gör trädet mer mottagligt för angrepp av skadedjur.
 
-- Tidigt på våren (helst efter sista frosten men före lövsprickning). Tag bort döda och sjuka grenar. 
+- Tidigt på våren (helst efter sista frosten men före lövsprickning). Tag bort döda och sjuka grenar. <!-- Beskärning är också ett viktig led när det gäller att minska smittrycket. Många svam par övervintrar i grenverket och i gamla kvarsittande frukter. I samband med beskärningen bör man därför också ta sjukdomarna i beaktande. -->
 
 - Tunna ut fruktmängden genom att ta bort knoppar/blommor eller kommande bär.
 
@@ -68,7 +80,12 @@ Sammanfattning
 
 <!-- Netting Tree: Place netting around the tree each year to reduce the risk of pests, disease, & damage from birds.  Specially made small mesh nets for drosophila are recommended (Kootenay Covers). -->
 
+- Bevattna i marken, ej ovanifrån (minskar fukten i bladverket).
+
 - Insektsgift (som sista åtgärd): Konsultera en professionell odlare. Börja med den minst giftiga produkten. Använd inte dagtid när bin samlar nektar, eller när det blåser eller regnar. 
+
+
+<!-- Förebyggande åtgärder mot svampsjukdomar Det är främst tre faktorer som avgör hur svåra svampangreppen blir i en odling. Det är väderleksförhållandena, sorternas mottaglighet och smittrycket i odlingen. Ju fuktigare väderlek, ju fler mottagliga sorter och ju mer smitta i form av gamla växtrester som finns i odlingen, desto svårare blir angreppen. Det gäller alltså att motverka dessa tre faktorer. -->
 
 # Insekter
 
@@ -173,7 +190,7 @@ _Myzus cerasi_
 
 ## Fruktmögel (gul monilia) 
 
-Lat. _Monilia fructigena_
+_Monilia fructigena_
 
 Även kallad "Fruktmumie". Eng "Cherry brown rot" (som innefattar flera _Monilia_-varianter).
 
@@ -199,7 +216,7 @@ Kan även drabba andra fruktslag. Sprids med regn, vind, och insekter. Drabbar f
 
 ## Blom- och grentorka (grå monilia) 
 
-_Monilia laxa_. 
+_Monilia laxa_
 
 Kallas även kärnfruktmögel.
 
@@ -216,6 +233,14 @@ Sprids med regnstänk, vind, och insekter. Infekterar först blomman och växer 
 Senare bildas små, grå sporkuddar på blom- och bladskaft. Hos körsbär kan svampen orsaka grendöd. Hos stenfrukt angrips frukterna, som så småningom täcks av svampens gråa sporkuddar, som är mindre än de från gul _Monilia_.  
 
 ![Monilia på äppelkvist](../../dropbox/images/plants/monilia_apple_leaf.jpg){width=50%}
+
+**Åtgärder**:
+
+- Skär bort de angripna grenarna en bit in på den friska veden, så snart som möjligt.
+
+- Inspektera fruktsporrarna och tag bort de som är angripna.
+
+- Gallra bort så att svampen inte sprider sig till friska frukter. <!-- kart Svampen förhindras då att växa över från sjuka till friska frukter. -->
 
 ## Silverglans
 
@@ -260,7 +285,7 @@ Ger dålig knoppsättning, försämrad avmognad av årsskotten, och nedsatt vint
 
 ## Hagelskottsjuka
 
-_Stigmina carpophila_ är en av de vanligaste orsakerna till detta hos körsbär. 
+_Stigmina carpophila_ är en av de vanligaste orsakerna till detta hos körsbär. Den beskrivs här.
 
 Övervintrar i barken och som mycel.
 
@@ -317,9 +342,9 @@ Bakterierna finns i störst mängd på hösten, vid bladfällningen. Spridning s
 
 **Identifiering**:
 
-- På unga grenar och skott kommer tidigt på våren runda eller utsträckta, något insjunkna fläckar som kan flyta ihop till större områden. Under är barken brun och död. Ofta sprickor mellan djuk och frisk del. Ibland gummiflöde från angripna delar.
+- På unga grenar och skott kommer tidigt på våren runda eller utsträckta, något insjunkna fläckar som kan flyta ihop till större områden. Under är barken brun och död. Ofta sprickor mellan sjuk och frisk del. Ibland gummiflöde från angripna delar.
 
-- Grenarna dör ofta ovanför angreppet.  
+- Grenarna dör ofta ovanför angreppet.
 
 - Knopparna kan torka in. 
 
@@ -328,7 +353,9 @@ Bakterierna finns i störst mängd på hösten, vid bladfällningen. Spridning s
 - Frukterna kan få små bruna fläckar.  
 
 
-## Bakterios
+<!-- Bakteriesjukdomar måste bekämpas förebyggande genom plantering av friskt plantmateri al, eftersom det inte finns några effektiva bekämpningsmedel att tillgå. Vid angrepp kan man förhindra vidare spridning genom att skära bort angripna grenar. Det går dock inte att bota träden, eftersom infektionen i regel är systemisk. Besprutning med kopparpreparat rekommenderas mot stam- och bladbakterios hos plommon och körsbär. Den skall i så fall utföras vid bladfallet under hösten då bakterierna är som mest aktiva. -->
+
+<!-- ## Bakterios -->
 
 <!-- Bacterial canker in sweet cherries is caused by the bacterium Pseudomonas syringae pv. syringae (PSS)  = Stam- och bladbakterios -->
 <!-- Pseudomonas syringae pv. syringae och P syringae pv. mors-prunorum -->
@@ -350,42 +377,92 @@ Bakterierna finns i störst mängd på hösten, vid bladfällningen. Spridning s
 
 <!-- Bacterial canker in sweet cherries is caused by the bacterium Pseudomonas syringae pv. syringae (PSS) van Hall (Romoli, 1963, Latorre et al., 1980), and is commonly associated with production areas characterized by wet and cold weather -->
 
-Detta är en sjukdom som angriper blad (under sommaren) och bark (under höst- vinter). Under sjukdomens bladfas (i början av växtsäsongen) infekteras nya blad. Under barkfasen förökar sig bakterierna och sprids med regn i trädet och mellan träd (?). Genom sårytor i barken eller vid avfallna löv kan bakterierna ta sig in i barken. 
+<!-- Detta är en sjukdom som angriper blad (under sommaren) och bark (under höst- vinter). Under sjukdomens bladfas (i början av växtsäsongen) infekteras nya blad. Under barkfasen förökar sig bakterierna och sprids med regn i trädet och mellan träd (?). Genom sårytor i barken eller vid avfallna löv kan bakterierna ta sig in i barken.  -->
 
-STÄMMER DETTA? ELLER ÄR DET EN SVAMPINFEKTION SOM BESKRIVS?
+<!-- STÄMMER DETTA? ELLER ÄR DET EN SVAMPINFEKTION SOM BESKRIVS? -->
 
-**Skadebild**:
+<!-- **Skadebild**: -->
 
-- De unga skotten vissnar (eller att knopparna torkat ut) på våren.
+<!-- - De unga skotten vissnar (eller att knopparna torkat ut) på våren. -->
 
-- Under sommaren (sjukdomens "bladfas") ses bladfläckar som först ser vattniga ut, sedan bruna med genomskinlig kant. Därefter faller vävnaden i fläckarna bort och hål bildas i bladet.
+<!-- - Under sommaren (sjukdomens "bladfas") ses bladfläckar som först ser vattniga ut, sedan bruna med genomskinlig kant. Därefter faller vävnaden i fläckarna bort och hål bildas i bladet. -->
 
 <!-- Stam- och bladbakterios är en bakteriesjukdom som kan angripa körsbär (Pettersson & Åkesson 2011). Sjukdomen har två olika faser, under sommaren en bladfas och under vintern en barkfas. Man ser att trädet är infekterat genom att .  (Pettersson & Åkesson 2011). -->
 
-**Åtgärder**:
+<!-- **Åtgärder**: -->
 
-- Se till att plantmaterialet är friskt från början.
+<!-- - Se till att plantmaterialet är friskt från början. -->
 
-- Noggrann hygien är förebyggande.
+<!-- - Noggrann hygien är förebyggande. -->
 
-- Beskär på försommaren, då de vedartade delarna av trädet ej är mottagliga för infektion.
+<!-- - Beskär på försommaren, då de vedartade delarna av trädet ej är mottagliga för infektion. -->
 
-- Tag bort och bränn upp smittade träd och grenar.
+<!-- - Tag bort och bränn upp smittade träd och grenar. -->
 
 <!-- En viktig åtgärd för att slippa onödiga smittor är att vara noggrann med hygienen då bakteriesjukdomar som stam- och bladbakterios bekämpas förebyggande (Pettersson & Åkesson 2011). Sjukdomarna bekämpas också genom sanerande, t ex genom att eliminera smittade träd och grenar från odlingen och bränna upp dem. Det är väldigt viktigt att se till att plantmaterialet är friskt från början. Beskärning av körsbär bör ske på försommaren efter som att under denna period så är inte de vedartade delarna på träden mottagliga för infektion (Pettersson & Åkesson 2011) -->
 
+# Virus
+
+<!-- Virusinfektioner orsa kar hämmad tillväxt, skördenedsättningar, mottaglighet för andra sjukdomar och ökad frost känslighet. -->
+
+## Nekrotisk ringfläck 
+
+Prunusringfläckvirus (Eng. "Prunus necrotic ringspot virus", PNRSV) 
+
+Det vanligaste viruset hos släktet _Prunus_, inklusive körsbär, där det förekommer naturligt. Olika arter smittar dock inte varandra. Olika typer av PNRSV ger olika mycket symptom. Det beror ävan på årstid och väder. Ibland ser man skador endast första våren efter infektion. Sprids vid bladtillväxt, samt med pollen och frö.
+
+**Identifiering**:
+
+<!-- klorotiska (ljusa) fläckar: Gul vävnad, så kallad kloros, mellan de gröna bladnerverna.  -->
+
+- Uppträder under våren (senare utvecklade blad visar oftast inga symtom).
+
+- Klorotiska (ljus, gul vävnad mellan de gröna bladnerverna) fläckar, ringar och band på nya blad. Det visar sig snabbt som "hagelskottssjuka" när vävnaden dör och hål lämnas i bladen. 
+
+- Spetsarna på skotten kan torka och dö.
+
+## Surkörsgulsot 
+
+Plommondvärgsjukevirus (Eng. "Prune dwarf virus", PDV) 
+
+Ger minskat antal fruktsporrar och minskar således skörden. Sprids vid bladtillväxt, samt med pollen och frö. Infekterar olika _Prunus_-arter som kan få olika symtom.
+
+<!-- Det kan orsaka många olika symptom beroende på värdväxt, virusstam och temperatur. Viruset finns i hela världen och angriper många Prunus-arter, förutom surkörsbär också sötkörs bär, plommon, persika, aprikos och mandel -->
+
+**Identifiering**:
+
+- Liknar till en början prunusringfläcksvirus (se ovan), med klorotiska fläckar och ringar som dör och lämnar hål.
+
+- Efter några år, med start under perioden efter blomning, breder den gula vävnaden ut sig så att bara bladnerverna förblir gröna.
+
+- Bladen faller och ofta blir endast ett fåtal blad kvar i toppen av trädet.
 
 
-### Mjöldagg
+<!-- ## Mjöldagg ################## -->
 
 <!-- Risken för mjöldagg, Podosphaeria clandestina, ökar i en torr miljö och att även brunröta, Monilia fruticola, och blom- och grentorka, Monilia laxa, kan förekomma i tunnlarna (Lang 2013b). -->
+
+<!-- Powdery mildew of sweet cherry in the Pacific Northwest (PNW) is caused by Podosphaera clandestina, which infects fruit and leaves. Disease symptoms are commonly observed near harvest  -->
 
 
 <!-- ## Om mjöldagg: https://docplayer.se/209487210-Mjoldagg-gulnande-blad-och-for-tidigt-bladfall-visar-sig-betydligt-senare-blldratagheter-saknas.html -->
 
+<!-- Mjöldaggssvamparna kan angripa ett stort an- tal växter, närmare 10 000 arter finns beskrivna.  Här ingår grönsaker, perenner, annueller, gräs , ogräs samt prydnadsbuskar, bär, fruktträd och and- ra lövträd. Mjöldaggssvamparna är i allmänhet specialiserade vilket innebär att en mjöldaggsart endast angriper växter inom samma släkte eller familj. Men det finns många undantag. De s.k.  polyfaga mjöldaggsarterna kan angripa flera olika växtsläkten. -->
 
+<!-- https://pub.epsilon.slu.se/17958/1/Forsberg_A_et_al_201027.pdf -->
 
-### Fåglar
+<!-- Åtgärder Förebyggande *Välj om möjligt motståndskraftiga ellerresistenta sorter. -->
+<!-- * Se till att växterna är i god vigör. Det är viktigt att de får en jämn vattentillförsel och inte lider av torka. Se nedan "Gör en våtbädd". -->
+<!-- * Lagom och väl avvägd tillfårsel av gödsel. Det är viktigt att undvika överdriven kvävetillfårsel, som allmän regel gäller, mer kalium och mindre kväve.  *Rätt växtplats får respektive växtslag. -->
+<!-- * Bestånden ska hållas luftiga, därfår bör gallring och beskärning ingå som rutinåtgärder. -->
+<!-- * Klipp bort mjöldaggsangripna skott och grenar på vedartade växter. Detta bör man göra under augusti-september när växterna har avslutat sin tillväxt.  På örtartade växter, t.ex. begonia, kornett- blomma och pense bör man ta bort angripna skott fortast möjligt -->
+
+<!-- I de flesta fall beror angrepp av mjöldagg på att -->
+<!-- växterna lider brist på vatten. -->
+
+<!-- Förutom ovan nämnda förebyggande åtgärder bör man grundgödsla med ämnen som är rika på kisel, t. ex. stenmjöl och algmjöl (Algomin ), vilka har häm- mande effekt på mjöldagg. Upprepad behandling med natriumbikarbonat (2 tsk natriumbikarbonat + 2 tsk såpa eller 2 tsk olja/ liter vatten) på ett begyn- nande angrepp kan ha mycket bra effekt -->
+
+# Fåglar
 
 
 
