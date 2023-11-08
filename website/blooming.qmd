@@ -78,7 +78,7 @@ Om blomningen infaller före den sista frosten finns en risk att blommorna förs
 Se översiktskarta från [SMHI](https://www.smhi.se). Mer detaljerad statistik kan fås från "odlingskalendern" på [vackertväder.se](https://www.vackertvader.se).
 <!-- https://www.vackertvader.se/%C3%B6rebro/odla#frost-datum -->
 
-![Sista frost](../../dropbox/images/plants/sista_frost_2017_smhi.png){width=50%}
+![Sista frost](../../dropbox/images/plants/sista_frost_2017_smhi.png){width=40%}
 
 <!-- [SMHI Klimat](https://www.smhi.se/klimat/klimatet-da-och-nu/klimatindex/varens-sista-frost-1.77151) -->
 
