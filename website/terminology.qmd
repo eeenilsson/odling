@@ -34,7 +34,9 @@ sp. = species
 
 subs. = ssp. = subspecies
 
-var. = v. = varietas (= f. [form]?)
+var. = v. = varietas 
+
+form = f. = ? 
 
 syn. = synonymt med
 

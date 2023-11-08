@@ -2,7 +2,9 @@
 title: "Sjukdomar"
 ---
 
-Sammanfattning
+Ett urval av sjukdomar och skadedjur som kan angripa körsbär.
+
+<!-- [Se Plantwise för bilder mm](https://plantwiseplusknowledgebank.org/doi/full/10.1079/pwkb.species.45010) -->
 
 <!-- https://stud.epsilon.slu.se/7647/1/toft_l_150223.pdf -->
 
@@ -76,9 +78,11 @@ Sammanfattning
 
 <!-- Let red cherries ripen on the tree until dark in color. The ripening process is stopped once fruit is picked. For this reason, it is important to be diligent with picking to avoid fruit decomposition & pests. -->
 
-- Skyddsnät/fiberväv kan sättas över trädet direkt efter blomning för att skydda mot fåglar och vissa insekter (om det är finmaskigt). <!-- Specialgjorda nät mot drosophila? -->
+- Skyddsnät/fiberväv kan sättas över trädet <!-- direkt efter blomning  -->för att skydda mot vissa insekter (om det är finmaskigt) och mot fåglar (då behöver det endast hängas på strax före det att bären börjar skifta mot rött). Nätet kan möjligen skada löv och grenar. <!-- Specialgjorda nät mot drosophila? -->
 
 <!-- Netting Tree: Place netting around the tree each year to reduce the risk of pests, disease, & damage from birds.  Specially made small mesh nets for drosophila are recommended (Kootenay Covers). -->
+
+- Använd gnagskydd de första åren (minskar risken för gnagskador på stammen som kan ge infektionerna en inkörsport).
 
 - Bevattna i marken, ej ovanifrån (minskar fukten i bladverket).
 
@@ -93,7 +97,7 @@ Sammanfattning
 
 _Rhagoletis cerasi L_
 
-Körsbärsflugan förekommer i två olika arter. Den "nordliga" förekommer i norra europa. Den förstör bären genom att lägga sina ägg i bär som börjat mogna. Aggläggningen börjar först när temperaturen är minst 16 grader och det inte regnar, i bär som börjat skifta från gult till gulrött. Larverna kläcks efter 6-8 dagar och äter sedan av fruktköttet under tre veckor. När larven är mogen faller bäret till marken, eller så äter sig larven ut ur skalet och faller ned. Ca 3 cm under markytan övervintrar larven som en puppa (puppan kan ligga kvar i upp till tre år). I juni kommer flugan fram och livnär sig under ungefär 10 dagar på "nektarier" som finns på körbärsbladen. I svenskt klimat utgör den problem särskilt när vädret varit gynnsamt för dess äggläggning. Det är främst senmognande sorter av körsbär som drabbas. Vanlig i södra och mellersta Sverige. 
+Körsbärsflugan förekommer i två olika arter. Den "nordliga" förekommer i norra europa. Den förstör bären genom att lägga sina ägg i bär som börjat mogna. Äggläggningen börjar först när temperaturen är minst 16 grader och det inte regnar, i bär som börjat skifta från gult till gulrött. Larverna kläcks efter 6-8 dagar och äter sedan av fruktköttet under tre veckor. När larven är mogen faller bäret till marken, eller så äter sig larven ut ur skalet och faller ned. Ca 3 cm under markytan övervintrar larven som en puppa (puppan kan ligga kvar i upp till tre år). I juni kommer flugan fram och livnär sig under ungefär 10 dagar på "nektarier" som finns på körbärsbladen. I svenskt klimat utgör den problem särskilt när vädret varit gynnsamt för dess äggläggning. Det är främst senmognande sorter av körsbär som drabbas. Vanlig i södra och mellersta Sverige. 
 
 **Identifiering**:
 
@@ -124,7 +128,7 @@ Körsbärsflugan förekommer i två olika arter. Den "nordliga" förekommer i no
 
 **Åtgärder**:
 
-- Förebygg genom att sätta insektsnät/fiberväv över trädet innan äggläggningen börjar. Hindrar äggläggning. Maskornas storlek är viktig. Kan även ha effekt om den sätts över när den första flugans upptäckts.
+- Förebygg genom att sätta insektsnät/fiberväv över trädet innan äggläggningen börjar (dvs innan bären börjar skifta mot rött). Hindrar äggläggning. Maskornas storlek är viktig. Kan även ha effekt om den sätts över när den första flugans upptäckts.
 
 - Marktäckning med plast hindrar larverna att ta sig ned i jorden och flugorna att flyga upp i trädkronorna. Det krävs att all mark under träden täcks. 
 
@@ -167,17 +171,22 @@ Körsbärsflugan förekommer i två olika arter. Den "nordliga" förekommer i no
 
 _Myzus cerasi_
 
+Endast den svarta bladlusen (Eng. Aphid) angriper körsbär.
+
+**Identifiering**:
+
+- Årsskotten angrips.
+
+- Bladen skrynklas, böjs nedåt och kan falla av.
+
+- Både nymfer och vuxna bladlöss av denna sort är mörkbruna eller svarta.
+
 <!-- Körsbärsbladlusen, Myzus cerasi, är en skadegörare som går på körsbär i norra Europa (Webster & Looney 1996). Det är en svart bladlus som angriper trädens årsskott och bladen på angripna grenar blir böjda neråt och faller vid ett allvarligt ingrepp av (Pettersson & Åkesson 2011). -->
 
 <!-- Bekämpningar av körsbärsbladlusen görs tidigt på våren (Pettersson & Åkesson 2011). -->
 
 <!-- = Aphider -->
 
-<!-- dentification: Nymphs & adults are both dark brown or black -->
-<!-- in color & is the only dark-colored aphid that attacks cherries. -->
-<!-- Check for curled leaves & honeydew. -->
-<!-- Management: Examine trees after bud break for aphid -->
-<!-- presence. Avoid excess nitrogen application that attracts -->
 <!-- aphids. Avoid pesticide use at it often kills beneficial insects -->
 <!-- like ladybugs that are important in aphid control. -->
 
@@ -186,7 +195,19 @@ _Myzus cerasi_
 
 ![Körsbärsbladlus, _Myzus cerasi_](../../dropbox/images/plants/myzus_cerasi.jpg)
 
+**Åtgärder**:
+
+- Undersök bladen för bladlus efter lövsprickningen.
+
+- Undvik att gödsla med för mycket kväve, det lockar till sig bladlössen.
+
+- Nyckelpigor äter bladlöss.
+
+<!-- Check for curled leaves & honeydew. -->
+
 # Svampar
+
+Den vanligaste orsaken till sjukdom hos fruktträd är svampangrepp.
 
 ## Fruktmögel (gul monilia) 
 
@@ -311,7 +332,7 @@ Mindre vanligt i Sverige. Övervintrar i nedfallna blad, fruktmumier och som myc
 
 **Identifiering**:
 
-- Frukter: Täcks av en mörbeläggning som består av tättsisttande, små, svartgröna fläckar. <!-- Dessa består av mycel och konidier. -->Frukterna kan torka in och skrumpna till "fruktmumier".
+- Frukter: Täcks av en mörk beläggning som består av tättsisttande, små, svartgröna fläckar. <!-- Dessa består av mycel och konidier. -->Frukterna kan torka in och skrumpna till "fruktmumier".
 
 - Skotten: Kan angripas.
 
@@ -321,13 +342,15 @@ Mindre vanligt i Sverige. Övervintrar i nedfallna blad, fruktmumier och som myc
 
 _Glomerella cingulata_ (konidiestadium _Colletotrichum gloeosporioides_)
 
-Tidigare _Gloeosporiumfructigenum_
+Tidigare _Gloeosporiumfructigenum_. Eng "Tart cherry bitter rot".
 
 Ej så vanligt i Sverige. Övervintrar i fruktmumier, skott och knoppfjäll. Sprids till frukterna med regnstänk. Kan från frukterna växa vidare in i skotten som kan dö vid starka angrepp. Angriper många olika växtslag.
 
 **Identifiering**:
 
 - Bären: Bruna, insjunkna rötfläckar. Sedan tränger rosa konidiemassor fram vid fuktig väderlek. Sedan skrumpnar frukterna och hänger kvar i trädet som "fruktmumier". 
+
+![Gloeosporiumröta.](../../dropbox/images/plants/glomerella.jpg){width=50%}
 
 
 # Bakterier
@@ -336,22 +359,43 @@ Ej så vanligt i Sverige. Övervintrar i fruktmumier, skott och knoppfjäll. Spr
 
 _Pseudomonas syringae pv. syringae_ och _P syringae pv. mors-prunorum_
 
-Bakterierna finns i störst mängd på hösten, vid bladfällningen. Spridning sker inom trädet och mellan träd med regnstänk där bakterierna tränger in i små sår på skott och grenar samt genom bladärren efter bladfallet. 
+Bakterierna finns i störst mängd på hösten, vid bladfällningen. Spridning sker inom trädet och mellan träd med regnstänk där bakterierna tränger in i små sår på skott och grenar samt genom bladärren efter bladfallet. Infekterar olika arter (tex körsbär, plommon, bär, ogräs). Skada (tex från grenbrott, gnagskada eller vinterkyla), eller stående vatten krävs för infektion. Bakterien överlever i sår och knoppar. Kan spridas vid ympning, samt av vatten och insekter.
+
+Mottagliga körsbärssorter: Sweetheart, Coral Champagne, Bing, Staccato, Napoleon, och Van.
+
+Motståndskraftiga sorter: Corum, Regina, Moreau, Lambert, och Sam.
+
+Grundstammen Colt eventuellt mer motståndskraftig än Gisela.
+
+<!-- Mechanical movement throughout pruning appears not to be of risk, but should not be overlooked if the equipment is in direct contact with fresh gummosis and conditions are favorable (i.e., cool and wet). -->
+
+<!-- nfect numerous species including tart cherry, peach, plum, berries, and many weeds found on orchard floors. -->
+
+<!-- https://treefruit.wsu.edu/bacterial-canker-in-washington-sweet-cherries/ -->
 
 <!-- På så vis kommer bakte rierna in i trädets kärl och via dem in i knoppar och andra vävnader. Under vintern sker endast en långsam utbredning i trädet. Vid knoppsprickningen ökar bakteriernas aktivitet och symptomen på skott och grenar uppträder. Först senare på vår och försommar infekte ras de unga bladen. Plommonsorter som anses mottagliga är 'lve', 'Laxton's Early', 'Reine Claude Noir' och 'Victoria'. Känsliga sorter hos körsbär är 'Allmän gulröd bigarrå' och surkörsbärssorten 'Fanal'. -->
 
 **Identifiering**:
 
-- På unga grenar och skott kommer tidigt på våren runda eller utsträckta, något insjunkna fläckar som kan flyta ihop till större områden. Under är barken brun och död. Ofta sprickor mellan sjuk och frisk del. Ibland gummiflöde från angripna delar.
+- På unga grenar och skott kommer tidigt på våren runda eller utsträckta, något insjunkna fläckar som kan flyta ihop till större områden. Under är barken brun och död. Ofta sprickor mellan sjuk och frisk del. Ibland gummiflöde (med rödbrun färg, vilket dock förekommer även vid icke-infektiöst gummiflöde) från angripna delar.
 
 - Grenarna dör ofta ovanför angreppet.
 
 - Knopparna kan torka in. 
 
-- Bladen angrips på vår och försommar, då det uppstår först vattniga bladfläckar, senare blir bruna med genomskinlig yttre kant. Fläckarna faller ibland , sk "hagelskottsjuka".
+- Bladen angrips på vår och försommar (ibland med en andra våg under hösten), då det uppstår först vattniga bladfläckar, senare blir bruna med genomskinlig yttre kant. Fläckarna faller ibland bort och lämnar hål, sk "hagelskottsjuka".
 
 - Frukterna kan få små bruna fläckar.  
 
+::: {layout-ncol=2}
+
+![Bakterieangrepp på tomatblad. Fotograf Alan Collmer.](../../dropbox/images/plants/bacterial_spots_tomato.jpg){width=40%}
+
+![Gummiflöde på körsbär, orsakat av bakterier. Fotograf Rosser1954.](../../dropbox/images/plants/bacterial_gummosis_cherry.jpg){width=50%}
+
+![Bakterieangrepp på gren. Fotograf Rosser1954.](../../dropbox/images/plants/bacterial_canker_cherry.jpg){width=70%}
+
+:::
 
 <!-- Bakteriesjukdomar måste bekämpas förebyggande genom plantering av friskt plantmateri al, eftersom det inte finns några effektiva bekämpningsmedel att tillgå. Vid angrepp kan man förhindra vidare spridning genom att skära bort angripna grenar. Det går dock inte att bota träden, eftersom infektionen i regel är systemisk. Besprutning med kopparpreparat rekommenderas mot stam- och bladbakterios hos plommon och körsbär. Den skall i så fall utföras vid bladfallet under hösten då bakterierna är som mest aktiva. -->
 
@@ -421,6 +465,9 @@ Det vanligaste viruset hos släktet _Prunus_, inklusive körsbär, där det för
 
 - Spetsarna på skotten kan torka och dö.
 
+![PNRSV-angrepp på rosenblad. Fotograf Malcolm Manners.](../../dropbox/images/plants/prunus_necrotic_ringspot_virus.jpg){width=50%}
+
+
 ## Surkörsgulsot 
 
 Plommondvärgsjukevirus (Eng. "Prune dwarf virus", PDV) 
@@ -463,6 +510,21 @@ Ger minskat antal fruktsporrar och minskar således skörden. Sprids vid bladtil
 <!-- Förutom ovan nämnda förebyggande åtgärder bör man grundgödsla med ämnen som är rika på kisel, t. ex. stenmjöl och algmjöl (Algomin ), vilka har häm- mande effekt på mjöldagg. Upprepad behandling med natriumbikarbonat (2 tsk natriumbikarbonat + 2 tsk såpa eller 2 tsk olja/ liter vatten) på ett begyn- nande angrepp kan ha mycket bra effekt -->
 
 # Fåglar
+
+Småfåglar som starar och sparvar äter gärna körsbären just innan de mognat. 
+
+## Åtgärder
+
+**Skyddsnät**: Fästes så att fåglarna inte kommer in underifrån. Se till att det finns avstånd mellan bären och nätet (tex med bambukäppar), annars kan fåglarna picka på bären genom nätet. Använder du fiberväv kan det även skydda mot vissa insekter.
+
+**Ljud**: Häng upp något som skramlar, tex plastflaskor, gölasflaskor eller metall. 
+
+**Blänkande föremål**: CD-skivor, metallbitar etc.
+
+
+
+
+
 
 
 
