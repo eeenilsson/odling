@@ -1,5 +1,5 @@
 ## Read and curate SMHI data
-pacman::p_load(rvest, data.table)
+pacman::p_load(rvest, data.table, ggplot2)
 
 ## read smhi data
 
@@ -70,25 +70,115 @@ length(sites$id) ## 920 sites
 
 ## read data stored in .rds
 
-airtemp <- readRDS("smhi_airtemp_100.rds")
+## airtemp <- readRDS("smhi_airtemp_100.rds") ## A-D
+## airtemp <- as.data.table(airtemp)
+
+## Note: Too large data to load everything into memory
+## tmp <- c(200, ## V-Ö
+## 300, 400, 500, 600, 700, 800, 900, 920)
+## for(i in tmp){
+## dt_tmp <- readRDS(paste0("smhi_airtemp_", i, ".rds"))
+## dt_tmp <- as.data.table(dt_tmp)
+## airtemp <- rbind(airtemp, dt_tmp)
+## }
+
+airtemp <- readRDS("smhi_airtemp_920.rds") ## Ö
 airtemp <- as.data.table(airtemp)
-tmp <- c(200, 300, 400, 500, 600, 700, 800, 900)
-for(i in tmp){
-dt_tmp <- readRDS(paste0("smhi_airtemp_", i, ".rds"))
-dt_tmp <- as.data.table(dt_tmp)
-airtemp <- rbind(airtemp, dt_tmp)
-}
+
 
 str(airtemp)
 
 ## join with sites info
 ## Note: only add label to reduce size of data?
-smhi_airtemp_curated_1 <- sites[, .(id, name)][smhi_airtemp, on = "id"]
-saveRDS(smhi_airtemp_curated_1, "smhi_airtemp_curated_1.rds")
+airtemp_curated <- sites[, .(id, name)][airtemp, on = "id"]
+## saveRDS(smhi_airtemp_curated_1, "smhi_airtemp_curated_1.rds")
 ## 206
+str(airtemp_curated)
+unique(airtemp_curated$name)
 
-is.data.table(smhi_airtemp_curated)
-x
+orebro <- airtemp_curated[grepl("Örebro", name), ]
+unique(orebro$name)
+str(orebro)
+
+orebro <- orebro[quality == "G", ] ## keep only checked values
+## summary(orebro[["temp"]])
+orebro[, hour := as.numeric(substr(time, 1, 2))] ## hours
+## summary(orebro[["hour"]])
+orebro[hour == 0, ]
+## str(orebro)
+orebro[, day_min := min(temp), by = "date"]
+orebro[date == "1858-12-05", ]
+orebro[, startofyear := format(as.Date(date, format="%Y-%m-%d"), paste0("%Y", "-01-01"))]
+orebro[, startofyear := as.Date(startofyear, format="%Y-%m-%d")]
+orebro[, date := as.Date(date, format="%Y-%m-%d")]
+orebro[, dayofyear := difftime(date, startofyear, unit = "days")]
+orebro[, weekofyear := difftime(date, startofyear, unit = "weeks")]
+orebro <- orebro[difftime(date, as.Date("1991-01-01", format="%Y-%m-%d")) >0, ] ## select 1991-
+orebro[, calendarweek := as.integer(ceiling(weekofyear))]
+orebro_s1 <- orebro[dayofyear < 365/2, ]
+orebro_s1[, frost := day_min < 0]
+orebro_s1[frost == TRUE, last_frost_week := max(calendarweek, na.rm = TRUE), by = startofyear]
+orebro_s1[frost == TRUE, last_frost_day := max(dayofyear, na.rm = TRUE), by = startofyear]
+
+## orebro_s1[calendarweek == last_frost_week, ]
+## lastfrost <- orebro_s1[dayofyear == last_frost_day, ]
+## orebro_s1[date == "1991-05-08", ]
+
+lastfrost <- lastfrost[frost == TRUE, .SD[.N], by="date"][, .(date, startofyear, dayofyear, calendarweek)] ## 1991-2023
+lastfrost[, frostdate := NULL]
+lastfrost[, mo := format(as.Date(date, format="%Y-%m-%d"), "%m")]
+lastfrost[, dy := format(as.Date(date, format="%Y-%m-%d"), "%d")]
+lastfrost[mo == "04", ] ## min = 13/4 (dayofyear = 102)
+lastfrost[, daysfrom0413 := dayofyear - 102]
+
+lastfrost[, pretendyr := as.Date("1999-01-01", format="%Y-%m-%d")]
+lastfrost[, pretendmody := pretendyr + dayofyear]
+
+
+## plot probability of frost
+p <- ggplot(lastfrost, aes(x=pretendmody)) +
+    stat_density(kernel="biweight")
+
+
+p <- ggplot(orebro_s1, aes(x=frost)) +
+  geom_histogram(aes(y = ..density..), binwidth=density(df$x)$bw) +
+  geom_density(fill="red", alpha = 0.2) +
+  theme_bw()
+
+## This R tutorial describes how to create an ECDF plot (or Empirical Cumulative Density Function) using R software and ggplot2 package. ECDF reports for any given number the percent of individuals that are below that threshold. http://www.sthda.com/english/wiki/ggplot2-ecdf-plot-quick-start-guide-for-empirical-cumulative-density-function-r-software-and-data-visualization
+
+# Basic ECDF plot
+p <- ggplot(lastfrost, aes(pretendmody)) + stat_ecdf(geom = "step")+
+    labs(
+        title="Datum då sista frost passerat i Örebro",
+     y = "% av åren 1991-2023 då sista frost passerat",
+     x="Datum"
+    ) + scale_x_date(breaks = scales::breaks_pretty(9),
+                 date_minor_breaks = "1 days") +
+    scale_y_continuous(labels = function(x) paste0(x*100, "%"))
+
+p <- p + theme(text = element_text(size=24),
+          plot.margin = unit(c(0.9, 0.9, 0.9, 0.9), "centimeters"))
+
+p + geom_density(fill="blue", alpha = 0.3)
+
+ggsave(
+  "last_frost_orebro.png",
+  plot = last_plot(),
+  device = NULL,
+  path = "../dropbox/images/plants/",
+  scale = 1,
+  width = 25,
+  height = 20,
+  units = "cm", ## c("in", "cm", "mm", "px"),
+  dpi = 300,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+## sista frosten på våren (minimitemperaturen under dygnet under noll)
 
 ## last(sites$id)
 ## "3119590"

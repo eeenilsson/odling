@@ -78,6 +78,10 @@ Om blomningen infaller före den sista frosten finns en risk att blommorna förs
 Se översiktskarta från [SMHI](https://www.smhi.se). Mer detaljerad statistik kan fås från "odlingskalendern" på [vackertväder.se](https://www.vackertvader.se).
 <!-- https://www.vackertvader.se/%C3%B6rebro/odla#frost-datum -->
 
+Figuren nedan visar hur stor andel av åren 1991-2023 vars sista frost kom innan ett visst datum. Exempel: Under 50 % av åren inföll sista frosten före 8 maj, 75% före 13 maj, och 100% innan 27 maj. Det nedre, blå fältet visar fördelingen av datum för sista frost (inträffar ganska jämnt över perioden, men oftast 1 maj-17 maj)Temperaturdata från SMHI.
+
+![Sannolikhat att sista frosten passerat i Örebro](../../dropbox/images/plants/last_frost_orebro.png){#fig-frost width=100%}
+
 ![Sista frost](../../dropbox/images/plants/sista_frost_2017_smhi.png){width=40%}
 
 <!-- [SMHI Klimat](https://www.smhi.se/klimat/klimatet-da-och-nu/klimatindex/varens-sista-frost-1.77151) -->
