@@ -450,7 +450,7 @@ setkey(dtplot, target)
 ## explore
 ## variety_genotype_group[grepl("0", incompatibility_group) , ]
 
-## variety_genotype_group[grepl("Lapins", variety), .(variety, genotype, incompatibility_group, mother, father)]
+## variety_genotype_group[grepl("späte", variety), .(variety, genotype, incompatibility_group, mother, father)]
 
 ## variety_genotype_group[grepl("Lapins|Van|Stella", variety), .(variety, genotype, incompatibility_group, mother, father)]
 

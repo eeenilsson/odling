@@ -234,7 +234,7 @@ Hos dem vars bär mognar tidigt är S4 vanligast. S14 förekommer endast hos de 
 
 <!-- The occurrence of self-compatible cultivars is observed much more frequently in sour cherry than in sweet cherry. This phenomenon is caused by natu- rally occurring mutations and loss of functionality of the S-RNase or SFB genes -->
 
-Liksom hos sötkötsbär finns hos surkörsbär "själv-inkompatibilitet" som styrs av variationer i S-området i kromosomerna. Självferila sorter är mycket vanligare hos surkärsbär på grund av att det är vanligare med mutationer i S-allelen. För att "själv-inkompatibiliteten" skall **förloras** krävs att trädet har minst två muterade "icke-fungerande" S-haplotyper. Man har identifierat tolv fungerande S-haplotyper (S1, S4, S6, S9, S12, S13, S14, S16, S26, S33, S34, och S35) och nio icke-fungerande (S1ʹ, S6m, S6m2, S13ʹ, S13m, S36a , S36b, S36b2, och S36b3). Vissa finns även hos sötkörsbär (S1, S4, S6, S9, S12 , S13, S 14, S16, och S34). Om ett pollenkorn från surkörsbär innehåller en eller fler _fungerande_ S-haplotyper som matchar en _fungerande_ S-haplotyp i pistillen blir trädet själv-**in**kompatibelt. Därför behövs minst två muterade, _icke-fungerande_, S-haplotyper för självbefruktning.<!--  The only -->
+Liksom hos sötkötsbär finns hos surkörsbär "själv-inkompatibilitet" som styrs av variationer i S-området i kromosomerna. Självferila sorter är mycket vanligare hos surkärsbär på grund av att det är vanligare med mutationer i S-allelen. För att "själv-fertilitet" krävs att trädet har minst två muterade "icke-fungerande" S-haplotyper (detta sätter "själv-**in**kompatibilitets"-systemet delvis ur funktion). Man har identifierat tolv fungerande S-haplotyper (S1, S4, S6, S9, S12, S13, S14, S16, S26, S33, S34, och S35) och nio icke-fungerande (S1ʹ, S6m, S6m2, S13ʹ, S13m, S36a , S36b, S36b2, och S36b3). Vissa finns även hos sötkörsbär (S1, S4, S6, S9, S12 , S13, S 14, S16, och S34). Om ett pollenkorn från surkörsbär innehåller en eller fler _fungerande_ S-haplotyper som matchar en _fungerande_ S-haplotyp i pistillen blir trädet själv-**in**kompatibelt. Därför behövs minst två muterade, _icke-fungerande_, S-haplotyper för självbefruktning.<!--  The only -->
 <!-- exception to this are selections whose two S-haplotypes are self-fertile variants of the S36-haplotype, as meiotic pairing rarely results in two S36 allelic being packaged in the same gamete -->
 
 <!-- Se Lisek et al -->
@@ -254,11 +254,11 @@ De flesta surkörsbär är självfertila ("självkompatibla"), men vissa sorter 
 
 # Hur väljer man lämplig pollinatör?
 
-Självsterila sorter kräver en pollinatör för att bära frukt. Pollinatören måste komma från en annan kompatibiltetsgrupp och träden måste blomma samtidigt. 
+Självsterila sorter kräver en pollinatör för att bära frukt. Pollinatören måste komma från en annan kompatibiltetsgrupp och träden måste blomma samtidigt.
 
 Försäljare av plantor brukar ange vilka sorter som kan pollinera en viss sort. Det finns dock skillnader i vilka pollinatörer som anges.
 
-Ett "pollinationsschema" är en tabell eller figur där man kan avläsa lämpliga pollinatörer för olika sorter. Flera sådana finns på webben, men de skiljer sig åt en del. Se tex [Sveriges Trädgårdsmästare](https://sverigestradgardsmastare.se/pollinering-korsbar/) och [Plantagen](https://www.plantagen.se/pollineringsschema-korsbar.html). Under rubriken [pollinationsschema](pollination_table.qmd) finns ett schema som bygger på genetisk kompatibilitet i kombination med blomningstid.
+Ett "pollinationsschema" är en tabell eller figur där man kan avläsa lämpliga pollinatörer för olika sorter. Flera sådana finns på webben, men de skiljer sig åt en del. Se tex [Sveriges Trädgårdsmästare](https://sverigestradgardsmastare.se/pollinering-korsbar/) och [Plantagen](https://www.plantagen.se/pollineringsschema-korsbar.html). Under rubriken [pollinationsschema](pollination_table.qmd) finns ett schema som bygger på genetisk kompatibilitet i kombination med blomningstid. Se även [Gardenfocused](https://www.gardenfocused.co.uk/fruitarticles/cherry/pollination.php).
 
 <!-- Ett rationellt sätt att välja kan vara: -->
 
@@ -267,8 +267,6 @@ Ett "pollinationsschema" är en tabell eller figur där man kan avläsa lämplig
 <!-- utgå från tabeller som visar blomningstid -->
 
 <!-- välj en "univerell givare" som partner? Obs måste blomma samtidigt. -->
-
-Se även [Gardenfocused](https://www.gardenfocused.co.uk/fruitarticles/cherry/pollination.php).
 
 
 <!-- ## Varför behöver körsbär en partner? -->

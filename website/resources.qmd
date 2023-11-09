@@ -16,6 +16,8 @@ Resurser och källor.
 
 <!-- https://svensktradgard.se/ -->
 
+[Trädgårdstrollets sortguide om sötkörsbär](https://www.tradgardstrollet.se/2023/06/08/sortguide-sotkorsbar/)
+
 ## Terminologi
 
 [Taxonomi](https://botanicalsociety.org.za/the-science-of-names-an-introduction-to-plant-taxonomy/)
@@ -73,17 +75,17 @@ Resurser och källor.
 
 ## S-alleler
 
-https://www.openagrar.de/receive/openagrar_mods_00064311
+[Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020](https://www.openagrar.de/receive/openagrar_mods_00064311). Denna artikel har länkade data med genotypning av S-allelerna för ett stort antal sorter.
 
-http://www.agricultforest.ac.me/paper.php?id=3137
+[ANFIC Pollinationsschema, Australien](https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf). Anger både genotyper och blomningstid.
 
-https://www.sciencedirect.com/science/article/abs/pii/S0304423812004396
+[Artikel om koppling mellan haplotyp och blomningstid](http://www.agricultforest.ac.me/paper.php?id=3137)
 
-https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility
+[Incompatible (S-) genotypes of sweet cherry cultivars (Prunus avium L.)](https://www.sciencedirect.com/science/article/abs/pii/S0304423812004396)
 
-https://link.springer.com/article/10.1007/s001220051700
+[RosBreed om inkompatibilitet](https://www.rosbreed.org/breeding/dna-tests/cherry/cross-compatibility)
 
-https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf  # REK
+<!-- https://link.springer.com/article/10.1007/s001220051700 -->
 
 
 <!-- Schuster, Mirko Mirko (2020): Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020. OpenAgrar Repository. Online unter: https://www.openagrar.de/receive/openagrar_mods_00064311. -->

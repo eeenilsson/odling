@@ -70,6 +70,13 @@ genotype_syn[grepl("emperor|kaiser", tolower(syn2)), ..cols]
 ## 3: S2S4/S3S4                    Kaiser Franz
 ## todo: remove from synonyms of schneiders?
 
+genotype_syn[grepl("anno", tolower(syn2)), ..cols]
+
+genotype_syn[grepl("schnei", tolower(variety)), ..cols]
+
+## 5:    S3S12                     
+
+
 ## Misc ---------
 
 ## Kaiser Franz
