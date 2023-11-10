@@ -85,6 +85,11 @@ genotype_syn[grepl("schnei", tolower(variety)), ..cols]
 genotype_syn[grepl("schneider", tolower(var2)), syn := gsub(", Kaiser Franz", "", syn)]
 genotype_syn[grepl("schneider", tolower(var2)), syn2 := gsub(", Kaiser Franz", "", syn)]
 
+## Lapins aka Cherokee, https://www.gardenfocused.co.uk/fruitarticles/cherry/variety-lapins-cherokee.php
+genotype_syn[grepl("lapin", tolower(syn2)), ..cols]
+
+
+
 ## ## Ferrovia
 ## ## Iblan syn för Schneiders Späte
 ## genotype_syn[grepl("schneiders|ferrovia", tolower(syn2)), ..cols]
