@@ -16,8 +16,6 @@ Resurser och källor.
 
 <!-- https://svensktradgard.se/ -->
 
-[Trädgårdstrollets sortguide om sötkörsbär](https://www.tradgardstrollet.se/2023/06/08/sortguide-sotkorsbar/)
-
 ## Terminologi
 
 [Taxonomi](https://botanicalsociety.org.za/the-science-of-names-an-introduction-to-plant-taxonomy/)
@@ -92,6 +90,8 @@ Resurser och källor.
 <!-- - Här finns excelfiler för nedladdning -->
 
 ## Sorter
+
+[Trädgårdstrollets sortguide om sötkörsbär](https://www.tradgardstrollet.se/2023/06/08/sortguide-sotkorsbar/)
 
 [Blekinge plantskola](https://organicfruittrees.eu/products/buttners-rote)
 <!-- Mognad: juli = tidigt //aug = mellan // sept = sen -->

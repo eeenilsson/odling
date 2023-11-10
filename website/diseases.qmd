@@ -38,7 +38,7 @@ Ett urval av sjukdomar och skadedjur som kan angripa körsbär.
 
 **Gropiga frukter**: Körsbärsfluga.
 
-**Fläckiga frukter**: Fruktmögel (brun röta med sposkuddar i). Hagelskottsjuka (_Stigmina carpophila_). Körsbärsskorv (tättsittande, svartgröna fläckar). Gloeosporiumröta (bruna, insjunkna fläckar). Stam- och bladbakterios (små, bruna fläckar).
+**Fläckiga frukter**: Fruktmögel (brun röta med sporkuddar i). Hagelskottsjuka (_Stigmina carpophila_). Körsbärsskorv (tättsittande, svartgröna fläckar). Gloeosporiumröta (bruna, insjunkna fläckar). Stam- och bladbakterios (små, bruna fläckar).
 
 **Fruktmumier**: Körsbärsskorv, Gloeosporiumröta, Fruktmögel (gul monilia).
 

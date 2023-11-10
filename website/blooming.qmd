@@ -10,7 +10,12 @@ I Sverige blommar körsbären i slutet av april till början av maj. Fruktträd 
 
 <!-- he average blossoming period for cherries when pollination can take place is about seven to eight days. -->
 
-För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt). Ett körsbärsträd blommar vanligen 6-9 dagar. De bästa förutsättningarna för befruktning är inom 2 dagar efter blomning. Efter 7 dagar är det ca 30% av blommorna som fortfarande kan befruktas hos de flesta sorter. Detta är temperaturberoende på så vis att svalare temperatur ger en mer långvarig period då blomman kan befruktas.
+För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (givaren måste frisätta pollen under den period då mottagarens ägg är mottagligt). Ett körsbärsträd blommar vanligen 6-9 dagar. Varje enskild blomma är öppen i 3-5 dagar. De bästa förutsättningarna för befruktning är inom 2 dagar efter blomningens början. Efter 7 dagar är det ca 30% av blommorna som fortfarande kan befruktas hos de flesta sorter. Detta är temperaturberoende på så vis att svalare temperatur ger en mer långvarig period då blomman kan befruktas.
+
+<!-- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9227597/ -->
+
+<!-- Se även : 2008 BIOLOGY OF SWEET CHERRY FLOWERING -->
+<!-- W ło d z i m i e r z L e c, The aim of the study presented was to evaluate floral biology and fruit set of sweet cherry cultivars ‘Van’, ‘Summit’, ‘Kordia’, ‘Hedelfinger’ and ‘Regina’, as dependent on the pollination method  file:///home/e/Downloads/full182008.pdf -->
 
 ## När blommar det?
 

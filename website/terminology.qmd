@@ -98,7 +98,7 @@ _Korspollination (allogami)_: Pollen överförs mellan två olika individer.
 
 "Korspollination": En viss sort (_Prunus avium_ 'Merton Glory') måste pollineras av en annan sort (tex _Prunus avium_ 'Allmän gulröd bigarrå') för att bära frukt. Dessa sorter kallas ibland "självsterila".
 
-"Självfertila sorter": En sort som kan pollineras av samma sort (tex _Prunus avium_ 'Gårdebo').
+"Självfertila sorter": En sort som kan pollineras av samma sort (tex _Prunus avium_ 'Stella').
 
 <!--  korspollination, detsamma som allogami. se https://www.ne.se/uppslagsverk/encyklopedi/l%C3%A5ng/korspollination -->
 

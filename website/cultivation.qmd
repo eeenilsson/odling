@@ -187,7 +187,25 @@ Torka under celldelningsperioden ger små bär och gör att karten faller. Torka
 
 # Beskärning
 
+<!-- [En bra beskrivning av vetenskapligt förankrad teori om beskärning](https://extension.uga.edu/publications/detail.html?number=B949&title=basic-principles-of-pruning-woody-plants) -->
+
+<!-- - Pruning stimulates growth closest to the cut in vertical shoots; farther away from cuts in limbs 45° to 60° from vertical -->
+
 Beskärning görs av olika skäl beroende på trädets ålder. Den första våren efter plantering görs "etableringsbeskärning" för att stimulera rottillväxt. När trädet är ungt, dvs 1-3 år (kanske upp till 5 år), görs "uppbyggnadsbeskärning" för att ge trädet önskad form och begränsa höjden. Därefter följer "underhållsbeskärning" som främst syftar till att ta bort döda eller skadade grenar som kan bidra till sjukdom, men som också kan göras för att få nya grenar som bär mer frukt (fruktsättningen minskar på äldre grenar > ca 5 år). Körsbär bör beskäras med försiktighet.
+
+**Teorin bakom beskärning**
+
+I toppen av skotten producerar hormonet auxin. Det förs med gravitationen ned längs skottet och grenen. Auxin hämmar tillväxen av laterala skott (dvs de sidoväxande), så kallad "apikal dominans". Tar man bort toppen av ett skott minskar auxinet och lateral tillväxt stimuleras. Apikal dominans är starkast i de grenar som växer lodrätt. Här tillväxer skotten nära toppskotten och mindre ju längre ner man kommer. Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första.
+Auxinet minskar i de grenar som växer med 45-60 graders vinkel (här sker lateraltillväxten längre ner från toppskottet) och upphör om grenen växer horisontellt (dessa grenar kan få "vattenskott" på ovansidan). Genom att skära bort toppskottet minskar man tillfälligt den apikala dominansen, varvid laterala knoppar stimuleras till att växa ut som skott/grenar.
+
+Om en upprätt gren beskärs ökar tillväxten ca 25 cm ner från snittet. För grenar i 45 till 60 graders vinkel sker tillväxten längre ner. Beskäring av en ung planta stimulerar tillväxten av skott och hämmar eller fördröjer blomning och fruksättning.
+
+Det finns två grundläggande typer av beskärning, "heading" och "thinning" (kapning och gallring?). Kapning, där en del av skottet eller grenen tas bort, stimulerar tillväxt längst ut, nära snittet. Vid gallring tas ett helt skott eller gren bort vid basen (dvs vid huvudgrenen). Apikal dominans behålls genom att en del toppskott bevaras. Nytillväxten sker då i de befintliga skott som lämnats orörda och lateral tillväxt hämmas. Gallring ger ett mer naturligt växtsätt och ökar ljusgenomsläppligheten in i kronan. Kapning kan göra att nyttillväxten av grenar kommer för långt ut.
+
+Vissa växter blöder mycket efter beskärning. De kan beskäras när det finns aktivt växande löv, dvs vår eller försommar, vilket minskar blödningen och på så vis gör att såret kan läka snabbare.
+
+<!-- If plants are not grown for their flowers, the best time for pruning is during the dormant winter season before new growth begins in the spring. -->
+
 
 **Varför beskära?**
 
@@ -227,13 +245,11 @@ Beskärning görs av olika skäl beroende på trädets ålder. Den första våre
 
 - Tag inte bort grenar som är tjockare än ett finger. 
 
-- Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första.
-
 <!-- - Beskär trädets högre del mer än den lägre för att ge lusinsläpp och luftflöde? -->
 
 **När beskära?**
 
-Det verkar råda delade meningar om när körsbär bör beskäras. Att etableringsbeskärning görs på våren tycks allmänt rekommenderat. Avseende senare beskärning är rekommendationerna olika.
+Det verkar råda delade meningar om när körsbär bör beskäras. Att etableringsbeskärning görs på våren tycks allmänt rekommenderat. Avseende  beskärning under åren därefter är rekommendationerna olika.
 
 Vissa menar att beskärning bör undvikas på sensommaren eller hösten, men samtidigt finns rekommendationer att beskärning bör ske juli-september (JAS).
 
@@ -348,7 +364,9 @@ Enligt de flesta rekommendationer skall körsbär beskäras försiktigt, så att
 
 <!-- From years four onwards, perform formative pruning less frequently compared to other fruit trees. Every other year should be sufficient. -->
 
-- Under sensommar/höst (?) gallras vattenskott bort (dessa bildas vid för hård beskärning eller annan stress), utan att tappar lämnas kvar. De kan användas för nya grenar om de sitter på en ung gren.
+- Under sensommar/höst (?) gallras vattenskott bort (dessa sitter på ovansidan av horisontellt växande grenar och bildas vid för hård beskärning eller annan stress), utan att tappar lämnas kvar. De kan användas för nya grenar om de sitter på en ung gren.
+
+<!-- On horizontal limbs, apical dominance is totally lost. Without apical dominance to control their growth, lateral buds on the upper side of horizontal limbs develop into vigorous, upright shoots, called water sprouts. As they develop, water sprouts show very strong apical dominance. Water sprouts are a common problem on the upper surface of flat limbs in fruit trees and are removed by pruning. -->
 
 <!-- https://svensktradgard.se/tradgardsrad/beskarning/beskara-frukttrad/ -->
 
