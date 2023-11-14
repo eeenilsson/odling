@@ -14,11 +14,11 @@ Schemat tar hänsyn till genetisk kompatibilitet och närhet i blomningstid. Mot
 
 För att kunna befruktas behöver sötkörsbär pollineras av ett körsbär av **annan sort** som 1) blommar samtidigt och 2) är genetiskt kompatibel. Undantaget är de _självfertila_ sorterna, vilka kan befrukta sig själva. Kvaliteten och storleken på skörden blir dock bättre om de pollineras av andra.
 
-Hur den genetiska kompatibiliteten fungerar förklaras på sidan [om pollination](pollination_about.qmd).
+Efter namnet på körsbärssorten (på y-axeln, till vänster) anges inom klamrar vilken "haplotyp" sorten har. Den avgör vilka sorter som kan pollinera varandra (de som har samma haplotyper kan det inte). Hur den genetiska kompatibiliteten fungerar förklaras mer i detalj på sidan [om pollination](pollination_about.qmd).
 
 Blomningstiden varierar från år till år beroende på väderlek och klimat, men man brukar dela in den relativa blomningstiden för olika körsbärssorter i fem grupper från tidig till sen. Uppgifter om blomningstid varierar beroende på källa och för många sorter saknas information från svenska förhållanden. Blomningstiden i schemat ovan är en sammanvägning av den relativa blomningstiden från olika svenska och internationella källor. Du kan läsa mer om blomning på sidan [om blomning](blooming.qmd).
 
-Eftersom det finns en osäkerhet i uppgifterna om blomningstid bör du även kontrollera med din lokala plantskola vilka sorter som brukar fungera tillsammans. Pollinationschemat bör därför bara användas som en fingervisning om vilka sorter som blommar samtidigt. Uppgifterna om genetisk kompatibilitet är mer säkra och icke-kompatibla sorter bör undvikas.
+Eftersom det finns en osäkerhet i uppgifterna om blomningstid bör du även kontrollera med din lokala plantskola vilka sorter som brukar fungera tillsammans. Pollinationschemat bör därför bara användas som en fingervisning om vilka sorter som kan blomma samtidigt. Uppgifterna om genetisk kompatibilitet är mer säkra och icke-kompatibla sorter bör undvikas.
 
 ## Hur schemat avläses
 

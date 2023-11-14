@@ -195,16 +195,42 @@ Beskärning görs av olika skäl beroende på trädets ålder. Den första våre
 
 **Teorin bakom beskärning**
 
-I toppen av skotten producerar hormonet auxin. Det förs med gravitationen ned längs skottet och grenen. Auxin hämmar tillväxen av laterala skott (dvs de sidoväxande), så kallad "apikal dominans". Tar man bort toppen av ett skott minskar auxinet och lateral tillväxt stimuleras. Apikal dominans är starkast i de grenar som växer lodrätt. Här tillväxer skotten nära toppskotten och mindre ju längre ner man kommer. Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första.
-Auxinet minskar i de grenar som växer med 45-60 graders vinkel (här sker lateraltillväxten längre ner från toppskottet) och upphör om grenen växer horisontellt (dessa grenar kan få "vattenskott" på ovansidan). Genom att skära bort toppskottet minskar man tillfälligt den apikala dominansen, varvid laterala knoppar stimuleras till att växa ut som skott/grenar.
+I toppen av skotten producerar hormonet auxin. Det förs med gravitationen ned längs skottet och grenen. Auxin hämmar tillväxen av laterala skott (dvs de sidoväxande), så kallad "apikal dominans". Detta påverkar hur många sidoskott som tillväxer (mer auxin hämmar antalet), med vilken vinkel (auxin ökar vinkeln) de växer och deras längd. Tar man bort toppen av ett skott minskar auxinet och lateral tillväxt stimuleras. Apikal dominans är starkast i de grenar som växer lodrätt, minskar i de grenar som växer med 45-60 graders vinkel och upphör om grenen växer horisontellt. Genom att skära bort toppskottet minskar man tillfälligt den apikala dominansen, varvid laterala knoppar stimuleras till att växa ut som skott/grenar.
 
-Om en upprätt gren beskärs ökar tillväxten ca 25 cm ner från snittet. För grenar i 45 till 60 graders vinkel sker tillväxten längre ner. Beskäring av en ung planta stimulerar tillväxten av skott och hämmar eller fördröjer blomning och fruksättning.
+Normalt är det ett toppskott på en lodrät gren som har den största tillväxten. Varje sidogren under den växer progressivt långsammare och de lägst belägna knopparna växer ej. Detta kan bero på att auxin från de ovanliggande knopparna och skotten ansamlas ju längre ner man kommer. 
+
+När fyra eller fler skott finns ovanför en ny gren blir vinkeln på den grenen horisontell (50-90 grader). När det inte finns några skott ovanför grenen får den istället en smal vinkel/upprätt växtsätt (0-40 grader). Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första. Tar man bort den apikala dominansen blir de skott som tillväxer mer upprätta, med smalare vinklar och trädet får ett mer upprätt, smalare växtsätt.
+
+Vinkeln med vilken en gren växer avgörs tidigt under det första året den tillväxer. 
+
+<!-- The crotch angle, which forms very early in the first year of the development of a branch, must be wide and strong. Narrow crotches cause bark inclu- sions, are weak, split easily and are more sus- ceptible to cold injury. Wide crotch angles are formed naturally in very vigorous-growing trees that have very active meristematic areas that produce large quantities of auxin -->
+
+
+<!-- hen four or more shoots were above a new branch, the angle of that new branch was 50–90° (i.e. close to horizontal). When there were no shoots above the new branch, the branch angle was in the very narrow range of 0–40° (i.e. very upright). Removal of the terminal bud results in an increase in the growth of the subtending laterals, and shoots that would have been spurs become vegetative shoots. Removal of apical domi- nance not only changes which shoots grow and their vigour, but the resulting shoots are more upright with narrower crotch angles.  Thus, tree form is changed into a more upright, narrow shape. -->
+
+<!-- Normally a terminal bud makes the most growth in an unpruned, upright branch, and each subsequent subtending lateral makes progressively less growth, until some form spurs, with the most basal buds not grow- ing. This growth form is probably the result of cumulative auxin concentrations pro- duced from each of the buds above causing a reduction in growth in the shoot originat- ing at lower levels -->
+
+
+Hur grenen växer och hur den reagerar på beskärning påverkas av den apikala dominansen.
+
+Lodräta grenar: <!-- Här tillväxer skotten nära toppskotten och mindre ju längre ner man kommer.  -->
+
+Horisontella grenar: (dessa grenar kan få "vattenskott" på ovansidan)
+
+Om en upprätt gren beskärs ökar lateraltillväxten ca 25 cm ner från snittet. För grenar i 45 till 60 graders vinkel sker tillväxten längre ner. Horisontella grenar kan vid beskärning skjuta fler "vattenskott", dvs lodrätt växande skott utan sidoskott. 
 
 Det finns två grundläggande typer av beskärning, "heading" och "thinning" (kapning och gallring?). Kapning, där en del av skottet eller grenen tas bort, stimulerar tillväxt längst ut, nära snittet. Vid gallring tas ett helt skott eller gren bort vid basen (dvs vid huvudgrenen). Apikal dominans behålls genom att en del toppskott bevaras. Nytillväxten sker då i de befintliga skott som lämnats orörda och lateral tillväxt hämmas. Gallring ger ett mer naturligt växtsätt och ökar ljusgenomsläppligheten in i kronan. Kapning kan göra att nyttillväxten av grenar kommer för långt ut.
 
 Vissa växter blöder mycket efter beskärning. De kan beskäras när det finns aktivt växande löv, dvs vår eller försommar, vilket minskar blödningen och på så vis gör att såret kan läka snabbare.
 
 <!-- If plants are not grown for their flowers, the best time for pruning is during the dormant winter season before new growth begins in the spring. -->
+
+Beskäring av en ung planta stimulerar tillväxten av skott och hämmar eller fördröjer blomning och fruksättning.
+
+<!-- https://www.pubs.ext.vt.edu/422/422-025/422-025.html -->
+
+<!-- file:///home/e/Downloads/Apple%20tree%20pruning%20and%20training%20Ferree%20and%20Schupp.pdf -->
+
 
 
 **Varför beskära?**
