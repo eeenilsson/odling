@@ -52,8 +52,9 @@ compat <- function(genotype_a, genotype_b){
         ## abcd => ab ac ad bc bd cd but this is not the case in meiosis, see youtube:
         ## see https://www.youtube.com/watch?v=NttqS-N17FQ
         ## possible number of gametes = 2^n        
-        ## where n is the haploid number (2n=4 => diploid nr=4, haplod nr=2)
+        ## where n is the haploid number (2n=4 => diploid nr=4, haploid nr=2)
         ##  sour cherry is an allotetraploid (2n = 4x = 32)
+        ## for a tetraploid, n=2x, and 2n=4x
         ## if there is 1 mutant the probability of a sperm to contain 2 mutants is 0.
         ## 2 mutants => probability of pollen to contain 2 mutants = 2/8, 3 m => 4/8, 4m => 8/8
         comp <- ifelse(success_probability >0, ceiling(success_probability+0.1), 0)
@@ -326,40 +327,41 @@ for(i in 1:nrow(bt_wide)){ ## loop over rows
 ## str(bt_wide)
 
 ## melt
-dtplot <-  melt(bt_wide, id.vars = c("var", "genotype", "bgr",  "incompatibility_group"))
-dtplot[, value := as.numeric(value)]
+bt_long <-  melt(bt_wide, id.vars = c("var", "genotype", "bgr",  "incompatibility_group"))
+bt_long[, value := as.numeric(value)]
 
 ## fix names
-names(dtplot) <- c("target", "genotype", "bgr", "incompatibility_group", "pollinator", "compatibility")
+names(bt_long) <- c("target", "genotype", "bgr", "incompatibility_group", "pollinator", "compatibility")
 
 ## add blooming time for **pollinator**
-tmp <- bg_selected[var %in% dtplot$pollinator, .(var, bgr)]
+tmp <- bg_selected[var %in% bt_long$pollinator, .(var, bgr)]
 names(tmp) <- c("pollinator", "pollinator_blooming_group")
-dtplot <- dtplot[tmp, on = "pollinator"]
+bt_long <- bt_long[tmp, on = "pollinator"]
 
 ## [target == "areko", ]
-## dtplot[target == "areko", ]
+## bt_long[target == "areko", ]
 ## ?data.table
 ## X[Y, on=c(x1="y1", x2="y2")]
 
 ## calculate blooming proximity
-dtplot[, proximity := abs(as.numeric(bgr) - as.numeric(pollinator_blooming_group))]
-dtplot[, proximity := ifelse(bgr == 99 & as.numeric(pollinator_blooming_group) == 99, 99, proximity)] ## if both unknown
-dtplot[, compat_proximity := "no"]
-## dtplot[, proximity]
-dtplot[proximity <0.51 & compatibility != 0, compat_proximity := "same"]
-dtplot[proximity >0.5 & proximity < 1.1 & compatibility != 0, compat_proximity := "close"]
-dtplot[proximity >10 & compatibility != 0, compat_proximity := "bt_unknown"]
-## dtplot[proximity >10, ]
-## dtplot[, unique(proximity)]
+bt_long[, proximity := abs(as.numeric(bgr) - as.numeric(pollinator_blooming_group))]
+bt_long[, proximity := ifelse(bgr == 99 & as.numeric(pollinator_blooming_group) == 99, 99, proximity)] ## if both unknown
+bt_long[, compat_proximity := "no"]
+## bt_long[, proximity]
+bt_long[proximity <0.51 & compatibility != 0, compat_proximity := "same"]
+bt_long[proximity >0.5 & proximity < 1.1 & compatibility != 0, compat_proximity := "close"]
+bt_long[proximity >1.0 & proximity < 1.51 & compatibility != 0, compat_proximity := "stretch"]
+bt_long[proximity >10 & compatibility != 0, compat_proximity := "bt_unknown"]
+## bt_long[proximity >10, ]
+## bt_long[, unique(proximity)]
 
 ## Variable type
-## dtplot[, compatibility := as.numeric(compatibility)]
-## str(dtplot)
-dtplot[, target:= as.factor(target)]
-dtplot[, pollinator:= as.factor(pollinator)]
-dtplot[, pollinator_blooming_group_num := as.numeric(pollinator_blooming_group)]
-dtplot[, blooming_group := as.numeric(bgr)]
+## bt_long[, compatibility := as.numeric(compatibility)]
+## str(bt_long)
+bt_long[, target:= as.factor(target)]
+bt_long[, pollinator:= as.factor(pollinator)]
+bt_long[, pollinator_blooming_group_num := as.numeric(pollinator_blooming_group)]
+bt_long[, blooming_group := as.numeric(bgr)]
 
 ## myfun <- function(x){
 ##     ## round to bg most distant from 3, eg 3.5 is rounded to 4, ie towards the extremes
@@ -372,16 +374,16 @@ dtplot[, blooming_group := as.numeric(bgr)]
 ## }
 ## myfun <- Vectorize(myfun)
 
-dtplot[, blooming_group := round(blooming_group, digits = 0)]
-dtplot[, blooming_group := factor(blooming_group, ordered = TRUE, levels = c(1:5, 99), labels = c("Tidig", "Medeltidig", "Medel", "Medelsen", "Sen", "Okänd"))]
-dtplot[, pollinator_blooming_group := round(pollinator_blooming_group_num, digits = 0)]
-dtplot[, pollinator_blooming_group := factor(pollinator_blooming_group, ordered = TRUE, c(1:5, 99), labels = c("Tidig", "Medeltidig", "Medel", "Medelsen", "Sen", "Okänd"))]
-## dtplot[, unique(pollinator_blooming_group)]
+bt_long[, blooming_group := round(blooming_group, digits = 0)]
+bt_long[, blooming_group := factor(blooming_group, ordered = TRUE, levels = c(1:5, 99), labels = c("Tidig", "Medeltidig", "Medel", "Medelsen", "Sen", "Okänd"))]
+bt_long[, pollinator_blooming_group := round(pollinator_blooming_group_num, digits = 0)]
+bt_long[, pollinator_blooming_group := factor(pollinator_blooming_group, ordered = TRUE, c(1:5, 99), labels = c("Tidig", "Medeltidig", "Medel", "Medelsen", "Sen", "Okänd"))]
+## bt_long[, unique(pollinator_blooming_group)]
 
-## dtplot[, pollinator_blooming_group_num]
+## bt_long[, pollinator_blooming_group_num]
 
-setkey(dtplot, target)
-## str(dtplot)
+setkey(bt_long, target)
+## str(bt_long)
 
 ############## here #####################
 
@@ -423,7 +425,7 @@ setkey(dtplot, target)
 ## -----------------
 
 
-## dtplot[grepl("samba|frisco", target), ]
+## bt_long[grepl("samba|frisco", target), ]
 
 ## dta[ , paste(var, ": ", pollinated_by_concordance_chr)]
 

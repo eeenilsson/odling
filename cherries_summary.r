@@ -16,7 +16,7 @@ tmp[, pol := gsub(" ,$", "", pol)]
 tmp[, pol := gsub(" ,,", "", pol)]
 tmp <- tmp[, .(var, pol)]
 
-dtplot <- dtplot[, var := target]
+dtplot <- bt_long[, var := target]
 dtplot <- tmp[dtplot, on = "var"]
 
 myfun <- Vectorize(grepl)
@@ -87,7 +87,7 @@ p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_nu
 ## plot customization
 plot_pollination_table <- p +
     scale_size_area() +
-    scale_fill_manual(values=c("no" = "red", "close" = "lightgreen", "same" = "chartreuse3", "bt_unknown" = "white")) +
+    scale_fill_manual(values=c("no" = "red", "stretch" = "cadetblue" ,"close" = "lightgreen", "same" = "chartreuse3", "bt_unknown" = "white")) +
     scale_color_manual(values=c("no" = "white", "yes" = "black")) +
     theme(
         plot.margin = unit(c(0.9, 0.9, 0.9, 0.9), "centimeters"),
@@ -145,8 +145,8 @@ ggsave(
   device = NULL,
   path = "../dropbox/images/plants/",
   scale = 1,
-  width = NA,
-  height = NA,
+  width = 16.6,
+  height = 8.86,
   units = c("in", "cm", "mm", "px"),
   dpi = 300,
   limitsize = TRUE,
@@ -336,7 +336,8 @@ p_bt0_annotated + theme(
                   )
 
 
-ggsave("bt_start_ros.png", path = "../dropbox/images/plants/")
+ggsave("bt_start_ros.png", path = "../dropbox/images/plants/", width = 16.6, height = 8.86,
+)
 
 ## colors
 ## pacman::p_load("RColorBrewer")
