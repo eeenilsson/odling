@@ -14,15 +14,15 @@ Schemat tar hänsyn till genetisk kompatibilitet och närhet i blomningstid. Mot
 
 För att kunna befruktas behöver sötkörsbär pollineras av ett körsbär av **annan sort** som 1) blommar samtidigt och 2) är genetiskt kompatibel. Undantaget är de _självfertila_ sorterna, vilka kan befrukta sig själva. Kvaliteten och storleken på skörden blir dock bättre om de pollineras av andra.
 
-Efter namnet på körsbärssorten (på y-axeln, till vänster) anges inom klamrar vilken "haplotyp" sorten har. Den avgör vilka sorter som kan pollinera varandra (de som har samma haplotyper kan det inte). Hur den genetiska kompatibiliteten fungerar förklaras mer i detalj på sidan [om pollination](pollination_about.qmd).
+Efter namnet på körsbärssorten (på y-axeln, till vänster) anges inom klamrar vilken "haplotyp" sorten har. Den avgör vilka sorter som kan pollinera varandra (de som har samma haplotyper kan det inte). Hur den genetiska kompatibiliteten fungerar förklaras mer i detalj på sidan om [pollination](pollination_about.qmd).
 
-Blomningstiden varierar från år till år beroende på väderlek och klimat, men man brukar dela in den relativa blomningstiden för olika körsbärssorter i fem grupper från tidig till sen. Uppgifter om blomningstid varierar beroende på källa och för många sorter saknas information från svenska förhållanden. Blomningstiden i schemat ovan är en sammanvägning av den relativa blomningstiden från olika svenska och internationella källor. Du kan läsa mer om blomning på sidan [om blomning](blooming.qmd).
+Blomningstiden varierar från år till år beroende på väderlek och klimat, men man brukar dela in den relativa blomningstiden för olika körsbärssorter i fem grupper från tidig till sen. Uppgifter om blomningstid varierar beroende på källa och för många sorter saknas information från svenska förhållanden. Blomningstiden i schemat ovan är en sammanvägning av den relativa blomningstiden från olika svenska och internationella källor. Du kan läsa mer om blomning på sidan om [blomning](blooming.qmd).
 
 Eftersom det finns en osäkerhet i uppgifterna om blomningstid bör du även kontrollera med din lokala plantskola vilka sorter som brukar fungera tillsammans. Pollinationschemat bör därför bara användas som en fingervisning om vilka sorter som kan blomma samtidigt. Uppgifterna om genetisk kompatibilitet är mer säkra och icke-kompatibla sorter bör undvikas.
 
 ## Hur schemat avläses
 
-Välj den sort du är intresserad av och leta upp namnet under "mottagare" (till vänster i schemat). Följ raden tills du kommer till grönfärgade cirklar. Cirkelns färg motsvarar närhet i blomningstid och cirkelns storlek motsvarar den genetiska kompatibiliteten med "pollinatören" vars namn avläses nedtill i schemat. En **grön** cirkel betyder att pollinatören blommar ungefär samtidigt. En **blå** cirkel att blomningstiderna olika och ligger ganska långt från varandra. En **röd** cirkel betyder att det föreligger genetisk kompatibilitet men att blomningstiden är i varsin ände av spektrumet från tidig till sen blomning. Saknas genetisk kompatibilitet finns ingen cirkel alls. En svart ring runt cirkeln betyder att sorten angetts som pollinatör på någon svensk hemsida (Sveriges trädgårdsmästare, Plantagen, Wexthuset, Rangedala, eller Splendor).
+Välj den sort du är intresserad av och leta upp namnet under "mottagare" (till vänster i schemat). Följ raden tills du kommer till grönfärgade cirklar. Cirkelns färg motsvarar närhet i blomningstid och cirkelns storlek motsvarar den genetiska kompatibiliteten med "pollinatören" vars namn avläses nedtill i schemat. En **grön** cirkel betyder att pollinatören blommar ungefär samtidigt. En **blå** cirkel att blomningstiderna olika och ligger ganska långt från varandra. En **röd** cirkel betyder att blomningstiden är i varsin ände av spektrumet från tidig till sen blomning. Finns en cirkel av någon färg finns det genetisk kompatibilitet mellan sorterna. Saknas genetisk kompatibilitet finns ingen cirkel alls. En svart ring runt cirkeln betyder att sorten angetts som pollinatör på någon svensk hemsida (Sveriges trädgårdsmästare, Plantagen, Wexthuset, Rangedala, eller Splendor).
 
 Det finns skillnader mellan källor i vilka pollinatörer som anges för en viss sort och en del felaktigheter tycks finnas. Tex anges 'Fryksås' och 'Gårdebo' vara självfertila enligt Sveriges trädgårdsmästare, och Plantagen anger att 'Regina' kan pollineras av 'Van', men detta stämmer ej med genetiska data. Vissa sorter som blommar vid skiljda tidpunkter enlig sammanvägning av uppgifter om blomningstid anges ibland kunna pollinera varandra.
 
@@ -34,17 +34,23 @@ Det finns skillnader mellan källor i vilka pollinatörer som anges för en viss
 - _Röd_: Blommar **ej** under samma- eller närliggande period utan ligger i varsin ände av blomningsperioden.
 - _Vit_: Uppgifter om relativ blomningstid saknas.
 
+Pollinatörer inom det gröna fältet bör fungera, särskilt om du hittar information från andra källor om att de är lämpliga pollinatörer. För pollinatörer inom det blå eller röda fältet som rekommenderas av andra källor kan det vara värt att kolla upp om de verkligen blommar samtidigt.
+
 **Cirkelns storlek:**
 
 - _Större_: Fullt kompatibel (alla pollinatörens pollenkorn har förmågan att befrukta mottagaren).
 - _Mindre_: Delvis kompatibel (hälften av pollinatörens pollenkorn har förmågan att befrukta mottagaren).
-- _Ingen (röd prick)_: Icke-kompatibel (inga av pollinatörens pollenkorn har förmågan att befrukta mottagaren).
+- _Ingen_: Icke-kompatibel (inga av pollinatörens pollenkorn har förmågan att befrukta mottagaren).
 
 Självfertila sorter är markerade med en asterisk (*) efter namnet. De självfertila sorterna är också "universella pollinatörer", dvs de kan befrukta sig själva och alla andra sorter (förutsatt att de blommar samtidigt).
 
 Sorterna är ordnade efter blomningstid från vänster (tidigast) till höger (senast) och nedifrån (tidigast) och upp (senast), undantaget sorter för vilka uppgift om blomningstid saknas (de ligger längst ut i schemat).
 
 Vilket datum de olika blomningstiderna infaller varierar beroende på klimat och väder. I den norska Ullensvang varierar tex starten av blomningen för _Prunus avium_ 'Van' mellan 30 april och 19 maj (vanligen kring 8 maj) beroende på år.
+
+Spelar det någon roll om sorterna är helt- eller delvis kompatibla? Enligt en kanadensisk studie (Andersen 2011) var pollination med helt- respektive delvis kompatibla pollinatörer troligen lika effektivt avseende fruktmängd. För självfertila sorter av sötkörsbär var självpollination lika effektivt som öppen pollination, dock ej för surkörsbär. <!-- andersen-2011-variable-fruit-set-in-self-fertile-sweet-cherry.pdf -->
+
+Tycker du att schemat är svårt att avläsa, prova de sökbara tabellerna nedan istället.
 
 <!-- # Pollinationstabell -->
 <!-- Olika flikar med korstabell. -->

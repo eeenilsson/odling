@@ -86,6 +86,7 @@ De delas ibland in i _moreller/brunbär_ (mörkröd färg och färgad saft) resp
 
 - Är allotetraploider med 2n = 4x = 32 kromosomer dvs har två uppsättningar diploida koromosomer från olika arter. _Prunus ceracus_ antas vara en hybrid som skapats genom "ickereducerade" (diploida) celler från _Prunus avium_ och normala celler från _P fructiosa_. En tetraploid sort kan ha upp till fyra alleler/varianter i samma locus. Sötkörsbär är diploida, 2n=2x=16<!-- och har 16 kromosomer som bildar 8 par.  -->.
 
+Det finns även "Duke cherries" som är framodlade korsningar mellan söt- och surkörsbär.
 
 ## Några surkörsbär
 
@@ -218,6 +219,14 @@ För en grundstam kan anges till vilken % av standardträdets höjd (det som ymp
 - Grundstammen kan skadas vid hård vinter, men blommorna har mindre risk för frostskada.
 - Zon 1-3.
 
+Vissa sorter av körsbär har rapporterats vara inkompatible med en viss grundstam. Symtom på detta kan komma efter många år ("fördröjd inkompatibilitet"). Colt har angetts vara inkompatibel med 'Sam' och 'Van'. 
+
+<!-- ‘Burlat’ and ‘Hedelfingen’ cultivars grafted on ‘Colt’ -->
+<!-- are good examples of delayed incompatibility in sweet cherry cultivation.  -->
+
+<!-- Sitarek2006.pdf -->
+
+<!-- Long2010.pdf -->
 
 <!-- Ger relativt stora träd, 70-80% av fröstam. -->
 
@@ -284,6 +293,8 @@ file:///home/e/Downloads/Fruit_Development_in_Sweet_Cherry.pdf -->
 <!-- Låst: Cherry flowering, fruiting and cultivars. -->
 <!-- Authors: Lynn 2020  This paper discusses the flowering and fruiting habit, cultivar pollen compatibility, pollination and fertilization of cherries. The major sweet cherry cultivars and their characteristics are described, including their key attributes for fresh markets.-->
 
+Olika körbärssorter avnvänds för komersiellt bruk i olika utsträckning beroende på vilket land som odlar dem. Exempelvis, i Norge är de sorter som främst odlas ‘Lapins’ (~ 44%), ‘Van’, och ‘Sweetheart’, andra senmognande sorter, ‘Ulster’, och ‘Burlat’ som ympats på grundstammarna GiSelA 5 och GiSelA 6. Surkörsbär ‘Fanal’ och ‘Stevnsbaer’ odlas där på grundstammarna Colt och Mazzard. <!-- firstchapterCherryProductionintheWorld.pdf -->
+
 
 ## Några intressanta sorter
 
@@ -331,7 +342,7 @@ Blomningstiden anges olika i olika källor. Troligen är det en tidigblommande s
 
 ### Van
 
-Bra pollinatör.
+Bra pollinatör. Kan vara inkompatibel med grundstammen 'Colt', vilket kan ge problem efter några år.
 
 <!-- "Excellent pollinator" -->
 
@@ -365,13 +376,25 @@ Kan vara ett lämpligt val om man bara vill plantera ett körsbärsträd. Sorten
 <!-- Market intermediaries indicated a willingness to pay producers more per pound for fruit greater than 2.5 cm in diameter, firmness above 300 g/mm, and SSC above 18 °Brix -->
 
 
+### Sam
+
+God smak. Mörkröd. Kan vara inkompatibel med grundstammen 'Colt', vilket kan ge problem efter några år.
+
+Sam i kombination med Sunburst (Självfertil, samma blomningstid, fullt kompatibel; mognar samtidigt) eller Stella (självfertil, blommar ett steg tidigare, fullt kompatibel; mognar tidigare), eller Linda (samma blomningstid, fullt kompatibel; ej självfertil).
+
+### Merton Glory
+
+Synonymer: Merton Glory
+
+![Merton Glory](../../dropbox/images/plants/merton_glory.jpg){width=40%}
+
+Gulröd färg på skalet och gulvitt, mjukt kött som har hög sötma och medelhög syra. Blommar medeltidigt under blomningsperioden och mognar i mitten av mognadsperioden. Mognar tidigt. Bra pollinatör?.
+
+
+
 ### Andra sorter
 
 **Allmän gulröd bigarrå**: God smak. Söt och syrlig. Kan användas för syltning.
-
-**Sam**: God smak. Mörkröd.
-
-Sam i kombination med Sunburst (Självfertil, samma blomningstid, fullt kompatibel; mognar samtidigt) eller Stella (självfertil, blommar ett steg tidigare, fullt kompatibel; mognar tidigare), eller Linda (samma blomningstid, fullt kompatibel; ej självfertil).
 
 **Fryksås** eller Gårdebo? Zon 4
 

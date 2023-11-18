@@ -1,5 +1,8 @@
 ---
 title: "Odling"
+execute:
+  echo: false
+
 ---
 
 <!-- Sammanfattningsvis: -->
@@ -189,59 +192,109 @@ Torka under celldelningsperioden ger små bär och gör att karten faller. Torka
 
 <!-- [En bra beskrivning av vetenskapligt förankrad teori om beskärning](https://extension.uga.edu/publications/detail.html?number=B949&title=basic-principles-of-pruning-woody-plants) -->
 
+<!-- apple_tree_pruning_Schupp.pdf -->
+
 <!-- - Pruning stimulates growth closest to the cut in vertical shoots; farther away from cuts in limbs 45° to 60° from vertical -->
 
-Beskärning görs av olika skäl beroende på trädets ålder. Den första våren efter plantering görs "etableringsbeskärning" för att stimulera rottillväxt. När trädet är ungt, dvs 1-3 år (kanske upp till 5 år), görs "uppbyggnadsbeskärning" för att ge trädet önskad form och begränsa höjden. Därefter följer "underhållsbeskärning" som främst syftar till att ta bort döda eller skadade grenar som kan bidra till sjukdom, men som också kan göras för att få nya grenar som bär mer frukt (fruktsättningen minskar på äldre grenar > ca 5 år). Körsbär bör beskäras med försiktighet.
+Beskärning görs av olika skäl beroende på trädets ålder. Den första våren efter plantering görs "etableringsbeskärning" för att stimulera rottillväxt. När trädet är ungt, dvs 1-3 år (kanske upp till 5 år), görs "uppbyggnadsbeskärning" för att ge trädet önskad form och begränsa höjden. Därefter följer "underhållsbeskärning" som främst syftar till att ta bort döda eller skadade grenar som kan bidra till sjukdom samt att bibehålla ljusgenomsläpp och därmed bättre fruktkvalitet. Underhållsbeskärning kan eventuellt också göras för att få nya grenar som bär mer frukt, då fruktsättningen minskar på äldre grenar (> ca 5 år). Körsbär bör beskäras med försiktighet.
 
-**Teorin bakom beskärning**
+## Teorin bakom beskärning
 
-I toppen av skotten producerar hormonet auxin. Det förs med gravitationen ned längs skottet och grenen. Auxin hämmar tillväxen av laterala skott (dvs de sidoväxande), så kallad "apikal dominans". Detta påverkar hur många sidoskott som tillväxer (mer auxin hämmar antalet), med vilken vinkel (auxin ökar vinkeln) de växer och deras längd. Tar man bort toppen av ett skott minskar auxinet och lateral tillväxt stimuleras. Apikal dominans är starkast i de grenar som växer lodrätt, minskar i de grenar som växer med 45-60 graders vinkel och upphör om grenen växer horisontellt. Genom att skära bort toppskottet minskar man tillfälligt den apikala dominansen, varvid laterala knoppar stimuleras till att växa ut som skott/grenar.
+**Apikal dominans**
 
-Normalt är det ett toppskott på en lodrät gren som har den största tillväxten. Varje sidogren under den växer progressivt långsammare och de lägst belägna knopparna växer ej. Detta kan bero på att auxin från de ovanliggande knopparna och skotten ansamlas ju längre ner man kommer. 
+I toppen av skotten produceras hormonet auxin. Det förs med gravitationen ned längs skottet och grenen. Auxin hämmar tillväxen av laterala (sidoväxande) skott, så kallad "apikal dominans". Detta påverkar hur många sidoskott som tillväxer (mer auxin hämmar antalet), med vilken vinkel de växer (auxin ökar vinkeln), och deras längd. Genom att skära bort toppen av ett skott minskar man tillfälligt auxinet i den grenen och därmed den apikala dominansen, varvid laterala knoppar stimuleras till att växa ut som skott.
 
-När fyra eller fler skott finns ovanför en ny gren blir vinkeln på den grenen horisontell (50-90 grader). När det inte finns några skott ovanför grenen får den istället en smal vinkel/upprätt växtsätt (0-40 grader). Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första. Tar man bort den apikala dominansen blir de skott som tillväxer mer upprätta, med smalare vinklar och trädet får ett mer upprätt, smalare växtsätt.
+Grenar och rötter står i ett ömsesidigt beroende av varandra. Rötterna förser grenarna med vatten och näringsämnen, grenarna producerar kolhydrater som används av rötterna. Balansen mellan rötter och grenar regleras av hormoner, såsom auxin. I rotsystemet produceras cytokininer som främjar tillväxten och det är egenligen balansen mellan cytokininer och auxin (och  gibberelin från nyutslagna löv) som styr tillväxten.
 
-Vinkeln med vilken en gren växer avgörs tidigt under det första året den tillväxer. 
+Hur en gren växer och hur den reagerar på beskärning påverkas av den apikala dominansen. Apikal dominans är starkast i de grenar som växer lodrätt, minskar i de grenar som växer med 45-60 graders vinkel och upphör om grenen växer horisontellt.
+
+**Effekten av auxin på trädets växtsätt**
+
+Normalt är det toppskott på en lodrät gren som har den största tillväxten. Varje sidogren under denna växer progressivt långsammare och de lägst belägna knopparna växer ej till skott. Detta kan bero på att auxin från de ovanliggande knopparna och skotten ansamlas ju längre ner man kommer. 
+
+Eftersom auxin fördelas beroende på gravitationen ansamlas det mer på undersidan av grenen desto mer horisontellt den växer. Vid en vinkel på 0-60 grader utvecklas nya skott ganska symmetriskt runt grenen, men i mer horisontella grenar tenderar skotten att bildas på ovansiden av grenen, där auxinkoncentrationen är lägre. Det är orsaken till att "vattenskott" (lodräta skott som har stark apikal dominans) gärna bildas på ovansidan av horisontella grenar.
+
+Vinkeln med vilken en gren växer avgörs tidigt under det första året den tillväxer (fram tills dess den nått ca 10 cm). När fyra eller fler skott finns ovanför en ny gren blir vinkeln på grenen horisontell (50-90 grader). När det inte finns några skott ovanför grenen får den istället en smal vinkel/upprätt växtsätt (0-40 grader). Det skott som är längst ut på grenen får ofta ett konkurrerande skott med spetsig vinkel mot det första. 
+
+**Effekten av beskärning är olika beroende på grenens vinkel**
+
+Om en upprätt gren beskärs ökar lateraltillväxten ner till ca 25 cm från snittet. För grenar i 45 till 60 graders vinkel sker tillväxten längre ner/närmare stammen. Ju mer upprätt den beskurna grenen är, desto mer kraftigväxande (och lövrika?) blir de ersättningsskott som kommer. Horisontella grenar kan vid beskärning skjuta fler "vattenskott", dvs lodrätt växande skott utan sidoskott. 
+
+Tar man bort den apikala dominansen med beskärning blir de skott som tillväxer mer upprätta, med smalare vinklar. Trädet får även ett mer upprätt, smalare växtsätt, jämfört med hur trädet växer utan beskärning.
 
 <!-- The crotch angle, which forms very early in the first year of the development of a branch, must be wide and strong. Narrow crotches cause bark inclu- sions, are weak, split easily and are more sus- ceptible to cold injury. Wide crotch angles are formed naturally in very vigorous-growing trees that have very active meristematic areas that produce large quantities of auxin -->
-
 
 <!-- hen four or more shoots were above a new branch, the angle of that new branch was 50–90° (i.e. close to horizontal). When there were no shoots above the new branch, the branch angle was in the very narrow range of 0–40° (i.e. very upright). Removal of the terminal bud results in an increase in the growth of the subtending laterals, and shoots that would have been spurs become vegetative shoots. Removal of apical domi- nance not only changes which shoots grow and their vigour, but the resulting shoots are more upright with narrower crotch angles.  Thus, tree form is changed into a more upright, narrow shape. -->
 
 <!-- Normally a terminal bud makes the most growth in an unpruned, upright branch, and each subsequent subtending lateral makes progressively less growth, until some form spurs, with the most basal buds not grow- ing. This growth form is probably the result of cumulative auxin concentrations pro- duced from each of the buds above causing a reduction in growth in the shoot originat- ing at lower levels -->
 
+**Fotomorfism och gravimorfism**
 
-Hur grenen växer och hur den reagerar på beskärning påverkas av den apikala dominansen.
+Skott böjer sig när det finns en gradient av auxin inom skottet. Auxin gör att cellerna blir längre men hormonet förstörs av ljus. Cellerna på skottets mörkare sida blir längre pga att det finns mer auxin där och skottet böjer sig då mot ljuset, sk fotomorfism.
 
-Lodräta grenar: <!-- Här tillväxer skotten nära toppskotten och mindre ju längre ner man kommer.  -->
+På liknande sätt gör gravitationen att auxin ansamlas i undersidan av horisontellt växande grenar, vilket ökar längdtillväxten av cellerna där och toppen av grenen böjer sig uppåt.
 
-Horisontella grenar: (dessa grenar kan få "vattenskott" på ovansidan)
+**Knoppar**
 
-Om en upprätt gren beskärs ökar lateraltillväxten ca 25 cm ner från snittet. För grenar i 45 till 60 graders vinkel sker tillväxten längre ner. Horisontella grenar kan vid beskärning skjuta fler "vattenskott", dvs lodrätt växande skott utan sidoskott. 
+Knoppar kan vara "vegetativa" (ger grenar och löv) eller "reproduktiva" (ger blommor och frukt), eller hos vissa arter (tex vissa äppelsorter) blandade. Blomknopparna är större och mer rundade. Högt kväveinnehåll i skotten hämmar utvecklingen av blomknoppar. Mild stress, såsom böjning eller vattenstress kan stimulera utvecklingen av blomknoppar. För att få frukter av god kvalitet krävs en balans mellan mängden löv och blomknoppar. Beskärning av toppskottet gör att knoppar som skulle blivit blomknoppar istället blir vegetativa.
 
-Det finns två grundläggande typer av beskärning, "heading" och "thinning" (kapning och gallring?). Kapning, där en del av skottet eller grenen tas bort, stimulerar tillväxt längst ut, nära snittet. Vid gallring tas ett helt skott eller gren bort vid basen (dvs vid huvudgrenen). Apikal dominans behålls genom att en del toppskott bevaras. Nytillväxten sker då i de befintliga skott som lämnats orörda och lateral tillväxt hämmas. Gallring ger ett mer naturligt växtsätt och ökar ljusgenomsläppligheten in i kronan. Kapning kan göra att nyttillväxten av grenar kommer för långt ut.
+**Typer av beskärning**
+
+Det finns två grundläggande typer av beskärning, "heading" och "thinning" (kapning och gallring?). 
+
+_Kapning_, där en del av skottet eller grenen tas bort, stimulerar tillväxt längst ut, nära snittet (vanligen utvecklas de 3-4 knopparna närmast nedanför snittet till skott). Kapning kan därför göra att nytillväxten av grenar kommer längre ut än önskvärt. Effekten av kapning beror på trädets ålder och grenens typ. Kapning av ettårigt trä ger en stark lokal respons, då tre till fyra av knopparna nedom snittet utvecklas till kraftigväxande, upprätta skott med smala vinklar. Den kapade grenen blir styvare. Kapning på unga träd har en negativ effekt på tillväxt och fruktsättning som varar i fem år. Kapning används på nyplanterade träd för att ge starka laterala grenar som sedan utgör trädets stödstruktur.
+
+Vid _gallring_ tas ett helt skott eller gren bort vid basen (dvs vid krongrenen). Apikal dominans behålls då genom att en del toppskott bevaras. Nytillväxten sker därför i de befintliga skott som lämnats orörda och lateral tillväxt hämmas fortfarande i kvarvarande grenar. Gallring ger ett mer naturligt växtsätt än kapning. Det görs främst för att öka ljusgenomsläppligheten och undvika trängsel i kronan. Det kan också användas för att ta bort upprättväxande skott och grenar som ej bär frukt. Liksom kapning används gallring för att forma det unga trädet. Hos vuxna träd upprätthåller gallring ljusgenomsläpp i kronan, och förbättra fruktstorlek och -kvalitet.
+
+Flera små snitt ger större antal nya skott och mer reduktion av fruktsättning än färre, större snitt.
+
+```{r } 
+#| label: tbl-pruning-response 
+#| tbl-cap: "Effekt av olika beskärningssätt"
+#| warning: false
+
+pruning_response <- read.csv("../pruning_response.csv")
+names(pruning_response) <- c("Variabel", "Gallring", "Kapning")
+knitr::kable(pruning_response)
+
+``` 
+
+
+**Följder av beskärning**
 
 Vissa växter blöder mycket efter beskärning. De kan beskäras när det finns aktivt växande löv, dvs vår eller försommar, vilket minskar blödningen och på så vis gör att såret kan läka snabbare.
 
 <!-- If plants are not grown for their flowers, the best time for pruning is during the dormant winter season before new growth begins in the spring. -->
 
-Beskäring av en ung planta stimulerar tillväxten av skott och hämmar eller fördröjer blomning och fruksättning.
+Beskärning minskar trädets totala massa. Eftersom beskärning ökar den vegetativa tillväxten nära snittet ger det illusionen att beskärning stimulerar tillväxt, men ser man på hela träder ger årlig beskärning alltid mindre total massa än om trädet inte beskärs.
+
+Beskärning minskar trädets slutliga storlek. Minskningen är större ju mer det beskärs. Borttagning av en gren tar bort den reserv av kolhydrater och kväve som lagrats där, samt reducerar lövverkets storlek och antal tillväxtpunkter. Det minskar också rötternas tillväxt, som fördröjs tills nya skott kommit.
+
+När man beskär tas knoppar bort som skulle kunnat bära frukt. Beskärning minskar således mängden frukt, men ökar storleken på de kvarvarande frukterna genom att mängden löv per frukt ökar. Det ger även mer ljusgenomsläpp vilket ökar den röda färgen och sockerinnehållet i frukterna.
+
+Beskäring av en ung planta stimulerar tillväxten av bladbärande skott och trädet börjar producera frukt senare i livet.
+
+Beskärning _på sommaren_ tar bort blad och minskar därför fotosyntesen som ger trädet energi. Detta kan leda till att frukternas storlek och sockerinnehåll minskar, samt att stammen och rötterna växer mindre.
+
+Beskärning ökar risken för köldskador (sker vanligen vid -23 till -49 grader). Den ökade känsligheten är som störst de första 48 timmarna men håller i sig åtminstone två veckor.
+
+Grenar stannar på den höjd där de växer ut. Det betyder att en gren som växer ut på en viss höjd fortfarande efter ett antal år är kvar på samma höjd.
+
 
 <!-- https://www.pubs.ext.vt.edu/422/422-025/422-025.html -->
 
 <!-- file:///home/e/Downloads/Apple%20tree%20pruning%20and%20training%20Ferree%20and%20Schupp.pdf -->
+ <!-- Från boken: Apples: Botany, Production, and Uses David Curtis Ferree, Ian J. Warrington 2003 -->
 
-
+## Beskärningens syfte
 
 **Varför beskära?**
 
-- Sötkörsbär tenderar att få långa, upprätta grenar utan frukt. Med beskärning kan man gynna de mer horisontellt växande, fruktbärande grenarna. Surkörsbär får det mesta av sin frukt på fjolårsskotten, så om de inte beskärs kommer bären längst ut på alltför långa grenar (?).
+- Sötkörsbär tenderar att få långa, upprätta grenar utan frukt. Med beskärning kan man gynna de mer horisontellt växande, fruktbärande grenarna.
 
-- Upprätthålla balans mellan något äldre fruktbärande grenar och yngre ersättningsgrenar. 
+- Surkörsbär får det mesta av sin frukt på fjolårsskotten, så om de inte beskärs kommer bären längst ut på alltför långa grenar (?).
 
-<!-- RHS: "Annual pruning keeps cherry trees more compact, so they take up less space and the fruit is easier to pick and to protect from birds. Pruning also ensures there is a good balance of older fruiting wood and younger replacement branches. Acid cherries, for example, bear almost all their fruit on the previous year’s shoots, so if left unpruned the crop would be produced at the ends of overlong branches" -->
-
-- Forma trädet de första åren och ge det en stark grundstruktur.
+- Forma trädet de första åren och ge det en stark grundstruktur som också ger förutsättningar för frukter av god kvalitet (bla genom att undvika en alltför tät krona). Man eftersträvar då vanligen vidare grenvinklar.
 
 - Begränsa trädets höjd och utbredning (underlättar skörd och att lägga på nät som skydd mot fåglar).
 
@@ -249,11 +302,24 @@ Beskäring av en ung planta stimulerar tillväxten av skott och hämmar eller f�
 
 - Förhindra att grenar skaver mot varandra (skapar sår som kan ge fäste åt infektioner).
 
+- Behålla ljusgenomsläpp i kronan som förbättrar frukternas kvalitet. En alltför tät krona kan också ge försämrad fruktproduktion och mer kvardröjande fukt som ökar risken för sjukdomar.
+
+- Eventuellt: Upprätthålla balans mellan något äldre fruktbärande grenar och yngre ersättningsgrenar. 
+
+<!-- RHS: "Annual pruning keeps cherry trees more compact, so they take up less space and the fruit is easier to pick and to protect from birds. Pruning also ensures there is a good balance of older fruiting wood and younger replacement branches. Acid cherries, for example, bear almost all their fruit on the previous year’s shoots, so if left unpruned the crop would be produced at the ends of overlong branches" -->
+
+
 **Varför vara försiktig med beskärning?**
 
 - Risk för bakteriesjukdom/röta som kommer in i snittytan.
 
 - Beskärs trädet för hårt kan det bli "vattenskott" som inte bär frukt och som ger en för tät krona. 
+
+- Om kvoten mellan antal blad och frukter blir för litet kan bladen inte försörja frukterna tillräckligt.
+
+- Beskärning minskar trädets totala tillväxt och antalet frukter över tid.
+
+## Beskärningsteknik
 
 **Grunder**
 
@@ -263,13 +329,18 @@ Beskäring av en ung planta stimulerar tillväxten av skott och hämmar eller f�
 
 - Använd en vass och ren sekatör. 
 
+- Läs om skillnaden mellan gallring och kapning ovan.
+
 - Lägg snittet en bit ovanför en utåtriktad gren eller öga. Grenen växer dit ögat pekar.
 
 - Gör snittet med lutning bort från ögat, så att vatten kan rinna av.
 
-- Om du beskär vid stammen, låt grenkragen sitta kvar så läker det snabbare. Skada inte grenkragen. Lämna inte tappar.
+- Om du **gallrar bort** en gren/skott, dvs beskär vid stammen, skär så nära grenkragen som möjligt men låt grenkragen sitta kvar så läker det snabbare. Skada inte grenkragen. Lämna inte tappar.
+
+- När du **kortar ner** ett ungt skott, spara en halv cm ovanför den sista knoppen, för att knoppen skall undvika att torka in. Den nya tillväxten kommer att ske i den riktning den yttersta kvarvarande knoppen sitter.
 
 - Tag inte bort grenar som är tjockare än ett finger. 
+
 
 <!-- - Beskär trädets högre del mer än den lägre för att ge lusinsläpp och luftflöde? -->
 
@@ -280,6 +351,18 @@ Det verkar råda delade meningar om när körsbär bör beskäras. Att etablerin
 Vissa menar att beskärning bör undvikas på sensommaren eller hösten, men samtidigt finns rekommendationer att beskärning bör ske juli-september (JAS).
 
 Risken för bakteriengrepp är sannolikt störst på hösten, varför det är rimligt att undvika beskärning då. Svampen som ger silverglans trivs bäst när det är fuktigt och 2-21 grader varmt.
+
+<!-- Sweet cherries are more susceptible to fungal and bacterial diseases, especially on recently cut limbs, so it is best to prune them in the late summer. Keep in mind that summer pruning reduces the tree’s energy for fruit production as well as its growth, so this should be minimal using only thinning cuts. Dormant pruning is a more aggressive pruning. When a large portion of the tree is removed during the dormant season, the energy reserves of the tree remain unchanged. The timing of dormant season pruning is critical, and should begin as late in the winter as feasible to avoid injuring the tree. Sour and weeping fruit trees may be pruned at this time once the risk of winter frost has passed. Early spring is also prime time for pruning young cherry trees, shaping and training the young tree before it blossoms. Pruning should begin as buds emerge, but wait until all chance of extreme cold temperatures have passed to avoid possible cold injury, as younger trees are more susceptible to this. Mature cherries can be pruned in early spring too, or after they bear fruit.
+-->
+
+
+Vinterbeskärning kan öka risken för köldskador (se ovan).
+
+Beskärning som fördröjs en bit efter blomning minskar energireserven vitaliteten i tillväxten och kan störa utvecklingen av blomknoppar kommande år.
+
+Beskärning under perioden när den vegetativa tillväxten börjar gör att fler knoppar brister och på längre avstånd från snittet, jämfört med beskärning under den vilande perioden.
+
+Vid beskärning under sensommaren läker snitten snabbare än vid beskärning under trädets vilande period. 
 
 Sammantaget verkar det lämpligt att göra försiktig uppbyggnadsbeskärning under våren, kring knoppbristning. Eventuellt kan denna kompletteras under sommaren om väderleken är torr och varm? För underhållsbeskärning kanske början av JAS (juli-sept) - perioden är mest lämplig, gärna vid torr och varm (> 21 grader) väderlek, för att minska risken för bakterieangrepp och silverglans. Om fruktbärande grenar skall tas bort/förnyas är det förstås önskvärt att vänta tills efter skörd.
 
@@ -318,15 +401,24 @@ Sammantaget verkar det lämpligt att göra försiktig uppbyggnadsbeskärning und
 
 <!--Once your cherry tree has reached 30 inches (76cm) in height, you can cut the main branch (leader) back to 24 to 36 inches (61 to 92cm). This is called heading. https://www.kneebonetrees.co.uk/blog/pruning-cherry-trees/ -->
 
+**Trädets form**
+
+Det finns olika sätt att beskära körsbärsträd. Vissa syftar till att snabbt ge hög avkastning. 
+
+En grundläggande princip är att välja några (3-4) "krongrenar" som gynnas och tillsammans med den centrala ledargrenen (eftersträvas en buskform/korgform tas denna dock bort) kommer att utgöra trädets grundstruktur. Dessa grenar kapas inte igen efter att de fått sin önskade form och utbredning. Krongrenarna bör vara jämnt fördelade runt stammen och ha en vinkel kring 45 grader. Ibland väljer man att skapa ett andra "lager" av krongrenar längre upp längs stammen. Det finns olika rekommendationer angående längden på krongrenarna (25-60 cm).
+
+
 ## Etableringsbeskärning
 
 **Varför**:
 
 Rotsystemet är vid plantering underutvecklat i förhållande till kronan. Etableringsbeskärningen gör att rotsystemet får möjlighet att komma ikapp och bli tillräckligt stort för att kunna försörja grenarna med vatten och näring. Det är också viktigt att trädets resurser satsas på ett mindre antal starka knoppar med rätt placering. Risken är annars att trädet blir glest och spretigt, får dålig tillväxt och få skott.
 
+Redan här börjar beskärningen påverka trädets framtida form. En ledargren och omgivande blivande krongrenar bör väljas ut och gynnas.
+
 **När**:
 
-Etableringsbeskärning beskärning kan göras direkt vid vårplantering (vissa menar att man bör vänta till efterföljande vår). Den görs alltid på våren, innan knopparna har börjat slå ut. Även de träd som planterats på hösten etableringsbeskärs på våren. Vid beskärning på sommaren stimuleras inte tillväxten på samma vis.
+Etableringsbeskärning beskärning kan göras direkt vid vårplantering (vissa menar att man bör vänta till efterföljande vår). Den görs alltid på våren, innan knopparna har börjat slå ut. Även de träd som planterats på hösten etableringsbeskärs på våren. Vid beskärning på sommaren stimuleras inte tillväxten på samma vis. Trädet kan vara beskuret på plantskolan innan leverans och man får då anpassa etableringsbeskärningen efter detta.
 
 <!-- Etableringsbeskärning av plommon och körsbär utförs också på våren. -->
 
@@ -334,27 +426,49 @@ Om trädet som planteras är 5-6 år har plantskolan redan gjort en beskärning,
 
 **Hur**:
 
-- Börja med att klippa bort eventuella konkurrensskott/dubbelgrenar.
-- Korta ner årsskotten. <!-- så att trädets krona efter beskärningen bildar en smal pyramid.  -->
-  - Lämna ca 60 % av toppskottet (alternativt kapa det vid önskad höjd, tex 1.5 m, se upbyggnadsbeskärning nedan)
-  - Om det endast finns två huvudgrenar och du beskär den centrala ledaren, se till att den högst belägna knoppen/skottet sitter i lämplig riktning för att bilda en till huvudgren.
-  - Lämna ca 40 % av sidoskotten (alternativt 25-30 cm långa från mittenstammen?). 
-- Små svaga årsskott skärs bort helt. 
-- Grenar som sitter för lågt (lägre än de huvudgrenar du valt ut) tas bort vid stammen.
-- När du **kortar ner** ett ungt skott, spara en halv cm ovanför den sista knoppen, för att knoppen skall undvika att torka in.
-- När du **tar bort** ett skott eller en gren, skär så nära grenkragen som möjligt, utan att skada den.
-- Den nya tillväxten kommer att ske i den riktning den yttersta kvarvarande knoppen sitter.
+- Beskär så litet som möjligt.
+- Identifiera den centrala ledargrenen (om du inte skall beskära till buskform som saknar central ledare). Om den har en konkurrerande ledargren i snäv vinkel, tag bort den.
+- När skotten är 5-10 cm långa kan några av de mer utåtväxande väljas som krongrenar. De två-tre _uppåtväxande_ skott som ofta växer strax nedanför ledaren tas bort och de lägre skotten med _bredare vinklar_ behålls som krongrenar.
+- Välj tre till fyra krongrenar (kan vara bra att ha en extra ifall en av dessa skulle skadas det kommande året). De bör: 
+  - Vara jämnt spridda runt stammen.
+  - Vara belägna minst 50 cm från marken.
+  - Växa med en vinkel på 45-60 grader.
+- Saknas skott med breda vinklar kan en klädnypa sättas om huvudstammen och tryckas ner över sidoskottet så att det tvingas växa mer utåt. Detta måste göras innan skottet hårdnar. Klädnypan tas bort efter 3-4 veckor.
+- Saknas tillräckligt med sidoskott för att bilda tre krongrenar låter man ett sidoskott från någon av de befintliga skotten/grenarna växa till sig istället. Ett alternativ kan kanske vara att "snitta" (se "knep" nedan).
+- Börja med att klippa bort eventuella konkurrensskott/dubbelgrenar till de du tänkt spara.
+- Korta de blivande krongrenarna så att de är 25-30-40(-60?) cm långa från mittenstammen (eventuellt vänta tills de är ca 60 cm innan detta görs, vilket kan vara nästkommande år). Gör det på ett sätt så att det översta ögat/knoppen pekar bort från centrum.
+- Korta den centrala ledaren så att den är ca 20 cm högre än krongrenarna om dessa beskurits (alternativt kapa det vid önskad höjd, tex 1.5 m, se upbyggnadsbeskärning nedan). 
+- Om krongrenarna ej beskärs detta år, tag bara bort några cm av toppen på den centrala ledaren. Detta görs för att begränsa trädets höjd och för att stimulera lateral tillväxt.
+- Om det endast finns två krongrenar och du beskär den centrala ledaren, se till att den högst belägna knoppen/skottet sitter i lämplig riktning för att bilda en till krongren.
+- Övriga skott klipps av intill stammen, så att bara den centrala ledaren och de tilltänkta krongrenarna finns kvar. <!-- Om krongrenarna redan fått sidoskott kan dessa kortas till 35 cm när de hunnit bli >60 cm. -->
+
+<!-- - Korta ner årsskotten. <\!-- så att trädets krona efter beskärningen bildar en smal pyramid.  -\-> -->
+
+<!-- - Lämna ca 60 % av toppskottet (alternativt kapa det vid önskad höjd, tex 1.5 m, se upbyggnadsbeskärning nedan) -->
+  
+<!-- - Lämna ca 40 % av sidoskotten (alternativt 25-30 cm långa från mittenstammen?).  -->
+<!-- - Små svaga årsskott skärs bort helt.  -->
+<!-- - Grenar som sitter för lågt (lägre än de krongrenar du valt ut, alt <45 cm från maken) tas bort vid stammen. -->
+
+
 - Följ trädets utveckling under uppväxttiden.
 - Plommon och körsbär beskärs så litet som möjligt efter etableringsbeskärningen. Man tar främst bort grenar som växer inåt i kronan eller som skaver på andra grenar.
 
   <!-- - Årsskotten på äpple och päron kortas in de första åren och konkurrensskott tas bort. -->
 
+<!-- Om trädet har så kallade konkurrerande toppskott ska de också tas bort. Det är en gren som växer rakt uppåt i kronan och som därigenom på sikt kommer att konkurrera med huvudstammens topp – den som ska vara trädets högsta punkt. -->
+
+<!-- Enligt gamla principer beskär man träd i form av en korg: huvudstammen går upp en bit och delas sedan i flera grenar i en rund korgform. Numera eftersträvar man i regel en rak, genomgående stam -->
 
 ## Uppbyggnadsbeskärning
 
-Görs på yngre träd. Trädet formas under de första åren. Principen för fortsatt beskärning är att forma trädet, gynna utåtväxande grenar som bär frukt och undvika grenar med för snäv vinkel. Med detta avgörs också om trädet skall få en korgform (ger lägre träd) eller ha en genomgående huvudstam. 
+**Varför**:
 
-Målsättningen är att få tre till fyra huvudgrenar som kommer från den centrala stammen och är belägna minst 50 cm från marken. Dessa bör vara jämnt fördelade runt stammen, så att trädet blir balanserat. Det är vanligt att det endast växer två grenar från stammen. Då bör man låta en förgrening från en av dessa huvudgrenar växa till sig. Oftast beskärs körsbär så att det bildar en buskform/korgform, dvs att den centrala ledaren beskärs (vid vilken höjd denna beskärs beror på hur högt träd man önskar, tex vid 1 m, 1.2 m, eller 1.6 m).  <!-- If the sapling is short, wait until it's well over 30 inches (76.2 cm) before inches before heading it.  -->
+Görs på yngre träd. Trädet formas under de första (1-3?) åren. Principen är att forma trädet, gynna utåtväxande grenar som bär frukt och undvika grenar med för snäv vinkel. Här avgörs också om trädet skall få en korgform (ger lägre träd) eller ha en genomgående huvudstam. 
+
+<!-- Målsättningen är att bevara tre till fyra krongrenar som kommer från den centrala stammen och är belägna minst 50 cm från marken. Dessa bör vara jämnt fördelade runt stammen, så att trädet blir balanserat (ligger någon av dem vertikalt ovan enn annan bör avståndet vertikalt vara minst 20 cm). Det är vanligt att det endast växer två grenar från stammen. Då bör man låta en förgrening från en av dessa krongrenar växa till sig. Oftast beskärs körsbär så att det bildar en buskform/korgform, dvs att den centrala ledaren beskärs (vid vilken höjd denna beskärs beror på hur högt träd man önskar, tex vid 1 m, 1.2 m, eller 1.6 m). Denna grundstruktur kan ha bestämts helt eller delvis redan vid etableringsbeskärningen. --> 
+
+<!-- If the sapling is short, wait until it's well over 30 inches (76.2 cm) before inches before heading it.  -->
 
 <!-- The key reason for pruning a cherry tree is to encourage a strong branch structure. A large crop of fruit will weigh heavy, which makes it important to strengthen the branches in order to support a good harvest. -->
 <!-- Cherry tree pruning also allows more air and light to get to the fruit, which enhances its health and makes harvesting more straightforward as well as thwarting disease. You will also want to regularly remove dead or damaged branches for safety reasons, and these will usually be plentiful  http://treeworksguernsey.co.uk/tree-pruning/wild-cherry/-->
@@ -372,7 +486,9 @@ Målsättningen är att få tre till fyra huvudgrenar som kommer från den centr
 <!-- Quarter Standard Trees (QS) -->
 <!-- An even more compact tree form is the quarter standard tree. Typically grown in containers for the patio or in a raised planter structure, the Quarter Standard Form will possess a trunk cleared of lower branches for the first 1.2-1.5 metres. -->
 
-Enligt de flesta rekommendationer skall körsbär beskäras försiktigt, så att man endast tar bort skadade, skavande eller konkurrerande grenar. Dock finns en del andra metoder beskrivna (se "spansk buske" nedan). Uppbyggnadsbeskärning är sannolikt önskvärd oavsett.
+**Hur**:
+
+Enligt de flesta rekommendationer skall körsbär beskäras försiktigt, så att man efter etableringsbeskärningen endast tar bort skadade, skavande eller konkurrerande grenar. Dock finns en del andra metoder beskrivna (se "spansk buske" nedan).
 
 - Börja med att helt ta bort helt döda eller sjuka grenar.
 
@@ -382,15 +498,21 @@ Enligt de flesta rekommendationer skall körsbär beskäras försiktigt, så att
 
 - Gallra uppåtväxande skott som sitter tätt.
 
-- Välj ut tre till fyra grenar som skall bli huvudgrenar. De bör vara jämnt spridda runt stammen, och växa med en vinkel på 45-60 grader. Tag bort de grenar som sitter lägre än huvudgrenarna, så nära stammen som möjligt, men bevara kragen.
+- Bevara de tre till fyra grenar som skall bli krongrenar. Tag bort de grenar som sitter lägre än krongrenarna, så nära stammen som möjligt, men bevara kragen.
 
-- Beskär dessa huvudgrenar så att de är ca 40 cm långa (alternativt tag bort en tredjedel av längden). Korta sidoskott från huvudgrenarna till ca 15 cm (alternativt tag bort en tredjedel av längden). Välj dock ett ställe där ögat/knoppen som hamnar längst ut är riktat utåt, så att det inte sedan växer inåt i kronan. Enligt vissa sparas endast ett eller två sidoskott från huvudgrenarna och resten tas bort.
+- Ibland väljer man att beskära skotten som kommit från krongrenarna (de "primära" grenarna) så att en andra omgång strukturgivande grenar växer från dessa (sk "sekundära" grenar). Beskär då de sekundära grenarna (gärna när de blivit >60 cm långa) så att de är i ungefär samma höjd och är ca 25-35 cm längd från föregående beskärningspunkt. Välj dock ett ställe där ögat/knoppen som hamnar längst ut är riktat utåt, så att det inte sedan växer inåt i kronan. Enligt vissa sparas endast ett eller två sidoskott från krongrenarna och resten tas bort.
 
-- Korta ner (tag bort ca två tredjedelar av längden alternativt spara fyra knoppar) långa (>22 cm) årsskott de första 4-5 åren, ger mer kompakt krona och undviker kala grenpartier. Därefter mer sällan, kanske vartannat år.
+- Ibland väljer man att skapa ett andra "lager" med tre-fyra krongrenar som utgår från den centrala stammen, ca 60 cm ovanför det första. Man väljer då grenar som inte kommer att tyngas ner mot grenar i det första lagret.
+
+<!-- Head the tree in fall or winter, an exception to the above rule. A heading cut is the removal of part of a shoot, branch, or limb, up to one-third to one-half its length. If you head in the spring, you will be lopping off developed buds, potential fruit. Heading means cutting off the top of the leader, the central trunk to encourage growth of the lateral branches. This is done within the first year or two to control the tree’s shape. Be sure the sapling is well over 30 inches (76 cm.) tall before heading it. Make a 45-degree angle cut on the leader, leaving the tree 24 to 36 inches (61-92 cm.) tall. -->
+
+
+<!-- (alternativt tag bort en tredjedel av längden). Korta sidoskott från krongrenarna till ca 15 cm (alternativt tag bort en tredjedel av längden).  -->
+- Eventuellt: Korta ner (tag bort ca två tredjedelar av längden alternativt spara fyra knoppar) långa (>22 cm) årsskott de första 4-5 åren, ger mer kompakt krona och undviker kala grenpartier. Därefter mer sällan, kanske vartannat år.
 
 <!-- From years four onwards, perform formative pruning less frequently compared to other fruit trees. Every other year should be sufficient. -->
 
-- Under sensommar/höst (?) gallras vattenskott bort (dessa sitter på ovansidan av horisontellt växande grenar och bildas vid för hård beskärning eller annan stress), utan att tappar lämnas kvar. De kan användas för nya grenar om de sitter på en ung gren.
+- Under sensommar/höst (?) gallras 1/3 av vattenskotten bort (dessa sitter på ovansidan av horisontellt växande grenar och bildas vid för hård beskärning eller annan stress), utan att tappar lämnas kvar. Tar man bort alla riskerar de att återkomma. De kan användas för nya grenar om de sitter på en ung gren.
 
 <!-- On horizontal limbs, apical dominance is totally lost. Without apical dominance to control their growth, lateral buds on the upper side of horizontal limbs develop into vigorous, upright shoots, called water sprouts. As they develop, water sprouts show very strong apical dominance. Water sprouts are a common problem on the upper surface of flat limbs in fruit trees and are removed by pruning. -->
 
@@ -410,29 +532,46 @@ Enligt de flesta rekommendationer skall körsbär beskäras försiktigt, så att
 
 ## Underhållsbeskärning
 
-Efter att uppbyggnadsbeskärningen har format trädet görs underhållsbeskärning där man främst tar bort döda eller skadade grenar.
+**Varför**:
 
-Körsbärsträd bär frukt på grenar som är ettåriga eller äldre, samt på sporrar från äldre grenar. När grenen är fyra år eller äldre minskar fruktproduktionen. Det kan därför kanske vara önskvärt att beskära (ta bort?) äldre grenar för att stimulera nya grenar. De grenar som formar trädets grundstruktur bör förstås lämnas. Denna beskärning görs under JAS-perioden, efter skörd (?).
+Efter att uppbyggnadsbeskärningen har format trädet görs underhållsbeskärning där man främst tar bort döda eller skadade grenar. Vissa argument finns för att göra ytterligare underhållsbeskärning:
+
+- Körsbärsträd bär frukt på grenar som är ettåriga eller äldre, samt på sporrar från äldre grenar. När grenen är fyra år eller äldre minskar fruktproduktionen. Det kan därför eventuellt vara önskvärt att beskära (ta bort?) äldre grenar för att stimulera nya grenar. De grenar som formar trädets grundstruktur bör förstås lämnas. Denna beskärning görs under JAS-perioden, efter skörd (?).
+- En alltför tät krona kan ge sämre kvalitet på frukterna. Beskärning genom gallring kan göras för att bevara ljusgenomsläpp.
+
+Surkörsbär är vanligen mindre starkväxande och mindre uppåtväxande än sötkörsbär, varför de som vuxna träd blir mindre. De kan dock behöva beskäras för att förnya grenarna så att de bär frukt.
 
 <!-- Cherry tree fruit on wood which is a year or more older. When wood reaches five years or more old the quality of the fruit declines rapidly. In general terms, the thicker the branch, the older it is. When pruning, try to encourage new growth by removing wood which is five years or more old. -->
 
 <!-- Bear in mind though that summer pruning results in a reduction of the tree’s energy for fruit production, so keep the pruning to a minimum. You are best to stick to simple thinning, i.e. the removal of a limb or branch up to the point of where it grew from. This will also help to open up the tree’s canopy, so letting in more light and improving airflow. http://treeworksguernsey.co.uk/tree-pruning/wild-cherry/ -->
 
+**Hur**:
+
 - Tag bort döda, skadade, sjuka, eller korsande grenar enligt ovan.
 
-- Glesa ut genom att ta bort svaga grenar?
+  - Om två grenar korsar eller gnager mot varandra, ta bort den ena.
 
-- Glesa ut genom att eventuellt ta bort nya sidoskott som är > 30 cm. Korta de övriga sidoskotten till 5-6 knoppar?
+  - Om två grenar växer parallellt, nära varandra, ta bort den ena.
 
-- Korta eventuellt ner kvarvarande grenar med en tredjedel för att stimulera fruktsättning.
+- Gallra bland vattenskott (de skott som växer rakt upp från en kraftigare horisontell gren). Ta bort ungefär en tredjedel av dessa varje år.
+
+- Om kronan är för tät kan man välja att gallra genom att ta bort svaga grenar och nytillkomna sidoskott. I första hand de som växer in mot kronan.
+
+- Eventuellt: Tag bort nya skott från huvudstammen.
+
+- Eventuellt: Kapa den yttersta tredjedelen av nya grenar vart annat år för att begränsa höjd.
+
+<!-- - Glesa ut genom att eventuellt ta bort nya sidoskott som är > 30 cm. Korta de övriga sidoskotten till 5-6 knoppar? -->
+
+<!-- - Korta eventuellt ner kvarvarande grenar med en tredjedel för att stimulera fruktsättning? -->
 
 
 <!-- Shorten the tips of the remaining branches by about a third of their new growth to help encourage the development of fruit buds. -->
 <!-- Cut out any side-shoots that are over 30cm long, and thin out very crowded shoots. Leave side-shoots that are less than 15cm long, and shorten others to five or six buds. -->
 
-Körsbär på grundstammar som gör dem mindre har en benägenhet att blomma rikligt. Det kan ge för mycket frukt för stt trädet skall må bra. Om detta sker bör du därför tunna ut genom att antingen ta bort frukterna när de börjat växa (klipp av klasarnas stam), eller på liknande vis under blomningen. Tag företrädesvis bort de klasar som växer från grenarnas undersida.
+ <!-- The decrease in number of fruits caused by pruning is associated with an increase in leaf nitrogen, potassium and phosphorus and a reduction in fruit concentrations of magnesium and calcium.  These changes are associated with the com- petition of the fruits and vigorous shoots for the elements and with the increase in fruit size caused by dormant pruning. -->
 
-Surkörsbär är vanligen mindre starkväxande och mindre uppåtväxande än sötkörsbär, varför de som vuxna träd blir mindre. De kan dock behöva beskäras för att förnya grenarna så att de bär frukt.
+Körsbär på grundstammar som gör dem mindre har en benägenhet att blomma rikligt. Det kan ge för mycket frukt för att trädet skall må bra. Om detta sker bör du därför tunna ut genom att antingen ta bort frukterna när de börjat växa (klipp av klasarnas stam), eller på liknande vis under blomningen. Tag företrädesvis bort de klasar som växer från grenarnas undersida.
 
 <!-- Acid cherries fruit predominantly on the previous year’s growth, so pruning needs to be much heavier than for sweet cherries in order to encourage lots of new growth. Prune once fruit has been picked. https://www.which.co.uk/reviews/plants/article/how-to-prune-a-cherry-tree-aSpBd7o3A5jq-->
 
@@ -440,7 +579,15 @@ Surkörsbär är vanligen mindre starkväxande och mindre uppåtväxande än sö
 
 **Snittning?**
 
-Om man vill stimulera tillväxt av horisontella grenar kan man skära ett litet sår genom barken stax ovan en vilande knopp. Det stimulerar mer lågväxande, horisontella, fruktbärande grenar. Detta fungerar endast de första åren. Man kan även böja ut de färska grenarna eller beskära till buskform (se nedan). En annan metod är att knipsa av toppen på nytillväxt som överstiger 30-40 cm, vilket ger fler horisontellt växande grenar.
+Om man vill stimulera tillväxt av horisontella grenar kan man skära ett litet sår, ca 2-3 mm brett,  genom barken stax ovan en vilande knopp. Då hindras auxinet från att komma uppifrån och knoppen kan växa till ett skott. Det stimulerar mer lågväxande, horisontella, fruktbärande grenar. Detta fungerar endast de första åren (?). 
+
+<!-- On vigorous upright one-year-old shoots, notching often successfully over-comes dormancy in about 70 percent of the buds. -->
+
+<!-- Man kan även böja ut de färska grenarna eller beskära till buskform (se nedan). En annan metod är att knipsa av toppen på nytillväxt som överstiger 30-40 cm, vilket ger fler horisontellt växande grenar. -->
+
+**Borttagning av löv?**
+
+Genom att på sensommaren dra bort löv från en sektion av ett skott kan laterala knoppar stimuleras att växa ut som skott därifrån.
 
 **Toppning?**
 
@@ -454,7 +601,7 @@ Ju mer upprätt en gren växer, desto mer bladtillväxt och mindre frukt. Genom 
 
 <!-- https://www.chrisbowers.co.uk/guides/cherry-trees.php -->
 
-Detta kan användas som en typ av "beskärning". Den görs företrädesvis tidigt på våren, just före det att tillväxten börjar. Alla sidogrenar som  behövs böjs ner till horisontellt läge (eller lägre) med hjälp av tyngder (tex vedträn). Mittenstammen böjs i en skarpare vinkel. Detta upprepas året efter med nya grenar. Oönskade grenar skärs bort. Efter ett år nedböjda håller de formen.
+Detta kan användas som en typ av "beskärning". Den görs företrädesvis tidigt på våren, just före det att tillväxten börjar. Alla sidogrenar som  behövs böjs ner till horisontellt läge (eller lägre) med hjälp av tyngder (tex vedträn). Mittenstammen böjs i en skarpare vinkel. Detta upprepas året efter med nya grenar. Oönskade grenar skärs bort. Efter ett år nedböjda håller de formen. Gradvis utböjning kan vara att föredra.
 
 <!-- The training is very simple and is basically known as 'bending'. The best time to start is in the early spring, just before growth begins. All of the required side branches are tied down to a horizontal level or just below. The centre leader is tied at a sharper angle. -->
 

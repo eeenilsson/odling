@@ -100,7 +100,7 @@ plot_pollination_table <- p +
     ) +
     labs(title="Blomningstid",
          x ="Pollinatör",
-         y = "Mottagare")
+         y = "Mottagare [haplotyp]")
 
 ## add strips
 plot_pollination_table <- plot_pollination_table +
@@ -114,6 +114,9 @@ plot_pollination_table <- plot_pollination_table +
                                         colour = "gray",
                                         linewidth = 0.8, linetype = "solid"),
         strip.background = element_rect(colour="black", fill = NA),
+        strip.text = element_text(size = 10, color = "black"
+                                ##, face = "bold"
+                                  ),
         panel.border = element_rect(colour="black", fill = NA),
         strip.placement = "outside",
         panel.grid.major = element_line(linewidth = 1, linetype = 'solid',
@@ -122,6 +125,7 @@ plot_pollination_table <- plot_pollination_table +
     )
 
 plot_pollination_table
+
 
 ## ## check:
 ## cols <- names(dta)[grepl("pollinat.*", names(dta))]
@@ -264,6 +268,7 @@ write.csv(bt_wide_curated, "bt_wide_curated.csv", row.names = FALSE)
 varnames3 <- c(varnames3, c('label' = "Sort", 'genotype' = "Haplotyp", 'blooming_group' = "Blomningsgrupp"))
 saveRDS(varnames3, "varnames3.rds") 
 
+
 ## plot bloom time from rosbreed ----------------------
 toplot <- bloom_table
 p <- ggplot(toplot, aes(y=Germplasm, x=bt))
@@ -339,6 +344,9 @@ p_bt0_annotated + theme(
 ggsave("bt_start_ros.png", path = "../dropbox/images/plants/", width = 16.6, height = 8.86,
 )
 
+
+
+
 ## colors
 ## pacman::p_load("RColorBrewer")
 ## ## View a single RColorBrewer palette by specifying its name
@@ -400,7 +408,7 @@ write.csv(ros_phenology_aggr_curated, "ros_phenology_aggr_curated.csv", row.name
 cherries_table <- fread("cherries_table.csv")
 cherries_table <- bt_wide_curated_bt[cherries_table, on = "var"] ## add blooming_group
 
-cols <- c("label", "genotype", "type", "zone", "blooming_group", "size", "maturity_rank", "sweet", "sour", "firm", "pulp_color", "skin_color", "good_taste", "sylt", "eplanta"
+cols <- c("var", "label", "genotype", "type", "zone", "blooming_group", "size", "maturity_rank", "sweet", "sour", "firm", "pulp_color", "skin_color", "good_taste", "sylt", "eplanta"
 )
 
 cherries_table <- cherries_table[, ..cols]
@@ -443,7 +451,103 @@ cherries_table$skin_color <- factor(
 tmp <- c('label' = "Sort", 'genotype' = "Haplotyp", 'type' = "Typ", 'eplanta' = "Eplanta", 'zone' = "Zon", 'blooming_group' = "Blomning", 'size' = "Storlek", 'maturity_rank' = "Mognad", 'sweet' = "Sötma", 'sour' = "Syra", 'firm' = "Fasthet", 'pulp_color' = "Kött", 'skin_color' = "Färg", 'good_taste' = "God", 'sylt' = "Sylt")
 names(cherries_table) <- query_label(names(cherries_table), tmp)
 
-write.csv(cherries_table, "cherries_table_curated.csv", row.names = FALSE)
+write.csv(cherries_table[, -1], "cherries_table_curated.csv", row.names = FALSE)
 
 
+## Sorter lista --------------
+
+cherries_table$Blomning <- factor(cherries_table$Blomning, ordered = TRUE, levels = c(1:5), labels = c("tidigt under", "medeltidigt under", "i mitten av", "medelsent under", "sent under"))
+features <- fread("cherries_table.csv")
+features <- features[, .(var, prominent_features)]
+origin <- variety_genotype_group[, .(var, origin_country, mother, father)]
+## genotype <- bt_wide[, .(var, genotype, incompatibility_group)]
+syn <- fread("genotype_syn.csv")
+
+tmp <- features[cherries_table, on = "var"]
+tmp <- features[tmp, on = "var"]
+tmp <- origin[tmp, on = "var"]
+tmp <- syn[tmp, on = "var"]
+
+pictures_list <- list.files("../dropbox/images/plants/", "png$|jpg$|jpeg$")
+pictures_list <- data.table(pictures_list)
+pictures_list[, var := gsub(".png$|.jpg$|.jpeg$", "", pictures_list)]
+pictures_list <- pictures_list[grepl(paste0(tmp$var, collapse = "$|"), var), ]
+pictures_list[, image_path := paste0("(../../dropbox/images/plants/", pictures_list, "){width=40%}")]
+pictures_list <- pictures_list[, .(var, image_path)]
+tmp <- pictures_list[tmp, on = "var"]
+varieties <- tmp
+## varieties[, Typ := gsub("Avium", "_Prunus Avium_", Typ)]
+## varieties[, Typ := gsub("Cerasus", "_Prunus Cerasus_", Typ)]
+
+## varieties[, txt := paste0(Blomning, " blomning och mognad ", tolower(Mognad), ". ", Sötma, " sötma och ", Syra, " med ", Fasthet, " ", Kött, " och ", Färg, " färg på skalet.")]
+
+## Färg och smak
+varieties[, note_fasthet := ifelse(!is.na(Fasthet), as.character(Fasthet), "")]
+varieties[, note_fasthet := gsub("Fast", "fast", note_fasthet)]
+varieties[, note_fasthet := gsub("Mjuk", "mjukt", note_fasthet)]
+varieties[, note_fasthet := gsub("Medel", "medelfast", note_fasthet)]
+varieties[, note_color := ifelse(!is.na(Färg), paste0(Färg, " färg på skalet"), "")]
+varieties[, note_fleshcolor := ifelse(!is.na(Färg), paste0("och ", tolower(Kött), ", ", note_fasthet," kött"), "")]
+varieties[, Sötma := tolower(Sötma)]
+varieties[, Sötma := gsub("medel", "medelhög", Sötma)]
+varieties[, Syra := tolower(Syra)]
+varieties[, Syra := gsub("medel", "medelhög", Syra)]
+varieties[, note_sweet := ifelse(!is.na(Sötma) & !is.na(Syra), paste0("som har ", Sötma, " sötma och ", Syra, " syra"), "")]
+varieties[, note_sweet := ifelse(!is.na(Sötma) & is.na(Syra), paste0("som har ", Sötma, " sötma"), note_sweet)]
+varieties[, note1 := paste0(note_color, " ", note_fleshcolor, " ", note_sweet, ".")]
+varieties[, note_tmp := ifelse(God == "Ja", " Smaken beskrivs som god.", "")]
+varieties[, note_tmp := ifelse(God == "Ja!", " Smaken beskrivs som mycket god.", note_tmp)]
+varieties[, note1 := paste0(note1, note_tmp)]
+
+
+
+## Blomning och mognad
+varieties[, note_tmp := ifelse(!is.na(Blomning), paste0("Blommar ", Blomning, " blomningsperioden"), "")]
+varieties[, note_maturity := ifelse(!is.na(Mognad), as.character(Mognad), "")]
+varieties[, note_maturity := gsub("Mitten", " och mognar i mitten av mognadsperioden", note_maturity)]
+varieties[, note_maturity := gsub("Sen", " och mognar sent", note_maturity)]
+varieties[, note_maturity := gsub("Tidig", " och mognar tidigt", note_maturity)]
+varieties[, note2 := paste0(note_tmp, note_maturity, ".")]
+
+## aggregate note
+varieties[, note_txt := paste0(note1, " ", note2, " ", prominent_features)]
+varieties[, note_txt := gsub("$", ".", note_txt)]
+varieties[, note_txt := gsub("\\.\\.", "\\.", note_txt)] ## add dot
+
+## varieties[!is.na(father), .(father, mother)]
+## varieties[!is.na(father), .(origin)]
+
+varieties[, image_path := ifelse(!is.na(image_path), paste0("![", label, "]", image_path), "")]
+varieties[, note_syn := ifelse(!is.na(syn), paste0("Synonymer: ", syn), "")]
+varieties[, note_txt := gsub(", NA kött", " kött", note_txt)]
+varieties[, note_txt := gsub("\\.  och mognar", ". Mognar", note_txt)]
+varieties[, note_txt := gsub(".NA  och mognar", ". Mognar", note_txt)]
+varieties[, note_txt := gsub("och , ", "och ", note_txt)]
+varieties[, note_txt := gsub(" \\.", "", note_txt)]
+varieties[, note_txt := gsub(" \\.", "\\.", note_txt)]
+varieties[, note_txt := gsub("NA", "", note_txt)]
+
+## names(varieties)
+## varieties[var == n, ]
+## ?writeLines
+## ?connections
+## ?write
+
+n <- varieties$var[[1]]
+file.create("varieties.qmd")
+for(n in varieties$var){
+    write(paste0("### ", varieties[var == n, label], "\n"), "varieties.qmd", append = TRUE)
+    write(paste0(varieties[var == n, note_syn], "\n"), "varieties.qmd", append = TRUE)
+    write(paste0(varieties[var == n, image_path], "\n"), "varieties.qmd", append = TRUE)
+    write(paste0(varieties[var == n, note_txt], "\n"), "varieties.qmd", append = TRUE)
+    write("\n", "varieties.qmd", append = TRUE)
+}
+
+## Note: Klistra in varieties.qmd manuellt i choosing_variety.qmd
+
+## ![Körsbärsfluga. Foto: Bauer Karl.](../../dropbox/images/plants/rhagoletis_cerasi2.jpg){width=50%}
+
+
+## cherries_table <- fread("cherries_table.csv")
+## cherries_table <- bt_wide_curated_bt[cherries_table, on = "var"] ## add blooming_group
 

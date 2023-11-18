@@ -17,22 +17,21 @@ genotype_syn[, syn := gsub("^,$", "", syn)]
 genotype_syn[, variety := gsub("Schneider Späte Knorpelkirsche", "Schneiders Späte Knorpelkirsche", variety)] 
 genotype_syn[, syn := gsub("Schneider Späte Knorpelkirsche", "Schneiders Späte Knorpelkirsche", syn)] 
 
-## syn2
+## ad label to syn2
 genotype_syn[ , syn2 := paste0(syn, ", ", label)]
 genotype_syn[ , syn2 := gsub("^, ", "", syn2)]
 
 ## Find candidates with multiple synonyms
-
 test_dupl <- paste0(genotype_syn[, syn2], collapse = ", ")
 test_dupl <- stringr::str_split(test_dupl, ",|,, ")[[1]]
 test_dupl <- gsub("^ ", "", test_dupl)
 dupl_syn <- unique(test_dupl[duplicated(test_dupl)]) ## these have one or more duplicates
 
-## ## explore
+## explore
 cols <- c("var", "variety", "syn", "genotype", "label") ## , "genotype"
 ## genotype_syn[grepl("schne", tolower(variety)), ..cols]
 
-## aggregate those whit the same name, adding label to syn
+## aggregate those with the same name, adding label to syn
 genotype_syn[, var2 := var]
 
 ## schneiders ---------
@@ -87,8 +86,7 @@ genotype_syn[grepl("schneider", tolower(var2)), syn2 := gsub(", Kaiser Franz", "
 
 ## Lapins aka Cherokee, https://www.gardenfocused.co.uk/fruitarticles/cherry/variety-lapins-cherokee.php
 genotype_syn[grepl("lapin", tolower(syn2)), ..cols]
-
-
+genotype_syn[grepl("napoleon", tolower(syn2)), ..cols]
 
 ## ## Ferrovia
 ## ## Iblan syn för Schneiders Späte
@@ -146,6 +144,7 @@ genotype_syn[grepl(select_syn, var), var_keep := grepl(paste0(cherries_table$var
 ## Keep only one per aggregated group ---------
 
 genotype_syn <- genotype_syn[var_keep == TRUE, ]
+
 genotype_syn <- genotype_syn[var %in% cherries_table$var, ] ## keep only those in cherries_table
 
 ## tidy

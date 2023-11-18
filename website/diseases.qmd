@@ -86,7 +86,11 @@ Ett urval av sjukdomar och skadedjur som kan angripa körsbär.
 
 - Bevattna i marken, ej ovanifrån (minskar fukten i bladverket).
 
-- Insektsgift (som sista åtgärd): Konsultera en professionell odlare. Börja med den minst giftiga produkten. Använd inte dagtid när bin samlar nektar, eller när det blåser eller regnar. 
+- Undvik att gödsla med för mycket kväve då det lockar bladlössen.
+
+- Sätt upp gula klisterlappar för att se om körbärsflugan svärmar.
+
+<!-- - Insektsgift (som sista åtgärd): Konsultera en professionell odlare. Börja med den minst giftiga produkten. Använd inte dagtid när bin samlar nektar, eller när det blåser eller regnar.  -->
 
 
 <!-- Förebyggande åtgärder mot svampsjukdomar Det är främst tre faktorer som avgör hur svåra svampangreppen blir i en odling. Det är väderleksförhållandena, sorternas mottaglighet och smittrycket i odlingen. Ju fuktigare väderlek, ju fler mottagliga sorter och ju mer smitta i form av gamla växtrester som finns i odlingen, desto svårare blir angreppen. Det gäller alltså att motverka dessa tre faktorer. -->
@@ -517,7 +521,7 @@ Småfåglar som starar och sparvar äter gärna körsbären just innan de mognat
 
 **Skyddsnät**: Fästes så att fåglarna inte kommer in underifrån. Se till att det finns avstånd mellan bären och nätet (tex med bambukäppar), annars kan fåglarna picka på bären genom nätet. Använder du fiberväv kan det även skydda mot vissa insekter.
 
-**Ljud**: Häng upp något som skramlar, tex plastflaskor, gölasflaskor eller metall. 
+**Ljud**: Häng upp något som skramlar, tex plastflaskor, glasflaskor eller metall. 
 
 **Blänkande föremål**: CD-skivor, metallbitar etc.
 
