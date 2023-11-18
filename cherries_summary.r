@@ -464,18 +464,20 @@ origin <- variety_genotype_group[, .(var, origin_country, mother, father)]
 syn <- fread("genotype_syn.csv")
 
 tmp <- features[cherries_table, on = "var"]
-tmp <- features[tmp, on = "var"]
+## tmp <- features[tmp, on = "var"]
 tmp <- origin[tmp, on = "var"]
 tmp <- syn[tmp, on = "var"]
 
-pictures_list <- list.files("../dropbox/images/plants/", "png$|jpg$|jpeg$")
+pictures_list <- list.files("../dropbox/images/plants/", "png$|jpg$|jpeg$|.webp$|.avif$")
 pictures_list <- data.table(pictures_list)
-pictures_list[, var := gsub(".png$|.jpg$|.jpeg$", "", pictures_list)]
+pictures_list[, var := gsub(".png$|.jpg$|.jpeg$|.webp$|.avif$", "", pictures_list)]
 pictures_list <- pictures_list[grepl(paste0(tmp$var, collapse = "$|"), var), ]
 pictures_list[, image_path := paste0("(../../dropbox/images/plants/", pictures_list, "){width=40%}")]
 pictures_list <- pictures_list[, .(var, image_path)]
+
 tmp <- pictures_list[tmp, on = "var"]
 varieties <- tmp
+
 ## varieties[, Typ := gsub("Avium", "_Prunus Avium_", Typ)]
 ## varieties[, Typ := gsub("Cerasus", "_Prunus Cerasus_", Typ)]
 
@@ -514,6 +516,19 @@ varieties[, note_txt := paste0(note1, " ", note2, " ", prominent_features)]
 varieties[, note_txt := gsub("$", ".", note_txt)]
 varieties[, note_txt := gsub("\\.\\.", "\\.", note_txt)] ## add dot
 
+## pollinators
+
+poll <- bt_long
+poll <- poll[compatibility > 0, ]
+poll <- poll[compat_proximity == "same"|compat_proximity == "close", ]
+poll$pollinator <- query_label(poll$pollinator, varnames3)
+poll[, pollinators := paste0(pollinator, collapse=", "), by=c("target")]
+poll <- unique(poll[, .(var, pollinators)])
+## varieties$var[!varieties$var %in% poll$var]
+varieties <- poll[varieties, on = "var"]
+varieties[, pollinators := gsub("\\*", "&ast;", pollinators)]
+## varieties[, pollinators]
+
 ## varieties[!is.na(father), .(father, mother)]
 ## varieties[!is.na(father), .(origin)]
 
@@ -528,18 +543,21 @@ varieties[, note_txt := gsub(" \\.", "\\.", note_txt)]
 varieties[, note_txt := gsub("NA", "", note_txt)]
 
 ## names(varieties)
-## varieties[var == n, ]
+varieties[var == n, ]
 ## ?writeLines
 ## ?connections
 ## ?write
 
+
+
 n <- varieties$var[[1]]
 file.create("varieties.qmd")
 for(n in varieties$var){
-    write(paste0("### ", varieties[var == n, label], "\n"), "varieties.qmd", append = TRUE)
+    write(paste0("## ", varieties[var == n, label], "\n"), "varieties.qmd", append = TRUE)
     write(paste0(varieties[var == n, note_syn], "\n"), "varieties.qmd", append = TRUE)
     write(paste0(varieties[var == n, image_path], "\n"), "varieties.qmd", append = TRUE)
     write(paste0(varieties[var == n, note_txt], "\n"), "varieties.qmd", append = TRUE)
+    write(paste0("Pollinatörer som är genetiskt kompatibla och troligen blommar ungefär samtidigt: ", varieties[var == n, pollinators], "\n"), "varieties.qmd", append = TRUE)
     write("\n", "varieties.qmd", append = TRUE)
 }
 
