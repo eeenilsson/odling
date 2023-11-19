@@ -68,7 +68,7 @@ Ett urval av sjukdomar och skadedjur som kan angripa körsbär.
 
 - Rensa bort ogräs runt trädet.
 
-- Undvik att beskära på höst/vinter för att undvika vinterskador som gör trädet mer mottagligt för angrepp av skadedjur.
+- Undvik att beskära på höst/vinter för att undvika vinterskador som gör trädet mer mottagligt för angrepp av skadedjur. Beskärning under juli-augusti kan vara säkrast avseende risk för allvarliga sjukdomar såsom bakteriell infektion och silverglans.
 
 - Tidigt på våren (helst efter sista frosten men före lövsprickning). Tag bort döda och sjuka grenar. <!-- Beskärning är också ett viktig led när det gäller att minska smittrycket. Många svam par övervintrar i grenverket och i gamla kvarsittande frukter. I samband med beskärningen bör man därför också ta sjukdomarna i beaktande. -->
 
@@ -287,7 +287,7 @@ En silveraktig glans uppstår på bladen. Först enstaka grenar. Brunfärgad ved
 
 _Blumeriella jaapii_ (konidiestadium _Phloeosporella padi_) 
 
-Eng. Cherry leaf spot.
+Eng. Cherry leaf spot. Beskrivs internationellt ibland som orsakad av _Passalora circumscissa_.
 
 Ger dålig knoppsättning, försämrad avmognad av årsskotten, och nedsatt vinterhärdighet med ökad risk för frostskador på skott och knoppar. Nästa års skörd påverkas av detta. Svampen övervintrar i de infekterade bladen som fallit ned. Sprids med vinden och med regnstänk till närliggande blad. Framför allt surkörsbär drabbas.
 

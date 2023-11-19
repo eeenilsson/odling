@@ -34,7 +34,6 @@ Resurser och källor.
 
 [Dubbelbefruktning](https://en.wikipedia.org/wiki/Double_fertilization)
 
-
 [Difference Between Allogamy and Xenogamy](https://pediaa.com/difference-between-allogamy-and-xenogamy/)
 
 
@@ -116,7 +115,15 @@ Resurser och källor.
 
 [Van cherry](https://en.wikipedia.org/wiki/Van_cherry)
 
-[EURISCO, europeisk databas](https://eurisco.ipk-gatersleben.de/apex/eurisco_ws/r/eurisco/eurisco-download-by-species)
+## Databaser och liknande
+
+[RoSBREED](https://www.rosbreed.org/): Amerikansk databas från ett forskningsprojekt.
+
+[A collection of European sweet cherry phenology data for assessing climate change](https://www.nature.com/articles/sdata2016108) : Data finns att ladda ner [här](https://datadryad.org/stash/dataset/doi:10.5061/dryad.1d28m).
+
+[Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020](https://www.openagrar.de/receive/openagrar_mods_00064311). Denna artikel har länkade data med genotypning av S-allelerna för ett stort antal sorter.
+
+<!-- [EURISCO, europeisk databas](https://eurisco.ipk-gatersleben.de/apex/eurisco_ws/r/eurisco/eurisco-download-by-species) -->
 <!-- Data descriptors: https://www.ecpgr.cgiar.org/fileadmin/templates/ecpgr.org/upload/NW_and_WG_UPLOADS/Prunus/EPDB_New_list_of_descriptors_2011.pdf -->
 
 <!-- ## Bilder -->

@@ -677,10 +677,12 @@ write.csv(sour_dk_phenology, "sour_dk_phenology.csv", row.names = FALSE)
 ## It might be easier to use a Windows machine to export your ACCDB to a format R can use. Or run R on Windows instead of Linux.
 ## https://stackoverflow.com/questions/7109844/how-to-read-data-from-microsoft-access-accdb-database-files-into-r
 ## https://www.reddit.com/r/linuxquestions/comments/ssx5uw/edit_microsoft_access_databases_accdb_on_linux/
+## https://tahsinabrar.com/open-a-microsoft-access-accdb-file-in-ubuntu/
 
 ## Full data (uncertain what it contains) downloaded to:
 ## Downloads/eurisco20231017.accdb
-## Probably needs windows to open.
+## Probably needs windows and MS Access to open.
+## NOTE: Probably no useful data in it. (Uses only these descriptors: file:///home/e/Downloads/EURISCO_MCPD2_descriptors_updated_November_2017-1.pdf
 
 
 ## More ---------------------
