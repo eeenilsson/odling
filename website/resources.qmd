@@ -8,8 +8,6 @@ Resurser och källor.
 
 [Prunus cerasus](https://en.wikipedia.org/wiki/Prunus_cerasus)
 
-[Van cherry](https://en.wikipedia.org/wiki/Van_cherry)
-
 [Surkörsbär](https://en.wikipedia.org/wiki/Prunus_cerasus#Origins_and_cultivation)
 
 <!-- Bok Webster A.D & Looney N.E (red) (1996) Cherries: Crop physiology, production and uses. Cambridge, CAB INTERNATIONAL Kap. 3, 5, 7, 8, 15. -->
@@ -26,15 +24,9 @@ Resurser och källor.
 
 [Botanisk taxonomi](https://en.wikipedia.org/wiki/Taxonomic_rank#Ranks_in_botany)
 
-## Pollination
+## Om pollination
 
 [Wikipedia om pollinering](https://sv.wikipedia.org/wiki/Pollinering)
-
-[Primrose UK pollinationsgrupper](https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/)
-<!-- Self-sterile cherry trees require another variety flowering at the same time to ensure fertilisation. They are henceforth put into flowering groups from 1 (very early) to 6 (very late). A cherry tree can be partnered with a cherry that is plus or minus 1 (+-1) its own group. -->
-
-
-[Difference Between Allogamy and Xenogamy](https://pediaa.com/difference-between-allogamy-and-xenogamy/)
 
 [Plant fertilization video](https://study.com/academy/lesson/plant-fertilization-process-definition-quiz.html)
 
@@ -42,14 +34,16 @@ Resurser och källor.
 
 [Dubbelbefruktning](https://en.wikipedia.org/wiki/Double_fertilization)
 
-[SWEET CHERRY COMPATIBILITY AND BLOOM TIMING](https://anfic.com.au/wp-content/uploads/2022/05/ANFIC-Sweet-Cherry-Pollination-Table-13042022.pdf)
 
-[Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020](https://www.openagrar.de/receive/openagrar_mods_00064311)
+[Difference Between Allogamy and Xenogamy](https://pediaa.com/difference-between-allogamy-and-xenogamy/)
 
-[IDENTIFICATION OF SELF INCOMPATIBILITY GENOTYPES IN SWEET CHERRY COMMERCIAL CULTIVARS](http://www.agricultforest.ac.me/paper.php?id=3137)
 
-[Incompatible (S-) genotypes of sweet cherry cultivars](https://www.sciencedirect.com/science/article/abs/pii/S0304423812004396)
-<!-- An update of the S-genotype of 734 sweet cherries was summarized. The data includes results of 51 new varieties supplemented with data from various published sources and personal information up to 2012 -->
+## Pollinationstabeller
+
+[ANFIC SWEET CHERRY COMPATIBILITY AND BLOOM TIMING](https://anfic.com.au/wp-content/uploads/2022/05/ANFIC-Sweet-Cherry-Pollination-Table-13042022.pdf): Australiensisk sida som visar genetisk kompatibilitet och blomningstid.
+
+[Primrose UK pollinationsgrupper](https://www.primrose.co.uk/blog/plants/cherry-fruit-trees-pollination-varieties-guide/)
+<!-- Self-sterile cherry trees require another variety flowering at the same time to ensure fertilisation. They are henceforth put into flowering groups from 1 (very early) to 6 (very late). A cherry tree can be partnered with a cherry that is plus or minus 1 (+-1) its own group. -->
 
 [Sweet Cherry pollination table](https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf)
 
@@ -71,11 +65,18 @@ Resurser och källor.
 
 <!-- https://www.hollandrosetta.com/en/planting-material/cherries/cherries/ -->
 
-## S-alleler
+[Thomas pollination checker](https://thomasfruittrees.eu/pollinationchecker.aspx)
+
+<!-- "Because of this uncertainty our pollination checker will only recommend varieties which flower at the same time and are universal pollinators. Universal pollinator varieties will pollinate all other cherry varieties which are in flower at the same time (with a few exceptions, for example Stella - a universal pollinator - will not pollinate Bing)." -->
+
+## Genetisk kompatibilitet
 
 [Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020](https://www.openagrar.de/receive/openagrar_mods_00064311). Denna artikel har länkade data med genotypning av S-allelerna för ett stort antal sorter.
 
-[ANFIC Pollinationsschema, Australien](https://anfic.com.au/wp-content/uploads/2020/07/ANFIC-Sweet-Cherry-Pollination-Table-06072020.pdf). Anger både genotyper och blomningstid.
+[IDENTIFICATION OF SELF INCOMPATIBILITY GENOTYPES IN SWEET CHERRY COMMERCIAL CULTIVARS](http://www.agricultforest.ac.me/paper.php?id=3137)
+
+[Incompatible (S-) genotypes of sweet cherry cultivars](https://www.sciencedirect.com/science/article/abs/pii/S0304423812004396)
+<!-- An update of the S-genotype of 734 sweet cherries was summarized. The data includes results of 51 new varieties supplemented with data from various published sources and personal information up to 2012 -->
 
 [Artikel om koppling mellan haplotyp och blomningstid](http://www.agricultforest.ac.me/paper.php?id=3137)
 
@@ -89,6 +90,8 @@ Resurser och källor.
 <!-- Schuster, Mirko Mirko (2020): Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020. OpenAgrar Repository. Online unter: https://www.openagrar.de/receive/openagrar_mods_00064311. -->
 <!-- - Här finns excelfiler för nedladdning -->
 
+[Self‐incompatibility (S) locus region of the mutated S6‐haplotype of sour cherry (Prunus cerasus) contains a functional pollen S allele and a non‐functional pistil S allele, Yamane 2003](https://academic.oup.com/jxb/article/54/392/2431/621944). Ger visst stöd för att sötkörsbär kan pollinera surkörsbär.
+
 ## Sorter
 
 [Trädgårdstrollets sortguide om sötkörsbär](https://www.tradgardstrollet.se/2023/06/08/sortguide-sotkorsbar/)
@@ -98,10 +101,6 @@ Resurser och källor.
 <!-- Skörd: bra / medel / liten -->
 
 [Tyska wiki](https://de.wikipedia.org/wiki/Liste_von_Kirschsorten)
-
-[Thomas pollination checker](https://thomasfruittrees.eu/pollinationchecker.aspx)
-
-"Because of this uncertainty our pollination checker will only recommend varieties which flower at the same time and are universal pollinators. Universal pollinator varieties will pollinate all other cherry varieties which are in flower at the same time (with a few exceptions, for example Stella - a universal pollinator - will not pollinate Bing). "
 
 [Cherry tree comparison UK](https://www.gardenfocused.co.uk/fruitarticles/cherry/varieties.php)
 
@@ -115,8 +114,14 @@ Resurser och källor.
 
 [Dave Wilson Nursery](https://www.wheretobuy.davewilson.com/product-information/product/cherries) <!-- Note: Has BT -->
 
-## Bilder
+[Van cherry](https://en.wikipedia.org/wiki/Van_cherry)
 
-[Körsbärsblomma, surkörsbär:](https://commons.wikimedia.org/wiki/File:Prunus_cerasus_blossom_1.jpg)
+[EURISCO, europeisk databas](https://eurisco.ipk-gatersleben.de/apex/eurisco_ws/r/eurisco/eurisco-download-by-species)
+<!-- Data descriptors: https://www.ecpgr.cgiar.org/fileadmin/templates/ecpgr.org/upload/NW_and_WG_UPLOADS/Prunus/EPDB_New_list_of_descriptors_2011.pdf -->
+
+<!-- ## Bilder -->
+
+<!-- [Körsbärsblomma, surkörsbär:](https://commons.wikimedia.org/wiki/File:Prunus_cerasus_blossom_1.jpg) -->
 
 <!-- Note: Finns i hög upplösning. -->
+

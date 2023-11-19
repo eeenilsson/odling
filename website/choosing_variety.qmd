@@ -86,8 +86,6 @@ De delas ibland in i _moreller/brunbär_ (mörkröd färg och färgad saft) resp
 
 - Är allotetraploider med 2n = 4x = 32 kromosomer dvs har två uppsättningar diploida koromosomer från olika arter. _Prunus ceracus_ antas vara en hybrid som skapats genom "ickereducerade" (diploida) celler från _Prunus avium_ och normala celler från _P fructiosa_. En tetraploid sort kan ha upp till fyra alleler/varianter i samma locus. Sötkörsbär är diploida, 2n=2x=16<!-- och har 16 kromosomer som bildar 8 par.  -->.
 
-Sötkörsbär kan vara genetiskt kompatibla som pollinatörer för surkörsbär (?), men blommar oftast inte samtidigt. <!-- https://academic.oup.com/jxb/article/54/392/2431/621944 -->
-
 Det finns även "Duke cherries" som är framodlade korsningar mellan söt- och surkörsbär.
 
 ## Några surkörsbär

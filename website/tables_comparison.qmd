@@ -162,7 +162,7 @@ Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en grader
 
 # Tabell surkörsbär
 
-Relativa värden (kvintiler) från låg (1) till hög (5).
+Relativa värden (kvintiler) från låg (1) till hög (5). Blomningstiden från tidigast (1) till senast (5) _av dessa surkörsbär_, dvs korresponderar EJ till blomningsgrupperna för sötkörsbär. Skuggmorell anges i vissa källor blomma samtidigt som vissa sena sorter av sötkörsbär.
 
 ```{r}
 #| label: tbl-sour

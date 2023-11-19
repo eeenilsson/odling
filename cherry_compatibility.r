@@ -164,6 +164,17 @@ tmp <- data.table( ## Note: BT missing so will be excluded from plot
 variety_genotype_group <- rbind(variety_genotype_group,
       tmp)
 
+## Other sour genotypes
+## Montmorency’ (S6 S13m S35 S36a)
+## he ‘Montmorency’ S-alleles previously reported, i.e. S6, S13m, S35, and S36a
+## ‘Meteor’ (S 13mS 33S 36aS36b)
+## Tamaris’ (S 13#S 16S 34S 36b2)
+## U´ jfehe´rto´i f}urt}os’ (S1' S4 S35 S36b) 
+## Surefire’ (S4 S13' S35 S36a)
+## https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=97d00134df2d29e361dfbf4d48c84d93e6e3fbf8
+## BT: Identification of bloom date QTLs and haplotype analysis in tetraploid sour cherry (<italic>Prunus cerasus</italic>). Cai, Lichun 2018
+
+
 ## extract synonyms
 source("../functions/removeParens.r")
 myfun <- Vectorize(extractParens)
@@ -247,7 +258,8 @@ variety_genotype_group[, label := gsub(" \\\n", "", label)]
 ## use all var that have blooming group data, see phenology.r
 ## swed <- fread("cherries_table.csv")
 selectvars <- dta[type == "sweet" & available == 1, unique(var)] ## n = 23
-selectvars <- c(selectvars, "skuggmorell", "tschernokorka")
+## selectvars <- c(selectvars, "skuggmorell", "tschernokorka")
+
 ## add pollinators (this will include sour cherries):
 ## tmp <- dta[type == "sweet", paste(pollinated_by_concordance_chr, collapse = ", ")]
 ## tmp <- gsub("NA \\([^,]*,", "", tmp)

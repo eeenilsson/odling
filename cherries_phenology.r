@@ -634,12 +634,14 @@ sour_dk[, solids_percent_q := cut(solids_percent, breaks = quantile(solids_perce
 
 sour_dk[, stone_percent_q := cut(stone_percent, breaks = quantile(stone_percent, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)]
 
+
 sour_dk[, type := ifelse(colour < 50, "amarello", "morello")]
 
 sour_dk[, g_fruit_q := as.numeric(g_fruit_q)]
 sour_dk[, acidity_percent_q := as.numeric(acidity_percent_q)]
 sour_dk[, solids_percent_q := as.numeric(solids_percent_q)]
 sour_dk[, stone_percent_q := as.numeric(stone_percent_q)]
+sour_dk[, flower_date_may_q := as.numeric(flower_date_may_q)]
 
 sour_dk_phenology <- sour_dk[, .(label, type, flower_date_may_q, g_fruit_q, solids_percent_q, acidity_percent_q, stone_percent_q)]
 names(sour_dk_phenology) <- c("Sort", "Typ", "Blomning", "Storlek", "Sötma", "Syra", "Stenstorlek")
@@ -666,6 +668,19 @@ write.csv(sour_dk_phenology, "sour_dk_phenology.csv", row.names = FALSE)
 
 ## Number of years: Although it has been aimed at at least three years of observations, it has not been possibie to analyse all cultivars every year because of lost yield. The number of years indicate the reliability of the results.
 
+## EURISCO European prunus database ----
+## [EURISCO, europeisk databas](https://eurisco.ipk-gatersleben.de/apex/eurisco_ws/r/eurisco/eurisco-download-by-species)
+## <!-- Data descriptors: https://www.ecpgr.cgiar.org/fileadmin/templates/ecpgr.org/upload/NW_and_WG_UPLOADS/Prunus/EPDB_New_list_of_descriptors_2011.pdf -->
+
+## he title of the page you linked, RODBC: ODBC Database Access, may be misleading. Access doesn't mean MS Access; in that title access means connectivity. RODBC is an ODBC manager for R. It serves as the mediator to provide communication between R and the ODBC driver for your target database. So for GNU/Linux, you would still need an ODBC driver for MS Access database files ... RODBC doesn't provide one.
+## However, I don't know of any free (as in freedom and/or beer) MS Access ODBC drivers for Linux. Easysoft sells one, but it's not cheap. There may be offerings from other vendors, too; I haven't looked.
+## It might be easier to use a Windows machine to export your ACCDB to a format R can use. Or run R on Windows instead of Linux.
+## https://stackoverflow.com/questions/7109844/how-to-read-data-from-microsoft-access-accdb-database-files-into-r
+## https://www.reddit.com/r/linuxquestions/comments/ssx5uw/edit_microsoft_access_databases_accdb_on_linux/
+
+## Full data (uncertain what it contains) downloaded to:
+## Downloads/eurisco20231017.accdb
+## Probably needs windows to open.
 
 
 ## More ---------------------

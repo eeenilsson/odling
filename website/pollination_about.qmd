@@ -92,7 +92,7 @@ Fruktämnet växer sedan till och bildar frukten.
 
 # Genetisk kompatibilitet
 
-Körsbär har i sina kromosomer två (hos surkörsbär fyra) varianter av ett visst genetiskt område (_locus_). En sådan variant benämns med bokstaven S och en siffra, tsex "S1", så en körsbärssort kan vara tex "S2S6". Då kommer den ha S2S6 i sina pistiller och det pollen den skickar iväg kommer att vara antingen S2 eller S6. En körsbärssort är "immun" mot pollen som innehåller någon av dess egna "bokstäver". Så ett S2S6-körsbär är immunt mot pollen som innehåller S2 eller S6. Eftersom de flesta sorter har S1 till S6 blir det ganska vanligt att de är inkompatibla. Detta system kallas "Gametofytisk Själv-Inkompatibilitet" (GSI) och förekommer ho flera växtarter. Det beskrivs mer i detalj nedan.
+Körsbär har i sina kromosomer två (hos surkörsbär fyra) varianter av ett visst genetiskt område (_locus_). En sådan variant benämns med bokstaven S och en siffra, tsex "S1", så en körsbärssort kan vara tex "S2S6". Då kommer den ha S2S6 i sina pistiller och det pollen den skickar iväg kommer att vara antingen S2 eller S6. En körsbärssort är "immun" mot pollen som innehåller någon av dess egna "bokstäver". Så ett S2S6-körsbär är immunt mot pollen som innehåller S2 eller S6. Eftersom de flesta sorter har S1 till S6 blir det ganska vanligt att de är helt- eller delvis inkompatibla. Detta system kallas "Gametofytisk Själv-Inkompatibilitet" (GSI) och förekommer hos flera växtarter. Det beskrivs mer i detalj nedan.
 
 <!-- " In sour cherry, as in other species of the genus Prunus, there occurs the phenomenon of gametophytic self-incom- patibility (GSI). This mechanism has been developed by plants to prevent self-fertilization and facilitate fertilization with pollen of other genotypes within the species (De Nettancourt, 1997). Self-incompatibil- ity consists of arresting pollen-tube growth in the pistil if the tube contains the same S-allele that is present in the pistil. The phenomenon of self-incom- patibility in plants of the family Rosaceae is controlled by two genes at the S-locus. The specificity of the pistil is encoded by the gene responsible for the synthesis of the ribonuclease protein (S-RNase) (Bošković & Tobutt, 1996), whereas the specificity of the pollen is controlled by the gene encoding an F-box protein (S-haplotype-specific F-box protein – SFB) (Yamane, Ikeda, Ushijima, Sassa, & Tao, 2003a).  The tightly linked genetic unit of the pistil S-allele (S- RNase) and pollen S-allele is called S-haplotype Lisek2017.pdf" -->
 
@@ -249,6 +249,11 @@ De flesta surkörsbär är självfertila ("självkompatibla"), men vissa sorter 
 <!-- patibility (GSI) -->
 
 <!-- https://www.bordeaux.inra.fr/cherry/docs/dossiers/Activities/Meetings/2014%2009%2015-17%20WG1%20Meeting_Novi%20Sad/Presentations/Schuster_Novi-Sad2014.pdf --> <!-- Lisek2017.pdf -->
+
+Sötkörsbär och sötkörsbär har olika antal kromosomer. Det kan ske korsbefruktning mellan dem, men de frön som bildas växer sällan till nya plantor och om de gör det är sorten vanligen steril. Om det i dessa fall är sötkörsbär som pollinerar surkärsbär är oklart. Sötkörsbär kan troligen vara genetiskt kompatibla som pollinatörer för surkörsbär [Se Yamane 2003], men de blommar oftast inte samtidigt. På en del webbsidor anges surkörsbär kunna pollinera sötkörsbär (tex [här](https://fps.ucdavis.edu/treedetails.cfm?v=610)) och tvärtom (se tex [Orange Pippin](https://www.orangepippintrees.co.uk/pollinationchecker.aspx?v=10034)). Hur effekiv korspollination mellan _Prunus avium_ och _Prunus cerasus_ är för att ge frukt är oklart.
+
+<!-- Se https://academic.oup.com/jxb/article/54/392/2431/621944 -->
+
 
 
 # Hur väljer man lämplig pollinatör?

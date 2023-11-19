@@ -1,92 +1,92 @@
 "Sort","Typ","Blomning","Storlek","Sötma","Syra","Stenstorlek"
-"MARASCA TRENTINlA","morello","(15,17]",2,2,4,5
-"MARASCONE ROSSA","amarello","(12,14]",3,1,1,1
-"MARI TIMPURII","morello","(15,17]",4,2,3,2
-"METEOR","amarello","(14,15]",5,1,2,1
-"MOCANESTI 16/4","amarello","[8,12]",2,4,3,3
-"MONTLATE","amarello","(12,14]",5,1,1,2
-"MONTMAMMOTH","amarello","[8,12]",3,2,1,2
-"MONTMORENCY","amarello","(17,20]",3,2,1,4
-"MOREL P2","morello","(15,17]",3,1,2,2
-"NABELLA","morello","(17,20]",5,3,3,1
-"NEFRIS","morello","[8,12]",4,3,4,3
-"NORTH STAR","morello","(15,17]",2,1,4,1
-"OSTHEIMER","morello","(12,14]",3,3,1,5
-"POZOG29","morello","(14,15]",1,5,4,5
-"RECTA","morello","[8,12]",1,5,3,5
-"ROHRINGS WEICHSEL","morello","[8,12]",5,2,2,2
-"SCHATTENMORELLE","morello","(17,20]",3,2,3,2
-"SCHWABISCHE WEINWEICHSEL","morello","(15,17]",3,4,2,1
-"SENTESKA","amarello","[8,12]",5,4,2,4
-"SKLENOVKA VELKA","amarello","(14,15]",3,2,1,2
-"SLUPIA NADBRZEZNA","morello","(15,17]",1,4,4,3
-"SOKULOSA","morello","[8,12]",1,5,5,5
-"STEVNSBÆR","morello","[8,12]",1,5,5,4
-"STOCKTON MORELLO","morello","(17,20]",1,3,3,4
-"STORA KLARBAR","amarello","(12,14]",2,1,1,1
-"SUDA","morello","(14,15]",4,1,2,2
+"MARASCA TRENTINlA","morello",4,2,2,4,5
+"MARASCONE ROSSA","amarello",2,3,1,1,1
+"MARI TIMPURII","morello",4,4,2,3,2
+"METEOR","amarello",3,5,1,2,1
+"MOCANESTI 16/4","amarello",1,2,4,3,3
+"MONTLATE","amarello",2,5,1,1,2
+"MONTMAMMOTH","amarello",1,3,2,1,2
+"MONTMORENCY","amarello",5,3,2,1,4
+"MOREL P2","morello",4,3,1,2,2
+"NABELLA","morello",5,5,3,3,1
+"NEFRIS","morello",1,4,3,4,3
+"NORTH STAR","morello",4,2,1,4,1
+"OSTHEIMER","morello",2,3,3,1,5
+"POZOG29","morello",3,1,5,4,5
+"RECTA","morello",1,1,5,3,5
+"ROHRINGS WEICHSEL","morello",1,5,2,2,2
+"SCHATTENMORELLE","morello",5,3,2,3,2
+"SCHWABISCHE WEINWEICHSEL","morello",4,3,4,2,1
+"SENTESKA","amarello",1,5,4,2,4
+"SKLENOVKA VELKA","amarello",3,3,2,1,2
+"SLUPIA NADBRZEZNA","morello",4,1,4,4,3
+"SOKULOSA","morello",1,1,5,5,5
+"STEVNSBÆR","morello",1,1,5,5,4
+"STOCKTON MORELLO","morello",5,1,3,3,4
+"STORA KLARBAR","amarello",2,2,1,1,1
+"SUDA","morello",3,4,1,2,2
 "TIMPURII DE CLUJ","morello",NA,4,3,1,1
-"TSCHERNOKORKA","morello","(15,17]",5,4,5,1
-"VACKOV A VISEN","morello","[8,12]",4,5,1,1
-"VAN DER NAT","morello","(14,15]",2,3,3,1
-"VILHOLT","morello","(15,17]",4,3,1,1
-"VISCIOLA DI CARPEGNA","morello","(15,17]",3,5,5,5
-"VISClOLA DI MONTAGNA","morello","[8,12]",5,5,1,1
-"VISClOLA DI POZZUOLO","amarello","(14,15]",3,2,2,4
-"VISCIOLA TRENTINI","morello","[8,12]",2,3,4,5
-"VITOVA","morello","(17,20]",4,1,2,2
-"VLADIMIR","amarello","(17,20]",4,4,1,1
-"WESTERLEESE KRIEK","morello","(12,14]",1,4,3,3
-"WIELCIN K","morello","(14,15]",2,5,5,4
-"WIELKOPOLSKA CZARNA","morello","(14,15]",1,2,3,4
-"WLOSZAKOWICE l","morello","(14,15]",1,3,4,4
-"WLOSZAKOWICE 66","morello","(12,14]",4,2,3,4
-"WLOSZIMIERSKA WCZESNA","morello","(14,15]",1,5,2,5
-"WOLYNSKA","morello","[8,12]",4,2,3,4
+"TSCHERNOKORKA","morello",4,5,4,5,1
+"VACKOV A VISEN","morello",1,4,5,1,1
+"VAN DER NAT","morello",3,2,3,3,1
+"VILHOLT","morello",4,4,3,1,1
+"VISCIOLA DI CARPEGNA","morello",4,3,5,5,5
+"VISClOLA DI MONTAGNA","morello",1,5,5,1,1
+"VISClOLA DI POZZUOLO","amarello",3,3,2,2,4
+"VISCIOLA TRENTINI","morello",1,2,3,4,5
+"VITOVA","morello",5,4,1,2,2
+"VLADIMIR","amarello",5,4,4,1,1
+"WESTERLEESE KRIEK","morello",2,1,4,3,3
+"WIELCIN K","morello",3,2,5,5,4
+"WIELKOPOLSKA CZARNA","morello",3,1,2,3,4
+"WLOSZAKOWICE l","morello",3,1,3,4,4
+"WLOSZAKOWICE 66","morello",2,4,2,3,4
+"WLOSZIMIERSKA WCZESNA","morello",3,1,5,2,5
+"WOLYNSKA","morello",1,4,2,3,4
 "ZAHORACKA","morello",NA,5,5,1,1
-"ZIGEUNERKIRSCHEN","morello","[8,12]",4,5,4,2
-"ZUKOVSKAJA","amarello","(12,14]",2,3,1,1
-"AMARENA DALFONSINE","amarello","(17,20]",3,2,5,1
-"AMARENA DI FRANCAVILLA","morello","(15,17]",1,2,5,5
-"AMARENA DI PESCARA","morello","[8,12]",2,3,5,4
-"AMARENA MATIARELLO","morello","(15,17]",2,4,4,4
-"BAGRYANAJA","morello","(14,15]",4,4,2,2
-"BELLE DE CHOISY","amarello","(17,20]",2,1,1,1
-"BELLE MAGNIFIQUE","morello","(17,20]",3,3,3,2
-"BEUTELSPACHER REXELLE","morello","(12,14]",3,3,2,3
-"BRUNBAR FRÅN GASTRIKSLAND","morello","(12,14]",2,5,4,4
-"CRIS ANA 2","amarello","[8,12]",5,4,2,2
-"CUSANA","morello","(12,14]",3,1,2,3
-"DUBBEL GORSEM KRIECK","morello","(12,14]",5,2,4,3
-"EARLE","morello","[8,12]",2,3,4,5
-"ELMER","morello","(15,17]",5,2,5,1
-"ENGLISH MORELLO","morello","[8,12]",4,4,2,3
-"FANAL","morello","[8,12]",4,3,3,2
-"FERRACIDA","amarello","(12,14]",2,4,1,1
-"FRUGHTBARE VON MICHURIN","amarello","(14,15]",4,1,3,4
-"GRIOTIE DU NORD HERMEE","morello","(15,17]",5,1,3,1
-"HEIMANNS RUBIN","morello","(15,17]",4,1,2,3
-"HISZPANKA POZNA","morello","(15,17]",4,2,4,4
-"IMPERATRICE EUGENIE","amarello","(12,14]",3,4,1,3
-"JARENIOWKA","morello","(15,17]",2,4,3,5
-"JUBILEYNA y A","morello","(15,17]",5,3,3,3
-"KELLERIIS 14","morello","(15,17]",3,2,2,3
-"KELLERIIS Iii","morello","[8,12]",4,3,1,3
-"KENTISH","amarello","[8,12]",3,1,1,1
-"KLEJNE W AALSE","morello","[8,12]",4,1,1,2
-"KOROS","morello","(12,14]",5,3,2,3
-"LEITZKA U ER PRESSA U RKIRSCHE","morello","(14,15]",2,5,4,3
-"LOTOVA","morello","(14,15]",5,1,2,1
-"MS","morello","(15,17]",3,1,5,4
-"MT","morello","(15,17]",2,1,5,3
-"MAILOT","morello","(12,14]",4,5,3,3
-"MARASCA","morello","(15,17]",1,5,3,5
-"MARASCA BIJELA POLO ZITA","morello","(12,14]",1,5,5,5
-"MARASCA DI CHIETI","morello","(15,17]",1,4,5,5
-"MARAS CA DI POVO","morello","(15,17]",1,3,3,4
-"MARASCA DI SAVIGNANO","amarello","(17,20]",3,1,5,3
-"MARAS CA DI ZARA","morello","(15,17]",1,4,4,5
-"MARAS CA DUGULJASTA","morello","(12,14]",2,4,4,3
-"MARAS CA JSSOLA BRAZZA","morello","[8,12]",1,1,5,5
-"MARAS CA LUXARDO","morello","(15,17]",1,3,4,4
-"MARASCA SIVA USPRA VNA","morello","(14,15]",1,5,5,4
+"ZIGEUNERKIRSCHEN","morello",1,4,5,4,2
+"ZUKOVSKAJA","amarello",2,2,3,1,1
+"AMARENA DALFONSINE","amarello",5,3,2,5,1
+"AMARENA DI FRANCAVILLA","morello",4,1,2,5,5
+"AMARENA DI PESCARA","morello",1,2,3,5,4
+"AMARENA MATIARELLO","morello",4,2,4,4,4
+"BAGRYANAJA","morello",3,4,4,2,2
+"BELLE DE CHOISY","amarello",5,2,1,1,1
+"BELLE MAGNIFIQUE","morello",5,3,3,3,2
+"BEUTELSPACHER REXELLE","morello",2,3,3,2,3
+"BRUNBAR FRÅN GASTRIKSLAND","morello",2,2,5,4,4
+"CRIS ANA 2","amarello",1,5,4,2,2
+"CUSANA","morello",2,3,1,2,3
+"DUBBEL GORSEM KRIECK","morello",2,5,2,4,3
+"EARLE","morello",1,2,3,4,5
+"ELMER","morello",4,5,2,5,1
+"ENGLISH MORELLO","morello",1,4,4,2,3
+"FANAL","morello",1,4,3,3,2
+"FERRACIDA","amarello",2,2,4,1,1
+"FRUGHTBARE VON MICHURIN","amarello",3,4,1,3,4
+"GRIOTIE DU NORD HERMEE","morello",4,5,1,3,1
+"HEIMANNS RUBIN","morello",4,4,1,2,3
+"HISZPANKA POZNA","morello",4,4,2,4,4
+"IMPERATRICE EUGENIE","amarello",2,3,4,1,3
+"JARENIOWKA","morello",4,2,4,3,5
+"JUBILEYNA y A","morello",4,5,3,3,3
+"KELLERIIS 14","morello",4,3,2,2,3
+"KELLERIIS Iii","morello",1,4,3,1,3
+"KENTISH","amarello",1,3,1,1,1
+"KLEJNE W AALSE","morello",1,4,1,1,2
+"KOROS","morello",2,5,3,2,3
+"LEITZKA U ER PRESSA U RKIRSCHE","morello",3,2,5,4,3
+"LOTOVA","morello",3,5,1,2,1
+"MS","morello",4,3,1,5,4
+"MT","morello",4,2,1,5,3
+"MAILOT","morello",2,4,5,3,3
+"MARASCA","morello",4,1,5,3,5
+"MARASCA BIJELA POLO ZITA","morello",2,1,5,5,5
+"MARASCA DI CHIETI","morello",4,1,4,5,5
+"MARAS CA DI POVO","morello",4,1,3,3,4
+"MARASCA DI SAVIGNANO","amarello",5,3,1,5,3
+"MARAS CA DI ZARA","morello",4,1,4,4,5
+"MARAS CA DUGULJASTA","morello",2,2,4,4,3
+"MARAS CA JSSOLA BRAZZA","morello",1,1,1,5,5
+"MARAS CA LUXARDO","morello",4,1,3,4,4
+"MARASCA SIVA USPRA VNA","morello",3,1,5,5,4
