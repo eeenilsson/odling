@@ -459,7 +459,7 @@ write.csv(cherries_table[, -1], "cherries_table_curated.csv", row.names = FALSE)
 cherries_table$Blomning <- factor(cherries_table$Blomning, ordered = TRUE, levels = c(1:5), labels = c("tidigt under", "medeltidigt under", "i mitten av", "medelsent under", "sent under"))
 features <- fread("cherries_table.csv")
 features <- features[, .(var, prominent_features)]
-origin <- variety_genotype_group[, .(var, origin_country, mother, father)]
+origin <- variety_genotype_group[, .(var, origin_country, mother, father, incompatibility_group)]
 ## genotype <- bt_wide[, .(var, genotype, incompatibility_group)]
 syn <- fread("genotype_syn.csv")
 
@@ -501,8 +501,6 @@ varieties[, note_tmp := ifelse(God == "Ja", " Smaken beskrivs som god.", "")]
 varieties[, note_tmp := ifelse(God == "Ja!", " Smaken beskrivs som mycket god.", note_tmp)]
 varieties[, note1 := paste0(note1, note_tmp)]
 
-
-
 ## Blomning och mognad
 varieties[, note_tmp := ifelse(!is.na(Blomning), paste0("Blommar ", Blomning, " blomningsperioden"), "")]
 varieties[, note_maturity := ifelse(!is.na(Mognad), as.character(Mognad), "")]
@@ -517,7 +515,6 @@ varieties[, note_txt := gsub("$", ".", note_txt)]
 varieties[, note_txt := gsub("\\.\\.", "\\.", note_txt)] ## add dot
 
 ## pollinators
-
 poll <- bt_long
 poll <- poll[compatibility > 0, ]
 poll <- poll[compat_proximity == "same"|compat_proximity == "close", ]
@@ -528,10 +525,77 @@ poll <- unique(poll[, .(var, pollinators)])
 varieties <- poll[varieties, on = "var"]
 varieties[, pollinators := gsub("\\*", "&ast;", pollinators)]
 ## varieties[, pollinators]
+varieties[, pollinators := ifelse(incompatibility_group == "SC", paste0(pollinators, ". Självfertil"), pollinators)]
+
 
 ## varieties[!is.na(father), .(father, mother)]
 ## varieties[!is.na(father), .(origin)]
 
+## origin
+## iso <- fread("iso_country_codes.csv")
+## iso <- iso[, .(alpha2_code, country)]
+## iso[, origin_country := alpha2_code]
+## iso[, origin_country := gsub(" ", "", origin_country)]
+## origin <- varieties[, .(var, origin_country)]
+## origin <- iso[origin, on = "origin_country"]
+## origin[is.na(origin_country), var]
+## unique(origin[, .(alpha2_code, country)])
+
+origin <- varieties[, .(var, origin_country, mother, father)]
+varnames_country <- c(
+'SE' = "Sverige",
+'ES' = "Spanien",
+'DE' = "Tyskland",
+'FR/DE' = "Frankrike eller Tyskland",
+'GB' = "Storbrittannien",
+'CA' = "Kanada",
+'RU' = "Ryssland",
+'CZ' = "Tjeckien", 
+'US' = "USA",
+'FR' = "Frankrike", 
+'HU' = "Ungern",
+'<NA>' = "Okänt"
+)
+origin[, origin_country := query_label(origin_country, varnames_country)]
+
+origin[, mother := gsub("seedling from", "fröplanta från", mother)]
+origin[, mother := gsub("cultivar from", "kultivar från", mother)]
+origin[, mother := gsub("cv. group", "sortgrupp", mother)]
+origin[, mother := gsub("local cultivar", "lokal kultivar", mother)]
+origin[, mother := gsub("selected by", "selekterad av", mother)]
+origin[, mother := gsub("open pollinated", "öppet pollinerad", mother)]
+origin[, mother := gsub("X-rayed pollen", "bestrålat pollen", mother)]
+origin[, mother := gsub("from Rhone valley", "från Rhendalen", mother)]
+origin[, mother := gsub("North Bohemia", "Norra Böhmen", mother)]
+origin[, mother := gsub("selection from", "selektion från", mother)]
+origin[, mother := gsub("Seedling from", "Fröplanta från", mother)]
+
+origin[, father := gsub("seedling from", "fröplanta från", father)]
+origin[, father := gsub("cultivar from", "kultivar från", father)]
+origin[, father := gsub("cv. group", "sortgrupp", father)]
+origin[, father := gsub("local cultivar", "lokal kultivar", father)]
+origin[, father := gsub("selected by", "selekterad av", father)]
+origin[, father := gsub("open pollinated", "öppet pollinerad", father)]
+origin[, father := gsub("X-rayed pollen", "bestrålat pollen", father)]
+origin[, father := gsub("from Rhone valley", "från Rhendalen", father)]
+origin[, father := gsub("North Bohemia", "Norra Böhmen", father)]
+origin[, father := gsub("selection from", "selektion från", father)]
+origin[, father := gsub("Seedling from", "Fröplanta från", father)]
+
+origin[, mother := ifelse(is.na(mother)|mother == "", "?", mother)]
+origin[, father := ifelse(is.na(father)|father == "", "?", father)]
+origin[, mother_father := paste0(mother, " x ", father)]
+origin[mother_father == "? x ?", mother_father := ""]
+origin[, country_txt := ifelse(!is.na(origin_country), paste0("Ursprung: ", origin_country), "")]
+origin[, country_txt := ifelse(mother_father == "okänd", country_txt, paste0(country_txt, ", ", mother_father))]
+origin[, country_txt := ifelse(country_txt == ""|is.na(country_txt), "", paste0(country_txt, "."))]
+origin <- origin[, .(var, country_txt)]
+varieties <- origin[varieties, on = "var"]
+
+## Type
+varieties[, note_txt := ifelse(Typ == "Cerasus", paste0(note_txt, ". Surkörsbär."), note_txt)]
+
+## sanitize
 varieties[, image_path := ifelse(!is.na(image_path), paste0("![", label, "]", image_path), "")]
 varieties[, note_syn := ifelse(!is.na(syn), paste0("Synonymer: ", syn), "")]
 varieties[, note_txt := gsub(", NA kött", " kött", note_txt)]
@@ -540,24 +604,32 @@ varieties[, note_txt := gsub(".NA  och mognar", ". Mognar", note_txt)]
 varieties[, note_txt := gsub("och , ", "och ", note_txt)]
 varieties[, note_txt := gsub(" \\.", "", note_txt)]
 varieties[, note_txt := gsub(" \\.", "\\.", note_txt)]
+varieties[, note_txt := gsub(", \\.", "\\.", note_txt)]
 varieties[, note_txt := gsub("NA", "", note_txt)]
+varieties[, note_txt := gsub("\\.\\.", "\\.", note_txt)]
+varieties[, country_txt := gsub(", \\.", "\\.", country_txt)]
+varieties[, country_txt := gsub("^.$", "", country_txt)]
 
 ## names(varieties)
-varieties[var == n, ]
+## varieties[var == n, ]
+## varieties[var == "merton_late", ]
 ## ?writeLines
 ## ?connections
 ## ?write
 
-
+## names(varieties)
 
 n <- varieties$var[[1]]
 file.create("varieties.qmd")
 for(n in varieties$var){
     write(paste0("## ", varieties[var == n, label], "\n"), "varieties.qmd", append = TRUE)
     write(paste0(varieties[var == n, note_syn], "\n"), "varieties.qmd", append = TRUE)
+        write(paste0(varieties[var == n, country_txt], "\n"), "varieties.qmd", append = TRUE)
     write(paste0(varieties[var == n, image_path], "\n"), "varieties.qmd", append = TRUE)
     write(paste0(varieties[var == n, note_txt], "\n"), "varieties.qmd", append = TRUE)
-    write(paste0("Pollinatörer som är genetiskt kompatibla och troligen blommar ungefär samtidigt: ", varieties[var == n, pollinators], "\n"), "varieties.qmd", append = TRUE)
+    if(varieties[var == n, !is.na(pollinators)]){
+    write(paste0("Pollinatörer som är genetiskt kompatibla och troligen blommar ungefär samtidigt: ", varieties[var == n, pollinators], ".\n"), "varieties.qmd", append = TRUE)
+    }
     write("\n", "varieties.qmd", append = TRUE)
 }
 

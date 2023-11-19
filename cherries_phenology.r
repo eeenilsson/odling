@@ -583,6 +583,8 @@ tmp[, bgr := round(bg_mean, digits = 1)]
 
 blooming_group_aggr <- tmp[!is.na(bgr), .(var, bgr)]
 blooming_group_aggr[grepl("rote", var), ]
+## blooming_group_aggr[grepl("burl", var), ]
+
 ## google_bt[grepl("rote", var), ]
 ## ?plyr::round_any
 
@@ -606,6 +608,64 @@ blooming_group_aggr[grepl("rote", var), ]
 
 ## Shattenmorelle: https://specialtyproduce.com/produce/Schattenmorelle_Cherries_17828.php
 ## "Schattenmorelle cherries are also known as Griotte de Nord, Chatel Morel, and English Morello cherries and are one of the most cultivated sour cherries in Europe"
+
+
+## DK Christensen1990_sour.pdf --------------
+
+sour_dk <- fread("sour_christensen1990.csv")
+sour_dk[, harvest_date := gsub("\\/23", "", harvest_date)]
+sour_dk[, label := gsub("I\\.\\:", "L", label)]
+sour_dk[, label := gsub("\\,", "", label)]
+sour_dk[, label := gsub("'", "", label)]
+sour_dk[, var := tolower(label)]
+sour_dk[, var := gsub("/", "", var)]
+sour_dk[, var := gsub("'", "", var)]
+sour_dk[, var := gsub(" ", "_", var)]
+sour_dk[, var := gsub("^ms$", "m5", var)]
+sour_dk[, var := gsub("^mt$", "m7", var)]
+
+sour_dk[, flower_date_may_q := cut(flower_date_may, breaks = quantile(flower_date_may, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)]
+
+sour_dk[, g_fruit_q := cut(g_fruit, breaks = quantile(g_fruit, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)]
+
+sour_dk[, acidity_percent_q := cut(acidity_percent, breaks = quantile(acidity_percent, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)]
+
+sour_dk[, solids_percent_q := cut(solids_percent, breaks = quantile(solids_percent, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)]
+
+sour_dk[, stone_percent_q := cut(stone_percent, breaks = quantile(stone_percent, probs = seq(0, 1, 1/5), na.rm = TRUE), include.lowest = TRUE)]
+
+sour_dk[, type := ifelse(colour < 50, "amarello", "morello")]
+
+sour_dk[, g_fruit_q := as.numeric(g_fruit_q)]
+sour_dk[, acidity_percent_q := as.numeric(acidity_percent_q)]
+sour_dk[, solids_percent_q := as.numeric(solids_percent_q)]
+sour_dk[, stone_percent_q := as.numeric(stone_percent_q)]
+
+sour_dk_phenology <- sour_dk[, .(label, type, flower_date_may_q, g_fruit_q, solids_percent_q, acidity_percent_q, stone_percent_q)]
+names(sour_dk_phenology) <- c("Sort", "Typ", "Blomning", "Storlek", "Sötma", "Syra", "Stenstorlek")
+
+write.csv(sour_dk_phenology, "sour_dk_phenology.csv", row.names = FALSE)
+
+## metadata:
+
+## For the primary screening three trees of each cultivar were planted. The fruit yield has in this phase been judged visually with 'Stevnsbår' as the standard cultivar. As these data are not always comparable they are referred to only under the description of the cultivars. The most prom ising cultivars were then selected and plante d in larger scale experiments. Yield reeords from these are published earlier (78, 82, 86, 87).  The qualitative eharacteristics were deter- mined in at least three years of cropping. Samples of 50 fruits were picked three times around op- timum harvest time with 3-4 days intervals.  Eaeh sample was analyse d seperately and all re- sults are an average of the three picking dates
+
+## Date of flowering: In cultivars observed for more than three years the earliest aver age date of beginning of flowering was 9 May and the latest the 20 May. However, most of the cultivars started flowering within a period of 6-7 days.
+
+## Date of harvest: The date of harvest is considered of interest for extending the harvest season. The total season varied about four weeks from 1 July to 25 August.
+
+## Fruit size: For mechanical harvest and also for many pro- duets the fruit sizes is not of any importance.  Specific sizes may be desired, for other products.  In these observations the average fruit size varied from 2.6 g to 5.8 g.
+
+## Colour of juice: For most eherry products an intense colour is de- sired. For thi s description anthocyanins were ex- tracted with 0.01 %. HCI/Methanol and absor- bance was measured at 530 mm. The content is accordingly expressed as mg malvidinchloride per 100 g of fruits. Cultivars with an anthocyanin con- tent lower than 50 are regarded as amare1s, i.e.  sour cherries with uncoloured juice.
+
+## Acidity: A high content of acids is an important eriteria for the quality of the juice. Titratable acid was deter- mined by titration with O,IN NaOH to pH 8,1 and calculated as per cent eitric acid. It varied from 0.97% to 2.64%.
+
+## Soluble solids: The content of sugars may be of economical im- portance. It is determined by refraetometry and expressed as gllOO g. It varied amoung the tested cultivars as much as from 11.0 to 19.2.
+
+## Stone per cent: The weight of the stone in percentage of the fruit is to a high extent correlated with fruit size, how- ever deviations from this rule occur. It varied from 4.6 to 8.9 in these observations.
+
+## Number of years: Although it has been aimed at at least three years of observations, it has not been possibie to analyse all cultivars every year because of lost yield. The number of years indicate the reliability of the results.
+
 
 
 ## More ---------------------

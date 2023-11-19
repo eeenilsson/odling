@@ -160,3 +160,53 @@ Klicka på kolumnens rubrik för att sortera. Siffrorna i tabellen är en grader
 <!-- Podosphaera clandestina var. clandestina (powdery mildew of cherry) -->
 <!-- incidence of foliar powdery mildew rated on a 0-5 scale where 0 means no infection and 5 is 100% infection -->
 
+# Tabell surkörsbär
+
+Relativa värden (kvintiler) från låg (1) till hög (5).
+
+```{r}
+#| label: tbl-sour
+#| tbl-cap: "Tabell mätvärden"
+#| warning: false
+
+## # hidden dummy table
+## knitr::kable(x = NULL, 
+##              format = "html",
+##              caption = "<center>{first row <br>second row}</center>"
+##              )
+
+sour_dk_phenology <- read.csv("../sour_dk_phenology.csv")
+## knitr::kable(sour_dk_phenology)
+
+reactable(sour_dk_phenology, ## sorting
+          filterable = TRUE,
+          bordered = TRUE,
+          highlight = TRUE,
+          striped = FALSE,
+          defaultColDef = colDef(
+              header = function(value) gsub(".|_", " ", value, fixed = TRUE),
+              ## cell = function(value) format(value, nsmall = 1),
+              align = "center",
+              minWidth = 30,
+              ## headerStyle = list(background = "#f7f7f8")
+              filterMethod = JS("function(rows, columnId, filterValue) {
+        const pattern = new RegExp(filterValue, 'i')
+        
+        return rows.filter(function(row) {
+          return pattern.test(row.values[columnId])
+        })
+      }")
+          ),
+          columns = list(
+              Sort = colDef(
+                  sticky = "left",
+                  align = "left",
+                  minWidth = 100,
+                  ## Add a right border style
+                  style = list(borderRight = "1px solid #eee"),
+                  headerStyle = list(borderRight = "1px solid #eee")
+              )
+          )
+          )
+
+```

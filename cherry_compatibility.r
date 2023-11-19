@@ -261,6 +261,9 @@ selectvars <- c(selectvars, "skuggmorell", "tschernokorka")
 
 selectvars <- unique(selectvars)
 bg_selected <- blooming_group_aggr[grepl(paste0(selectvars, collapse = "$|^"), var), ] ## select those in selectvar (var listed in dta)
+#########################
+## Note: here, only those with blooming group available is selected ######
+###########################
 
 ## ## write cvs with those missing bt
 ## tmp <- data.frame(
@@ -273,6 +276,7 @@ bg_selected <- blooming_group_aggr[grepl(paste0(selectvars, collapse = "$|^"), v
 ## add these even if bt is unknown
 tmp <- c("fryksaas") ## bt missing for , "erianne"
 ## sour: ostheimer, nordia, fanal, kelleris, kirsa, berit, mfl
+## selectvars[!selectvars %in% bg_selected$var]
 
 tmp <- tmp[!tmp %in% bg_selected[, var]] ## those not already selected
 if(length(tmp > 0)){
@@ -295,6 +299,8 @@ bg_selected <- rbind(bg_selected,
 cols <- c("variety", "var", "genotype") ## , "genotype"
 variety_genotype_group[grepl("schne", tolower(variety)), ..cols]
 
+## variety_genotype_group[grepl("burl", tolower(variety)), ..cols]
+
 ## tmp <- variety_genotype_group[grepl(paste0(paste0(notselected, collapse = "|")), tolower(variety)), ..cols]
 ## print(tmp[, .(var)], n = 200)
 ## bg_selected[bg_selected$var %in% variety_genotype_group$var, ]
@@ -302,7 +308,7 @@ variety_genotype_group[grepl("schne", tolower(variety)), ..cols]
 
 bg_selected <- bg_selected[bg_selected$var %in% variety_genotype_group$var, ] ## skip those not matching var name in genotype data
 
-dta_toplot <- variety_genotype_group[bg_selected, on = "var"] ## all selected have genotype data matching var name
+dta_toplot <- variety_genotype_group[bg_selected, on = "var"] ## all selected have genotype data matching var name and bt
 
 bt_wide <- dta_toplot[, .(var, genotype, bgr, incompatibility_group)]
 

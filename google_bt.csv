@@ -24,8 +24,10 @@
 "margit",,1.5,1.5,1
 "merton_glory","FALSE",2,2,0
 "merton_premier","TRUE","NA",2.5,
+"merton_late",,,5,
+"montmerency",,,5,
 "nordia","TRUE","NA",,1
-"napoleon",,2,1,
+"napoleon",,2,1.5,
 "ostheimer","TRUE","NA",,1
 "rainier",,"NA",1.5,0
 "regina",,5,3.5,
