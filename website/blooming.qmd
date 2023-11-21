@@ -39,6 +39,11 @@ I @fig-btstartros visas skillnad i start av blomning för olika sorter (data fr�
 
 :::
 
+I figuren nedan visas medelvärden för tid till start, full blomning och blomningens slut i europeiska data (Wenden 2016). Dessa har justerats för ort och år.
+
+![Blomningstid](../../dropbox/images/plants/plot_eur_bt.png)
+
+
 <!-- Tidig -->
 <!-- Medeltidig -->
 <!-- Medel -->

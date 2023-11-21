@@ -18,7 +18,9 @@ Efter namnet på körsbärssorten (på y-axeln, till vänster) anges inom klamra
 
 Blomningstiden varierar från år till år beroende på väderlek och klimat, men man brukar dela in den relativa blomningstiden för olika körsbärssorter i fem grupper från tidig till sen. Uppgifter om blomningstid varierar beroende på källa och för många sorter saknas information från svenska förhållanden. Blomningstiden i schemat ovan är en sammanvägning av den relativa blomningstiden från olika svenska och internationella källor. Du kan läsa mer om blomning på sidan om [blomning](blooming.qmd).
 
-Eftersom det finns en osäkerhet i uppgifterna om blomningstid bör du även kontrollera med din lokala plantskola vilka sorter som brukar fungera tillsammans. Pollinationschemat bör därför bara användas som en fingervisning om vilka sorter som kan blomma samtidigt. Uppgifterna om genetisk kompatibilitet är mer säkra och icke-kompatibla sorter bör undvikas.
+Eftersom det finns en osäkerhet i uppgifterna om blomningstid bör du även kontrollera med din lokala plantskola vilka sorter som brukar fungera tillsammans. Pollinationschemat bör därför bara användas som en fingervisning om vilka sorter som kan blomma samtidigt. Uppgifterna om genetisk kompatibilitet är troligen mer säkra och icke-kompatibla sorter bör undvikas. Dock är det inte givet att det genetiska material som använts för bestämning av S-haplotyp alltid överensstämmer med den sort som säljs under ett visst namn (Se Nybom 2012).
+
+För sorterna 'Sam' och 'Hedelfinger' (som tycks blomma medelsent) rekommenderas från försäljarna flera sorter som är i tidig/medeltidig blomningsgrupp. Detta kan tala för att uppgifterna om blomningstid är osäkra, eller att dessa två sorter är feletiketterade.
 
 ## Hur schemat avläses
 

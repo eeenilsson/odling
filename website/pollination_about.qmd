@@ -99,15 +99,21 @@ Körsbär har i sina kromosomer två (hos surkörsbär fyra) varianter av ett vi
 
 ## Genetik, några begrepp
 
-Kromosomer
-
-Alleler
+Kromosomer: Strukturer i cellkärnan som innehåller gener.
 
 <!-- An allele is one of two or more versions of DNA sequence (a single base or a segment of bases) at a given genomic location. An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists. -->
 
-Locus
+Locus: Ett område på en kromosom där generna för en viss egenskap finns.
 
-Polyploidi
+Alleler: Gener som finns i samma locus i ett kromosompar.
+
+Diploid: Organism som har ett _par_ av varje kromosom i cellkärnan.
+
+Haploid: Celler med endast en uppsättning kromosomer (könsceller från diploida organismer).
+
+Polyploidi: Förekomst av mer än ett kromosompar hos en organism.
+  - Triploid: Tre uppsättningar.
+  - Tetraploid: Fyra uppsättningar.
 
 <!-- We have indicated which cultivars are triploid - i.e. having sterile pollen and needing at least two other non-triploid cultivars. https://www.habitataid.co.uk/pages/pollination-groups -->
 
@@ -116,13 +122,15 @@ Polyploidi
 
 Huruvida pollen från en viss sort är kompatibelt med mottagaren bestäms av ett område på kromosomen som betecknas med "S". Varianter (_alleler_) av S betecknas med olika nummer, S1, S2, S3 osv. Vanligast är S1-S6.
 
-Pollenkornet innehåller endast en S-allel (tex S2) och pistillen två (tex S1S6). Pollenkorn vars S-variant är _samma_ som _någon_ av pistillens S-varianter kan _inte_ ta sig ner genom stiftet för att befrukta mottagaren, då pollenslangens utväxt hämas.
+Pollenkornet (som innehåller två haploida celler) för endast med sig en S-allel (tex S2) och pistillen har två (tex S1S6). Pollenkorn vars S-variant är _samma_ som _någon_ av pistillens S-varianter kan _inte_ ta sig ner genom stiftet för att befrukta mottagaren, då pollenslangens utväxt hämas.
 
 Undantaget är S4**’**-allelen (notera apostrofen) som medför _självfertilitet_. Ett pollenkorn med S4**’** kan befrukta alla mottagare (inklusive de med S4**’**). Körsbär med S4**’** kan således betraktas som universella givare.
 
 De enstaka själv-**in**fertila sorter som har S4**’** ej kan befruktas av S4 (utan apostrof).
 
 Enstaka universella givare saknar också S4**’**.
+
+Surkörsbär (tetraploida organismer) har könsceller som är diploida, varför pollenkornet innehåller två olika S-alleler och pistillen fyra. Hos dessa finns flera olika mutationer i S-allerna som kan ge självfertilitet
 
 <!-- Mekanismer, vad händer vid inkompatibilitet. -->
 

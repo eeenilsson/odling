@@ -149,6 +149,17 @@ genotype_syn <- genotype_syn[var %in% cherries_table$var, ] ## keep only those i
 
 ## tidy
 genotype_syn[, syn2 := gsub(",,", ",", syn2)]
+
+for(i in 1:length(genotype_syn)){ ## remove duplicates
+tmp <- genotype_syn[i, stringr::str_split(syn2, ",|,,")[[1]]  ]
+tmp <- stringr::str_squish(tmp)
+tmp <- unique(tmp)
+tmp <- paste(tmp, collapse = ", ")
+genotype_syn[i, syn2 := tmp]
+}
+
+genotype_syn[var == "hedelfinger", syn2 := gsub("- Riesenkirsche", "Hedelfinger Riesenkirsche", syn)]
+
 genotype_syn[, syn := syn2]
 genotype_syn[, label2 := label]
 

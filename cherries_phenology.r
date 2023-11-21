@@ -141,6 +141,19 @@ eur_bt[beginning_of_flowering_date == "", beginning_of_flowering_date := NA]
 eur_bt[full_flowering_date == "", full_flowering_date := NA]
 eur_bt[end_of_flowering_date == "", end_of_flowering_date := NA]
 
+## sanitize
+eur_bt[, year := gsub(" ", "", year)]
+eur_bt[, beginning_of_flowering_date := gsub("/0", "/", beginning_of_flowering_date)]
+eur_bt[, beginning_of_flowering_date := gsub("^0", "", beginning_of_flowering_date)]
+eur_bt[, end_of_flowering_date := gsub("/0", "/", end_of_flowering_date)]
+eur_bt[, end_of_flowering_date := gsub("^0", "", end_of_flowering_date)]
+eur_bt[, full_flowering_date := gsub("/0", "/", full_flowering_date)]
+eur_bt[, full_flowering_date := gsub("^0", "", full_flowering_date)]
+## unique(eur_bt$year)
+## unique(eur_bt$beginning_of_flowering_date)
+## unique(eur_bt$end_of_flowering_date)
+## unique(eur_bt$full_flowering_date)
+
 ## fix date vars
 eur_bt[!is.na(beginning_of_flowering_date), beginning_of_flowering_date := paste0(year, "/", beginning_of_flowering_date)]
 eur_bt[!is.na(full_flowering_date), full_flowering_date := paste0(year, "/", full_flowering_date)]
@@ -323,17 +336,54 @@ eur_bt_aggr <- eur_bt[, .(
 ## lm and adjust
 eur_bt[, var := as.factor(var)]
 
+## relevel to most common level
+summary(eur_bt$var) ## burlat most common
+summary(eur_bt$site) ## Toulenne most common
+summary(eur_bt$year) ## 2008 most common
+eur_bt <- within(eur_bt, var <- relevel(var, ref = "burlat"))
+eur_bt <- within(eur_bt, site <- relevel(site, ref = "Toulenne"))
+eur_bt <- within(eur_bt, year <- relevel(year, ref = "2008"))
+
+## check:
+## eur_bt[var == "margit", ]
+
 m1 <- lm(bt_start ~ var + site + year, data = eur_bt)
-## summary(m1)
+## m1 <- lm(bt_start ~ var + site*year, data = eur_bt)
+
+## ## check eur_bt confint
+## m1_ci <- confint(m1)
+## rownames(m1_ci) <- gsub("^var", "", rownames(m1_ci))
+## tmp <- data.table(m1_ci)
+## names(tmp) <- c("ci_lower", "ci_upper")
+## tmp[, var := rownames(m1_ci)]
+## m1_ci <- tmp
+## m1_ci[, diff := ci_upper - ci_lower]
+## m1_ci <- m1_ci[!grepl("^site", var), ] ## rm site
+## m1_ci <- m1_ci[!grepl("^year", var), ] ## rm year
+## m1_ci <- m1_ci[!grepl(".Intercept", var), ] ## rm intercept
+## summary(m1_ci$diff) ## Q3 = 4.8
+## m1_ci[diff > 4.8, ] ## these have ci > Q3, note: none of interest
+## m1_ci$var
+
+summary(m1)
+## hist(resid(m1))
 lm_bt_start <- m1$coef
 lm_bt_start <- data.table(var = names(lm_bt_start),
            coef = lm_bt_start)
 lm_bt_start[, var := gsub(".Intercept.", "intercept", var)]
 
+## start to full
+m1 <- lm(bt_start_to_full ~ var + site + year, data = eur_bt)
+lm_bt_start_full <- m1$coef
+lm_bt_start_full <- data.table(var = names(lm_bt_start_full),
+           coef = lm_bt_start_full)
+lm_bt_start_full[, var := gsub(".Intercept.", "intercept", var)]
+
 ## for plotting etc
 eur_lm_bt_start <- lm_bt_start
 eur_lm_bt_start[, var := gsub("^var", "", var)]
 names(eur_lm_bt_start) <- c("var", "coef_bt_start")
+
 eur_lm_bt_duration <- lm(bt_duration ~ var + site + year, data = eur_bt)$coef
 eur_lm_bt_duration <- data.table(var = names(eur_lm_bt_duration),
            coef = eur_lm_bt_duration)
@@ -341,7 +391,19 @@ eur_lm_bt_duration[, var := gsub(".Intercept.", "intercept", var)]
 eur_lm_bt_duration[, var := gsub("^var", "", var)]
 names(eur_lm_bt_duration) <- c("var", "coef_bt_duration")
 
+lm_bt_start_full[, var := gsub(".Intercept.", "intercept", var)]
+lm_bt_start_full[, var := gsub("^var", "", var)]
+names(lm_bt_start_full) <- c("var", "coef_bt_start_full")
+start_full_intercept <- lm_bt_start_full[var == "intercept", coef_bt_start_full]
+eur_lm_bt_start_full <- lm_bt_start_full[!grepl("^year|^site|intercept$", var)]
+
+## store intercepts
+start_intercept <- eur_lm_bt_start[var == "intercept", coef_bt_start]
+duration_intercept <- eur_lm_bt_duration[var == "intercept", coef_bt_duration]
+
+## remove intercept ect
 eur_lm_bt_start <- eur_lm_bt_start[!grepl("^year|^site|intercept$", var)]
+eur_lm_bt <- eur_lm_bt_start ## store
 eur_lm_bt_start <- data.table(
     var = as.factor(eur_lm_bt_start$var),
     bt_start_relative = eur_lm_bt_start$coef_bt_start - median(eur_lm_bt_start$coef_bt_start), ## relative to median
@@ -352,6 +414,7 @@ eur_lm_bt_start <- data.table(
 ## summary(tmp$bt_start_relative)
 
 eur_lm_bt_duration <- eur_lm_bt_duration[!grepl("^year|^site|intercept$", var)]
+eur_lm_bt <- eur_lm_bt_duration[eur_lm_bt, on = "var"] ## store
 eur_lm_bt_duration <- data.table(
     var = as.factor(eur_lm_bt_duration$var),
     bt_duration_relative = eur_lm_bt_duration$coef_bt_duration - median(eur_lm_bt_duration$coef_bt_duration) ## relative to median    
@@ -363,7 +426,66 @@ eur_lm_bt_duration <- data.table(
 ## unique(eur_bt[ , count := .N, by = .(site)][, .(site, count)])
 ## summary(m1)
 
-## tidy for calculating bgr
+## plot blooming time start and duration -----
+
+eur_lm_bt <- eur_lm_bt[eur_lm_bt_start_full, on = "var"]
+names(eur_lm_bt) <- c("var", "duration", "start", "start_full")
+eur_lm_bt <- eur_lm_bt[, .(var, start, start_full, duration)]
+eur_lm_bt <- rbind( ## add burlat (ref category)
+    data.table(
+        var = "burlat",
+        start = 0,
+        start_full = 0,
+        duration = 0
+),
+eur_lm_bt
+)
+
+summary(eur_bt$bt_duration)
+summary(eur_bt$bt_start_to_full)
+
+## add intercept
+## eur_lm_bt[, start:= start + start_intercept]
+eur_lm_bt[, start_full := start_full + start_full_intercept]
+eur_lm_bt[, duration := duration + duration_intercept]
+eur_toplot <- eur_lm_bt[grepl(paste0(dta$var, collapse = "$|^"), var), ]
+eur_toplot[, start := start + abs(min(eur_toplot$start))]
+setkey(eur_toplot, start)
+eur_toplot[, full := start + start_full]
+eur_toplot[, end := start + duration]
+
+## plot base
+p <- ggplot(eur_toplot, aes(x = fct_reorder(var, start), y = full)) + coord_flip()
+p <- p + geom_point(size = 2) + geom_errorbar(aes(ymin = start, ymax = end), width = 0.2)
+p <- p + scale_y_continuous(breaks = 0:27)
+p <- p + theme(
+        ## axis.ticks.y=element_blank(),
+        panel.grid.minor.x = element_blank(),
+        ## axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text=element_text(size=16),
+          )
+p <- p + labs(title="Blomningstid: Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år.",
+             y = "Dagar (från tidigaste sortens blomningsstart)")
+p
+
+ggsave(
+  "plot_eur_bt.png",
+  plot = last_plot(),
+  device = NULL,
+  path = "../dropbox/images/plants/",
+  scale = 1,
+  width = 16.6,
+  height = 8.86,
+  units = c("in", "cm", "mm", "px"),
+  dpi = 300,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+## tidy for calculating bgr -------
 lm_bt_start <- lm_bt_start[grepl(paste0(unique(eur_bt$var), collapse = "|"), var), ] ## skip year, site coefs
 lm_bt_start <- lm_bt_start[!grepl("site", var), ] ## skip year, site coefs
 ## groups defined as quantiles of the regression coefficient
@@ -536,7 +658,6 @@ tmp <- google_bt[, .(bt_google_sv, bt_google_any)]
 google_bt$bt_any <- rowMeans(tmp, na.rm = TRUE)
 google_bt <- google_bt[, .(var, bt_any)]
 
-
 ##  STORT. KLARBÄR ('Grosse. Glaskirsche')
 
 ## aggregate bt ------------------
@@ -576,6 +697,18 @@ names(tmp) <- query_label(names(tmp), varnames_temp)
 
 tmp <- tmp[, .(var, bg_anfic, bg_eur, bg_uk, bg_ros, bg_google)]
 ## Note: gdd ros deviates somewhat, not kept here
+tmp[var == "margit", ]
+tmp[var == "hedelfinger", ]
+
+## check for deviations in bgr info:
+## pacman::p_load(matrixStats)
+bg_sd <- matrixStats::rowSds(as.matrix(tmp[, -1]), na.rm = TRUE)
+tmp[bg_sd > 1.1, ] ## these have deviations in bg
+## manually remove some calculated BGs that deviate:
+tmp[var == "summit", bg_ros := NA]
+tmp[var == "regina", bg_ros := NA]
+tmp[var == "margit", bg_eur := NA]
+
 tmp$bg_mean <- rowMeans(tmp[, -1], na.rm = TRUE)
 tmp[, bgr := round(bg_mean, digits = 1)]
 

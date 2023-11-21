@@ -6,6 +6,7 @@ website:
   title: "Körsbärskoll"
 
   navbar:
+    logo: ../../dropbox/images/plants/cherry_logo.jpg
     left:
       - href: index.qmd
         text: Hem

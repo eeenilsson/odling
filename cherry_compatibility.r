@@ -74,6 +74,8 @@ compat <- function(genotype_a, genotype_b){
 
 variety_genotype_group <- fread("cherries_variety_genotype_group.csv", header = TRUE)
 
+## variety_genotype_group[grepl("hedel", tolower(variety)), ]
+
 ## curate
 source("update_names.r") ## adds a column with sanitized varnames
 

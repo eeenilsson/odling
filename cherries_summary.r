@@ -27,6 +27,14 @@ dtplot[, pol_yes := factor(pol_yes, levels = 0:1, labels = c("no", "yes"))]
 
 ## dtplot[pol_yes == "yes" & compatibility == 0, .(var, pollinator, pol_yes, compatibility)] ## discrepancy
 
+## ## add pollinator zone
+## zone <- dta[, .(var, zone)]
+## zone[, pollinator := as.factor(var)]
+## zone[, pollinator_zone := zone]
+## zone$var <- NULL
+## zone$zone <- NULL
+## dtplot <- zone[dtplot, on = "pollinator"]
+
 ## plot pollination table ---------------------
 
 ## make labels
@@ -83,6 +91,22 @@ dtplot[, pollinator:= factor(pollinator, levels = levels(pollinator), labels = u
 ## plot base
 p <- ggplot(dtplot, aes(x = fct_reorder(pollinator, pollinator_blooming_group_num), y = fct_reorder(target, bgr))) +
     geom_point(aes(size = compatibility,  fill = compat_proximity, colour = pol_yes), shape = 21, stroke = 1)
+
+## ### colour by zone < 3
+## Note: Does not work with facets
+## tmp <- bt_long[, var := target]
+## tmp <- tmp[, .(var, pollinator, pollinator_blooming_group_num)]
+## zone <- dta[, .(var, zone)]
+## zone[, pollinator := var]
+## zone$var <- NULL
+## tmp <- zone[tmp, on = "pollinator"]
+## tmp[, xcolor := ifelse(zone <3, "#F6003B", "#002060")]
+## tmp[, pollinator := fct_reorder(pollinator, pollinator_blooming_group_num)]
+## tmp[, .(pollinator, xcolor)]
+## setkey(tmp, pollinator)
+## ## tmp$xcolor <- fct_reorder(tmp$xcolor, tmp$pollinator_blooming_group_num)
+## tmp <- unique(tmp[, .(pollinator, xcolor)])
+## tmp <- as.factor(tmp$xcolor)
 
 ## plot customization
 plot_pollination_table <- p +
@@ -456,7 +480,7 @@ write.csv(cherries_table[, -1], "cherries_table_curated.csv", row.names = FALSE)
 
 ## Sorter lista --------------
 
-cherries_table$Blomning <- factor(cherries_table$Blomning, ordered = TRUE, levels = c(1:5), labels = c("tidigt under", "medeltidigt under", "i mitten av", "medelsent under", "sent under"))
+cherries_table$bt_txt <- as.character(factor(cherries_table$Blomning, ordered = TRUE, levels = c(1:5), labels = c("tidigt under", "medeltidigt under", "i mitten av", "medelsent under", "sent under")))
 features <- fread("cherries_table.csv")
 features <- features[, .(var, prominent_features)]
 origin <- variety_genotype_group[, .(var, origin_country, mother, father, incompatibility_group)]
@@ -481,7 +505,7 @@ varieties <- tmp
 ## varieties[, Typ := gsub("Avium", "_Prunus Avium_", Typ)]
 ## varieties[, Typ := gsub("Cerasus", "_Prunus Cerasus_", Typ)]
 
-## varieties[, txt := paste0(Blomning, " blomning och mognad ", tolower(Mognad), ". ", Sötma, " sötma och ", Syra, " med ", Fasthet, " ", Kött, " och ", Färg, " färg på skalet.")]
+## varieties[, txt := paste0(bt_txt, " blomning och mognad ", tolower(Mognad), ". ", Sötma, " sötma och ", Syra, " med ", Fasthet, " ", Kött, " och ", Färg, " färg på skalet.")]
 
 ## Färg och smak
 varieties[, note_fasthet := ifelse(!is.na(Fasthet), as.character(Fasthet), "")]
@@ -498,18 +522,19 @@ varieties[, note_sweet := ifelse(!is.na(Sötma) & !is.na(Syra), paste0("som har 
 varieties[, note_sweet := ifelse(!is.na(Sötma) & is.na(Syra), paste0("som har ", Sötma, " sötma"), note_sweet)]
 varieties[, note1 := paste0(note_color, " ", note_fleshcolor, " ", note_sweet, ".")]
 
+
 varieties[, note_tmp := ifelse(Storlek == "Liten", " Bäret är relativt litet.", "")]
 varieties[, note_tmp := ifelse(Storlek == "Medel", " Bäret är medelstort.", note_tmp)]
 varieties[, note_tmp := ifelse(Storlek == "Stor", " Bäret är stort.", note_tmp)]
 varieties[is.na(note_tmp), note_tmp := ""]
-varieties[, note1 := paste0(note1, note_tmp)]
+varieties[, note1 := paste0(note1, ".", note_tmp)]
 
 varieties[, note_tmp := ifelse(God == "Ja", " Smaken beskrivs som god.", "")]
 varieties[, note_tmp := ifelse(God == "Ja!", " Smaken beskrivs som mycket god.", note_tmp)]
 varieties[, note1 := paste0(note1, note_tmp)]
 
 ## Blomning och mognad
-varieties[, note_tmp := ifelse(!is.na(Blomning), paste0("Blommar ", Blomning, " blomningsperioden"), "")]
+varieties[, note_tmp := ifelse(!is.na(bt_txt), paste0("Blommar ", bt_txt, " blomningsperioden"), "")]
 varieties[, note_maturity := ifelse(!is.na(Mognad), as.character(Mognad), "")]
 varieties[, note_maturity := gsub("Mitten", " och mognar i mitten av mognadsperioden", note_maturity)]
 varieties[, note_maturity := gsub("Sen", " och mognar sent", note_maturity)]
@@ -517,7 +542,7 @@ varieties[, note_maturity := gsub("Tidig", " och mognar tidigt", note_maturity)]
 varieties[, note2 := paste0(note_tmp, note_maturity, ".")]
 
 ## aggregate note
-varieties[, note_txt := paste0(note1, " ", note2, " ", prominent_features)]
+varieties[, note_txt := paste0(note1, ". ", note2, ". ", prominent_features)]
 varieties[, note_txt := gsub("$", ".", note_txt)]
 varieties[, note_txt := gsub("\\.\\.", "\\.", note_txt)] ## add dot
 
@@ -594,6 +619,7 @@ origin[, country_txt := ifelse(!is.na(origin_country), paste0("Ursprung: ", orig
 origin[, country_txt := ifelse(mother_father == "okänd", country_txt, paste0(country_txt, ", ", mother_father))]
 origin[, country_txt := ifelse(country_txt == ""|is.na(country_txt), "", paste0(country_txt, "."))]
 origin <- origin[, .(var, country_txt)]
+origin[var == "erianne", country_txt := "Ursprung: Sverige, fröplanta från Svart Bigarrå. Det genetiska material som använts för bestämning av S-haplotyp kom dock från Storbritannien."]
 varieties <- origin[varieties, on = "var"]
 
 ## Type
@@ -606,13 +632,23 @@ varieties[, note_txt := gsub(", NA kött", " kött", note_txt)]
 varieties[, note_txt := gsub("\\.  och mognar", ". Mognar", note_txt)]
 varieties[, note_txt := gsub(".NA  och mognar", ". Mognar", note_txt)]
 varieties[, note_txt := gsub("och , ", "och ", note_txt)]
-varieties[, note_txt := gsub(" \\.", "", note_txt)]
+varieties[, note_txt := gsub(" \\.", "\\.", note_txt)]
 varieties[, note_txt := gsub(" \\.", "\\.", note_txt)]
 varieties[, note_txt := gsub(", \\.", "\\.", note_txt)]
 varieties[, note_txt := gsub("NA", "", note_txt)]
 varieties[, note_txt := gsub("\\.\\.", "\\.", note_txt)]
+varieties[, note_txt := gsub("\\.\\.", "\\.", note_txt)]
+varieties[, note_txt := gsub("\\.\\.", "\\.", note_txt)]
 varieties[, country_txt := gsub(", \\.", "\\.", country_txt)]
 varieties[, country_txt := gsub("^.$", "", country_txt)]
+
+## order
+setkey(varieties, "var")
+
+## ## check
+## varieties[var == "tschernokorka", note_txt]
+## varieties[var == "triaux", note_txt]
+## varieties[var == "sunburst", note_txt]
 
 ## names(varieties)
 ## varieties[var == n, ]
@@ -628,11 +664,11 @@ tmp <- "./website/varieties_autogenerated.qmd"
 file.create(tmp)
 for(n in varieties$var){
     write(paste0("## ", varieties[var == n, label], "\n"), tmp, append = TRUE)
-    write(paste0(varieties[var == n, note_syn], "\n"), tmp, append = TRUE)
+    write(paste0(varieties[var == n, note_syn], ".\n"), tmp, append = TRUE)
         write(paste0(varieties[var == n, country_txt], "\n"), tmp, append = TRUE)
     write(paste0(varieties[var == n, image_path], "\n"), tmp, append = TRUE)
     write(paste0(varieties[var == n, note_txt], ""), tmp, append = TRUE)
-    write(paste0("Zon ", varieties[var == n, Zon], ".\n"), tmp, append = TRUE)
+    write(paste0("Odlingszon ", varieties[var == n, Zon], ".\n"), tmp, append = TRUE)
     if(varieties[var == n, !is.na(pollinators)]){
     write(paste0("Pollinatörer som är genetiskt kompatibla och troligen blommar ungefär samtidigt: ", varieties[var == n, pollinators], ".\n"), tmp, append = TRUE)
     }

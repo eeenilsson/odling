@@ -68,6 +68,8 @@ Resurser och källor.
 
 <!-- "Because of this uncertainty our pollination checker will only recommend varieties which flower at the same time and are universal pollinators. Universal pollinator varieties will pollinate all other cherry varieties which are in flower at the same time (with a few exceptions, for example Stella - a universal pollinator - will not pollinate Bing)." -->
 
+[Tysk sida](https://www.baumpruefung.de/pflanzen-und-pflegen/kirsche-befruchtertabelle/): Anger även blomningstid
+
 ## Genetisk kompatibilitet
 
 [Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020](https://www.openagrar.de/receive/openagrar_mods_00064311). Denna artikel har länkade data med genotypning av S-allelerna för ett stort antal sorter.
@@ -115,11 +117,13 @@ Resurser och källor.
 
 [Van cherry](https://en.wikipedia.org/wiki/Van_cherry)
 
+[Nybom 2012, Konsten att särskilja olika sorter av körsbär](https://pub.epsilon.slu.se/8732/7/nybom_et_al_120419.pdf): Beskriver hur olika sorter är besläktade och att många plantor inte är "sortäkta".
+
 ## Databaser och liknande
 
 [RoSBREED](https://www.rosbreed.org/): Amerikansk databas från ett forskningsprojekt.
 
-[A collection of European sweet cherry phenology data for assessing climate change](https://www.nature.com/articles/sdata2016108) : Data finns att ladda ner [här](https://datadryad.org/stash/dataset/doi:10.5061/dryad.1d28m).
+[Wenden 2016, A collection of European sweet cherry phenology data for assessing climate change](https://www.nature.com/articles/sdata2016108) : Data finns att ladda ner [här](https://datadryad.org/stash/dataset/doi:10.5061/dryad.1d28m).
 
 [Self-incompatibility (S) genotypes of cultivated sweet cherries – An overview update 2020](https://www.openagrar.de/receive/openagrar_mods_00064311). Denna artikel har länkade data med genotypning av S-allelerna för ett stort antal sorter.
 
