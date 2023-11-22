@@ -441,8 +441,8 @@ eur_lm_bt <- rbind( ## add burlat (ref category)
 eur_lm_bt
 )
 
-summary(eur_bt$bt_duration)
-summary(eur_bt$bt_start_to_full)
+## summary(eur_bt$bt_duration)
+## summary(eur_bt$bt_start_to_full)
 
 ## add intercept
 ## eur_lm_bt[, start:= start + start_intercept]
@@ -454,8 +454,13 @@ setkey(eur_toplot, start)
 eur_toplot[, full := start + start_full]
 eur_toplot[, end := start + duration]
 
+summary(eur_toplot)
+summary(eur_bt$flowering_duration)
+
+eur_toplot[, var := query_label(var, varnames3)]
+
 ## plot base
-p <- ggplot(eur_toplot, aes(x = fct_reorder(var, start), y = full)) + coord_flip()
+p <- ggplot(eur_toplot, aes(x = fct_reorder(var, -start), y = full)) + coord_flip()
 p <- p + geom_point(size = 2) + geom_errorbar(aes(ymin = start, ymax = end), width = 0.2)
 p <- p + scale_y_continuous(breaks = 0:27)
 p <- p + theme(
@@ -463,10 +468,12 @@ p <- p + theme(
         panel.grid.minor.x = element_blank(),
         ## axis.title.x = element_blank(),
         axis.title.y = element_blank(),
-        axis.text=element_text(size=16),
+        axis.title.x = element_blank(),
+        axis.text=element_text(size=24),
+        plot.title = element_text(size = 16, face="bold")
           )
-p <- p + labs(title="Blomningstid: Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år.",
-             y = "Dagar (från tidigaste sortens blomningsstart)")
+## p <- p + labs(title="Blomningstid: Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år.",
+##              y = "Dagar (från tidigaste sortens blomningsstart)")
 p
 
 ggsave(
@@ -641,6 +648,13 @@ ull_bt[, test_start_date := as.Date(test_start_date, format = "%Y-%m-%d")]
 ## Sweet cherry phenological data were collected from two networks: flowering and maturity dates for up to 191 reference cultivars, and from 10 sites, were extracted from the French database,
 
 
+## Dansk studie över 20 år på ett hundratal sorter:
+## Vittrup1996.pdf
+## Tabellen ej kopierbar, skrivit in urval här:
+## Sam, Frogmore och regina sena; knauff tidig
+vittrup_bt <- fread("bt_vittrup.csv")
+vittrup_bt[, bgr_vittrup := start/2]
+
 ## google on missing ones -----
 
 ## todo: check this site swedish:
@@ -676,6 +690,7 @@ tmp <- rosbreed_bt[!duplicated(var, )][tmp, on = "var"]
 tmp <- eur_bt_gr[!duplicated(var, )][tmp, on = "var"] ## add eur
 tmp <- uk_bt[!duplicated(var, )][tmp, on = "var"] ## add uk
 tmp <- google_bt[!duplicated(var, )][tmp, on = "var"] ## add googled
+tmp <- vittrup_bt[tmp, on = "var"] ## add vittrup
 
 ## todo: calculate numeric bg in ros and eur with one decimal place
 
@@ -695,7 +710,7 @@ varnames_temp <- c(
 )
 names(tmp) <- query_label(names(tmp), varnames_temp)
 
-tmp <- tmp[, .(var, bg_anfic, bg_eur, bg_uk, bg_ros, bg_google)]
+tmp <- tmp[, .(var, bg_anfic, bg_eur, bg_uk, bg_ros, bg_google, bgr_vittrup)]
 ## Note: gdd ros deviates somewhat, not kept here
 tmp[var == "margit", ]
 tmp[var == "hedelfinger", ]

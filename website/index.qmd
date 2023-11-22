@@ -17,6 +17,6 @@ Genus (släkte): _Prunus_ (plommon, körsbär mfl)<br><br>Subgenus (undersläkte
 
 <!-- Note: ../../dropbox/   works for github pages -->
 
-Pollination av körsbärsträd är komplicerat, de behöver en partner som är kompatibel och blommar samtidigt. Bakgrunden till detta förklaras i avsnitten om [pollination](pollination_about.qmd) och [blomning](blooming.qmd).
+för att körsbärsträd skall kunna pollineras behöver de flesta sorter en partner som är kompatibel och blommar samtidigt. Bakgrunden till detta förklaras i avsnitten om [pollination](pollination_about.qmd) och [blomning](blooming.qmd).
 
 <!-- Bilder på denna hemsida är publicerade med Creative Commons -licens: [CC BY-SA 4.0 Deed](https://creativecommons.org/licenses/by-sa/4.0/deed.en). -->

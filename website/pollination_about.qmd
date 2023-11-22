@@ -4,7 +4,7 @@ title: "Pollination"
 
 ::: {layout-ncol=2}
 
-Nedan föjer en sammanfattning om vad pollination är och en fördjupning om hur det fungerar för körsbärsträd.<br><br>Många _sötkörsbär_ kan inte befruktas av individer från samma sort utan käver pollen från en annan sort för att bära frukt. För att detta skall vara möjligt måste de båda sorterna vara genetiskt kompatibla. Dessutom behöver de blomma samtidigt. 
+Nedan föjer en sammanfattning om vad pollination är och en fördjupning om hur det fungerar för körsbärsträd.<br><br>Många _sötkörsbär_ kan inte befruktas av individer från samma sort utan käver pollen från en annan sort för att bära frukt. För att detta skall vara möjligt måste de båda sorterna vara genetiskt kompatibla. Dessutom behöver deras blomningstid överlappa. 
 
 ![Humla på körsbärsblomma](../../dropbox/images/plants/pollination_bumblebee.jpg){width=40%}
 
@@ -23,7 +23,7 @@ Hos vissa arter kan individerna befrukta sig själva, vissa kräver att pollen k
 
 Vardagligt brukar man med "korspollination" mena att en viss sort av körsbär (tex _Prunus avium_ 'Merton Glory') måste pollineras av en annan sort (tex _Prunus avium_ 'Allmän gulröd bigarrå') för att bära frukt. Dessa sorter kallas ibland "självsterila". Se sidan om [terminologi](terminology.qmd) för detaljer.
 
-En sort som _kan_ pollineras av samma sort brukar kallas "självfertil" (tex _Prunus avium_ 'Stella'). De flesta surkörsbär är självfertila. Skörd och kvalitet brukar dock bli bättre även för dessa sorter om de pollineras av andra sorter.
+En sort som _kan_ pollineras av samma sort brukar kallas "självfertil" (tex _Prunus avium_ 'Stella'). De flesta surkörsbär är självfertila. Skörd och kvalitet brukar dock bli bättre även för dessa sorter om de pollineras av andra sorter (ca 10-15% mer frukt).
 
 ## Grundläggande begrepp
 
