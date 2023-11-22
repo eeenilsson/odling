@@ -19,7 +19,7 @@ För att en sort skall kunna pollinera en annan behöver de blomma samtidigt (gi
 
 ## När blommar det?
 
-Tittar man på forskningsdata från Ullensvang i Norge startade blomningen där för sötkörsbär vanligen 6-14 maj (intervall 20 april till 22 maj beroende på år och sort). Blomningens varaktighet för ett körsbärsträd var där vanligen 9-16 dagar (intervall 7 till 19 dagar). Tar man med data från andra länder och justerar för odlingsplats och år ser man att för 80% av sorterna ligger start av blomningstiden inom ett spann på ca 9 dagar från varandra och blomningen varar 6-9 dagar. 
+Tittar man på forskningsdata från Ullensvang i Norge startade blomningen där för sötkörsbär vanligen 6-14 maj (intervall 20 april till 22 maj beroende på år och sort). Blomningens varaktighet för ett körsbärsträd var där vanligen 9-16 dagar (intervall 7 till 19 dagar). Tar man med data från andra länder och justerar för odlingsplats och år ser man att för 80% av sorterna ligger start av blomningstiden inom ett spann på ca 9 dagar från varandra och blomningen varar 17-19 dagar. 
 
 Låga temperaturer kan fördröja start av blomningen, särskilt hos senblommande sorter. Faktorer som ålder, grundstam, närings- och vattentillgång, temperatur mm kan påverka varaktigheten av blomningen och det är tänkbart att olilka sorter påverkas olika av detta.
 
@@ -43,13 +43,15 @@ I @fig-btstartros visas skillnad i start av blomning för olika sorter (data fr�
 
 En dansk studie (Vittrup 1998) av ett stort antal (kring 100 st) sorter visade att alla sorter _i medeltal_ överlappade i blomningstid minst fem dagar, men att detta varierade från år till år. Författarna menar att det främst är de sorter som blommar allra tidigast och senast som man ej kan anta att blomningstiderna sammanfaller tillräckligt för pollination under vissa år.
 
+![Vittrup 1998. Blomningstid. Medelvärden för start, full blomning (markerad med en prick) och blomningens längd. På x-axeln anges antal dagar från start av blomning för den tidigaste sorten. Tidpunkten fyra dagar efter full blomning är markerad med ett streck.](../../dropbox/images/plants/plot_vittrup_bt.png)
+
 <!-- https://www.ishs.org/ishs-article/423_4 Vittrup1996.pdf2  -->
 <!-- "The potential of cross pollination in sweet cherry with regard to overlap of the flowering period was analysed on the basis of flowering records collected over 20 years. The limit for sufficient overlap was fixed at one fourth of the total flowering period for all cultivars with a minimum of 4 days. Based upon average data all cultivars seem to be mutual pollinators. -->
 <!-- However, the annual variation in overlap is considerable and should be given more attention. Even when this variation is taken into account almost all varieties overlap sufficiently in every year, but precautions should be taken with the earliest and the latest flowering cultivars. It is also shown that even the mean flowering dates over 10 years deviate considerably from those collected over 20 years. The total flowering period for all cultivars varied from 13 to 38 days." -->
 
 I figuren nedan visas medelvärden för tid till start (10% av blommorna öppna), full blomning och blomningens slut (då alla blomblad fallit av) i europeiska data (se Wenden 2016). Dessa har justerats för ort och år. Som kan ses överlappar blomningstiderna även för de relativt tidigblommande sorterna (tex Lapins) och de senblommande (tex Regina). Antar man att en blomma är öppen i tre till fem dagar bör den effektiva blomningstiden dock upphöra redan tre till fem dagar efter full blomning. Antar man att det behövs kring fem dagars överlappning kan 'Lapins' enligt dessa resultat precis hinna pollinera 'Regina' om de blommar som de i medeltal gör.
 
-![Blomningstid. Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år. På x-axeln anges antal dagar från start av blomning för den tidigaste sorten.](../../dropbox/images/plants/plot_eur_bt.png)
+![Blomningstid. Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år. På x-axeln anges antal dagar från start av blomning för den tidigaste sorten. Tidpunkten fyra dagar efter full blomning är markerad med ett streck.](../../dropbox/images/plants/plot_eur_bt.png)
 
 
 <!-- Tidig -->

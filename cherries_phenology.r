@@ -379,7 +379,60 @@ lm_bt_start_full <- data.table(var = names(lm_bt_start_full),
            coef = lm_bt_start_full)
 lm_bt_start_full[, var := gsub(".Intercept.", "intercept", var)]
 
-## for plotting etc
+## Select two largest sites in France (n > 1000) -------
+## summary(as.factor(eur_bt$country))
+tmp <- eur_bt[country == "France", ]
+summary(as.factor(tmp$site))
+tmp <- eur_bt[site == "Toulenne"|site == "Balandran", ]
+m1 <- lm(bt_start ~ var + site + year, data = tmp)
+## Note: Balandran 1 day earlier start (p signif)
+tmp[, age := as.numeric(as.character(year)) - as.numeric(plantation)]
+tmp <- tmp[, .(var, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity, year, age, site)]
+tmp[, site := as.numeric(site == "Balandran")]
+myfun <- function(x){mean(x, na.rm = TRUE)}
+## collapse to one row per var:
+tmp <- tmp[, lapply(.SD, myfun), by=c("var", "year", "site")] 
+sum(tmp[var == "burlat", year] %in% unique(tmp$year) == FALSE) ## Note: burlat in all years
+tmp[, yearsite := paste0(as.character(year), as.character(site))]
+look <- tmp[var == "burlat", .(yearsite, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity)]
+names(look)[-1] <- paste0("burlat_", names(look)[-1])
+tmp <- look[tmp, on = "yearsite"] ## add burlat as reference
+## calculate times relative to burlat:
+tmp[, relative_start := bt_start - burlat_bt_start]
+tmp[, relative_full := bt_full - burlat_bt_full]
+tmp[, relative_end := bt_end - burlat_bt_end]
+tmp[, relative_duration := bt_duration - burlat_bt_duration]
+tmp[, relative_start_to_full := bt_start_to_full - burlat_bt_start_to_full]
+tmp[, relative_maturity := beginning_of_maturity - burlat_beginning_of_maturity]
+tmp <- tmp[, .(var, year, site, relative_start, relative_full, relative_end, relative_duration, relative_start_to_full, relative_maturity)]
+tmp[relative_start == "NaN", var]
+tmp[var == "sam", ]
+site1 <- tmp[site == 1 & relative_start != "NaN", ]
+unique(site1$var)[!unique(site1$var) %in% unique(na.omit(site1)$var)] ## lost if na.omit (uncommon vars)
+site0 <- tmp[site == 0 & relative_start != "NaN", ]
+unique(site0$var)[!unique(site0$var) %in% unique(na.omit(site0)$var)] ## lost if na.omit (early_rivers and montmerency lost)
+
+tmp[, varyear := paste0(as.character(var), as.character(year))]
+sites <- tmp[relative_start != "NaN", ]
+check <- unique(sites$varyear)[!unique(sites$varyear) %in% unique(na.omit(sites)$varyear)]
+check <- gsub("[0-9]", "", check)
+summary(as.factor(check))
+
+na.omit(sites)
+
+tmp[, lapply(.SD, myfun), by=c("var", "year", "site")] 
+
+
+
+unique(tmp[var == "burlat", .(var, bt_start, year)])
+tmp[, burlat_start := min(bt_start)]
+
+m1 <- lm(bt_start ~ var + year, data = tmp)
+summary(tmp$var)
+summary(m1)
+unique(tmp$cultivar)
+
+## for plotting etc ---------------
 eur_lm_bt_start <- lm_bt_start
 eur_lm_bt_start[, var := gsub("^var", "", var)]
 names(eur_lm_bt_start) <- c("var", "coef_bt_start")
@@ -390,6 +443,11 @@ eur_lm_bt_duration <- data.table(var = names(eur_lm_bt_duration),
 eur_lm_bt_duration[, var := gsub(".Intercept.", "intercept", var)]
 eur_lm_bt_duration[, var := gsub("^var", "", var)]
 names(eur_lm_bt_duration) <- c("var", "coef_bt_duration")
+duration_intercept <- eur_lm_bt_duration[var == "intercept", ][, 2][[1]]
+tmp <- eur_lm_bt_duration[!grepl("^year|^site|intercept$", var)]
+tmp[, coef_bt_duration := coef_bt_duration + duration_intercept]
+summary(tmp)
+quantile(tmp$coef_bt_duration, prob = seq(0,1,0.1))
 
 lm_bt_start_full[, var := gsub(".Intercept.", "intercept", var)]
 lm_bt_start_full[, var := gsub("^var", "", var)]
@@ -458,6 +516,7 @@ summary(eur_toplot)
 summary(eur_bt$flowering_duration)
 
 eur_toplot[, var := query_label(var, varnames3)]
+eur_toplot[, fullplus4 := full+4]
 
 ## plot base
 p <- ggplot(eur_toplot, aes(x = fct_reorder(var, -start), y = full)) + coord_flip()
@@ -474,7 +533,8 @@ p <- p + theme(
           )
 ## p <- p + labs(title="Blomningstid: Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år.",
 ##              y = "Dagar (från tidigaste sortens blomningsstart)")
-p
+
+p + geom_point(aes(y = fullplus4), shape = 3, size = 3) ## add slash at 4 days after full bloom (assumed end of fertility)
 
 ggsave(
   "plot_eur_bt.png",
@@ -654,6 +714,41 @@ ull_bt[, test_start_date := as.Date(test_start_date, format = "%Y-%m-%d")]
 ## Sam, Frogmore och regina sena; knauff tidig
 vittrup_bt <- fread("bt_vittrup.csv")
 vittrup_bt[, bgr_vittrup := start/2]
+
+vittrup_bt[, end := start + duration -1]
+vittrup_bt[, fullplus4 := full + 4]
+vittrup_bt[, var := query_label(var, varnames3)]
+
+## plot vittrup
+p <- ggplot(vittrup_bt, aes(x = fct_reorder(var, -start), y = end)) + coord_flip()
+p <- p + geom_errorbar(aes(ymin = start, ymax = end), width = 0.2)
+p <- p + scale_y_continuous(breaks = 0:27)
+p <- p + theme(
+        ## axis.ticks.y=element_blank(),
+        panel.grid.minor.x = element_blank(),
+        ## axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.text=element_text(size=24),
+        plot.title = element_text(size = 16, face="bold")
+          )
+
+p <- p + geom_point(aes(y = full), size = 2) 
+p + geom_point(aes(y = fullplus4), shape = 3, size = 3) ## add slash at 4 days after full bloom (assumed end of fertility)
+
+ggsave(
+  "plot_vittrup_bt.png",
+  plot = last_plot(),
+  device = NULL,
+  path = "../dropbox/images/plants/",
+  scale = 1,
+  width = 16.6,
+  height = 8.86,
+  units = c("in", "cm", "mm", "px"),
+  dpi = 300,
+  limitsize = TRUE,
+  bg = NULL
+)
 
 ## google on missing ones -----
 
