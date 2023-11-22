@@ -1,20 +1,28 @@
 ## Select two largest sites in France (n > 1000) -------
 ## summary(as.factor(eur_bt$country))
-## tmp <- eur_bt[country == "France", ]
-tmp <- eur_bt[site == "Toulenne"|site == "Balandran", ]
-tmp[, age := as.numeric(as.character(year)) - as.numeric(plantation)]
-tmp <- tmp[!is.na(age), ]
-tmp <- tmp[!age<3, ]
-## summary(as.factor(tmp$site))
-nam <- tmp[, .(var, cultivar)] ## names
+## dtafra <- eur_bt[country == "France", ]
+dtafra <- eur_bt[site == "Toulenne"|site == "Balandran", ]
+dtafra[, age := as.numeric(as.character(year)) - as.numeric(plantation)]
+dtafra <- dtafra[!is.na(age), ]
+
+dtafra <- dtafra[!age<3, ]
+dtafra <- dtafra[var != "cristobalina" | year != 1993 | flowering_duration != 20, ] ## outlier rm
+## dtafra <- dtafra[as.numeric(as.character(year)) < 1996, ] ## remove years before 1996 to make data more homogenous
+dtafra$year <- factor(dtafra$year)
+dtafra$site <- factor(dtafra$site)
+
+## summary(as.factor(dtafra$site))
+nam <- dtafra[, .(var, cultivar)] ## names
 
 ## model non-relative
-m1 <- lm(bt_start ~ var + site + year + age, data = tmp)
+## summary(lm(bt_start ~ var + age, data = dtafra))
+m1 <- lm(bt_start ~ var + site + year + age, data = dtafra)
+summary(m1)
 s1 <- summary(m1)$coef
 mean_start <- s1[row.names(s1) == "(Intercept)", ]["Estimate"][[1]]
 format(as.Date(as.Date("1985-01-01") + mean_start), "%m-%d")
 summary(m1)
-summary(tmp$age)
+summary(dtafra$age)
 summary(s1[grepl("^age", row.names(s1)), "Estimate"])
 summary(s1[grepl("^site", row.names(s1)), "Estimate"])
 summary(s1[grepl("^var", row.names(s1)), "Estimate"])
@@ -23,13 +31,13 @@ summary(s1[grepl("^year", row.names(s1)), "Estimate"])
 quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
 
 ## descriptive
-summary(tmp$bt_start_to_full)
-quantile(tmp$bt_start_to_full, prob = seq(0,1,0.1), na.rm = TRUE)
-summary(tmp$bt_duration)
-quantile(tmp$bt_duration, prob = seq(0,1,0.1), na.rm = TRUE)
+summary(dtafra$bt_start_to_full)
+quantile(dtafra$bt_start_to_full, prob = seq(0,1,0.1), na.rm = TRUE)
+summary(dtafra$bt_duration)
+quantile(dtafra$bt_duration, prob = seq(0,1,0.1), na.rm = TRUE)
 
 ## model start to full
-m1 <- lm(bt_start_to_full ~ var + site + year + age, data = tmp)
+m1 <- lm(bt_start_to_full ~ var + site + year + age, data = dtafra)
 s1 <- summary(m1)$coef
 summary(s1[grepl("^age", row.names(s1)), "Estimate"])
 summary(s1[grepl("^site", row.names(s1)), "Estimate"])
@@ -39,7 +47,7 @@ summary(s1[grepl("^year", row.names(s1)), "Estimate"])
 quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
 
 ## model duration
-m1 <- lm(bt_duration ~ var + site + year + age, data = tmp)
+m1 <- lm(bt_duration ~ var + site + year + age, data = dtafra)
 s1 <- summary(m1)$coef
 summary(s1[grepl("^age", row.names(s1)), "Estimate"])
 summary(s1[grepl("^site", row.names(s1)), "Estimate"])
@@ -49,19 +57,19 @@ summary(s1[grepl("^year", row.names(s1)), "Estimate"])
 quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
 
 ## Note: Balandran 1 day earlier start (p signif)
-tmp <- tmp[, .(var, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity, year, age, site)]
-tmp[, site := as.numeric(site == "Balandran")]
+dtafra <- dtafra[, .(var, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity, year, age, site)]
+dtafra[, site := as.numeric(site == "Balandran")]
 myfun <- function(x){mean(x, na.rm = TRUE)}
 ## collapse to one row per var:
-tmp <- tmp[, lapply(.SD, myfun), by=c("var", "year", "site")] 
-sum(tmp[var == "burlat", year] %in% unique(tmp$year) == FALSE) ## Note: burlat in all years
-tmp[, yearsite := paste0(as.character(year), as.character(site))]
-look <- tmp[var == "burlat", .(yearsite, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity)]
+dtafra <- dtafra[, lapply(.SD, myfun), by=c("var", "year", "site")] 
+sum(dtafra[var == "burlat", year] %in% unique(dtafra$year) == FALSE) ## Note: burlat in all years
+dtafra[, yearsite := paste0(as.character(year), as.character(site))]
+look <- dtafra[var == "burlat", .(yearsite, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity)]
 names(look)[-1] <- paste0("burlat_", names(look)[-1])
-tmp <- look[tmp, on = "yearsite"] ## add burlat as reference
+dtafra <- look[dtafra, on = "yearsite"] ## add burlat as reference
 
 ## calculate times relative to burlat:
-relative <- tmp
+relative <- dtafra
 relative[, start := bt_start - burlat_bt_start]
 relative[, full := bt_full - burlat_bt_start]
 relative[, end := bt_end - burlat_bt_start]
@@ -137,23 +145,87 @@ out
 
 ## Note: relative start affected by year
 
+## ## collapse sites
+## myfun <- function(x){mean(x, na.rm = TRUE)}
+## ## collapse to one row per var:
+## relative <- relative[, lapply(.SD, myfun), by=c("var", "year")] 
+
+## ## explore age
+## summary(lm(start ~age + var, data = relative))
+## summary(lm(bt_start ~age + var + site + year, data = dtafra))
+## relative[, age_tertile := cut(age, breaks = quantile(age, probs = seq(0, 1, 1/3), na.rm = TRUE), include.lowest = TRUE)  ]
+## plot(start ~ age_tertile, data = relative)
+## summary(lm(start ~ age_tertile, data = relative))
+
+plot(bt_start ~ year, data = dtafra)
+
+## add type of year
+yeartype <- dtafra[, median(bt_start, na.rm = TRUE), by = "year"]
+names(yeartype) <- c("year", "mdn")
+yeartype[, yrtype := cut(mdn, breaks = quantile(mdn, probs = seq(0, 1, 1/3), na.rm = TRUE), include.lowest = TRUE)]
+
+yeartype$yrtype <-  factor(as.numeric(yeartype$yrtype), levels = 1:3, labels = c("early", "medium", "late"))
+yeartype <- yeartype[, .(year, yrtype)]
+relative <- yeartype[relative, on = "year"]
+summary(lm(full ~ yrtype + var + site + age, data = relative)) ## late years -1 day
+summary(lm(duration ~ yrtype + var + site + age, data = relative)) ## late years -1.8 days
+summary(lm(maturity ~ yrtype + var + site + age, data = relative)) ## late years +4d
+
+## aggregate, keeping year and var
+rel <- relative[, .(var, year, start, full, end, duration, maturity)]
+## collapse sites
+myfun <- function(x){mean(x, na.rm = TRUE)}
+## collapse to one row per var:
+rel <- rel[, lapply(.SD, myfun), by=c("var", "year")] 
+
+## assume fertilization possible from start to full + 4d
+rel[, fert := full + 4]
+
+plot(start ~ year, data = relative)
+
+
+summary(lm(start ~ year, data = relative))
+
+## summary(lm(age ~ var, data = dtafra))
+
+
+plot(bt_start ~year, data = dtafra)
+
+agebyvar <- dtafra[, mean(age), by = "var"]
+names(agebyvar) <- c("var", "age")
+q1 <- quantile(agebyvar$age, 0.05)[[1]]
+q9 <- quantile(agebyvar$age, 0.95)[[1]]
+
+agebyvar[age < q1 | age > q9, var]
+agebyvar[var == "margit", ]
+
+dtafra[, mean(age), by = "var"]
+
 ## predict -------
 str(relative)
 
-training <- relative[, .(start, var, site, year, age)]
-training <- na.omit(training)
-m1 <- lm(start ~ var + site + year + age, data = training)
-test <- training
-test[, age := median(test$age, na.rm = TRUE)]
-test[, site := 1] ## Balandran
-test <- na.omit(test[, .(var, site, year, age)])
+## tmp <- names(summary(relative$var))[summary(relative$var) > 30]
+## tmp <- tmp[-length(tmp)]
+## train <- na.omit(relative[grepl(paste0(tmp, collapse = "|"), var), .(start, var, site, year, age)])
+
+train <- na.omit(relative[, .(start, var, site, year, age)])
+str(train)
+m1 <- lm(start ~ var + site, year + age, data = train)
+summary(m1)
+test <- train  ## [, .(var, year, age)]
+test <- na.omit(test)
+test$age = median(test$age, na.rm = TRUE)
+## test$site = 1 ## Balandran
+## test <- na.omit(test[, .(var, site, year, age)])
 m1$xlevels[["year"]] <- union(m1$xlevels[["year"]], levels(test$year))
 m1$xlevels[["var"]] <- union(m1$xlevels[["var"]], levels(test$var))
-test$year <- factor(test$year)
-test$var <- factor(test$var)
+## test$year <- factor(test$year)
+## test$var <- factor(test$var)
 ## Note: Works with na.omit in test
-test$start_relative <- predict(m1, test, type="response")
 
+## names(test) <- names(train)[-1]
+test$start_relative <- predict(m1, test, type="response")
+relative
 
 
 ## plot
@@ -178,10 +250,6 @@ p + geom_point(aes(y = fullplus4), shape = 3, size = 3) ## add slash at 4 days a
 
 
 
-## collapse sites
-myfun <- function(x){mean(x, na.rm = TRUE)}
-## collapse to one row per var:
-relative <- relative[, lapply(.SD, myfun), by=c("var", "year")] 
 
 ## names
 varnames_infrance <- nam$cultivar
