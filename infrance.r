@@ -59,28 +59,30 @@ tmp[, yearsite := paste0(as.character(year), as.character(site))]
 look <- tmp[var == "burlat", .(yearsite, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity)]
 names(look)[-1] <- paste0("burlat_", names(look)[-1])
 tmp <- look[tmp, on = "yearsite"] ## add burlat as reference
+
 ## calculate times relative to burlat:
 relative <- tmp
 relative[, start := bt_start - burlat_bt_start]
-relative[, full := bt_full - burlat_bt_full]
-relative[, end := bt_end - burlat_bt_end]
-relative[, duration := bt_duration - burlat_bt_duration]
-relative[, start_to_full := bt_start_to_full - burlat_bt_start_to_full]
+relative[, full := bt_full - burlat_bt_start]
+relative[, end := bt_end - burlat_bt_start]
+relative[, duration := bt_duration]
+relative[, start_to_full := bt_start_to_full]
+relative[, duration_relative := bt_duration / burlat_bt_duration]
+relative[, start_to_full_relative := bt_start_to_full / burlat_bt_start_to_full]
 relative[, maturity := beginning_of_maturity - burlat_beginning_of_maturity]
-relative <- relative[, .(var, year, site, age, start, full, end, duration, start_to_full, maturity)]
+relative <- relative[, .(var, year, site, age, start, full, end, duration, start_to_full, maturity, duration_relative, start_to_full_relative)]
 
+p <- seq(0,1,0.1)
 m1 <- lm(start ~ var + site + year + age, data = relative)
 s1 <- summary(m1)$coef
 s1[grepl("^age", row.names(s1)), "Estimate"]
 s1[grepl("^site", row.names(s1)), "Estimate"]
-
-p <- seq(0,1,0.1)
 quantiles_start <- data.table(
     decile = p,
     year = quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = p),
     variety = quantile(s1[grepl("^var", row.names(s1)), "Estimate"], prob = p)
 )
-m1 <- lm(start_to_full ~ var + site + year + age, data = relative)
+m1 <- lm(start_to_full_relative ~ var + site + year + age, data = relative)
 s1 <- summary(m1)$coef
 s1[grepl("^age", row.names(s1)), "Estimate"]
 s1[grepl("^site", row.names(s1)), "Estimate"]
@@ -89,7 +91,7 @@ quantiles_start_to_full <- data.table(
     year = quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = p),
     variety = quantile(s1[grepl("^var", row.names(s1)), "Estimate"], prob = p)
 )
-m1 <- lm(duration ~ var + site + year + age, data = relative)
+m1 <- lm(duration_relative ~ var + site + year + age, data = relative)
 s1 <- summary(m1)$coef
 s1[grepl("^age", row.names(s1)), "Estimate"]
 s1[grepl("^site", row.names(s1)), "Estimate"]
@@ -108,8 +110,8 @@ quantiles_maturity <- data.table(
     variety = quantile(s1[grepl("^var", row.names(s1)), "Estimate"], prob = p)
 )
 names(quantiles_start) <- c("decile", "start_year", "start_variety")
-names(quantiles_start_to_full) <- c("decile2", "full_year", "full_variety")
-names(quantiles_duration) <- c("decile3", "duration_year", "duration_variety")
+names(quantiles_start_to_full) <- c("decile2", "full_relative_year", "full_relative_variety")
+names(quantiles_duration) <- c("decile3", "duration_relative_year", "duration_relative_variety")
 names(quantiles_maturity) <- c("decile4", "maturity_year", "maturity_variety")
 
 quant <- cbind(
@@ -135,22 +137,44 @@ out
 
 ## Note: relative start affected by year
 
-relative
+## predict -------
+str(relative)
 
-m1 <- lm(start ~ var + site + year + age, data = relative)
-
+training <- relative[, .(start, var, site, year, age)]
+training <- na.omit(training)
+m1 <- lm(start ~ var + site + year + age, data = training)
+test <- training
 test[, age := median(test$age, na.rm = TRUE)]
 test[, site := 1] ## Balandran
 test <- na.omit(test[, .(var, site, year, age)])
-
-str(test)
 m1$xlevels[["year"]] <- union(m1$xlevels[["year"]], levels(test$year))
 m1$xlevels[["var"]] <- union(m1$xlevels[["var"]], levels(test$var))
 test$year <- factor(test$year)
 test$var <- factor(test$var)
 ## Note: Works with na.omit in test
+test$start_relative <- predict(m1, test, type="response")
 
-test$pred <- predict(m1, test, type="response")
+
+
+## plot
+## plot base
+p <- ggplot(test, aes(x = fct_reorder(var, -start), y = full)) + coord_flip()
+p <- p + geom_point(size = 2) + geom_errorbar(aes(ymin = start, ymax = end), width = 0.2)
+p <- p + scale_y_continuous(breaks = 0:27)
+p <- p + theme(
+        ## axis.ticks.y=element_blank(),
+        panel.grid.minor.x = element_blank(),
+        ## axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.text=element_text(size=24),
+        plot.title = element_text(size = 16, face="bold")
+          )
+## p <- p + labs(title="Blomningstid: Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år.",
+##              y = "Dagar (från tidigaste sortens blomningsstart)")
+
+p + geom_point(aes(y = fullplus4), shape = 3, size = 3) ## add slash at 4 days after full bloom (assumed end of fertility)
+
 
 
 
