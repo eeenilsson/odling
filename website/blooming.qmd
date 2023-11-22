@@ -112,6 +112,40 @@ Figuren nedan visar hur stor andel av åren 1991-2023 vars sista frost kom på e
 <!-- karlberg-e-hiltunen-nilsen-a-20230502.pdf forskningsöversikt mm-->
 <!-- https://stud.epsilon.slu.se/18809/1/karlberg-e-hiltunen-nilsen-a-20230502.pdf -->
 
+## Analys av blomningstid
+
+Data från två platser i Frankrike (Toulenne och Balandran) valdes ut från de data som användes i artikeln av Wenden 2016. Om en viss sort fanns registrerad under mer än ett år per plats togs medelvärdet per sort och plats. registreringar fanns för åren 1981-2015 (ej alla sorter varje år) och för ca 170 sorter.
+
+Medelvärdet för blomningstidens start var den 25 april. Tiden till full blomning var noterad till 0-20 dagar (Mdn 7.4, IQR 6-9) men 4-10 dagar i 80% av fallen. Blomningens varaktighet var noterad till 1-35 dagar (Mdn 13, IQR 11-16 dagar) men 8-19 dagar i 80% av fallen.
+
+Först beräknades effekten av år, plats och trädets ålder (justerat för varandra samt för sort). Data som saknade uppgifter om trädets ålder (n = 64) eller där åldern var <3 år (n = 1012) togs bort, vilket lämnade n = 6009 datapunkter. Blomningens start var i medeltal en dag tidigare i Balandran än Toulenne och tiden från start till full blomning liksom blomningens varaktighet tre dagar kortare. 
+
+Trädets ålder: Trädens ålder var 3-13 år (Mdn 5, IQR 4-7) och effekten på blomingstidens start var 0.4 dagar tidigare per år > 3. Det fanns ingen effekt av ålder på tiden från start till full blomning eller blomningens varaktighet.
+
+Sort: Effekten av sort var mellan 19 dagar tidigare- och 13 dagar senare start av blomning (Mdn 0.9, IQR -1 till 4), men för 80% av sorterna var spannet 4 dagar tidigare till 7 dagar senare än medelvärdet. Tiden från start till full blomning (medelvärde = 10 dagar) varierade upp till 5 dagar mellan sorterna (men endast 2 dagar för 80 % av sorterna). Blomningens varaktighet (M 18) varierade upp till 8 dagar mellan sorterna (men tre dagar för 80% av sorterna).
+
+År: Medelvärdet för blomningstidens start varierade i ett spann på ca 30 dagar mellan åren (17 dagar för 80% av åren), tiden till full blomning inom ett spann på 7 dagar (4 dagar för 80 % av åren) och varaktigheten med 10 dagar (9 dagars variation för 80 % av åren).
+
+Sammanfattningsvis kan sägas att blomningstidens start är tidigare för äldre träd (kanske upp till en vecka tidigare för träd som är kring 10 år jämfört med 3 år gamla), och att för 80% av sorterna startar blomningen i medeltal inom 11 dagar från varandra, vanligen med full blomning inom 9-11 dagar och en varaktighet på omkring 16-20 dagar beroende på sort. Medelvärdet för både start, tid till full blomning och blomningens varaktighet varierar dock relativt mycket från år till år. Detta betyder att information om tex blomningstidens längd för en viss sort i jämförelser beror mycket på vilket år information för den sorten registrerats.
+
+För att närmare undersöka effekten av sort beräknades sedan tiden för blomning och mognad relativt startdatum respektive varaktighet för sorten "Burlat" (somm fanns registrerad för samtliga år).
+
+Effekten på medelvärdet för de olika parametrarna var enligt följande (min till max med 80% av fallen inom parentes):
+
+- Blomningens start relativt 'Burlat': Variation i medelvärdet beroende på år -13 till 24 dagar (-3.5 till 14 dagar för 80% av åren); sort -9.3 till 36 (3.4 till 28).
+
+- Tid till full blomning: År -1 till 1.1 (-0.74 till 0.68); sort -2.4 till 3.8 (-0.75 till 1.2).
+
+- Varaktighet: År -2.3 till 2.8 (-0.97 till 1.1); sort -3 till 4.4 (-0.84 till 2).
+
+- Mognad: År -13 till 24 (-3.5 till 14); sort -9.3 till 36 (3.4 till 28)" 
+
+Ålder hade effekt på: Relativ start av blomningen (-0.4) men ej på de övriga parametrarna.
+
+Plats hade (liten) effekt på: Relativ tid till full blomning (-0.7), relativ varaktighet (-0.5), och relativ mognad (+3).
+
+För start av blomningstid 
+
 
 <!-- ## Scientific papers -->
 

@@ -379,46 +379,22 @@ lm_bt_start_full <- data.table(var = names(lm_bt_start_full),
            coef = lm_bt_start_full)
 lm_bt_start_full[, var := gsub(".Intercept.", "intercept", var)]
 
-## Select two largest sites in France (n > 1000) -------
-## summary(as.factor(eur_bt$country))
-tmp <- eur_bt[country == "France", ]
-summary(as.factor(tmp$site))
-tmp <- eur_bt[site == "Toulenne"|site == "Balandran", ]
-m1 <- lm(bt_start ~ var + site + year, data = tmp)
-## Note: Balandran 1 day earlier start (p signif)
-tmp[, age := as.numeric(as.character(year)) - as.numeric(plantation)]
-tmp <- tmp[, .(var, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity, year, age, site)]
-tmp[, site := as.numeric(site == "Balandran")]
-myfun <- function(x){mean(x, na.rm = TRUE)}
-## collapse to one row per var:
-tmp <- tmp[, lapply(.SD, myfun), by=c("var", "year", "site")] 
-sum(tmp[var == "burlat", year] %in% unique(tmp$year) == FALSE) ## Note: burlat in all years
-tmp[, yearsite := paste0(as.character(year), as.character(site))]
-look <- tmp[var == "burlat", .(yearsite, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity)]
-names(look)[-1] <- paste0("burlat_", names(look)[-1])
-tmp <- look[tmp, on = "yearsite"] ## add burlat as reference
-## calculate times relative to burlat:
-tmp[, relative_start := bt_start - burlat_bt_start]
-tmp[, relative_full := bt_full - burlat_bt_full]
-tmp[, relative_end := bt_end - burlat_bt_end]
-tmp[, relative_duration := bt_duration - burlat_bt_duration]
-tmp[, relative_start_to_full := bt_start_to_full - burlat_bt_start_to_full]
-tmp[, relative_maturity := beginning_of_maturity - burlat_beginning_of_maturity]
-tmp <- tmp[, .(var, year, site, relative_start, relative_full, relative_end, relative_duration, relative_start_to_full, relative_maturity)]
-tmp[relative_start == "NaN", var]
-tmp[var == "sam", ]
-site1 <- tmp[site == 1 & relative_start != "NaN", ]
-unique(site1$var)[!unique(site1$var) %in% unique(na.omit(site1)$var)] ## lost if na.omit (uncommon vars)
-site0 <- tmp[site == 0 & relative_start != "NaN", ]
-unique(site0$var)[!unique(site0$var) %in% unique(na.omit(site0)$var)] ## lost if na.omit (early_rivers and montmerency lost)
+## analyze for two sites in france
+source("infrance.r")
 
-tmp[, varyear := paste0(as.character(var), as.character(year))]
-sites <- tmp[relative_start != "NaN", ]
-check <- unique(sites$varyear)[!unique(sites$varyear) %in% unique(na.omit(sites)$varyear)]
-check <- gsub("[0-9]", "", check)
-summary(as.factor(check))
-
-na.omit(sites)
+## ## omit na?
+## ## Note: Too many year-var combinations lost
+## tmp[relative_start == "NaN", var]
+## tmp[var == "sam", ]
+## site1 <- tmp[site == 1 & relative_start != "NaN", ]
+## unique(site1$var)[!unique(site1$var) %in% unique(na.omit(site1)$var)] ## lost if na.omit (uncommon vars)
+## site0 <- tmp[site == 0 & relative_start != "NaN", ]
+## unique(site0$var)[!unique(site0$var) %in% unique(na.omit(site0)$var)] ## lost if na.omit (early_rivers and montmerency lost)
+## tmp[, varyear := paste0(as.character(var), as.character(year))]
+## sites <- tmp[relative_start != "NaN", ]
+## check <- unique(sites$varyear)[!unique(sites$varyear) %in% unique(na.omit(sites)$varyear)]
+## check <- gsub("[0-9]", "", check)
+## summary(as.factor(check))
 
 tmp[, lapply(.SD, myfun), by=c("var", "year", "site")] 
 
