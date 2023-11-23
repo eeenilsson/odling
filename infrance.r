@@ -168,9 +168,9 @@ yeartype[, yrtype := cut(mdn, breaks = quantile(mdn, probs = seq(0, 1, 1/3), na.
 yeartype$yrtype <-  factor(as.numeric(yeartype$yrtype), levels = 1:3, labels = c("early", "medium", "late"))
 yeartype <- yeartype[, .(year, yrtype)]
 relative <- yeartype[relative, on = "year"]
-summary(lm(full ~ yrtype + var + site + age, data = relative)) ## late years -1 day
-summary(lm(duration ~ yrtype + var + site + age, data = relative)) ## late years -1.8 days
-summary(lm(maturity ~ yrtype + var + site + age, data = relative)) ## late years +4d
+## summary(lm(full ~ yrtype + var + site + age, data = relative)) ## late years -1 day
+## summary(lm(duration ~ yrtype + var + site + age, data = relative)) ## late years -1.8 days
+## summary(lm(maturity ~ yrtype + var + site + age, data = relative)) ## late years +4d
 
 ## aggregate, keeping year and var
 rel <- relative[, .(var, year, start, full, end, duration, maturity)]
@@ -193,7 +193,7 @@ rel[["var"]] <- as.character(rel[["var"]])
 rel[["year"]] <- as.character(rel[["year"]])
 rel <- rel[, .(var, year, start, fert)]
 
-## loop over years TODO ---
+## loop over years ---
 
     ## overlap fun
     overlap <- function(astart, aend, bstart, bend, criteria = NULL){
@@ -235,10 +235,11 @@ rel <- rel[, .(var, year, start, fert)]
     ## i <- 2
 
 allyears <- c()
+allyears_days <- c()
 
 for(yr in unique(rel[["year"]])){
-
     thisyear <- rel[year == yr, ]
+    
     ## add missing var with NA
     addthis <- rel[!grepl(paste0(thisyear[["var"]], collapse = "|"), var), ]
     addthis[, year := yr]
@@ -247,14 +248,19 @@ for(yr in unique(rel[["year"]])){
     addthis <- unique(addthis)
     thisyear <- rbind(thisyear, addthis)
     
-## make a df to add cols
-newcols <- as.data.table(matrix(nrow = nrow(thisyear), ncol = nrow(thisyear)+1))
-names(newcols) <- c("var", thisyear$var)
-cols <- names(newcols)
-newcols_mod <- newcols[ , (cols) := lapply(.SD, as.character), .SDcols = cols]
-newcols_mod$var <- thisyear$var
-thisyear <- newcols_mod[thisyear, on = "var"]
+    ## make a df to add cols
+    newcols <- as.data.table(matrix(nrow = nrow(thisyear), ncol = nrow(thisyear)+1))
+    names(newcols) <- c("var", thisyear$var)
+    cols <- names(newcols)
+    newcols_mod <- newcols[ , (cols) := lapply(.SD, as.numeric), .SDcols = cols] ## changed from "as.charecter"
+    newcols_mod$var <- thisyear$var
+    thisyear <- newcols_mod[thisyear, on = "var"]
+    
+    ## newcols_mod_days <- newcols_mod
+    ## names(newcols_mod_days)[-1] <- paste0(names(newcols_mod_days)[-1], "_days")
+    thisyear_days <- newcols_mod[thisyear, on = "var"]
 
+    ## test
     ## overlap(thisyear[var == varn, start],
     ##         thisyear[var == varn, fert],
     ##         thisyear[i, start],
@@ -263,79 +269,93 @@ thisyear <- newcols_mod[thisyear, on = "var"]
     for(i in 1:nrow(thisyear)){ ## loop over rows
 
         for(varn in thisyear$var){ ## loop over cols
-        ## get genotype of column name
-             ## thisyear[i, (varn) := thisyear[var == varn, genotype]]  
-        ## get compatibility value of column name
-                thisyear[i, (varn) := overlap(thisyear[var == varn, start],
-            thisyear[var == varn, fert],
-            thisyear[i, start],
-            thisyear[i, fert],
-            criteria = 4)
-                         ]
-}
+            ## get genotype of column name
+            ## thisyear[i, (varn) := thisyear[var == varn, genotype]]  
 
-}
+            ## get compatibility value of column name
+            thisyear[i, (varn) := overlap(thisyear[var == varn, start],
+                                          thisyear[var == varn, fert],
+                                          thisyear[i, start],
+                                          thisyear[i, fert],
+                                          criteria = 4)]
 
-    allyears <- rbind(allyears, thisyear, fill = TRUE)
+            ## get overlap in days
+            thisyear_days[i, (varn) := overlap(thisyear_days[var == varn, start],
+                                               thisyear_days[var == varn, fert],
+                                               thisyear_days[i, start],
+                                               thisyear_days[i, fert])]
+        }
+
     }
 
-setkey(allyears, start)
-cols <- c("var", "year", "start", newcols_mod$var)
-## dt[ , (cols) := lapply(.SD, "*", -1), .SDcols = cols]
-allyears <- allyears[, ..cols]
-cols <- newcols_mod$var
-allyears[ , (cols) := lapply(.SD, "sum"), .SDcols = cols]
+    allyears <- rbind(allyears, thisyear, fill = TRUE)
+    allyears_days <- rbind(allyears_days, thisyear_days, fill = TRUE)
+}
 
+## setkey(allyears, start)
+cols <- c("var", "year", "start", newcols_mod$var)
+allyears <- allyears[, ..cols]
+allyears_days <- allyears_days[, ..cols]
+cols <- newcols_mod$var
+## allyears[ , (cols) := lapply(.SD, "sum"), .SDcols = cols] ## redundant?
+
+## str(allyears)
 ## allyears[, ..cols]
 
 ## collapse to one row per var:
-myfun <- function(x){
-    x <- na.omit(x)
-    out <- x == 1/length(x)
-    out <- signif(out*100, digits = 2)
-    return(out)
-}
+## myfun <- function(x){
+##     x <- na.omit(x)
+##     out <- x == 1/length(x)
+##     out <- signif(out*100, digits = 2)
+##     return(out)
+## }
 myfun <- function(x){signif(mean(as.numeric(x), na.rm = TRUE), digits = 2)}
-tmp <- allyears[, lapply(.SD, myfun), by=c("var")] 
+toplot <- allyears[, lapply(.SD, myfun), by=c("var")] ## mean = prop
 ## todo: Exclude varieties tested less tha 3 yrs
-tmp$year <- NULL
-tmp$fert <- NULL
-
+toplot$year <- NULL
+toplot$fert <- NULL
 ## melt
+toplot <- melt(toplot, id.vars = c("var", "start"))
+toplot[, value := round(value*100, digits = 0)]
+
+## days overlap for labels
+myfun <- function(x){round(median(as.numeric(x), na.rm = TRUE), digits = 0)}
+tmp <- allyears_days[, lapply(.SD, myfun), by=c("var")] ## mean = prop
+tmp$year <- NULL
 tmp <- melt(tmp, id.vars = c("var", "start"))
-tmp[, value := round(value*100, digits = 0)]
 
 ## lookup bt start for ordering pollinators
-lookupstart <- tmp[, .(var, start)]
+lookupstart <- toplot[, .(var, start)]
 lookupstart <- lookupstart[, lapply(.SD, myfun), by=c("var")] 
 names(lookupstart) <- c("variable", "start_pollinator")
-## unique(tmp$var)
-tmp <- lookupstart[tmp, on = "variable"]
+## unique(toplot$var)
+toplot <- lookupstart[toplot, on = "variable"]
 
 ## names
 varnames_infrance <- nam$cultivar
 names(varnames_infrance) <- nam$var
-tmp$cultivar <- query_label(tmp$var, varnames_infrance)
-tmp$cultivar <- factor(tmp$cultivar)
-tmp$pollinator <- query_label(tmp$variable, varnames_infrance)
-tmp$pollinator <- factor(tmp$pollinator)
+toplot$cultivar <- query_label(toplot$var, varnames_infrance)
+toplot$cultivar <- factor(toplot$cultivar)
+toplot$pollinator <- query_label(toplot$variable, varnames_infrance)
+toplot$pollinator <- factor(toplot$pollinator)
 
-## unique(tmp$pollinator)
-test <- rep(11, 676)
+## unique(toplot$pollinator)
 
-p <- ggplot(tmp, aes(x = forcats::fct_reorder(pollinator, start_pollinator), y = forcats::fct_reorder(cultivar, start), fill = value)) +
+p <- ggplot(toplot, aes(x = forcats::fct_reorder(pollinator, start_pollinator), y = forcats::fct_reorder(cultivar, start), fill = value)) +
   geom_tile(color = "black") +
-  geom_text(aes(label = test), color = "white", size = 4) +
+  geom_text(aes(label = tmp$value), color = "white", size = 4) +
   coord_fixed()
 
-p <- p +     theme(
+p <- p + theme(
         plot.margin = unit(c(0.9, 0.9, 0.9, 0.9), "centimeters"),
         ## legend.position = "none",
         axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
         plot.title = element_text(hjust = 0, vjust = 3, size = 12, face="bold"),
-        axis.title.x = element_text(hjust = 0.5, vjust = -5),
+        ## axis.title.x = element_text(hjust = 0.5, vjust = -5),
         axis.text=element_text(size=14),
-        axis.title=element_text(size=12, face="bold")
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank()
+        ## axis.title=element_text(size=12, face="bold")
     )
 
 p + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) +
