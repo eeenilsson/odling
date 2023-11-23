@@ -277,9 +277,58 @@ thisyear <- newcols_mod[thisyear, on = "var"]
 
 }
 
-    allyears <- rbind(allyears, thisyear)
+    allyears <- rbind(allyears, thisyear, fill = TRUE)
     }
 
+setkey(allyears, start)
+cols <- c("var", "year", newcols_mod$var)
+## dt[ , (cols) := lapply(.SD, "*", -1), .SDcols = cols]
+allyears <- allyears[, ..cols]
+cols <- newcols_mod$var
+allyears[ , (cols) := lapply(.SD, "sum"), .SDcols = cols]
+
+allyears[, ..cols]
+
+
+myfun <- function(x){
+    x <- na.omit(x)
+    out <- x == 1/length(x)
+    out <- signif(out*100, digits = 2)
+    return(out)
+}
+myfun <- function(x){signif(mean(as.numeric(x), na.rm = TRUE), digits = 2)}
+## collapse to one row per var:
+tmp <- allyears[, lapply(.SD, myfun), by=c("var")] 
+## todo: Exclude varieties tested less tha 3 yrs
+tmp$year <- NULL
+
+## melt
+tmp <- melt(tmp, id.vars = c("var"))
+tmp[, value := round(value*100, digits = 0)]
+
+p <- ggplot(tmp, aes(x = variable, y = var, fill = value)) +
+  geom_tile(color = "black") +
+  geom_text(aes(label = value), color = "white", size = 4) +
+  coord_fixed()
+
+p <- p +     theme(
+        plot.margin = unit(c(0.9, 0.9, 0.9, 0.9), "centimeters"),
+        ## legend.position = "none",
+        axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
+        plot.title = element_text(hjust = 0, vjust = 3, size = 12, face="bold"),
+        axis.title.x = element_text(hjust = 0.5, vjust = -5),
+        axis.text=element_text(size=14),
+        axis.title=element_text(size=12, face="bold")
+    )
+
+p + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn"))
+
+
+### Here
+
+allyears[, 3][["summit"]]
+
+allyears[ , sum, .SDcols = cols]
 
 
 ###########################
