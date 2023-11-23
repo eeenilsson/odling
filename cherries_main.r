@@ -12,6 +12,10 @@ source('cherries_phenology.r') ## Rosbreed
 source('cherry_compatibility.r')  ## read S-allele data
 source('synonyms.r')  ## aggregate some synonyms
 
+## ## analyze phenology for two sites in france
+## source("infrance.r")
+
+
 ## Summary --------------------
 source('cherries_summary.r')
 

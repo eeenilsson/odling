@@ -175,12 +175,114 @@ summary(lm(maturity ~ yrtype + var + site + age, data = relative)) ## late years
 rel <- relative[, .(var, year, start, full, end, duration, maturity)]
 ## collapse sites
 myfun <- function(x){mean(x, na.rm = TRUE)}
-## collapse to one row per var:
 rel <- rel[, lapply(.SD, myfun), by=c("var", "year")] 
 
 ## assume fertilization possible from start to full + 4d
 rel[, fert := full + 4]
 
+## select 99 most commonly registered varieties
+sel <- summary(factor(rel$var))[1:20] 
+sel <- names(sel)
+rel <- rel[grepl(paste0(sel, collapse = "|"), var), ]
+
+## overlap function
+
+## prepare
+rel[["var"]] <- as.character(rel[["var"]])
+rel[["year"]] <- as.character(rel[["year"]])
+rel <- rel[, .(var, year, start, fert)]
+
+## loop over years TODO ---
+
+    ## overlap fun
+    overlap <- function(astart, aend, bstart, bend, criteria = NULL){
+        ## criteria 4 days overlap
+        
+        ## astart <- thisyear[var == varn, start] ## col
+        ## aend <- thisyear[var == varn, fert]
+        ## bstart <- thisyear[i, start] ## row
+        ## bend <- thisyear[i, fert]
+
+        ## get order
+        ## firstone <- ifelse(astart <= bstart, "a", "b")
+        firststart <- ifelse(astart <= bstart, astart, bstart) ## b
+        secondstart <- ifelse(astart > bstart, astart, bstart)
+        firstend <- ifelse(astart <= bstart, aend, bend)
+        secondend <- ifelse(astart > bstart, aend, bend)
+
+        ## set to index 0
+        secondstart <- secondstart - firststart
+        firstend <- firstend - firststart
+        secondend <- secondend - firststart
+        firststart <- 0
+        ## calculate overlap
+        overlapmax <- firstend - secondstart
+        overshoot <- ifelse(firstend > secondend, firstend - secondend, 0)
+        overlap <- overlapmax - overshoot
+
+        if(!is.null(criteria)){
+        out <- overlap >= criteria
+        return(as.numeric(out))
+        }else{
+            return(round(overlap, digits = 0))
+}
+
+    }
+
+## yr <- "2008"
+    ## varn <- "fercer"
+    ## i <- 2
+
+allyears <- c()
+
+for(yr in unique(rel[["year"]])){
+
+    thisyear <- rel[year == yr, ]
+    ## add missing var with NA
+    addthis <- rel[!grepl(paste0(thisyear[["var"]], collapse = "|"), var), ]
+    addthis[, year := yr]
+    addthis[, start := NaN]
+    addthis[, fert := NaN]
+    addthis <- unique(addthis)
+    thisyear <- rbind(thisyear, addthis)
+    
+## make a df to add cols
+newcols <- as.data.table(matrix(nrow = nrow(thisyear), ncol = nrow(thisyear)+1))
+names(newcols) <- c("var", thisyear$var)
+cols <- names(newcols)
+newcols_mod <- newcols[ , (cols) := lapply(.SD, as.character), .SDcols = cols]
+newcols_mod$var <- thisyear$var
+thisyear <- newcols_mod[thisyear, on = "var"]
+
+
+
+    ## overlap(thisyear[var == varn, start],
+    ##         thisyear[var == varn, fert],
+    ##         thisyear[i, start],
+    ##         thisyear[i, fert])
+    
+    for(i in 1:nrow(thisyear)){ ## loop over rows
+
+        for(varn in thisyear$var){ ## loop over cols
+        ## get genotype of column name
+             ## thisyear[i, (varn) := thisyear[var == varn, genotype]]  
+        ## get compatibility value of column name
+                thisyear[i, (varn) := overlap(thisyear[var == varn, start],
+            thisyear[var == varn, fert],
+            thisyear[i, start],
+            thisyear[i, fert],
+            criteria = 4)
+                         ]
+}
+
+}
+
+    allyears <- rbind(allyears, thisyear)
+    }
+
+
+
+###########################
 plot(start ~ year, data = relative)
 
 

@@ -286,7 +286,7 @@ varnames_tmp <- c(  ## from (eur) = to (genotype data)
 ## 'lucyna' = ""    
 )
 eur_bt$var <- query_label(eur_bt$var, varnames_tmp)
-
+variety_genotype_group
 
 ## variable types
 eur_bt[, year := as.factor(year)]
@@ -379,8 +379,8 @@ lm_bt_start_full <- data.table(var = names(lm_bt_start_full),
            coef = lm_bt_start_full)
 lm_bt_start_full[, var := gsub(".Intercept.", "intercept", var)]
 
-## analyze for two sites in france
-source("infrance.r")
+## ## analyze for two sites in france
+## source("infrance.r")
 
 ## ## omit na?
 ## ## Note: Too many year-var combinations lost
