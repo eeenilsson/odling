@@ -17,44 +17,46 @@ nam <- dtafra[, .(var, cultivar)] ## names
 ## model non-relative
 ## summary(lm(bt_start ~ var + age, data = dtafra))
 m1 <- lm(bt_start ~ var + site + year + age, data = dtafra)
-summary(m1)
+## summary(m1)
 s1 <- summary(m1)$coef
 mean_start <- s1[row.names(s1) == "(Intercept)", ]["Estimate"][[1]]
 format(as.Date(as.Date("1985-01-01") + mean_start), "%m-%d")
-summary(m1)
-summary(dtafra$age)
-summary(s1[grepl("^age", row.names(s1)), "Estimate"])
-summary(s1[grepl("^site", row.names(s1)), "Estimate"])
-summary(s1[grepl("^var", row.names(s1)), "Estimate"])
-quantile(s1[grepl("^var", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
-summary(s1[grepl("^year", row.names(s1)), "Estimate"])
-quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
 
-## descriptive
-summary(dtafra$bt_start_to_full)
-quantile(dtafra$bt_start_to_full, prob = seq(0,1,0.1), na.rm = TRUE)
-summary(dtafra$bt_duration)
-quantile(dtafra$bt_duration, prob = seq(0,1,0.1), na.rm = TRUE)
+## look at summaries:
+## summary(m1)
+## summary(dtafra$age)
+## summary(s1[grepl("^age", row.names(s1)), "Estimate"])
+## summary(s1[grepl("^site", row.names(s1)), "Estimate"])
+## summary(s1[grepl("^var", row.names(s1)), "Estimate"])
+## quantile(s1[grepl("^var", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
+## summary(s1[grepl("^year", row.names(s1)), "Estimate"])
+## quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
 
-## model start to full
-m1 <- lm(bt_start_to_full ~ var + site + year + age, data = dtafra)
-s1 <- summary(m1)$coef
-summary(s1[grepl("^age", row.names(s1)), "Estimate"])
-summary(s1[grepl("^site", row.names(s1)), "Estimate"])
-summary(s1[grepl("^var", row.names(s1)), "Estimate"])
-quantile(s1[grepl("^var", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
-summary(s1[grepl("^year", row.names(s1)), "Estimate"])
-quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
+## ## descriptive
+## summary(dtafra$bt_start_to_full)
+## quantile(dtafra$bt_start_to_full, prob = seq(0,1,0.1), na.rm = TRUE)
+## summary(dtafra$bt_duration)
+## quantile(dtafra$bt_duration, prob = seq(0,1,0.1), na.rm = TRUE)
 
-## model duration
-m1 <- lm(bt_duration ~ var + site + year + age, data = dtafra)
-s1 <- summary(m1)$coef
-summary(s1[grepl("^age", row.names(s1)), "Estimate"])
-summary(s1[grepl("^site", row.names(s1)), "Estimate"])
-summary(s1[grepl("^var", row.names(s1)), "Estimate"])
-quantile(s1[grepl("^var", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
-summary(s1[grepl("^year", row.names(s1)), "Estimate"])
-quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
+## ## model start to full
+## m1 <- lm(bt_start_to_full ~ var + site + year + age, data = dtafra)
+## s1 <- summary(m1)$coef
+## summary(s1[grepl("^age", row.names(s1)), "Estimate"])
+## summary(s1[grepl("^site", row.names(s1)), "Estimate"])
+## summary(s1[grepl("^var", row.names(s1)), "Estimate"])
+## quantile(s1[grepl("^var", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
+## summary(s1[grepl("^year", row.names(s1)), "Estimate"])
+## quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
+
+## ## model duration
+## m1 <- lm(bt_duration ~ var + site + year + age, data = dtafra)
+## s1 <- summary(m1)$coef
+## summary(s1[grepl("^age", row.names(s1)), "Estimate"])
+## summary(s1[grepl("^site", row.names(s1)), "Estimate"])
+## summary(s1[grepl("^var", row.names(s1)), "Estimate"])
+## quantile(s1[grepl("^var", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
+## summary(s1[grepl("^year", row.names(s1)), "Estimate"])
+## quantile(s1[grepl("^year", row.names(s1)), "Estimate"], prob = seq(0,1,0.1))
 
 ## Note: Balandran 1 day earlier start (p signif)
 dtafra <- dtafra[, .(var, bt_start, bt_full, bt_end, bt_duration, bt_start_to_full, beginning_of_maturity, year, age, site)]
@@ -141,7 +143,7 @@ for(i in names(quant)[-1]){
         i, " ", tmp[1], " till ", tmp[11], " (", tmp[2], " till ", tmp[10], ")")
     out <- paste0(out, "; ", txt)    
 }
-out
+## out
 
 ## Note: relative start affected by year
 
@@ -156,8 +158,7 @@ out
 ## relative[, age_tertile := cut(age, breaks = quantile(age, probs = seq(0, 1, 1/3), na.rm = TRUE), include.lowest = TRUE)  ]
 ## plot(start ~ age_tertile, data = relative)
 ## summary(lm(start ~ age_tertile, data = relative))
-
-plot(bt_start ~ year, data = dtafra)
+## plot(bt_start ~ year, data = dtafra)
 
 ## add type of year
 yeartype <- dtafra[, median(bt_start, na.rm = TRUE), by = "year"]
@@ -254,8 +255,6 @@ newcols_mod <- newcols[ , (cols) := lapply(.SD, as.character), .SDcols = cols]
 newcols_mod$var <- thisyear$var
 thisyear <- newcols_mod[thisyear, on = "var"]
 
-
-
     ## overlap(thisyear[var == varn, start],
     ##         thisyear[var == varn, fert],
     ##         thisyear[i, start],
@@ -281,15 +280,15 @@ thisyear <- newcols_mod[thisyear, on = "var"]
     }
 
 setkey(allyears, start)
-cols <- c("var", "year", newcols_mod$var)
+cols <- c("var", "year", "start", newcols_mod$var)
 ## dt[ , (cols) := lapply(.SD, "*", -1), .SDcols = cols]
 allyears <- allyears[, ..cols]
 cols <- newcols_mod$var
 allyears[ , (cols) := lapply(.SD, "sum"), .SDcols = cols]
 
-allyears[, ..cols]
+## allyears[, ..cols]
 
-
+## collapse to one row per var:
 myfun <- function(x){
     x <- na.omit(x)
     out <- x == 1/length(x)
@@ -297,18 +296,36 @@ myfun <- function(x){
     return(out)
 }
 myfun <- function(x){signif(mean(as.numeric(x), na.rm = TRUE), digits = 2)}
-## collapse to one row per var:
 tmp <- allyears[, lapply(.SD, myfun), by=c("var")] 
 ## todo: Exclude varieties tested less tha 3 yrs
 tmp$year <- NULL
+tmp$fert <- NULL
 
 ## melt
-tmp <- melt(tmp, id.vars = c("var"))
+tmp <- melt(tmp, id.vars = c("var", "start"))
 tmp[, value := round(value*100, digits = 0)]
 
-p <- ggplot(tmp, aes(x = variable, y = var, fill = value)) +
+## lookup bt start for ordering pollinators
+lookupstart <- tmp[, .(var, start)]
+lookupstart <- lookupstart[, lapply(.SD, myfun), by=c("var")] 
+names(lookupstart) <- c("variable", "start_pollinator")
+## unique(tmp$var)
+tmp <- lookupstart[tmp, on = "variable"]
+
+## names
+varnames_infrance <- nam$cultivar
+names(varnames_infrance) <- nam$var
+tmp$cultivar <- query_label(tmp$var, varnames_infrance)
+tmp$cultivar <- factor(tmp$cultivar)
+tmp$pollinator <- query_label(tmp$variable, varnames_infrance)
+tmp$pollinator <- factor(tmp$pollinator)
+
+## unique(tmp$pollinator)
+test <- rep(11, 676)
+
+p <- ggplot(tmp, aes(x = forcats::fct_reorder(pollinator, start_pollinator), y = forcats::fct_reorder(cultivar, start), fill = value)) +
   geom_tile(color = "black") +
-  geom_text(aes(label = value), color = "white", size = 4) +
+  geom_text(aes(label = test), color = "white", size = 4) +
   coord_fixed()
 
 p <- p +     theme(
@@ -321,8 +338,11 @@ p <- p +     theme(
         axis.title=element_text(size=12, face="bold")
     )
 
-p + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn"))
-
+p + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) +
+    guides(fill = guide_colourbar(barwidth = 0.5,
+                                barheight = 20)) +
+    guides(fill = guide_colourbar(title = "Överlapp\n(% av år)"))
+## + theme(legend.position = "none")
 
 ### Here
 
@@ -402,9 +422,3 @@ p + geom_point(aes(y = fullplus4), shape = 3, size = 3) ## add slash at 4 days a
 
 
 
-## names
-varnames_infrance <- nam$cultivar
-names(varnames_infrance) <- nam$var
-relative$cultivar <- query_label(relative$var, varnames_infrance)
-relative$cultivar <- factor(relative$cultivar)
-summary(relative$cultivar) > 5
