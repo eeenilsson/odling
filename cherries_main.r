@@ -1,8 +1,12 @@
 ## Main script for cherries
 
+## prepare
+source("cherries_functions.r")
+source("make_labels.r")
+
+## pollination -------
 source('cherries_pollination_sv.r') ## Pollinatörer enl svenska hemsidor
 ## dta
-
 ## dta$var
 
 ## Phenology --------------
@@ -15,8 +19,8 @@ source('synonyms.r')  ## aggregate some synonyms
 ## ## analyze phenology for two sites in france
 ## source("infrance.r")
 
-
 ## Summary --------------------
+source("eur_bt_summary.r")
 source('cherries_summary.r')
 
 ## Quarto -----
@@ -43,10 +47,10 @@ source("cherries_quarto.r")
 ## minegentradgard.se uppger som pollinatörer Merton Glory (S4S6) och Stella (S3S4')
 ## E-planta uppger skuggmorell, merton glory (S4S6), merton premier (S2S3)
 
-cols <- c("variety", "var", "genotype") ## , "genotype"
-variety_genotype_group[grepl("hedel", tolower(variety)), ..cols]
-variety_genotype_group[grepl("s6", tolower(genotype)), ..cols]$var
-
+## ## explore ------------
+## cols <- c("variety", "var", "genotype") ## , "genotype"
+## variety_genotype_group[grepl("hedel", tolower(variety)), ..cols]
+## variety_genotype_group[grepl("s6", tolower(genotype)), ..cols]$var
 
 
 ## Redundant, testing -------------

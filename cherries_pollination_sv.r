@@ -58,6 +58,15 @@ pollinated_by_plantagen$temp <- replace_name(pollinated_by_plantagen$pollinated_
 lookuptable <- dta[, .(var, nr)]
 lookupvarnames <- lookuptable$var
 names(lookupvarnames) <- lookuptable$nr
+## lookupvarnames[duplicated(lookupvarnames)]
+
+## add missing rows to plantagen
+missing_rows <- dta[, .(var)]
+missing_rows$temp <- ""
+missing_rows$pollinated_by_plantagen <- ""
+lookfor <- missing_rows$var[!missing_rows$var %in% pollinated_by_plantagen$var]
+missing_rows <- missing_rows[grepl(paste0(lookfor, collapse = "|"), var), ]
+pollinated_by_plantagen <- rbind(pollinated_by_plantagen, missing_rows)
 
 ## replace names with numbers
 dta$pollinated_by_plantagen <- pollinated_by_plantagen$temp

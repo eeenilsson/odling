@@ -181,10 +181,29 @@ rel <- rel[, lapply(.SD, myfun), by=c("var", "year")]
 ## assume fertilization possible from start to full + 4d
 rel[, fert := full + 4]
 
-## select 99 most commonly registered varieties
-sel <- summary(factor(rel$var))[1:20] 
-sel <- names(sel)
-rel <- rel[grepl(paste0(sel, collapse = "|"), var), ]
+## select varieties --------
+## sel <- summary(factor(rel$var))[1:20] ## most commonly noted
+## sel <- names(sel)
+sel <- dta$var
+rel <- rel[grepl(paste0(sel, collapse = "$|^"), var), ]
+## unique(rel$var)
+
+## ## look for synonyms
+## table(factor(relative$var))
+## names(genotype_syn)
+## unique(relative$var)
+## tmp <- variety_genotype_group
+## tmp[ , syn := paste0(syn, ", ", label)] ## add label to syn
+## tmp[ , syn := gsub("^, ", "", syn)]
+## cols <- c("variety", "var", "syn")
+## lookfor <- unique(relative$var)
+## lookfor <- gsub("_.*", "", lookfor)
+## tmp[grepl(paste0(lookfor, collapse = "|"), tolower(syn)), ..cols]
+## print(tmp[grepl(paste0(lookfor, collapse = "|"), tolower(syn)), "syn"], n = 400)
+## dta$var[!dta$var %in% eur_bt$var] ## missing from eur_bt
+## tmp[grepl("rote", tolower(syn)), ..cols]
+## eur_bt[grepl("mert", tolower(cultivar)), unique(var)]
+## unique(eur_bt$var)
 
 ## overlap function
 
@@ -196,39 +215,6 @@ rel <- rel[, .(var, year, start, fert)]
 ## loop over years ---
 
     ## overlap fun
-    overlap <- function(astart, aend, bstart, bend, criteria = NULL){
-        ## criteria 4 days overlap
-        
-        ## astart <- thisyear[var == varn, start] ## col
-        ## aend <- thisyear[var == varn, fert]
-        ## bstart <- thisyear[i, start] ## row
-        ## bend <- thisyear[i, fert]
-
-        ## get order
-        ## firstone <- ifelse(astart <= bstart, "a", "b")
-        firststart <- ifelse(astart <= bstart, astart, bstart) ## b
-        secondstart <- ifelse(astart > bstart, astart, bstart)
-        firstend <- ifelse(astart <= bstart, aend, bend)
-        secondend <- ifelse(astart > bstart, aend, bend)
-
-        ## set to index 0
-        secondstart <- secondstart - firststart
-        firstend <- firstend - firststart
-        secondend <- secondend - firststart
-        firststart <- 0
-        ## calculate overlap
-        overlapmax <- firstend - secondstart
-        overshoot <- ifelse(firstend > secondend, firstend - secondend, 0)
-        overlap <- overlapmax - overshoot
-
-        if(!is.null(criteria)){
-        out <- overlap >= criteria
-        return(as.numeric(out))
-        }else{
-            return(round(overlap, digits = 0))
-}
-
-    }
 
 ## yr <- "2008"
     ## varn <- "fercer"
@@ -309,6 +295,8 @@ cols <- newcols_mod$var
 ##     out <- signif(out*100, digits = 2)
 ##     return(out)
 ## }
+
+## prepare data for plotting etc -------------
 myfun <- function(x){signif(mean(as.numeric(x), na.rm = TRUE), digits = 2)}
 toplot <- allyears[, lapply(.SD, myfun), by=c("var")] ## mean = prop
 ## todo: Exclude varieties tested less tha 3 yrs
@@ -317,6 +305,15 @@ toplot$fert <- NULL
 ## melt
 toplot <- melt(toplot, id.vars = c("var", "start"))
 toplot[, value := round(value*100, digits = 0)]
+
+## add genotype
+lookupgenotype <- variety_genotype_group[, .(var, genotype)]
+toplot <- lookupgenotype[toplot, on = "var"]
+names(toplot) <- gsub("^genotype$", "genotype_cultivar", names(toplot))
+toplot <- merge(x=toplot, y=lookupgenotype, by.x="variable", by.y="var")
+names(toplot) <- gsub("^genotype$", "genotype_pollinator", names(toplot))
+myfun <- Vectorize(compat)
+toplot[, compat := myfun(genotype_pollinator, genotype_cultivar)]
 
 ## days overlap for labels
 myfun <- function(x){round(median(as.numeric(x), na.rm = TRUE), digits = 0)}
@@ -331,14 +328,18 @@ names(lookupstart) <- c("variable", "start_pollinator")
 ## unique(toplot$var)
 toplot <- lookupstart[toplot, on = "variable"]
 
-## names
-varnames_infrance <- nam$cultivar
-names(varnames_infrance) <- nam$var
-toplot$cultivar <- query_label(toplot$var, varnames_infrance)
+## ## names using labels from eur_bt
+## varnames_infrance <- nam$cultivar
+## names(varnames_infrance) <- nam$var
+## toplot$cultivar <- query_label(toplot$var, varnames_infrance)
+
+## names using varnames
+toplot$cultivar <- query_label(toplot$var, varnames3)
 toplot$cultivar <- factor(toplot$cultivar)
-toplot$pollinator <- query_label(toplot$variable, varnames_infrance)
+toplot$pollinator <- query_label(toplot$variable, varnames3)
 toplot$pollinator <- factor(toplot$pollinator)
 
+## plot eur bt infra --------------------
 ## unique(toplot$pollinator)
 
 p <- ggplot(toplot, aes(x = forcats::fct_reorder(pollinator, start_pollinator), y = forcats::fct_reorder(cultivar, start), fill = value)) +
@@ -349,6 +350,7 @@ p <- ggplot(toplot, aes(x = forcats::fct_reorder(pollinator, start_pollinator), 
 p <- p + theme(
         plot.margin = unit(c(0.9, 0.9, 0.9, 0.9), "centimeters"),
         ## legend.position = "none",
+        axis.ticks = element_blank(),
         axis.text.x = element_text(angle = -90, vjust = 0.5, hjust=0),
         plot.title = element_text(hjust = 0, vjust = 3, size = 12, face="bold"),
         ## axis.title.x = element_text(hjust = 0.5, vjust = -5),
@@ -358,85 +360,87 @@ p <- p + theme(
         ## axis.title=element_text(size=12, face="bold")
     )
 
-p + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) +
+plot_infrance <- p + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) +
     guides(fill = guide_colourbar(barwidth = 0.5,
                                 barheight = 20)) +
-    guides(fill = guide_colourbar(title = "Överlapp\n(% av år)"))
+    guides(fill = guide_colourbar(title = "% år med\növerlapp\n"))
 ## + theme(legend.position = "none")
+
+## explore ----
+
+## rel[var == "margit" & (year == "1997"|year == "1998")|var == "stella" & (year == "1997"|year == "1998"), ]
+## ## Note: Margit had relatively few datapoints and two years with large deviating relative start. Stella was not recorded during those years, therefore the % years overlap was higher for stella vs eg hedelfinger.
+
 
 ### Here
 
-allyears[, 3][["summit"]]
 
-allyears[ , sum, .SDcols = cols]
-
-
-###########################
-plot(start ~ year, data = relative)
+## ###########################
+## plot(start ~ year, data = relative)
 
 
-summary(lm(start ~ year, data = relative))
+## summary(lm(start ~ year, data = relative))
 
-## summary(lm(age ~ var, data = dtafra))
-
-
-plot(bt_start ~year, data = dtafra)
-
-agebyvar <- dtafra[, mean(age), by = "var"]
-names(agebyvar) <- c("var", "age")
-q1 <- quantile(agebyvar$age, 0.05)[[1]]
-q9 <- quantile(agebyvar$age, 0.95)[[1]]
-
-agebyvar[age < q1 | age > q9, var]
-agebyvar[var == "margit", ]
-
-dtafra[, mean(age), by = "var"]
-
-## predict -------
-str(relative)
-
-## tmp <- names(summary(relative$var))[summary(relative$var) > 30]
-## tmp <- tmp[-length(tmp)]
-## train <- na.omit(relative[grepl(paste0(tmp, collapse = "|"), var), .(start, var, site, year, age)])
-
-train <- na.omit(relative[, .(start, var, site, year, age)])
-str(train)
-m1 <- lm(start ~ var + site, year + age, data = train)
-summary(m1)
-test <- train  ## [, .(var, year, age)]
-test <- na.omit(test)
-test$age = median(test$age, na.rm = TRUE)
-## test$site = 1 ## Balandran
-## test <- na.omit(test[, .(var, site, year, age)])
-m1$xlevels[["year"]] <- union(m1$xlevels[["year"]], levels(test$year))
-m1$xlevels[["var"]] <- union(m1$xlevels[["var"]], levels(test$var))
-## test$year <- factor(test$year)
-## test$var <- factor(test$var)
-## Note: Works with na.omit in test
-
-## names(test) <- names(train)[-1]
-test$start_relative <- predict(m1, test, type="response")
-relative
+## ## summary(lm(age ~ var, data = dtafra))
 
 
-## plot
-## plot base
-p <- ggplot(test, aes(x = fct_reorder(var, -start), y = full)) + coord_flip()
-p <- p + geom_point(size = 2) + geom_errorbar(aes(ymin = start, ymax = end), width = 0.2)
-p <- p + scale_y_continuous(breaks = 0:27)
-p <- p + theme(
-        ## axis.ticks.y=element_blank(),
-        panel.grid.minor.x = element_blank(),
-        ## axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        axis.text=element_text(size=24),
-        plot.title = element_text(size = 16, face="bold")
-          )
-## p <- p + labs(title="Blomningstid: Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år.",
-##              y = "Dagar (från tidigaste sortens blomningsstart)")
+## plot(bt_start ~year, data = dtafra)
 
-p + geom_point(aes(y = fullplus4), shape = 3, size = 3) ## add slash at 4 days after full bloom (assumed end of fertility)
+## agebyvar <- dtafra[, mean(age), by = "var"]
+## names(agebyvar) <- c("var", "age")
+## q1 <- quantile(agebyvar$age, 0.05)[[1]]
+## q9 <- quantile(agebyvar$age, 0.95)[[1]]
+
+## agebyvar[age < q1 | age > q9, var]
+## agebyvar[var == "margit", ]
+
+## dtafra[, mean(age), by = "var"]
+
+## ## predict -------
+## str(relative)
+
+## ## tmp <- names(summary(relative$var))[summary(relative$var) > 30]
+## ## tmp <- tmp[-length(tmp)]
+## ## train <- na.omit(relative[grepl(paste0(tmp, collapse = "|"), var), .(start, var, site, year, age)])
+
+## train <- na.omit(relative[, .(start, var, site, year, age)])
+## str(train)
+## m1 <- lm(start ~ var + site, year + age, data = train)
+## summary(m1)
+## test <- train  ## [, .(var, year, age)]
+## test <- na.omit(test)
+## test$age = median(test$age, na.rm = TRUE)
+## ## test$site = 1 ## Balandran
+## ## test <- na.omit(test[, .(var, site, year, age)])
+## m1$xlevels[["year"]] <- union(m1$xlevels[["year"]], levels(test$year))
+## m1$xlevels[["var"]] <- union(m1$xlevels[["var"]], levels(test$var))
+## ## test$year <- factor(test$year)
+## ## test$var <- factor(test$var)
+## ## Note: Works with na.omit in test
+
+## ## names(test) <- names(train)[-1]
+## test$start_relative <- predict(m1, test, type="response")
+## relative
+
+
+## ## plot
+## ## plot base
+## p <- ggplot(test, aes(x = fct_reorder(var, -start), y = full)) + coord_flip()
+## p <- p + geom_point(size = 2) + geom_errorbar(aes(ymin = start, ymax = end), width = 0.2)
+## p <- p + scale_y_continuous(breaks = 0:27)
+## p <- p + theme(
+##         ## axis.ticks.y=element_blank(),
+##         panel.grid.minor.x = element_blank(),
+##         ## axis.title.x = element_blank(),
+##         axis.title.y = element_blank(),
+##         axis.title.x = element_blank(),
+##         axis.text=element_text(size=24),
+##         plot.title = element_text(size = 16, face="bold")
+##           )
+## ## p <- p + labs(title="Blomningstid: Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år.",
+## ##              y = "Dagar (från tidigaste sortens blomningsstart)")
+
+## p + geom_point(aes(y = fullplus4), shape = 3, size = 3) ## add slash at 4 days after full bloom (assumed end of fertility)
 
 
 

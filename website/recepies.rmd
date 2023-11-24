@@ -2,6 +2,20 @@
 title: "Recept"
 ---
 
+## Förvaring av körsbär
+
+Hållbarhet och förvaring:
+
+- 14 dagar vid 0°C.
+- 2 dagar vid 20°C.
+- Ideal förvaring vid 0°C och 95-100% relativ fuktighet.
+- Kan frysas för senare matlagning.
+- Surkörsbär och vissa sötkörsbär kan konserveras (som tex sylt).
+
+<!-- Näringsvärden, per 100g: -->
+
+<!-- Sötkörsbär: Energi 65 kcal/272 kJ, Vatten 82 g, Protein 1,9 g, Fett 1,0 g, Kolhydrater totalt (ej fiber) 11,9 g, Kostfiber 1,7 g, Kalium 176 mg, ß-karoten 69 µg, C-vitamin 7 mg. -->
+
 ![Körsbärspaj](../../dropbox/images/plants/cherry_pie.jpg){width=80%}
 
 ## Körsbärspaj

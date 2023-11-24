@@ -20,12 +20,14 @@
 ## https://tradgardshuset.com/sortiment/frukt-och-bar/bigarraer/
 
 ## rosbreed
+message("rosbreed")
 source('cherries_rosbreed.r') ## dataset analysis
 
 
 ## Blooming time =============================================
 
 ## Australian ANFIC blooming periods ------
+message("anfic")
 ## fread("anfic_blooming_time.csv")
 ## pollination_period_anfic (I-V) => 1-5
 ## 1 = "Early", 2 = "Early mid", 3 = "Mid", 4 = "Late mid", 5 = Late
@@ -120,6 +122,7 @@ names(uk_bt) <- c("var", "blooming_group_uk")
 rosbreed_bt <- fread("rosbreed_bt.csv")
 
 ## European data ----------------------
+message("eur_bt")
 
 ## dataset
 eur_bt <- fread("sweet_cherry_phenology_data_1978_2015.csv")
@@ -188,6 +191,12 @@ eur_bt[, var := gsub("'", "", var)]
 ## paste(nomatch, collapse = ", ")
 ## cols <- c("variety", "var", "genotype") ## , "genotype"
 ## variety_genotype_group[grepl("yna", tolower(variety)), ..cols]
+
+## added to ceherries_table:
+## ulster
+## sweetheart
+## black star
+## sylvia
 
 varnames_tmp <- c(  ## from (eur) = to (genotype data)
 'satin_sumele' = "satin",
@@ -286,7 +295,7 @@ varnames_tmp <- c(  ## from (eur) = to (genotype data)
 ## 'lucyna' = ""    
 )
 eur_bt$var <- query_label(eur_bt$var, varnames_tmp)
-variety_genotype_group
+## variety_genotype_group
 
 ## variable types
 eur_bt[, year := as.factor(year)]
@@ -325,6 +334,7 @@ eur_bt_aggr <- eur_bt
 ## Note: Some years BT start is observed, some BT full
 
 ## take the mean bt for each site and var, aggregating over year
+message("eur bt aggr")
 eur_bt_aggr <- eur_bt[, .(
     bt_start = mean(bt_start, na.rm = TRUE),
     bt_full = mean(bt_full, na.rm = TRUE),
@@ -365,7 +375,7 @@ m1 <- lm(bt_start ~ var + site + year, data = eur_bt)
 ## m1_ci[diff > 4.8, ] ## these have ci > Q3, note: none of interest
 ## m1_ci$var
 
-summary(m1)
+## summary(m1)
 ## hist(resid(m1))
 lm_bt_start <- m1$coef
 lm_bt_start <- data.table(var = names(lm_bt_start),
@@ -396,19 +406,16 @@ lm_bt_start_full[, var := gsub(".Intercept.", "intercept", var)]
 ## check <- gsub("[0-9]", "", check)
 ## summary(as.factor(check))
 
-tmp[, lapply(.SD, myfun), by=c("var", "year", "site")] 
-
-
-
-unique(tmp[var == "burlat", .(var, bt_start, year)])
-tmp[, burlat_start := min(bt_start)]
-
-m1 <- lm(bt_start ~ var + year, data = tmp)
-summary(tmp$var)
-summary(m1)
-unique(tmp$cultivar)
+## tmp[, lapply(.SD, myfun), by=c("var", "year", "site")] 
+## unique(tmp[var == "burlat", .(var, bt_start, year)])
+## tmp[, burlat_start := min(bt_start)]
+## m1 <- lm(bt_start ~ var + year, data = tmp)
+## summary(tmp$var)
+## summary(m1)
+## unique(tmp$cultivar)
 
 ## for plotting etc ---------------
+message("eur_bt for plotting")
 eur_lm_bt_start <- lm_bt_start
 eur_lm_bt_start[, var := gsub("^var", "", var)]
 names(eur_lm_bt_start) <- c("var", "coef_bt_start")
@@ -422,8 +429,8 @@ names(eur_lm_bt_duration) <- c("var", "coef_bt_duration")
 duration_intercept <- eur_lm_bt_duration[var == "intercept", ][, 2][[1]]
 tmp <- eur_lm_bt_duration[!grepl("^year|^site|intercept$", var)]
 tmp[, coef_bt_duration := coef_bt_duration + duration_intercept]
-summary(tmp)
-quantile(tmp$coef_bt_duration, prob = seq(0,1,0.1))
+## summary(tmp)
+## quantile(tmp$coef_bt_duration, prob = seq(0,1,0.1))
 
 lm_bt_start_full[, var := gsub(".Intercept.", "intercept", var)]
 lm_bt_start_full[, var := gsub("^var", "", var)]
@@ -482,51 +489,8 @@ eur_lm_bt
 ## eur_lm_bt[, start:= start + start_intercept]
 eur_lm_bt[, start_full := start_full + start_full_intercept]
 eur_lm_bt[, duration := duration + duration_intercept]
-eur_toplot <- eur_lm_bt[grepl(paste0(dta$var, collapse = "$|^"), var), ]
-eur_toplot[, start := start + abs(min(eur_toplot$start))]
-setkey(eur_toplot, start)
-eur_toplot[, full := start + start_full]
-eur_toplot[, end := start + duration]
 
-summary(eur_toplot)
-summary(eur_bt$flowering_duration)
-
-eur_toplot[, var := query_label(var, varnames3)]
-eur_toplot[, fullplus4 := full+4]
-
-## plot base
-p <- ggplot(eur_toplot, aes(x = fct_reorder(var, -start), y = full)) + coord_flip()
-p <- p + geom_point(size = 2) + geom_errorbar(aes(ymin = start, ymax = end), width = 0.2)
-p <- p + scale_y_continuous(breaks = 0:27)
-p <- p + theme(
-        ## axis.ticks.y=element_blank(),
-        panel.grid.minor.x = element_blank(),
-        ## axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        axis.text=element_text(size=24),
-        plot.title = element_text(size = 16, face="bold")
-          )
-## p <- p + labs(title="Blomningstid: Medelvärden för start, full blomning (markerad med en prick) och blomningens längd, justerat för ort och år.",
-##              y = "Dagar (från tidigaste sortens blomningsstart)")
-
-p + geom_point(aes(y = fullplus4), shape = 3, size = 3) ## add slash at 4 days after full bloom (assumed end of fertility)
-
-ggsave(
-  "plot_eur_bt.png",
-  plot = last_plot(),
-  device = NULL,
-  path = "../dropbox/images/plants/",
-  scale = 1,
-  width = 16.6,
-  height = 8.86,
-  units = c("in", "cm", "mm", "px"),
-  dpi = 300,
-  limitsize = TRUE,
-  bg = NULL
-)
-
-
+## plot was here
 
 ## tidy for calculating bgr -------
 lm_bt_start <- lm_bt_start[grepl(paste0(unique(eur_bt$var), collapse = "|"), var), ] ## skip year, site coefs
@@ -561,6 +525,7 @@ lm_bt_start[, var := gsub("^var", "", var)] ## sanitize
 eur_bt_gr <- lm_bt_start
 
 ## get some descriptive data from norway
+message("eur_bt norway")
 ull_bt <- eur_bt[grepl("Ullensvang", site), ]
 ull_bt <- ull_bt[, .(var, year, latitude, longitude, altitude, year, rootstock, startofyear, flowering_duration, bt_start, bt_full, bt_end)]
 ull_bt[, bt_start_date := startofyear + bt_start]
@@ -685,46 +650,17 @@ ull_bt[, test_start_date := as.Date(test_start_date, format = "%Y-%m-%d")]
 
 
 ## Dansk studie över 20 år på ett hundratal sorter:
+message("vittrup")
 ## Vittrup1996.pdf
 ## Tabellen ej kopierbar, skrivit in urval här:
 ## Sam, Frogmore och regina sena; knauff tidig
 vittrup_bt <- fread("bt_vittrup.csv")
 vittrup_bt[, bgr_vittrup := start/2]
-
 vittrup_bt[, end := start + duration -1]
 vittrup_bt[, fullplus4 := full + 4]
-vittrup_bt[, var := query_label(var, varnames3)]
 
-## plot vittrup
-p <- ggplot(vittrup_bt, aes(x = fct_reorder(var, -start), y = end)) + coord_flip()
-p <- p + geom_errorbar(aes(ymin = start, ymax = end), width = 0.2)
-p <- p + scale_y_continuous(breaks = 0:27)
-p <- p + theme(
-        ## axis.ticks.y=element_blank(),
-        panel.grid.minor.x = element_blank(),
-        ## axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
-        axis.title.x = element_blank(),
-        axis.text=element_text(size=24),
-        plot.title = element_text(size = 16, face="bold")
-          )
 
-p <- p + geom_point(aes(y = full), size = 2) 
-p + geom_point(aes(y = fullplus4), shape = 3, size = 3) ## add slash at 4 days after full bloom (assumed end of fertility)
 
-ggsave(
-  "plot_vittrup_bt.png",
-  plot = last_plot(),
-  device = NULL,
-  path = "../dropbox/images/plants/",
-  scale = 1,
-  width = 16.6,
-  height = 8.86,
-  units = c("in", "cm", "mm", "px"),
-  dpi = 300,
-  limitsize = TRUE,
-  bg = NULL
-)
 
 ## google on missing ones -----
 
@@ -746,6 +682,8 @@ google_bt <- google_bt[, .(var, bt_any)]
 ##  STORT. KLARBÄR ('Grosse. Glaskirsche')
 
 ## aggregate bt ------------------
+message("aggregate bt")
+
 anfic_bt[, anfic_bg_num := as.numeric(blooming_group_anfic)]
 anfic_bt[, anfic_bg_num := mean(anfic_bg_num, na.rm = TRUE), by = "var"]
 
@@ -830,6 +768,7 @@ blooming_group_aggr[grepl("rote", var), ]
 
 
 ## DK Christensen1990_sour.pdf --------------
+message("christensen sour")
 
 sour_dk <- fread("sour_christensen1990.csv")
 sour_dk[, harvest_date := gsub("\\/23", "", harvest_date)]
@@ -958,6 +897,7 @@ write.csv(sour_dk_phenology, "sour_dk_phenology.csv", row.names = FALSE)
 ## Andra egenskaper ==========================================
 
 ## RosBREED -------------------
+message("ros andra geneskaper")
 ## names(ros)
 ros_phenology <- ros[, .(Germplasm, Dataset, TA, Bulked_Fruit_Firmness, Firmness_1, Bulked_Fruit_Wt, Fruit_Wt, FreeStone, Skin_C_mahogany, Skin_C_blush, Perc_Cracking, SSC, Bulked_Fruit_SSC, Flesh_C, Foliar_PM)]
 names(ros_phenology) <- tolower(names(ros_phenology))
