@@ -697,7 +697,6 @@ ggsave(
   bg = NULL
 )
 
-
 ## plot vittrup ----------------
 vittrup_bt[, var := query_label(var, varnames3)]
 p <- ggplot(vittrup_bt, aes(x = fct_reorder(var, -start), y = end)) + coord_flip()

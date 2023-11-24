@@ -233,6 +233,8 @@ toplot[, compat := myfun(genotype_pollinator, genotype_cultivar)]
 toplot[, label := as.character(label)]
 toplot[, label := ifelse(compat == 0, "X", label)]
 toplot[, label := ifelse(compat == 1 & var == variable, "SC", label)]
+## toplot[, label := ifelse(compat == 2, paste0("~", label, "^{a}"), label)]
+toplot[, label := ifelse(compat == 2, paste0(label, "+"), label)]
 
 ## lookup bt start for ordering pollinators:
 myfun <- function(x){round(mean(as.numeric(x), na.rm = TRUE), digits = 2)}
@@ -257,7 +259,8 @@ toplot$pollinator <- factor(toplot$pollinator)
 
 p <- ggplot(toplot, aes(x = forcats::fct_reorder(pollinator, start_pollinator), y = forcats::fct_reorder(cultivar, start), fill = value)) +
   geom_tile(color = "black") +
-  geom_text(aes(label = toplot_labels$value), color = "white", size = 4) +
+  geom_text(aes(label = toplot$label), color = "white", size = 4,
+            parse = FALSE) +
   coord_fixed()
 
 p <- p + theme(
@@ -273,14 +276,58 @@ p <- p + theme(
         ## axis.title=element_text(size=12, face="bold")
     )
 
-bt_eur_heatmap <- p + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) +
+bt_eur_heatmap <- p +
+    scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) +
     guides(fill = guide_colourbar(barwidth = 0.5,
-                                barheight = 20)) +
-    guides(fill = guide_colourbar(title = "% år med\növerlapp\n"))
+                                barheight = 30,
+                                ticks.linewidth = 2,
+                                title.hjust = 1,
+                                label.theme = element_text(size = 18),
+                                title.theme = element_text(size = 18),
+                                title = "% \n")
+           )
+bt_eur_heatmap
+
+ggsave(
+  "bt_eur_heatmap.png",
+  plot = last_plot(),
+  device = NULL,
+  path = "../dropbox/images/plants/",
+  scale = 1,
+  width = 16.6,
+  height = 10.86,
+  units = c("in", "cm", "mm", "px"),
+  dpi = 300,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+## 
 ## + theme(legend.position = "none")
 
-bt_eur_heatmap
-plot_infrance
+## ## colors:
+## library(RColorBrewer)
+## # To see all palettes available in this package
+## par(mfrow=c(1, 1))
+## display.brewer.all()
+
+
 ## Note: Color is % years with bt overlap minimum 4 days. Number in boxes is median days overlap. This means the number in the box where the cultivar is both pollinator and target corresponds to the median BT for that variety (but is only shown for SC varieties, else X). "X" is incompatible. 
 ## Note: Time of receptivity/pollination was assumed to be bt_start to (bt_full + 4 days)
+## Note: Those with + sign are fully compatible
+## Note: margit and sylvia had relatively large variations in both sdstart and sdfert
+
+## ## explore:
+rel[var == "margit", ]
+rel[var == "van", ]
+
+## sdstart <- rel[, sd(start), by = "var"]
+## names(sdstart) <- c("var", "sdstart")
+## sdfert <- rel[, sd(fert, na.rm = TRUE), by = "var"]
+## names(sdfert) <- c("var", "sdfert")
+## sdtable <- sdstart[sdfert, on = "var"]
+## sdtable[, large_sdstart := sdstart > quantile(sdtable$sdstart, 0.75)]
+## sdtable[, large_sdfert := sdfert > quantile(sdtable$sdfert, 0.75)]
 

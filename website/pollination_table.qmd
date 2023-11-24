@@ -75,6 +75,16 @@ Tycker du att schemat är svårt att avläsa, prova de sökbara tabellerna nedan
 
 <!-- Alla sorter. -->
 
+## Pollinationsschema med dagar överlapp
+
+Med hjälp av europeiska data från olika orter beräknades hur många dagar de olika sorterna överlappar. Tiden från start av blomning relativt medianvärdet för blomning av alla sorter på en viss plats och år tiden under vilken pollenutbyte kunde ske var tiden från start till full blomning plus fyra dagar (den förväntade tid då blommorna fortfarande är mottagliga). Andelen (%) år då sorterna överlappade tillräckligt beräknades och anges med olika färger (röd = liten andel av åren, grön = hög andel). I varje ruta står en siffra som är medianvärdet för antal dagars överlappning under de undersökta åren. Ett "X" betyder att sorterna är icke-kompatibla, ett "+" efter siffran att de är helt kompatibla, "SC" att sorten är självfertil (alla dessa är delvis kompatibla med sig själva). Övriga är delvis kompatibla. Sorten 'Margit' sticker ut och man kunde se i data att både blomningstidens start (relativt medianvärdet för året) och tiden till full blomning hade större spridning än för övriga sorter.
+
+::: {.column-screen}
+![](../../dropbox/images/plants/bt_eur_heatmap.png)
+:::
+
+
+
 
 ## Pollinationstabell
 
