@@ -129,9 +129,9 @@ rel <- rel[grepl(paste0(sel, collapse = "$|^"), var), ]
 ## eur_bt[grepl("mer", tolower(cultivar)), unique(var)]
 ## unique(eur_bt$var)
 
-## loop over years --------
+## loop over years -------------
 
-## prepare
+## prepare:
 rel[["var"]] <- as.character(rel[["var"]])
 rel[["year"]] <- as.character(rel[["year"]])
 rel <- rel[, .(var, year, start, fert)]
@@ -147,7 +147,7 @@ allyears_days <- c()
 for(yr in unique(rel[["year"]])){
     thisyear <- rel[year == yr, ]
     
-    ## add missing var with NA
+    ## add missing var with NA:
     addthis <- rel[!grepl(paste0(thisyear[["var"]], collapse = "|"), var), ]
     addthis[, year := yr]
     addthis[, start := NaN]
@@ -155,19 +155,16 @@ for(yr in unique(rel[["year"]])){
     addthis <- unique(addthis)
     thisyear <- rbind(thisyear, addthis)
     
-    ## make a df to add cols
+    ## make a df to add cols:
     newcols <- as.data.table(matrix(nrow = nrow(thisyear), ncol = nrow(thisyear)+1))
     names(newcols) <- c("var", thisyear$var)
     cols <- names(newcols)
     newcols_mod <- newcols[ , (cols) := lapply(.SD, as.numeric), .SDcols = cols] ## changed from "as.charecter"
     newcols_mod$var <- thisyear$var
     thisyear <- newcols_mod[thisyear, on = "var"]
-    
-    ## newcols_mod_days <- newcols_mod
-    ## names(newcols_mod_days)[-1] <- paste0(names(newcols_mod_days)[-1], "_days")
     thisyear_days <- newcols_mod[thisyear, on = "var"]
 
-    ## test
+    ## test:
     ## overlap(thisyear[var == varn, start],
     ##         thisyear[var == varn, fert],
     ##         thisyear[i, start],
@@ -179,14 +176,14 @@ for(yr in unique(rel[["year"]])){
             ## get genotype of column name
             ## thisyear[i, (varn) := thisyear[var == varn, genotype]]  
 
-            ## get compatibility value of column name
+            ## get compatibility value of column name:
             thisyear[i, (varn) := overlap(thisyear[var == varn, start],
                                           thisyear[var == varn, fert],
                                           thisyear[i, start],
                                           thisyear[i, fert],
                                           criteria = 4)]
 
-            ## get overlap in days
+            ## get overlap in days:
             thisyear_days[i, (varn) := overlap(thisyear_days[var == varn, start],
                                                thisyear_days[var == varn, fert],
                                                thisyear_days[i, start],
@@ -205,44 +202,40 @@ allyears <- allyears[, ..cols]
 allyears_days <- allyears_days[, ..cols]
 ## cols <- newcols_mod$var
 
-## collapse to one row per var:
-## myfun <- function(x){
-##     x <- na.omit(x)
-##     out <- x == 1/length(x)
-##     out <- signif(out*100, digits = 2)
-##     return(out)
-## }
-
 ## prepare data for plotting etc -------------
+
 ## Calculate proportion of years with overlap (mean of 0/1 = prop):
 myfun <- function(x){signif(mean(as.numeric(x), na.rm = TRUE), digits = 2)}
 toplot <- allyears[, lapply(.SD, myfun), by=c("var")] 
-## todo: Exclude varieties tested less tha 3 yrs
 toplot$year <- NULL
 toplot$fert <- NULL
-## melt
+## melt:
 toplot <- melt(toplot, id.vars = c("var", "start"))
 toplot[, value := round(value*100, digits = 0)]
 
-## days overlap for labels
+## add days overlap for labels:
 myfun <- function(x){round(median(as.numeric(x), na.rm = TRUE), digits = 0)}
 toplot_labels <- allyears_days[, lapply(.SD, myfun), by=c("var")] ## mean = prop
 toplot_labels$year <- NULL
-toplot_labels <- melt(toplot_labels, id.vars = c("var", "start"))
+toplot_labels$start <- NULL
+toplot_labels <- melt(toplot_labels, id.vars = c("var"))
+names(toplot_labels) <- c("var", "variable", "label")
+toplot <- toplot_labels[toplot, on = c("var", "variable")]
 
-## add genotype match to labels
+## add genotype match to label:
 lookupgenotype <- variety_genotype_group[, .(var, genotype)]
-toplot_labels <- lookupgenotype[toplot_labels, on = "var"]
-names(toplot_labels) <- gsub("^genotype$", "genotype_cultivar", names(toplot_labels))
-toplot_labels <- merge(x=toplot_labels, y=lookupgenotype, by.x="variable", by.y="var")
-names(toplot_labels) <- gsub("^genotype$", "genotype_pollinator", names(toplot_labels))
+toplot <- lookupgenotype[toplot, on = "var"]
+names(toplot) <- gsub("^genotype$", "genotype_cultivar", names(toplot))
+toplot <- merge(x=toplot, y=lookupgenotype, by.x="variable", by.y="var")
+names(toplot) <- gsub("^genotype$", "genotype_pollinator", names(toplot))
 myfun <- Vectorize(compat)
-toplot_labels[, compat := myfun(genotype_pollinator, genotype_cultivar)]
-toplot_labels[, value := as.character(value)]
-toplot_labels[, value := ifelse(compat == 0, "X", value)]
-toplot_labels[, value := ifelse(compat == 1 & var == variable, "SC", value)]
+toplot[, compat := myfun(genotype_pollinator, genotype_cultivar)]
+toplot[, label := as.character(label)]
+toplot[, label := ifelse(compat == 0, "X", label)]
+toplot[, label := ifelse(compat == 1 & var == variable, "SC", label)]
 
-## lookup bt start for ordering pollinators
+## lookup bt start for ordering pollinators:
+myfun <- function(x){round(mean(as.numeric(x), na.rm = TRUE), digits = 2)}
 lookupstart <- toplot[, .(var, start)]
 lookupstart <- lookupstart[, lapply(.SD, myfun), by=c("var")] 
 names(lookupstart) <- c("variable", "start_pollinator")
@@ -260,8 +253,7 @@ toplot$cultivar <- factor(toplot$cultivar)
 toplot$pollinator <- query_label(toplot$variable, varnames3)
 toplot$pollinator <- factor(toplot$pollinator)
 
-## plot eur bt infra --------------------
-## unique(toplot$pollinator)
+## plot  --------------------
 
 p <- ggplot(toplot, aes(x = forcats::fct_reorder(pollinator, start_pollinator), y = forcats::fct_reorder(cultivar, start), fill = value)) +
   geom_tile(color = "black") +
@@ -281,12 +273,13 @@ p <- p + theme(
         ## axis.title=element_text(size=12, face="bold")
     )
 
-plot_infrance <- p + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) +
+bt_eur_heatmap <- p + scale_fill_gradientn(colors = hcl.colors(20, "RdYlGn")) +
     guides(fill = guide_colourbar(barwidth = 0.5,
                                 barheight = 20)) +
     guides(fill = guide_colourbar(title = "% år med\növerlapp\n"))
 ## + theme(legend.position = "none")
 
+bt_eur_heatmap
 plot_infrance
 ## Note: Color is % years with bt overlap minimum 4 days. Number in boxes is median days overlap. This means the number in the box where the cultivar is both pollinator and target corresponds to the median BT for that variety (but is only shown for SC varieties, else X). "X" is incompatible. 
 ## Note: Time of receptivity/pollination was assumed to be bt_start to (bt_full + 4 days)
